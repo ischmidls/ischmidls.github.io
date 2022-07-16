@@ -7,7 +7,7 @@ html, body {
   background-color: #2c3e50;
 }
 
-.container {
+.container-fluid {
   display: flex;
   align-content: center;
   align-items: center;
@@ -16,9 +16,9 @@ html, body {
   height: 100%;
   justify-content: space-around;
   position: relative;
-  width: 100vw;
+  width: 100%;
 }
-.container section {
+.container-fluid section {
   width: 100%;
   height: 100vh;
   flex: 1;
@@ -28,25 +28,25 @@ html, body {
   overflow: hidden;
   background-color: #000;
 }
-.container section:nth-child(1) .image {
+.container-fluid section:nth-child(1) .image {
   background-image: url(https://images.unsplash.com/photo-1463412855783-af97e375664b?iq=100&fm=jpg&w=1000);
 }
-.container section:nth-child(2) .image {
+.container-fluid section:nth-child(2) .image {
   background-image: url(https://images.unsplash.com/photo-1462819067004-905a72ea3996?iq=100&fm=jpg&w=1000);
 }
-.container section:nth-child(3) .image {
+.container-fluid section:nth-child(3) .image {
   background-image: url(https://images.unsplash.com/photo-1461770354136-8f58567b617a?iq=100&fm=jpg&w=1000);
 }
-.container section:nth-child(4) .image {
+.container-fluid section:nth-child(4) .image {
   background-image: url(https://images.unsplash.com/photo-1461080639469-66d73688fb21?iq=100&fm=jpg&w=1000);
 }
-.container section:nth-child(5) .image {
+.container-fluid section:nth-child(5) .image {
   background-image: url(https://images.unsplash.com/photo-1460804198264-011ca89eaa43?iq=100&fm=jpg&w=1000);
 }
-.container section:nth-child(6) .image {
+.container-fluid section:nth-child(6) .image {
   background-image: url(https://images.unsplash.com/photo-1463123081488-789f998ac9c4?iq=100&fm=jpg&w=1000);
 }
-.container section .image {
+.container-fluid section .image {
   background-attachment: fixed;
   background-size: cover;
   width: 100%;
@@ -55,7 +55,7 @@ html, body {
   z-index: 500;
   opacity: 0.4;
 }
-.container section .stuff {
+.container-fluid section .stuff {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -70,10 +70,10 @@ html, body {
   font-size: 26px;
   position: relative;
 }
-.container section .stuff h2 {
+.container-fluid section .stuff h2 {
   margin: 0px;
 }
-/*.container section .stuff:before, .container section .stuff:after {
+/*.container-fluid section .stuff:before, .container-fluid section .stuff:after {
   width: 100%;
   height: 1px;
   display: block;
