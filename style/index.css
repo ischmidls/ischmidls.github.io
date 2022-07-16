@@ -21,7 +21,7 @@ html, body {
 
 .container-fluid section {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   flex: 1;
   display: flex;
   text-align: center;
