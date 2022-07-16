@@ -2,22 +2,6 @@
 * Parallax Source: https://codepen.io/grischpel/pen/xEMepv
 */
 
-/*
-* NAV 1.2
-*/
-import gsap from "https://cdn.skypack.dev/gsap@3.10.4";
-import { Observer } from 'https://cdn.skypack.dev/gsap@3.10.4/Observer';
-
-gsap.registerPlugin(Observer);
-
-const nav = document.querySelector('nav');
-Observer.create({
-  target: window,
-  type: 'scroll',
-  tolerance: 50,
-  onUp: () => nav.classList.remove('is-hidden'),
-  onDown: () => nav.classList.add('is-hidden')
-});
 
 /*
 * Parallax
