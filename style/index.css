@@ -80,3 +80,12 @@ html, body {
   margin: 0px;
 }
 
+/*
+* NAV
+*/
+
+nav {
+  color: white;
+  background-color: black;
+  opacity: 0;
+}
