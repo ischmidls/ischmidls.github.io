@@ -51,7 +51,7 @@ html, body {
   background-attachment: fixed;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   z-index: 500;
   opacity: 0.4;
