@@ -16,11 +16,11 @@ html, body {
   height: 100vh;
   justify-content: space-around;
   position: relative;
-  width: 100vh;
+  width: 100vw;
 }
 
 .container-fluid section {
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   flex: 1;
   display: flex;
@@ -50,7 +50,7 @@ html, body {
 .container-fluid section .image {
   background-attachment: fixed;
   background-size: cover;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   position: absolute;
   z-index: 500;
