@@ -16,7 +16,7 @@ html, body {
   height: 100%;
   justify-content: space-around;
   position: relative;
-  width: 100%;
+  width: 100vw;
 }
 .container section {
   width: 100%;
