@@ -5,34 +5,49 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors [Edited by Izak Schmidlkofer]">
-    <meta name="generator" content="Hugo 0.88.1">
-    <title>Schmidlkofer Home</title>
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/cover/">
+    <meta name="author" content="Izak Schmidlkofer">
+    <title>Izak</title>
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
     <!-- Bootstrap core CSS -->
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <style>
-    .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-            font-size: 3.5rem;
+        @import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700);
+        html, body{
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          width: 100%;
         }
-    }
+        .block{
+          width: 100%;
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+        }
+        /*.block h2{
+          position: relative;
+          display: block;
+          text-align: center;
+          margin: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 10vw;
+          color: white;
+          font-weight: 400;
+        }*/
+        .img-parallax {
+          width: 100vmax;
+          z-index: -1;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%,0);
+          pointer-events: none
+        }
     </style>
-    <!-- Custom styles for this template -->
-    <link href="../style/cover.css" rel="stylesheet">
 </head>
 
-<body class="text-center">
+<body>
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <header class="masthead mb-auto">
             <div class="inner">
@@ -44,20 +59,75 @@
                 </nav>
             </div>
         </header>
-        <main role="main" class="inner cover">
-            <p>
-                Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.
-            </p>
-            <p class="lead">
-                <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
-            </p>
-        </main>
+        <div class="block">
+          <img src="https://unsplash.it/1920/1920/?image=1005" data-speed="-1" class="img-parallax">
+          <h2>Parallax Speed -1</h2>
+        </div>
+        <div class="block">
+          <img src="https://unsplash.it/1920/1920/?image=1067" data-speed="1" class="img-parallax">
+          <h2>Parallax Speed 1</h2>
+        </div>
+        <div class="block">
+          <img src="https://unsplash.it/1920/1920/?gravity=center" data-speed="-0.25" class="img-parallax">
+          <h2>Parallax Speed -0.25</h2>
+        </div>
+        <div class="block">
+          <img src="https://unsplash.it/1920/1920/?image=1080" data-speed="0.25" class="img-parallax">
+          <h2>Parallax Speed 0.25</h2>
+        </div>
+        <div class="block">
+          <img src="https://unsplash.it/1920/1920/?random" data-speed="-0.75" class="img-parallax">
+          <h2>Parallax Speed -0.75</h2>
+        </div>
+        <div class="block">
+          <img src="https://unsplash.it/1920/1920/?blur" data-speed="0.75" class="img-parallax">
+          <h2>Parallax Speed 0.75</h2>
+        </div>
         <footer class="mastfoot mt-auto">
             <div class="inner">
                 <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
             </div>
         </footer>
     </div>
+
+    <script>
+        $('.img-parallax').each(function(){
+          var img = $(this);
+          var imgParent = $(this).parent();
+          function parallaxImg () {
+            var speed = img.data('speed');
+            var imgY = imgParent.offset().top;
+            var winY = $(this).scrollTop();
+            var winH = $(this).height();
+            var parentH = imgParent.innerHeight();
+
+
+            // The next pixel to show on screen      
+            var winBottom = winY + winH;
+
+            // If block is shown on screen
+            if (winBottom > imgY && winY < imgY + parentH) {
+              // Number of pixels shown after block appear
+              var imgBottom = ((winBottom - imgY) * speed);
+              // Max number of pixels until block disappear
+              var imgTop = winH + parentH;
+              // Porcentage between start showing until disappearing
+              var imgPercent = ((imgBottom / imgTop) * 100) + (50 - (speed * 50));
+            }
+            img.css({
+              top: imgPercent + '%',
+              transform: 'translate(-50%, -' + imgPercent + '%)'
+            });
+          }
+          $(document).on({
+            scroll: function () {
+              parallaxImg();
+            }, ready: function () {
+              parallaxImg();
+            }
+          });
+        });
+    </script>
 </body>
 
 </html>
