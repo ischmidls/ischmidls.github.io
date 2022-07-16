@@ -20,7 +20,7 @@ html, body {
 }
 
 .container section {
-  width: 100%;
+  width: 100vh;
   height: 100vh;
   flex: 1;
   display: flex;
@@ -50,7 +50,7 @@ html, body {
 .container section .image {
   background-attachment: fixed;
   background-size: cover;
-  width: 100%;
+  width: 100vh;
   height: 100vh;
   position: absolute;
   z-index: 500;
