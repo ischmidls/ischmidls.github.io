@@ -51,7 +51,7 @@ html, body {
   background-attachment: fixed;
   background-size: cover;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   z-index: 500;
   opacity: 0.4;
@@ -60,7 +60,7 @@ html, body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   max-width: 70%;
   justify-content: center;
