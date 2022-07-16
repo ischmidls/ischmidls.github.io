@@ -1,3 +1,11 @@
+/*
+* Parallax Source: https://codepen.io/grischpel/pen/xEMepv
+* Nav Source: https://codepen.io/Mamboleoo/pen/poLEKob
+*/
+
+/*
+* Parallax
+*/
 // makes the parallax elements
 function parallaxIt() {
 
@@ -45,3 +53,20 @@ function parallaxIt() {
 };
 
 parallaxIt();
+
+/*
+* Nav
+*/
+import gsap from "https://cdn.skypack.dev/gsap@3.10.4";
+import { Observer } from 'https://cdn.skypack.dev/gsap@3.10.4/Observer';
+
+gsap.registerPlugin(Observer);
+
+const nav = document.querySelector('nav');
+Observer.create({
+  target: window,
+  type: 'scroll',
+  tolerance: 50,
+  onUp: () => nav.classList.remove('is-hidden'),
+  onDown: () => nav.classList.add('is-hidden')
+});
