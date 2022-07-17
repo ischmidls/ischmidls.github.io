@@ -9,7 +9,7 @@ html, body {
   color:  white;
 }
 
-.container-fluid {
+.container-fluid .main {
   display: flex;
   align-content: center;
   align-items: center;
