@@ -34,7 +34,8 @@ html, body {
   color:  white;
 }
 .container-fluid section:nth-child(1) .image {
-  background-image: url("/assets/img/aldino.jpg");
+  height: 20vh;
+  background-image: none;
 }
 .container-fluid section:nth-child(2) .image {
   background-image: url("/assets/img/ales.jpg");
@@ -43,13 +44,14 @@ html, body {
   background-image: url("/assets/img/jay.jpg");
 }
 .container-fluid section:nth-child(4) .image {
-  background-image: url("/assets/img/nathalia.png");
+  background-image: url("/assets/img/martha.jpg");
 }
 .container-fluid section:nth-child(5) .image {
-  background-image: url(https://images.unsplash.com/photo-1460804198264-011ca89eaa43?iq=100&fm=jpg&w=1000);
+  background-image: url("/assets/img/aldino.jpg");
 }
 .container-fluid section:nth-child(6) .image {
-  background-image: url(https://images.unsplash.com/photo-1463123081488-789f998ac9c4?iq=100&fm=jpg&w=1000);
+  height: 20vh;
+  background-image: none;
 }
 .container-fluid section .image {
   background-attachment: fixed;
