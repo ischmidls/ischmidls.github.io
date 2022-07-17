@@ -58,6 +58,7 @@ html, body {
   color:  white;
 }
 .container-fluid section .stuff {
+  padding-top: 2em;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
