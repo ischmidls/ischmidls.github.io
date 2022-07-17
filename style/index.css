@@ -34,7 +34,6 @@ html, body {
   color:  white;
 }
 .container-fluid section:nth-child(1) .image {
-  height: 20vh;
   background-image: none;
 }
 .container-fluid section:nth-child(2) .image {
@@ -50,7 +49,6 @@ html, body {
   background-image: url("/assets/img/aldino.jpg");
 }
 .container-fluid section:nth-child(6) .image {
-  height: 20vh;
   background-image: none;
 }
 .container-fluid section .image {
@@ -85,6 +83,10 @@ html, body {
 /*
 * NAV
 */
+
+.bound {
+  height : 20vh;
+}
 
 nav {
   color: white;
