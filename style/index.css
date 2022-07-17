@@ -34,16 +34,16 @@ html, body {
   color:  white;
 }
 .container-fluid section:nth-child(1) .image {
-  background-image: url(assets/img/aldino-hartan-putra-YqN0mzwVsz0-unsplash.jpg);
+  background-color: #4b6043 ;
 }
 .container-fluid section:nth-child(2) .image {
-  background-image: url(assets/img/ales-krivec-2pyYCQazX7A-unsplash.jpg);
+  background-color: #658354);
 }
 .container-fluid section:nth-child(3) .image {
-  background-image: url(jay-wennington-fF_LlvrlzrA-unsplash.jpg);
+  background-image:  #75975e);
 }
 .container-fluid section:nth-child(4) .image {
-  background-image: url(nathalia-arantes-33IPVbOpcn4-unsplash.png);
+  background-image: #87ab69);
 }
 .container-fluid section:nth-child(5) .image {
   background-image: url(https://images.unsplash.com/photo-1460804198264-011ca89eaa43?iq=100&fm=jpg&w=1000);
