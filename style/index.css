@@ -34,16 +34,16 @@ html, body {
   color:  white;
 }
 .container-fluid section:nth-child(1) .image {
-  background-color: #4b6043 ;
+  background-image: url("/assets/img/aldino.jpg");
 }
 .container-fluid section:nth-child(2) .image {
-  background-color: #658354);
+  background-image: url("/assets/img/ales.jpg");
 }
 .container-fluid section:nth-child(3) .image {
-  background-image:  #75975e);
+  background-image: url("/assets/img/jay.jpg");
 }
 .container-fluid section:nth-child(4) .image {
-  background-image: #87ab69);
+  background-image: url("/assets/img/nathalia.png");
 }
 .container-fluid section:nth-child(5) .image {
   background-image: url(https://images.unsplash.com/photo-1460804198264-011ca89eaa43?iq=100&fm=jpg&w=1000);
