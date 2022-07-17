@@ -79,27 +79,3 @@ html, body {
 /*
 * NAV
 */
-
-.bound {
-  height : 20vh;
-}
-
-nav {
-  color: white;
-  background-color: black;
-  opacity: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-}
-/* NAVBAR STYLING STARTS */
-.nav-links a {
- color: #fff;
-}
-a {
- text-decoration: none;
-}
-li {
- list-style: none;
-}
