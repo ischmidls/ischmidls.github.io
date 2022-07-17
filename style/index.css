@@ -34,16 +34,16 @@ html, body {
   color:  white;
 }
 .container-fluid section:nth-child(1) .image {
-  background-image: url(https://images.unsplash.com/photo-1463412855783-af97e375664b?iq=100&fm=jpg&w=1000);
+  background-image: url(assets/img/aldino-hartan-putra-YqN0mzwVsz0-unsplash.jpg);
 }
 .container-fluid section:nth-child(2) .image {
-  background-image: url(https://images.unsplash.com/photo-1462819067004-905a72ea3996?iq=100&fm=jpg&w=1000);
+  background-image: url(assets/img/ales-krivec-2pyYCQazX7A-unsplash.jpg);
 }
 .container-fluid section:nth-child(3) .image {
-  background-image: url(https://images.unsplash.com/photo-1461770354136-8f58567b617a?iq=100&fm=jpg&w=1000);
+  background-image: url(jay-wennington-fF_LlvrlzrA-unsplash.jpg);
 }
 .container-fluid section:nth-child(4) .image {
-  background-image: url(https://images.unsplash.com/photo-1461080639469-66d73688fb21?iq=100&fm=jpg&w=1000);
+  background-image: url(nathalia-arantes-33IPVbOpcn4-unsplash.png);
 }
 .container-fluid section:nth-child(5) .image {
   background-image: url(https://images.unsplash.com/photo-1460804198264-011ca89eaa43?iq=100&fm=jpg&w=1000);
