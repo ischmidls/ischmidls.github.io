@@ -75,3 +75,7 @@ html, body {
 /*
 * NAV
 */
+
+.nav-link {
+  color:white;
+}
