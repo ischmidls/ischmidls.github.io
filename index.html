@@ -69,9 +69,19 @@
 
         <div class="container-fluid px-0">
           <footer>
+            <div class="collapse" id="navbarToggleExternalContent">
+              <div class="bg-black p-4">
+                <h5 class="text-light h4">Website Info</h5>
+                <span class="text-muted">Toggleable via the navbar brand.</span>
+              </div>
+            </div>
             <ul class="nav bg-black justify-content-center">
               <li class="nav-item"><a href="#top" class="nav-link text-light">Top</a></li>
-              <li class="nav-item"><a href="#" class="nav-link text-light">Website Info</a></li>
+                <li class="nav-item">
+                    <button style="font-size:1em;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="nav-link text-light">Website Info</span>
+                    </button>
+                </li>
               <li class="nav-item"><a href="#" class="nav-link text-light"> &copy; 2022 Izak Schmidlkofer</a></li>
             </ul>
           </footer>
