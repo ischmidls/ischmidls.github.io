@@ -34,16 +34,16 @@ html, body {
   color:  white;
 }
 
-.container-fluid section:nth-child(1) .image {
+.container-fluid section:nth-child(2) .image {
   background-image: url("/assets/img/ales.jpg");
 }
-.container-fluid section:nth-child(2) .image {
+.container-fluid section:nth-child(3) .image {
   background-image: url("/assets/img/jay.jpg");
 }
-.container-fluid section:nth-child(3) .image {
+.container-fluid section:nth-child(4) .image {
   background-image: url("/assets/img/martha.jpg");
 }
-.container-fluid section:nth-child(4) .image {
+.container-fluid section:nth-child(5) .image {
   background-image: url("/assets/img/aldino.jpg");
 }
 
