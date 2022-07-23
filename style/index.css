@@ -3,6 +3,7 @@
 * note:  container 100% height and section 100vh
 */
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
 html, body {
   background-color: black;
   color:  white;
@@ -17,12 +18,12 @@ html, body {
   height: 100%;
   justify-content: space-around;
   position: relative;
-  /* width: 100vw; */
+  width: 100vw;
   color:  white;
 }
 
-.main section {
-  /* width: 100vw; */
+.container-fluid section {
+  width: 100vw;
   height: 100vh;
   flex: 1;
   display: flex;
@@ -33,36 +34,36 @@ html, body {
   color:  white;
 }
 
-.main section:nth-child(1) .image {
+.container-fluid section:nth-child(1) .image {
   background-image: url("/assets/img/ales.jpg");
 }
-.main section:nth-child(2) .image {
+.container-fluid section:nth-child(2) .image {
   background-image: url("/assets/img/jay.jpg");
 }
-.main section:nth-child(3) .image {
+.container-fluid section:nth-child(3) .image {
   background-image: url("/assets/img/martha.jpg");
 }
-.main section:nth-child(4) .image {
+.container-fluid section:nth-child(4) .image {
   background-image: url("/assets/img/aldino.jpg");
 }
 
-.main section .image {
+.container-fluid section .image {
   background-attachment: fixed;
   background-size: cover;
-  /* width: 100vw; */
+  width: 100vw;
   height: 100vh;
   position: absolute;
   z-index: 500;
   opacity: 0.4;
   color:  white;
 }
-.main section .stuff {
+.container-fluid section .stuff {
   padding-top: 2em;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   height: 100vh;
-  /* width: 100vw; */
+  width: 100vw;
   max-width: 70%;
   text-align: left;
   z-index: 1000;
