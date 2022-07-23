@@ -17,12 +17,12 @@ html, body {
   height: 100%;
   justify-content: space-around;
   position: relative;
-  width: 100vw;
+  /* width: 100vw; */
   color:  white;
 }
 
 .main section {
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   flex: 1;
   display: flex;
@@ -49,7 +49,7 @@ html, body {
 .main section .image {
   background-attachment: fixed;
   background-size: cover;
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   position: absolute;
   z-index: 500;
@@ -62,7 +62,7 @@ html, body {
   flex-direction: column;
   flex-wrap: nowrap;
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
   max-width: 70%;
   text-align: left;
   z-index: 1000;
