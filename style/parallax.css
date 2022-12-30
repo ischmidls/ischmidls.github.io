@@ -5,7 +5,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
 
-.container-fluid .main {
+/*.container-fluid .main {
   display: flex;
   align-content: center;
   align-items: center;
@@ -17,50 +17,25 @@
   width: 100%;
   color:  white;
 }
-
-.container-fluid section {
+*/
+/*section {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   flex: 1;
   display: flex;
   text-align: center;
   position: relative;
-  overflow: hidden;
-/*  background-color: #000;*/
-  color:  white;
-}
-
-/*.container-fluid section:nth-child(1) .image {
-  background-image: url("/assets/img/ales.jpg");
-}
-.container-fluid section:nth-child(2) .image {
-  background-image: url("/assets/img/jay.jpg");
-}
-.container-fluid section:nth-child(3) .image {
-  background-image: url("/assets/img/martha.jpg");
-}
-.container-fluid section:nth-child(4) .image {
-  background-image: url("/assets/img/aldino.jpg");
-}
-
-.container-fluid section .image {
-  background-attachment: fixed;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 500;
-  opacity: 0.4;
   color:  white;
 }*/
-.container-fluid section .info {
-  padding-top: 2em;
+
+.info {
+  padding-top: 1em;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  height: 100%;
-  width: 100%;
-  max-width: 70%;
+  height: 100vh;
+/*  width: 100%;*/
+  max-width: 90%;
   text-align: left;
   z-index: 1000;
   position: relative;
@@ -73,12 +48,17 @@ a {
   font-size: 1.25em;
 }
 
-a:hover, a:active {
+a:hover {
   color: gray;
 }
 
+a:active {
+  color: darkslategrey;
+}
+
 body {
-/*  overflow: scroll;*/
+  overscroll-behavior-y: contain;
+/*  NOT THIS BECAUSE THIS CUTS OFF THE STARS overflow: scroll;*/
 }
 
 p {
@@ -90,12 +70,20 @@ h2 {
   font-size: 1.75em;
 }
 
-.all {
-  position: absolute;
-  height:400vh;
-  padding-left: 5em;
+.main {
 /*  overflow: scroll;*/
+  position: absolute;
+/*  height:400vh;*/
+/*  align-content: center;
+  align-items: center;*/
+
+  padding-left: 2em;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 400vh;
 }
+
+
 
 /*
 * STARS STARS STARS STARS STARS STARS STARS STARS STARS STARS STARS STARS STARS
@@ -106,7 +94,7 @@ html {
   background: radial-gradient(circle, #1b2735 0%, #090a0f 60%);
   background-size: 100% 200%;
   background-position: 0% 50%;
-  overflow: hidden;
+/*  overflow: hidden;*/
   font-family: "Open Sans";
   color: white;
 }
