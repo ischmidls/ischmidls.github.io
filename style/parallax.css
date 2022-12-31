@@ -5,32 +5,11 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
 
-/*.container-fluid .main {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  height: 100%;
-  justify-content: space-around;
-  position: absolute;
-  width: 100%;
-  color:  white;
-}
-*/
-/*section {
-  width: 100%;
-  min-height: 100vh;
-  flex: 1;
-  display: flex;
-  text-align: center;
-  position: relative;
-  color:  white;
-}*/
 
 .info {
   padding-top: 1em;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   flex-wrap: nowrap;
   height: 100vh;
@@ -45,7 +24,7 @@
 a {
   color:white;
   text-decoration: none;
-  font-size: 1.25em;
+  font-size: 1.25em !important;
 }
 
 a:hover {
@@ -53,6 +32,20 @@ a:hover {
 }
 
 a:active {
+  color: darkslategrey;
+}
+
+.carousel-item a {
+  color:white;
+  text-decoration: none;
+  font-size: 1.25em !important;
+}
+
+.carousel-item a:hover {
+  color: gray;
+}
+
+.carousel-item a:active {
   color: darkslategrey;
 }
 
@@ -71,21 +64,21 @@ h2 {
 }
 
 .main {
-/*  overflow: scroll;*/
   position: absolute;
-/*  height:400vh;*/
-/*  align-content: center;
-  align-items: center;*/
 
   padding-left: 2em;
   display: flex;
   flex-flow: column nowrap;
   height: 400vh;
+  /* Center child horizontally*/
+  display: flex;
+  justify-content: center;
 }
 
 
 
 /*
+* STARS STARS STARS STARS STARS STARS STARS STARS STARS STARS STARS STARS STARS
 * STARS STARS STARS STARS STARS STARS STARS STARS STARS STARS STARS STARS STARS
 */
 
@@ -97,6 +90,8 @@ html {
 /*  overflow: hidden;*/
   font-family: "Open Sans";
   color: white;
+  text-shadow: 1px 1px 2px black;
+
 }
 
 #stars {
@@ -158,3 +153,153 @@ html {
     transform: translateY(-2000px);
   }
 }
+
+/*
+* ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT
+* ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT
+*/
+
+.carousel {
+    position: relative;
+    box-shadow: 1px 1px 6px black;
+    margin-top: 1em;
+    width: 100%;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    min-height: 80vh;
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    min-width: 80%;
+}
+
+@supports (transition: initial) {
+  /* CSS to use if transitions are supported */
+  .carousel-item {
+/*    position: absolute;*/
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+/*     border: solid; */
+    justify-content: center;
+    display: flex;
+    font-size: 1.25em;
+    width: 80%;
+  }
+}
+
+/* .carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+} */
+
+.carousel-item p {
+    font-size: 1.15em;
+/*    position: absolute;*/
+/*     display: inline-block;
+    justify-self: center; */
+    height: auto;
+    max-width: 80%;
+  width: 80%;
+/*   border: solid; */
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 1%;
+}
+
+.carousel-control.next {
+    right: 1%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3,
+#carousel-4:checked ~ .control-4 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+    opacity: 0.7;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+#carousel-4:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet {
+    color: #383f45;
+}
+
+/* #title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+} */
