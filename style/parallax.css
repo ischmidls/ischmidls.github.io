@@ -182,7 +182,7 @@ html {
 .carousel-item {
     position: absolute;
     opacity: 0;
-    min-width: 95%;
+    min-width: 80%;
 }
 
 @supports (transition: initial) {
@@ -195,7 +195,7 @@ html {
     justify-content: center;
     display: flex;
     font-size: 1.25em;
-    width: 95%;
+    width: 80%;
     height: 90%;
   }
 }
