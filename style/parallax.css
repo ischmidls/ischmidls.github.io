@@ -169,7 +169,7 @@ html {
 .carousel-inner {
     position: relative;
     overflow: hidden;
-    width: 90%;
+    min-width: 90%;
     min-height: 80vh;
 }
 
