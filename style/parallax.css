@@ -49,17 +49,17 @@ a:active {
   color: darkslategrey;
 }
 
-.carousel-item a {
+.carousel-item p a {
   color:white;
   text-decoration: none;
-  font-size: 1.25em !important;
+  font-size: 1em !important;
 }
 
-.carousel-item a:hover {
+.carousel-item p a:hover {
   color: gray;
 }
 
-.carousel-item a:active {
+.carousel-item p a:active {
   color: darkslategrey;
 }
 
