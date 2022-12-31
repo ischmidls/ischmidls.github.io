@@ -213,6 +213,7 @@ html {
 } */
 
 .carousel-item p {
+    left: 1em;
     font-size: 1.15em;
 /*    position: absolute;*/
 /*     display: inline-block;
