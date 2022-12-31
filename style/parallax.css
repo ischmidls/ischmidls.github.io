@@ -164,13 +164,14 @@ html {
     box-shadow: 1px 1px 6px black;
     margin-top: 1em;
     width: 100%;
+    height: 100%;
 }
 
 .carousel-inner {
     position: relative;
     overflow: hidden;
-    min-width: 90%;
-    min-height: 80vh;
+    min-width: 95%;
+    min-height: 90%;
 }
 
 .carousel-open:checked + .carousel-item {
@@ -181,7 +182,7 @@ html {
 .carousel-item {
     position: absolute;
     opacity: 0;
-    min-width: 80%;
+    min-width: 95%;
 }
 
 @supports (transition: initial) {
@@ -194,7 +195,8 @@ html {
     justify-content: center;
     display: flex;
     font-size: 1.25em;
-    width: 80%;
+    width: 95%;
+    height: 90%;
   }
 }
 
@@ -209,9 +211,8 @@ html {
 /*    position: absolute;*/
 /*     display: inline-block;
     justify-self: center; */
-    height: auto;
-    max-width: 80%;
-  width: 80%;
+    height: 90%;
+  min-width: 80%;
 /*   border: solid; */
 }
 
@@ -260,7 +261,7 @@ html {
     margin: 0;
     padding: 0;
     position: absolute;
-    bottom: 2%;
+    bottom: 1%;
     left: 0;
     right: 0;
     text-align: center;
