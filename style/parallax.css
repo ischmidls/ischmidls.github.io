@@ -64,7 +64,7 @@ a:active {
 }
 
 body {
-  overscroll-behavior-y: contain;
+/*   overscroll-behavior-y: contain; */
 /*  NOT THIS BECAUSE THIS CUTS OFF THE STARS overflow: scroll;*/
 }
 
