@@ -131,7 +131,10 @@ class CsvFigs:
         return index
   
   def fig_html(self, author: str, title: str):
-    """ """
+    """ 
+    Take author and title
+    write plotly html to text file
+    """
     colors = ['lightslategray',] * 20
     # get count df for title
     
@@ -170,7 +173,9 @@ class CsvFigs:
         
   
   def all_figs(self):
-    """ """
+    """
+    Repeat fig html for all dataset titles
+    """
     for index, title in enumerate(self.TITLES):
       self.fig_html(title=title, 
                     author=self.AUTHORS[index])
