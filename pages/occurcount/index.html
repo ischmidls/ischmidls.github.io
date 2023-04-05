@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Word Count</title>
+	<script>
+function countWords() {
+	// Get the input string
+	var inputString = document.getElementById("inputString").value.toLowerCase();
+
+	// Split the input string into an array of words
+	var wordsArray = inputString.match(/[a-zA-Z0-9]+/g);
+
+	// Create an empty object to hold the word counts
+	var wordCounts = {};
+
+	// Loop through the words and count their occurrences
+	for (var i = 0; i < wordsArray.length; i++) {
+		if (wordCounts[wordsArray[i]]) {
+			wordCounts[wordsArray[i]]++;
+		} else {
+			wordCounts[wordsArray[i]] = 1;
+		}
+	}
+
+	// Convert the word counts object into an array of pairs
+	var pairsArray = [];
+	for (var word in wordCounts) {
+		pairsArray.push([word, wordCounts[word]]);
+	}
+
+	// Return the array of pairs
+	return pairsArray;
+}
+
+
+
+		function displayWordCounts() {
+			// Call the countWords function and get the array of pairs
+			var pairsArray = countWords();
+
+			// Get the output element
+			var outputElement = document.getElementById("output");
+
+			// Clear the output element
+			outputElement.innerHTML = "";
+
+			// Loop through the pairs array and add each pair to the output element
+			for (var i = 0; i < pairsArray.length; i++) {
+				var pair = pairsArray[i];
+				var word = pair[0];
+				var count = pair[1];
+				outputElement.innerHTML += word + ": " + count + "<br>";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Word Count</h1>
+	<p>Enter some text:</p>
+	<textarea id="inputString"></textarea>
+	<br>
+	<button onclick="displayWordCounts()">Count Words</button>
+	<br>
+	<p>Word counts:</p>
+	<div id="output"></div>
+</body>
+</html>
