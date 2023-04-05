@@ -11,3 +11,4 @@ A personal homepage
 - [countsplit](https://ischmidls.github.io/pages/countsplit/)
 - [hegel](https://ischmidls.github.io/pages/hegel/)
 - [first sentence](https://ischmidls.github.io/pages/first%20sentence/)
+- [occurance count](https://ischmidls.github.io/pages/occurcount/)
