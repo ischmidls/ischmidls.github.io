@@ -4,3 +4,10 @@ A personal homepage
 - originally a scrolling parallax project now viewable at my site [cxnifer.github.io](cxnifer.github.io)
 
 - background adapted from CodePen by [Saransh Sinha](linkedin.com/in/saranshsinha)
+
+# secret pages:
+
+
+- [countsplit](ischmidls.github.io/pages/countsplit/)
+- [hegel](ischmidls.github.io/pages/hegel/)
+- [first sentence](ischmidls.github.io/pages/first%20sentence/)
