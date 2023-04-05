@@ -8,6 +8,6 @@ A personal homepage
 # secret pages:
 
 
-- [countsplit](ischmidls.github.io/pages/countsplit/)
-- [hegel](ischmidls.github.io/pages/hegel/)
-- [first sentence](ischmidls.github.io/pages/first%20sentence/)
+- [countsplit](https://ischmidls.github.io/pages/countsplit/)
+- [hegel](https://ischmidls.github.io/pages/hegel/)
+- [first sentence](https://ischmidls.github.io/pages/first%20sentence/)
