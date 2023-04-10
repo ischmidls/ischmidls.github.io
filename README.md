@@ -12,3 +12,4 @@ A personal homepage
 - [hegel](https://ischmidls.github.io/pages/hegel/)
 - [first sentence](https://ischmidls.github.io/pages/first%20sentence/)
 - [occurance count](https://ischmidls.github.io/pages/occurcount/)
+- [enumerate paragraphs](https://ischmidls.github.io/pages/countlines/)
