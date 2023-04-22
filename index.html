@@ -1,245 +1,106 @@
 <!doctype html>
-<html lang="en">
-
-<head>
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="a personal homepage">
-    <meta name="author" content="Izak Schmidlkofer">
-    <title>Izak Schmidlkofer</title>
-    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
-    <!-- Bootstrap core CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <!-- I do not know -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
-    <!-- My CSS -->
-    <link href="/style/parallax.css" rel="stylesheet">
-</head>
-
-<body>
-    <div id='stars'></div>
-    <div id='stars2'></div>
-    <div id='stars3'></div>
-    <div class="main">
-        <!-- NAVBAR 💀 -->
-        <p id="nav">
-            <a class="nav-link" href="#about">About</a> | 
-            <a class="nav-link" href="#work">Work</a> | 
-            <a class="nav-link" href="#contact">Contact</a>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#000000">
+    <title>Izak's Home</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light navbar-light"><img src="https://unsplash.it/30/30" class="mr-2"><a class="navbar-brand" href="#">Izak's Home</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-body" aria-controls="navbar-body" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbar-body">
+        <ul class="navbar-nav mr-auto"></ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="#">Link</a></li> -->
+          <!--DROPDOWN MENU-->
+          <!-- <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu"><a class="dropdown-item" href="#">Menu Item</a><a class="dropdown-item" href="#">Menu Item</a><a class="dropdown-item" href="#">Menu Item</a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Menu Item</a>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+    <div class="container" id="bsr-wrapper">
+      <h1 id="about" title="About">About</h1>
+      <p>Hi, my name is Izak. I am a math student at <a title="OSU" href="math.oregonstate.edu">OSU</a> with some experience in programming and tutoring.</p>
+      <p>I grew up in Stayton, Oregon with plenty of grass seed fields and plenty of forests.</p>
+      <p>I also enjoyed Scouts and theater growing up. My favorite thing to do is learn new things that I can share with other people!</p>
+      <h1 id="work" title="Work">Work</h1>
+      <p>I keep my work on a Google Site for flexibility. You can view it here: 
+        <a title="work" href="https://sites.google.com/view/ischmidls/home">work</a>
         </p>
-        <!-- MAIN 🖤 -->
-                <div class="container info" data-type="content">
-                    <h1>Welcome. I sincerely hope you enjoy this site.<br />- Izak</h1>
-                </div>
-                <!-- -->
-                <div id="about" class="container info" data-type="content">
-                    <h2>About <a href="#top"><i class="bi bi-arrow-up text-light"></i></a></h2>
-                    <div class="carousel">
-
-                        <div class="carousel-inner">
-                            <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-                            <div class="carousel-item">
-                                <p>I asked: 'What does mathematics mean to you?', and some people answered: 'The manipulation of numbers, the manipulation of structures.' And if I had asked what music means to you, would you have answered: 'The manipulation of notes?'
-                                    <br /><br />
-                                    <a href="https://www.goodreads.com/book/show/22656252-the-beauty-of-doing-mathematics" target="_blank">
-                                        ― Serge Lang, The Beauty of Mathematics
-                                    </a>
-                                </p>
-                            </div>
-                            <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-                            <div class="carousel-item">
-                                <p>I almost wish I hadn't gone down that rabbit-hole...and yet...and yet...it's rather curious, you know, this sort of life! 
-                                    <br /><br />
-                                    <a href="https://www.goodreads.com/book/show/60671823-alice-s-adventures-in-wonderland" target="_blank">
-                                        ― Lewis Carroll, Alice's Adventures in Wonderland
-                                    </a>
-                                </p>
-                            </div>
-                            <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-                            <div class="carousel-item">
-                                <p>I identify myself in language, but only by losing myself in it like an object. What is realised in my history is not the past definite of what was, since it is no more, or even the present perfect of what has been in what I am, but the future anterior of what I shall have been for what I am in the process of becoming.
-                                    <br /><br />
-                                    <a href="https://www.goodreads.com/book/show/75489.The_Seminar_of_Jacques_Lacan" target="_blank">
-                                        ― Jacques Lacan, Seminar XI
-                                    </a>
-                                </p>
-                            </div>
-                          <input class="carousel-open" type="radio" id="carousel-4" name="carousel" aria-hidden="true" hidden="">
-                            <div class="carousel-item">
-                                <p>It is the time you have wasted for your rose that makes your rose so important.
-                                    <br /><br />
-                                    <a href="https://www.goodreads.com/book/show/157993.The_Little_Prince" target="_blank">
-                                        ― Antoine de Saint-Exupéry, The Little Prince
-                                    </a>
-                              </p>
-                            </div>
-                            <label for="carousel-4" class="carousel-control prev control-1">‹</label>
-                            <label for="carousel-2" class="carousel-control next control-1">›</label>
-                            <label for="carousel-1" class="carousel-control prev control-2">‹</label>
-                            <label for="carousel-3" class="carousel-control next control-2">›</label>
-                            <label for="carousel-2" class="carousel-control prev control-3">‹</label>
-                            <label for="carousel-4" class="carousel-control next control-3">›</label>
-                            <label for="carousel-3" class="carousel-control prev control-4">‹</label>
-                            <label for="carousel-1" class="carousel-control next control-4">›</label>
-                            <ol class="carousel-indicators">
-                                <li>
-                                    <label for="carousel-1" class="carousel-bullet">•</label>
-                                </li>
-                                <li>
-                                    <label for="carousel-2" class="carousel-bullet">•</label>
-                                </li>
-                                <li>
-                                    <label for="carousel-3" class="carousel-bullet">•</label>
-                                </li>
-                                <li>
-                                    <label for="carousel-4" class="carousel-bullet">•</label>
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <!-- -->
-                <div id="work" class="container info" data-type="content">
-                    <h2 >Work <a href="#top"><i class="bi bi-arrow-up text-light"></i></a></h2>
-                    <!-- abandoned Bootstrap columns 😅 -->
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-                            <div class="col d-flex align-items-start">
-                                <div>
-                                    <a href="https://sites.google.com/view/ischmidls/reactjs-sandbox">
-                                        <h3 class="fw-bold mb-0">ReactJS Sandbox</h3>
-                                    </a>
-                                    <p>Dec 2022</p>
-                                </div>
-                            </div>
-                            <div class="col d-flex align-items-start">
-                                <div>
-                                    <a href="https://sites.google.com/view/ischmidls/human-trafficking-data"><h3 class="fw-bold mb-0">Trafficking Data Narrative</h3></a>
-                                    <p>Jan 2022 &#8212; Jun 2022</p>
-                                </div>
-                            </div>
-                            <div class="col d-flex align-items-start">
-                                <div>
-                                    <a href="https://sites.google.com/view/ischmidls/eagle-scout-project"><h3 class="fw-bold mb-0">Eagle Scout Project</h3></a>
-                                    <p>Jun 2019  &#8212; Mar 2021</p>
-                                </div>
-                            </div>
-                            <!-- <div class="col d-flex align-items-start">
-                                <div>
-                                    <a href="https://sites.google.com/view/ischmidls/flood-alarm-design"><h3 class="fw-bold mb-0">Flood Alarm Design</h3></a>
-                                    <p>Dec 2019 &#8212; Feb 2020</p>
-                                </div>
-                            </div> -->
-                            <div class="col d-flex align-items-start">
-                                <div>
-                                    <a href="https://sites.google.com/view/ischmidls/home"><h3 class="fw-bold mb-0">See All</h3></a>
-                                    <p>...</p>
-                                </div>
-                            </div>
-                            <!-- 
-                                                    <div class="col d-flex align-items-start">
-                                <div>
-                                    <h3 class="fw-bold mb-0">Featured title</h3>
-                                    <p>Paragraph of text beneath the heading to explain the heading.</p>
-                                </div>
-                            </div>
-                            <div class="col d-flex align-items-start">
-                                <div>
-                                    <h3 class="fw-bold mb-0">Featured title</h3>
-                                    <p>Paragraph of text beneath the heading to explain the heading.</p>
-                                </div>
-                            </div>
-                            <div class="col d-flex align-items-start">
-                                <div>
-                                    <h3 class="fw-bold mb-0">Featured title</h3>
-                                    <p>Paragraph of text beneath the heading to explain the heading.</p>
-                                </div>
-                            </div> -->
-                        </div>
-                </div>
-                <!-- -->
-                <div id="contact" class="container info" data-type="content">
-                    <h2>Contact <a href="#top"><i class="bi bi-arrow-up text-light"></i></a></h2>
-                    <div class="container">
-                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-                            <div class="col d-flex align-items-start">
-                                <div>
-                                    <a href="https://www.linkedin.com/in/izak-schmidlkofer-149776224/" target="_blank">
-                                    <h3 class="fw-bold mb-0"><i class="bi bi-linkedin"></i></h3>
-                                  </a>
-                                  <p><a href="https://www.linkedin.com/in/izak-schmidlkofer-149776224/" target="_blank">Linkedin</a></p>
-                                </div>
-                            </div>
-                            <div class="col d-flex align-items-start">
-                                <div>
-                                  <a href="mailto:izak.schmidlkofer@gmail.com">
-                                    <h3 class="fw-bold mb-0"><i class="bi bi-envelope"></i></h3>
-                                    </a>
-                                    <p><a href="mailto:izak.schmidlkofer@gmail.com">Email</a></p>
-                                </div>
-                            </div>
-                            <div class="col d-flex align-items-start">
-                                <div>
-                                  <a href="https://github.com/ischmidls">
-                                    <h3 class="fw-bold mb-0"><i class="bi bi-github"></i></h3>
-                                  </a>
-                                    <p><a href="https://github.com/ischmidls">Github</a></p>
-                                </div>
-                            </div>
-                            <!-- <div class="col d-flex align-items-start">
-                                <div>
-                                    <h3 class="fw-bold mb-0">Featured title</h3>
-                                    <p>Paragraph of text beneath the heading to explain the heading.</p>
-                                </div>
-                            </div>
-                            <div class="col d-flex align-items-start">
-                                <div>
-                                    <h3 class="fw-bold mb-0">Featured title</h3>
-                                    <p>Paragraph of text beneath the heading to explain the heading.</p>
-                                </div>
-                            </div>
-                            <div class="col d-flex align-items-start">
-                                <div>
-                                    <h3 class="fw-bold mb-0">Featured title</h3>
-                                    <p>Paragraph of text beneath the heading to explain the heading.</p>
-                                </div>
-                            </div>
-                            <div class="col d-flex align-items-start">
-                                <div>
-                                    <h3 class="fw-bold mb-0">Featured title</h3>
-                                    <p>Paragraph of text beneath the heading to explain the heading.</p>
-                                </div>
-                            </div>
-                            <div class="col d-flex align-items-start">
-                                <div>
-                                    <h3 class="fw-bold mb-0">Featured title</h3>
-                                    <p>Paragraph of text beneath the heading to explain the heading.</p>
-                                </div>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-            <!-- FOOTER in MAIN 💀 -->
-            <!-- <div class="container-fluid">
-                <footer>
-                    <ul class="nav bg-black justify-content-center">
-                        <li class="nav-item">
-                                <button style="font-size:1em;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggle" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="nav-link text-light">Website Info <i class="bi bi-arrow-down text-light"></i></span>
-                                </button>
-                        </li>
-                        <li class="nav-item">
-                            <p class="nav-link text-light"> &copy; 2022 Izak Schmidlkofer</p>
-                        </li>
-                    </ul>
-                </footer>
-            </div> -->
+      <h1 id="contact" title="contact">Contact</h1>
+      <p>You can find me on 
+        <a title="github" target="_blank" href="https://github.com/ischmidls">Github</a>. 
+        I am also on 
+        <a target="_blank" title="linkedin" href="https://www.linkedin.com/in/izak-schmidlkofer-149776224/">Linkedin</a>.</p>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-</body>
-
+    <footer class="bg-light text-light pt-5 pb-2 px-5">
+      <div class="row">
+        <div class="col-md-3">
+          <!-- <h2 class="mb-1">Brand</h2>
+          <p class="mb-3"><small><em>Best product ever!</em></small></p>
+          <p> Address 1 <br> Address 2 <br> City, State ZIP </p>
+          <p> TEL (999) 123-4567 <br> FAX (999) 321-7654 </p> -->
+          <ul class="list-inline mt-5">
+            <li class="list-inline-item"><a href="https://github.com/ischmidls" target="_blank" class="text-decoration-none"><i class="fa fa-fw fa-github-alt" aria-hidden="true"></i></a></li>
+            <li class="list-inline-item py-1"><a href="https://www.linkedin.com/in/izak-schmidlkofer-149776224/" target="_blank" class="text-decoration-none"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i></a></li>
+            <!-- <li class="list-inline-item py-1"><a href="#" target="_blank" class="text-decoration-none"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i></a></li> -->
+            <!-- <li class="list-inline-item py-1"><a href="#" target="_blank" class="text-decoration-none"><i class="fa fa-fw fa-facebook-official" aria-hidden="true"></i></a></li> -->
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Fun</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item py-1 bg-transparent border-0"><a href="" target="_blank">Link</a></li>
+            <li class="list-group-item py-1 bg-transparent border-0"><a href="" target="_blank">Link</a></li>
+            <li class="list-group-item py-1 bg-transparent border-0"><a href="" target="_blank">Link</a></li>
+            <li class="list-group-item py-1 bg-transparent border-0"><a href="" target="_blank">Link</a></li>
+            <li class="list-group-item py-1 bg-transparent border-0"><a href="" target="_blank">Link</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Helpful</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item py-1 bg-transparent border-0"><a href="" target="_blank">Link</a></li>
+            <li class="list-group-item py-1 bg-transparent border-0"><a href="" target="_blank">Link</a></li>
+            <li class="list-group-item py-1 bg-transparent border-0"><a href="" target="_blank">Link</a></li>
+            <li class="list-group-item py-1 bg-transparent border-0"><a href="" target="_blank">Link</a></li>
+            <li class="list-group-item py-1 bg-transparent border-0"><a href="" target="_blank">Link</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="row mt-4">
+        <div class="col-sm-6">
+          <p>Copyright © 2023 Izak Schmidlkofer</p>
+        </div>
+        <div class="col-sm-6">
+          <ul class="list-inline text-sm-center text-md-right">
+            <li class="list-inline-item"><a href="" target="_blank">Link 1</a></li>
+            <li class="list-inline-item"><a href="" target="_blank">Link 2</a></li>
+            <li class="list-inline-item"><a href="" target="_blank">Link 3</a></li>
+            <li class="list-inline-item"><a href="" target="_blank">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
