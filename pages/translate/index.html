@@ -15,6 +15,7 @@
     <p>Arabic: <span id="output-ar"></span></p>
   <p>Mandarin: <span id="output-zh"></span></p>
   <p>Spanish: <span id="output-es"></span></p>
+  <p>Italian: <span id="output-it"></span></p>
 
   <script>
     function strTranslate() {
@@ -53,6 +54,11 @@
       fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=es&dt=t&q=${encodeURIComponent(input)}`)
         .then(response => response.json())
         .then(data => document.getElementById("output-es").innerHTML = data[0][0][0]);
+      
+      // Italian
+      fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=it&dt=t&q=${encodeURIComponent(input)}`)
+        .then(response => response.json())
+        .then(data => document.getElementById("output-it").innerHTML = data[0][0][0]);
     }
   </script>
 </body>
