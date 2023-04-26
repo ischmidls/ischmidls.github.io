@@ -16,3 +16,4 @@ A personal homepage
 - [occurance count](https://ischmidls.github.io/pages/occurcount/)
 - [enumerate paragraphs](https://ischmidls.github.io/pages/countlines/)
 - [language translate](https://ischmidls.github.io/pages/translate/)
+- [remove tab](https://ischmidls.github.io/pages/tabaway/)
