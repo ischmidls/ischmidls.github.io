@@ -15,3 +15,4 @@ A personal homepage
 - [first sentence](https://ischmidls.github.io/pages/first%20sentence/)
 - [occurance count](https://ischmidls.github.io/pages/occurcount/)
 - [enumerate paragraphs](https://ischmidls.github.io/pages/countlines/)
+- [language translate](https://ischmidls.github.io/pages/translate/)
