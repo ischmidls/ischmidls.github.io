@@ -8,14 +8,28 @@
   <textarea id="input-text" rows="4" cols="50"></textarea><br><br>
   <button onclick="strTranslate()">Translate</button>
   <h2>Translations:</h2>
-  <p>German: <span id="output-de"></span></p>
-  <p>French: <span id="output-fr"></span></p>
-  <p>Japanese: <span id="output-ja"></span></p>
-  <p>Russian: <span id="output-ru"></span></p>
-    <p>Arabic: <span id="output-ar"></span></p>
-  <p>Mandarin: <span id="output-zh"></span></p>
-  <p>Spanish: <span id="output-es"></span></p>
-  <p>Italian: <span id="output-it"></span></p>
+<table>
+    <tr>
+      <th><span>German:</span></th>
+      <th><span>French:</span></th>
+      <th><span>Japanese:</span></th>
+      <th><span>Russian:</span></th>
+      <th><span>Arabic:</span></th>
+      <th><span>Mandarin:</span></th>
+      <th><span>Spanish:</span></th>
+      <th><span>Italian:</span></th>
+    </tr>
+    <tr>
+      <td><span id="output-de"></span></td>
+      <td><span id="output-fr"></span></td>
+      <td><span id="output-ja"></span></td>
+      <td><span id="output-ru"></span></td>
+      <td><span id="output-ar"></span></td>
+      <td><span id="output-zh"></span></td>
+      <td><span id="output-es"></span></td>
+      <td><span id="output-it"></span></td>
+    </tr>
+  </table>
 
   <script>
     function strTranslate() {
