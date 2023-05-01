@@ -22,10 +22,12 @@ A personal homepage
 
 These features do not include enough importance to warrant inclusion in the actual site:
 
-<img width="374" alt="image" src="https://user-images.githubusercontent.com/50844075/235374417-8f6c1b78-f86d-48d7-a809-2b92fc30a912.png">
-I am not the owner or creator of this humorous image reflecting on mathematics.
-Credit due to: 
+ - A  *d e l i g h t f u l*  preprint ["Sets in homotopy type theory" by Egbert Rijke & Bas Spitters](https://arxiv.org/abs/1305.3835) marries topos with homotopy types.
 
-[Image Source](https://knowyourmeme.com/memes/stop-doing-math)
 
-**For examples of beautiful math** see this MathOverflow [discussion](https://mathoverflow.net/q/49151/502781)
+- This comedic effort *a la* internet comes to mind quite often:
+  - <img width="374" alt="image" src="https://user-images.githubusercontent.com/50844075/235374417-8f6c1b78-f86d-48d7-a809-2b92fc30a912.png">
+  - I am not the owner or creator of this humorous image reflecting on mathematics.
+Credit due to: [Image Source](https://knowyourmeme.com/memes/stop-doing-math)
+
+- **For examples of beautiful math** see this MathOverflow [discussion](https://mathoverflow.net/q/49151/502781)
