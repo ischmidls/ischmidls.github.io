@@ -22,7 +22,9 @@ A personal homepage
 
 These features do not include enough importance to warrant inclusion in the actual site:
 
- - A  *d e l i g h t f u l*  preprint ["Sets in homotopy type theory" by Egbert Rijke & Bas Spitters](https://arxiv.org/abs/1305.3835) marries topos with homotopy types.
+- [NOTES ON TOPOSES AND LOCAL SET THEORIES, JOHN L. BELL, 1992: Revised 2020](https://publish.uwo.ca/~jbell/topnotes.pdf)
+
+ - Here's a  *d e l i g h t f u l*  preprint ["Sets in homotopy type theory" by Egbert Rijke & Bas Spitters](https://arxiv.org/abs/1305.3835) marries topos with homotopy types.
 
 
 - This comedic effort *a la* internet comes to mind quite often:
