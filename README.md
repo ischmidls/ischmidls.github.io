@@ -22,7 +22,9 @@ A personal homepage
 
 These features do not include enough importance to warrant inclusion in the actual site:
 
-- [NOTES ON TOPOSES AND LOCAL SET THEORIES, JOHN L. BELL, 1992: Revised 2020](https://publish.uwo.ca/~jbell/topnotes.pdf)
+- [CATEGORY THEORY IN CONTEXT, Emily Riehl, 2016](https://math.jhu.edu/~eriehl/context.pdf) made available by Riehl
+
+- [NOTES ON TOPOSES AND LOCAL SET THEORIES, JOHN L. BELL, 1992: Revised 2020](https://publish.uwo.ca/~jbell/topnotes.pdf) made available by Bell
 
  - Here's a  *d e l i g h t f u l*  preprint ["Sets in homotopy type theory" by Egbert Rijke & Bas Spitters](https://arxiv.org/abs/1305.3835) marries topos with homotopy types.
 
