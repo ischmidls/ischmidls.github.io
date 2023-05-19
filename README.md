@@ -17,9 +17,10 @@ A personal homepage
 - [enumerate paragraphs](https://ischmidls.github.io/pages/countlines/)
 - [language translate](https://ischmidls.github.io/pages/translate/)
 - [remove tab](https://ischmidls.github.io/pages/tabaway/)
+- [mix array](https://ischmidls.github.io/pages/mix/)
 
 # Wiki
 
-Content without enough importance for the actual site:
+Mostly informal content without enough importance for the actual site:
 
 [Link to Wiki](https://github.com/ischmidls/ischmidls.github.io/wiki)
