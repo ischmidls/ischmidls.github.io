@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Move Circle with Arrow Keys</title>
+  <style>
+    #container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      border: 1px solid black;
+    }
+    #circle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      background-color: blue;
+      border-radius: 50%;
+    }
+    #square {
+      position: absolute;
+      top: 150px;
+      left: 150px;
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    #message {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      font-weight: bold;
+      color: black;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="square"></div>
+    <div id="circle"></div>
+    <div id="message">
+      The choice is yours: to <a href="./rabbithole/index.html" target="_blank">go</a> or wait.
+    </div>
+  </div>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const circle = document.getElementById('circle');
+  const square = document.getElementById('square');
+  const message = document.getElementById('message');
+  let x = 0;
+  let y = 0;
+
+  function moveCircle(e) {
+    const circleRect = circle.getBoundingClientRect();
+    const squareRect = square.getBoundingClientRect();
+
+    switch (e.key) {
+      case 'w':
+        y -= 10;
+        break;
+      case 'a':
+        x -= 10;
+        break;
+      case 's':
+        y += 10;
+        break;
+      case 'd':
+        x += 10;
+        break;
+    }
+
+    circle.style.transform = `translate(${x}px, ${y}px)`;
+
+    if (isColliding(circleRect, squareRect)) {
+      message.style.display = 'block';
+    } else {
+      message.style.display = 'none';
+    }
+  }
+
+  function isColliding(rect1, rect2) {
+    return (
+      rect1.left < rect2.right &&
+      rect1.right > rect2.left &&
+      rect1.top < rect2.bottom &&
+      rect1.bottom > rect2.top
+    );
+  }
+
+  document.addEventListener('keydown', moveCircle);
+});
+  </script>
+</body>
+</html>
