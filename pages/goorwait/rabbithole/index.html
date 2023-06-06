@@ -25,16 +25,35 @@
             }
             }
     </script> -->
+    <style>
+    #container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #content {
+      text-align: center;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    blockquote {
+      font-style: italic;
+    }
+  </style>
 </head>
 
-
-  <body>
-    <form id="myForm">
-      <label for="input">Enter text:</label>
-      <input type="text" id="input" name="input">
-      <input type="submit" value="Submit">
-      <blockquote>I almost wish I hadn’t gone down that rabbit-hole—and yet—and yet—it’s rather curious, you know, this sort of life!</blockquote>
-    </form>
+      <div id="container">
+        <div id="content">
+          <form id="myForm">
+            <label for="input">Enter text:</label>
+            <input type="text" id="input" name="input">
+            <input type="submit" value="Submit">
+          </form>
+          <blockquote>I almost wish I hadn’t gone down that rabbit-hole—and yet—and yet—it’s rather curious, you know, this sort of life!</blockquote>
+        </div>
+      </div>
 
     <script>
       const form = document.getElementById('myForm');
