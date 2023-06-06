@@ -8,6 +8,13 @@
       width: 400px;
       height: 400px;
       border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #content {
+      text-align: center;
     }
     #circle {
       position: absolute;
@@ -41,10 +48,12 @@
 </head>
 <body>
   <div id="container">
+    <div id="content">
     <div id="square"></div>
     <div id="circle"></div>
     <div id="message">
       The choice is yours: to <a href="./rabbithole/index.html">go</a> or wait.
+    </div>
     </div>
   </div>
 
