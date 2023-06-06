@@ -23,4 +23,4 @@ A personal homepage
 
 Mostly informal content without enough importance for the actual site:
 
-[Link to Wiki](https://github.com/ischmidls/ischmidls.github.io/wiki)
+[Link to Wiki](https://ischmidls.github.io/pages/goorwait/)
