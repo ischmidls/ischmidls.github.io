@@ -95,6 +95,44 @@
         x += 10;
         break;
     }
+    
+    // Add event listeners for touchstart and touchend events
+document.addEventListener('touchstart', handleTouchStart, false);
+document.addEventListener('touchend', handleTouchEnd, false);
+
+let touchStartX = 0;
+let touchStartY = 0;
+
+function handleTouchStart(event) {
+  touchStartX = event.touches[0].clientX;
+  touchStartY = event.touches[0].clientY;
+}
+
+function handleTouchEnd(event) {
+  const touchEndX = event.changedTouches[0].clientX;
+  const touchEndY = event.changedTouches[0].clientY;
+
+  const deltaX = touchEndX - touchStartX;
+  const deltaY = touchEndY - touchStartY;
+
+  // Determine the primary direction of the touch gesture
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+    // Horizontal movement
+    if (deltaX > 0) {
+      x += 10; // Move right
+    } else {
+      x -= 10; // Move left
+    }
+  } else {
+    // Vertical movement
+    if (deltaY > 0) {
+      y += 10; // Move down
+    } else {
+      y -= 10; // Move up
+    }
+  }
+}
+
 
     circle.style.transform = `translate(${x}px, ${y}px)`;
 
