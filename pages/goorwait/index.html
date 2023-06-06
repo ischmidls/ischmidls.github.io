@@ -11,7 +11,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+/*       height: 100vh; */
     }
     #content {
       text-align: center;
@@ -80,6 +80,18 @@
         y += 10;
         break;
       case 'd':
+        x += 10;
+        break;
+      case 'ArrowUp':
+        y -= 10;
+        break;
+      case 'ArrowLeft':
+        x -= 10;
+        break;
+      case 'ArrowDown':
+        y += 10;
+        break;
+      case 'ArrowRight':
         x += 10;
         break;
     }
