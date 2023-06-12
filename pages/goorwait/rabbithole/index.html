@@ -44,57 +44,40 @@
   </style>
 </head>
 
-      <div id="container">
-        <div id="content">
-          <form id="myForm">
-            <label for="input">"i didnt do it for you... "</label>
-            <input type="text" id="input" name="input">
-            <input type="submit" value="Submit">
-          </form>
-          <blockquote>It's a dangerous business, Frodo, going out your door. You step onto the road, and if you don't keep your feet, there's no knowing where you might be swept off to.</blockquote>
-        </div>
-      </div>
-
-    <script>
-      const form = document.getElementById('myForm');
-      const password = 'i did it for me'
-
-      form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const input = document.getElementById('input');
-        const text = input.value.toLowerCase();
-        if (text.includes(password)) {
-          window.open("https://librarianizak.github.io");
-        } else {
-          confirm("Curious oyster... " + text + " does not match actual password?");
-        }
-      });
-
-      document.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
-          event.preventDefault();
-          const input = document.getElementById('input');
-          const text = input.value.toLowerCase();
-          if (text.includes(password)) {
-            window.open("https://librarianizak.github.io");
-          } else {
-            confirm("Curious oyster... " + text + " does not match actual password?");
-          }
-        }
-      });
-    </script>
-  </body>
-
-
-
-<!-- <body>
-    <div onKeyPress="return checkSubmit(event)">
-        <form>
-            <label for="pswd">Password: </label>
-            <input type="password" id="pswd" value="Submit">
-            <input type="button" value="Submit" id="myBtn" onclick="checkPswd();" />
-        </form>
+<body>
+  <div id="container">
+    <div id="content">
+      <form id="myForm">
+        <label for="input">"i didnt do it for you... "</label>
+        <input type="text" id="input" name="input">
+        <input type="submit" value="Submit">
+      </form>
+      <blockquote>It's a dangerous business, Frodo, going out your door. You step onto the road, and if you don't keep your feet, there's no knowing where you might be swept off to.</blockquote>
     </div>
-</body> -->
+  </div>
+
+  <script>
+    const form = document.getElementById('myForm');
+    const password = 'i did it for me'
+
+    function checkPassword(event) {
+      event.preventDefault();
+      const input = document.getElementById('input');
+      const text = input.value.toLowerCase();
+      if (text.includes(password)) {
+        window.open("https://librarianizak.github.io");
+      } else {
+        confirm("Curious oyster... " + text + " does not match actual password?");
+      }
+    }
+
+    form.addEventListener('submit', checkPassword);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        checkPassword(event);
+      }
+    });
+  </script>
+</body>
 
 </html>
