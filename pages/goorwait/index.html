@@ -4,7 +4,6 @@
   <title>The choice is yours: to go or wait</title>
   <style>
     #container {
-/*       position: relative; */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -49,111 +48,81 @@
 <body>
   <div id="container">
     <div id="content">
-    <div id="square"></div>
-    <div id="circle"></div>
-    <div id="message">
-      The choice is yours: to <a href="./rabbithole/index.html">go</a> or wait.
-    </div>
+      <div id="square"></div>
+      <div id="circle"></div>
+      <div id="message">
+        The choice is yours: to <a href="./rabbithole/index.html">go</a> or wait.
+      </div>
     </div>
   </div>
 
   <script>
-  document.addEventListener('DOMContentLoaded', function () {
-  const circle = document.getElementById('circle');
-  const square = document.getElementById('square');
-  const message = document.getElementById('message');
-  let x = 0;
-  let y = 0;
+    document.addEventListener('DOMContentLoaded', function () {
+      const circle = document.getElementById('circle');
+      const square = document.getElementById('square');
+      const message = document.getElementById('message');
+      let x = 0;
+      let y = 0;
 
-  function moveCircle(e) {
-    const circleRect = circle.getBoundingClientRect();
-    const squareRect = square.getBoundingClientRect();
+      function moveCircle(e) {
+        const circleRect = circle.getBoundingClientRect();
+        const squareRect = square.getBoundingClientRect();
 
-    switch (e.key) {
-      case 'w':
-        y -= 10;
-        break;
-      case 'a':
-        x -= 10;
-        break;
-      case 's':
-        y += 10;
-        break;
-      case 'd':
-        x += 10;
-        break;
-      case 'ArrowUp':
-        y -= 10;
-        break;
-      case 'ArrowLeft':
-        x -= 10;
-        break;
-      case 'ArrowDown':
-        y += 10;
-        break;
-      case 'ArrowRight':
-        x += 10;
-        break;
-    }
-    
-    // Add event listeners for touchstart and touchend events
-document.addEventListener('touchstart', handleTouchStart, false);
-document.addEventListener('touchend', handleTouchEnd, false);
+        if (e.type === 'keydown') {
+          switch (e.key) {
+            case 'w':
+            case 'ArrowUp':
+              y -= 10;
+              break;
+            case 'a':
+            case 'ArrowLeft':
+              x -= 10;
+              break;
+            case 's':
+            case 'ArrowDown':
+              y += 10;
+              break;
+            case 'd':
+            case 'ArrowRight':
+              x += 10;
+              break;
+          }
+        } else if (e.type === 'touchmove') {
+          e.preventDefault(); // Prevent default touch behavior
+          const touchPos = getTouchPos(e);
+          x = touchPos.x;
+          y = touchPos.y;
+        }
 
-let touchStartX = 0;
-let touchStartY = 0;
+        circle.style.transform = `translate(${x}px, ${y}px)`;
 
-function handleTouchStart(event) {
-  touchStartX = event.touches[0].clientX;
-  touchStartY = event.touches[0].clientY;
-}
+        if (isColliding(circleRect, squareRect)) {
+          message.style.display = 'block';
+        } else {
+          message.style.display = 'none';
+        }
+      }
 
-function handleTouchEnd(event) {
-  const touchEndX = event.changedTouches[0].clientX;
-  const touchEndY = event.changedTouches[0].clientY;
+      function isColliding(rect1, rect2) {
+        return (
+          rect1.left < rect2.right &&
+          rect1.right > rect2.left &&
+          rect1.top < rect2.bottom &&
+          rect1.bottom > rect2.top
+        );
+      }
 
-  const deltaX = touchEndX - touchStartX;
-  const deltaY = touchEndY - touchStartY;
+      function getTouchPos(touchEvent) {
+        const rect = square.getBoundingClientRect();
+        const touch = touchEvent.touches[0] || touchEvent.changedTouches[0];
+        const x = touch.clientX - rect.left;
+        const y = touch.clientY - rect.top;
+        return { x, y };
+      }
 
-  // Determine the primary direction of the touch gesture
-  if (Math.abs(deltaX) > Math.abs(deltaY)) {
-    // Horizontal movement
-    if (deltaX > 0) {
-      x += 10; // Move right
-    } else {
-      x -= 10; // Move left
-    }
-  } else {
-    // Vertical movement
-    if (deltaY > 0) {
-      y += 10; // Move down
-    } else {
-      y -= 10; // Move up
-    }
-  }
-}
-
-
-    circle.style.transform = `translate(${x}px, ${y}px)`;
-
-    if (isColliding(circleRect, squareRect)) {
-      message.style.display = 'block';
-    } else {
-      message.style.display = 'none';
-    }
-  }
-
-  function isColliding(rect1, rect2) {
-    return (
-      rect1.left < rect2.right &&
-      rect1.right > rect2.left &&
-      rect1.top < rect2.bottom &&
-      rect1.bottom > rect2.top
-    );
-  }
-
-  document.addEventListener('keydown', moveCircle);
-});
+      document.addEventListener('keydown', moveCircle);
+      document.addEventListener('touchmove', moveCircle, { passive: false });
+    });
   </script>
 </body>
 </html>
