@@ -58,13 +58,36 @@
 
   <script>
     const form = document.getElementById('myForm');
-    const password = 'i did it for me'
+    const password = 'v qvq vg sbe zr'
+    
+    function decode(str) {
+      var input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+      var output = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+      var encodedStr = '';
+    
+      for (var i = 0; i < str.length; i++) {
+        var char = str[i];
+        var index = input.indexOf(char);
+    
+        if (index === -1) {
+          // Character is not a letter, keep it as it is
+          encodedStr += char;
+        } else {
+          // Rotate the letter by 13 positions
+          var encodedChar = output[index];
+          encodedStr += encodedChar;
+        }
+      }
+    
+      return encodedStr;
+    }
+
 
     function checkPassword(event) {
       event.preventDefault();
       const input = document.getElementById('input');
       const text = input.value.toLowerCase();
-      if (text.includes(password)) {
+      if (text.includes(decode(password))) {
         window.open("https://librarianizak.github.io");
       } else {
         confirm("Curious oyster... " + text + " does not match actual password?");
