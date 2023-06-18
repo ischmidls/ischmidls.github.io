@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="css/main.css">-->
+    
+    <title>Linear Algebra Theorems</title>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <!--<script type="text/javascript">-->
+    <!--    MathJax = {-->
+    <!--        tex: {-->
+    <!--            inlineMath: [['$', '$'], ['\\(', '\\)']]-->
+    <!--        },-->
+    <!--        svg: {-->
+    <!--            fontCache: 'global'-->
+    <!--        }-->
+    <!--    };-->
+    <!--</script>-->
+  
+  </head>
+  <body>
+    <div class="container" id="bsr-wrapper">
+      <h1>Linear Algebra Theorems</h1>
+    <p>Adapted from Gilbert Strang's <strong>Introduction to Linear Algebra, 5th Ed</strong></p>
+    <h2>Dimension Theorem</h2>
+    <p>All bases for a vector space have the same number of vectors.</p>
+    <p>Mathematically: \( \text{dim}(V) = \text{dim}(W) \) for any bases \( V \) and \( W \) of the vector space.</p>
+
+    <h2>Counting Theorem</h2>
+    <p>Dimension of column space + dimension of nullspace = number of columns.</p>
+    <p>Mathematically: \( \text{dim}(\text{col}(A)) + \text{dim}(\text{null}(A)) = \text{cols}(A) \)</p>
+
+    <h2>Rank Theorem</h2>
+    <p>Dimension of column space = dimension of row space.</p>
+    <p>Mathematically: \( \text{dim}(\text{col}(A)) = \text{dim}(\text{row}(A)) \)</p>
+
+    <h2>Fundamental Theorem</h2>
+    <p>The row space and nullspace of \( A \) are orthogonal complements in \( \mathbb{R}^n \).</p>
+    <p>Mathematically: \( \text{row}(A) \perp \text{null}(A) \) in \( \mathbb{R}^n \)</p>
+
+    <h2>SVD (Singular Value Decomposition)</h2>
+    <p>There are orthonormal bases (\( v \)'s and \( u \)'s) for the row and column spaces so that \( Av_i = \sigma_iu_i \).</p>
+    <p>Mathematically: \( A = U\Sigma V^T \) where \( U \) and \( V \) are orthonormal matrices, and \( \Sigma \) is a diagonal matrix of singular values.</p>
+
+    <h2>Spectral Theorem</h2>
+    <p>If \( A^T = A \), there are orthonormal \( q \)'s so that \( Aq_i = \lambda_iq_i \) and \( A = Q\Lambda Q^T \).</p>
+    <p>Mathematically: If \( A \) is symmetric, there exist orthonormal eigenvectors (\( q \)'s) and eigenvalues (\( \lambda \)'s) such that \( Aq_i = \lambda_iq_i \).</p>
+      
+      <footer><hr><a href="/">Home</a></footer>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--<script src="js/main.js"></script>-->
+  </body>
+</html>
