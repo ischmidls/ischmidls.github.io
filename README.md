@@ -1,5 +1,5 @@
 # ischmidls.github.io
-A personal homepage
+The tip of an iceberg
 
 # secret pages:
 
