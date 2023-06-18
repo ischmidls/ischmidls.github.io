@@ -1,12 +1,6 @@
 # ischmidls.github.io
 A personal homepage
 
-- originally a scrolling parallax project now viewable at my site [cxnifer.github.io](cxnifer.github.io)
-
-- then, background adapted from CodePen by [Saransh Sinha](linkedin.com/in/saranshsinha)
-
-- now, simple bootstrap 
-
 # secret pages:
 
 
@@ -19,10 +13,20 @@ A personal homepage
 - [remove tab](https://ischmidls.github.io/pages/tabaway/)
 - [mix array](https://ischmidls.github.io/pages/mix/)
 - [math taxonomy](https://ischmidls.github.io/pages/mathtax/)
-- [Linear Algebra Six Theorems](https://ischmidls.github.io/pages/linearsix/)
+- [linear algebra aix theorems](https://ischmidls.github.io/pages/linearsix/)
 
-# Wiki
+# wiki
 
 Mostly informal content without enough importance for the actual site:
 
 [Link to Wiki](https://ischmidls.github.io/pages/goorwait/)
+
+# history
+
+- first, an [eleventy](https://11ty.dev) powered blog
+
+- originally a scrolling parallax project now viewable at my site [cxnifer.github.io](cxnifer.github.io)
+
+- then, background adapted from CodePen by [Saransh Sinha](linkedin.com/in/saranshsinha)
+
+- now, simple bootstrap 
