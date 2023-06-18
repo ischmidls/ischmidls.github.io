@@ -13,7 +13,7 @@ The tip of an iceberg
 - [remove tab](https://ischmidls.github.io/pages/tabaway/)
 - [mix array](https://ischmidls.github.io/pages/mix/)
 - [math taxonomy](https://ischmidls.github.io/pages/mathtax/)
-- [linear algebra aix theorems](https://ischmidls.github.io/pages/linearsix/)
+- [linear algebra six theorems](https://ischmidls.github.io/pages/linearsix/)
 
 # wiki
 
