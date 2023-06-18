@@ -1,5 +1,5 @@
 # ischmidls.github.io
-The tip of an iceberg
+a tip of an iceberg
 
 # secret pages:
 
@@ -19,7 +19,7 @@ The tip of an iceberg
 
 mostly informal content without enough importance for the actual site:
 
-[Link to Wiki](https://ischmidls.github.io/pages/goorwait/)
+[link to wiki](https://ischmidls.github.io/pages/goorwait/)
 
 # history
 
