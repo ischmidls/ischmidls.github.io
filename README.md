@@ -17,7 +17,7 @@ The tip of an iceberg
 
 # wiki
 
-Mostly informal content without enough importance for the actual site:
+mostly informal content without enough importance for the actual site:
 
 [Link to Wiki](https://ischmidls.github.io/pages/goorwait/)
 
