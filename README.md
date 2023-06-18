@@ -29,4 +29,4 @@ mostly informal content without enough importance for the actual site:
 
 - then, background adapted from CodePen by [Saransh Sinha](linkedin.com/in/saranshsinha)
 
-- now, simple bootstrap 
+- now, simple [bootstrap](https://getbootstrap.com/) 
