@@ -18,6 +18,8 @@ A personal homepage
 - [language translate](https://ischmidls.github.io/pages/translate/)
 - [remove tab](https://ischmidls.github.io/pages/tabaway/)
 - [mix array](https://ischmidls.github.io/pages/mix/)
+- [math taxonomy](https://ischmidls.github.io/pages/mathtax/)
+- [Linear Algebra Six Theorems](https://ischmidls.github.io/pages/linearsix/)
 
 # Wiki
 
