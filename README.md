@@ -2,7 +2,12 @@
 [a tip of an iceberg](https://ischmidls.github.io)
 
 # secret pages:
+**featured**
+- [math taxonomy](https://ischmidls.github.io/pages/mathtax/)
+- [linear algebra six theorems](https://ischmidls.github.io/pages/linearsix/)
+- [occurance count](https://ischmidls.github.io/pages/occurcount/)
 
+**other**
 
 - [countsplit](https://ischmidls.github.io/pages/countsplit/)
 - [hegel](https://ischmidls.github.io/pages/hegel/)
@@ -12,8 +17,6 @@
 - [language translate](https://ischmidls.github.io/pages/translate/)
 - [remove tab](https://ischmidls.github.io/pages/tabaway/)
 - [mix array](https://ischmidls.github.io/pages/mix/)
-- [math taxonomy](https://ischmidls.github.io/pages/mathtax/)
-- [linear algebra six theorems](https://ischmidls.github.io/pages/linearsix/)
 
 # wiki
 
