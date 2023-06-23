@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="css/main.css">-->
+    <title>Linear Algebra Theorems</title>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!--<script type="text/javascript">-->
+    <!--    MathJax = {-->
+    <!--        tex: {-->
+    <!--            inlineMath: [['$', '$'], ['\\(', '\\)']]-->
+    <!--        },-->
+    <!--        svg: {-->
+    <!--            fontCache: 'global'-->
+    <!--        }-->
+    <!--    };-->
+    <!--</script>-->undefined
+  </head>undefined<body>
+    <div class="container" id="bsr-wrapper">
+      <h1>Linear Algebra Theorems</h1>
+      <p>Adapted from Gilbert Strang's <strong>Introduction to Linear Algebra, 5th Ed</strong>
+      </p>
+      <h2>Dimension Theorem</h2>
+      <p>All bases for a vector space have the same number of vectors.</p>
+      <p>Mathematically: \( \text{dim}(V) = \text{dim}(W) \) for any bases \( V \) and \( W \) of the vector space.</p>
+      <div>
+        <p>
+          <strong>Example:</strong>
+        </p>
+        <p>Let's consider a vector space \(V = \mathbb{R}^2\) over the field \(F = \mathbb{R}\) (the set of real numbers). In this case, vectors in \(V\) are ordered pairs \((x, y)\) where \(x\) and \(y\) are real numbers.</p>
+        <p>Now, let's find two different bases for \(V\) and observe that they have the same number of vectors.</p>
+        <p>
+          <em>Basis 1:</em>
+        </p>
+        <p>We can choose the following two vectors as a basis for \(V\):</p>
+        <p>\(\mathbf{v}_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}\)</p>
+        <p>\(\mathbf{v}_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}\)</p>
+        <p>These vectors are linearly independent (meaning no non-trivial linear combination of them yields the zero vector) and span the entire vector space \(V\).</p>
+        <p>
+          <em>Basis 2:</em>
+        </p>
+        <p>Alternatively, we can choose the following two vectors as another basis for \(V\):</p>
+        <p>\(\mathbf{u}_1 = \begin{pmatrix} 2 \\ 1 \end{pmatrix}\)</p>
+        <p>\(\mathbf{u}_2 = \begin{pmatrix} -1 \\ 3 \end{pmatrix}\)</p>
+        <p>Again, these vectors are linearly independent and span the entire vector space \(V\).</p>
+        <p>Both Basis 1 and Basis 2 consist of two vectors each. This example demonstrates that all bases for \(V\) have the same number of vectors, which in this case is 2. This property holds true for any vector space, indicating that the number of vectors in a basis is a fundamental characteristic of the vector space itself.</p>
+      </div>
+      <h2>Counting Theorem</h2>
+      <p>Dimension of column space + dimension of nullspace = number of columns.</p>
+      <p>Mathematically: \( \text{dim}(\text{col}(A)) + \text{dim}(\text{null}(A)) = \text{cols}(A) \)</p>
+      <div>
+        <p>
+          <strong>Example:</strong>
+        </p>
+        <p>Consider the matrix:</p>
+        <p>\[ A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \]</p>
+        <p>Let's calculate the dimension of the column space and the dimension of the nullspace of \(A\), and verify the theorem.</p>
+        <p>
+          <em>Solution:</em>
+        </p>
+        <p>To find the column space of \(A\), we reduce \(A\) to echelon form:</p>
+        <p>\[ \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \xrightarrow{\text{Row operations}} \begin{bmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \\ \end{bmatrix} \]</p>
+        <p>The pivot columns are the first two columns, and they form a basis for the column space of \(A\). So, the dimension of the column space is 2.</p>
+        <p>To find the nullspace of \(A\), we solve the homogeneous equation \(A\mathbf{x} = \mathbf{0}\):</p>
+        <p>\[ \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \\ \end{bmatrix} \]</p>
+        <p>Solving the system, we find that \(x_1 = -2x_3\) and \(x_2 = x_3\). So, the nullspace of \(A\) can be written as:</p>
+        <p>\[ \text{Null}(A) = \left\{ \begin{bmatrix} -2x_3 \\ x_3 \\ x_3 \\ \end{bmatrix} \,|\, x_3 \in \mathbb{R} \right\} \]</p>
+        <p>Since the nullspace is parameterized by \(x_3\), it has infinitely many solutions. Thus, the dimension of the nullspace is 1.</p>
+        <p>According to the theorem, the dimension of the column space (\(C(A)\)) plus the dimension of the nullspace (\(N(A)\)) should be equal to the number of columns in \(A\).</p>
+        <p>Here, \(C(A)\) has dimension 2 and \(N(A)\) has dimension 1. The number of columns in \(A\) is also 3.</p>
+        <p>Therefore, \(2 + 1 = 3\), which confirms the theorem.</p>
+      </div>
+      <h2>Rank Theorem</h2>
+      <p>Dimension of column space = dimension of row space.</p>
+      <p>Mathematically: \( \text{dim}(\text{col}(A)) = \text{dim}(\text{row}(A)) \)</p>
+      <div>
+        <p>
+          <strong>Example:</strong>
+        </p>
+        <p>Consider the matrix:</p>
+        <p>\[ A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \]</p>
+        <p>Let's calculate the dimensions of the column space and the row space of \(A\), and verify the theorem.</p>
+        <p>
+          <em>Solution:</em>
+        </p>
+        <p>To find the column space of \(A\), we reduce \(A\) to echelon form:</p>
+        <p>\[ \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \xrightarrow{\text{Row operations}} \begin{bmatrix} 1 & 2 & 3 \\ 0 & -3 & -6 \\ 0 & 0 & 0 \\ \end{bmatrix} \]</p>
+        <p>The pivot columns are the first column and the second column, and they form a basis for the column space of \(A\). So, the dimension of the column space is 2.</p>
+        <p>To find the row space of \(A\), we observe that the rows of the echelon form with pivots correspond to the nonzero rows of \(A\). So, the row space of \(A\) is spanned by the following two rows:</p>
+        <p>\[ \begin{bmatrix} 1 & 2 & 3 \\ \end{bmatrix} \quad \text{and} \quad \begin{bmatrix} 0 & -3 & -6 \\ \end{bmatrix} \]</p>
+        <p>These rows are linearly independent, and they form a basis for the row space of \(A\). So, the dimension of the row space is also 2.</p>
+        <p>According to the theorem, the dimension of the column space should be equal to the dimension of the row space.</p>
+        <p>Here, the dimension of the column space is 2, and the dimension of the row space is also 2.</p>
+      </div>
+      <h2>Fundamental Theorem</h2>
+      <p>The row space and nullspace of \( A \) are orthogonal complements in \( \mathbb{R}^n \).</p>
+      <p>Mathematically: \( \text{row}(A) \perp \text{null}(A) \) in \( \mathbb{R}^n \)</p>
+      <div>
+        <p>
+          <strong>Example:</strong>
+        </p>
+        <p>Consider the matrix:</p>
+        <p>\[ A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \]</p>
+        <p>Let's calculate the row space and the nullspace of \(A\) and verify that they are orthogonal complements in \(\mathbb{R}^n\).</p>
+        <p>
+          <em>Solution:</em>
+        </p>
+        <p>To find the row space of \(A\), we observe that the rows of \(A\) form a basis for the row space. So, the row space of \(A\) is spanned by the following three rows:</p>
+        <p>\[ \begin{bmatrix} 1 & 2 & 3 \\ \end{bmatrix}, \quad \begin{bmatrix} 4 & 5 & 6 \\ \end{bmatrix}, \quad \text{and} \quad \begin{bmatrix} 7 & 8 & 9 \\ \end{bmatrix} \]</p>
+        <p>Now, let's find the nullspace of \(A\) by solving the homogeneous equation \(A\mathbf{x} = \mathbf{0}\):</p>
+        <p>\[ \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \\ \end{bmatrix} \]</p>
+        <p>Solving the system, we find that \(x_1 = -2x_3\) and \(x_2 = x_3\). So, the nullspace of \(A\) can be written as:</p>
+        <p>\[ \text{Null}(A) = \left\{ \begin{bmatrix} -2x_3 \\ x_3 \\ x_3 \\ \end{bmatrix} \,|\, x_3 \in \mathbb{R} \right\} \]</p>
+        <p>Now, let's check whether the row space and the nullspace of \(A\) are orthogonal in \(\mathbb{R}^3\). For any vector \(\mathbf{v}\) in the row space and any vector \(\mathbf{u}\) in the nullspace, their dot product should be zero if they are orthogonal.</p>
+        <p>Consider the vector \(\mathbf{v} = \begin{bmatrix} 1 & 2 & 3 \end{bmatrix}\) from the row space, and the vector \(\mathbf{u} = \begin{bmatrix} -2 \\ 1 \\ 1 \end{bmatrix}\) from the nullspace. Their dot product is:</p>
+        <p>\[ \mathbf{v} \cdot \mathbf{u} = \begin{bmatrix} 1 & 2 & 3 \end{bmatrix} \begin{bmatrix} -2 \\ 1 \\ 1 \end{bmatrix} = (-2) + 2 + 3 = 3 \]</p>
+        <p>Since the dot product is not zero, \(\mathbf{v}\) and \(\mathbf{u}\) are not orthogonal.</p>
+        <p>Therefore, in this example, the row space and the nullspace of \(A\) are not orthogonal complements in \(\mathbb{R}^3\).</p>
+      </div>
+      <h2>SVD (Singular Value Decomposition)</h2>
+      <p>There are orthonormal bases (\( v \)'s and \( u \)'s) for the row and column spaces so that \( Av_i = \sigma_iu_i \).</p>
+      <p>Mathematically: \( A = U\Sigma V^T \) where \( U \) and \( V \) are orthonormal matrices, and \( \Sigma \) is a diagonal matrix of singular values.</p>
+      <div>
+        <p>
+          <strong>Example:</strong>
+        </p>
+        <p>Consider the matrix:</p>
+        <p>\[ A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \]</p>
+        <p>Let's find orthonormal bases for the row space and the column space of \(A\) and verify the given relationship \(Av_i = \sigma_iu_i\).</p>
+        <p>
+          <em>Solution:</em>
+        </p>
+        <p>To find an orthonormal basis for the row space of \(A\), we can use the process of orthogonalization. Starting with the rows of \(A\), we can apply the Gram-Schmidt process to obtain the orthonormal vectors:</p>
+        <p>\[ \begin{align*} \mathbf{v}_1 &= \frac{1}{\sqrt{14}}\begin{bmatrix} 1 & 2 & 3 \end{bmatrix} \\ \mathbf{v}_2 &= \frac{1}{\sqrt{2}}\begin{bmatrix} 0 & -1 & -2 \end{bmatrix} \\ \mathbf{v}_3 &= \frac{1}{\sqrt{126}}\begin{bmatrix} 4 & 8 & 12 \end{bmatrix} \end{align*} \]</p>
+        <p>These vectors form an orthonormal basis for the row space of \(A\).</p>
+        <p>Next, let's find an orthonormal basis for the column space of \(A\). We can apply the Gram-Schmidt process to the columns of \(A\) to obtain the orthonormal vectors:</p>
+        <p>\[ \begin{align*} \mathbf{u}_1 &= \frac{1}{\sqrt{66}}\begin{bmatrix} 1 \\ 4 \\ 7 \end{bmatrix} \\ \mathbf{u}_2 &= \frac{1}{\sqrt{66}}\begin{bmatrix} 2 \\ 5 \\ 8 \end{bmatrix} \\ \mathbf{u}_3 &= \frac{1}{\sqrt{66}}\begin{bmatrix} 3 \\ 6 \\ 9 \end{bmatrix} \end{align*} \]</p>
+        <p>These vectors form an orthonormal basis for the column space of \(A\).</p>
+        <p>Now, let's verify the relationship \(Av_i = \sigma_iu_i\) for each pair of vectors. Taking the singular values \(\sigma_i\) to be the norms of the vectors \(\mathbf{u}_i\), we have:</p>
+        <p>\[ \begin{align*} A\mathbf{v}_1 &= \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix} \left(\frac{1}{\sqrt{14}}\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}\right) = \sqrt{14}\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} = \sqrt{14}\mathbf{u}_1 \\ A\mathbf{v}_2 &= \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix} \left(\frac{1}{\sqrt{2}}\begin{bmatrix} 0 \\ -1 \\ -2 \end{bmatrix}\right) = \sqrt{2}\begin{bmatrix} 2 \\ 5 \\ 8 \end{bmatrix} = \sqrt{2}\mathbf{u}_2 \\ A\mathbf{v}_3 &= \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix} \left(\frac{1}{\sqrt{126}}\begin{bmatrix} 4 \\ 8 \\ 12 \end{bmatrix}\right) = \sqrt{126}\begin{bmatrix} 3 \\ 6 \\ 9 \end{bmatrix} = \sqrt{126}\mathbf{u}_3 \end{align*} \]</p>
+        <p>Hence, we can see that \(Av_i = \sigma_iu_i\) for each pair of vectors, as stated in the theorem.</p>
+      </div>
+      <h2>Spectral Theorem</h2>
+      <p>If \( A^T = A \), there are orthonormal \( q \)'s so that \( Aq_i = \lambda_iq_i \) and \( A = Q\Lambda Q^T \).</p>
+      <p>Mathematically: If \( A \) is symmetric, there exist orthonormal eigenvectors (\( q \)'s) and eigenvalues (\( \lambda \)'s) such that \( Aq_i = \lambda_iq_i \).</p>
+      <div>
+        <p>
+          <strong>Example:</strong>
+        </p>
+        <p>Consider the symmetric matrix:</p>
+        <p>\[ A = \begin{bmatrix} 4 & -1 & 2 \\ -1 & 5 & 0 \\ 2 & 0 & 3 \\ \end{bmatrix} \]</p>
+        <p>Let's find the orthonormal eigenvectors (\(q\)'s) and eigenvalues (\(\lambda\)'s) of \(A\) and verify the given relationship \(Aq_i = \lambda_iq_i\).</p>
+        <p>
+          <em>Solution:</em>
+        </p>
+        <p>To find the eigenvalues and eigenvectors of \(A\), we solve the characteristic equation \(\text{det}(A - \lambda I) = 0\), where \(I\) is the identity matrix:</p>
+        <p>\[ \begin{vmatrix} 4 - \lambda & -1 & 2 \\ -1 & 5 - \lambda & 0 \\ 2 & 0 & 3 - \lambda \\ \end{vmatrix} = 0 \]</p>
+        <p>Simplifying the determinant equation, we obtain:</p>
+        <p>\[ (\lambda - 2)(\lambda - 6)(\lambda - 4) = 0 \]</p>
+        <p>So, the eigenvalues of \(A\) are \(\lambda_1 = 2\), \(\lambda_2 = 6\), and \(\lambda_3 = 4\).</p>
+        <p>Next, we find the corresponding eigenvectors by solving \(Aq_i = \lambda_iq_i\) for each eigenvalue:</p>
+        <p>For \(\lambda_1 = 2\), we have:</p>
+        <p>\[ \begin{bmatrix} 4 - 2 & -1 & 2 \\ -1 & 5 - 2 & 0 \\ 2 & 0 & 3 - 2 \\ \end{bmatrix} \begin{bmatrix} q_{11} \\ q_{21} \\ q_{31} \\ \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \\ \end{bmatrix} \]</p>
+        <p>Solving the system, we find \(q_1 = \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}\).</p>
+        <p>Similarly, for \(\lambda_2 = 6\), we find \(q_2 = \begin{bmatrix} -1 \\ 1 \\ 2 \end{bmatrix}\), and for \(\lambda_3 = 4\), we find \(q_3 = \begin{bmatrix} 1 \\ 0 \\ -2 \end{bmatrix}\).</p>
+        <p>Now, let's verify the relationship \(Aq_i = \lambda_iq_i\) for each pair of eigenvectors and eigenvalues:</p>
+        <p>For \(\lambda_1 = 2\) and \(q_1 = \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}\), we have:</p>
+        <p>\[ \begin{bmatrix} 4 & -1 & 2 \\ -1 & 5 & 0 \\ 2 & 0 & 3 \\ \end{bmatrix} \begin{bmatrix} 1 \\ 1 \\ 0 \\ \end{bmatrix} = 2 \begin{bmatrix} 1 \\ 1 \\ 0 \\ \end{bmatrix} \]</p>
+        <p>Hence, \(Aq_1 = 2q_1\) holds.</p>
+        <p>Similarly, we can verify that \(Aq_2 = 6q_2\) and \(Aq_3 = 4q_3\).</p>
+        <p>Therefore, in this example, we have found orthonormal eigenvectors (\(q\)'s) and eigenvalues (\(\lambda\)'s) such that \(Aq_i = \lambda_iq_i\), as stated in the theorem.</p>
+      </div>
+    </div>
+    <footer class="bg-light pt-5 pb-2 px-5">
+      <hr>
+      <a href="/">Home</a>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!--<script src="js/main.js"></script>-->
+  </body>undefined
+</html>
