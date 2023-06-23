@@ -16,13 +16,22 @@
     <!--            fontCache: 'global'-->
     <!--        }-->
     <!--    };-->
-    <!--</script>-->undefined
-  </head>undefined<body>
+    <!--</script>-->
+  </head><body>
     <div class="container" id="bsr-wrapper">
       <h1>Linear Algebra Theorems</h1>
-      <p>Adapted from Gilbert Strang's <strong>Introduction to Linear Algebra, 5th Ed</strong>
+      <p>The six central theorems of linear algebra come from Gilbert Strang's <strong>Introduction to Linear Algebra, 5th Ed</strong>, and I have provided an example for each.
       </p>
-      <h2>Dimension Theorem</h2>
+      <ul>
+        <li><a href="#dimension-theorem">Dimension Theorem</a></li>
+        <li><a href="#counting-theorem">Counting Theorem</a></li>
+        <li><a href="#rank-theorem">Rank Theorem</a></li>
+        <li><a href="#fundamental-theorem">Fundamental Theorem</a></li>
+        <li><a href="#singular-value-decomposition">Singular Value Decomposition</a></li>
+        <li><a href="#spectral-theorem">Spectral Theorem</a></li>
+      </ul>
+      <hr>      
+      <h2 id="dimension-theorem">Dimension Theorem</h2>
       <p>All bases for a vector space have the same number of vectors.</p>
       <p>Mathematically: \( \text{dim}(V) = \text{dim}(W) \) for any bases \( V \) and \( W \) of the vector space.</p>
       <div>
@@ -47,7 +56,7 @@
         <p>Again, these vectors are linearly independent and span the entire vector space \(V\).</p>
         <p>Both Basis 1 and Basis 2 consist of two vectors each. This example demonstrates that all bases for \(V\) have the same number of vectors, which in this case is 2. This property holds true for any vector space, indicating that the number of vectors in a basis is a fundamental characteristic of the vector space itself.</p>
       </div>
-      <h2>Counting Theorem</h2>
+      <hr><h2 id="counting-theorem">Counting Theorem</h2>
       <p>Dimension of column space + dimension of nullspace = number of columns.</p>
       <p>Mathematically: \( \text{dim}(\text{col}(A)) + \text{dim}(\text{null}(A)) = \text{cols}(A) \)</p>
       <div>
@@ -72,7 +81,7 @@
         <p>Here, \(C(A)\) has dimension 2 and \(N(A)\) has dimension 1. The number of columns in \(A\) is also 3.</p>
         <p>Therefore, \(2 + 1 = 3\), which confirms the theorem.</p>
       </div>
-      <h2>Rank Theorem</h2>
+      <hr><h2 id="rank-theorem">Rank Theorem</h2>
       <p>Dimension of column space = dimension of row space.</p>
       <p>Mathematically: \( \text{dim}(\text{col}(A)) = \text{dim}(\text{row}(A)) \)</p>
       <div>
@@ -94,7 +103,8 @@
         <p>According to the theorem, the dimension of the column space should be equal to the dimension of the row space.</p>
         <p>Here, the dimension of the column space is 2, and the dimension of the row space is also 2.</p>
       </div>
-      <h2>Fundamental Theorem</h2>
+
+      <hr><h2 id="fundamental-theorem">Fundamental Theorem</h2>
       <p>The row space and nullspace of \( A \) are orthogonal complements in \( \mathbb{R}^n \).</p>
       <p>Mathematically: \( \text{row}(A) \perp \text{null}(A) \) in \( \mathbb{R}^n \)</p>
       <div>
@@ -119,7 +129,7 @@
         <p>Since the dot product is not zero, \(\mathbf{v}\) and \(\mathbf{u}\) are not orthogonal.</p>
         <p>Therefore, in this example, the row space and the nullspace of \(A\) are not orthogonal complements in \(\mathbb{R}^3\).</p>
       </div>
-      <h2>SVD (Singular Value Decomposition)</h2>
+      <hr><h2 id="singular-value-decomposition">Singular Value Decomposition</h2>
       <p>There are orthonormal bases (\( v \)'s and \( u \)'s) for the row and column spaces so that \( Av_i = \sigma_iu_i \).</p>
       <p>Mathematically: \( A = U\Sigma V^T \) where \( U \) and \( V \) are orthonormal matrices, and \( \Sigma \) is a diagonal matrix of singular values.</p>
       <div>
@@ -142,7 +152,7 @@
         <p>\[ \begin{align*} A\mathbf{v}_1 &= \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix} \left(\frac{1}{\sqrt{14}}\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}\right) = \sqrt{14}\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} = \sqrt{14}\mathbf{u}_1 \\ A\mathbf{v}_2 &= \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix} \left(\frac{1}{\sqrt{2}}\begin{bmatrix} 0 \\ -1 \\ -2 \end{bmatrix}\right) = \sqrt{2}\begin{bmatrix} 2 \\ 5 \\ 8 \end{bmatrix} = \sqrt{2}\mathbf{u}_2 \\ A\mathbf{v}_3 &= \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix} \left(\frac{1}{\sqrt{126}}\begin{bmatrix} 4 \\ 8 \\ 12 \end{bmatrix}\right) = \sqrt{126}\begin{bmatrix} 3 \\ 6 \\ 9 \end{bmatrix} = \sqrt{126}\mathbf{u}_3 \end{align*} \]</p>
         <p>Hence, we can see that \(Av_i = \sigma_iu_i\) for each pair of vectors, as stated in the theorem.</p>
       </div>
-      <h2>Spectral Theorem</h2>
+      <hr><h2 id="spectral-theorem">Spectral Theorem</h2>
       <p>If \( A^T = A \), there are orthonormal \( q \)'s so that \( Aq_i = \lambda_iq_i \) and \( A = Q\Lambda Q^T \).</p>
       <p>Mathematically: If \( A \) is symmetric, there exist orthonormal eigenvectors (\( q \)'s) and eigenvalues (\( \lambda \)'s) such that \( Aq_i = \lambda_iq_i \).</p>
       <div>
@@ -174,7 +184,7 @@
       </div>
     </div>
     <footer class="bg-light pt-5 pb-2 px-5">
-      <hr>
+      <!-- <hr> -->
       <a href="/">Home</a>
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -182,5 +192,5 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!--<script src="js/main.js"></script>-->
-  </body>undefined
+  </body>
 </html>
