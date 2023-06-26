@@ -19,6 +19,11 @@
     <!--</script>-->
   </head><body>
     <div class="container" id="bsr-wrapper">
+      
+      
+      <div style="background-color: coral;">Under construction 6/19/23-...</div>
+      
+      
       <h1>Linear Algebra Theorems</h1>
       <p>The six central theorems of linear algebra come from Gilbert Strang's <strong>Introduction to Linear Algebra, 5th Ed</strong>, and I have provided an example for each.
       </p>
@@ -65,21 +70,145 @@
         </p>
         <p>Consider the matrix:</p>
         <p>\[ A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \]</p>
-        <p>Let's calculate the dimension of the column space and the dimension of the nullspace of \(A\), and verify the theorem.</p>
+        <p>Let's calculate the dimension of the column space (step 1) and the dimension of the nullspace (step 2) of \(A\), and verify the theorem.</p>
         <p>
           <em>Solution:</em>
         </p>
-        <p>To find the column space of \(A\), we reduce \(A\) to echelon form:</p>
+        <p>STEP 1: To find the column space of \(A\), we reduce \(A\) to echelon form:</p>
         <p>\[ \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \xrightarrow{\text{Row operations}} \begin{bmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \\ \end{bmatrix} \]</p>
-        <p>The pivot columns are the first two columns, and they form a basis for the column space of \(A\). So, the dimension of the column space is 2.</p>
-        <p>To find the nullspace of \(A\), we solve the homogeneous equation \(A\mathbf{x} = \mathbf{0}\):</p>
+        <div class="card">
+          <div class="card-body">
+              <p>
+                  Do row reduction:
+                  \[
+                  \begin{pmatrix}
+                  1 & 2 & 3 \\
+                  4 & 5 & 6 \\
+                  7 & 8 & 9 \\
+                  \end{pmatrix}
+                  \]
+              </p>
+              <p>Subtract a multiple of one row from another.<br>
+              Subtract \(4 \times\) (row 1) from row 2:<br>
+              \[
+              \begin{pmatrix}
+              1 & 2 & 3 \\
+              0 & -3 & -6 \\
+              7 & 8 & 9 \\
+              \end{pmatrix}
+              \]
+              </p>
+              <p>Subtract a multiple of one row from another.<br>
+              Subtract \(7 \times\) (row 1) from row 3:<br>
+              \[
+              \begin{pmatrix}
+              1 & 2 & 3 \\
+              0 & -3 & -6 \\
+              0 & -6 & -12 \\
+              \end{pmatrix}
+              \]
+              </p>
+              <p>Swap two rows.<br>
+              Swap row 2 with row 3:<br>
+              \[
+              \begin{pmatrix}
+              1 & 2 & 3 \\
+              0 & -6 & -12 \\
+              0 & -3 & -6 \\
+              \end{pmatrix}
+              \]
+              </p>
+              <p>Subtract a multiple of one row from another.<br>
+              Subtract \(\frac{1}{2} \times\) (row 2) from row 3:<br>
+              \[
+              \begin{pmatrix}
+              1 & 2 & 3 \\
+              0 & -6 & -12 \\
+              0 & 0 & 0 \\
+              \end{pmatrix}
+              \]
+              </p>
+              <p>Divide row 2 by a scalar.<br>
+              Divide row 2 by -6:<br>
+              \[
+              \begin{pmatrix}
+              1 & 2 & 3 \\
+              0 & 1 & 2 \\
+              0 & 0 & 0 \\
+              \end{pmatrix}
+              \]
+              </p>
+              <p>Subtract a multiple of one row from another.<br>
+              Subtract \(2 \times\) (row 2) from row 1:<br>
+              \[
+              \begin{pmatrix}
+              1 & 0 & -1 \\
+              0 & 1 & 2 \\
+              0 & 0 & 0 \\
+              \end{pmatrix}
+              \]
+              </p>
+              <p>Verify matrix is reduced.<br>
+              This matrix is now in reduced row echelon form.<br>
+              All nonzero rows are above rows of all zeros:<br>
+              \[
+              \begin{pmatrix}
+              1 & 0 & -1 \\
+              0 & 1 & 2 \\
+              0 & 0 & 0 \\
+              \end{pmatrix}
+              \]
+              </p>
+              <p>Verify pivots and their positions.<br>
+              Each pivot is 1 and is strictly to the right of every pivot above it:<br>
+              \[
+              \begin{pmatrix}
+              1 & 0 & -1 \\
+              0 & 1 & 2 \\
+              0 & 0 & 0 \\
+              \end{pmatrix}
+              \]
+              </p>       
+        </div>
+      </div>
+        <br>
+        <p>The pivot columns are the first two columns, and they form a basis for the column space of \(A\). So, the dimension of the column space is \(2\).</p>
+        <p>STEP 2: Now, let's find the nullspace of \(A\) by solving the homogeneous equation \(A\mathbf{x} = \mathbf{0}\):</p>
         <p>\[ \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \\ \end{bmatrix} \]</p>
-        <p>Solving the system, we find that \(x_1 = -2x_3\) and \(x_2 = x_3\). So, the nullspace of \(A\) can be written as:</p>
-        <p>\[ \text{Null}(A) = \left\{ \begin{bmatrix} -2x_3 \\ x_3 \\ x_3 \\ \end{bmatrix} \,|\, x_3 \in \mathbb{R} \right\} \]</p>
-        <p>Since the nullspace is parameterized by \(x_3\), it has infinitely many solutions. Thus, the dimension of the nullspace is 1.</p>
-        <p>According to the theorem, the dimension of the column space (\(C(A)\)) plus the dimension of the nullspace (\(N(A)\)) should be equal to the number of columns in \(A\).</p>
-        <p>Here, \(C(A)\) has dimension 2 and \(N(A)\) has dimension 1. The number of columns in \(A\) is also 3.</p>
-        <p>Therefore, \(2 + 1 = 3\), which confirms the theorem.</p>
+        <div class="card">
+        <div class="card-body">
+          <p>The null space of a matrix \(M\) is the set of solutions \(v\) to the homogeneous equation \(M \cdot v = 0\).<br>
+          The null space of matrix \(M = \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix}\) is the set of all vectors \(v = (x_1, x_2, x_3)\) such that \(M \cdot v = 0\):<br>
+          \(\begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix} \cdot \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}\)
+          </p>
+          <p>Identify free variables.<br>
+          Free variables in the null space \((x_1, x_2, x_3)\) correspond to the columns in \(\begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix}\) which have no pivot.<br>
+          Column 3 is the only column with no pivot, so we may take \(x_3\) to be the only free variable.
+          </p>
+          <p>Perform matrix multiplication.<br>
+          Multiply out the reduced matrix \(\begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix}\) with the proposed solution vector \((x_1, x_2, x_3)\):<br>
+          \(\begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix} \cdot \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} x_1 - x_3 \\ x_2 + 2x_3 \\ 0 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}\)
+          </p>
+          <p>Convert to a system and solve in terms of the free variables.<br>
+          Solve the equations \(x_1 - x_3 = 0\), \(x_2 + 2x_3 = 0\), and \(0 = 0\) for \(x_1\) and \(x_2\):<br>
+          \(\{x_1 = x_3, x_2 = -2x_3, 0 = 0\) for \(x_1\) and \(x_2 \}\)
+          </p>
+          <p>Replace the pivot variables with free variable expressions.<br>
+          Rewrite \(v\) in terms of the free variable \(x_3\), and assign it an arbitrary real value of \(x\):<br>
+          \(v = (x_1, x_2, x_3) = (x_3, -2x_3, x_3) = (x, -2x, x)\) for \(x \in \mathbb{R}\)
+          </p>
+          <p>
+          Rewrite the solution vector \(v = (x, -2x, x)\) in set notation:<br>
+          Answer: \(\{(x, -2x, x) : x \in \mathbb{R}\}\)
+          </p>
+      </div>
+      </div>
+      
+      <br>
+      <p>Thus, the <em>nullity</em> &mdash;or dimension of the nullspace&mdash; is one, \( \text{dim}(\text{null}(A)) = 1 \)</p>
+      
+      <p>Now, by the theorem, the dimension of the column space plus the dimension of the nullspace should be equal to the number of columns, \( \text{dim}(\text{col}(A)) + \text{dim}(\text{null}(A)) = \text{cols}(A) \)</p>
+        <p>Here, \( \text{dim}(\text{col}(A)) = 2 \) and \( \text{dim}(\text{null}(A)) = 1 \) so \( \text{cols}(A) = 2 + 1 = 3 \). The number of columns in \(A\) is also \(3\).</p>
       </div>
       <hr><h2 id="rank-theorem">Rank Theorem</h2>
       <p>Dimension of column space = dimension of row space.</p>
@@ -95,7 +224,7 @@
           <em>Solution:</em>
         </p>
         <p>To find the column space of \(A\), we reduce \(A\) to echelon form:</p>
-        <p>\[ \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \xrightarrow{\text{Row operations}} \begin{bmatrix} 1 & 2 & 3 \\ 0 & -3 & -6 \\ 0 & 0 & 0 \\ \end{bmatrix} \]</p>
+        <p>\[ \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \xrightarrow{\text{Row operations}} \begin{bmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \\ \end{bmatrix} \]</p>
         <p>The pivot columns are the first column and the second column, and they form a basis for the column space of \(A\). So, the dimension of the column space is 2.</p>
         <p>To find the row space of \(A\), we observe that the rows of the echelon form with pivots correspond to the nonzero rows of \(A\). So, the row space of \(A\) is spanned by the following two rows:</p>
         <p>\[ \begin{bmatrix} 1 & 2 & 3 \\ \end{bmatrix} \quad \text{and} \quad \begin{bmatrix} 0 & -3 & -6 \\ \end{bmatrix} \]</p>
@@ -113,21 +242,22 @@
         </p>
         <p>Consider the matrix:</p>
         <p>\[ A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \]</p>
-        <p>Let's calculate the row space and the nullspace of \(A\) and verify that they are orthogonal complements in \(\mathbb{R}^n\).</p>
+        <p>Let's calculate the row space (step 1) and the nullspace (step 2) of \(A\) and verify that they are orthogonal complements in \(\mathbb{R}^n\).</p>
         <p>
           <em>Solution:</em>
         </p>
-        <p>To find the row space of \(A\), we observe that the rows of \(A\) form a basis for the row space. So, the row space of \(A\) is spanned by the following three rows:</p>
-        <p>\[ \begin{bmatrix} 1 & 2 & 3 \\ \end{bmatrix}, \quad \begin{bmatrix} 4 & 5 & 6 \\ \end{bmatrix}, \quad \text{and} \quad \begin{bmatrix} 7 & 8 & 9 \\ \end{bmatrix} \]</p>
-        <p>Now, let's find the nullspace of \(A\) by solving the homogeneous equation \(A\mathbf{x} = \mathbf{0}\):</p>
-        <p>\[ \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \\ \end{bmatrix} \]</p>
-        <p>Solving the system, we find that \(x_1 = -2x_3\) and \(x_2 = x_3\). So, the nullspace of \(A\) can be written as:</p>
-        <p>\[ \text{Null}(A) = \left\{ \begin{bmatrix} -2x_3 \\ x_3 \\ x_3 \\ \end{bmatrix} \,|\, x_3 \in \mathbb{R} \right\} \]</p>
-        <p>Now, let's check whether the row space and the nullspace of \(A\) are orthogonal in \(\mathbb{R}^3\). For any vector \(\mathbf{v}\) in the row space and any vector \(\mathbf{u}\) in the nullspace, their dot product should be zero if they are orthogonal.</p>
-        <p>Consider the vector \(\mathbf{v} = \begin{bmatrix} 1 & 2 & 3 \end{bmatrix}\) from the row space, and the vector \(\mathbf{u} = \begin{bmatrix} -2 \\ 1 \\ 1 \end{bmatrix}\) from the nullspace. Their dot product is:</p>
-        <p>\[ \mathbf{v} \cdot \mathbf{u} = \begin{bmatrix} 1 & 2 & 3 \end{bmatrix} \begin{bmatrix} -2 \\ 1 \\ 1 \end{bmatrix} = (-2) + 2 + 3 = 3 \]</p>
-        <p>Since the dot product is not zero, \(\mathbf{v}\) and \(\mathbf{u}\) are not orthogonal.</p>
-        <p>Therefore, in this example, the row space and the nullspace of \(A\) are not orthogonal complements in \(\mathbb{R}^3\).</p>
+        <div>
+          <p>This one requires a bit more thinking outside of the row reduction algorithm</p>
+          <p>
+              Recall from <em>The Counting Theorem</em>, the null space has dimension equal to the difference between the number of columns and the dimension of the row space, \(\text{col}(A) - \text{dim}(\text{row}(A))\).
+              It follows that the orthogonal complement of the null space has dimension \(\text{col}(A) - (\text{col}(A) - \text{dim}(\text{row}(A)))=\text{dim}(\text{row}(A))\).
+              Now, the row space is an \(r\) dimensional subspace of the orthogonal complement of the null space, which in turn has dimension \(r\).
+              The only \(r\) dimensional subspace of an \(r\)-dimensional space is the entirety of the space itself, \( A \subseteq B, \ \text{dim}(A)=\text{dim}(B) \vdash B \subseteq A, \ A=B\).
+              So, the row-space is not only a subspace of the orthogonal complement but comprises the entirety of the orthogonal complement.
+          </p>
+      </div>      
+        <p>Also Recall from <em>The Counting Theorem</em>, the nullspace is \(\{(x, -2x, x) : x \in \mathbb{R}\}\).</p>
+        <p>Similarly, from the row reduction for the column space, we know that the basis for the row space is \( \{ \begin{bmatrix} 1 & 0 & -1 \end{bmatrix}, \ \begin{bmatrix} 0 & 1 & 2 \end{bmatrix}  \} \) </p>
       </div>
       <hr><h2 id="singular-value-decomposition">Singular Value Decomposition</h2>
       <p>There are orthonormal bases (\( v \)'s and \( u \)'s) for the row and column spaces so that \( Av_i = \sigma_iu_i \).</p>
