@@ -6,42 +6,46 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!--<link rel="stylesheet" href="css/main.css">-->
     <title>Linear Algebra Theorems</title>
-    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <!--<script type="text/javascript">-->
-    <!--    MathJax = {-->
-    <!--        tex: {-->
-    <!--            inlineMath: [['$', '$'], ['\\(', '\\)']]-->
-    <!--        },-->
-    <!--        svg: {-->
-    <!--            fontCache: 'global'-->
-    <!--        }-->
-    <!--    };-->
-    <!--</script>-->
-  </head><body>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>undefined
+  </head>undefined<body>
     <div class="container" id="bsr-wrapper">
-      
-      
       <div style="background-color: coral;">Under construction 6/19/23-...</div>
-      
-      
       <h1>Linear Algebra Theorems</h1>
-      <p>The six central theorems of linear algebra come from Gilbert Strang's <strong>Introduction to Linear Algebra, 5th Ed</strong>, and I have provided an example for each.
-      </p>
+      <p>Izak, June 2023</p>
+      <p>The six central theorems of linear algebra come from Gilbert Strang's <strong>Introduction to Linear Algebra, 5th Ed</strong>, and I have provided an example for each. </p>
+      <p class="pl-5"><em>Note: some HTML was started with ChatGPT, but LLM's cannot do math or even consistent <a href="https://www.latex-project.org/">LaTeX</a>, so much of the math was checked via <a href="https://www.wolframalpha.com/">Wolfram Alpha</a>, and proofs were checked via <a href="https://math.stackexchange.com/">Math Stack Exchange</a>.</em> The CSS requires <a href="https://getbootstrap.com/">Bootstrap</a>, and the LaTeX requires <a href="https://www.mathjax.org/">MathJax</a>, so this page is best viewed with internet connection  &#9825;</p>
+      <!-- <p>GPT's failure to do matrix operations, to properly parse LaTeX, etc. helped inspire me to do something an AI cannot replace yet. While Prof. Strang is more rigorous than (for example) 3b1b, I also wanted to bring my own exprience to the table. This latter part means that this page is a mix of somewhat cryptic categorical syntax, contrived examples, Math Stack Exchange insight, and the like. </p>
+      <p>It seems DeepMind researchers can train AlphaTensor to multiply matrices, but ChatGPT remains little more than an HTML generator.</p>
+      <p>"Why the <em>needless</em> commentary?" you, dear reader, may ask. Well, you might consider Axler's <em>Linear Algebra Done Right</em> or Hemmingway's <em>The Old Man and the Sea</em> if you prefer succinct prose. This page also has grown increasingly unwieldy with the explorations of each theorem, numbering hundreds of lines of HTML alone. A few lines of dialogue never hurt anyone &mdash; other than Shakespearean casts, & so on. Enjoy. </p> -->
       <ul>
-        <li><a href="#dimension-theorem">Dimension Theorem</a></li>
-        <li><a href="#counting-theorem">Counting Theorem</a></li>
-        <li><a href="#rank-theorem">Rank Theorem</a></li>
-        <li><a href="#fundamental-theorem">Fundamental Theorem</a></li>
-        <li><a href="#singular-value-decomposition">Singular Value Decomposition</a></li>
-        <li><a href="#spectral-theorem">Spectral Theorem</a></li>
+        <li>
+          <a href="#dimension-theorem">Dimension Theorem</a>
+        </li>
+        <li>
+          <a href="#counting-theorem">Counting Theorem</a>
+        </li>
+        <li> 
+          <a href="#rank-theorem">Rank Theorem</a>
+        </li>
+        <li>
+          <a href="#fundamental-theorem">Fundamental Theorem</a>
+        </li>
+        <li>
+          <a href="#singular-value-decomposition">Singular Value Decomposition</a>
+        </li>
+        <li>
+          <a href="#spectral-theorem">Spectral Theorem</a>
+        </li>
       </ul>
-      <hr>      
+      <hr>
       <h2 id="dimension-theorem">Dimension Theorem</h2>
       <p>All bases for a vector space have the same number of vectors.</p>
       <p>Mathematically: \( \text{dim}(V) = \text{dim}(W) \) for any bases \( V \) and \( W \) of the vector space.</p>
       <div>
         <p>
           <strong>Example:</strong>
+        </p>
+        <p>This is sort of a boring example, but the available proofs give an idea for how nuanced the mechanisms underlying this theorem are. See some discussion here: <a href="https://math.stackexchange.com/q/4595743/1098426">Dimension Theorem discussion</a>
         </p>
         <p>Let's consider a vector space \(V = \mathbb{R}^2\) over the field \(F = \mathbb{R}\) (the set of real numbers). In this case, vectors in \(V\) are ordered pairs \((x, y)\) where \(x\) and \(y\) are real numbers.</p>
         <p>Now, let's find two different bases for \(V\) and observe that they have the same number of vectors.</p>
@@ -51,7 +55,7 @@
         <p>We can choose the following two vectors as a basis for \(V\):</p>
         <p>\(\mathbf{v}_1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}\)</p>
         <p>\(\mathbf{v}_2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}\)</p>
-        <p>These vectors are linearly independent (meaning no non-trivial linear combination of them yields the zero vector) and span the entire vector space \(V\).</p>
+        <p>These vectors are linearly independent (meaning no non-trivial linear combination of them yields the zero vector) and span the entire vector space \(V\) &mdash; that is, \(\forall v \in V \ \exists \ \lambda_1 , \ \lambda_2 \in F \ | \ v= \lambda_1 v_1 + \lambda_2 v_2 \)</p>
         <p>
           <em>Basis 2:</em>
         </p>
@@ -59,9 +63,10 @@
         <p>\(\mathbf{u}_1 = \begin{pmatrix} 2 \\ 1 \end{pmatrix}\)</p>
         <p>\(\mathbf{u}_2 = \begin{pmatrix} -1 \\ 3 \end{pmatrix}\)</p>
         <p>Again, these vectors are linearly independent and span the entire vector space \(V\).</p>
-        <p>Both Basis 1 and Basis 2 consist of two vectors each. This example demonstrates that all bases for \(V\) have the same number of vectors, which in this case is 2. This property holds true for any vector space, indicating that the number of vectors in a basis is a fundamental characteristic of the vector space itself.</p>
+        <p>Both Basis 1 and Basis 2 consist of two vectors each. This example demonstrates that all bases (ok, at least <em>two</em> bases) for \(V\) have the same number of vectors, which in this case is 2. This property holds true for any vector space, indicating that the number of vectors in a basis is a fundamental characteristic of the vector space itself. </p>
       </div>
-      <hr><h2 id="counting-theorem">Counting Theorem</h2>
+      <hr>
+      <h2 id="counting-theorem">Counting Theorem</h2>
       <p>Dimension of column space + dimension of nullspace = number of columns.</p>
       <p>Mathematically: \( \text{dim}(\text{col}(A)) + \text{dim}(\text{null}(A)) = \text{cols}(A) \)</p>
       <div>
@@ -78,139 +83,40 @@
         <p>\[ \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \xrightarrow{\text{Row operations}} \begin{bmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \\ \end{bmatrix} \]</p>
         <div class="card">
           <div class="card-body">
-              <p>
-                  Do row reduction:
-                  \[
-                  \begin{pmatrix}
-                  1 & 2 & 3 \\
-                  4 & 5 & 6 \\
-                  7 & 8 & 9 \\
-                  \end{pmatrix}
-                  \]
-              </p>
-              <p>Subtract a multiple of one row from another.<br>
-              Subtract \(4 \times\) (row 1) from row 2:<br>
-              \[
-              \begin{pmatrix}
-              1 & 2 & 3 \\
-              0 & -3 & -6 \\
-              7 & 8 & 9 \\
-              \end{pmatrix}
-              \]
-              </p>
-              <p>Subtract a multiple of one row from another.<br>
-              Subtract \(7 \times\) (row 1) from row 3:<br>
-              \[
-              \begin{pmatrix}
-              1 & 2 & 3 \\
-              0 & -3 & -6 \\
-              0 & -6 & -12 \\
-              \end{pmatrix}
-              \]
-              </p>
-              <p>Swap two rows.<br>
-              Swap row 2 with row 3:<br>
-              \[
-              \begin{pmatrix}
-              1 & 2 & 3 \\
-              0 & -6 & -12 \\
-              0 & -3 & -6 \\
-              \end{pmatrix}
-              \]
-              </p>
-              <p>Subtract a multiple of one row from another.<br>
-              Subtract \(\frac{1}{2} \times\) (row 2) from row 3:<br>
-              \[
-              \begin{pmatrix}
-              1 & 2 & 3 \\
-              0 & -6 & -12 \\
-              0 & 0 & 0 \\
-              \end{pmatrix}
-              \]
-              </p>
-              <p>Divide row 2 by a scalar.<br>
-              Divide row 2 by -6:<br>
-              \[
-              \begin{pmatrix}
-              1 & 2 & 3 \\
-              0 & 1 & 2 \\
-              0 & 0 & 0 \\
-              \end{pmatrix}
-              \]
-              </p>
-              <p>Subtract a multiple of one row from another.<br>
-              Subtract \(2 \times\) (row 2) from row 1:<br>
-              \[
-              \begin{pmatrix}
-              1 & 0 & -1 \\
-              0 & 1 & 2 \\
-              0 & 0 & 0 \\
-              \end{pmatrix}
-              \]
-              </p>
-              <p>Verify matrix is reduced.<br>
-              This matrix is now in reduced row echelon form.<br>
-              All nonzero rows are above rows of all zeros:<br>
-              \[
-              \begin{pmatrix}
-              1 & 0 & -1 \\
-              0 & 1 & 2 \\
-              0 & 0 & 0 \\
-              \end{pmatrix}
-              \]
-              </p>
-              <p>Verify pivots and their positions.<br>
-              Each pivot is 1 and is strictly to the right of every pivot above it:<br>
-              \[
-              \begin{pmatrix}
-              1 & 0 & -1 \\
-              0 & 1 & 2 \\
-              0 & 0 & 0 \\
-              \end{pmatrix}
-              \]
-              </p>       
+            <p> Do row reduction: \[ \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{pmatrix} \] </p>
+            <p>Subtract a multiple of one row from another. <br> Subtract \(4 \times\) (row 1) from row 2: <br> \[ \begin{pmatrix} 1 & 2 & 3 \\ 0 & -3 & -6 \\ 7 & 8 & 9 \\ \end{pmatrix} \] </p>
+            <p>Subtract a multiple of one row from another. <br> Subtract \(7 \times\) (row 1) from row 3: <br> \[ \begin{pmatrix} 1 & 2 & 3 \\ 0 & -3 & -6 \\ 0 & -6 & -12 \\ \end{pmatrix} \] </p>
+            <p>Swap two rows. <br> Swap row 2 with row 3: <br> \[ \begin{pmatrix} 1 & 2 & 3 \\ 0 & -6 & -12 \\ 0 & -3 & -6 \\ \end{pmatrix} \] </p>
+            <p>Subtract a multiple of one row from another. <br> Subtract \(\frac{1}{2} \times\) (row 2) from row 3: <br> \[ \begin{pmatrix} 1 & 2 & 3 \\ 0 & -6 & -12 \\ 0 & 0 & 0 \\ \end{pmatrix} \] </p>
+            <p>Divide row 2 by a scalar. <br> Divide row 2 by -6: <br> \[ \begin{pmatrix} 1 & 2 & 3 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \\ \end{pmatrix} \] </p>
+            <p>Subtract a multiple of one row from another. <br> Subtract \(2 \times\) (row 2) from row 1: <br> \[ \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \\ \end{pmatrix} \] </p>
+            <p>Verify matrix is reduced. <br> This matrix is now in reduced row echelon form. <br> All nonzero rows are above rows of all zeros: <br> \[ \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \\ \end{pmatrix} \] </p>
+            <p>Verify pivots and their positions. <br> Each pivot is 1 and is strictly to the right of every pivot above it: <br> \[ \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \\ \end{pmatrix} \] </p>
+            <sub>Checked with Wolfram &#9825;</sub>
+          </div>
         </div>
-      </div>
         <br>
         <p>The pivot columns are the first two columns, and they form a basis for the column space of \(A\). So, the dimension of the column space is \(2\).</p>
         <p>STEP 2: Now, let's find the nullspace of \(A\) by solving the homogeneous equation \(A\mathbf{x} = \mathbf{0}\):</p>
         <p>\[ \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \\ \end{bmatrix} \]</p>
         <div class="card">
-        <div class="card-body">
-          <p>The null space of a matrix \(M\) is the set of solutions \(v\) to the homogeneous equation \(M \cdot v = 0\).<br>
-          The null space of matrix \(M = \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix}\) is the set of all vectors \(v = (x_1, x_2, x_3)\) such that \(M \cdot v = 0\):<br>
-          \(\begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix} \cdot \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}\)
-          </p>
-          <p>Identify free variables.<br>
-          Free variables in the null space \((x_1, x_2, x_3)\) correspond to the columns in \(\begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix}\) which have no pivot.<br>
-          Column 3 is the only column with no pivot, so we may take \(x_3\) to be the only free variable.
-          </p>
-          <p>Perform matrix multiplication.<br>
-          Multiply out the reduced matrix \(\begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix}\) with the proposed solution vector \((x_1, x_2, x_3)\):<br>
-          \(\begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix} \cdot \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} x_1 - x_3 \\ x_2 + 2x_3 \\ 0 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}\)
-          </p>
-          <p>Convert to a system and solve in terms of the free variables.<br>
-          Solve the equations \(x_1 - x_3 = 0\), \(x_2 + 2x_3 = 0\), and \(0 = 0\) for \(x_1\) and \(x_2\):<br>
-          \(\{x_1 = x_3, x_2 = -2x_3, 0 = 0\) for \(x_1\) and \(x_2 \}\)
-          </p>
-          <p>Replace the pivot variables with free variable expressions.<br>
-          Rewrite \(v\) in terms of the free variable \(x_3\), and assign it an arbitrary real value of \(x\):<br>
-          \(v = (x_1, x_2, x_3) = (x_3, -2x_3, x_3) = (x, -2x, x)\) for \(x \in \mathbb{R}\)
-          </p>
-          <p>
-          Rewrite the solution vector \(v = (x, -2x, x)\) in set notation:<br>
-          Answer: \(\{(x, -2x, x) : x \in \mathbb{R}\}\)
-          </p>
-      </div>
-      </div>
-      
-      <br>
-      <p>Thus, the <em>nullity</em> &mdash;or dimension of the nullspace&mdash; is one, \( \text{dim}(\text{null}(A)) = 1 \)</p>
-      
-      <p>Now, by the theorem, the dimension of the column space plus the dimension of the nullspace should be equal to the number of columns, \( \text{dim}(\text{col}(A)) + \text{dim}(\text{null}(A)) = \text{cols}(A) \)</p>
+          <div class="card-body">
+            <p>The null space of a matrix \(M\) is the set of solutions \(v\) to the homogeneous equation \(M \cdot v = 0\). <br> The null space of matrix \(M = \begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix}\) is the set of all vectors \(v = (x_1, x_2, x_3)\) such that \(M \cdot v = 0\): <br> \(\begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix} \cdot \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}\) </p>
+            <p>Identify free variables. <br> Free variables in the null space \((x_1, x_2, x_3)\) correspond to the columns in \(\begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix}\) which have no pivot. <br> Column 3 is the only column with no pivot, so we may take \(x_3\) to be the only free variable. </p>
+            <p>Perform matrix multiplication. <br> Multiply out the reduced matrix \(\begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix}\) with the proposed solution vector \((x_1, x_2, x_3)\): <br> \(\begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \end{pmatrix} \cdot \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} x_1 - x_3 \\ x_2 + 2x_3 \\ 0 \end{pmatrix} = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix}\) </p>
+            <p>Convert to a system and solve in terms of the free variables. <br> Solve the equations \(x_1 - x_3 = 0\), \(x_2 + 2x_3 = 0\), and \(0 = 0\) for \(x_1\) and \(x_2\): <br> \(\{x_1 = x_3, x_2 = -2x_3, 0 = 0\) for \(x_1\) and \(x_2 \}\) </p>
+            <p>Replace the pivot variables with free variable expressions. <br> Rewrite \(v\) in terms of the free variable \(x_3\), and assign it an arbitrary real value of \(x\): <br> \(v = (x_1, x_2, x_3) = (x_3, -2x_3, x_3) = (x, -2x, x)\) for \(x \in \mathbb{R}\) </p>
+            <p> Rewrite the solution vector \(v = (x, -2x, x)\) in set notation: <br> Answer: \(\{(x, -2x, x) : x \in \mathbb{R}\}\) </p>
+            <sub>Checked with Wolfram &#9825;</sub>
+          </div>
+        </div>
+        <br>
+        <p>Thus, the <em>nullity</em> &mdash;or dimension of the nullspace&mdash; is one, \( \text{dim}(\text{null}(A)) = 1 \) </p>
+        <p>Now, by the theorem, the dimension of the column space plus the dimension of the nullspace should be equal to the number of columns, \( \text{dim}(\text{col}(A)) + \text{dim}(\text{null}(A)) = \text{cols}(A) \)</p>
         <p>Here, \( \text{dim}(\text{col}(A)) = 2 \) and \( \text{dim}(\text{null}(A)) = 1 \) so \( \text{cols}(A) = 2 + 1 = 3 \). The number of columns in \(A\) is also \(3\).</p>
       </div>
-      <hr><h2 id="rank-theorem">Rank Theorem</h2>
+      <hr>
+      <h2 id="rank-theorem">Rank Theorem</h2>
       <p>Dimension of column space = dimension of row space.</p>
       <p>Mathematically: \( \text{dim}(\text{col}(A)) = \text{dim}(\text{row}(A)) \)</p>
       <div>
@@ -223,69 +129,350 @@
         <p>
           <em>Solution:</em>
         </p>
-        <p>To find the column space of \(A\), we reduce \(A\) to echelon form:</p>
+        <p>First, consider the column space and then, second, consider the row space.</p>
+        <p>For both the column and row spaces, we reduce \(A\) to echelon form exactly as in step 1 of the example for the <em>Counting Theorem</em>: </p>
         <p>\[ \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \xrightarrow{\text{Row operations}} \begin{bmatrix} 1 & 0 & -1 \\ 0 & 1 & 2 \\ 0 & 0 & 0 \\ \end{bmatrix} \]</p>
-        <p>The pivot columns are the first column and the second column, and they form a basis for the column space of \(A\). So, the dimension of the column space is 2.</p>
-        <p>To find the row space of \(A\), we observe that the rows of the echelon form with pivots correspond to the nonzero rows of \(A\). So, the row space of \(A\) is spanned by the following two rows:</p>
-        <p>\[ \begin{bmatrix} 1 & 2 & 3 \\ \end{bmatrix} \quad \text{and} \quad \begin{bmatrix} 0 & -3 & -6 \\ \end{bmatrix} \]</p>
-        <p>These rows are linearly independent, and they form a basis for the row space of \(A\). So, the dimension of the row space is also 2.</p>
-        <p>According to the theorem, the dimension of the column space should be equal to the dimension of the row space.</p>
-        <p>Here, the dimension of the column space is 2, and the dimension of the row space is also 2.</p>
+        <!-- Rank Theorem steps -->
+        <p>For the column space: the pivot columns of this matrix \(A\) are the first column and the second column &mdash; where \(1\) is the only nonzero element of the pivot columns in row-reduced echelon form \(\text{rref}(A)\).</p>
+        <p>Thus, the second and first columns of the orignial matrix \( \begin{bmatrix} 1 & 4 & 7 \\ \end{bmatrix} \) and \( \begin{bmatrix} 2 & 5 & 8 \\ \end{bmatrix} \) form a basis for the column space of \(A\). So, the dimension of the column space is \( \text{dim}(\text{col}(A)) = 2 \).</p>
+        <p>The row space comes from the non-zero rows of the row-reduced echelon matrix. The row space of \(A\) is spanned by \( \begin{bmatrix} 1 & 0 & -1 \\ \end{bmatrix} \) and \( \begin{bmatrix} 0 & 1 & 2 \\ \end{bmatrix} \), so they form a basis for the row space of \(A\), and the dimension of the row space is \( \text{dim}(\text{row}(A)) = 2 \).</p>
+        <p>We see \( \text{dim}(\text{col}(A)) = \text{dim}(\text{row}(A)) = 2 \). <br>
+          <b>Q.E.D.</b>
+        </p>
+        <p>That ends the example, but some rigorous (albiet a tad daunting) proofs are here: <a href="https://math.stackexchange.com/q/1900437/1098426">Rank Theorem Proofs</a>
+        </p>
       </div>
-
-      <hr><h2 id="fundamental-theorem">Fundamental Theorem</h2>
+      <hr>
+      <!-- FUNDAMENTAL THEOREM -->
+      <h2 id="fundamental-theorem">Fundamental Theorem</h2>
       <p>The row space and nullspace of \( A \) are orthogonal complements in \( \mathbb{R}^n \).</p>
       <p>Mathematically: \( \text{row}(A) \perp \text{null}(A) \) in \( \mathbb{R}^n \)</p>
+      <p>
+        <strong>Example:</strong>
+      </p>
+      <p>Consider the matrix:</p>
+      <p>\[ A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \]</p>
+      <p>Let's calculate the row space (step 1) and the nullspace (step 2) of \(A\) and verify that they are orthogonal complements in \(\mathbb{R}^n\).</p>
+      <p>
+        <em>Solution:</em>
+      </p>
       <div>
-        <p>
-          <strong>Example:</strong>
-        </p>
-        <p>Consider the matrix:</p>
-        <p>\[ A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \]</p>
-        <p>Let's calculate the row space (step 1) and the nullspace (step 2) of \(A\) and verify that they are orthogonal complements in \(\mathbb{R}^n\).</p>
-        <p>
-          <em>Solution:</em>
-        </p>
-        <div>
-          <p>This one requires a bit more thinking outside of the row reduction algorithm</p>
-          <p>
-              Recall from <em>The Counting Theorem</em>, the null space has dimension equal to the difference between the number of columns and the dimension of the row space, \(\text{col}(A) - \text{dim}(\text{row}(A))\).
-              It follows that the orthogonal complement of the null space has dimension \(\text{col}(A) - (\text{col}(A) - \text{dim}(\text{row}(A)))=\text{dim}(\text{row}(A))\).
-              Now, the row space is an \(r\) dimensional subspace of the orthogonal complement of the null space, which in turn has dimension \(r\).
-              The only \(r\) dimensional subspace of an \(r\)-dimensional space is the entirety of the space itself, \( A \subseteq B, \ \text{dim}(A)=\text{dim}(B) \vdash B \subseteq A, \ A=B\).
-              So, the row-space is not only a subspace of the orthogonal complement but comprises the entirety of the orthogonal complement.
-          </p>
-      </div>      
-        <p>Also Recall from <em>The Counting Theorem</em>, the nullspace is \(\{(x, -2x, x) : x \in \mathbb{R}\}\).</p>
-        <p>Similarly, from the row reduction for the column space, we know that the basis for the row space is \( \{ \begin{bmatrix} 1 & 0 & -1 \end{bmatrix}, \ \begin{bmatrix} 0 & 1 & 2 \end{bmatrix}  \} \) </p>
+        <p>This one requires a bit more thinking outside of the row reduction algorithm</p>
+        <p> Recall from <em>The Counting Theorem</em>, the null space has dimension equal to the difference between the number of columns and the dimension of the row space, \(\text{col}(A) - \text{dim}(\text{row}(A))\). It follows that the orthogonal complement of the null space has dimension \(\text{col}(A) - (\text{col}(A) - \text{dim}(\text{row}(A)))=\text{dim}(\text{row}(A))\). Now, the row space is an \(r\) dimensional subspace of the orthogonal complement of the null space, which in turn has dimension \(r\). The only \(r\) dimensional subspace of an \(r\)-dimensional space is the entirety of the space itself, \( A \subseteq B, \ \text{dim}(A)=\text{dim}(B) \vdash B \subseteq A, \ A=B\). So, the row-space is not only a subspace of the orthogonal complement but comprises the entirety of the orthogonal complement. </p>
       </div>
-      <hr><h2 id="singular-value-decomposition">Singular Value Decomposition</h2>
+      <p>Also Recall from <em>The Counting Theorem</em>, the nullspace is \(\{(x, -2x, x) : x \in \mathbb{R}\}\). </p>
+      <p>Similarly, from the row reduction of the matrix, we know that the basis for the row space is \( \{ \begin{bmatrix} 1 & 0 & -1 \end{bmatrix}, \ \begin{bmatrix} 0 & 1 & 2 \end{bmatrix} \} \) </p>
+      <p>Now, orthogonal vectors have an inner product equal to zero \( x^T y = y^T x = 0\). Spaces are orthogonal when every vector in one is orthogonal to every vector in the other.
+      <p>How to check that \( \forall n \in \{(x, -2x, x) : x \in \mathbb{R}\} \) and \( \forall r \in \) the <em>row space</em> which is in some ways more abstract: </p>
+      <p>
+        <em>For a vector space \(V\), a family in \(V\) consists of a set \(I\) together with a function \(e: I \rightarrow V\). A basis of \(V\) is a family \((I, e)\) in \(V\) such that for all \(x \in V\) there exists a unique finitely-supported function \(a: I \rightarrow \mathbb{R}\) satisfying \(x = \sum_{i \in I} a_i e_i \ \) as well as conditions for well ordering</em> (See <a href="https://math.stackexchange.com/a/1898250/1098426">this definition's source</a> for further context on well ordering and matrices).
+      </p>
+      <p>And that is not even considering <em>order</em>, which is an essential part of elimination on matrices. All the same, the definition can be even more intuitive if simply considered \(x = \sum a e\) to mean all the linear combinations of \( \begin{bmatrix} 1 & 0 & -1 \end{bmatrix} \) and \( \begin{bmatrix} 0 & 1 & 2 \end{bmatrix}\). </p>
+      <p>Even more intuitively, the null space can be seen as a line or a one dimensional subspace of \( \mathbb{R}^3 \), the row space a plane or two dimensional subspace of \( \mathbb{R}^3 \).</p>
+      <p>Thus, the normal vector to \(\text{row}(A)\) is \( \begin{bmatrix} 1 & 0 & -1 \end{bmatrix} \times \begin{bmatrix} 0 & 1 & 2 \end{bmatrix} \)</p>
+      <div class="card">
+        <div class="card-body">
+          <p>Compute the following cross product:</p>
+          <p>\((1, 0, -1) \times (0, 1, 2)\)</p>
+          <p>Create a matrix out of the vectors \((1, 0, -1)\) and \((0, 1, 2)\) along with the unit vectors \(\hat{i}\), \(\hat{j}\), and \(\hat{k}\).</p>
+          <p>Construct a matrix where the first row contains unit vectors \(\hat{i}\), \(\hat{j}\), and \(\hat{k}\); and the second and third rows are made of vectors \((1, 0, -1)\) and \((0, 1, 2)\):</p>
+          <p>\[ \begin{pmatrix} \hat{i} & \hat{j} & \hat{k} \\ 1 & 0 & -1 \\ 0 & 1 & 2 \\ \end{pmatrix} \]</p>
+          <p>The cross product of the vectors \((1, 0, -1)\) and \((0, 1, 2)\) is the determinant of the matrix:</p>
+          <p>\[ \begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ 1 & 0 & -1 \\ 0 & 1 & 2 \\ \end{vmatrix} \]</p>
+          <p>Take the determinant of this matrix:</p>
+          <p>\(\begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ 1 & 0 & -1 \\ 0 & 1 & 2 \end{vmatrix}\)</p>
+          <p>Find an optimal row or column to use for Laplace's expansion.</p>
+          <p>Expand with respect to row 1:</p>
+          <p>\(=\begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ 1 & 0 & -1 \\ 0 & 1 & 2 \end{vmatrix}\)</p>
+          <p>The determinant of the matrix \(\begin{pmatrix} a_{1,1} & a_{1,2} & a_{1,3} \\ a_{2,1} & a_{2,2} & a_{2,3} \\ a_{3,1} & a_{3,2} & a_{3,3} \end{pmatrix}\) is given by \(\sum_{j=1}^{3}(-1)^{1+j}a_{1,j}M_{1,j}\) where \(M_{i,j}\) is the determinant of the matrix obtained by removing row \(i\) and column \(j\).</p>
+          <p>The determinant of the matrix \(\begin{pmatrix} \hat{i} & \hat{j} & \hat{k} \\ 1 & 0 & -1 \\ 0 & 1 & 2 \end{pmatrix}\) is given by \(\hat{i}\begin{vmatrix} 0 & -1 \\ 1 & 2 \end{vmatrix} + (-\hat{j})\begin{vmatrix} 1 & -1 \\ 0 & 2 \end{vmatrix} + \hat{k}\begin{vmatrix} 1 & 0 \\ 0 & 1 \end{vmatrix}\):</p>
+          <p>\(=\hat{i}\begin{vmatrix} 0 & -1 \\ 1 & 2 \end{vmatrix} + (-\hat{j})\begin{vmatrix} 1 & -1 \\ 0 & 2 \end{vmatrix} + \hat{k}\begin{vmatrix} 1 & 0 \\ 0 & 1 \end{vmatrix}\)</p>
+          <p>The determinant of the matrix \(\begin{pmatrix} a & b \\ c & d \end{pmatrix}\) is given by \(ad - bc\).</p>
+          <p>\(\hat{i}\begin{vmatrix} 0 & -1 \\ 1 & 2 \end{vmatrix} = \hat{i}\)</p>
+          <p>\(=(-\hat{j})\begin{vmatrix} 1 & -1 \\ 0 & 2 \end{vmatrix} + \hat{k}\begin{vmatrix} 1 & 0 \\ 0 & 1 \end{vmatrix}\)</p>
+          <p>Compute the determinant of the matrix \(\begin{pmatrix} 1 & -1 \\ 0 & 2 \end{pmatrix}\) and multiply the result by \(-\hat{j}\).</p>
+          <p>\((-\hat{j})\begin{vmatrix} 1 & -1 \\ 0 & 2 \end{vmatrix} = -2\hat{j}\)</p>
+          <p>\(=\hat{i} - 2\hat{j} + \hat{k}\begin{vmatrix} 1 & 0 \\ 0 & 1 \end{vmatrix}\)</p>
+          <p>Compute the determinant of the matrix \(\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}\) and multiply the result by \(\hat{k}\).</p>
+          <p>\(\hat{k}\begin{vmatrix} 1 & 0 \\ 0 & 1 \end{vmatrix} = \hat{k}\)</p>
+          <p>\(=\hat{i} - 2\hat{j} + \hat{k}\)</p>
+          <p>Collect the coefficients of \(\hat{i}\), \(\hat{j}\), and \(\hat{k}\) into a vector ordered as \((\hat{i}, \hat{j}, \hat{k})\).</p>
+          <p>\(\hat{i} - 2\hat{j} + \hat{k} = (1, -2, 1)\)</p>
+          <sub>Checked with Wolfram &#9825;</sub>
+        </div>
+      </div>
+      <br>
+      <p>We see the normal of \( \text{row}(A)\) is \( \hat{s} = \begin{bmatrix} 1 & -2 & 1 \end{bmatrix} \). Now, it is simple to see that \( \text{null}(A) \) has direction vector \( \hat{s} = \begin{bmatrix} 1 & -2 & 1 \end{bmatrix} \) (i.e. factor out \(x\)).</p>
+      <p>Now, proving \( \text{row}(A) \perp \text{null}(A) \) in \( \mathbb{R}^n \) is proving that the normal vector \( \hat{n} \) of \( \text{row}(A) \) is parallel to the direction vector \( \hat{s} \) of \( \text{null}(A) \).</p>
+      <p>This parallelism, again, is true if \( \hat{n} \times \hat{s} = 0 \). But, we do not need to go this far because out results have yielded the same vector.</p>
+      <p>That is, \( ( \hat{n} = \hat{s} ) \Rightarrow ( \hat{n} \times \hat{s} = 0 ) \), and \( ( \hat{n} \times \hat{s} = 0 ) \Rightarrow (\hat{n} \parallel \hat{s}) \), so finally, \( \hat{n} \parallel \hat{s} \Rightarrow (\text{row}(A) \perp \text{null}(A)) \).</p>
+      <hr>
+      <!-- SINGULAR VALUE DECOMPOSITION-->
+      <h2 id="singular-value-decomposition">Singular Value Decomposition</h2>
       <p>There are orthonormal bases (\( v \)'s and \( u \)'s) for the row and column spaces so that \( Av_i = \sigma_iu_i \).</p>
       <p>Mathematically: \( A = U\Sigma V^T \) where \( U \) and \( V \) are orthonormal matrices, and \( \Sigma \) is a diagonal matrix of singular values.</p>
       <div>
         <p>
           <strong>Example:</strong>
         </p>
-        <p>Consider the matrix:</p>
+        <p>While I would love to consider this matrix:</p>
         <p>\[ A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{bmatrix} \]</p>
-        <p>Let's find orthonormal bases for the row space and the column space of \(A\) and verify the given relationship \(Av_i = \sigma_iu_i\).</p>
-        <p>
-          <em>Solution:</em>
-        </p>
-        <p>To find an orthonormal basis for the row space of \(A\), we can use the process of orthogonalization. Starting with the rows of \(A\), we can apply the Gram-Schmidt process to obtain the orthonormal vectors:</p>
-        <p>\[ \begin{align*} \mathbf{v}_1 &= \frac{1}{\sqrt{14}}\begin{bmatrix} 1 & 2 & 3 \end{bmatrix} \\ \mathbf{v}_2 &= \frac{1}{\sqrt{2}}\begin{bmatrix} 0 & -1 & -2 \end{bmatrix} \\ \mathbf{v}_3 &= \frac{1}{\sqrt{126}}\begin{bmatrix} 4 & 8 & 12 \end{bmatrix} \end{align*} \]</p>
-        <p>These vectors form an orthonormal basis for the row space of \(A\).</p>
-        <p>Next, let's find an orthonormal basis for the column space of \(A\). We can apply the Gram-Schmidt process to the columns of \(A\) to obtain the orthonormal vectors:</p>
-        <p>\[ \begin{align*} \mathbf{u}_1 &= \frac{1}{\sqrt{66}}\begin{bmatrix} 1 \\ 4 \\ 7 \end{bmatrix} \\ \mathbf{u}_2 &= \frac{1}{\sqrt{66}}\begin{bmatrix} 2 \\ 5 \\ 8 \end{bmatrix} \\ \mathbf{u}_3 &= \frac{1}{\sqrt{66}}\begin{bmatrix} 3 \\ 6 \\ 9 \end{bmatrix} \end{align*} \]</p>
-        <p>These vectors form an orthonormal basis for the column space of \(A\).</p>
-        <p>Now, let's verify the relationship \(Av_i = \sigma_iu_i\) for each pair of vectors. Taking the singular values \(\sigma_i\) to be the norms of the vectors \(\mathbf{u}_i\), we have:</p>
-        <p>\[ \begin{align*} A\mathbf{v}_1 &= \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix} \left(\frac{1}{\sqrt{14}}\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}\right) = \sqrt{14}\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} = \sqrt{14}\mathbf{u}_1 \\ A\mathbf{v}_2 &= \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix} \left(\frac{1}{\sqrt{2}}\begin{bmatrix} 0 \\ -1 \\ -2 \end{bmatrix}\right) = \sqrt{2}\begin{bmatrix} 2 \\ 5 \\ 8 \end{bmatrix} = \sqrt{2}\mathbf{u}_2 \\ A\mathbf{v}_3 &= \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix} \left(\frac{1}{\sqrt{126}}\begin{bmatrix} 4 \\ 8 \\ 12 \end{bmatrix}\right) = \sqrt{126}\begin{bmatrix} 3 \\ 6 \\ 9 \end{bmatrix} = \sqrt{126}\mathbf{u}_3 \end{align*} \]</p>
-        <p>Hence, we can see that \(Av_i = \sigma_iu_i\) for each pair of vectors, as stated in the theorem.</p>
+        <p>This yields a horrifying SVD:</p>
+        <div class="card">
+          <div class="card-body">
+            <p> M = U.Σ.V <sup>†</sup>
+              <br> where <br> \(M = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \\ \end{pmatrix}\)
+            </p>
+            <p> Apologies, I had to shrink this to fit it on the page: \( U =\tiny{ \begin{pmatrix} \frac{3 - \frac{2(-1223 - 13\sqrt{8881})}{3(477 + 5\sqrt{8881})} - \frac{(-1015 - 11\sqrt{8881})}{3(477 + 5\sqrt{8881})}}{\sqrt{(9 - \frac{8(-1223 - 13\sqrt{8881})}{3(477 + 5\sqrt{8881})} - \frac{7(-1015 - 11\sqrt{8881})}{3(477 + 5\sqrt{8881})})^2 + (6 - \frac{5(-1223 - 13\sqrt{8881})}{3(477 + 5\sqrt{8881})} - \frac{4(-1015 - 11\sqrt{8881})}{3(477 + 5\sqrt{8881})})^2 + (3 - \frac{2(-1223 - 13\sqrt{8881})}{3(477 + 5\sqrt{8881})} - \frac{(-1015 - 11\sqrt{8881})}{3(477 + 5\sqrt{8881})})^2}} & \frac{3 - \frac{2(1223 - 13\sqrt{8881})}{3(5\sqrt{8881} - 477)} - \frac{(1015 - 11\sqrt{8881})}{3(5\sqrt{8881} - 477)}}{\sqrt{(9 - \frac{8(1223 - 13\sqrt{8881})}{3(5\sqrt{8881} - 477)} - \frac{7(1015 - 11\sqrt{8881})}{3(5\sqrt{8881} - 477)})^2 + (6 - \frac{5(1223 - 13\sqrt{8881})}{3(5\sqrt{8881} - 477)} - \frac{4(1015 - 11\sqrt{8881})}{3(5\sqrt{8881} - 477)})^2 + (3 - \frac{2(1223 - 13\sqrt{8881})}{3(5\sqrt{8881} - 477)} - \frac{(1015 - 11\sqrt{8881})}{3(5\sqrt{8881} - 477)})^2}} & \frac{1}{\sqrt{6}} \\ \\ \frac{6 - \frac{5(-1223 - 13\sqrt{8881})}{3(477 + 5\sqrt{8881})} - \frac{4(-1015 - 11\sqrt{8881})}{3(477 + 5\sqrt{8881})}}{\sqrt{(9 - \frac{8(-1223 - 13\sqrt{8881})}{3(477 + 5\sqrt{8881})} - \frac{7(-1015 - 11\sqrt{8881})}{3(477 + 5\sqrt{8881})})^2 + (6 - \frac{5(-1223 - 13\sqrt{8881})}{3(477 + 5\sqrt{8881})} - \frac{4(-1015 - 11\sqrt{8881})}{3(477 + 5\sqrt{8881})})^2 + (3 - \frac{2(-1223 - 13\sqrt{8881})}{3(477 + 5\sqrt{8881})} - \frac{(-1015 - 11\sqrt{8881})}{3(477 + 5\sqrt{8881})})^2}} & \frac{6 - \frac{5(1223 - 13\sqrt{8881})}{3(5\sqrt{8881} - 477)} - \frac{4(1015 - 11\sqrt{8881})}{3(5\sqrt{8881} - 477)}}{\sqrt{(9 - \frac{8(1223 - 13\sqrt{8881})}{3(5\sqrt{8881} - 477)} - \frac{7(1015 - 11\sqrt{8881})}{3(5\sqrt{8881} - 477)})^2 + (6 - \frac{5(1223 - 13\sqrt{8881})}{3(5\sqrt{8881} - 477)} - \frac{4(1015 - 11\sqrt{8881})}{3(5\sqrt{8881} - 477)})^2 + (3 - \frac{2(1223 - 13\sqrt{8881})}{3(5\sqrt{8881} - 477)} - \frac{(1015 - 11\sqrt{8881})}{3(5\sqrt{8881} - 477)})^2}} & \frac{1}{\sqrt{6}} \\ \\ \frac{9 - \frac{8(-1223 - 13\sqrt{8881})}{3(477 + 5\sqrt{8881})} - \frac{7(-1015 - 11\sqrt{8881})}{3(477 + 5\sqrt{8881})}}{\sqrt{(9 - \frac{8(-1223 - 13\sqrt{8881})}{3(477 + 5\sqrt{8881})} - \frac{7(-1015 - 11\sqrt{8881})}{3(477 + 5\sqrt{8881})})^2 + (6 - \frac{5(-1223 - 13\sqrt{8881})}{3(477 + 5\sqrt{8881})} - \frac{4(-1015 - 11\sqrt{8881})}{3(477 + 5\sqrt{8881})})^2 + (3 - \frac{2(-1223 - 13\sqrt{8881})}{3(477 + 5\sqrt{8881})} - \frac{(-1015 - 11\sqrt{8881})}{3(477 + 5\sqrt{8881})})^2}} & \frac{9 - \frac{8(1223 - 13\sqrt{8881})}{3(5\sqrt{8881} - 477)} - \frac{7(1015 - 11\sqrt{8881})}{3(5\sqrt{8881} - 477)}}{\sqrt{(9 - \frac{8(1223 - 13\sqrt{8881})}{3(5\sqrt{8881} - 477)} - \frac{7(1015 - 11\sqrt{8881})}{3(5\sqrt{8881} - 477)})^2 + (6 - \frac{5(1223 - 13\sqrt{8881})}{3(5\sqrt{8881} - 477)} - \frac{4(1015 - 11\sqrt{8881})}{3(5\sqrt{8881} - 477)})^2 + (3 - \frac{2(1223 - 13\sqrt{8881})}{3(5\sqrt{8881} - 477)} - \frac{(1015 - 11\sqrt{8881})}{3(5\sqrt{8881} - 477)})^2}} & \frac{1}{\sqrt{6}} \\ \end{pmatrix}} \) </p>
+            <p> \(Σ = \begin{pmatrix} \sqrt{\frac{3}{2}(95 + \sqrt{8881})} & 0 & 0 \\ 0 & \sqrt{\frac{3}{2}(95 - \sqrt{8881})} & 0 \\ 0 & 0 & 0 \\ \end{pmatrix} \) \(V = \begin{pmatrix} -\frac{-1015 - 11\sqrt{8881}}{3(477 + 5\sqrt{8881})\sqrt{1 + \frac{(-1223 - 13\sqrt{8881})^2}{9(477 + 5\sqrt{8881})^2} + \frac{(-1015 - 11\sqrt{8881})^2}{9(477 + 5\sqrt{8881})^2}}} & -\frac{1015 - 11\sqrt{8881}}{3(5\sqrt{8881} - 477)\sqrt{1 + \frac{(1223 - 13\sqrt{8881})^2}{9(5\sqrt{8881} - 477)^2} + \frac{(1015 - 11\sqrt{8881})^2}{9(5\sqrt{8881} - 477)^2}}} & \frac{1}{\sqrt{6}} \\ -\frac{-1223 - 13\sqrt{8881}}{3(477 + 5\sqrt{8881})\sqrt{1 + \frac{(-1223 - 13\sqrt{8881})^2}{9(477 + 5\sqrt{8881})^2} + \frac{(-1015 - 11\sqrt{8881})^2}{9(477 + 5\sqrt{8881})^2}}} & -\frac{1223 - 13\sqrt{8881}}{3(5\sqrt{8881} - 477)\sqrt{1 + \frac{(1223 - 13\sqrt{8881})^2}{9(5\sqrt{8881} - 477)^2} + \frac{(1015 - 11\sqrt{8881})^2}{9(5\sqrt{8881} - 477)^2}}} & -\sqrt{\frac{2}{3}} \\ \frac{1}{\sqrt{1 + \frac{(-1223 - 13\sqrt{8881})^2}{9(477 + 5\sqrt{8881})^2} + \frac{(-1015 - 11\sqrt{8881})^2}{9(477 + 5\sqrt{8881})^2}}} & \frac{1}{\sqrt{1 + \frac{(1223 - 13\sqrt{8881})^2}{9(5\sqrt{8881} - 477)^2} + \frac{(1015 - 11\sqrt{8881})^2}{9(5\sqrt{8881} - 477)^2}}} & 0 \\ \end{pmatrix}^†\) </p>
+            <p>Note: † denotes the conjugate transpose</p>
+            <sub>I also found this one with Wolfram &#9825;</sub>
+          </div>
+        </div>
+        <br>
+        <div>
+          <p>INSTEAD, below I transcribed and explained <a href="https://www.d.umn.edu/~mhampton/m4326svd_example.pdf">a better example</a> from <b>Prof. Marshall Hampton</b> at University of Minnesota Duluth (I merely trascribed & explained <em>Prof. Marshall Hampton's</em> idea &mdash; no plagiarism intended)! </p>
+          <p> Find the SVD of \(A, U \Sigma V^{T}\), where \[A=\begin{bmatrix}3 & 2 & 2 \\ 2 & 3 & -2\end{bmatrix}\] </p>
+          <p> First, we compute the singular values \(\sigma_{i}\) by finding the eigenvalues of \(A A^{T}\). </p>
+          <p> \[ A A^{T}=\begin{bmatrix}17 & 8 \\ 8 & 17\end{bmatrix} \] </p>
+          <div class="card">
+            <div class="card-body">
+              <p> Multiply the following matrices: </p>
+              <p> \[ \begin{bmatrix} 3 & 2 & 2 \\ 2 & 3 & -2 \end{bmatrix} \cdot \begin{bmatrix} 3 & 2 \\ 2 & 3 \\ 2 & -2 \end{bmatrix} \] </p>
+              <p> Determine the dimension of the product. The dimensions of the first matrix are \(2 \times 3\) and the dimensions of the second matrix are \(3 \times 2\). This means the dimensions of the product are \(2 \times 2\): </p>
+              <p> \[ \begin{bmatrix} 3 & 2 & 2 \\ 2 & 3 & -2 \end{bmatrix} \cdot \begin{bmatrix} 3 & 2 \\ 2 & 3 \\ 2 & -2 \end{bmatrix} = \begin{bmatrix} \_ & \_ \\ \_ & \_ \end{bmatrix} \] </p>
+              <p> Find the entry in the 1\(^{\text{st}}\) row and 1\(^{\text{st}}\) column of the product matrix. First look at the 1\(^{\text{st}}\) row of the first matrix and the 1\(^{\text{st}}\) column of the second matrix. </p>
+              <p> Highlight the 1\(^{\text{st}}\) row and the 1\(^{\text{st}}\) column: </p>
+              <p> \[ \begin{bmatrix} 3 & 2 & 2 \\ 2 & 3 & -2 \end{bmatrix} \cdot \begin{bmatrix} 3 & 2 \\ 2 & 3 \\ 2 & -2 \end{bmatrix} = \begin{bmatrix} \_ & \_ \\ \_ & \_ \end{bmatrix} \] </p>
+              <p> Multiply corresponding components of the highlighted row and highlighted column, then add. </p>
+              <p> Multiply corresponding components and add: \(3 \cdot 3 + 2 \cdot 2 + 2 \cdot 2 = 17\). </p>
+              <p> Place this number into the 1\(^{\text{st}}\) row and 1\(^{\text{st}}\) column of the product: </p>
+              <p> \[ \begin{bmatrix} 3 & 2 & 2 \\ 2 & 3 & -2 \end{bmatrix} \cdot \begin{bmatrix} 3 & 2 \\ 2 & 3 \\ 2 & -2 \end{bmatrix} = \begin{bmatrix} 17 & \_ \\ \_ & \_ \end{bmatrix} \] </p>
+              <p> Find the entry in the 1\(^{\text{st}}\) row and 2\(^{\text{nd}}\) column of the product matrix. First look at the 1\(^{\text{st}}\) row of the first matrix and the 2\(^{\text{nd}}\) column of the second matrix. </p>
+              <p> Highlight the 1\(^{\text{st}}\) row and the 2\(^{\text{nd}}\) column: </p>
+              <p> \[ \begin{bmatrix} 3 & 2 & 2 \\ 2 & 3 & -2 \end{bmatrix} \cdot \begin{bmatrix} 3 & 2 \\ 2 & 3 \\ 2 & -2 \end{bmatrix} = \begin{bmatrix} 17 & \_ \\ \_ & \_ \end{bmatrix} \] </p>
+              <p> Multiply corresponding components of the highlighted row and highlighted column, then add. </p>
+              <p> Multiply corresponding components and add: \(3 \cdot 2 + 2 \cdot 3 + 2 \cdot (-2) = 8\). </p>
+              <p> Place this number into the 1\(^{\text{st}}\) row and 2\(^{\text{nd}}\) column of the product: </p>
+              <p> \[ \begin{bmatrix} 3 & 2 & 2 \\ 2 & 3 & -2 \end{bmatrix} \cdot \begin{bmatrix} 3 & 2 \\ 2 & 3 \\ 2 & -2 \end{bmatrix} = \begin{bmatrix} 17 & 8 \\ \_ & \_ \end{bmatrix} \] </p>
+              <p> Find the entry in the 2\(^{\text{nd}}\) row and 1\(^{\text{st}}\) column of the product matrix. First look at the 2\(^{\text{nd}}\) row of the first matrix and the 1\(^{\text{st}}\) column of the second matrix. </p>
+              <p> Highlight the 2\(^{\text{nd}}\) row and the 1\(^{\text{st}}\) column: </p>
+              <p> \[ \begin{bmatrix} 3 & 2 & 2 \\ 2 & 3 & -2 \end{bmatrix} \cdot \begin{bmatrix} 3 & 2 \\ 2 & 3 \\ 2 & -2 \end{bmatrix} = \begin{bmatrix} 17 & 8 \\ 8 & \_ \end{bmatrix} \] </p>
+              <p> Multiply corresponding components of the highlighted row and highlighted column, then add. </p>
+              <p> Multiply corresponding components and add: \(2 \cdot 3 + 3 \cdot 2 + (-2) \cdot 2 = 8\). </p>
+              <p> Place this number into the 2\(^{\text{nd}}\) row and 1\(^{\text{st}}\) column of the product: </p>
+              <p> \[ \begin{bmatrix} 3 & 2 & 2 \\ 2 & 3 & -2 \end{bmatrix} \cdot \begin{bmatrix} 3 & 2 \\ 2 & 3 \\ 2 & -2 \end{bmatrix} = \begin{bmatrix} 17 & 8 \\ 8 & \_ \end{bmatrix} \] </p>
+              <p> Find the entry in the 2\(^{\text{nd}}\) row and 2\(^{\text{nd}}\) column of the product matrix. First look at the 2\(^{\text{nd}}\) row of the first matrix and the 2\(^{\text{nd}}\) column of the second matrix. </p>
+              <p> Highlight the 2\(^{\text{nd}}\) row and the 2\(^{\text{nd}}\) column: </p>
+              <p> \[ \begin{bmatrix} 3 & 2 & 2 \\ 2 & 3 & -2 \end{bmatrix} \cdot \begin{bmatrix} 3 & 2 \\ 2 & 3 \\ 2 & -2 \end{bmatrix} = \begin{bmatrix} 17 & 8 \\ 8 & \_ \end{bmatrix} \] </p>
+              <p> Multiply corresponding components of the highlighted row and highlighted column, then add. </p>
+              <p> Multiply corresponding components and add: \(2 \cdot 2 + 3 \cdot 3 + (-2) \cdot (-2) = 17\). </p>
+              <p> Place this number into the 2\(^{\text{nd}}\) row and 2\(^{\text{nd}}\) column of the product: </p>
+              <p> Answer: \[ \begin{bmatrix} 3 & 2 & 2 \\ 2 & 3 & -2 \end{bmatrix} \cdot \begin{bmatrix} 3 & 2 \\ 2 & 3 \\ 2 & -2 \end{bmatrix} = \begin{bmatrix} 17 & 8 \\ 8 & 17 \end{bmatrix} \] </p>
+              <sub>Again, &#9825; lovingly &#9825; transcribed from Wolfram &#9825;</sub>
+            </div>
+          </div>
+          <br>
+          <p> The characteristic polynomial is \(\operatorname{det}(A A^{T}-\lambda I)=\lambda^{2}-34 \lambda+225=(\lambda-25)(\lambda-9)\), so the singular values are \(\sigma_{1}=\sqrt{25}=5\) and \(\sigma_{2}=\sqrt{9}=3\). </p>
+          <div class="pl-5">
+          <p>For this sixe theorems page, I do not want to get too much in to determinates (i.e. \(\text{det}(A)\)). Besides, the cross product we did for the <em>Fundamental Theorem</em> already demonstrated the \(2\times2\) determinate. Recall, <em>the determinant of the matrix \(\begin{pmatrix} a & b \\ c & d \end{pmatrix}\) is given by \(ad - bc\)</em>.</p>
+          <p>The beauty and horror of determinats aside, quickly recall the <em>identity matrix</em>, which is just like the number \(1\) but for matrices.</p>
+          <p>
+            The general identity matrix, denoted as \(I_n\), is a square matrix of size \(n \times n\) with ones on the main diagonal (from the top-left to the bottom-right) and zeros elsewhere.
+          </p>
+          <p>
+            The general identity matrix \(I_n\) can be represented as:
+          </p>
+          <p>
+            \[
+            I_n = \begin{bmatrix}
+              1 & 0 & \cdots & 0 \\
+              0 & 1 & \cdots & 0 \\
+              \vdots & \vdots & \ddots & \vdots \\
+              0 & 0 & \cdots & 1
+            \end{bmatrix}
+            \]
+          </p>
+          <p>
+            In this matrix, the element at the \(i^\text{th}\) row and \(j^\text{th}\) column is denoted as \((I_n)_{ij}\). It has the value:
+          </p>
+          <p>
+            \[
+            (I_n)_{ij} = \begin{cases}
+              1 & \text{if } i = j \\
+              0 & \text{if } i \neq j
+            \end{cases}
+            \]
+          </p>
+          <p>Now, my final note before getting back to <em>Prof. Marshall Hampton</em> is to recall that matrix multiplication is not commutatitive. Generally, \(AB \ne BA \)</p>
+        </div>
+          <p> Now we find the right singular vectors (the columns of \(V\)) by finding an orthonormal set of eigenvectors of \(A^{T} A\). It is also possible to proceed by finding the left singular vectors (columns of \(U\)) instead. The eigenvalues of \(A^{T} A\) are 25, 9, and 0, and since \(A^{T} A\) is symmetric, we know that the eigenvectors will be orthogonal. </p>
+          <div class="card"><div class="card-body">
+            <p>
+              Multiply the following matrices:
+              \[
+              \begin{bmatrix}
+                3 & 2 \\
+                2 & 3 \\
+                2 & -2
+              \end{bmatrix} \cdot \begin{bmatrix}
+                3 & 2 & 2 \\
+                2 & 3 & -2
+              \end{bmatrix}
+              \]
+            </p>
+            <p>
+              Determine the dimension of the product. The dimensions of the first matrix are 3x2 and the dimensions of the second matrix are 2x3.
+              This means the dimensions of the product are 3x3:
+              \[
+              \begin{bmatrix}
+                3 & 2 \\
+                2 & 3 \\
+                2 & -2
+              \end{bmatrix} \cdot \begin{bmatrix}
+                3 & 2 & 2 \\
+                2 & 3 & -2
+              \end{bmatrix} = \begin{bmatrix}
+                \_ & \_ & \_ \\
+                \_ & \_ & \_ \\
+                \_ & \_ & \_
+              \end{bmatrix}
+              \]
+            </p>
+            <p>
+              Find the entry in the \(1^\text{st}\) row and \(1^\text{st}\) column of the product matrix. First look at the \(1^\text{st}\) row of the first matrix and the \(1^\text{st}\) column of the second matrix.
+            </p>
+            <p>
+              Highlight the \(1^\text{st}\) row and the \(1^\text{st}\) column:
+            </p>
+            <p>
+              \[
+              \begin{bmatrix}
+                3 & 2 \\
+                2 & 3 \\
+                2 & -2
+              \end{bmatrix} \cdot \begin{bmatrix}
+                3 & 2 & 2 \\
+                2 & 3 & -2
+              \end{bmatrix} = \begin{bmatrix}
+                \_ & \_ & \_ \\
+                \_ & \_ & \_ \\
+                \_ & \_ & \_
+              \end{bmatrix}
+              \]
+            </p>
+            <p>
+              Multiply corresponding components of the highlighted row and highlighted column, then add.
+            </p>
+            <p>
+              Multiply corresponding components and add: \(3 \cdot 3 + 2 \cdot 2 = 13\).
+            </p>
+            <p>
+              Place this number into the \(1^\text{st}\) row and \(1^\text{st}\) column of the product:
+            </p>
+            <p>
+              \[
+              \begin{bmatrix}
+                3 & 2 \\
+                2 & 3 \\
+                2 & -2
+              \end{bmatrix} \cdot \begin{bmatrix}
+                3 & 2 & 2 \\
+                2 & 3 & -2
+              \end{bmatrix} = \begin{bmatrix}
+                13 & \_ & \_ \\
+                \_ & \_ & \_ \\
+                \_ & \_ & \_
+              \end{bmatrix}
+              \]
+            </p>
+            <p>
+              Repeat the same process to find the remaining entries of the product matrix:
+            </p>
+            <p>
+              \[
+              \begin{bmatrix}
+                3 & 2 \\
+                2 & 3 \\
+                2 & -2
+              \end{bmatrix} \cdot \begin{bmatrix}
+                3 & 2 & 2 \\
+                2 & 3 & -2
+              \end{bmatrix} = \begin{bmatrix}
+                13 & 12 & 2 \\
+                12 & 13 & -2 \\
+                2 & -2 & 8
+              \end{bmatrix}
+              \]
+            </p>
+            <p>
+              Therefore, the product of the matrices is:
+            </p>
+            <p>
+              \[
+              \begin{bmatrix}
+                3 & 2 \\
+                2 & 3 \\
+                2 & -2
+              \end{bmatrix} \cdot \begin{bmatrix}
+                3 & 2 & 2 \\
+                2 & 3 & -2
+              \end{bmatrix} = \begin{bmatrix}
+                13 & 12 & 2 \\
+                12 & 13 & -2 \\
+                2 & -2 & 8
+              \end{bmatrix}
+              \]
+            </p>
+            <sub>Yes, Wolfram :)</sub>
+          </div></div><br>
+          <p> For \(\lambda=25\), we have </p>
+          <p> \[ A^{T} A-25 I=\begin{bmatrix}-12 & 12 & 2 \\ 12 & -12 & -2 \\ 2 & -2 & -17\end{bmatrix} \] </p>
+          <p> This row-reduces to the matrix \(\begin{bmatrix}1 & -1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0\end{bmatrix}\) giving the unit-length vector in the kernel of that matrix of \(v_{1}=\begin{bmatrix}\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \\ 0\end{bmatrix}\) </p>
+          <div class="card">
+            <div class="card-body">
+              <p> Convert to reduced row echelon form: </p>
+              <p> \[ \begin{bmatrix} -12 & 12 & 2 \\ 12 & -12 & -2 \\ 2 & -2 & -17 \end{bmatrix} \] </p>
+              <p> Add one row to another: </p>
+              <p> \[ \begin{bmatrix} -12 & 12 & 2 \\ 0 & 0 & 0 \\ 2 & -2 & -17 \end{bmatrix} \] </p>
+              <p> Add a multiple of one row to another: </p>
+              <p> \[ \begin{bmatrix} -12 & 12 & 2 \\ 0 & 0 & 0 \\ 0 & 0 & -\frac{50}{3} \end{bmatrix} \] </p>
+              <p> Swap two rows: </p>
+              <p> \[ \begin{bmatrix} -12 & 12 & 2 \\ 0 & 0 & -\frac{50}{3} \\ 0 & 0 & 0 \end{bmatrix} \] </p>
+              <p> Multiply row 2 by a scalar: </p>
+              <p> \[ \begin{bmatrix} -12 & 12 & 2 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{bmatrix} \] </p>
+              <p> Subtract a multiple of one row from another: </p>
+              <p> \[ \begin{bmatrix} -12 & 12 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{bmatrix} \] </p>
+              <p> Divide row 1 by a scalar: </p>
+              <p> \[ \begin{bmatrix} 1 & -1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{bmatrix} \] </p>
+              <p> Verify matrix is reduced: </p>
+              <p> This matrix is now in reduced row echelon form. All nonzero rows are above rows of all zeros: </p>
+              <p> \[ \begin{bmatrix} 1 & -1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{bmatrix} \] </p>
+              <p> Verify pivots and their positions: </p>
+              <p> Each pivot is 1 and is strictly to the right of every pivot above it: </p>
+              <p> \[ \begin{bmatrix} 1 & -1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{bmatrix} \] </p>
+              <p> Verify all non-pivot elements in pivot columns are zeros: </p>
+              <p> Each pivot is the only nonzero entry in its column: </p>
+              <p> Answer: </p>
+              <p> \[ \begin{bmatrix} 1 & -1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0 \end{bmatrix} \] </p>
+              <sub>Yes, I transcribed from Wolfram &#9825; &#9825;</sub>
+            </div>
+          </div>
+          <br>
+          <p> For \(\lambda=9\), we have \(A^{T} A-9 I=\begin{bmatrix}4 & 12 & 2 \\ 12 & 4 & -2 \\ 2 & -2 & -1\end{bmatrix}\) which row-reduces to \(\begin{bmatrix}1 & 0 & -\frac{1}{4} \\ 0 & 1 & \frac{1}{4} \\ 0 & 0 & 0\end{bmatrix}\). </p>
+          <p> A unit-length vector in the kernel is \(v_{2}=\begin{bmatrix}\frac{1}{\sqrt{18}} \\ -\frac{1}{\sqrt{18}} \\ \frac{4}{\sqrt{18}}\end{bmatrix}\). </p>
+          <p> For the last eigenvector, we could compute the kernel of \(A^{T} A\) or find a unit vector perpendicular to \(v_{1}\) and \(v_{2}\). To be perpendicular to \(v_{1}=\begin{bmatrix}a \\ b \\ c\end{bmatrix}\), we need \(-a=b\). Then the condition that \(v_{2}^{T} v_{3}=0\) becomes \(\frac{2a}{\sqrt{18}}+\frac{4c}{\sqrt{18}}=0\) or \(-a=2c\). So \(v_{3}=\begin{bmatrix}a \\ -a \\ -\frac{a}{2}\end{bmatrix}\), and for it to be unit-length, we need \(a=\frac{2}{3}\). Thus, \(v_{3}=\begin{bmatrix}\frac{2}{3} \\ -\frac{2}{3} \\ -\frac{1}{3}\end{bmatrix}\). So at this point, we know that </p>
+          <p> \[ A=U \Sigma V^{T}=U\begin{bmatrix}5 & 0 & 0 \\ 0 & 3 & 0\end{bmatrix}\begin{bmatrix}\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0 \\ \frac{1}{\sqrt{18}} & -\frac{1}{\sqrt{18}} & \frac{4}{\sqrt{18}} \\ \frac{2}{3} & -\frac{2}{3} & -\frac{1}{3}\end{bmatrix} \] </p>
+          <p> Finally, we can compute \(U\) by the formula \(\sigma u_{i}=A v_{i}\) or \(u_{i}=\frac{1}{\sigma} A v_{i}\). This gives \(U=\begin{bmatrix}\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}\end{bmatrix}\). So, in its full glory, the SVD is: </p>
+          <p> \[ A=U \Sigma V^{T}=\begin{bmatrix}\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}\end{bmatrix}\begin{bmatrix}5 & 0 & 0 \\ 0 & 3 & 0\end{bmatrix}\begin{bmatrix}\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0 \\ \frac{1}{\sqrt{18}} & -\frac{1}{\sqrt{18}} & \frac{4}{\sqrt{18}} \\ \frac{2}{3} & -\frac{2}{3} & -\frac{1}{3}\end{bmatrix} \] </p>
+        </div>
       </div>
-      <hr><h2 id="spectral-theorem">Spectral Theorem</h2>
+      <hr>
+      <!-- SPECTRAL THEOREM -->
+      <h2 id="spectral-theorem">Spectral Theorem</h2>
       <p>If \( A^T = A \), there are orthonormal \( q \)'s so that \( Aq_i = \lambda_iq_i \) and \( A = Q\Lambda Q^T \).</p>
       <p>Mathematically: If \( A \) is symmetric, there exist orthonormal eigenvectors (\( q \)'s) and eigenvalues (\( \lambda \)'s) such that \( Aq_i = \lambda_iq_i \).</p>
-      <div>
+      <!-- <div>
         <p>
           <strong>Example:</strong>
         </p>
@@ -311,8 +498,9 @@
         <p>Hence, \(Aq_1 = 2q_1\) holds.</p>
         <p>Similarly, we can verify that \(Aq_2 = 6q_2\) and \(Aq_3 = 4q_3\).</p>
         <p>Therefore, in this example, we have found orthonormal eigenvectors (\(q\)'s) and eigenvalues (\(\lambda\)'s) such that \(Aq_i = \lambda_iq_i\), as stated in the theorem.</p>
-      </div>
-    </div>
+      </div> -->
+      <p>EXAMPLE SOON IN THEATERS NEAR YOU</p>
+    </div><!-- bootstrap wrapper container closing div tag-->
     <footer class="bg-light pt-5 pb-2 px-5">
       <!-- <hr> -->
       <a href="/">Home</a>
