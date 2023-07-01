@@ -462,7 +462,7 @@
             <sub>Yes, Wolfram :)</sub>
           </div></div><br>
           <p> For \(\lambda=25\), we have </p>
-          <p> \[ A^{T} A-25 I=\begin{bmatrix}-12 & 12 & 2 \\ 12 & -12 & -2 \\ 2 & -2 & -17\end{bmatrix} \] </p>
+          <p> \[ A^{T} A-25 I\] \[=\begin{bmatrix}-12 & 12 & 2 \\ 12 & -12 & -2 \\ 2 & -2 & -17\end{bmatrix} \] </p>
           <p> This row-reduces to the matrix \(\begin{bmatrix}1 & -1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0\end{bmatrix}\) giving the unit-length vector in the kernel of that matrix of \(v_{1}=\begin{bmatrix}\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \\ 0\end{bmatrix}\) </p>
           <div class="card">
             <div class="card-body">
@@ -668,12 +668,12 @@
           <p> <b>Option 2:</b> To be perpendicular to \(v_{1}=\begin{bmatrix}a & b & c\end{bmatrix}\), we need \(-a=b\). Then the condition that \(v_{2}^{T} v_{3}=0\) becomes \(\frac{2a}{\sqrt{18}}+\frac{4c}{\sqrt{18}}=0\) or \(-a=2c\).</p><p>Thus, \(v_{3}=\begin{bmatrix}a & -a & -\frac{a}{2}\end{bmatrix}\) &mdash; which satsfies the <em>option 1</em> result factoring out \(-2\) from \( \ker (A)= \{ (-2x, 2x, x) : x \in \mathbb{R} \} \) &mdash; and for it to be unit-length, we need \(a=\frac{2}{3}\) which gives \(v_{3}=\begin{bmatrix}\frac{2}{3} & -\frac{2}{3} & -\frac{1}{3}\end{bmatrix}\).</p>
           </div>
           <p>At this point, we know that </p>
-          <p> \[ A=U S V^{T}=U\begin{bmatrix}5 & 0 & 0 \\ 0 & 3 & 0\end{bmatrix}\begin{bmatrix}\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0 \\ \frac{1}{\sqrt{18}} & -\frac{1}{\sqrt{18}} & \frac{4}{\sqrt{18}} \\ \frac{2}{3} & -\frac{2}{3} & -\frac{1}{3}\end{bmatrix} \] </p>
+          <p class="overflow-auto"> \[ A=U S V^{T}=U\begin{bmatrix}5 & 0 & 0 \\ 0 & 3 & 0\end{bmatrix}\begin{bmatrix}\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0 \\ \frac{1}{\sqrt{18}} & -\frac{1}{\sqrt{18}} & \frac{4}{\sqrt{18}} \\ \frac{2}{3} & -\frac{2}{3} & -\frac{1}{3}\end{bmatrix} \] </p>
 
           
           <p> Finally, we can compute \(U\) (by the product of the eigenvectors \(v_i\) and the original matrix \(A\) and also the reciprocals of the singular values\(\frac{1}{\sigma_i}\)) all via the formula \(\sigma u_{i}=A v_{i}\) or \(u_{i}=\frac{1}{\sigma} A v_{i}\). This gives \(U=\begin{bmatrix}\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}\end{bmatrix}\). </p>
           <p>As <em>Prof. Marshall Hampton</em> puts it: "So, in its full glory, the SVD is:"</p>
-          <p> \[ A=U S V^{T}=\begin{bmatrix}\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}\end{bmatrix}\begin{bmatrix}5 & 0 & 0 \\ 0 & 3 & 0\end{bmatrix}\begin{bmatrix}\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0 \\ \frac{1}{\sqrt{18}} & -\frac{1}{\sqrt{18}} & \frac{4}{\sqrt{18}} \\ \frac{2}{3} & -\frac{2}{3} & -\frac{1}{3}\end{bmatrix} \] </p>
+          <p class="overflow-auto"> \[ A=U S V^{T}=\begin{bmatrix}\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}\end{bmatrix}\begin{bmatrix}5 & 0 & 0 \\ 0 & 3 & 0\end{bmatrix}\begin{bmatrix}\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0 \\ \frac{1}{\sqrt{18}} & -\frac{1}{\sqrt{18}} & \frac{4}{\sqrt{18}} \\ \frac{2}{3} & -\frac{2}{3} & -\frac{1}{3}\end{bmatrix} \] </p>
         </div>
       </div>
       <hr>
@@ -681,33 +681,6 @@
       <h2 id="spectral-theorem">Spectral Theorem</h2>
       <p>If \( A^T = A \), there are orthonormal \( q \)'s so that \( Aq_i = \lambda_iq_i \) and \( A = Q\Lambda Q^T \).</p>
       <p>Mathematically: If \( A \) is symmetric, there exist orthonormal eigenvectors (\( q \)'s) and eigenvalues (\( \lambda \)'s) such that \( Aq_i = \lambda_iq_i \).</p>
-      <!-- <div>
-        <p>
-          <strong>Example:</strong>
-        </p>
-        <p>Consider the symmetric matrix:</p>
-        <p>\[ A = \begin{bmatrix} 4 & -1 & 2 \\ -1 & 5 & 0 \\ 2 & 0 & 3 \\ \end{bmatrix} \]</p>
-        <p>Let's find the orthonormal eigenvectors (\(q\)'s) and eigenvalues (\(\lambda\)'s) of \(A\) and verify the given relationship \(Aq_i = \lambda_iq_i\).</p>
-        <p>
-          <em>Solution:</em>
-        </p>
-        <p>To find the eigenvalues and eigenvectors of \(A\), we solve the characteristic equation \(\det(A - \lambda I) = 0\), where \(I\) is the identity matrix:</p>
-        <p>\[ \begin{vmatrix} 4 - \lambda & -1 & 2 \\ -1 & 5 - \lambda & 0 \\ 2 & 0 & 3 - \lambda \\ \end{vmatrix} = 0 \]</p>
-        <p>Simplifying the determinant equation, we obtain:</p>
-        <p>\[ (\lambda - 2)(\lambda - 6)(\lambda - 4) = 0 \]</p>
-        <p>So, the eigenvalues of \(A\) are \(\lambda_1 = 2\), \(\lambda_2 = 6\), and \(\lambda_3 = 4\).</p>
-        <p>Next, we find the corresponding eigenvectors by solving \(Aq_i = \lambda_iq_i\) for each eigenvalue:</p>
-        <p>For \(\lambda_1 = 2\), we have:</p>
-        <p>\[ \begin{bmatrix} 4 - 2 & -1 & 2 \\ -1 & 5 - 2 & 0 \\ 2 & 0 & 3 - 2 \\ \end{bmatrix} \begin{bmatrix} q_{11} \\ q_{21} \\ q_{31} \\ \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \\ 0 \\ \end{bmatrix} \]</p>
-        <p>Solving the system, we find \(q_1 = \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}\).</p>
-        <p>Similarly, for \(\lambda_2 = 6\), we find \(q_2 = \begin{bmatrix} -1 \\ 1 \\ 2 \end{bmatrix}\), and for \(\lambda_3 = 4\), we find \(q_3 = \begin{bmatrix} 1 \\ 0 \\ -2 \end{bmatrix}\).</p>
-        <p>Now, let's verify the relationship \(Aq_i = \lambda_iq_i\) for each pair of eigenvectors and eigenvalues:</p>
-        <p>For \(\lambda_1 = 2\) and \(q_1 = \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}\), we have:</p>
-        <p>\[ \begin{bmatrix} 4 & -1 & 2 \\ -1 & 5 & 0 \\ 2 & 0 & 3 \\ \end{bmatrix} \begin{bmatrix} 1 \\ 1 \\ 0 \\ \end{bmatrix} = 2 \begin{bmatrix} 1 \\ 1 \\ 0 \\ \end{bmatrix} \]</p>
-        <p>Hence, \(Aq_1 = 2q_1\) holds.</p>
-        <p>Similarly, we can verify that \(Aq_2 = 6q_2\) and \(Aq_3 = 4q_3\).</p>
-        <p>Therefore, in this example, we have found orthonormal eigenvectors (\(q\)'s) and eigenvalues (\(\lambda\)'s) such that \(Aq_i = \lambda_iq_i\), as stated in the theorem.</p>
-      </div> -->
       <p>Now we're really talking.</p>
       <p>Here is another explanation, this time explaining a lovely example from <em>Prof. Bruce Ikenaga</em> transcribed from <a href="https://sites.millersville.edu/bikenaga/linear-algebra/spectral-theorem/spectral-theorem.html">here</a>.</p>
       <p class="pl-5">Also, <a href="https://mast.queensu.ca/~br66/419/spectraltheoremproof.pdf">here</a> is a shorter proof from <em>Prof. Brad Rodgers</em> at an undergraduate level, and <a href="https://math.dartmouth.edu/~m113s19/ln-spec-thm.pdf">here</a> is a longer proof from <em>Prof. Dana Williams</em> at a graduate level applying this theorem to bounded and unbounded operators on an infinite dimensional complex Hilbert space, all culminating in Stone's Theorem.</p>
@@ -715,12 +688,12 @@
       <p>First, each column has unit length and is perpendicular to every other column, so the inverse is the transpose. "If \(A^{-1}=A^T\), then \(A^TA=I\). This means that each column has unit length and is perpendicular to every other column. That means it is an orthonormal matrix. [...] Think of \(A\) as an arrangement of \(n\) columns (each \(n\) elements tall). Then the \((i, j)\) element of \(A^TA\) is the dot product of the \(i\)th and \(j\)th columns of \(A\) since the \(i\)th row of \(A^T\) is the \(i\)th column of \(A\)." (<a href="https://math.stackexchange.com/a/156742/1098426">Math Stack Exchange</a>)</p>
       <p>Second, eigenvectors from different eigenvalues are linearly independent.</p>
       <p>The best explanation I could find of this is from <a href="https://math.stackexchange.com/a/29374/1098426">Math Stack Exchange</a>:</p>
-      <p class="pl-5">Suppose \(\mathbf{v}_1\) and \(\mathbf{v}_2\) correspond to distinct eigenvalues \(\lambda_1\) and \(\lambda_2\), respectively. 
+      <p class="pl-5 overflow-auto">Suppose \(\mathbf{v}_1\) and \(\mathbf{v}_2\) correspond to distinct eigenvalues \(\lambda_1\) and \(\lambda_2\), respectively. 
         
         Take a linear combination that is equal to \(0\), \(\alpha_1\mathbf{v}_1+\alpha_2\mathbf{v}_2 = \mathbf{0}\). We need to show that \(\alpha_1=\alpha_2=0\).
         
         Applying \(T\) to both sides, we get
-        \[\]\}\mathbf{0} = T(\mathbf{0}) = T(\alpha_1\mathbf{v}_1+\alpha_2\mathbf{v}_2) = \alpha_1\lambda_1\mathbf{v}_1 + \alpha_2\lambda_2\mathbf{v}_2.\]
+        \[\mathbf{0} = T(\mathbf{0}) = T(\alpha_1\mathbf{v}_1+\alpha_2\mathbf{v}_2) = \alpha_1\lambda_1\mathbf{v}_1 + \alpha_2\lambda_2\mathbf{v}_2.\]
         Now, instead, multiply the original equation by \(\lambda_1\):
         \[\mathbf{0} = \lambda_1\alpha_1\mathbf{v}_1 + \lambda_1\alpha_2\mathbf{v}_2.\]
         Now take the two equations,
@@ -750,8 +723,11 @@
           <p>The characteristic polynomial is</p>
           
           <p>\[
-          \det{(A - xI)} = (x-3)[(x-2)(x+1)-(2)(2)]=-(x-3)^2(x+2)
-          \]</p>
+          \det{(A - xI)}
+          \]
+        \[ = (x-3)[(x-2)(x+1)-(2)(2)]\]
+        \[=-(x-3)^2(x+2)\]
+        </p>
           
           <p>The eigenvalues are \(x=3\) and \(x=-2\).</p>
           
