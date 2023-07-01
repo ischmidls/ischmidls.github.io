@@ -17,6 +17,10 @@
         // Create an empty object to hold the word counts
         var wordCounts = {};
         // Loop through the words and count their occurrences
+        if (wordsArray === null) {
+          alert("Silly, you didn't put any words in!")
+          throw new Error("user gave no words")
+        }
         for (var i = 0; i < wordsArray.length; i++) {
           if (wordCounts[wordsArray[i]]) {
             wordCounts[wordsArray[i]]++;
@@ -35,11 +39,14 @@
 
       function displayWordCounts() {
         // Call the countWords function and get the array of pairs
-        var pairsArray = countWords();
+        try {
+          var pairsArray = countWords();
+        }
+        catch(err) { console.log(err.message)}
         // Get the output element
         var outputElement = document.getElementById("output");
         // Clear the output element
-        outputElement.innerHTML = "";
+        outputElement.innerHTML = "<h2>Counts</h2>";
         // Loop through the pairs array and add each pair to the output element
         for (var i = 0; i < pairsArray.length; i++) {
           var pair = pairsArray[i];
@@ -79,22 +86,33 @@
         Plotly.newPlot("chartDiv", data, layout);
       }
     </script>
+    <style> 
+    textarea {
+      width: 90%;
+      height: 80vh;
+    }
+    #output, #chartDiv {
+      outline:auto;
+      padding: 3em;
+      overflow: auto;
+    }
+    </style>
   
   </head>
   <body>
     <div class="container" id="bsr-wrapper">
-      h1>Word Count</h1>
+      <h1>Word Count</h1>
     <p>Enter some text:</p>
     <textarea id="inputString"></textarea>
     <br>
     <button onclick="displayWordCounts()">Count Words</button>
     <br>
-    <p>Word counts:</p>
+    <h2>Plot & List!</h2>
     <div id="chartDiv"></div>
     <div id="output"></div>
       
     </div>
-    <footer  class="bg-light pt-5 pb-2 px-5"><hr><a href="/">Home</a></footer>
+    <footer  class="bg-light pt-5 pb-2 px-5"><a href="/">Home</a></footer>
     
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
