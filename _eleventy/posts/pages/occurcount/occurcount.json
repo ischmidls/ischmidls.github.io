@@ -1,0 +1,8 @@
+{
+    "title": "occurance count",
+    "description": "input text output chart of word counts",
+    "date": "2023-02-01",
+    "tags": "javascript",
+    "layout": "layouts/post.njk"
+  }
+  

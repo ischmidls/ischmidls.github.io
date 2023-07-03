@@ -1,0 +1,8 @@
+{
+    "title": "count split",
+    "description": "split entered text to max count",
+    "date": "2023-01-01",
+    "tags": "javascript",
+    "layout": "layouts/post.njk"
+  }
+  

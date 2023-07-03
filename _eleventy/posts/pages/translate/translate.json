@@ -1,0 +1,8 @@
+{
+    "title": "translate",
+    "description": "input short string, output 5 translations",
+    "date": "2023-02-01",
+    "tags": "javascript",
+    "layout": "layouts/post.njk"
+  }
+  
