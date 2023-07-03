@@ -93,7 +93,7 @@
         {% endblock %}
 
         {% if page.url and page.url.indexOf("/posts/") > -1 %}
-          <p>this page was published on ... <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></p>
+          <br><br><br><sub>this page was published on ... <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></sub>
         {% endif %}
       </article>
     </div>
