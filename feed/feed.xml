@@ -5,7 +5,7 @@
 	
 	<link href="https://ischmidls.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://ischmidls.github.io"/>
-	<updated>2023-05-31T17:00:00-07:00</updated>
+	<updated>2023-06-30T17:00:00-07:00</updated>
 	<id>https://update-me.com</id>
 	<author>
 		<name>izak</name>
@@ -2353,6 +2353,205 @@
 				
 				
 				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fpages%2Flinearsix%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=six%20linear%20algebra%20theorems&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>notes - matrix rank</title>
+		<link href="https://ischmidls.github.io/posts/rank/"/>
+		<updated>2023-06-30T17:00:00-07:00</updated>
+		<id>https://ischmidls.github.io/posts/rank/</id>
+		<content type="html">
+		  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#consistency&quot;&gt;consistency&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#splitting-lemma&quot;&gt;splitting lemma&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#to-be-continued&quot;&gt;to be continued&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;h2 id=&quot;consistency&quot;&gt;consistency&lt;/h2&gt;
+  &lt;p&gt;Let Let &#92;(A&#92;) denote a matrix and &#92;(A | B &#92;) denote its augmented matrix.&lt;/p&gt;
+  &lt;p&gt;Consistent Systems:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;b&gt;Def 1&lt;/b&gt; Full Rank: Unique solution. &#92;(&#92;text{rank} (A) = &#92;text{rank} (A|B) = &#92;text{col} (A)&#92;)
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;b&gt;Def 2&lt;/b&gt; Underdetermined: Infinitely many solutions. &#92;(&#92;text{rank} (A) = &#92;text{rank} (A|B) &lt; &#92;text{col} (A) &#92;) &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;Inconsistent System:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;
+      &lt;b&gt;Def 3&lt;/b&gt; Overdetermined: No solution. &#92;(&#92;text{rank} (A) &gt; &#92;text{col} (A) &#92;)
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;Proofs&lt;/p&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+      &lt;p&gt;To see this note that rank of the matrix is dimension of the span of columns of the matrix. Now if &#92;(Ax=b&#92;) has solution, then it means that some linear combination of columns of A gives us b, which implies that &#92;(b&#92;) lies in &#92;(span(A)&#92;) and so &#92;(rank(A|b)=rank(A)&#92;). You can argue similarly in the reverse direction.&lt;/p&gt;
+      &lt;p&gt;
+        &lt;a href=&quot;https://math.stackexchange.com/a/2090749/1098426&quot;&gt;Source&lt;/a&gt;
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;br&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+      &lt;p&gt;A matrix &#92;(A&#92;in&#92;mathcal{M}_{nm}(&#92;Bbb{R})&#92;) &#92;([&#92;) &lt;span class=&quot;text-secondary&quot;&gt;of dimensions &#92;(n &#92; &#92;text{rows} &#92;times m &#92; &#92;text{columns} &#92; &#92;) respectively&lt;/span&gt;&#92;(]&#92;) is a representation of a linear transformation &#92;(f&#92;colon&#92;Bbb{R}^m&#92;rightarrow &#92;Bbb{R}^n&#92;), so the image of &#92;(f&#92;) is a subspace of &#92;(&#92;Bbb{R}^n&#92;). Hence, &#92;(&#92;operatorname{rank}(f)=&#92;dim(&#92;operatorname{Im}(f))&#92;leq n&#92;), &lt;/p&gt;
+      &lt;p&gt;But also, by the &lt;b&gt;Rank-Nullity Theorem &#92;((*)&#92;)&lt;/b&gt;, we have &#92;(&#92;operatorname{rank}(f)&#92;leq m&#92;). Hence, we find the desired result &#92;(&#92;operatorname{rank}(f)&#92;leq &#92;min(m,n)&#92;). &lt;/p&gt;
+      &lt;p&gt;
+        &lt;a href=&quot;https://math.stackexchange.com/a/759000/1098426&quot;&gt;Source&lt;/a&gt;
+      &lt;/p&gt;
+      &lt;div class=&quot;pl-5&quot;&gt;
+        &lt;p&gt;Now, recall the &lt;b&gt;Rank-Nullity Theorem &#92;((*)&#92;)&lt;/b&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+          &lt;b&gt;Def 4a &lt;/b&gt;
+          &lt;em&gt;Transforms&lt;/em&gt;
+        &lt;/p&gt;
+        &lt;p&gt;Let &#92;(T: V &#92;rightarrow W&#92;) be a linear transformation between two vector spaces where &#92;(T&#92;)&#39;s domain &#92;(V&#92;) is finite dimensional. Then&lt;/p&gt;
+        &lt;p&gt;&#92;(&#92;operatorname{rank}(T) + &#92;operatorname{nullity}(T) = &#92;operatorname{dim}(V)&#92;),&lt;/p&gt;
+        &lt;p&gt;where &#92;(&#92;operatorname{rank}(T)&#92;) is the rank of &#92;(T&#92;) (the dimension of its image) and &#92;(&#92;operatorname{nullity}(T)&#92;) is the nullity of &#92;(T&#92;) (the dimension of its kernel). In other words,&lt;/p&gt;
+        &lt;p&gt;&#92;(&#92;operatorname{dim}(&#92;operatorname{Im}(T)) + &#92;operatorname{dim}(&#92;operatorname{Ker}(T)) = &#92;operatorname{dim}(&#92;operatorname{Domain}(T))&#92;).&lt;/p&gt;
+        &lt;p&gt;This theorem can be refined via the &lt;b&gt;Splitting Lemma &#92;((**)&#92;)&lt;/b&gt; &#92;([&#92;) &lt;span class=&quot;text-secondary&quot;&gt;a category-theoretic generalization of this theorem from dimensions to spaces &lt;/span&gt;&#92;(]&#92;) to be a statement about an isomorphism of spaces, not just dimensions. Explicitly, since &#92;(T&#92;) induces an isomorphism from &#92;(V/&#92;operatorname{Ker}(T)&#92;) to &#92;(&#92;operatorname{Im}(T)&#92;), the existence of a basis for &#92;(V&#92;) that extends any given basis of &#92;(&#92;operatorname{Ker}(T)&#92;) implies, via the splitting lemma, that &#92;(&#92;operatorname{Im}(T) &#92;oplus &#92;operatorname{Ker}(T) &#92;cong V&#92;). Taking dimensions, the rank–nullity theorem follows. &lt;/p&gt;
+        &lt;p&gt;
+          &lt;b&gt;Def 4b &lt;/b&gt;
+          &lt;em&gt;Matrices&lt;/em&gt;
+        &lt;/p&gt;
+        &lt;p&gt;Linear maps can be represented with matrices. More precisely, an &#92;(m &#92;times n&#92;) matrix &#92;(M&#92;) represents a linear map &#92;(f: &#92;mathbb{F}^n &#92;rightarrow &#92;mathbb{F}^m&#92;), where &#92;(&#92;mathbb{F}&#92;) is the underlying field. So, the dimension of the domain of &#92;(f&#92;) is &#92;(n&#92;), the number of columns of &#92;(M&#92;), and the rank–nullity theorem for an &#92;(m &#92;times n&#92;) matrix &#92;(M&#92;) is&lt;/p&gt;
+        &lt;p&gt;&#92;(&#92;operatorname{rank}(M) + &#92;operatorname{nullity}(M) = n&#92;).&lt;/p&gt;
+        &lt;p&gt;
+          &lt;a href=&quot;https://www.d.umn.edu/~jgreene/Math_5327_Linear/Transformations.pdf&quot;&gt;Source&lt;/a&gt;
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;br&gt;
+  &lt;h2 id=&quot;splitting-lemma&quot;&gt;splitting lemma&lt;/h2&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+      
+        &lt;p&gt;
+          &lt;b&gt;&#92;((**)&#92;) Splitting Lemma&lt;/b&gt;
+        &lt;/p&gt;
+        &lt;p&gt;Perhaps the treatments of the splitting lemma that are closest to linear algebra and matrices are those involving &lt;em&gt;groups&lt;/em&gt; or &lt;em&gt;modules&lt;/em&gt;
+        &lt;/p&gt;
+        &lt;p&gt; Splitting Lemma for Groups: Let &#92;( G &#92;) be a group and &#92;( H &#92;) a subgroup of &#92;( G &#92;). If there exists a homomorphism &#92;( &#92;varphi : G &#92;rightarrow H &#92;) such that &#92;( &#92;varphi &#92;) is the identity on &#92;( H &#92;), then &#92;( G &#92;) is the internal direct product of &#92;( H &#92;) and &#92;( &#92;ker(&#92;varphi) &#92;). This means that if there exists a homomorphism &#92;( &#92;varphi &#92;) from a group &#92;( G &#92;) to a subgroup &#92;( H &#92;) such that &#92;( &#92;varphi &#92;) is the identity on &#92;( H &#92;), then &#92;( G &#92;) can be expressed as the direct product of &#92;( H &#92;) and the kernel of &#92;( &#92;varphi &#92;). This gives a decomposition of the group &#92;( G &#92;) into two subgroups. &lt;/p&gt;
+        &lt;p&gt;More precisely from Prof. Conrad:&lt;/p&gt;
+        &lt;blockquote&gt;
+          &lt;p&gt;A sequence of groups and group homomorphisms&lt;/p&gt;
+          &lt;p&gt;&#92;(H &#92;xrightarrow{&#92;alpha} G &#92;xrightarrow{&#92;beta} K&#92;)&lt;/p&gt;
+          &lt;p&gt;is called exact at &#92;(G&#92;) if &#92;(&#92;operatorname{im}(&#92;alpha) = &#92;operatorname{ker}(&#92;beta)&#92;). This means two things: the image of &#92;(&#92;alpha&#92;) is killed by &#92;(&#92;beta&#92;) (&#92;(&#92;beta(&#92;alpha(h)) = 1&#92;) for all &#92;(h &#92;in H&#92;)), so &#92;(&#92;operatorname{im}(&#92;alpha) &#92;subseteq &#92;operatorname{ker}(&#92;beta)&#92;), and also only the image of &#92;(&#92;alpha&#92;) is killed by &#92;(&#92;beta&#92;) (if &#92;(&#92;beta(g) = 1&#92;) then &#92;(g = &#92;alpha(h)&#92;) for some &#92;(h&#92;)), so &#92;(&#92;operatorname{ker}(&#92;beta) &#92;subseteq &#92;operatorname{im}(&#92;alpha)&#92;). For example, to say &#92;(1 &#92;rightarrow G &#92;xrightarrow{f} K&#92;) is exact at &#92;(G&#92;) means &#92;(f&#92;) is injective, and to say &#92;(H &#92;xrightarrow{f} G &#92;rightarrow 1&#92;) is exact at &#92;(G&#92;) means &#92;(f&#92;) is surjective. There is no need to label the homomorphisms coming out of &#92;(1&#92;) or going to &#92;(1&#92;) since there is only one possible choice. If the group operations are written additively, we may use &#92;(0&#92;) in place of &#92;(1&#92;) for the trivial group.&lt;/p&gt;
+          &lt;p&gt;A short exact sequence of groups is a sequence of groups and group homomorphisms&lt;/p&gt;
+          &lt;p&gt;&#92;(1 &#92;rightarrow H &#92;xrightarrow{&#92;alpha} G &#92;xrightarrow{&#92;beta} K &#92;rightarrow 1&#92;)&lt;/p&gt;
+          &lt;p&gt;which is exact at &#92;(H&#92;), &#92;(G&#92;), and &#92;(K&#92;). That means &#92;(&#92;alpha&#92;) is injective, &#92;(&#92;beta&#92;) is surjective, and &#92;(&#92;operatorname{im}(&#92;alpha) = &#92;operatorname{ker}(&#92;beta)&#92;).&lt;/p&gt;
+          &lt;p&gt;A more general exact sequence can have lots of terms:&lt;/p&gt;
+          &lt;p&gt;&#92;(G_1 &#92;xrightarrow{&#92;alpha_1} G_2 &#92;xrightarrow{&#92;alpha_2} &#92;ldots &#92;xrightarrow{&#92;alpha_{n-1}} G_n&#92;),&lt;/p&gt;
+          &lt;p&gt;and it must be exact at each &#92;(G_i&#92;) for &#92;(1 &lt; i &lt; n&#92;). Exact sequences can also be of infinite length in one or both directions. We will only deal with short exact sequences here. &lt;/p&gt;
+              &lt;p&gt;Exact sequences first arose in algebraic topology, and the later development of homological algebra (the type of algebra underlying algebraic topology) spread exact sequences into the rest of mathematics.&lt;/p&gt;
+              &lt;p&gt;Theorem 3.2. Let &#92;(1 &#92;rightarrow H &#92;xrightarrow{&#92;alpha} G &#92;xrightarrow{&#92;beta} K &#92;rightarrow 1&#92;) be a short exact sequence of groups. The following are equivalent:&lt;/p&gt;
+              &lt;p&gt;(1) There is a homomorphism &#92;(&#92;alpha_0: G &#92;rightarrow H&#92;) such that &#92;(&#92;alpha_0(&#92;alpha(h)) = h&#92;) for all &#92;(h &#92;in H&#92;).&lt;/p&gt;
+              &lt;p&gt;(2) There is an isomorphism &#92;(&#92;theta: G &#92;rightarrow H &#92;times K&#92;) such that the diagram&lt;/p&gt;
+              &lt;p&gt;
+                &lt;img src=&quot;https://ischmidls.github.io/img/rank/commute-groups.png&quot;&gt;
+              &lt;/p&gt;
+              &lt;p&gt;commutes, where the bottom row is the short exact sequence for a direct product.&lt;/p&gt;
+              &lt;p&gt;The commutative diagram in (2) says that &#92;(&#92;theta&#92;) identifies &#92;(&#92;alpha&#92;) with the embedding &#92;(H &#92;rightarrow H &#92;times K&#92;) and &#92;(&#92;beta&#92;) with the projection &#92;(H &#92;times K &#92;rightarrow K&#92;). So the point of (2) is not simply that &#92;(G&#92;) is isomorphic to &#92;(H &#92;times K&#92;), but it is in a way that turns &#92;(&#92;alpha&#92;) and &#92;(&#92;beta&#92;) into the standard maps from &#92;(H&#92;) to &#92;(H &#92;times K&#92;) and from &#92;(H &#92;times K&#92;) to &#92;(K&#92;).&lt;/p&gt;
+              &lt;p&gt;The key point of (1) is that &#92;(&#92;alpha_0&#92;) is a homomorphism. Merely from &#92;(&#92;alpha&#92;) being injective, there is a function &#92;(&#92;alpha_0: G &#92;rightarrow H&#92;) such that &#92;(&#92;alpha_0(&#92;alpha(h)) = h&#92;) for all &#92;(h&#92;), for instance the function &#92;(&#92;alpha_0(g) = &#92;{ &#92;mathbf{1} &#92;iff g &#92;notin &#92;alpha(H) &#92;land h &#92;iff g = &#92;alpha(h) &#92;} &#92;). But this &#92;(&#92;alpha_0&#92;) is almost surely not a homomorphism.&lt;/p&gt;
+        &lt;/blockquote&gt;
+        &lt;p&gt; Splitting Lemma for Modules: Let &#92;( R &#92;) be a ring and &#92;( M &#92;) a module over &#92;( R &#92;). If &#92;( M &#92;) is a direct sum of two submodules, say &#92;( M = A &#92;oplus B &#92;), then any submodule &#92;( N &#92;) of &#92;( M &#92;) can be expressed as the direct sum of &#92;( N &#92;cap A &#92;) and &#92;( N &#92;cap B &#92;). This means that if a module &#92;( M &#92;) can be expressed as the direct sum of two submodules &#92;( A &#92;) and &#92;( B &#92;), then any submodule &#92;( N &#92;) of &#92;( M &#92;) can be decomposed as the direct sum of its intersections with &#92;( A &#92;) and &#92;( B &#92;). This provides a way to decompose submodules of a module that is a direct sum. &lt;/p&gt;
+        &lt;p&gt;Again, more precisely from Prof. Conrad:&lt;/p&gt;
+        &lt;blockquote&gt;
+          &lt;p&gt; Let &#92;( R &#92;) be a commutative ring. A sequence of &#92;( R &#92;)-modules and &#92;( R &#92;)-linear maps &#92;( N &#92;xrightarrow{f} M &#92;xrightarrow{g} P &#92;) is called exact at &#92;( M &#92;) if &#92;( &#92;text{im}(f) = &#92;text{ker}(g) &#92;). For example, to say &#92;( 0 &#92;xrightarrow{h} M &#92;) is exact at &#92;( M &#92;) means &#92;( h &#92;) is injective, and to say &#92;( N &#92;xrightarrow{h} M &#92;xrightarrow{0} &#92;) is exact at &#92;( M &#92;) means &#92;( h &#92;) is surjective. The linear maps coming out of &#92;( 0 &#92;) or going to &#92;( 0 &#92;) are unique, so there is no need to label them. &lt;/p&gt;
+          &lt;p&gt; A short exact sequence of &#92;( R &#92;)-modules is a sequence of &#92;( R &#92;)-modules and &#92;( R &#92;)-linear maps &#92;[ 0 &#92;xrightarrow{f} N &#92;xrightarrow{g} M &#92;xrightarrow{h} P &#92;xrightarrow{} 0 &#92;] which is exact at &#92;( N &#92;), &#92;( M &#92;), and &#92;( P &#92;). That means &#92;( f &#92;) is injective, &#92;( g &#92;) is surjective, and &#92;( &#92;text{im}(f) = &#92;text{ker}(g) &#92;). &lt;/p&gt;
+          &lt;p&gt;[...]&lt;/p&gt;
+          &lt;p&gt;
+            &lt;strong&gt;Theorem 2.1.&lt;/strong&gt; Let &#92;(0 &#92;rightarrow N &#92;xrightarrow{f} M &#92;xrightarrow{g} P &#92;rightarrow 0&#92;) be a short exact sequence of &#92;(R&#92;)-modules.
+          &lt;/p&gt;
+          &lt;p&gt;The following are equivalent:&lt;/p&gt;
+          &lt;ol&gt;
+            &lt;li&gt;There is an &#92;(R&#92;)-linear map &#92;(f_0: M &#92;rightarrow N&#92;) such that &#92;(f_0(f(n)) = n&#92;) for all &#92;(n &#92;in N&#92;).&lt;/li&gt;
+            &lt;li&gt;There is an &#92;(R&#92;)-linear map &#92;(g_0: P &#92;rightarrow M&#92;) such that &#92;(g(g_0(p)) = p&#92;) for all &#92;(p &#92;in P&#92;).&lt;/li&gt;
+            &lt;li&gt;The short exact sequence splits: there is an isomorphism &#92;(&#92;theta: M &#92;rightarrow N &#92;oplus P&#92;) such that the diagram below commutes.&lt;/li&gt;
+          &lt;/ol&gt;
+          &lt;p&gt;
+            &lt;img src=&quot;https://ischmidls.github.io/img/rank/commute-modules.png&quot;&gt;
+          &lt;/p&gt;
+          &lt;p&gt;If we replace &#92;(R&#92;)-modules with groups and &#92;(R&#92;)-linear maps with group homomorphisms, conditions (1) and (2) are not equivalent: for a short exact sequence &#92;(1 &#92;rightarrow H &#92;xrightarrow{f} G &#92;xrightarrow{g} K &#92;rightarrow 1&#92;), (1) corresponds to &#92;(G&#92;) being a direct product of &#92;(H&#92;) and &#92;(K&#92;) while (2) corresponds to &#92;(G&#92;) being a semidirect product of &#92;(H&#92;) and &#92;(K&#92;). The reason (1) and (2) are no longer equivalent for groups is related to noncommutativity. For an exact sequence of abelian groups, (1) and (2) are equivalent (this is the special case &#92;(R = &#92;mathbb{Z}&#92;), since abelian groups are &#92;(&#92;mathbb{Z}&#92;)-modules).&lt;/p&gt;
+        &lt;/blockquote&gt;
+        &lt;p&gt;More on the Splitting Lemma for . . . &lt;a href=&quot;https://kconrad.math.uconn.edu/blurbs/linmultialg/splittingmodules.pdf&quot;&gt;Modules&lt;/a&gt; and &lt;a href=&quot;https://kconrad.math.uconn.edu/blurbs/grouptheory/splittinggp.pdf&quot;&gt;Groups&lt;/a&gt; from the lovely &lt;em&gt;Prof. K. Conrad&lt;/em&gt;
+        &lt;/p&gt;
+      &lt;p&gt;Now, as for linear algebra, Wikipedia also uses the language of the &lt;b&gt;Splitting Lemma&lt;/b&gt; for vector spaces:&lt;/p&gt;
+      &lt;blockquote&gt;
+        &lt;p&gt;The theorem can also be phrased as saying that each short exact sequence of vector spaces splits. Explicitly, given that&lt;/p&gt;
+
+        &lt;p&gt;
+        &#92;[0 &#92;rightarrow U &#92;rightarrow V &#92;overset{T}{&#92;rightarrow} R &#92;rightarrow 0&#92;]
+        &lt;/p&gt;
+
+        &lt;p&gt;is a short exact sequence of vector spaces, then&lt;/p&gt;
+
+        &lt;p&gt;
+        &#92;[U &#92;oplus R &#92;cong V&#92;]
+        &lt;/p&gt;
+
+        &lt;p&gt;hence&lt;/p&gt;
+
+        &lt;p&gt;
+        &#92;[&#92;dim(U) + &#92;dim(R) = &#92;dim(V).&#92;]
+        &lt;/p&gt;
+
+        &lt;p&gt;Here &#92;(R&#92;) plays the role of &#92;(&#92;operatorname{Im} T&#92;) and &#92;(U&#92;) is &#92;(&#92;operatorname{Ker} T&#92;), i.e.&lt;/p&gt;
+
+        &lt;p&gt;
+        &#92;[0 &#92;rightarrow &#92;operatorname{ker} T &#92;hookrightarrow V &#92;overset{T}{&#92;rightarrow} &#92;operatorname{im} T &#92;rightarrow 0&#92;]
+        &lt;/p&gt;
+
+        &lt;p&gt;In the finite-dimensional case, this formulation is susceptible to a generalization: if&lt;/p&gt;
+
+        &lt;p&gt;
+        &#92;[0 &#92;rightarrow V_1 &#92;rightarrow V_2 &#92;rightarrow &#92;cdots V_r &#92;rightarrow 0&#92;]
+        &lt;/p&gt;
+
+        &lt;p&gt;is an exact sequence of finite-dimensional vector spaces, then&lt;/p&gt;
+
+        &lt;p&gt;
+        &#92;[&#92;sum_{i=1}^{r} (-1)^{i} &#92;dim(V_i) = 0.&#92;]
+        &lt;/p&gt;
+      &lt;/blockquote&gt;
+      &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Rank%E2%80%93nullity_theorem#Reformulations_and_generalizations&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;This follows the reasoning that&lt;/p&gt;
+      &lt;blockquote&gt;
+        &lt;p&gt;Let &#92;(f_0&#92;) be the first map in the sequence, &#92;(f_i&#92;) be the map from &#92;(V_i&#92;) to &#92;(V_{i+1}&#92;), etc.&lt;/p&gt;
+
+        &lt;p&gt;By the Rank Nullity theorem, we have &#92;(&#92;dim V_i = &#92;dim&#92;ker f_i + &#92;dim &#92;operatorname{im} f_i.&#92;) Thus the left-hand side is&lt;/p&gt;
+
+        &lt;p&gt;&#92;[&#92;sum_{i=1}^{r} (-1)^i &#92;dim&#92;ker f_i+&#92;sum_{i=1}^{r} (-1)^i &#92;dim&#92;operatorname{im} f_i.&#92;]&lt;/p&gt;
+
+        &lt;p&gt;Now, by the defining property of an exact sequence, &#92;(&#92;operatorname{im} f_i = &#92;ker f_{i+1}.&#92;) Place that information into one of the sums, and the two sums then cancel out.&lt;/p&gt;
+
+        &lt;p&gt;Note that in order for the series in question to converge, the sequence must be of the form in this answer, perhaps with extra &#92;(0&#92;)&#39;s.&lt;/p&gt;
+      &lt;/blockquote&gt;
+      &lt;p&gt;&lt;a href=&quot;https://math.stackexchange.com/a/255387/1098426&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;br&gt;
+  &lt;h2 id=&quot;to-be-continued&quot;&gt;to be continued&lt;/h2&gt;
+  &lt;p&gt;Now, we have a problem.&lt;/p&gt;
+  &lt;a title=&quot;ARAKI Satoru, CC BY-SA 4.0 &amp;lt;https://creativecommons.org/licenses/by-sa/4.0&amp;gt;, via Wikimedia Commons&quot; href=&quot;https://commons.wikimedia.org/wiki/File:Rank-nullity.svg&quot;&gt;
+    &lt;img style=&quot;width:50%;&quot; alt=&quot;Rank-nullity&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Rank-nullity.svg/256px-Rank-nullity.svg.png&quot;&gt;
+  &lt;/a&gt;
+  &lt;br&gt;
+  &lt;p&gt;Why does Wikipedia use a fake commutative diagram of the rank-nullity theorem? And, what in the world are these dotted lines? It appears to be addition for &#92;(&#92;operatorname{dim} V&#92;) but then &#92;(&#92;operatorname{dim} &#92;operatorname{ker} T&#92;) and &#92;(&#92;operatorname{dim} &#92;operatorname{im} T&#92;) don&#39;t make sense?&lt;/p&gt;
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Frank%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=notes%20-%20matrix%20rank&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
