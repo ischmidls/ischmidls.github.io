@@ -2548,6 +2548,13 @@
   &lt;/a&gt;
   &lt;br&gt;
   &lt;p&gt;Why does Wikipedia use a fake commutative diagram of the rank-nullity theorem? And, what in the world are these dotted lines? It appears to be addition for &#92;(&#92;operatorname{dim} V&#92;) but then &#92;(&#92;operatorname{dim} &#92;operatorname{ker} T&#92;) and &#92;(&#92;operatorname{dim} &#92;operatorname{im} T&#92;) don&#39;t make sense?&lt;/p&gt;
+  &lt;p&gt;Well, I admittedly asked twitter, where @linguanumerate and @xl772 clarified.
+    &lt;blockquote&gt;
+        &lt;p&gt;It&#39;s just a kind of intuitive picture. The vertical line on the left is a &quot;picture&quot; of &#92;(V&#92;), with its dimension represented by the height of the line. The arrows show &#92;(V&#92;) getting mapped into &#92;(W&#92;), with &#92;(V/&#92;operatorname{ker} T&#92;) getting mapped to &#92;(&#92;operatorname{im} T&#92;) and &#92;(&#92;operatorname{ker} T&#92;) getting squashed to 0.&lt;/p&gt;
+        &lt;p&gt;And I think the dotted lines are just to show which height corresponds to which quantity, I don’t think it’s adding.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/p&gt;
+  &lt;p&gt;But, I think that is enough about rank for now.&lt;/p&gt;
 			
 				
 				
