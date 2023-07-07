@@ -213,27 +213,30 @@ DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 
-*/
-/* --------------------------------------------------------------------------
-Single variable font.
+
+
+/* Single variable font.
 
 Note that you may want to do something like this to make sure you're serving
-constant fonts to older browsers:
+constant fonts to older browsers: */
 html {
-  font-family: 'Inter UI', sans-serif;
+  font-family: 'Inter UI', courier, monospace;
+  font-size: 1.3em;
 }
+
 @supports (font-variation-settings: normal) {
   html {
-    font-family: 'Inter UI var', sans-serif;
+    font-family: 'Inter UI var', courier, monospace;
   }
 }
-*/
+
 @font-face {
   font-family: "Inter UI";
-  font-weight: 100 900;
+  font-weight: 400 900;
   font-style: oblique 0deg 10deg;
   src: url("/fonts/Inter-3.19.var.woff2") format("woff2");
 }
+
 
 /*
 

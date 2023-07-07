@@ -173,13 +173,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("posts", function (collectionApi) {
     return collectionApi.getFilteredByTag("posts");
   });
-  eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
+
+  // repurposed below from uncertaintysedge.github.io
+  // eleventyConfig.addCollection("tagList", require("./_11ty/getTagList"));
+
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
   // We need to copy cached.js only if GA is used
   eleventyConfig.addPassthroughCopy(GA_ID ? "js" : "js/*[!cached].*");
   eleventyConfig.addPassthroughCopy("fonts");
   eleventyConfig.addPassthroughCopy("_headers");
+  eleventyConfig.addPassthroughCopy("source");
 
   // We need to rebuild upon JS change to update the CSP.
   eleventyConfig.addWatchTarget("./js/");
@@ -188,6 +192,24 @@ module.exports = function (eleventyConfig) {
   // Unfortunately this means .eleventyignore needs to be maintained redundantly.
   // But without this the JS build artefacts doesn't trigger a build.
   eleventyConfig.setUseGitIgnore(false);
+
+  function filterTagList(tags) {
+    return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
+}
+
+  // repurposed from uncertaintysedge.github.io
+eleventyConfig.addFilter("filterTagList", filterTagList)
+
+// Create an array of all tags
+eleventyConfig.addCollection("tagList", function(collection) {
+    let tagSet = new Set();
+    collection.getAll().forEach(item => {
+        (item.data.tags || []).forEach(tag => tagSet.add(tag));
+    });
+
+    return filterTagList([...tagSet]);
+});
+//  END OF REPURPOSE
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
@@ -207,7 +229,7 @@ module.exports = function (eleventyConfig) {
       ready: function (err, browserSync) {
         browserSync.addMiddleware("*", (req, res) => {
           // Provides the 404 content without redirect.
-          res.write(fs.readFileSync("./404.html"));
+          res.write(fs.readFileSync("../404.html"));
           res.end();
         });
       },

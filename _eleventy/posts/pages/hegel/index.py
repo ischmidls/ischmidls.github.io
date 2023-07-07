@@ -166,7 +166,7 @@ class CsvFigs:
         f.write(f'<h2><a href="{author}{title}.html" title="{author} {title}">{author}\'s {title}</a></h2>')
         f.write('\n')
     with open(f'hegel/{author}{title}.html', 'w') as f:
-        f.write('<h1><a href="index.html" title="home">home</a></h1>')
+        f.write('<h1><a href="../" title="home">home</a></h1>')
         f.write('<hr>\n')
         f.write(fig.to_html(full_html=True, include_plotlyjs='cdn'))
         f.write('\n')

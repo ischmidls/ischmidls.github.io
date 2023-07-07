@@ -5,7 +5,7 @@
 	
 	<link href="https://ischmidls.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://ischmidls.github.io"/>
-	<updated>2023-06-30T17:00:00-07:00</updated>
+	<updated>2023-07-01T17:00:00-07:00</updated>
 	<id>https://update-me.com</id>
 	<author>
 		<name>izak</name>
@@ -918,6 +918,122 @@
 				
 				
 				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fpages%2Ftabaway%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=tab%20away&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>philosophy word counts</title>
+		<link href="https://ischmidls.github.io/posts/pages/hegel/"/>
+		<updated>2023-01-01T16:00:00-08:00</updated>
+		<id>https://ischmidls.github.io/posts/pages/hegel/</id>
+		<content type="html">
+		  &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+    &lt;title&gt;Top 20 Word Occurance in...&lt;/title&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+
+
+&lt;div style=&quot;background-color: lightcyan;&quot;&gt;
+&lt;b&gt;Note from the Author&lt;b&gt;
+
+&lt;p&gt;These web pages are generated using the *index.py* file.&lt;/p&gt;
+
+&lt;p&gt;The link to the Python code in the repository is &lt;a href=&quot;https://github.com/ischmidls/ischmidls.github.io/tree/main/pages/hegel/index.py&quot;&gt;Here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The data source &lt;a href=&quot;https://www.kaggle.com/datasets/kouroshalizadeh/history-of-philosophy&quot;&gt;Here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This started as a project to find the mode of the words in Hegel&#39;s Phenomenology of Spirit.&lt;/p&gt;
+
+&lt;p&gt;I realized I could generalize it to the whole dataset. It got out of hand, but I retamed it.&lt;/p&gt;
+&lt;p&gt;My Python CsvFigs class uses this flow: &lt;/p&gt;
+
+
+&lt;p&gt;CSV --&gt; Pandas DataFrame --&gt; Plotly GraphObject --&gt; text file &lt;/p&gt;
+
+&lt;p&gt;For the DataFrame, I use the collections module from the Python standard library to quickly get the counts for each word from the list of sentence strings. &lt;/p&gt;
+&lt;p&gt;Then, the imported NLTK module determines whether one of the top 20 occuring words is a noun or a verb to color the bar red in Plotly. &lt;/p&gt;
+
+
+
+&lt;/b&gt;&lt;/b&gt;&lt;/div&gt;
+
+&lt;h1&gt;Top 20 Word Occurance in...&lt;/h1&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/KeynesTop%2020%20Word%20Occurance%20in%20Keynes&#39;s%20A%20General%20Theory%20Of%20Employment,%20Interest,%20And%20Money.html&quot; title=&quot;Keynes Top 20 Word Occurance in Keynes&#39;s A General Theory Of Employment, Interest, And Money&quot;&gt;Keynes&#39;s Top 20 Word Occurance in Keynes&#39;s A General Theory Of Employment, Interest, And Money&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/FoucaultTop%2020%20Word%20Occurance%20in%20Foucault&#39;s%20The%20Birth%20Of%20The%20Clinic.html&quot; title=&quot;Foucault Top 20 Word Occurance in Foucault&#39;s The Birth Of The Clinic&quot;&gt;Foucault&#39;s Top 20 Word Occurance in Foucault&#39;s The Birth Of The Clinic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/WittgensteinTop%2020%20Word%20Occurance%20in%20Wittgenstein&#39;s%20On%20Certainty.html&quot; title=&quot;Wittgenstein Top 20 Word Occurance in Wittgenstein&#39;s On Certainty&quot;&gt;Wittgenstein&#39;s Top 20 Word Occurance in Wittgenstein&#39;s On Certainty&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/DescartesTop%2020%20Word%20Occurance%20in%20Descartes&#39;s%20Meditations%20On%20First%20Philosophy.html&quot; title=&quot;Descartes Top 20 Word Occurance in Descartes&#39;s Meditations On First Philosophy&quot;&gt;Descartes&#39;s Top 20 Word Occurance in Descartes&#39;s Meditations On First Philosophy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/LockeTop%2020%20Word%20Occurance%20in%20Locke&#39;s%20Essay%20Concerning%20Human%20Understanding.html&quot; title=&quot;Locke Top 20 Word Occurance in Locke&#39;s Essay Concerning Human Understanding&quot;&gt;Locke&#39;s Top 20 Word Occurance in Locke&#39;s Essay Concerning Human Understanding&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/WittgensteinTop%2020%20Word%20Occurance%20in%20Wittgenstein&#39;s%20Philosophical%20Investigations.html&quot; title=&quot;Wittgenstein Top 20 Word Occurance in Wittgenstein&#39;s Philosophical Investigations&quot;&gt;Wittgenstein&#39;s Top 20 Word Occurance in Wittgenstein&#39;s Philosophical Investigations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/RicardoTop%2020%20Word%20Occurance%20in%20Ricardo&#39;s%20On%20The%20Principles%20Of%20Political%20Economy%20And%20Taxation.html&quot; title=&quot;Ricardo Top 20 Word Occurance in Ricardo&#39;s On The Principles Of Political Economy And Taxation&quot;&gt;Ricardo&#39;s Top 20 Word Occurance in Ricardo&#39;s On The Principles Of Political Economy And Taxation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/BeauvoirTop%2020%20Word%20Occurance%20in%20Beauvoir&#39;s%20The%20Second%20Sex.html&quot; title=&quot;Beauvoir Top 20 Word Occurance in Beauvoir&#39;s The Second Sex&quot;&gt;Beauvoir&#39;s Top 20 Word Occurance in Beauvoir&#39;s The Second Sex&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/DavisTop%2020%20Word%20Occurance%20in%20Davis&#39;s%20Women,%20Race,%20And%20Class.html&quot; title=&quot;Davis Top 20 Word Occurance in Davis&#39;s Women, Race, And Class&quot;&gt;Davis&#39;s Top 20 Word Occurance in Davis&#39;s Women, Race, And Class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/PlatoTop%2020%20Word%20Occurance%20in%20Plato&#39;s%20Plato%20-%20Complete%20Works.html&quot; title=&quot;Plato Top 20 Word Occurance in Plato&#39;s Plato - Complete Works&quot;&gt;Plato&#39;s Top 20 Word Occurance in Plato&#39;s Plato - Complete Works&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/NietzscheTop%2020%20Word%20Occurance%20in%20Nietzsche&#39;s%20Ecce%20Homo.html&quot; title=&quot;Nietzsche Top 20 Word Occurance in Nietzsche&#39;s Ecce Homo&quot;&gt;Nietzsche&#39;s Top 20 Word Occurance in Nietzsche&#39;s Ecce Homo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/Merleau-PontyTop%2020%20Word%20Occurance%20in%20Merleau-Ponty&#39;s%20The%20Phenomenology%20Of%20Perception.html&quot; title=&quot;Merleau-Ponty Top 20 Word Occurance in Merleau-Ponty&#39;s The Phenomenology Of Perception&quot;&gt;Merleau-Ponty&#39;s Top 20 Word Occurance in Merleau-Ponty&#39;s The Phenomenology Of Perception&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/HusserlTop%2020%20Word%20Occurance%20in%20Husserl&#39;s%20The%20Idea%20Of%20Phenomenology.html&quot; title=&quot;Husserl Top 20 Word Occurance in Husserl&#39;s The Idea Of Phenomenology&quot;&gt;Husserl&#39;s Top 20 Word Occurance in Husserl&#39;s The Idea Of Phenomenology&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/HeideggerTop%2020%20Word%20Occurance%20in%20Heidegger&#39;s%20Off%20The%20Beaten%20Track.html&quot; title=&quot;Heidegger Top 20 Word Occurance in Heidegger&#39;s Off The Beaten Track&quot;&gt;Heidegger&#39;s Top 20 Word Occurance in Heidegger&#39;s Off The Beaten Track&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/RussellTop%2020%20Word%20Occurance%20in%20Russell&#39;s%20The%20Analysis%20Of%20Mind.html&quot; title=&quot;Russell Top 20 Word Occurance in Russell&#39;s The Analysis Of Mind&quot;&gt;Russell&#39;s Top 20 Word Occurance in Russell&#39;s The Analysis Of Mind&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/FoucaultTop%2020%20Word%20Occurance%20in%20Foucault&#39;s%20The%20Order%20Of%20Things.html&quot; title=&quot;Foucault Top 20 Word Occurance in Foucault&#39;s The Order Of Things&quot;&gt;Foucault&#39;s Top 20 Word Occurance in Foucault&#39;s The Order Of Things&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/MarxTop%2020%20Word%20Occurance%20in%20Marx&#39;s%20Capital.html&quot; title=&quot;Marx Top 20 Word Occurance in Marx&#39;s Capital&quot;&gt;Marx&#39;s Top 20 Word Occurance in Marx&#39;s Capital&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/NietzscheTop%2020%20Word%20Occurance%20in%20Nietzsche&#39;s%20Twilight%20Of%20The%20Idols.html&quot; title=&quot;Nietzsche Top 20 Word Occurance in Nietzsche&#39;s Twilight Of The Idols&quot;&gt;Nietzsche&#39;s Top 20 Word Occurance in Nietzsche&#39;s Twilight Of The Idols&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/DeleuzeTop%2020%20Word%20Occurance%20in%20Deleuze&#39;s%20Anti-Oedipus.html&quot; title=&quot;Deleuze Top 20 Word Occurance in Deleuze&#39;s Anti-Oedipus&quot;&gt;Deleuze&#39;s Top 20 Word Occurance in Deleuze&#39;s Anti-Oedipus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/LewisTop%2020%20Word%20Occurance%20in%20Lewis&#39;s%20Lewis%20-%20Papers.html&quot; title=&quot;Lewis Top 20 Word Occurance in Lewis&#39;s Lewis - Papers&quot;&gt;Lewis&#39;s Top 20 Word Occurance in Lewis&#39;s Lewis - Papers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/MalebrancheTop%2020%20Word%20Occurance%20in%20Malebranche&#39;s%20The%20Search%20After%20Truth.html&quot; title=&quot;Malebranche Top 20 Word Occurance in Malebranche&#39;s The Search After Truth&quot;&gt;Malebranche&#39;s Top 20 Word Occurance in Malebranche&#39;s The Search After Truth&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/KripkeTop%2020%20Word%20Occurance%20in%20Kripke&#39;s%20Naming%20And%20Necessity.html&quot; title=&quot;Kripke Top 20 Word Occurance in Kripke&#39;s Naming And Necessity&quot;&gt;Kripke&#39;s Top 20 Word Occurance in Kripke&#39;s Naming And Necessity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/QuineTop%2020%20Word%20Occurance%20in%20Quine&#39;s%20Quintessence.html&quot; title=&quot;Quine Top 20 Word Occurance in Quine&#39;s Quintessence&quot;&gt;Quine&#39;s Top 20 Word Occurance in Quine&#39;s Quintessence&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/KantTop%2020%20Word%20Occurance%20in%20Kant&#39;s%20Critique%20Of%20Practical%20Reason.html&quot; title=&quot;Kant Top 20 Word Occurance in Kant&#39;s Critique Of Practical Reason&quot;&gt;Kant&#39;s Top 20 Word Occurance in Kant&#39;s Critique Of Practical Reason&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/EpictetusTop%2020%20Word%20Occurance%20in%20Epictetus&#39;s%20Enchiridion.html&quot; title=&quot;Epictetus Top 20 Word Occurance in Epictetus&#39;s Enchiridion&quot;&gt;Epictetus&#39;s Top 20 Word Occurance in Epictetus&#39;s Enchiridion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/WollstonecraftTop%2020%20Word%20Occurance%20in%20Wollstonecraft&#39;s%20Vindication%20Of%20The%20Rights%20Of%20Woman.html&quot; title=&quot;Wollstonecraft Top 20 Word Occurance in Wollstonecraft&#39;s Vindication Of The Rights Of Woman&quot;&gt;Wollstonecraft&#39;s Top 20 Word Occurance in Wollstonecraft&#39;s Vindication Of The Rights Of Woman&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/HegelTop%2020%20Word%20Occurance%20in%20Hegel&#39;s%20Science%20Of%20Logic.html&quot; title=&quot;Hegel Top 20 Word Occurance in Hegel&#39;s Science Of Logic&quot;&gt;Hegel&#39;s Top 20 Word Occurance in Hegel&#39;s Science Of Logic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/HusserlTop%2020%20Word%20Occurance%20in%20Husserl&#39;s%20The%20Crisis%20Of%20The%20European%20Sciences%20And%20Phenomenology.html&quot; title=&quot;Husserl Top 20 Word Occurance in Husserl&#39;s The Crisis Of The European Sciences And Phenomenology&quot;&gt;Husserl&#39;s Top 20 Word Occurance in Husserl&#39;s The Crisis Of The European Sciences And Phenomenology&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/NietzscheTop%2020%20Word%20Occurance%20in%20Nietzsche&#39;s%20The%20Antichrist.html&quot; title=&quot;Nietzsche Top 20 Word Occurance in Nietzsche&#39;s The Antichrist&quot;&gt;Nietzsche&#39;s Top 20 Word Occurance in Nietzsche&#39;s The Antichrist&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/BerkeleyTop%2020%20Word%20Occurance%20in%20Berkeley&#39;s%20Three%20Dialogues.html&quot; title=&quot;Berkeley Top 20 Word Occurance in Berkeley&#39;s Three Dialogues&quot;&gt;Berkeley&#39;s Top 20 Word Occurance in Berkeley&#39;s Three Dialogues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/SpinozaTop%2020%20Word%20Occurance%20in%20Spinoza&#39;s%20Ethics.html&quot; title=&quot;Spinoza Top 20 Word Occurance in Spinoza&#39;s Ethics&quot;&gt;Spinoza&#39;s Top 20 Word Occurance in Spinoza&#39;s Ethics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/MooreTop%2020%20Word%20Occurance%20in%20Moore&#39;s%20Philosophical%20Studies.html&quot; title=&quot;Moore Top 20 Word Occurance in Moore&#39;s Philosophical Studies&quot;&gt;Moore&#39;s Top 20 Word Occurance in Moore&#39;s Philosophical Studies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/DerridaTop%2020%20Word%20Occurance%20in%20Derrida&#39;s%20Writing%20And%20Difference.html&quot; title=&quot;Derrida Top 20 Word Occurance in Derrida&#39;s Writing And Difference&quot;&gt;Derrida&#39;s Top 20 Word Occurance in Derrida&#39;s Writing And Difference&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/SpinozaTop%2020%20Word%20Occurance%20in%20Spinoza&#39;s%20On%20The%20Improvement%20Of%20Understanding.html&quot; title=&quot;Spinoza Top 20 Word Occurance in Spinoza&#39;s On The Improvement Of Understanding&quot;&gt;Spinoza&#39;s Top 20 Word Occurance in Spinoza&#39;s On The Improvement Of Understanding&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/KantTop%2020%20Word%20Occurance%20in%20Kant&#39;s%20Critique%20Of%20Judgement.html&quot; title=&quot;Kant Top 20 Word Occurance in Kant&#39;s Critique Of Judgement&quot;&gt;Kant&#39;s Top 20 Word Occurance in Kant&#39;s Critique Of Judgement&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/KantTop%2020%20Word%20Occurance%20in%20Kant&#39;s%20Critique%20Of%20Pure%20Reason.html&quot; title=&quot;Kant Top 20 Word Occurance in Kant&#39;s Critique Of Pure Reason&quot;&gt;Kant&#39;s Top 20 Word Occurance in Kant&#39;s Critique Of Pure Reason&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/KripkeTop%2020%20Word%20Occurance%20in%20Kripke&#39;s%20Philosophical%20Troubles.html&quot; title=&quot;Kripke Top 20 Word Occurance in Kripke&#39;s Philosophical Troubles&quot;&gt;Kripke&#39;s Top 20 Word Occurance in Kripke&#39;s Philosophical Troubles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/LockeTop%2020%20Word%20Occurance%20in%20Locke&#39;s%20Second%20Treatise%20On%20Government.html&quot; title=&quot;Locke Top 20 Word Occurance in Locke&#39;s Second Treatise On Government&quot;&gt;Locke&#39;s Top 20 Word Occurance in Locke&#39;s Second Treatise On Government&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/LeninTop%2020%20Word%20Occurance%20in%20Lenin&#39;s%20Essential%20Works%20Of%20Lenin.html&quot; title=&quot;Lenin Top 20 Word Occurance in Lenin&#39;s Essential Works Of Lenin&quot;&gt;Lenin&#39;s Top 20 Word Occurance in Lenin&#39;s Essential Works Of Lenin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/HeideggerTop%2020%20Word%20Occurance%20in%20Heidegger&#39;s%20Being%20And%20Time.html&quot; title=&quot;Heidegger Top 20 Word Occurance in Heidegger&#39;s Being And Time&quot;&gt;Heidegger&#39;s Top 20 Word Occurance in Heidegger&#39;s Being And Time&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/HumeTop%2020%20Word%20Occurance%20in%20Hume&#39;s%20A%20Treatise%20Of%20Human%20Nature.html&quot; title=&quot;Hume Top 20 Word Occurance in Hume&#39;s A Treatise Of Human Nature&quot;&gt;Hume&#39;s Top 20 Word Occurance in Hume&#39;s A Treatise Of Human Nature&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/WittgensteinTop%2020%20Word%20Occurance%20in%20Wittgenstein&#39;s%20Tractatus%20Logico-Philosophicus.html&quot; title=&quot;Wittgenstein Top 20 Word Occurance in Wittgenstein&#39;s Tractatus Logico-Philosophicus&quot;&gt;Wittgenstein&#39;s Top 20 Word Occurance in Wittgenstein&#39;s Tractatus Logico-Philosophicus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/HegelTop%2020%20Word%20Occurance%20in%20Hegel&#39;s%20Elements%20Of%20The%20Philosophy%20Of%20Right.html&quot; title=&quot;Hegel Top 20 Word Occurance in Hegel&#39;s Elements Of The Philosophy Of Right&quot;&gt;Hegel&#39;s Top 20 Word Occurance in Hegel&#39;s Elements Of The Philosophy Of Right&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/Marcus%20AureliusTop%2020%20Word%20Occurance%20in%20Marcus%20Aurelius&#39;s%20Meditations.html&quot; title=&quot;Marcus Aurelius Top 20 Word Occurance in Marcus Aurelius&#39;s Meditations&quot;&gt;Marcus Aurelius&#39;s Top 20 Word Occurance in Marcus Aurelius&#39;s Meditations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/NietzscheTop%2020%20Word%20Occurance%20in%20Nietzsche&#39;s%20Thus%20Spake%20Zarathustra.html&quot; title=&quot;Nietzsche Top 20 Word Occurance in Nietzsche&#39;s Thus Spake Zarathustra&quot;&gt;Nietzsche&#39;s Top 20 Word Occurance in Nietzsche&#39;s Thus Spake Zarathustra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/PopperTop%2020%20Word%20Occurance%20in%20Popper&#39;s%20The%20Logic%20Of%20Scientific%20Discovery.html&quot; title=&quot;Popper Top 20 Word Occurance in Popper&#39;s The Logic Of Scientific Discovery&quot;&gt;Popper&#39;s Top 20 Word Occurance in Popper&#39;s The Logic Of Scientific Discovery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/MarxTop%2020%20Word%20Occurance%20in%20Marx&#39;s%20The%20Communist%20Manifesto.html&quot; title=&quot;Marx Top 20 Word Occurance in Marx&#39;s The Communist Manifesto&quot;&gt;Marx&#39;s Top 20 Word Occurance in Marx&#39;s The Communist Manifesto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/AristotleTop%2020%20Word%20Occurance%20in%20Aristotle&#39;s%20Aristotle%20-%20Complete%20Works.html&quot; title=&quot;Aristotle Top 20 Word Occurance in Aristotle&#39;s Aristotle - Complete Works&quot;&gt;Aristotle&#39;s Top 20 Word Occurance in Aristotle&#39;s Aristotle - Complete Works&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/SmithTop%2020%20Word%20Occurance%20in%20Smith&#39;s%20The%20Wealth%20Of%20Nations.html&quot; title=&quot;Smith Top 20 Word Occurance in Smith&#39;s The Wealth Of Nations&quot;&gt;Smith&#39;s Top 20 Word Occurance in Smith&#39;s The Wealth Of Nations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/LeibnizTop%2020%20Word%20Occurance%20in%20Leibniz&#39;s%20Theodicy.html&quot; title=&quot;Leibniz Top 20 Word Occurance in Leibniz&#39;s Theodicy&quot;&gt;Leibniz&#39;s Top 20 Word Occurance in Leibniz&#39;s Theodicy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/DescartesTop%2020%20Word%20Occurance%20in%20Descartes&#39;s%20Discourse%20On%20Method.html&quot; title=&quot;Descartes Top 20 Word Occurance in Descartes&#39;s Discourse On Method&quot;&gt;Descartes&#39;s Top 20 Word Occurance in Descartes&#39;s Discourse On Method&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/FichteTop%2020%20Word%20Occurance%20in%20Fichte&#39;s%20The%20System%20Of%20Ethics.html&quot; title=&quot;Fichte Top 20 Word Occurance in Fichte&#39;s The System Of Ethics&quot;&gt;Fichte&#39;s Top 20 Word Occurance in Fichte&#39;s The System Of Ethics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/DeleuzeTop%2020%20Word%20Occurance%20in%20Deleuze&#39;s%20Difference%20And%20Repetition.html&quot; title=&quot;Deleuze Top 20 Word Occurance in Deleuze&#39;s Difference And Repetition&quot;&gt;Deleuze&#39;s Top 20 Word Occurance in Deleuze&#39;s Difference And Repetition&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/NietzscheTop%2020%20Word%20Occurance%20in%20Nietzsche&#39;s%20Beyond%20Good%20And%20Evil.html&quot; title=&quot;Nietzsche Top 20 Word Occurance in Nietzsche&#39;s Beyond Good And Evil&quot;&gt;Nietzsche&#39;s Top 20 Word Occurance in Nietzsche&#39;s Beyond Good And Evil&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/HumeTop%2020%20Word%20Occurance%20in%20Hume&#39;s%20Dialogues%20Concerning%20Natural%20Religion.html&quot; title=&quot;Hume Top 20 Word Occurance in Hume&#39;s Dialogues Concerning Natural Religion&quot;&gt;Hume&#39;s Top 20 Word Occurance in Hume&#39;s Dialogues Concerning Natural Religion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/HegelTop%2020%20Word%20Occurance%20in%20Hegel&#39;s%20The%20Phenomenology%20Of%20Spirit.html&quot; title=&quot;Hegel Top 20 Word Occurance in Hegel&#39;s The Phenomenology Of Spirit&quot;&gt;Hegel&#39;s Top 20 Word Occurance in Hegel&#39;s The Phenomenology Of Spirit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/FoucaultTop%2020%20Word%20Occurance%20in%20Foucault&#39;s%20History%20Of%20Madness.html&quot; title=&quot;Foucault Top 20 Word Occurance in Foucault&#39;s History Of Madness&quot;&gt;Foucault&#39;s Top 20 Word Occurance in Foucault&#39;s History Of Madness&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/BerkeleyTop%2020%20Word%20Occurance%20in%20Berkeley&#39;s%20A%20Treatise%20Concerning%20The%20Principles%20Of%20Human%20Knowledge.html&quot; title=&quot;Berkeley Top 20 Word Occurance in Berkeley&#39;s A Treatise Concerning The Principles Of Human Knowledge&quot;&gt;Berkeley&#39;s Top 20 Word Occurance in Berkeley&#39;s A Treatise Concerning The Principles Of Human Knowledge&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/source/hegel/RussellTop%2020%20Word%20Occurance%20in%20Russell&#39;s%20The%20Problems%20Of%20Philosophy.html&quot; title=&quot;Russell Top 20 Word Occurance in Russell&#39;s The Problems Of Philosophy&quot;&gt;Russell&#39;s Top 20 Word Occurance in Russell&#39;s The Problems Of Philosophy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fpages%2Fhegel%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=philosophy%20word%20counts&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -2547,7 +2663,7 @@
     &lt;img style=&quot;width:50%;&quot; alt=&quot;Rank-nullity&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Rank-nullity.svg/256px-Rank-nullity.svg.png&quot;&gt;
   &lt;/a&gt;
   &lt;br&gt;
-  &lt;p&gt;Why does Wikipedia use a fake commutative diagram of the rank-nullity theorem? And, what in the world are these dotted lines? It appears to be addition for &#92;(&#92;operatorname{dim} V&#92;) but then &#92;(&#92;operatorname{dim} &#92;operatorname{ker} T&#92;) and &#92;(&#92;operatorname{dim} &#92;operatorname{im} T&#92;) don&#39;t make sense?&lt;/p&gt;
+  &lt;p&gt;And, what in the world are these dotted lines? It appears to be addition for &#92;(&#92;operatorname{dim} V&#92;) but then &#92;(&#92;operatorname{dim} &#92;operatorname{ker} T&#92;) and &#92;(&#92;operatorname{dim} &#92;operatorname{im} T&#92;) don&#39;t make sense?&lt;/p&gt;
   &lt;p&gt;Well, I admittedly asked twitter, where @linguanumerate and @xl772 clarified.
     &lt;blockquote&gt;
         &lt;p&gt;It&#39;s just a kind of intuitive picture. The vertical line on the left is a &quot;picture&quot; of &#92;(V&#92;), with its dimension represented by the height of the line. The arrows show &#92;(V&#92;) getting mapped into &#92;(W&#92;), with &#92;(V/&#92;operatorname{ker} T&#92;) getting mapped to &#92;(&#92;operatorname{im} T&#92;) and &#92;(&#92;operatorname{ker} T&#92;) getting squashed to 0.&lt;/p&gt;
@@ -2559,6 +2675,464 @@
 				
 				
 				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Frank%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=notes%20-%20matrix%20rank&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>notes - probability &amp; types</title>
+		<link href="https://ischmidls.github.io/posts/intro%20prob/"/>
+		<updated>2023-07-01T17:00:00-07:00</updated>
+		<id>https://ischmidls.github.io/posts/intro%20prob/</id>
+		<content type="html">
+		  &lt;h2&gt;table of contents&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;1) &lt;a href=&quot;#event-spaces&quot;&gt;event spaces&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;2) &lt;a href=&quot;#outer-measure&quot;&gt;outer measure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;3) &lt;a href=&quot;#measurable-spaces&quot;&gt;measurable spaces&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;4) &lt;a href=&quot;#defining-a-measure&quot;&gt;defining a measure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;5) &lt;a href=&quot;#measure-transformations&quot;&gt;measure transformations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;6) &lt;a href=&quot;#probability-theory&quot;&gt;probability theory&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;6.1) &lt;a href=&quot;#independence&quot;&gt;independence&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;6.2) &lt;a href=&quot;#conditional-probability&quot;&gt;conditional probability&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;6.3) &lt;a href=&quot;#random-variables&quot;&gt;random variables&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2&gt;intro&lt;/h2&gt;
+&lt;p&gt;What follows &amp;mdash; as with many of my posts &amp;mdash; is my explanation of work from someone who is more erudite than me.&lt;/p&gt;
+&lt;p&gt;This time it is &quot;Formalizing the Beginnings of Bayesian Probability Theory in the Lean Theorem Prover&quot; a Master&#39;s thesis from the lovely &lt;em&gt;Rishikesh Vaishnav&lt;/em&gt;. You might find it &lt;a href=&quot;https://escholarship.org/uc/item/8hb1w6js&quot;&gt;here&lt;/a&gt;, ceteris paribus.&lt;/p&gt;
+&lt;p&gt;I skipped his intro on types &amp;mdash; the foundation of Lean&#39;s formal proofs, so read that if you like. As you may know, I enjoy &lt;a href=&quot;https://www.cse.chalmers.se/~peterd/papers/DependentTypesAtWork.pdf&quot;&gt;Dependent Types at Work&lt;/a&gt; by Ana Bove and Peter Dybjer (but this uses a different language &amp;mdash; Agda). That being said, I will also disclude all of &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; code. So, this will read more like &lt;a href=&quot;https://hott.github.io/book/hott-online-1404-g79e6d60.pdf&quot;&gt;HoTT&lt;/a&gt; in the line of Marin-Lof&#39;s or Hofmann&#39;s or Voevodsky&#39;s or Awodey&#39;s publications.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Vaishnav&#39;s&lt;/em&gt; organization follows: &lt;/p&gt;
+&lt;p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Measure-Theoretic Foundations&lt;/li&gt;
+    &lt;li&gt;The Event Space&lt;/li&gt;
+    &lt;li&gt;The Outer Measure
+        &lt;ul&gt;
+            &lt;li&gt;Outer Measure Transformations&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Measurable Spaces
+        &lt;ul&gt;
+            &lt;li&gt;Transforming Measurable Spaces&lt;/li&gt;
+            &lt;li&gt;A Galois Connection&lt;/li&gt;
+            &lt;li&gt;The Trimmed Outer Measure&lt;/li&gt;
+            &lt;li&gt;Measurable Spaces on Pi Types&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Defining a Measure&lt;/li&gt;
+    &lt;li&gt;Measure Transformations
+        &lt;ul&gt;
+            &lt;li&gt;From a Partial Function&lt;/li&gt;
+            &lt;li&gt;The Carathéodory Criterion&lt;/li&gt;
+            &lt;li&gt;Lifting an Outer Measure Transformation&lt;/li&gt;
+            &lt;li&gt;Restricting a Measure&lt;/li&gt;
+            &lt;li&gt;Mapping a Measure&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Probability Theory
+        &lt;ul&gt;
+            &lt;li&gt;Independence
+            &lt;/li&gt;
+            &lt;li&gt;Conditional Probability
+            &lt;/li&gt;
+            &lt;li&gt;Random Variables
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;p&gt;Now, &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; details mostly fall under &quot;Probability Theory&quot;. He also numbered everything, but that&#39;s a bit much for me (I use my own numbering here). Right now, I am taking a probability class, not a measure theory class, so I should probably focus on the &quot;Probability Theory&quot; section myself.&lt;/p&gt;
+&lt;p&gt;The list above is somewhat decieving, as Vasishnav included sub-sub-headings for the &quot;Probability&quot; section splitting &quot;Independence&quot; and &quot;Conditional&quot; into subsections for definitions and properties. But more importantly, &quot;Random Variables&quot; includes:&lt;/p&gt;
+&lt;p&gt;
+  &lt;ul&gt;&lt;li&gt;Random Variables
+      &lt;ul&gt;
+          &lt;li&gt;The Joint Distribution&lt;/li&gt;
+          &lt;li&gt;Restricting a Pi&lt;/li&gt;
+          &lt;li&gt;The Marginal Distribution&lt;/li&gt;
+          &lt;li&gt;Marginalization&lt;/li&gt;
+          &lt;li&gt;Independence on Random Variables&lt;/li&gt;
+          &lt;li&gt;Conditional Independence on Random Variables&lt;/li&gt;
+      &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;That brings me to the fact of the matter. I took an &quot;Engineering Stats&quot; class and forgot everything. I still do not know what any of this means:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Random variable: A variable that takes on different values based on the outcome of a random event. &#92;(X&#92;)&lt;/p&gt;&lt;p&gt;Distribution: The function that describes the probabilities of different outcomes or values of a random variable. &#92;(P(X = x)&#92;)&lt;/p&gt;&lt;p&gt;Mean: The average value of a set of numbers or a random variable. &#92;(&#92;mu&#92;)&lt;/p&gt;&lt;p&gt;Variance: A measure of the spread or dispersion of a set of numbers or a random variable. &#92;(&#92;sigma^2&#92;)&lt;/p&gt;&lt;p&gt;Standard deviation: The square root of the variance, providing a measure of the average distance between each data point and the mean. &#92;(&#92;sigma&#92;)&lt;/p&gt;&lt;p&gt;Normal distribution: A symmetric probability distribution that is commonly used to model real-world phenomena. &#92;(N(&#92;mu, &#92;sigma^2)&#92;)&lt;/p&gt;&lt;p&gt;Hypothesis testing: A statistical method to make inferences or conclusions about a population based on sample data.&lt;/p&gt;&lt;p&gt;Confidence interval: A range of values that is likely to contain the true value of a population parameter with a certain level of confidence. &#92;([a, b]&#92;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(quoting nobody, I just prefer the &lt;code&gt;blockquote&lt;/code&gt; markup to using the &lt;code&gt;pl-5&lt;/code&gt; bootstrap; you can add that to the izak lore if you want)&lt;/p&gt;
+&lt;!--EVENT SPACES--&gt;
+&lt;h2 id=&quot;event-spaces&quot;&gt;event spaces&lt;/h2&gt;
+&lt;p&gt;Let a type &#92;( &#92;alpha &#92;) be the &quot;fundamental event space&quot;, 
+  where each trial yields a value. 
+  To assign a &lt;em&gt;measure&lt;/em&gt; to sets in &#92;( &#92;alpha &#92;), 
+  representing probabilities: use a random variable, denoted &#92;( X: &#92;alpha &#92;rightarrow &#92;beta &#92;), 
+  a transformation on the event space. 
+  &lt;/p&gt;
+  &lt;p&gt;With a measure function on &#92;( &#92;alpha &#92;), we can define a measure function on 
+  &#92;( &#92;beta &#92;) corresponding to &#92;( X &#92;). For any set &#92;( s &#92;) in &#92;( &#92;beta &#92;), 
+  the measure of &#92;( s &#92;) is the measure of the preimage of &#92;( s &#92;) under &#92;( X &#92;) 
+  (denoted as &#92;( X^{-1}(s) &#92;)). This relationship between &#92;(&#92;alpha&#92;) and &#92;(&#92;beta&#92;) comes to fruition during the &quot;Mapping/Co-Mapping Measurable Spaces&quot; part of &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; &quot;Outer Measure&quot; section.
+&lt;/p&gt;
+&lt;p&gt;Restrictions on a measure function &#92;(m&#92;) come from the &quot;&lt;b&gt;outer measure&lt;/b&gt;&quot;, 
+  which states that, for a function &#92;(m : &#92;text{set } &#92;alpha &#92;rightarrow &#92;mathbb{R}^+_&#92;infty&#92;) 
+  to be an &lt;b&gt;outer measure&lt;/b&gt; &#92;((&#92;)&lt;span class=&quot;text-secondary&quot;&gt;where &#92;(&#92;mathbb{R}^+_&#92;infty&#92;) represents the non-negative real numbers including infinity&lt;/span&gt;&#92;()&#92;), 
+  we have the empty set property &#92;((1)&#92;), monotonicity property &#92;((2)&#92;), and countable union property &#92;((3)&#92;):
+&lt;/p&gt;
+&lt;p&gt;
+  &#92;[
+&#92;begin{align*}
+m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
+&#92;forall A, B : &#92;text{set } &#92;alpha, A &#92;subseteq B &amp; &#92;Rightarrow m(A) &#92;leq m(B), &#92;quad &amp; (2) &#92;&#92;
+&#92;forall f : &#92;mathbb{N} &#92;rightarrow &#92;text{set } &#92;alpha, m&#92;left(&#92;bigcup_{i=0}^&#92;infty f(i)&#92;right) &amp; &#92;leq &#92;sum_{i=0}^&#92;infty m(f(i)), &#92;quad &amp; (3)
+&#92;end{align*}
+&#92;]
+&lt;/p&gt;
+&lt;p&gt;The empty set property &#92;((1)&#92;) ensures that the empty set has zero mass. The monotonicity property &#92;((2)&#92;) guarantees that a set has at least as much mass as any of its subsets. The countable union property &#92;((3)&#92;) limits the mass of a set to the maximum mass present in any covering set of subsets.&lt;/p&gt;
+&lt;p&gt;These propertis of &lt;b&gt;outer measure&lt;/b&gt; allow us to talk about measure using &lt;em&gt;inequalities&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;See &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; paper for info on &quot;why countable&quot;.&lt;/p&gt;
+&lt;h2 id=&quot;outer-measure&quot;&gt;outer measure&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; defines:&lt;/p&gt;
+&lt;p&gt;&#92;[
+  &#92;text{fromfunc}(m_0(s)) = &#92;inf_{ f : &#92;mathbb{N} &#92;rightarrow &#92;text{set }&#92;alpha} &#92;left&#92;{s &#92;subseteq &#92;bigcup_{i=0}^{&#92;infty} f(i) &#92;Rightarrow &#92;sum_{i=0}^{&#92;infty} m_0(f(i)) &#92;right&#92;}
+  &#92;]&lt;/p&gt;
+&lt;p&gt;Satisfying: &#92;(∀ s : set &#92; α, m(s) ≤ m_0(s).&#92;)&lt;/p&gt;
+&lt;p&gt;In the type theory style that verges on pseudocode, we have &#92;(&#92;text{fromfunc}(m_0(s))&#92;) &amp;mdash; which &lt;em&gt;Vaishnav&lt;/em&gt; denotes &#92;(&#92;text{fromfunc}(m_0)(s)&#92;). &lt;/p&gt;
+&lt;p&gt;The condition &#92;(s &#92;subseteq &#92;bigcup_{i=0}^{&#92;infty} f(i)&#92;) ensures that the sets &#92;(f(i)&#92;) cover the set &#92;(s&#92;). If this condition is not satisfied for some &#92;(f&#92;), the value is effectively considered &#92;(&#92;infty&#92;).&lt;/p&gt;
+
+&lt;p&gt;The function &#92;(&#92;text{fromfunc}(m_0)&#92;) is then defined as a valid outer measure, which satisfies the condition &#92;(m(s) &#92;leq m_0(s)&#92;) for all sets &#92;(s&#92;). It is also proven that &#92;(&#92;text{fromfunc}(m_0)&#92;) is the unique maximum outer measure that satisfies this condition. No other outer measure can exceed it on any set.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; also formalizes this for a more general case of partial functions where &#92;(m_0 : S → &#92;mathbb{R}^{+&#92;infty}&#92;)  such that:&lt;/p&gt;
+&lt;p&gt;&#92;[ &#92;text{extend} (m_0) (s) = &#92;begin{cases} 
+  m_0 (s) &#92;quad s &#92;in S &#92;&#92;
+
+  &#92;infty &#92;quad s &#92;notin S 
+&#92;end{cases}
+&#92;]&lt;/p&gt;
+&lt;p&gt;Now is the moment you&#39;ve been waiting for since &lt;a href=&quot;https://ischmidls.github.io/posts/intro%20prob/&quot; event-spaces=&quot;&quot;&gt;event spaces&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Given a function &#92;(f: &#92;alpha &#92;to &#92;beta&#92;) and an outer measure &#92;(m_0&#92;) on &#92;(&#92;alpha&#92;), we define &#92;(&#92;text{map}_f(m_0)&#92;) as:&lt;/p&gt;
+&lt;p&gt;
+&#92;[
+&#92;text{map}_f(m_0)(s) = m_0(f^{-1}(s))
+&#92;]
+&lt;/p&gt;
+&lt;p&gt;Similarly, for an outer measure &#92;(m_1&#92;) on &#92;(&#92;beta&#92;), we define &#92;(&#92;text{comap}_f(m_1)&#92;) as:&lt;/p&gt;
+&lt;p&gt;
+&#92;[
+&#92;text{comap}_f(m_1)(s) = m_1(f(s))
+&#92;]
+&lt;/p&gt;
+&lt;p&gt;Both &#92;(&#92;text{map}_f(m_0)&#92;) and &#92;(&#92;text{comap}_f(m_1)&#92;) are outer measures.&lt;/p&gt;
+&lt;p&gt;Given an outer measure &#92;(m_0&#92;) on &#92;(&#92;alpha&#92;), we can restrict it to a set &#92;(t&#92;) by defining:&lt;/p&gt;
+
+&#92;[
+&#92;text{restrict}_t(m_0)(s) = m_0(s &#92;cap t)
+&#92;]
+
+&lt;p&gt;This measures the intersection of &#92;(s&#92;) with &#92;(t&#92;). The function &#92;(&#92;text{restrict}_t(m_0)&#92;) is proven to be an outer measure. In Lean, we can use the coercion function &#92;(c_t: t &#92;to &#92;alpha&#92;) to avoid the explicit proof. We can express it as:&lt;/p&gt;
+
+&#92;[
+&#92;text{restrict}_t(m_0) = &#92;text{map}_{c_t}(&#92;text{comap}_{c_t}(m_0))
+&#92;]
+
+&lt;p&gt;Alternatively, for any &#92;(s&#92;), it can be simplified to:&lt;/p&gt;
+
+&#92;[
+&#92;text{restrict}_t(m_0)(s) = m_0(c_t(c_t^{-1}(s)))
+&#92;]
+
+&lt;p&gt;where &#92;(c_t(c_t^{-1}(s))&#92;) represents the intersection &#92;(s &#92;cap t&#92;). Since &#92;(&#92;text{map}(&#92;cdot)&#92;) and &#92;(&#92;text{comap}(&#92;cdot)&#92;) preserve outer measures, we can conclude that &#92;(&#92;text{restrict}_t(m_0)(s)&#92;) is an outer measure.&lt;/p&gt;
+
+&lt;p&gt;Now, that was a very close paraphase of &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; text.&lt;/p&gt;
+&lt;p&gt;Alternatively, the beloved Wikipedia says:&lt;/p&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+  &lt;p&gt;Given a set &#92;(X&#92;), let &#92;(2^X&#92;) denote the collection of all subsets of &#92;(X&#92;), including the empty set &#92;(&#92;varnothing&#92;).&lt;/p&gt;
+&lt;p&gt;An outer measure on &#92;(X&#92;) is a set function &#92;(&#92;mu: 2^X &#92;to [0, &#92;infty]&#92;) such that:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Null empty set: &#92;(&#92;mu(&#92;varnothing) = 0&#92;)&lt;/li&gt;
+  &lt;li&gt;Countably subadditive: For arbitrary subsets &#92;(A, B_1, B_2, &#92;ldots&#92;) of &#92;(X&#92;), if &#92;(A &#92;subseteq &#92;bigcup_{j=1}^&#92;infty B_j&#92;), then &#92;(&#92;mu(A) &#92;leq &#92;sum_{j=1}^&#92;infty &#92;mu(B_j)&#92;).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+&lt;h2 id=&quot;measurable-spaces&quot;&gt;measurable spaces&lt;/h2&gt;
+&lt;p&gt;Outer measures provide information about inequalities in measure functions. We are also interested in equalities between measures of sets in the event space. For disjoint sets &#92;(A&#92;) and &#92;(B&#92;) in &#92;(&#92;alpha&#92;), we want to express the equality &#92;(m(A &#92;cup B) = m(A) + m(B)&#92;). In the general case where &#92;(A&#92;) and &#92;(B&#92;) are not necessarily disjoint, we seek the equality &#92;(m(A &#92;cup B) = m(A &#92;setminus B) + m(A &#92;cap B) + m(B &#92;setminus A)&#92;).
+&lt;/p&gt;
+&lt;p&gt;To control equality restrictions on measures, we introduce measurable spaces (&#92;(σ&#92;)-algebras). A measurable space &#92;(M: &#92;text{set}(&#92;text{set} &#92; &#92;alpha)&#92;) includes &quot;measurable sets&quot; and satisfies:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Empty set measurability: &#92;(&#92;varnothing &#92;in M&#92;)&lt;/li&gt;
+  &lt;li&gt;Complement closure: For any set &#92;(s&#92;) in &#92;(&#92;alpha&#92;), if &#92;(s &#92;in M&#92;), then its complement &#92;(s^c &#92;in M&#92;)&lt;/li&gt;
+  &lt;li&gt;Countable union closure: For any sequence &#92;(f: &#92;mathbb{N} &#92;to &#92;text{set} &#92; &#92;alpha&#92;), if &#92;(f(i) &#92;in M&#92;) for all &#92;(i&#92;) in &#92;(&#92;mathbb{N}&#92;), then &#92;(&#92;bigcup&#92;limits_{i=0}^&#92;infty f(i) &#92;in M&#92;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From these properties, we can derive other intuitive closures, including those of countable intersection:&lt;/p&gt;
+&lt;p&gt;&#92;[ &#92;forall f : &#92;mathbb{N} &#92;to &#92;text{set} &#92; &#92;alpha, &#92;forall i : &#92;mathbb{N}, f(i) &#92;in M &#92;Rightarrow &#92;bigcap_{i=0}^&#92;infty f(i) &#92;in M, &#92;]&lt;/p&gt;
+&lt;p&gt;and difference:&lt;/p&gt;
+&lt;p&gt;&#92;[ &#92;forall a,b : &#92;text{set} &#92; &#92;alpha, &#92; a &#92;in M &#92;Rightarrow b &#92;in M &#92;Rightarrow a &#92;setminus b &#92;in M. &#92;]&lt;/p&gt;
+&lt;p&gt;Now, how does &lt;em&gt;Vaishnav&lt;/em&gt; define measure transformations?&lt;/p&gt;
+&lt;p&gt;Given &#92;(S : &#92;text{set}(&#92;text{set} &#92; &#92;alpha)&#92;), the measurable space &quot;closure&quot; of &#92;(S&#92;) is the smallest measurable space that includes every set in &#92;(S&#92;). The generated measurable space can be visualized as the &quot;mosaic&quot; of set intersections and differences formed by &#92;(S&#92;) and the universal set (&quot;univ&quot;) in our event space. The set of measurable sets consists of all possible countable unions of the &quot;tiles&quot; in this mosaic.
+
+ &lt;/p&gt;&lt;p&gt; Now, let &#92;(C : &#92;text{set} &#92; &#92;alpha &#92;rightarrow &#92;text{Prop}&#92;) be a predicate. To show that &#92;(C&#92;) holds for all sets in &#92;(&#92;text{generate}(S)&#92;), we can prove that it holds for &#92;(S&#92;) itself &#92;((1)&#92;), the empty set &#92;((2)&#92;), under complement &#92;((3)&#92;), and under countable union &#92;((4)&#92;).&lt;/p&gt;
+ &lt;p&gt;&#92;((1) &#92;quad &#92;forall s &#92;in S&#92;), &#92;(C(s) &#92;quad (1) &#92;) &lt;/p&gt;
+ &lt;p&gt;&#92;((2) &#92;quad C(&#92;varnothing) &#92;quad (2) &#92;) &lt;/p&gt;
+ &lt;p&gt;&#92;((3) &#92;quad &#92;forall s &#92;in &#92;text{generate}(S)&#92;), &#92;(C(s) &#92;Rightarrow C(s^c)&#92;)&lt;/p&gt;
+ &lt;p&gt;&#92;((4) &#92;quad &#92;forall f : &#92;mathbb{N} &#92;to &#92;text{set} &#92; &#92;alpha, &#92;quad &#92;left(&#92;forall i : &#92;mathbb{N}, &#92; f(i) &#92;in &#92;text{generate}(S) &#92;land C(f(i)&#92;right) &#92;Rightarrow C(&#92;bigcup_{i=0}^{&#92;infty} f(i))&#92;)&lt;/p&gt;
+ &lt;p&gt;The &lt;a href=&quot;https://encyclopediaofmath.org/wiki/Measurable_space&quot;&gt;Encyclopedia of Mathematics&lt;/a&gt; describes this more mathematically as:&lt;/p&gt;
+ &lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+  &lt;p&gt;Let &#92;((X,A)&#92;) and &#92;((Y,B)&#92;) be measurable spaces.&lt;/p&gt;
+&lt;p&gt;A map &#92;(f:X&#92;rightarrow Y&#92;) is called measurable if &#92;(f^{-1}(B)&#92;in A&#92;) for every &#92;(B&#92;in B&#92;).&lt;/p&gt;
+&lt;p&gt;These two measurable spaces are called isomorphic if there exists a bijection &#92;(f:X&#92;rightarrow Y&#92;) such that &#92;(f&#92;) and &#92;(f^{-1}&#92;) are measurable (such &#92;(f&#92;) is called an isomorphism).&lt;/p&gt;
+&lt;p&gt;Let &#92;(X&#92;) be a set, &#92;((Y,B)&#92;) a measurable space, and &#92;((f_i)_{i&#92;in I}&#92;) a family of maps &#92;(f_i:X&#92;rightarrow Y&#92;). The &#92;(&#92;sigma&#92;)-algebra generated by these maps is defined as the smallest &#92;(&#92;sigma&#92;)-algebra &#92;(A&#92;) on &#92;(X&#92;) such that all &#92;(f_i&#92;) are measurable from &#92;((X,A)&#92;) to &#92;((Y,B)&#92;). More generally, one may take measurable spaces &#92;((Y_i,B_i)&#92;) and maps &#92;(f_i:X&#92;rightarrow Y_i&#92;). On the other hand, if &#92;(Y&#92;) is &#92;(&#92;mathbb{R}&#92;) (or &#92;(&#92;mathbb{C}&#92;), &#92;(&#92;mathbb{R}^n&#92;), etc.) then &#92;(B&#92;) is by default the Borel &#92;(&#92;sigma&#92;)-algebra.&lt;/p&gt;
+ &lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+ &lt;p&gt;But, even this description has a very topological tone. Note: a Borel set is simply formed by open sets &quot;through the operations of countable union, countable intersection, and relative complement&quot; (&lt;a href=&quot;https://en.wikipedia.org/wiki/Borel_sets&quot;&gt;Wikipedia: Borel sets&lt;/a&gt;) &amp;mdash; this also follows transfinite induction, etc, but that&#39;s outside our scope.&lt;/p&gt;
+ &lt;p&gt;This props us up for a more intuitive (while less rigorous) picture:&lt;/p&gt;
+ &lt;blockquote&gt;
+  &lt;b&gt;Definition 4&lt;/b&gt;
+&lt;p&gt;Let &#92;(F&#92;) be a collection of subsets of &#92;(&#92;Omega&#92;) such that:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Closed under complements: If &#92;(A &#92;in F&#92;), then &#92;(A^C &#92;in F&#92;).&lt;/li&gt;
+  &lt;li&gt;Closed under countable unions: If &#92;(A_1, A_2, &#92;ldots&#92;) are all in &#92;(F&#92;), then &#92;(&#92;bigcup_{i=1}^&#92;infty A_i &#92;in F&#92;).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We call &#92;(F&#92;) a &#92;(&#92;sigma&#92;)-algebra, and the elements of &#92;(F&#92;) measurable sets.&lt;/p&gt;
+&lt;p&gt;(&lt;a href=&quot;https://www.markhuberdatascience.org/probability-textbook&quot;&gt;Huber, Probability: Lectures and Labs&lt;/a&gt;)&lt;/p&gt;
+ &lt;/blockquote&gt;
+ &lt;p&gt;No mention of topology&#39;s maps, Borel, &amp; generating or type theory&#39;s ... predicates ... (I guess the type theory is not too bad yet).&lt;/p&gt;
+&lt;p&gt;That being said, Huber does clarify:&lt;/p&gt;
+ &lt;blockquote&gt;
+  Whenever Ω is a finite set, F will be the set of all subsets of Ω. When Ω = R, F is typically taken to be the Borel sets. In this first course in probability we
+will not define the Borel sets precisely, except to note that any interval (open or closed, finite or
+infinite) is a member of the Borel sets.
+&lt;/blockquote&gt;
+ &lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; also looks at &quot;Combining Measurable Spaces&quot;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Given a set &#92;(S&#92;) of measurable spaces, we can now define their &quot;combination&quot; into the smallest measurable space that contains both of them (i.e. their supremum) as&lt;/p&gt;
+&#92;[ &#92;text{sup}(S) = &#92;text{generate}&#92;left(&#92;bigcup_{s &#92;in S} s&#92;right), &#92;]
+&lt;p&gt;the measurable space generation on the union (set supremum) of all of their sets of measurable sets.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Again, &lt;em&gt;Vaishnav&lt;/em&gt; considers &quot;Mapping/Co-Mapping Measurable Spaces&quot;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;As for &lt;b&gt;outer measures&lt;/b&gt;, a map/comap on &#92;((M, &#92;alpha)&#92;) with respect to &#92;(s&#92;) is defined given a second type &#92;(&#92;beta&#92;), a function &#92;(f : &#92;alpha &#92;to &#92;beta&#92;), and a measurable space &#92;((M, &#92;alpha)&#92;) on &#92;(&#92;alpha&#92;). The map is the set of all sets &#92;(&#92;beta&#92;) such that their preimage is a measurable set:&lt;/p&gt;
+&#92;[ &#92;text{map}_f((M, &#92;alpha)) = &#92;{ b : &#92;text{set} &#92; &#92;beta &#92;mid f^{-1}(b) &#92;in (M, &#92;alpha) &#92;} &#92;]
+
+&lt;p&gt;Given a measurable space &#92;((M, &#92;beta)&#92;) on &#92;(&#92;beta&#92;), we define our comap to be the set of all sets &#92;(&#92;alpha&#92;) such that they are the preimage of some measurable set:&lt;/p&gt;
+&#92;[ &#92;text{comap}_f((M, &#92;beta)) = &#92;{ a : &#92;text{set} &#92; &#92;alpha &#92;mid &#92;exists b : &#92;text{set} &#92; &#92;beta, f^{-1}(b) = a &#92;} &#92;]
+&lt;p&gt;(you can also think of this as simply taking the preimages of every set in &#92;((M, &#92;beta)&#92;)).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;From here, the lovely &lt;em&gt;Vaishnav&lt;/em&gt; mentions:&lt;/p&gt;
+&lt;p&gt;In mathematical notation, the definition can be written as follows:&lt;/p&gt;
+
+&lt;p&gt;A Galois connection is a pair of functions &#92;(l: &#92;alpha &#92;to &#92;beta&#92;) and &#92;(u: &#92;beta &#92;to &#92;alpha&#92;) between preordered sets &#92;(&#92;alpha&#92;) and &#92;(&#92;beta&#92;) that satisfy the following property:&lt;/p&gt;
+
+&#92;[
+&#92;forall a &#92;in &#92;alpha, b &#92;in &#92;beta, &#92;quad l(a) &#92;leq b &#92;iff a &#92;leq u(b)
+&#92;]
+
+&lt;p&gt;Here, &#92;(&#92;leq&#92;) represents the order relation in the respective preordered sets &#92;(&#92;alpha&#92;) and &#92;(&#92;beta&#92;). The functions &#92;(l&#92;) and &#92;(u&#92;) establish a connection between the orders in &#92;(&#92;alpha&#92;) and &#92;(&#92;beta&#92;) such that if &#92;(l(a)&#92;) is less than or equal to &#92;(b&#92;), then &#92;(a&#92;) is less than or equal to &#92;(u(b)&#92;), and vice versa.&lt;/p&gt;
+
+
+&lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; explains the effect of this, but gives the lemmas in Lean, so here is the property of the lemmas NOT in Lean!&lt;/p&gt;
+&lt;p&gt;In mathematical notation, an essential property of a Galois connection is that an upper/lower adjoint of a Galois connection uniquely determines the other:&lt;/p&gt;
+&lt;p&gt;
+&#92;[
+&#92;begin{align*}
+F(a) &amp; &#92;text{ is the least element } &#92;tilde{b} &#92;text{ with } a &#92;leq G(&#92;tilde{b}), &#92;&#92;
+G(b) &amp; &#92;text{ is the largest element } &#92;tilde{a} &#92;text{ with } F(&#92;tilde{a}) &#92;leq b.
+&#92;end{align*}
+&#92;]
+&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Galois_connection&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;But, as &lt;em&gt;Vaishnav&lt;/em&gt; explains:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;In our case, we can show that, for any &#92;(f: &#92;alpha &#92;to &#92;beta&#92;), there is a Galois Connection between &#92;(&#92;text{comap}_f(&#92;cdot)&#92;) and &#92;(&#92;text{map}_f(&#92;cdot)&#92;) (where the &#92;(&#92;leq&#92;) relation on measurable spaces is the subset relation). To see this, consider an arbitrary measurable space &#92;(M_&#92;beta&#92;) on &#92;(&#92;beta&#92;) and &#92;(M_&#92;alpha&#92;) on &#92;(&#92;alpha&#92;). Here, &#92;(&#92;text{comap}_f(M_&#92;beta) &#92;subseteq M_&#92;alpha&#92;) means that every set in &#92;(M_&#92;beta&#92;) has a preimage in &#92;(M_&#92;alpha&#92;), which is exactly the same statement as &#92;(M_&#92;beta &#92;subseteq &#92;text{map}_f(M_&#92;alpha)&#92;).&lt;/p&gt;
+  &lt;p&gt;The Galois Connection gives us the fact that, for any list of measurable spaces &#92;(M_{&#92;beta_i}&#92;) on &#92;(&#92;beta&#92;) indexed by &#92;(i&#92;) in &#92;(&#92;iota&#92;), we have that the &#92;(&#92;text{comap}_f&#92;) of the indexed supremum of &#92;(M_{&#92;beta_i}&#92;) is the indexed supremum of the &#92;(&#92;text{comap}_f&#92;) of each measurable space (regardless of whether the index type is countable):&lt;/p&gt;
+&#92;[
+&#92;text{comap}_f &#92;left( &#92;sup_{i &#92;in &#92;iota} M_{&#92;beta_i} &#92;right) = &#92;sup_{i &#92;in &#92;iota} &#92;left( &#92;text{comap}_f (M_{&#92;beta_i}) &#92;right)
+&#92;]&lt;p&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; has even more to say about &lt;b&gt;trimmed outer measure&lt;/b&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Suppose we have a measurable space &#92;( M &#92;) on &#92;( &#92;alpha &#92;) and a partial set function &#92;( m_0 &#92;) defined on &#92;( M &#92;), satisfying the three properties of an &lt;b&gt;outer measure&lt;/b&gt; restricted to sets from &#92;( M &#92;). We can define the outer measure &lt;i&gt;induce&lt;/i&gt;&#92;( (m_0) &#92;) as &lt;i&gt;fromfunc&lt;/i&gt;(&lt;i&gt;extend&lt;/i&gt;&#92;( (m_0) &#92;)). Interestingly, with this function, we have the property:&lt;/p&gt;
+
+&#92;[
+&#92;forall s &#92;in &#92;text{set } &#92;alpha, &#92;text{induce}(m_0)(s) = &#92;inf_{t &#92;in &#92;text{set} &#92;alpha} s &#92;subseteq t &#92;land t &#92;in M &#92;Rightarrow m_0(t)
+&#92;]
+
+&lt;p&gt;In other words, the measurable sets retain their values from the partial function due to the monotonicity property, and each non-measurable set is assigned the infimum of the values of all its measurable supersets.&lt;/p&gt;
+  &lt;p&gt;&#92;([...]&#92;)&lt;/p&gt;
+  &lt;p&gt;As a matter of fact, there exists a measurable superset that exactly matches this infimum:&lt;/p&gt;
+&#92;[
+&#92;forall s &#92;in &#92;text{set } &#92;alpha, &#92;exists t &#92;in &#92;text{set } &#92;alpha, s &#92;subseteq t &#92;land t &#92;in &#92;mathcal{M} &#92;land &#92;text{induce}(m_0)(s) = m_0(t)
+&#92;]
+&lt;p&gt;The proof of this relies on constructing a list &#92;(f: &#92;mathbb{N} &#92;to &#92;text{set } &#92;alpha&#92;) of measurable sets that &quot;narrows down&quot; to &#92;(&#92;text{induce}(m_0)(s)&#92;) in the sense that:&lt;/p&gt;
+&#92;[
+&#92;forall i &#92;in &#92;mathbb{N}, m_0(f(i)) &lt; &#92;text{induce}(m_0)(s) + i - 1
+&#92;]
+&lt;p&gt;Now, given an arbitrary outer measure &#92;(m&#92;) and a measurable set &#92;(M&#92;), we can check whether &#92;(m&#92;) was constructed as above using the notion of a &quot;trimmed&quot; outer measure. Let &#92;(&#92;text{sub}_M(m)&#92;) be &#92;(m&#92;) restricted to the domain &#92;(M&#92;). Defining:&lt;/p&gt;
+&#92;[
+&#92;text{trim}_M(m) = &#92;text{induce}(&#92;text{sub}_M(m))
+&#92;]
+&lt;p&gt;We can now check whether &#92;(&#92;text{trim}_M(m) = m&#92;), i.e., whether &#92;(&#92;text{trim}_M&#92;) assigns the same values to non-measurable sets as &#92;(m&#92;) originally had.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Finally, &lt;em&gt;Vaishnav&lt;/em&gt; touches on Pi-types, which are a unique perspective on measure theory coming from type theory.&lt;/p&gt;
+
+&lt;p&gt;Here is a definition I like of Pi-types:&lt;/p&gt;
+
+&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+  &lt;p&gt;Given a dependent type &#92;(x : C &#92;vdash D(x)&#92;), the Pi-type &#92;(&#92;Pi x : C. D(x)&#92;) can be thought of as the set of all functions &#92;(f&#92;) from &#92;(C&#92;) to &#92;(&#92;prod_{x : C} D(x)&#92;) such that &#92;(f(x) &#92;in D(x)&#92;) for all &#92;(x &#92;in C&#92;). These functions are called dependent maps from &#92;(C&#92;) to &#92;(D&#92;). In set theory, we interpret simple types &#92;(C&#92;) as sets &#92;(C&#92;) and terms &#92;(x : C&#92;) as elements &#92;(x &#92;in C&#92;). Dependent types &#92;(D&#92;) over &#92;(C&#92;) are interpreted as families &#92;(D = (D(x))_{x &#92;in C}&#92;) of sets &#92;(D(x)&#92;).&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1905.00993.pdf&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+
+&lt;p&gt;Suppose we have an index of types &#92;(&#92;beta : &#92;iota &#92;rightarrow &#92;text{Type}&#92;) and a mapping &#92;(M&#92;) that assigns a measurable space to each type. We want to define a measurable space on the function space &#92;(&#92;prod_{i:&#92;iota} &#92;beta(i)&#92;) that corresponds to &#92;(M&#92;).&lt;/p&gt;
+
+&lt;p&gt;To accomplish this, we define a &quot;function evaluation&quot; function &#92;(eval(i)&#92;) that extracts the value at a specific index. Given a function &#92;(f : &#92;prod_{i:&#92;iota} &#92;beta(i)&#92;), &#92;(eval(i)(f)&#92;) gives us the value of &#92;(f&#92;) at index &#92;(i&#92;).&lt;/p&gt;
+}}
+&lt;p&gt;Next, we consider the preimage of a set &#92;(s&#92;) in type &#92;(&#92;beta(i)&#92;) under the function &#92;(eval(i)&#92;). This preimage consists of all functions whose value at index &#92;(i&#92;) lies in the set &#92;(s&#92;).&lt;/p&gt;
+
+&lt;p&gt;By applying the comap operation to &#92;(eval(i)&#92;) with respect to &#92;(M(i)&#92;), we obtain the measurable sets in &#92;(&#92;beta(i)&#92;) that correspond to these preimages. We repeat this process for all indices &#92;(i&#92;) and combine the resulting measurable spaces using the supremum operation. This gives us the definition of the &quot;pi measurable space&quot;:&lt;/p&gt;
+
+&lt;p&gt;&#92;(&#92;Pi&#92;text{-measurable-space}(M) = &#92;sup_{i:&#92;iota} &#92;left( &#92;text{comap}_{&#92;text{eval}(i)}(M(i)) &#92;right)&#92;).&lt;/p&gt;
+
+&lt;p&gt;This is not too important to measure-theoretic probability theory?&lt;/p&gt;
+
+&lt;h2 id=&quot;defining-a-measure&quot;&gt;defining a measure&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;We now have all the definitions we need to define an outer measure that corresponds to the concept of probability, allowing us to derive useful equalities based on a measurable space. For any &#92;( f : &#92;mathbb{N} &#92;to &#92;text{set } &#92;alpha &#92;), let &#92;( PD(f) &#92;) indicate that &#92;( f &#92;) is pairwise disjoint, meaning the sets that &#92;( f &#92;) maps to with any distinct pair of indices are disjoint. Given a measurable space &#92;( M &#92;), we define a &quot;measure&quot; on &#92;( M &#92;) as an outer measure &#92;( m &#92;) that additionally satisfies the properties of &lt;b&gt;disjoint measurable set countable union&lt;/b&gt; and trim invariance:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+&#92;forall f : &#92;mathbb{N} &#92;to &#92;text{set } &#92;alpha, (&#92;forall i : &#92;mathbb{N}, f(i) &#92;in M) &#92;land (PD(f)) &#92;Rightarrow &#92;] &#92;[&#92;quad m&#92;left(&#92;bigcup_{i=0}^&#92;infty f(i)&#92;right) = &#92;sum_{i=0}^{&#92;infty} m(f(i)),
+&#92;]
+&#92;[ &#92;text{trim}_M(m) = m&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;The disjoint measurable set countable union property ensures that this measure corresponds to the notion of probability, as we know it, where the measure of the union of any list of disjoint measurable sets can be expressed as the sum of their individual measures.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;As &lt;em&gt;Vaishnav&lt;/em&gt; explains, the final criterion for an outer measure to correspond to a notion of probability is that it assigns a measure of 1 to the entire event space. A measure on the event space &#92;(&#92;alpha&#92;) satisfying &#92;(&#92;mu(&#92;text{univ} : &#92;text{set } &#92;alpha) = 1&#92;) is referred to as a &quot;probability measure&quot;. In general, probability measures are a type of &quot;finite measure&quot; that satisfies &#92;(&#92;mu(&#92;text{univ}) &lt; &#92;infty&#92;).&lt;/p&gt;
+
+&lt;h2 id=&quot;measure-transformations&quot;&gt;measure transformations&lt;/h2&gt;
+
+&lt;p&gt;Measures themselves are a type of outer measure that satisfies additional criteria. To achieve this, we &quot;lift&quot; outer measure transformations to the context of measures.&lt;/p&gt;
+&lt;p&gt;Two specific transformations we focus on are &#92;(restrict(·)&#92;) and &#92;(map(·)&#92;), as defined earlier. However, directly applying these transformations to a measure may not always result in an outer measure that satisfies the criteria to be considered a measure. To address this, we need additional transformations that preserve the behavior of the original transformation on measurable sets and ensure that the resulting outer measure remains a measure.&lt;/p&gt;
+&lt;p&gt;This, again, comes down to varifying properties of &lt;b&gt;outer measure&lt;/b&gt; and properties of &lt;b&gt;transformations on measurable spaces&lt;/b&gt; already stated.&lt;/p&gt;
+&lt;p&gt;Recall, for &lt;b&gt;outer measure&lt;/b&gt;, we have the empty set property &#92;((1)&#92;), monotonicity property &#92;((2)&#92;), and countable union property &#92;((3)&#92;):&lt;/p&gt;
+&lt;p&gt;
+  &#92;[
+&#92;begin{align*}
+m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
+&#92;forall A, B : &#92;text{set } &#92;alpha, A &#92;subseteq B &amp; &#92;Rightarrow m(A) &#92;leq m(B), &#92;quad &amp; (2) &#92;&#92;
+&#92;forall f : &#92;mathbb{N} &#92;rightarrow &#92;text{set } &#92;alpha, m&#92;left(&#92;bigcup_{i=0}^&#92;infty f(i)&#92;right) &amp; &#92;leq &#92;sum_{i=0}^&#92;infty m(f(i)), &#92;quad &amp; (3)
+&#92;end{align*}
+&#92;]
+&lt;/p&gt;
+&lt;p&gt;Recall, for &lt;b&gt;transforming measurable spaces&lt;/b&gt; let &#92;(C : &#92;text{set} &#92; &#92;alpha &#92;rightarrow &#92;text{Prop}&#92;) be a predicate. To show that &#92;(C&#92;) holds for all sets in &#92;(&#92;text{generate}(S)&#92;), we can prove that it holds for &#92;(S&#92;) itself &#92;((1)&#92;), the empty set &#92;((2)&#92;), under complement &#92;((3)&#92;), and under countable union &#92;((4)&#92;).&lt;/p&gt;
+ &lt;p&gt;&#92;((1) &#92;quad &#92;forall s &#92;in S&#92;), &#92;(C(s) &#92;quad (1) &#92;) &lt;/p&gt;
+ &lt;p&gt;&#92;((2) &#92;quad C(&#92;varnothing) &#92;quad (2) &#92;) &lt;/p&gt;
+ &lt;p&gt;&#92;((3) &#92;quad &#92;forall s &#92;in &#92;text{generate}(S)&#92;), &#92;(C(s) &#92;Rightarrow C(s^c)&#92;)&lt;/p&gt;
+ &lt;p&gt;&#92;((4) &#92;quad &#92;forall f : &#92;mathbb{N} &#92;to &#92;text{set} &#92; &#92;alpha, &#92;quad &#92;left(&#92;forall i : &#92;mathbb{N}, &#92; f(i) &#92;in &#92;text{generate}(S) &#92;land C(f(i)&#92;right) &#92;Rightarrow C(&#92;bigcup_{i=0}^{&#92;infty} f(i))&#92;)&lt;/p&gt;
+&lt;p&gt;But, most importantly, we must have &lt;b&gt;disjoint measurable set countable union&lt;/b&gt;:&lt;/p&gt;
+&#92;[
+&#92;forall f : &#92;mathbb{N} &#92;to &#92;text{set } &#92;alpha, (&#92;forall i : &#92;mathbb{N}, f(i) &#92;in M) &#92;land (PD(f)) &#92;Rightarrow &#92;] &#92;[&#92;quad m&#92;left(&#92;bigcup_{i=0}^&#92;infty f(i)&#92;right) = &#92;sum_{i=0}^{&#92;infty} m(f(i)),
+&#92;]
+&lt;p&gt;And, the &lt;b&gt;Caratheodory Criterion&lt;/b&gt; is sufficient for to prove &lt;b&gt;disjoint measurable set countable union&lt;/b&gt;. &lt;blockquote&gt;Given a set function &#92;(f : &#92;text{set} &#92;alpha &#92;rightarrow &#92;mathbb{R}^+&#92;cup&#92;{&#92;infty&#92;}&#92;) and a set &#92;(s&#92;), &#92;(s&#92;) is referred to as &quot;Carathéodory&quot; (written as &#92;(&#92;text{cara } f(s)&#92;)) if
+  &#92;(&#92;forall t : &#92;text{set} &#92;alpha, f(t) = f(t &#92;cap s) + f(t &#92;setminus s)&#92;),
+  which means that the measure of any set &#92;(t&#92;) can be decomposed into the measure of its intersection with &#92;(s&#92;) and the measure of its difference with &#92;(s&#92;). 
+  
+  Now, consider an outer measure &#92;(m&#92;) and measurable space &#92;(M&#92;). It can be shown that the set of all Carathéodory sets forms a measurable space.&lt;/blockquote&gt;&lt;/p&gt;
+ &lt;p&gt;At this point, relies on higher levels of type-theoretic abstractions. The more elementary treatments thus far have been alright, with support from topology every now and then. Still, for those interested in a higher level type-theoretic persepctive, check out &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; subsections on &quot;Lifting an Outer Measure Transformation&quot;, or &quot;Restricting a Measure&quot;, or &quot;Mapping a Measure&quot;. These topics can also be treated with topology outside the scope of these notes.&lt;/p&gt;
+&lt;h2 id=&quot;probability-theory&quot;&gt;probability theory&lt;/h2&gt;
+  &lt;h3 id=&quot;independence&quot;&gt;independence&lt;/h3&gt;
+  &lt;p&gt;Given a measure &#92;(&#92;mu&#92;) on &#92;(&#92;alpha&#92;) and two events &#92;(a&#92;) and &#92;(b&#92;) from our event space, we define independence by requiring that the measure of their intersection is the product of their measures:&lt;/p&gt;
+  &#92;[
+  &#92;mu(a &#92;cap b) = &#92;mu(a) &#92;mu(b)
+  &#92;]
+  &lt;p&gt;However, we can extend this notion of independence to sets of events. We define independence between sets of events &#92;(A&#92;) and &#92;(B&#92;) under &#92;(&#92;mu&#92;) as follows:&lt;/p&gt;
+  &lt;p&gt;&#92;(A&#92;) and &#92;(B&#92;) are independent under &#92;(&#92;mu&#92;) if for any pair of events &#92;(a &#92;in A&#92;) and &#92;(b &#92;in B&#92;), the measure of their intersection is the product of their measures:&lt;/p&gt;
+  &#92;[
+  &#92;text{indep_sets}_&#92;mu(A, B) &#92;Leftrightarrow &#92;forall a &#92;in A, b &#92;in B, &#92;mu(a &#92;cap b) = &#92;mu(a) &#92;mu(b)
+  &#92;]
+  &lt;p&gt;This basically says that: two measurable spaces are independent with respect to their measures if their sets-of-events (which are, again, sets of sets) are independent with respect to the measures. This does not need math markup, sorry &lt;em&gt;Vaishnav&lt;/em&gt;.&lt;/p&gt;
+  &lt;p&gt;Given two sets &#92;(a,b : &#92;text{set } &#92;alpha&#92;), we define independence between them under &#92;(&#92;mu&#92;) as:&lt;/p&gt;
+&#92;[ &#92;text{indep_set}_&#92;mu(a,b) &#92;Leftrightarrow &#92;text{indep}_&#92;mu(&#92;text{generate}(&#92;{a&#92;}), &#92;text{generate}(&#92;{b&#92;})), &#92;]
+&lt;p&gt;which is the independence of their generated measurable spaces. Note that for any set &#92;(s : &#92;text{set } &#92;alpha&#92;), &#92;(&#92;text{generate}(&#92;{s&#92;}) = &#92;{0,&#92;emptyset,s,s^c,&#92;alpha&#92;}&#92;) exactly. It may be immediately obvious that this definition is equivalent to &#92;(&#92;mu(a &#92;cap b) = &#92;mu(a) &#92;mu(b)&#92;), but we will soon show that this fact arises from a more general result regarding independence on the measurable spaces generated by a pair of independent &quot;&#92;(π&#92;)-systems&quot;.&lt;/p&gt;
+
+&lt;p&gt;Now, that was &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; idea of definitions, so here are the &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; idea of properties.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A &quot;Dynkin system,&quot; also known as a &quot;&#92;(λ&#92;)-system,&quot; is a generalization of measurable spaces that enables an induction principles. We define a Dynkin system as a set of sets &#92;(M : &#92;text{set } (&#92;text{set } &#92;alpha)&#92;) with the properties of &#92;(1&#92;) empty set measurability, &#92;(2&#92;) complement closure, and &#92;(3&#92;) &lt;em&gt;disjoint&lt;/em&gt; countable union closure:&lt;/p&gt;
+&lt;ul style=&quot;overflow:auto;&quot;&gt;
+&lt;li&gt;&#92;(&#92;emptyset &#92;in M &#92;quad (1) &#92;)&lt;/li&gt;
+&lt;li&gt;&#92;(&#92;forall s : &#92;text{set } &#92;alpha, s &#92;in M &#92;Rightarrow s^c &#92;in M &#92;quad (2) &#92;)&lt;/li&gt;
+&lt;li&gt;&#92;(&#92;forall f : &#92;mathbb{N} &#92;rightarrow &#92;text{set } &#92;alpha, &#92;forall i : &#92;mathbb{N}, f(i) &#92;in M &#92;land &#92;text{PD}(f) &#92;Rightarrow &#92;bigcup_{i=0}^{&#92;infty} f(i) &#92;in M &#92;quad (3) &#92;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The disjointedness condition in &#92;(1&#92;) is the only difference from the definition of measurable spaces (see (2.7)).&lt;/p&gt;
+&lt;p&gt;Given any &#92;(S : &#92;text{set } (&#92;text{set } &#92;alpha)&#92;), we can consider its Dynkin system &quot;closure,&quot; which is the smallest Dynkin system including every set in &#92;(S&#92;). We define this closure similarly to how we did for measurable spaces with &#92;(&#92;text{generate}(S)&#92;), modifying the last construction rule to union only over disjoint sets. We denote this generator as &#92;(&#92;text{generate}_D(S)&#92;).&lt;/p&gt;
+&lt;p&gt;Now, suppose we have some predicate &#92;(C : &#92;text{set } &#92;alpha &#92;rightarrow &#92;text{Prop}&#92;). If we want to show that &#92;(C&#92;) holds for all sets in &#92;(&#92;text{generate}_D(S)&#92;), we have to prove that &#92;(1&#92;) it holds for &#92;(S&#92;) itself, &#92;(2&#92;) for the empty set, &#92;(3&#92;) under complement, and &#92;(4&#92;) under &lt;em&gt;disjoint&lt;/em&gt; countable union:&lt;/p&gt;
+&lt;ul style=&quot;overflow:auto;&quot;&gt;
+&lt;li&gt;&#92;(&#92;forall s &#92;in S, C(s)&#92;quad (1) &#92;)&lt;/li&gt;
+&lt;li&gt;&#92;(C(&#92;emptyset) &#92;quad (2) &#92;)&lt;/li&gt;
+&lt;li&gt;&#92;(&#92;forall s &#92;in &#92;text{generate}_D(S), C(s) &#92;Rightarrow C(s^c) &#92;quad (3) &#92;)&lt;/li&gt;
+&lt;li&gt;&#92;(&#92;forall f : &#92;mathbb{N} &#92;rightarrow &#92;text{set } &#92;alpha, &#92;left( &#92;forall i : &#92;mathbb{N}, f(i) &#92;in &#92;text{generate}_D(S) &#92;land C(f(i)) &#92;right) &#92;land &#92;text{PD}(f) &#92;Rightarrow C &#92;left( &#92;bigcup_{i=0}^{&#92;infty} f(i) &#92;right) &#92;quad (4) &#92;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;As &lt;em&gt;Vaishnav&lt;/em&gt; explains that Dynkin systems have an important property: closure under intersection implies measurability. The proof relies on the ability to derive difference closure from intersection closure, enabling the decomposition of sets into a disjoint list with the same union. Additionally, the set &#92;(&#92;{t &#92;mid t &#92;cap s &#92;in D&#92;}&#92;), where &#92;(D&#92;) is a Dynkin system and &#92;(s &#92;in D&#92;), is also a Dynkin system.&lt;/p&gt;
+&lt;p&gt;To determine the applicability of the extra disjointedness condition, we introduce &#92;(&#92;pi&#92;)-systems. These systems establish the equivalence between generated measurable spaces and generated Dynkin systems, allowing us to leverage &#92;(&#92;pi&#92;)-system properties in specific situations.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; then describes Dykin&#39;s &lt;b&gt;&#92;(&#92;pi&#92;)-&#92;(&#92;lambda&#92;) theorem&lt;/b&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;We define the &quot;&#92;(π&#92;)-system&quot; criterion for a set &#92;(S : &#92;text{set } (&#92;text{set } &#92;alpha)&#92;) as:&lt;/p&gt;
+&#92;[PI(S) &#92;Leftrightarrow &#92;forall s, t &#92;in S, s &#92;cap t &#92;neq &#92;varnothing &#92;Rightarrow s &#92;cap t &#92;in S,&#92;]
+&lt;p&gt;which simply requires that &#92;(S&#92;) is closed under non-empty intersection. The inclusion of the non-empty requirement allows for greater generality, although it is not necessary for our results. It is immediately evident that singleton sets satisfy the &#92;(π&#92;)-system criterion:&lt;/p&gt;
+&#92;[&#92;forall s : &#92;text{set } &#92;alpha, PI(&#92;{s&#92;})&#92;]
+&lt;p&gt;Remarkably, if &#92;(PI(S)&#92;), then the generated Dynkin system, &#92;(&#92;text{generate}_D(S)&#92;), is closed under intersection, making it a measurable space. Furthermore, we have &#92;(&#92;text{generate}_D(S) = &#92;text{generate}(S)&#92;), indicating that the generated measurable space and Dynkin systems are identical. This result is known as Dynkin&#39;s &#92;(π&#92;)-&#92;(λ&#92;) theorem.&lt;/p&gt;
+&lt;p&gt;We now have the criterion needed for a new induction principle on generated measurable spaces: If they are generated by a &#92;(π&#92;)-system, we can replace &quot;countable union for generating measuable spaces&quot; (recall:) 
+  &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;forall f : &#92;mathbb{N} &#92;rightarrow &#92;text{set } &#92;alpha, &#92;left( &#92;forall i : &#92;mathbb{N}, f(i) &#92;in &#92;text{generate}_D(S) &#92;land C(f(i)) &#92;right) &#92;land &#92;text{PD}(f) &#92;Rightarrow C &#92;left( &#92;bigcup_{i=0}^{&#92;infty} f(i) &#92;right)&#92;]&lt;/p&gt;&lt;p&gt; 
+  with &quot;countable union for generating &#92;(π&#92;)-systems&quot;:&lt;/p&gt;
+  &lt;p&gt;&lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;
+    &#92;[(&#92;forall i : &#92;mathbb{N}, &#92; f(i) &#92;in generate(S) &#92;land C(f(i))) &#92;land PD(f) &#92;Rightarrow C&#92;left(&#92;bigcup_{i=0}^&#92;infty f(i)&#92;right),&#92;]
+  &lt;/p&gt;
+    &lt;p&gt;where the new hypothesis, &#92;(PD(f)&#92;), assists in the proof.&lt;/p&gt;
+    &lt;p&gt;Now, &lt;em&gt;Vaishnav&lt;/em&gt; offer&#39;s an axiomatic defintiion of independence:&lt;/p&gt;
+    &lt;p&gt;With the help of &quot;countable union for generating &#92;(π&#92;)-systems&quot; we can prove that,
+      &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;
+      &#92;[
+      &#92;forall S, T: &#92;operatorname{set}(&#92;operatorname{set} &#92;alpha), &#92;operatorname{PI}(S) &#92;wedge &#92;operatorname{PI}(T) &#92;Longrightarrow{&#92;operatorname{indep} &#92;_&#92;operatorname{set}_&#92;mu}_&#92;mu(S, T) &#92;Longleftrightarrow &#92;operatorname{indep}_&#92;mu(&#92;operatorname{generate}(S), &#92;operatorname{generate}(T))
+      &#92;]
+      &lt;/p&gt;&lt;p&gt;
+      in English, the independence of &#92;(&#92;pi&#92;)-systems implies the independence of the measurable spaces they generate. We can now simplify our criterion for independence of sets: from (&quot;the independence of &#92;(&#92;pi&#92;)-systems implies the independence of the measurable spaces they generate&quot;), and the fact that singletons are &#92;(&#92;pi&#92;)-systems, we have &lt;/p&gt;
+      &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;forall s, t : &#92;text{set } &#92;alpha, &#92;text{indep_set}_&#92;mu (s, t) &#92;Leftrightarrow &#92;text{indep_sets}_&#92;mu (&#92;{s&#92;}, &#92;{t&#92;}) &#92;Leftrightarrow &#92;mu(s &#92;cap t) = &#92;mu(s) &#92;mu(t)&#92;]&lt;/p&gt;
+      &lt;p&gt;So, we now have license to use the &quot;bundled&quot; &#92;(&#92;operatorname{indep}_{-} &#92;operatorname{set}_&#92;mu(s, t)&#92;) in place of our classical definition of independence (again, the equivalence can easily be seen by cases, but it&#39;s good to know the general result).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2&gt;The End&lt;/h2&gt;
+
+&lt;p&gt;At this point, I do not find the remaining formalities conducive to my personal study of probabiity theory, although they might interest me more if I was more familiar with Lean.&lt;/p&gt;
+&lt;p&gt;Check out the rest of &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; paper for:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;conditional probability&lt;/li&gt;
+  &lt;li&gt;random variables
+    &lt;ul&gt;
+      &lt;li&gt;the joint distribution&lt;/li&gt;
+      &lt;li&gt;restricting a pi&lt;/li&gt;
+      &lt;li&gt;the marginal distribution&lt;/li&gt;
+      &lt;li&gt;marginalization&lt;/li&gt;
+      &lt;li&gt;independence on random variables&lt;/li&gt;
+      &lt;li&gt;conditional independence on random variables&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fintro%20prob%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=notes%20-%20probability%20%26%20types&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
