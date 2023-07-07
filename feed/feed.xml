@@ -2695,8 +2695,6 @@
   &lt;li&gt;6) &lt;a href=&quot;#probability-theory&quot;&gt;probability theory&lt;/a&gt;
     &lt;ul&gt;
       &lt;li&gt;6.1) &lt;a href=&quot;#independence&quot;&gt;independence&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;6.2) &lt;a href=&quot;#conditional-probability&quot;&gt;conditional probability&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;6.3) &lt;a href=&quot;#random-variables&quot;&gt;random variables&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
     
   &lt;/li&gt;
@@ -3110,7 +3108,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 &lt;h2&gt;The End&lt;/h2&gt;
 
 &lt;p&gt;At this point, I do not find the remaining formalities conducive to my personal study of probabiity theory, although they might interest me more if I was more familiar with Lean.&lt;/p&gt;
-&lt;p&gt;Check out the rest of &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; paper for:&lt;/p&gt;
+&lt;p&gt;Check out the rest of &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; paper for (again, you might find it &lt;a href=&quot;https://escholarship.org/uc/item/8hb1w6js&quot;&gt;here&lt;/a&gt;, ceteris paribus):&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;conditional probability&lt;/li&gt;
