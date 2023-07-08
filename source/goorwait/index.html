@@ -1,4 +1,9 @@
-<!DOCTYPE html><title>The choice is yours: to go or wait</title><style>#container {
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The choice is yours: to go or wait</title>
+  <style>
+    #container {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -37,7 +42,22 @@
       font-weight: bold;
       color: black;
       text-align: center;
-    }</style><style>:root{--primary: #329869;--primary-dark: #18453B;--background:   #E7F4EC;--color: #05120E;--main-width: calc(100vw - 3em)}@media (min-width:37.5em){:root{--main-width: calc(37.5em - 3em)}}html{font-family:'Inter UI',courier,monospace;font-size:1.3em}@supports (font-variation-settings:normal){html{font-family:'Inter UI var',courier,monospace}}@font-face{font-display:optional;font-family:"Inter UI";font-weight:400 900;font-style:oblique 0deg 10deg;src:url(/fonts/Inter-3.19.var.woff2) format("woff2")}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0;font-size:1em;font-size:1rem;line-height:1.6}a{background-color:transparent;color:#f9c412;text-decoration:none;color:var(--primary)}@media (min-width:600px){body{font-size:1.1rem;line-height:1.6}}@media (min-width:1200px){body{font-size:1.2rem;line-height:1.6}}a:hover{text-decoration:underline}@media (max-width:767px){x:-moz-any-link{display:table-cell}}*{border:0;box-sizing:border-box}body{font-family:var(--font-family);background:var(--background);color:var(--color)}</style><div id=container><div id=content><div id=square></div><div id=circle></div><div id=message>The choice is yours: to <a href=./rabbithole/index.html>go</a> or wait.</div></div></div><script>document.addEventListener('DOMContentLoaded', function () {
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="content">
+      <div id="square"></div>
+      <div id="circle"></div>
+      <div id="message">
+        The choice is yours: to <a href="./rabbithole/index.html">go</a> or wait.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
       const circle = document.getElementById('circle');
       const square = document.getElementById('square');
       const message = document.getElementById('message');
@@ -102,4 +122,7 @@
 
       document.addEventListener('keydown', moveCircle);
       document.addEventListener('touchmove', moveCircle, { passive: false });
-    });</script>
+    });
+  </script>
+</body>
+</html>

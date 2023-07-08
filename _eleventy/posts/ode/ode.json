@@ -1,0 +1,10 @@
+{
+    "title": "ordinary differential equations",
+    "description": "abstract algebra print outs",
+    "date": "2023-07-04",
+    "tags": [
+      "math"
+    ],
+    "layout": "layouts/post.njk"
+  }
+  

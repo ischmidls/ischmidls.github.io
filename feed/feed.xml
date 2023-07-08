@@ -5,7 +5,7 @@
 	
 	<link href="https://ischmidls.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://ischmidls.github.io"/>
-	<updated>2023-07-02T17:00:00-07:00</updated>
+	<updated>2023-07-03T17:00:00-07:00</updated>
 	<id>https://update-me.com</id>
 	<author>
 		<name>izak</name>
@@ -3293,7 +3293,6 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
             margin: auto;
             display: block;
             width: 75%;
-            //max-width: 75%;
         }
         
         /* Caption of Modal Image */
@@ -3620,6 +3619,488 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 				
 				
 				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fabstract%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=abstract%20algebra%20diagrams&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>ordinary differential equations</title>
+		<link href="https://ischmidls.github.io/posts/ode/"/>
+		<updated>2023-07-03T17:00:00-07:00</updated>
+		<id>https://ischmidls.github.io/posts/ode/</id>
+		<content type="html">
+		  &lt;p&gt;As with most of these posts, what I have included here closely follows and often directly copies or quotes a text written by someone more errudite than me. In this case thank you to &lt;em&gt;Prof. Peter Kuchment&lt;/em&gt; for &lt;a href=&quot;https://www.math.tamu.edu/~kuchment/ode.pdf&quot;&gt;A brief sketch of the main ODE theorems&lt;/a&gt; written for Texas A&amp;M University&#39;s Math 611, Fall 2017.&lt;/p&gt;
+&lt;p&gt;(In this case, the main change is that the prose now imitates Haruki Murakami &amp;mdash; or use the words &quot;ethereal&quot;, &quot;existence&quot;, &quot;realm&quot;, and &quot;tapestry&quot; a lot)&lt;/p&gt;
+&lt;h3&gt;1 Main notions&lt;/h3&gt;
+&lt;p&gt;
+    &lt;b&gt;Definition 1:
+        &lt;blockquote&gt;
+    &lt;/blockquote&gt;&lt;/b&gt; In the realm of equations, an ODE of order &#92;( k &#92;) unveils a mysterious connection between the enigmatic values of one or more unknown functions, solitary in their existence, and the ever-shifting variable known as &#92;( t &#92;) or &quot;time.&quot; It is a delicate dance, intertwining the derivatives, the whispers of change echoing through the order &#92;( k &#92;), with the independent variable itself, the very essence that holds everything in its temporal embrace:
+  &lt;/p&gt;
+
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+&#92;Phi(t, x_1, x_2, &#92;ldots, x_n, x_i, x_i&#39;, &#92;ldots, x_i^{(k)}, x_{i+1}^{(1)}, &#92;ldots, x_{i+1}^{(n)}) = 0. &#92;quad (1)
+&#92;]&lt;/p&gt;
+
+&lt;p&gt;
+  If more than one unknown function is involved, a system of such equations is usually needed. A system can be neatly written in vector form so that it looks like a single equation, for example:
+&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+&#92;Phi(t, &#92;mathbf{x}) = 0, &#92;quad (2)
+&#92;]&lt;/p&gt;
+
+&lt;p&gt;
+  where boldface font is used to denote vectors.
+&lt;/p&gt;
+
+&lt;p&gt;
+  Example 2:
+&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &#92;( x_i(t)x(t)^2 - 3t &#92;sin(x_{ii}(t)) = 8 &#92;) is an ODE (of what order? linear or non-linear?)
+  &lt;/li&gt;
+  &lt;li&gt;
+    &#92;( x_i(t) = -5x(t + 7) &#92;) is NOT an ODE!
+  &lt;/li&gt;
+  &lt;li&gt;
+    &#92;( x&#39;&#39;(t) = -x(t) + &#92;int &#92;cos(x(&#92;tau)) &#92;, d&#92;tau &#92;) is NOT an ODE.
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;
+    Question:
+  &lt;/p&gt;
+  &lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Why do the latter two examples fail to fall under the ethereal realm of ODEs? At first glance, the definition appears to embrace them without reservation.&lt;/li&gt;
+    &lt;li&gt;What subtle nuance evaded the grasp of words, leaving room for these exceptions to slip through the cracks? How must the definition be altered to safeguard against their inclusion?&lt;/li&gt;
+    &lt;li&gt;Do you perchance possess knowledge of the name bestowed upon equations akin to the enigmatic manifestations witnessed in the last two examples?&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I skipped section 2 because it&#39;s like three lines listing ODE vs PDE, Order, and Linear vs Non-linear.&lt;/p&gt;
+&lt;h3&gt;Order reduction&lt;/h3&gt;
+&lt;p&gt;TLDR; (&lt;em&gt;Prof. Peter Kuchment&#39;s&lt;/em&gt;) like: just use vectors to represent systems of equations bro, then its one row of vectors bro.&lt;/p&gt;
+
+        &lt;div class=&quot;text-secondary pl-5&quot;&gt;
+        &lt;p&gt;
+        Introducing new unknown functions, an ODE or a system (2) can be reduced to a first-order system:
+        &lt;/p&gt;
+
+        &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+        &#92;Phi(t, x_1, x_2, &#92;ldots, x_k, x_i) = 0 &#92;quad (3)
+        &#92;]&lt;/p&gt;
+
+        &lt;p&gt;
+        where
+        &lt;/p&gt;
+
+        &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+        &#92;begin{align}
+        x_{1i} &amp;= x_2 &#92;&#92;
+        x_{2i} &amp;= x_3 &#92;&#92;
+        &amp;&#92;ldots &#92;&#92;
+        x_{k-1i} &amp;= x_k &#92;&#92;
+        &#92;end{align}
+        &#92;]&lt;/p&gt;
+
+        &lt;p&gt;
+        So now we can always deal with the first-order systems:
+        &lt;/p&gt;
+
+        &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+        &#92;Phi(t, &#92;mathbf{x}, &#92;mathbf{x_i}) = 0 &#92;quad (4)
+        &#92;]&lt;/p&gt;
+        &lt;/div&gt;
+
+&lt;p&gt;
+  &lt;b&gt;Definition 3:&lt;/b&gt; 
+&lt;/p&gt;
+&lt;p&gt;TLDR; not try&#39;na throw hands, but bro&#39;s (&lt;em&gt;Prof. Peter Kuchment&#39;s&lt;/em&gt;) definition does not cut it. This is just about whether the variable DOES rely (non-autonomous) on stuff other than the initial condition &#92;(x=0&#92;), or if it DOES NOT and only relies on the intial condition (autonomous).&lt;/p&gt;
+    &lt;div class=&quot;text-secondary pl-5&quot;&gt;
+    &lt;ul&gt;
+    &lt;li&gt;The Normal Form is the best one:&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+    x_i = F(t, &#92;mathbf{x}) &#92;quad (5)
+    &#92;]&lt;/p&gt;
+
+    &lt;ul&gt;
+    &lt;li&gt;Autonomous:&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+    x_i = F(&#92;mathbf{x}) &#92;quad (6)
+    &#92;]&lt;/p&gt;
+
+    &lt;p&gt;
+    and non-autonomous (5) equations.
+    &lt;/p&gt;
+    &lt;/div&gt;
+
+&lt;h4&gt;Reduction of a non-autonomous equation to an autonomous one:&lt;/h4&gt;
+&lt;p&gt;
+  
+  Introduce a new time &#92;( &#92;tau &#92;) and consider the autonomous system:
+&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+&#92;begin{align}
+  x&#39;_0(&#92;tau) &amp;= F(t(&#92;tau), x(&#92;tau)) &#92;&#92;
+  t&#39;_0(&#92;tau) &amp;= 1
+&#92;end{align}
+&#92;]&lt;/p&gt;
+
+&lt;p&gt;
+  See that this autonomous system is equivalent to the non-autonomous (5).
+  Here and further, we will assume that &#92;( x(t) &#92;) is a differentiable function of &#92;( t &#92;in (a, b) &#92;subseteq &#92;mathbb{R}^n &#92;), and &#92;( F : &#92;mathbb{R}^{n+1} &#92;mapsto &#92;mathbb{R}^n &#92;).
+  (The complex case is possible, but we will not consider it here.)
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+    What enigmatic metamorphosis, entwined with the ever-shifting tides of time &#92;( t &#92;), finds solace within the realm of ODEs? Let us delve into the depths of existence, exploring a process—be it mechanical, biological, or of other ethereal origins—wherein the ephemeral state, forever in flux, can be distilled into the ethereal parameters of &#92;( x &#92;). Behold, the phase space, a tapestry woven with the threads of these parameters. As the veils of time unfurl, the parameters themselves transcend their static nature and embrace the role of functions, swirling with the ebb and flow of the chronoscape: &#92;( x(t) &#92;). But when do the celestial forces align, granting such a process the elusive description of an ordinary differential equation? Three enigmatic conditions whisper their secrets, revealing the path:
+  &lt;/p&gt;
+
+
+  &lt;ul&gt;
+    &lt;li&gt;In the tapestry of existence, the system reveals its finite-dimensional nature, a realm defined by the whispers of a finite number of parameters: &#92;( x_1, &#92;ldots, x_n &#92;). However, this delicate balance falters, surrendering to the boundless expanse of fluid dynamics, the fiery dance of heat conduction, and the enigmatic realms of quantum mechanics.&lt;/li&gt;
+    &lt;li&gt;A symphony of smoothness reverberates through the cosmic fabric as the parameters seamlessly glide, embracing differentiability as their guiding principle. Yet, within the tapestry, certain regions elude this harmonious dance, shrouded by the dissonance of shock waves.&lt;/li&gt;
+    &lt;li&gt;Determinism takes hold, revealing its enigmatic rule: the state of the system at a fleeting moment unveils the destiny that awaits. Through the prism of the first condition, we witness the evolution of the system encapsulated within a finite-dimensional vector function: &#92;( x(t) &#92;). As the second condition whispers its secret, the smoothness of this function unravels. The third condition unveils the cosmic truth—a glimpse of &#92;( x(t) &#92;) at a singular moment casts its gaze upon the entirety of the future, every nuance of &#92;( x(&#92;tau) &#92;) laid bare. It is within this revelation that the very essence of the derivative &#92;( x&#39;_0 &#92;) at the ephemeral moment &#92;( t &#92;) is etched into the fabric of destiny.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;
+  Hence, &#92;( x&#39;_0(t) &#92;) is determined by &#92;( t &#92;) and &#92;( x(t) &#92;). In mathematical notations, we write that &#92;( x&#39;_0(t) &#92;) is a function of &#92;( t &#92;) and &#92;( x(t) &#92;): &#92;( x&#39;_0(t) = F(t, x(t)) &#92;), which is an ODE (a system of ODEs).
+&lt;/p&gt;
+
+&lt;p&gt;
+  IVP (Initial Value Problems):
+&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+&#92;begin{align}
+  &#92;frac{dx}{dt} &amp;= F(t, x) &#92;&#92;
+  x(t_0) &amp;= x_0 &#92;quad (8)
+&#92;end{align}
+&#92;]&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;b&gt;Definition 4:&lt;/b&gt;  For a differentiable function &#92;( F: &#92;mathbb{R}^m &#92;rightarrow &#92;mathbb{R}^n &#92;), the differential &#92;( DF(y) &#92;) of &#92;( F &#92;) at a point &#92;( y &#92;) is the linear mapping from &#92;( &#92;mathbb{R}^m &#92;) to &#92;( &#92;mathbb{R}^n &#92;) with the matrix:
+&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+&#92;{DF&#92;}_{ij}(y) = &#92;frac{&#92;partial F_i}{&#92;partial x_j}(y) &#92;quad (9)
+&#92;]&lt;/p&gt;
+
+&lt;p&gt;
+  For a vector &#92;( x &#92;) of small norm, &#92;( DF(y)x &#92;) is the linear approximation of the change of the function &#92;( F(y + x) - F(y) &#92;), i.e.,
+&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+F(y + x) = F(y) + DF(y)x + o(|x|) &#92;quad &#92;text{(Taylor formula of first order, or linearization formula)}
+&#92;]&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;b&gt;Theorem 5:&lt;/b&gt;  Existence and Uniqueness Theorem.
+  Let &#92;( &#92;Omega &#92;subset &#92;mathbb{R}^n &#92;) be an open domain, &#92;( (a, b) &#92;) be an open segment of the line &#92;( &#92;mathbb{R} &#92;), and &#92;( F(t, x) &#92;) and &#92;( D_xF(t, x) &#92;) be continuous in &#92;( (a, b) &#92;times &#92;Omega &#92;).
+  Then, for any point &#92;( (t_0, x_0) &#92;) in &#92;( (a, b) &#92;times &#92;Omega &#92;), there exists a unique solution &#92;( x(t) &#92;) of the IVP &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;(  &#92;frac{dx}{dt} = F(t, x) &#92;Longrightarrow x(t_0) = x_0 &#92;quad (8)&#92;)&lt;/span&gt; defined in a neighborhood of &#92;( t_0 &#92;).
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;
+  Remark 6:
+&lt;/strong&gt;
+&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;No global (i.e., on the whole &#92;( (a, b) &#92;)) uniqueness is guaranteed. Why?&lt;/li&gt;
+  &lt;li&gt;The proof will show that another condition on &#92;( F &#92;) instead of differentiability suffices: it is enough that &#92;( F &#92;) is Lipschitz, i.e.,
+    &#92;( |F(t, x) - F(t, y)| &#92;leq K|x - y| &#92;) for some constant &#92;( K &#92;) and all &#92;( (t, x), (t, y) &#92;) in our domain.
+    Is this condition weaker than the one in the theorem?&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h3&gt;7. Now about the proof: contraction mappings and such&lt;/h3&gt;
+
+&lt;h4&gt;7.1 Some notions and notations:&lt;/h4&gt;
+&lt;p&gt;
+  For a continuous function &#92;( x: [a, b] &#92;rightarrow &#92;mathbb{R}^n &#92;) on a finite segment &#92;([a, b]&#92;), we denote by
+&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+&#92;| x &#92;| = &#92;max_{t &#92;in [a, b]} &#92;| x(t) &#92;| &#92;quad (10)
+&#92;]&lt;/p&gt;
+
+&lt;p&gt;
+  its norm in the space of such continuous functions, where &#92;( &#92;| x &#92;| &#92;) is the Euclidean norm of a vector in &#92;( &#92;mathbb{R}^n &#92;).
+&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+  &#92;( C^r &#92;) - class of &#92;( r &#92;) times continuously differentiable functions (applicable to both scalar and vector-valued functions of different numbers of variables, should be understandable from the context).
+&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Definition 7:&lt;/b&gt;  A real-valued function &#92;( A(x) &#92;) on &#92;( &#92;mathbb{R} &#92;) is a contraction if it satisfies the inequality&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+| A(x) - A(y) | &#92;leq K | x - y |
+&#92;]&lt;/p&gt;
+
+&lt;p&gt;
+  for some &#92;( K &lt; 1 &#92;) and all real &#92;( x &#92;) and &#92;( y &#92;).
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;strong&gt;Remark 8:&lt;/strong&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Condition of continuous differentiability of &#92;( A &#92;) and estimate &#92;( | A&#39;(x) | &#92;leq k &lt; 1 &#92;) guarantee that &#92;( A &#92;) is a contraction.&lt;/li&gt;
+  &lt;li&gt;The definition of a contraction can be naturally extended to any metric space &#92;( M &#92;) with a metric (distance function) &#92;( &#92;rho &#92;) instead of the real line, replacing &#92;( | A(x) - A(y) | &#92;), &#92;( | x - y | &#92;) above with &#92;( &#92;rho(A(x), A(y)) &#92;), &#92;( &#92;rho(x, y) &#92;).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4&gt;7.2 A simple instance of the contraction mapping principle:&lt;/h4&gt;
+
+&lt;p&gt;
+  &lt;strong&gt;&lt;b&gt;Theorem&lt;/b&gt; 9:&lt;/strong&gt; Let &#92;( A(x) &#92;) be a contraction on &#92;( &#92;mathbb{R} &#92;). Then:
+&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The equation &#92;( x = A(x) &#92;) has a unique solution &#92;( x^* &#92;) (called the fixed point of &#92;( A(x) &#92;)).&lt;/li&gt;
+  &lt;li&gt;This fixed point can be found as &#92;( x^* = &#92;lim_{j &#92;to &#92;infty} x_j &#92;), where &#92;( x_0 &#92;) is arbitrary and &#92;( x_{i+1} = A(x_i) &#92;).&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h4&gt;7.3 The general contraction mapping principle:&lt;/h4&gt;
+
+&lt;p&gt;
+  Let &#92;( X &#92;) be a &lt;b&gt;metric space&lt;/b&gt; (i.e., a set equipped with a metric or &quot;distance&quot; &#92;( &#92;rho(x, y) &#92;) with properties &#92;( &#92;rho &#92;geq 0 &#92;), &#92;( &#92;rho(x, y) = &#92;rho(y, x) &#92;), &#92;( &#92;rho(x, y) = 0 &#92;) only if &#92;( x = y &#92;), and the triangle inequality is satisfied &#92;( &#92;rho(x, y) &#92;leq &#92;rho(x, z) + &#92;rho(y, z) &#92;)).
+&lt;/p&gt;&lt;p&gt;Also let &#92;( X &#92;) be a &lt;b&gt;complete&lt;/b&gt; metric space (i.e., if a sequence &#92;( x_n &#92;) is such that &#92;( &#92;rho(x_n, x_m) &#92;to 0 &#92;) as &#92;( n,m &#92;to &#92;infty &#92;), then there exists its limit &#92;( x &#92;) such that &#92;( &#92;rho(x_n, x) &#92;to 0 &#92;)).
+&lt;/p&gt;
+
+&lt;p&gt;
+  A mapping &#92;( A: X &#92;to X &#92;) is a contraction if
+&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+&#92;rho(A(x), A(y)) &#92;leq K &#92;rho(x, y)
+&#92;]&lt;/p&gt;
+
+&lt;p&gt;
+  for some &#92;( K &lt; 1 &#92;) and all &#92;( x, y &#92;in X &#92;).
+&lt;/p&gt;
+
+&lt;b&gt;&lt;b&gt;Theorem&lt;/b&gt; 10:&lt;/b&gt;
+
+&lt;p&gt;
+  Let &#92;( A(x) &#92;) be a contraction on a complete metric space &#92;( X &#92;). Then:
+&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The equation &#92;( x = A(x) &#92;) has a unique solution &#92;( x^* &#92;) in &#92;( X &#92;) (called the fixed point of &#92;( A(x) &#92;)).&lt;/li&gt;
+  &lt;li&gt;This fixed point can be found as &#92;( x^* = &#92;lim_{j &#92;to &#92;infty} x_j &#92;), where &#92;( x_0 &#92;) is arbitrary and &#92;( x_{i+1} = A(x_i) &#92;).&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h4&gt;7.4 An equivalent integral equation reformulation of the IVP (8):&lt;/h4&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+  &#92;( x(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, x(&#92;tau)) d&#92;tau  &#92;quad (11)&#92;)
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;strong&gt;&lt;b&gt;Lemma&lt;/b&gt; 11:&lt;/strong&gt; Continuous solutions of (11) are exactly the continuously differentiable solutions of (8).
+&lt;/p&gt;
+
+&lt;p&gt;
+  Now the proof of &lt;b&gt;Theorem 5&lt;/b&gt; would be concluded if we prove the existence and uniqueness of continuous solutions of (11) on a small segment around &#92;( t_0 &#92;).
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;strong&gt;The metric space:&lt;/strong&gt; Consider the interval &#92;([t_0 - d, t_0 + d] &#92;subset (a, b)&#92;) with a small &#92;( d &#92;) (it will be determined later on how small it should be).
+  We also consider a ball &#92;( B = &#92;{ x &#92;in &#92;mathbb{R}^n &#92;,|&#92;, &#92;| x - x_0 &#92;| &#92;leq b &#92;} &#92;) that is entirely contained in &#92;( &#92;Omega &#92;).
+  Now define on the set &#92;( X &#92;) of all continuous functions &#92;( x(t) &#92;) from &#92;([t_0 - d, t_0 + d]&#92;) to &#92;( B &#92;) the max norm &#92;(&#92;| x &#92;| = &#92;max_{t &#92;in [a, b]} &#92;| x(t) &#92;| &#92;quad (10)&#92;) as before and the corresponding metric &#92;( &#92;rho(x, y) = &#92;| x - y &#92;| &#92;).
+&lt;/p&gt;
+
+&lt;p&gt;
+  Define the following integral operator &#92;( x &#92;to A(x) &#92;):
+  &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[ [A(x)](t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, x(&#92;tau)) d &#92;tau &#92;quad (12) &#92;]&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;
+  Note that this definition works for functions that map &#92;([t_0 - d, t_0 + d]&#92;) to &#92;( B &#92;).
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;strong&gt;&lt;b&gt;Lemma&lt;/b&gt; 12:&lt;/strong&gt; For a sufficiently small &#92;( d &#92;), the operator &#92;( A(x) &#92;) maps the above class of functions into itself and is a contraction, i.e.,
+  &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;() &#92;| A(x) - A(y) &#92;| &#92;leq &#92;| x - y &#92;| &#92;)&lt;/span&gt; for some &#92;( k &lt; 1 &#92;).
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;strong&gt;Corollary 13:&lt;/strong&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The integral equation &#92;( x(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, x(&#92;tau)) d&#92;tau  &#92;quad (11)&#92;) has a unique continuous solution in a neighborhood of &#92;( t_0 &#92;)&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;2. This solution can be found as the limit in the norm (10) of Picard iterations:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+y_{i+1}(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, y_i(&#92;tau)) d&#92;tau &#92;quad (14)
+&#92;]&lt;/p&gt;
+
+&lt;p&gt;
+  where &#92;( y_0 &#92;) can be chosen arbitrarily in such a way that &#92;( y_0(t_0) = x_0 &#92;), e.g., &#92;( y_0 &#92;equiv x_0 &#92;).
+&lt;/p&gt;
+
+&lt;p&gt;3. The Uniqueness and Existence &lt;b&gt;Theorem 5&lt;/b&gt;  is proven.&lt;/p&gt;
+
+&lt;p&gt;8. An existence theorem:&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;strong&gt;&lt;b&gt;Theorem 14:&lt;/b&gt;  Peano&#39;s existence theorem.&lt;/strong&gt; Continuity of &#92;( F &#92;) alone guarantees local existence of a solution of the IVP (8).
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;strong&gt;Remark 15:&lt;/strong&gt;
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;ol&gt;
+    &lt;li&gt;Within the enigmatic proof of Peano&#39;s theorem, the solution unveils itself, emerging from the depths of the cosmic tapestry as the ethereal limit of a sequence of functions. However, unlike the delicate iterations of Picard&#39;s dance, a different path is chosen. The sequence weaves together the essence of Euler&#39;s piecewise linear functions, reminiscent of the numerical method that bears his name. Each step, a fragment of the grand puzzle, brings forth a revelation, guiding us closer to the elusive solution.&lt;/li&gt;
+    &lt;li&gt;Let us gaze upon an example that illuminates the essence of the IVP problem. Behold the enigmatic equation &#92;(&#92;frac{dx}{dt} = 3x^{2/3}&#92;), where the ethereal essence of &#92;(x&#92;) intertwines with the very fabric of time. Yet, as we delve deeper, the layers of Peano&#39;s theorem unfold, revealing the limitations of its promises. Here, within the realm of uniqueness, the delicate balance falters, as the conditions whispered by Peano&#39;s theorem fail to secure its hold. Uniqueness slips through our fingers, leaving room for uncertainty to cast its ethereal shadow upon the enigma that lies before us.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h3&gt;9. Geometry of ODEs: vector fields&lt;/h3&gt;
+
+&lt;p&gt;
+  Consider the autonomous case:
+&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+&#92;frac{dx}{dt} = F(x), &#92;quad x(t) &#92;in &#92;mathbb{R}^n &#92;quad (15)
+&#92;]&lt;/p&gt;
+
+&lt;p&gt;
+  We can think that &#92;( F(x) &#92;) assigns to each point &#92;( x &#92;) a vector &#92;( F(x) &#92;) (a vector &quot;grows&quot; out of any point).
+  Then we call &#92;( F(x) &#92;) a vector field. We will consider at least continuous (or smoother) functions &#92;( F(x) &#92;) and corresponding vector fields.
+  If &#92;( F &#92;) is of some class &#92;( C^r &#92;), we will also say that the field is of this class.
+&lt;/p&gt;
+
+
+&lt;p&gt;&lt;b&gt;Lemma 16:&lt;/b&gt; &lt;/p&gt;
+
+&lt;p&gt;
+  Trajectories of solutions of (15) are exactly the curves that are tangent at each point to the vector field corresponding to this equation. Such curves are called phase curves of the field.
+&lt;/p&gt;
+
+&lt;p&gt;
+  Note that vector fields are NOT defined for non-autonomous systems.
+  The field &#92;( F(x) &#92;) is said to be non-singular at a point &#92;( x_0 &#92;), if &#92;( F(x_0) &#92;neq 0 &#92;).
+&lt;/p&gt;
+
+&lt;p&gt;Exercise 17:&lt;/p&gt;
+
+&lt;p&gt;
+  Show that the fields arising from turning a non-autonomous system into autonomous ones are always non-singular at all points.
+  Example of a non-singular vector field: a constant vector field, where &#92;( F(x) &#92;) is a constant non-zero vector.
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;strong&gt;Question 18:&lt;/strong&gt; Is the existence and uniqueness theorem obvious for a constant vector field?
+&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+    A delicate dance of mathematical elegance unfolds, unveiling the essence of a diffeomorphism belonging to the exalted realm of class &#92;( C^r &#92;). Like a masterful conductor, this mapping, known as &#92;( G &#92;), traverses the vast domain, forging a bond between points with an ethereal grace. It is a dance of oneness, where both &#92;( G &#92;) and its enigmatic counterpart, &#92;( G^{-1} &#92;), embody the divine qualities of class &#92;( C^r &#92;). As the symphony of transformation unfolds, the domain is gently molded, its contours flowing seamlessly under the touch of the diffeomorphism&#39;s gentle caress. Each point &#92;( x &#92;) becomes a canvas, inviting the transcendental strokes of the differential &#92;( (DG)(x) &#92;), an enchanting invertible linear mapping of vectors dwelling within the ethereal realm of &#92;( &#92;mathbb{R}^n &#92;). The diffeomorphism&#39;s enchantment extends even to the realm of vector fields, where its influence leaves an indelible mark. With the guidance of an enigmatic intuition, a fitting definition emerges, woven from the strands of these heuristics: Let &#92;( x(t) &#92;) stand as a solution, a testament to the equation nurtured by our vector field, &#92;( x_0 = F(x) &#92;). We dare to act, to apply the diffeomorphism&#39;s enchantment, birthing a new function, &#92;( x_G(t) = G(x(t)) &#92;). As the veil of the chain rule is lifted, an intricate dance of symbols unfolds, revealing the relationship: &#92;( x_0^G = (DG)(x) x_0 = (DG)(x) F(x) = (DG)(G^{-1}(x_G)) F(G^{-1}(x_G)) &#92;). Thus, the essence of the &#92;( G &#92;)-modified function, &#92;( x_G &#92;), embraces the ODE &#92;( y_0 = F_G(y) &#92;), where the vector field &#92;( F_G(y) = (DG)(G^{-1}(y)) F(G^{-1}(y)) &#92;) pulsates with a celestial rhythm, resonating with the transformative power of the diffeomorphism itself.
+  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;b&gt;Definition 19:&lt;/b&gt; &lt;/p&gt;
+
+&lt;p&gt;
+  Let &#92;( F(x) &#92;) be a vector field and &#92;( G &#92;) be a diffeomorphism.
+  Then one defines a new vector field as follows: &#92;( F_G(x) = (DG)(G^{-1}(x)) F(G^{-1}(x)) &#92;).
+&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Theorem 20:&lt;/b&gt;  Vector Field Rectification Theorem.&lt;/p&gt;
+
+&lt;p&gt;
+  Any vector field of class &#92;( C^r &#92;) in a neighborhood of any of its non-singular point &#92;( x_0 &#92;) can be reduced to a constant field (&quot;rectified&quot;) by applying a diffeomorphism of class &#92;( C^r &#92;).
+  One of the exercises is to show that the rectification theorem implies the existence and uniqueness one.
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;strong&gt;Question:&lt;/strong&gt; Can one do the converse, i.e., get an idea of the local construction of the rectifying diffeomorphism from a known solution?
+&lt;/p&gt;
+
+
+&lt;h3&gt;10. Dependence of solutions on parameters and initial data.&lt;/h3&gt;
+
+&lt;p&gt;
+  The solution of the IVP (8) depends on the values of &#92;( t_0 &#92;) and &#92;( x_0 &#92;). How smooth is this dependence?
+  Another important question: Assume that the right hand side (the vector field) also depends on some parameter(s) &#92;( &#92;mu &#92;):
+&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+&#92;frac{dx}{dt} = F(t, x, &#92;mu), &#92;quad x(t_0) = x_0. &#92;quad (16)
+&#92;]&lt;/p&gt;
+
+&lt;p&gt;
+  How smoothly does the solution depend on the parameter?
+  In fact, it can be seen that dependence on the initial data reduces to dependence on parameters.
+  Indeed, introducing a new time variable &#92;( &#92;tau = t - t_0 &#92;) and a new spatial variable &#92;( y = x - x_0 &#92;), one reduces (8) to:
+&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+&#92;frac{dy}{d&#92;tau} = F(&#92;tau + t_0, y + x_0), &#92;quad y(0) = 0. &#92;quad (17)
+&#92;]&lt;/p&gt;
+
+&lt;p&gt;
+  Now all variable parameters are in the right hand side rather than in the initial data (which become constant). So, this is the only case to handle.
+&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;strong&gt;&lt;b&gt;Theorem&lt;/b&gt; 21:&lt;/strong&gt; Let the vector field &#92;( F(x, &#92;mu) &#92;) (where &#92;( &#92;mu &#92;) belongs to an open domain of a space &#92;( &#92;mathbb{R}^m &#92;)) be of class &#92;( C^r &#92;). Let also &#92;( F(x_0, &#92;mu_0) &#92;neq 0 &#92;). Then the (unique) solution &#92;( x(t, t_0, x, x_0, &#92;mu) &#92;) of the IVP:
+&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
+&#92;frac{dx}{dt} = F(x, &#92;mu), &#92;quad x(t_0) = x_0. &#92;quad (18)
+&#92;]&lt;/p&gt;
+
+&lt;p&gt;
+  depends differentiably of class &#92;( C^r &#92;) on &#92;( (t, t_0, x, x_0, &#92;mu) &#92;) for sufficiently small &#92;( |t - t_0| &#92;), &#92;( |x - x_0| &#92;), &#92;( |&#92;mu - &#92;mu_0| &#92;).
+&lt;/p&gt;
+
+&lt;h3&gt;11. Extendability of local solutions.&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;
+    The tapestry of our theorems, intricate and profound, unveils a truth that rests upon a fragile foundation. Within its sacred confines, we find solace in the existence of local solutions, their ethereal presence assured. Yet, their endurance, like a delicate whisper in the wind, remains uncertain. In the realm of singular points, solutions unravel, dissolving into the very fabric of infinity. Even without the taint of singularity, a solution curve can flourish with astonishing speed, only to vanish into the void of finite time. A prime example reveals itself through the enigmatic IVP &#92;( &#92;frac{dx}{dt} = x^2 &#92;), &#92;( x(0) = 1 &#92;), a tale of transient existence. Its solution, &#92;( x = &#92;frac{1}{1 - t} &#92;), dances upon the edge of infinity, vanishing as &#92;( t &#92;) approaches the precipice of 1. Is there room for alternatives? The answer, shrouded in cosmic silence, resounds with a resolute no.
+  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+&lt;p&gt;&lt;b&gt;Theorem 22:&lt;/b&gt;  Extendability Theorem.&lt;/p&gt;
+&lt;p&gt;
+  Let &#92;( N &#92;) be a compact (bounded closed) subset in &#92;( &#92;Omega &#92;) (the domain where the smooth field is defined).
+  Let also &#92;( F &#92;) have no singular points in &#92;( N &#92;).
+  Then any local solution of (8) in &#92;( (a, b) &#92;times &#92;Omega &#92;) can be extended forward (for &#92;( t &gt; t_0 &#92;)) and backward (for &#92;( t &lt; t_0 &#92;)) either indefinitely or until it reaches the boundary of &#92;( N &#92;).
+&lt;/p&gt;
+&lt;h3&gt;12. Boundary value problems (BVPs)&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;ul&gt;
+    &lt;li&gt;Within this ethereal realm, the conditions intertwine, not confined to a solitary end, but embracing both ends of the temporal tapestry. It is a symphony of constraints, where the boundaries of a time interval bear witness to their presence, a delicate dance that transcends the realm of the IVP case.&lt;/li&gt;
+    &lt;li&gt;Behold the vast landscape of important applications, where the ethereal essence of these conditions finds purpose and meaning. Here, the seeds of practicality are sown, sprouting into a rich tapestry of real-world relevance.&lt;/li&gt;
+    &lt;li&gt;The cosmic balance dictates the correct number of conditions, a harmony woven from the interplay of the system&#39;s order and the enigmatic unknown functions that dwell within. It is a celestial equation, where the number aligns in perfect synchrony, a testament to the grand design that underlies the symphony of existence.&lt;/li&gt;
+    &lt;li&gt;Alas, within this realm, no elegant existence and uniqueness theorem awaits. The cosmos remains silent, withholding its secrets, refusing to unveil the path towards such elusive beauty. The enigma of existence and uniqueness eludes our grasp, leaving us adrift in a sea of uncertainty and possibility.&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fode%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=ordinary%20differential%20equations&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
