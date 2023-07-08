@@ -3365,7 +3365,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 &lt;div class=&quot;container&quot; id=&quot;bsr-wrapper&quot;&gt;
     &lt;p&gt;In July of 2022, I gathered all of these abstract algebra prinouts that I found online.&lt;/p&gt;
     &lt;p&gt;Coming back in July of 2023 with more knowledge of web development &amp; bored with these prinouts, I embeded a bunch of images from the &lt;a href=&quot;https://en.wikipedia.org/wiki/Space_(mathematics)&quot;&gt;Wikipedia: Space (mathematics)&lt;/a&gt; page.&lt;/p&gt;
-    &lt;p&gt;I also generalized the &quot;zoom&quot; feature from &lt;b&gt;&lt;a href=&quot;https://codeconvey.com/html-image-zoom-on-click/&quot;&gt;this&lt;/a&gt;&lt;/b&gt; guide to work for &lt;code&gt;img&lt;/code&gt; tags of a given &lt;code&gt;class&lt;/code&gt; rather than a single &lt;code&gt;img&lt;/code&gt; of given &lt;code&gt;id&lt;/code&gt;. That means you can click all the images to zoom. Yes....&quot;Enjoy!&quot;&lt;/p&gt;
+    &lt;p&gt;I also generalized the &quot;zoom&quot; feature from &lt;b&gt;&lt;a href=&quot;https://codeconvey.com/html-image-zoom-on-click/&quot;&gt;this&lt;/a&gt;&lt;/b&gt; guide to work for &lt;code&gt;img&lt;/code&gt; tags of a given &lt;code&gt;class&lt;/code&gt; rather than a single &lt;code&gt;img&lt;/code&gt; of given &lt;code&gt;id&lt;/code&gt;. Oh, yes the zoom background is white too to see the black diagrams. That&#39;s all. It&#39;s mostly for the math. That means you can click all the images to zoom. Yes....&quot;Enjoy!&quot;&lt;/p&gt;
     &lt;hr&gt;
     &lt;h2&gt;theory printout pictures&lt;/h2&gt;
     &lt;div class=&quot;card&quot;&gt;
