@@ -5,7 +5,7 @@
 	
 	<link href="https://ischmidls.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://ischmidls.github.io"/>
-	<updated>2023-07-01T17:00:00-07:00</updated>
+	<updated>2023-07-02T17:00:00-07:00</updated>
 	<id>https://update-me.com</id>
 	<author>
 		<name>izak</name>
@@ -678,6 +678,125 @@
 				
 				
 				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fpages%2Fmathtax%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=math%20education%20taxonomy&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>functions intro</title>
+		<link href="https://ischmidls.github.io/posts/functions/"/>
+		<updated>2022-07-02T17:00:00-07:00</updated>
+		<id>https://ischmidls.github.io/posts/functions/</id>
+		<content type="html">
+		  &lt;p&gt;Below is a list of functions, then some graphs of these functions&lt;/p&gt;
+&lt;h2&gt;functions&lt;h2&gt;
+    &lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+
+    
+    &lt;ol&gt;
+        &lt;li&gt;constant function: &#92;( f(x) = c &#92;), where &#92;( c &#92;) is a constant.&lt;/li&gt;
+        &lt;li&gt;identity function: &#92;( f(x) = x &#92;).&lt;/li&gt;
+        &lt;li&gt;polynomial functions: &#92;( f(x) = a_nx^n + a_{n-1}x^{n-1} + &#92;ldots + a_1x + a_0 &#92;), where &#92;( a_i &#92;) are constants and &#92;( n &#92;) is a non-negative integer.&lt;/li&gt;
+        &lt;li&gt;exponential function: &#92;( f(x) = e^x &#92;).&lt;/li&gt;
+        &lt;li&gt;logarithmic function: &#92;( f(x) = &#92;log_a(x) &#92;), where &#92;( a &#92;) is a positive constant and &#92;( x &#92;) is the argument.&lt;/li&gt;
+        &lt;li&gt;
+          trigonometric functions:
+          &lt;ul&gt;
+            &lt;li&gt;sine function: &#92;( f(x) = &#92;sin(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;cosine function: &#92;( f(x) = &#92;cos(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;tangent function: &#92;( f(x) = &#92;tan(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;cosecant function: &#92;( f(x) = &#92;csc(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;secant function: &#92;( f(x) = &#92;sec(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;cotangent function: &#92;( f(x) = &#92;cot(x) &#92;).&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          inverse trigonometric functions:
+          &lt;ul&gt;
+            &lt;li&gt;arcsine function: &#92;( f(x) = &#92;arcsin(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;arccosine function: &#92;( f(x) = &#92;arccos(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;arctangent function: &#92;( f(x) = &#92;arctan(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;arccosecant function: &#92;( f(x) = &#92;text{arccsc}(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;arcsecant function: &#92;( f(x) = &#92;text{arcsec}(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;arccotangent function: &#92;( f(x) = &#92;text{arccot}(x) &#92;).&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          hyperbolic functions:
+          &lt;ul&gt;
+            &lt;li&gt;hyperbolic sine function: &#92;( f(x) = &#92;sinh(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;hyperbolic cosine function: &#92;( f(x) = &#92;cosh(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;hyperbolic tangent function: &#92;( f(x) = &#92;tanh(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;hyperbolic cosecant function: &#92;( f(x) = &#92;text{csch}(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;hyperbolic secant function: &#92;( f(x) = &#92;text{sech}(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;hyperbolic cotangent function: &#92;( f(x) = &#92;coth(x) &#92;).&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          inverse hyperbolic functions:
+          &lt;ul&gt;
+            &lt;li&gt;inverse hyperbolic sine function: &#92;( f(x) = &#92;text{arcsinh}(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;inverse hyperbolic cosine function: &#92;( f(x) = &#92;text{arccosh}(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;inverse hyperbolic tangent function: &#92;( f(x) = &#92;text{arctanh}(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;inverse hyperbolic cosecant function: &#92;( f(x) = &#92;text{arccsch}(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;inverse hyperbolic secant function: &#92;( f(x) = &#92;text{arcsech}(x) &#92;).&lt;/li&gt;
+            &lt;li&gt;inverse hyperbolic cotangent function: &#92;( f(x) = &#92;text{arccoth}(x) &#92;).&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+    &lt;h2&gt;plots&lt;/h2&gt;
+    &lt;p&gt;This began as an attempt to explain &quot;functions&quot; to my dad and my brother. It did not get far, but it is something. Enjoy?&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;p&gt;&lt;b&gt;identity &#92;(y=x&#92;)&lt;/b&gt;&lt;/p&gt;
+    &lt;iframe title=&quot;x&quot; src=&quot;https://www.desmos.com/calculator/kahamkom8c?embed&quot; width=&quot;500&quot; height=&quot;500&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+    &lt;hr&gt;
+    &lt;p&gt;&lt;b&gt;square &#92;(y=x^2&#92;)&lt;/b&gt;&lt;/p&gt;
+    &lt;iframe title=&quot;x^2&quot; src=&quot;https://www.desmos.com/calculator/syis78tlpo?embed&quot; width=&quot;500&quot; height=&quot;500&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+    &lt;hr&gt;
+    &lt;p&gt;&lt;b&gt;cube &#92;(y=x^3&#92;)&lt;/b&gt;&lt;/p&gt;
+    &lt;iframe title=&quot;x^3&quot; src=&quot;https://www.desmos.com/calculator/1epsvqyloe?embed&quot; width=&quot;500&quot; height=&quot;500&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+    &lt;hr&gt;
+    &lt;p&gt;&lt;b&gt;square root &#92;(y=&#92;sqrt{x}&#92;)&lt;/b&gt;&lt;/p&gt;
+    &lt;iframe title=&quot;sqrt x&quot; src=&quot;https://www.desmos.com/calculator/efdii2fk66?embed&quot; width=&quot;500&quot; height=&quot;500&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+    &lt;hr&gt;
+    &lt;p&gt;&lt;b&gt;cube root &#92;(y=&#92;sqrt{3}{x}&#92;)&lt;/b&gt;&lt;/p&gt;
+    &lt;iframe title=&quot;cbrt x&quot; src=&quot;https://www.desmos.com/calculator/gvhocgvslv?embed&quot; width=&quot;500&quot; height=&quot;500&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+    &lt;hr&gt;
+    &lt;p&gt;&lt;b&gt;exponent &#92;(y=e^x&#92;)&lt;/b&gt;&lt;/p&gt;
+    &lt;iframe title=&quot;exp x&quot; src=&quot;https://www.desmos.com/calculator/yao6fsrndo?embed&quot; width=&quot;500&quot; height=&quot;500&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+    &lt;hr&gt;
+    &lt;p&gt;&lt;b&gt;natural log &#92;(y=&#92;ln (x) &#92;)&lt;/b&gt;&lt;/p&gt;
+    &lt;iframe title=&quot;ln x&quot; src=&quot;https://www.desmos.com/calculator/fmniheitob?embed&quot; width=&quot;500&quot; height=&quot;500&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+    &lt;hr&gt;
+    &lt;p&gt;&lt;b&gt;rational &#92;(y= &#92;frac{1}{x} &#92;)&lt;/b&gt;&lt;/p&gt;
+    &lt;iframe title=&quot;1/x&quot; src=&quot;https://www.desmos.com/calculator/h4kv4ohhwx?embed&quot; width=&quot;500&quot; height=&quot;500&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+    &lt;hr&gt;
+    &lt;p&gt;&lt;b&gt;sine &#92;(y= &#92;sin{x} &#92;)&lt;/b&gt;&lt;/p&gt;
+    &lt;iframe title=&quot;sin x&quot; src=&quot;https://www.desmos.com/calculator/drshd4d2ta?embed&quot; width=&quot;500&quot; height=&quot;500&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+    &lt;hr&gt;
+    &lt;p&gt;&lt;b&gt;cosine &#92;(y= &#92;cos{x} &#92;)&lt;/b&gt;&lt;/p&gt;
+    &lt;iframe title=&quot;cos x&quot; src=&quot;https://www.desmos.com/calculator/z2srullydd?embed&quot; width=&quot;500&quot; height=&quot;500&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+    &lt;hr&gt;
+    &lt;p&gt;&lt;b&gt;absolute value &#92;(y= &#92;operatorname{abs}{x} &#92;)&lt;/b&gt;&lt;/p&gt;
+    &lt;iframe title=&quot;abs x&quot; src=&quot;https://www.desmos.com/calculator/3mqmxivk8e?embed&quot; width=&quot;500&quot; height=&quot;500&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+    &lt;hr&gt;
+    &lt;p&gt;&lt;b&gt;floor &#92;(y= &#92;operatorname{floor}{x} &#92;)&lt;/b&gt;&lt;/p&gt;
+    &lt;iframe title=&quot;floor x&quot; src=&quot;https://www.desmos.com/calculator/ebosxd0bzm?embed&quot; width=&quot;500&quot; height=&quot;500&quot; style=&quot;border: 1px solid #ccc&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+    &lt;hr&gt;
+    &lt;p&gt;&lt;b&gt;tranformations&lt;/b&gt;&lt;/p&gt;
+    &lt;p&gt;In the scroll menu below, use the equation and sliders to investigate each of the functions.  Change the letter of the function notation to see each function&#39;s transformations. For example delete the f and replace with a g to change the parent from  a linear to a quadratic.&lt;/p&gt;
+    &lt;iframe width=&quot;100%&quot; height=&quot;1080px&quot; src=&quot;https://www.desmos.com/calculator/gjxaovcfec&quot;&gt;&lt;/iframe&gt;
+    &lt;hr&gt;
+    
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/ui/1.12.1/jquery-ui.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js&quot; integrity=&quot;sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js&quot; integrity=&quot;sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;&lt;/h2&gt;&lt;/h2&gt;
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Ffunctions%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=functions%20intro&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -3131,6 +3250,376 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 				
 				
 				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fintro%20prob%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=notes%20-%20probability%20%26%20types&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>abstract algebra diagrams</title>
+		<link href="https://ischmidls.github.io/posts/abstract/"/>
+		<updated>2023-07-02T17:00:00-07:00</updated>
+		<id>https://ischmidls.github.io/posts/abstract/</id>
+		<content type="html">
+		  &lt;head&gt;
+    &lt;style&gt;
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: block;
+            margin-left: auto;
+            margin-right: auto
+        }
+        
+        #myImg:hover {opacity: 0.7;}
+        
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(255,255,255); /* Fallback color */
+            background-color: rgba(255,255,255,0.9); /* Black w/ opacity */
+        }
+        
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 75%;
+            //max-width: 75%;
+        }
+        
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+        
+        /* Add Animation */
+        .modal-content, #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        
+        .out {
+          animation-name: zoom-out;
+          animation-duration: 0.6s;
+        }
+        
+        @-webkit-keyframes zoom {
+            from {-webkit-transform:scale(1)}
+            to {-webkit-transform:scale(2)}
+        }
+        
+        @keyframes zoom {
+            from {transform:scale(0.4)}
+            to {transform:scale(1)}
+        }
+        
+        @keyframes zoom-out {
+            from {transform:scale(1)}
+            to {transform:scale(0)}
+        }
+        
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px){
+            .modal-content {
+                width: 100%;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;div class=&quot;container&quot; id=&quot;bsr-wrapper&quot;&gt;
+    &lt;p&gt;In July of 2022, I gathered all of these abstract algebra prinouts that I found online.&lt;/p&gt;
+    &lt;p&gt;Coming back in July of 2023 with more knowledge of web development &amp; bored with these prinouts, I embeded a bunch of images from the &lt;a href=&quot;https://en.wikipedia.org/wiki/Space_(mathematics)&quot;&gt;Wikipedia: Space (mathematics)&lt;/a&gt; page.&lt;/p&gt;
+    &lt;p&gt;I also generalized the &quot;zoom&quot; feature from &lt;b&gt;&lt;a href=&quot;https://codeconvey.com/html-image-zoom-on-click/&quot;&gt;this&lt;/a&gt;&lt;/b&gt; guide to work for &lt;code&gt;img&lt;/code&gt; tags of a given &lt;code&gt;class&lt;/code&gt; rather than a single &lt;code&gt;img&lt;/code&gt; of given &lt;code&gt;id&lt;/code&gt;. That means you can click all the images to zoom. Yes....&quot;Enjoy!&quot;&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;h2&gt;theory printout pictures&lt;/h2&gt;
+    &lt;div class=&quot;card&quot;&gt;
+      &lt;div class=&quot;card-body&quot;&gt;
+        &lt;h3&gt;group theory&lt;/h3&gt;
+        &lt;img class=&quot;zoom&quot; src=&quot;https://ischmidls.github.io/img/theory/group.png&quot; alt=&quot;printout&quot;&gt;
+        &lt;a href=&quot;https://imgur.com/a/cja61w3&quot;&gt;source&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class=&quot;card&quot;&gt;
+      &lt;div class=&quot;card-body&quot;&gt;
+        &lt;h3&gt;ring and field theory&lt;/h3&gt;
+        &lt;img class=&quot;zoom&quot; src=&quot;https://ischmidls.github.io/img/theory/rf1.png&quot; alt=&quot;printout&quot;&gt;
+        &lt;img class=&quot;zoom&quot; src=&quot;https://ischmidls.github.io/img/theory/rf2.png&quot; alt=&quot;printout&quot;&gt;
+        &lt;a href=&quot;https://imgur.com/a/atu8zd9&quot;&gt;source&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class=&quot;card&quot;&gt;
+      &lt;div class=&quot;card-body&quot;&gt;
+        &lt;h3&gt;complex analysis&lt;/h3&gt;
+        &lt;img class=&quot;zoom&quot; src=&quot;https://ischmidls.github.io/img/theory/ca1.png&quot; alt=&quot;printout&quot;&gt;
+        &lt;img class=&quot;zoom&quot; src=&quot;https://ischmidls.github.io/img/theory/ca2.png&quot; alt=&quot;printout&quot;&gt;
+        &lt;img class=&quot;zoom&quot; src=&quot;https://ischmidls.github.io/img/theory/ca3.png&quot; alt=&quot;printout&quot;&gt;
+        &lt;img class=&quot;zoom&quot; src=&quot;https://ischmidls.github.io/img/theory/ca4.png&quot; alt=&quot;printout&quot;&gt;
+        &lt;a href=&quot;https://imgur.com/a/igjsbfj&quot;&gt;source&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;div class=&quot;card&quot;&gt;
+      &lt;div class=&quot;card-body&quot;&gt;
+        &lt;h3&gt;galois theory&lt;/h3&gt;
+        &lt;img class=&quot;zoom&quot; src=&quot;https://ischmidls.github.io/img/theory/galois1.png&quot; alt=&quot;printout&quot;&gt;
+        &lt;img class=&quot;zoom&quot; src=&quot;https://ischmidls.github.io/img/theory/galois2.png&quot; alt=&quot;printout&quot;&gt;
+        &lt;img class=&quot;zoom&quot; src=&quot;https://ischmidls.github.io/img/theory/galois3.png&quot; alt=&quot;printout&quot;&gt;
+        &lt;a href=&quot;https://imgur.com/a/ha96a7r&quot;&gt;source&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;hr&gt;
+    &lt;h1&gt;bonus:&lt;/h1&gt;
+    &lt;h2&gt;wikipedia spaces diagram&lt;/h2&gt;
+    &lt;div class=&quot;card&quot;&gt;
+      &lt;div class=&quot;card-body&quot;&gt;
+      &lt;p&gt;
+        &lt;a title=&quot;Qef, Public domain, via Wikimedia Commons&quot; href=&quot;https://commons.wikimedia.org/wiki/File:Mathematical_Spaces.svg&quot;&gt;
+          &lt;img class=&quot;zoom&quot; width=&quot;256&quot; alt=&quot;Mathematical Spaces&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Mathematical_Spaces.svg/256px-Mathematical_Spaces.svg.png&quot;&gt;
+        &lt;/a&gt;
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;br&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+      &lt;p&gt;
+        &lt;b&gt;linear &amp; topology&lt;/b&gt;
+        
+          &lt;img class=&quot;zoom&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/d/dc/Mathematical_implication_diagram-alt-large-print.svg&quot; alt=&quot;Mathematical implication diagram-alt-large-print.svg&quot; height=&quot;495&quot; width=&quot;1015&quot;&gt;
+
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;br&gt;
+  &lt;p&gt;
+    &lt;sub&gt;
+      &lt;a href=&quot;http://creativecommons.org/publicdomain/zero/1.0/deed.en&quot; title=&quot;Creative Commons Zero, Public Domain Dedication&quot;&gt;CC0&lt;/a&gt;
+    &lt;/sub&gt;
+    &lt;sub&gt;
+      &lt;a href=&quot;https://commons.wikimedia.org/w/index.php?curid=69882066&quot;&gt;Link&lt;/a&gt;
+    &lt;/sub&gt;
+  &lt;/p&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+      &lt;p&gt;
+        &lt;b&gt;affine &amp; projective&lt;/b&gt;
+        
+          &lt;img class=&quot;zoom&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/4c/Spaces_linear_etc.svg&quot; alt=&quot;Spaces linear etc.svg&quot; height=&quot;194&quot; width=&quot;535&quot;&gt;
+        
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;br&gt;
+  &lt;p&gt;
+    &lt;sub&gt;
+      &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0&quot; title=&quot;Creative Commons Attribution-Share Alike 4.0&quot;&gt;CC BY-SA 4.0&lt;/a&gt;
+    &lt;/sub&gt;
+    &lt;sub&gt;
+      &lt;a href=&quot;https://commons.wikimedia.org/w/index.php?curid=68601315&quot;&gt;Link&lt;/a&gt;
+    &lt;/sub&gt;
+  &lt;/p&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+      &lt;p&gt;
+        &lt;b&gt;metric&lt;/b&gt;
+        
+          &lt;img class=&quot;zoom&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/9/98/Spaces_affine_etc.svg&quot; alt=&quot;Spaces affine etc.svg&quot; height=&quot;126&quot; width=&quot;295&quot;&gt;
+
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;br&gt;
+  &lt;p&gt;
+    &lt;sub&gt;
+      &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0&quot; title=&quot;Creative Commons Attribution-Share Alike 4.0&quot;&gt;CC BY-SA 4.0&lt;/a&gt;
+    &lt;/sub&gt;
+    &lt;sub&gt;
+      &lt;a href=&quot;https://commons.wikimedia.org/w/index.php?curid=68598716&quot;&gt;Link&lt;/a&gt;
+    &lt;/sub&gt;
+  &lt;/p&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+      &lt;p&gt;
+        &lt;b&gt;banach &amp; hilbert&lt;/b&gt;
+        
+          &lt;img class=&quot;zoom&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/7/7d/Spaces_metric_etc.svg&quot; alt=&quot;Spaces metric etc.svg&quot; height=&quot;142&quot; width=&quot;543&quot;&gt;
+
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;br&gt;
+  &lt;p&gt;
+    &lt;sub&gt;
+      &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0&quot; title=&quot;Creative Commons Attribution-Share Alike 4.0&quot;&gt;CC BY-SA 4.0&lt;/a&gt;
+    &lt;/sub&gt;
+    &lt;sub&gt;
+      &lt;a href=&quot;https://commons.wikimedia.org/w/index.php?curid=68598009&quot;&gt;Link&lt;/a&gt;
+    &lt;/sub&gt;
+  &lt;/p&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+      &lt;p&gt;
+        &lt;b&gt;riemann&lt;/b&gt;
+        
+          &lt;img class=&quot;zoom&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/c/c4/Spaces_smooth_etc.svg&quot; alt=&quot;Spaces smooth etc.svg&quot; height=&quot;182&quot; width=&quot;386&quot;&gt;
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;br&gt;
+  &lt;p&gt;
+    &lt;sub&gt;
+      &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0&quot; title=&quot;Creative Commons Attribution-Share Alike 4.0&quot;&gt;CC BY-SA 4.0&lt;/a&gt;
+    &lt;/sub&gt;
+    &lt;sub&gt;
+      &lt;a href=&quot;https://commons.wikimedia.org/w/index.php?curid=68604725&quot;&gt;Link&lt;/a&gt;
+    &lt;/sub&gt;
+  &lt;/p&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+      &lt;p&gt;
+        &lt;b&gt;measures&lt;/b&gt;
+        
+          &lt;img class=&quot;zoom&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/5/52/Spaces_measurable_etc.svg&quot; alt=&quot;Spaces measurable etc.svg&quot; height=&quot;132&quot; width=&quot;463&quot;&gt;
+
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;br&gt;
+  &lt;p&gt;
+    &lt;sub&gt;
+      &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0&quot; title=&quot;Creative Commons Attribution-Share Alike 4.0&quot;&gt;CC BY-SA 4.0&lt;/a&gt;
+    &lt;/sub&gt;
+    &lt;sub&gt;
+      &lt;a href=&quot;https://commons.wikimedia.org/w/index.php?curid=68606618&quot;&gt;Link&lt;/a&gt;
+    &lt;/sub&gt;
+  &lt;/p&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+      &lt;p&gt;
+        &lt;b&gt;schemes&lt;/b&gt;
+        
+          &lt;img class=&quot;zoom&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/4/41/Spaces_schemes_etc.svg&quot; alt=&quot;Spaces schemes etc.svg&quot; height=&quot;163&quot; width=&quot;555&quot;&gt;
+
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;br&gt;
+  &lt;p&gt;
+    &lt;sub&gt;
+      &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0&quot; title=&quot;Creative Commons Attribution-Share Alike 4.0&quot;&gt;CC BY-SA 4.0&lt;/a&gt;
+    &lt;/sub&gt;
+    &lt;sub&gt;
+      &lt;a href=&quot;https://commons.wikimedia.org/w/index.php?curid=68652354&quot;&gt;Link&lt;/a&gt;
+    &lt;/sub&gt;
+  &lt;/p&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-body&quot;&gt;
+      &lt;p&gt;
+        &lt;b&gt;topoi&lt;/b&gt;
+        
+          &lt;img class=&quot;zoom&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/0/01/Spaces_topoi_etc.svg&quot; alt=&quot;Spaces topoi etc.svg&quot; height=&quot;101&quot; width=&quot;580&quot;&gt;
+
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;br&gt;
+  &lt;p&gt;
+    &lt;sub&gt;
+      &lt;a href=&quot;https://creativecommons.org/licenses/by-sa/4.0&quot; title=&quot;Creative Commons Attribution-Share Alike 4.0&quot;&gt;CC BY-SA 4.0&lt;/a&gt;
+    &lt;/sub&gt;
+    &lt;sub&gt;
+      &lt;a href=&quot;https://commons.wikimedia.org/w/index.php?curid=68637039&quot;&gt;Link&lt;/a&gt;
+    &lt;/sub&gt;
+  &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;!--CONTAINER BSR WRAPPER--&gt;
+  &lt;!-- The Modal --&gt;
+&lt;div id=&quot;myModal&quot; class=&quot;modal&quot;&gt;
+    &lt;img class=&quot;zoom&quot; id=&quot;img01&quot;&gt;
+  &lt;/div&gt;
+  
+  
+       
+  &lt;script&gt;
+  // THIS CODE WAS MODIFIED FROM:
+  // https://codeconvey.com/html-image-zoom-on-click/
+  // INSTEAD OF ZOOMING ON AN img OF THE GIVE id ATTRIBUTE, THIS PROGRAM
+  // ZOOMS ON THE GIVEN class ATTRIBUTE. ALLOWS USE FOR MULTIPLE img TAGS.
+  
+  // Get the modal
+  var modal = document.getElementById(&#39;myModal&#39;);
+  
+  // Get the image and insert it inside the modal - use its &quot;alt&quot; text as a caption
+  var images = document.querySelectorAll(&#39;.zoom&#39;); // Replace &#39;your-image-class&#39; with the actual class name of your images
+  
+  var modalImg = document.getElementById(&quot;img01&quot;);
+  var captionText = document.getElementById(&quot;caption&quot;);
+  
+  // Iterate over each image and attach click event listeners
+  images.forEach(function(img) {
+    img.onclick = function() {
+      modal.style.display = &quot;block&quot;;
+      modalImg.src = this.src;
+      modalImg.alt = this.alt;
+      captionText.innerHTML = this.alt;
+    };
+  });
+  
+  // When the user clicks on &lt;span&gt; (x), close the modal
+  modal.onclick = function() {
+    img01.className += &quot; out&quot;;
+    setTimeout(function() {
+      modal.style.display = &quot;none&quot;;
+      img01.className = &quot;modal-content&quot;;
+    }, 400);
+  };
+    
+      
+  &lt;/script&gt;
+  
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fabstract%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=abstract%20algebra%20diagrams&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
