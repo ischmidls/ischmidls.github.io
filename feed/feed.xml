@@ -3630,14 +3630,13 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 		<id>https://ischmidls.github.io/posts/ode/</id>
 		<content type="html">
 		  &lt;p&gt;As with most of these posts, what I have included here closely follows and often directly copies or quotes a text written by someone more errudite than me. In this case thank you to &lt;em&gt;Prof. Peter Kuchment&lt;/em&gt; for &lt;a href=&quot;https://www.math.tamu.edu/~kuchment/ode.pdf&quot;&gt;A brief sketch of the main ODE theorems&lt;/a&gt; written for Texas A&amp;M University&#39;s Math 611, Fall 2017.&lt;/p&gt;
-&lt;p&gt;(In this case, the main change is that the prose now imitates Haruki Murakami &amp;mdash; or use the words &quot;ethereal&quot;, &quot;existence&quot;, &quot;realm&quot;, and &quot;tapestry&quot; a lot)&lt;/p&gt;
-&lt;h3&gt;1 Main notions&lt;/h3&gt;
-&lt;p&gt;
-    &lt;b&gt;Definition 1:
-        &lt;blockquote&gt;
-    &lt;/blockquote&gt;&lt;/b&gt; In the realm of equations, an ODE of order &#92;( k &#92;) unveils a mysterious connection between the enigmatic values of one or more unknown functions, solitary in their existence, and the ever-shifting variable known as &#92;( t &#92;) or &quot;time.&quot; It is a delicate dance, intertwining the derivatives, the whispers of change echoing through the order &#92;( k &#92;), with the independent variable itself, the very essence that holds everything in its temporal embrace:
-  &lt;/p&gt;
 
+&lt;h3&gt;Main notions&lt;/h3&gt;
+&lt;p&gt;
+    &lt;b&gt;Definition 1:&lt;/b&gt;  An ODE of order &#92;( k &#92;) is an equation relating the values of one or more unknown functions of a single variable &#92;( t &#92;) (which we will call &quot;time&quot;), their derivatives up to the order &#92;( k &#92;), and the independent variable itself:
+  &lt;/p&gt;
+  
+  
 
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
 &#92;Phi(t, x_1, x_2, &#92;ldots, x_n, x_i, x_i&#39;, &#92;ldots, x_i^{(k)}, x_{i+1}^{(1)}, &#92;ldots, x_{i+1}^{(n)}) = 0. &#92;quad (1)
@@ -3655,6 +3654,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
   where boldface font is used to denote vectors.
 &lt;/p&gt;
 
+&lt;blockquote&gt;
 &lt;p&gt;
   Example 2:
 &lt;/p&gt;
@@ -3669,20 +3669,21 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
     &#92;( x&#39;&#39;(t) = -x(t) + &#92;int &#92;cos(x(&#92;tau)) &#92;, d&#92;tau &#92;) is NOT an ODE.
   &lt;/li&gt;
 &lt;/ol&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;
     Question:
   &lt;/p&gt;
-  &lt;blockquote&gt;
   &lt;ul&gt;
-    &lt;li&gt;Why do the latter two examples fail to fall under the ethereal realm of ODEs? At first glance, the definition appears to embrace them without reservation.&lt;/li&gt;
-    &lt;li&gt;What subtle nuance evaded the grasp of words, leaving room for these exceptions to slip through the cracks? How must the definition be altered to safeguard against their inclusion?&lt;/li&gt;
-    &lt;li&gt;Do you perchance possess knowledge of the name bestowed upon equations akin to the enigmatic manifestations witnessed in the last two examples?&lt;/li&gt;
+    &lt;li&gt;Why aren&#39;t the latter two examples ODEs? If you read the definition, it looks at first glance like there is nothing wrong with these examples.&lt;/li&gt;
+    &lt;li&gt;What was missing in the wording of the definition? How should it be changed to make sure we exclude such cases?&lt;/li&gt;
+    &lt;li&gt;Do you know how the equations of the type shown in the last two examples are called?&lt;/li&gt;
   &lt;/ul&gt;
-&lt;/blockquote&gt;
+  
+  
 &lt;p&gt;I skipped section 2 because it&#39;s like three lines listing ODE vs PDE, Order, and Linear vs Non-linear.&lt;/p&gt;
 &lt;h3&gt;Order reduction&lt;/h3&gt;
-&lt;p&gt;TLDR; (&lt;em&gt;Prof. Peter Kuchment&#39;s&lt;/em&gt;) like: just use vectors to represent systems of equations bro, then its one row of vectors bro.&lt;/p&gt;
+&lt;p&gt;TLDR; (&lt;em&gt;Prof. Peter Kuchment&#39;s&lt;/em&gt;) idea: just use vectors to represent systems of equations, then its one row of vectors.&lt;/p&gt;
 
         &lt;div class=&quot;text-secondary pl-5&quot;&gt;
         &lt;p&gt;
@@ -3718,10 +3719,10 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 &lt;p&gt;
   &lt;b&gt;Definition 3:&lt;/b&gt; 
 &lt;/p&gt;
-&lt;p&gt;TLDR; not try&#39;na throw hands, but bro&#39;s (&lt;em&gt;Prof. Peter Kuchment&#39;s&lt;/em&gt;) definition does not cut it. This is just about whether the variable DOES rely (non-autonomous) on stuff other than the initial condition &#92;(x=0&#92;), or if it DOES NOT and only relies on the intial condition (autonomous).&lt;/p&gt;
+&lt;p&gt;TLDR; with all due respect to &lt;em&gt;Prof. Peter Kuchment&lt;/em&gt; his is just about whether the ODE does rely (non-autonomous) on stuff other than the initial condition &#92;(x=0&#92;), or if the ODE does no and only relies on the intial condition (autonomous).&lt;/p&gt;
     &lt;div class=&quot;text-secondary pl-5&quot;&gt;
     &lt;ul&gt;
-    &lt;li&gt;The Normal Form is the best one:&lt;/li&gt;
+    &lt;li&gt;Normal:&lt;/li&gt;
     &lt;/ul&gt;
 
     &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
@@ -3755,21 +3756,33 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 &#92;]&lt;/p&gt;
 
 &lt;p&gt;
-  See that this autonomous system is equivalent to the non-autonomous (5).
-  Here and further, we will assume that &#92;( x(t) &#92;) is a differentiable function of &#92;( t &#92;in (a, b) &#92;subseteq &#92;mathbb{R}^n &#92;), and &#92;( F : &#92;mathbb{R}^{n+1} &#92;mapsto &#92;mathbb{R}^n &#92;).
+  This autonomous system is equivalent to the non-autonomous (5).
+  In these notes, we will assume that &#92;( x(t) &#92;) is a differentiable function of &#92;( t &#92;in (a, b) &#92;subseteq &#92;mathbb{R}^n &#92;), and &#92;( F : &#92;mathbb{R}^{n+1} &#92;mapsto &#92;mathbb{R}^n &#92;).
   (The complex case is possible, but we will not consider it here.)
 &lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;
-    What enigmatic metamorphosis, entwined with the ever-shifting tides of time &#92;( t &#92;), finds solace within the realm of ODEs? Let us delve into the depths of existence, exploring a process—be it mechanical, biological, or of other ethereal origins—wherein the ephemeral state, forever in flux, can be distilled into the ethereal parameters of &#92;( x &#92;). Behold, the phase space, a tapestry woven with the threads of these parameters. As the veils of time unfurl, the parameters themselves transcend their static nature and embrace the role of functions, swirling with the ebb and flow of the chronoscape: &#92;( x(t) &#92;). But when do the celestial forces align, granting such a process the elusive description of an ordinary differential equation? Three enigmatic conditions whisper their secrets, revealing the path:
-  &lt;/p&gt;
+    &lt;p&gt;
+        What evolutionary (i.e., depending on time &#92;( t &#92;)) process can be described by ODEs?
+        Let us have a process (mechanical, biological, etc.) whose instantaneous state can be described by some parameters &#92;( x &#92;).
+        We call the space of these parameters the phase space.
+        Since the system evolves with time, the parameters become functions of time as well: &#92;( x(t) &#92;).
+        When can such a process be described by an ODE?
+        Three conditions tell you when this is the case:
+      &lt;/p&gt;
+      
+      
 
-
-  &lt;ul&gt;
-    &lt;li&gt;In the tapestry of existence, the system reveals its finite-dimensional nature, a realm defined by the whispers of a finite number of parameters: &#92;( x_1, &#92;ldots, x_n &#92;). However, this delicate balance falters, surrendering to the boundless expanse of fluid dynamics, the fiery dance of heat conduction, and the enigmatic realms of quantum mechanics.&lt;/li&gt;
-    &lt;li&gt;A symphony of smoothness reverberates through the cosmic fabric as the parameters seamlessly glide, embracing differentiability as their guiding principle. Yet, within the tapestry, certain regions elude this harmonious dance, shrouded by the dissonance of shock waves.&lt;/li&gt;
-    &lt;li&gt;Determinism takes hold, revealing its enigmatic rule: the state of the system at a fleeting moment unveils the destiny that awaits. Through the prism of the first condition, we witness the evolution of the system encapsulated within a finite-dimensional vector function: &#92;( x(t) &#92;). As the second condition whispers its secret, the smoothness of this function unravels. The third condition unveils the cosmic truth—a glimpse of &#92;( x(t) &#92;) at a singular moment casts its gaze upon the entirety of the future, every nuance of &#92;( x(&#92;tau) &#92;) laid bare. It is within this revelation that the very essence of the derivative &#92;( x&#39;_0 &#92;) at the ephemeral moment &#92;( t &#92;) is etched into the fabric of destiny.&lt;/li&gt;
-  &lt;/ul&gt;
+&lt;ul&gt;
+  &lt;li&gt;&#92;(1&#92;) The system is finite-dimensional, i.e., it can be described by finitely many parameters &#92;( x_1, &#92;ldots, x_n &#92;).
+    This is not the case, for instance, in fluid dynamics, heat conduction, and quantum mechanics.&lt;/li&gt;
+  &lt;li&gt;&#92;(2&#92;) Smoothness: the parameters change in a differentiable manner with time.
+    This is not the case with shock waves.&lt;/li&gt;
+  &lt;li&gt;&#92;(3&#92;) The process is deterministic: the state of the system at a certain moment determines the whole future behavior of the system.
+    Indeed, due to the first condition, we can describe the evolution of the system by a finite-dimensional vector function &#92;( x(t) &#92;).
+    This function is differentiable, as the second condition tells us.
+    The third condition says that if we know &#92;( x(t) &#92;) for some moment &#92;( t &#92;), this determines all the future values of &#92;( x(&#92;tau) &#92;).
+    In particular, this determines the value of the derivative &#92;( x&#39;_0 &#92;) at the moment &#92;( t &#92;).&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;
@@ -3783,12 +3796,296 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
 &#92;begin{align}
   &#92;frac{dx}{dt} &amp;= F(t, x) &#92;&#92;
-  x(t_0) &amp;= x_0 &#92;quad (8)
+  x(t_0) &amp;= x_0 &#92;quad &#92;quad (8)
 &#92;end{align}
 &#92;]&lt;/p&gt;
+&lt;p&gt;For those familiar with index notation (i.e., Kronecker delta, Levi-Civita, and generally &quot;linear algebra without matrices&quot;), skip the following four cards, and jump into &lt;b&gt;&lt;a href=&quot;#def4&quot;&gt;Definition 4&lt;/a&gt;&lt;/b&gt;&lt;/p&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+    &lt;p&gt;A note on index notation:&lt;/p&gt;
+    &lt;p&gt;Thank you to &lt;em&gt;Prof. David Roylance&lt;/em&gt; for his brief &lt;a href=&quot;https://web.mit.edu/course/3/3.11/www/modules/index.pdf&quot;&gt;Matrix and Index Notation&lt;/a&gt; from MIT September 18, 2000&lt;/p&gt;
+    &lt;p&gt;A vector can be represented by its components along the Cartesian axes, denoted as &#92;(u_x, u_y, u_z&#92;) for the displacement vector &#92;(&#92;mathbf{u}&#92;). The components can also be indicated with numerical subscripts, such as &#92;(u_1, u_2, u_3&#92;), corresponding to the &#92;(x, y&#92;), and &#92;(z&#92;) directions. In a shorthand notation, the displacement vector can be written as &#92;(u_i&#92;), where the subscript &#92;(i&#92;) ranges over 1, 2, 3 (or 1 and 2 in two-dimensional problems). This is known as the range convention for index notation. With this convention, the vector equation &#92;(u_i = a&#92;) yields three scalar equations:&lt;/p&gt;
+    &lt;p&gt;&lt;/p&gt;&lt;p&gt;&#92;[
+    &#92;begin{aligned}
+    &amp; u_{1}=a &#92;&#92;
+    &amp; u_{2}=a &#92;&#92;
+    &amp; u_{3}=a
+    &#92;end{aligned}
+    &#92;]
+    
+    &lt;/p&gt;&lt;p&gt;We will often find it convenient to denote a vector by listing its components in a vertical list enclosed in braces, and this form will help us keep track of matrix-vector multiplications a bit more easily. We therefore have the following equivalent forms of vector notation:
+    
+    &lt;/p&gt;&lt;p&gt;&#92;[
+    &#92;mathbf{u}=u_{i}=&#92;left&#92;{&#92;begin{array}{l}
+    u_{1} &#92;&#92;
+    u_{2} &#92;&#92;
+    u_{3}
+    &#92;end{array}&#92;right&#92;}=&#92;left&#92;{&#92;begin{array}{l}
+    u_{x} &#92;&#92;
+    u_{y} &#92;&#92;
+    u_{z}
+    &#92;end{array}&#92;right&#92;}
+    &#92;]
+    
+    &lt;/p&gt;&lt;p&gt;Second-rank quantities such as stress, strain, moment of inertia, and curvature can be denoted as &#92;(3 &#92;times 3&#92;) matrix arrays; for instance the stress can be written using numerical indices as
+    
+    &lt;/p&gt;&lt;p&gt;&#92;[
+    [&#92;sigma]=&#92;left[&#92;begin{array}{lll}
+    &#92;sigma_{11} &amp; &#92;sigma_{12} &amp; &#92;sigma_{13} &#92;&#92;
+    &#92;sigma_{21} &amp; &#92;sigma_{22} &amp; &#92;sigma_{23} &#92;&#92;
+    &#92;sigma_{31} &amp; &#92;sigma_{32} &amp; &#92;sigma_{33}
+    &#92;end{array}&#92;right]
+    &#92;]
+    
+    &lt;/p&gt;
+    
+    &lt;p&gt;Here the first subscript index denotes the row and the second the column. The indices also have a physical meaning, for instance &#92;(&#92;sigma_{23}&#92;) indicates the stress on the 2 face (the plane whose normal is in the 2 , or &#92;(y&#92;), direction) and acting in the 3 , or &#92;(z&#92;), direction. To help distinguish them, we&#39;ll use brackets for second-rank tensors and braces for vectors.
+    
+    &lt;/p&gt;&lt;p&gt;Using the range convention for index notation, the stress can also be written as &#92;(&#92;sigma_{i j}&#92;), where both the &#92;(i&#92;) and the &#92;(j&#92;) range from 1 to 3 ; this gives the nine components listed explicitly above. (Since the stress matrix is symmetric, i.e. &#92;(&#92;sigma_{i j}=&#92;sigma_{j i}&#92;), only six of these nine components are independent.)
+    
+    &lt;/p&gt;&lt;p&gt;A subscript that is repeated in a given term is understood to imply summation over the range of the repeated subscript; this is the summation convention for index notation. For instance, to indicate the sum of the diagonal elements of the stress matrix we can write:
+    
+    &lt;/p&gt;
+    
+    &lt;p&gt;&#92;[
+    &#92;sigma_{k k}=&#92;sum_{k=1}^{3} &#92;sigma_{k k}=&#92;sigma_{11}+&#92;sigma_{22}+&#92;sigma_{33}
+    &#92;]
+    
+    &lt;/p&gt;&lt;p&gt;The multiplication rule for matrices can be stated formally by taking &#92;(&#92;mathbf{A}=&#92;left(a_{i j}&#92;right)&#92;) to be an &#92;((M &#92;times N)&#92;) matrix and &#92;(&#92;mathbf{B}=&#92;left(b_{i j}&#92;right)&#92;) to be an &#92;((R &#92;times P)&#92;) matrix. The matrix product &#92;(&#92;mathbf{A B}&#92;) is defined only when &#92;(R=N&#92;), and is the &#92;((M &#92;times P)&#92;) matrix &#92;(&#92;mathbf{C}=&#92;left(c_{i j}&#92;right)&#92;) given by
+    
+    &lt;/p&gt;&lt;p&gt;&#92;[
+    c_{i j}=&#92;sum_{k=1}^{N} a_{i k} b_{k j}=a_{i 1} b_{1 j}+a_{i 2} b_{2 j}+&#92;cdots+a_{i N} b_{N k}
+    &#92;]
+    
+    &lt;/p&gt;&lt;p&gt;Using the summation convention, this can be written simply
+    
+    &lt;/p&gt;&lt;p&gt;&#92;[
+    c_{i j}=a_{i k} b_{k j}
+    &#92;]
+    
+    &lt;/p&gt;&lt;p&gt;where the summation is understood to be over the repeated index &#92;(k&#92;). In the case of a &#92;(3 &#92;times 3&#92;) matrix multiplying a &#92;(3 &#92;times 1&#92;) column vector we have
+    
+    &lt;/p&gt;&lt;p&gt;&#92;[
+    &#92;left[&#92;begin{array}{lll}
+    a_{11} &amp; a_{12} &amp; a_{13} &#92;&#92;
+    a_{21} &amp; a_{22} &amp; a_{23} &#92;&#92;
+    a_{31} &amp; a_{32} &amp; a_{33}
+    &#92;end{array}&#92;right]&#92;left&#92;{&#92;begin{array}{l}
+    b_{1} &#92;&#92;
+    b_{2} &#92;&#92;
+    b_{3}
+    &#92;end{array}&#92;right&#92;}=&#92;left&#92;{&#92;begin{array}{c}
+    a_{11} b_{1}+a_{12} b_{2}+a_{13} b_{3} &#92;&#92;
+    a_{21} b_{1}+a_{22} b_{2}+a_{23} b_{3} &#92;&#92;
+    a_{31} b_{1}+a_{32} b_{2}+a_{33} b_{3}
+    &#92;end{array}&#92;right&#92;}=a_{i j} b_{j}
+    &#92;]
+    
+    &lt;/p&gt;&lt;p&gt;The comma convention uses a subscript comma to imply differentiation with respect to the variable following, so &#92;(f_{, 2}=&#92;partial f / &#92;partial y&#92;) and &#92;(u_{i, j}=&#92;partial u_{i} / &#92;partial x_{j}&#92;). For instance, the expression &#92;(&#92;sigma_{i j, j}=0&#92;) uses all of the three previously defined index conventions: range on &#92;(&#92;mathrm{i}&#92;), sum on &#92;(&#92;mathrm{j}&#92;), and differentiate:
+    
+    &lt;/p&gt;&lt;p&gt;&#92;[
+    &#92;begin{aligned}
+    &amp; &#92;frac{&#92;partial &#92;sigma_{x x}}{&#92;partial x}+&#92;frac{&#92;partial &#92;sigma_{x y}}{&#92;partial y}+&#92;frac{&#92;partial &#92;sigma_{x z}}{&#92;partial z}=0 &#92;&#92;
+    &amp; &#92;frac{&#92;partial &#92;sigma_{y x}}{&#92;partial x}+&#92;frac{&#92;partial &#92;sigma_{y y}}{&#92;partial y}+&#92;frac{&#92;partial &#92;sigma_{y z}}{&#92;partial z}=0 &#92;&#92;
+    &amp; &#92;frac{&#92;partial &#92;sigma_{z x}}{&#92;partial x}+&#92;frac{&#92;partial &#92;sigma_{z y}}{&#92;partial y}+&#92;frac{&#92;partial &#92;sigma_{z z}}{&#92;partial z}=0
+    &#92;end{aligned}
+    &#92;]
+    
+    &lt;/p&gt;&lt;p&gt;The Kronecker delta is a useful entity is defined as
+    
+    &lt;/p&gt;&lt;p&gt;&#92;[
+    &#92;delta_{i j}= &#92;begin{cases}0, &amp; i &#92;neq j &#92;&#92; 1, &amp; i=j&#92;end{cases}
+    &#92;]
+    
+    &lt;/p&gt;&lt;p&gt;This is the index form of the unit matrix &#92;(&#92;mathbf{I}&#92;) :
+    
+    &lt;/p&gt;&lt;p&gt;&#92;[
+    &#92;delta_{i j}=&#92;mathbf{I}=&#92;left[&#92;begin{array}{ccc}
+    1 &amp; 0 &amp; 0 &#92;&#92;
+    0 &amp; 1 &amp; 0 &#92;&#92;
+    0 &amp; 0 &amp; 1
+    &#92;end{array}&#92;right]
+    &#92;]
+    
+    &lt;/p&gt;&lt;p&gt;So, for instance
+    
+    &lt;/p&gt;&lt;p&gt;&#92;[
+    &#92;sigma_{k k} &#92;delta_{i j}=&#92;left[&#92;begin{array}{ccc}
+    &#92;sigma_{k k} &amp; 0 &amp; 0 &#92;&#92;
+    0 &amp; &#92;sigma_{k k} &amp; 0 &#92;&#92;
+    0 &amp; 0 &amp; &#92;sigma_{k k}
+    &#92;end{array}&#92;right]
+    &#92;]
+    
+    &lt;/p&gt;&lt;p&gt;where &#92;(&#92;sigma_{k k}=&#92;sigma_{11}+&#92;sigma_{22}+&#92;sigma_{33}&#92;).
+    
+    &lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
 
+&lt;p&gt;Now, before returning to &lt;em&gt;Prof. Peter Kuchment&#39;s&lt;/em&gt; lovely review of the ODE, and for one last note beyond &lt;em&gt;Prof. David Roylance&#39;s&lt;/em&gt; notes on index notation, (this time from the faceless physics department at &lt;a href=&quot;https://bohr.physics.berkeley.edu/classes/209/f02/leviciv.pdf&quot;&gt;UC Berkeley, Fall 2002&lt;/a&gt;): I want to address the Levi-Civita Symbol which is closely tied to index notation and the Kronecker delta.
+
+    &lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+&lt;p&gt;The Levi-Civita symbol is useful for converting cross products and curls into the language of tensor analysis, and for many other purposes. The following is a summary of its most useful properties in three-dimensional Euclidean space.&lt;/p&gt;
+&lt;p&gt;The Levi-Civita symbol is defined by&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;epsilon_{i j k}= &#92;begin{cases}1, &amp;amp; &#92;text { if }(i j k) &#92;text { is an even permutation of }(123) ; &#92;&#92; -1, &amp;amp; &#92;text { if }(i j k) &#92;text { is an odd permutation of }(123) ; &#92;&#92; 0, &amp;amp; &#92;text { otherwise. }&#92;end{cases}&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;It has 27 components, of which only 6 are nonzero. It follows directly from this definition that &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;epsilon_{i j k}&#92;)&lt;/span&gt; changes sign if any two of its indices are exchanged,&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;epsilon_{i j k}=&#92;epsilon_{j k i}=&#92;epsilon_{k i j}=-&#92;epsilon_{j i k}=-&#92;epsilon_{i k j}=-&#92;epsilon_{k j i} .&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The Levi-Civita symbol is convenient for expressing cross products and curls in tensor notation. For example, if &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{A}&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{B}&#92;)&lt;/span&gt; are two vectors, then&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[(&#92;mathbf{A} &#92;times &#92;mathbf{B})_{i}=&#92;epsilon_{i j k} A_{j} B_{k}&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;and&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[(&#92;nabla &#92;times &#92;mathbf{B})_{i}=&#92;epsilon_{i j k} &#92;frac{&#92;partial B_{k}}{&#92;partial x_{j}}&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Any combination of an even number of Levi-Civita symbols (or an even number of cross products and curls) can be reduced to dot products with the following system of identities. Similarly, any combination of an odd number of Levi-Civita symbols (or an odd number of cross products and curls) can be reduced to a single Levi-Civita symbol (or a cross product or a curl) plus dot products. The first is the most general:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;epsilon_{i j k} &#92;epsilon_{&#92;ell m n}=&#92;left|&#92;begin{array}{ccc}
+&#92;delta_{i &#92;ell} &amp;amp; &#92;delta_{i m} &amp;amp; &#92;delta_{i n} &#92;&#92;
+&#92;delta_{j &#92;ell} &amp;amp; &#92;delta_{j m} &amp;amp; &#92;delta_{j n} &#92;&#92;
+&#92;delta_{k &#92;ell} &amp;amp; &#92;delta_{k m} &amp;amp; &#92;delta_{k n}
+&#92;end{array}&#92;right|&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Notice that the indices &lt;span class=&quot;math inline&quot;&gt;&#92;((i j k)&#92;)&lt;/span&gt; label the rows, while ( &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;ell m n)&#92;)&lt;/span&gt; label the columns. If this is contracted on &lt;span class=&quot;math inline&quot;&gt;&#92;(i&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(l&#92;)&lt;/span&gt;, we obtain&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;epsilon_{i j k} &#92;epsilon_{i m n}=&#92;left|&#92;begin{array}{cc}
+&#92;delta_{j m} &amp;amp; &#92;delta_{j n} &#92;&#92;
+&#92;delta_{k m} &amp;amp; &#92;delta_{k n}
+&#92;end{array}&#92;right|=&#92;delta_{j m} &#92;delta_{k n}-&#92;delta_{j n} &#92;delta_{k m} .&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This identity is the one used most often, for boiling down two cross products that have one index in common, such as &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;nabla &#92;times(&#92;mathbf{A} &#92;times &#92;mathbf{B})&#92;)&lt;/span&gt;. By contracting &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;epsilon_{i j k} &#92;epsilon_{i m n}&#92;)&lt;/span&gt; in &lt;span class=&quot;math inline&quot;&gt;&#92;(j&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(m&#92;)&lt;/span&gt; we obtain&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;epsilon_{i j k} &#92;epsilon_{i j n}=2 &#92;delta_{k n} &#92;text {. }&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Finally, contracting on &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(n&#92;)&lt;/span&gt; we obtain&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;epsilon_{i j k} &#92;epsilon_{i j k}=6&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;It should be clear how to generalize these identities to higher dimensions.&lt;/p&gt;
+&lt;p&gt;If &lt;span class=&quot;math inline&quot;&gt;&#92;(A_{i j}=-A_{j i}&#92;)&lt;/span&gt; is an antisymmetric, &lt;span class=&quot;math inline&quot;&gt;&#92;(3 &#92;times 3&#92;)&lt;/span&gt; tensor, it has 3 independent components that we can associate with a 3 -vector &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{A}&#92;)&lt;/span&gt;, as follows:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[A_{i j}=&#92;left(&#92;begin{array}{ccc}
+0 &amp;amp; A_{3} &amp;amp; -A_{2} &#92;&#92;
+-A_{3} &amp;amp; 0 &amp;amp; A_{1} &#92;&#92;
+A_{2} &amp;amp; -A_{1} &amp;amp; 0
+&#92;end{array}&#92;right)=&#92;epsilon_{i j k} A_{k} .&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The inverse of this is&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[A_{i j}=&#92;frac{1}{2} &#92;epsilon_{i j k} A_{k}&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Using thes identities, the multiplication of an antisymmetric matrix times a vector can be reexpressed in terms of a cross product. That is, if&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[X_{i}=A_{i j} Y_{j}&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;then&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;mathbf{X}=&#92;mathbf{Y} &#92;times &#92;mathbf{A}&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Similarly, if &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{A}&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{B}&#92;)&lt;/span&gt; are two vectors, then&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[A_{i} B_{j}-A_{j} B_{i}=&#92;epsilon_{i j k}(&#92;mathbf{A} &#92;times &#92;mathbf{B})_{k},&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;and&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;frac{&#92;partial B_{j}}{&#92;partial x_{i}}-&#92;frac{&#92;partial B_{i}}{&#92;partial x_{j}}=&#92;epsilon_{i j k}(&#92;nabla &#92;times &#92;mathbf{B})_{k}&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Finally, if &lt;span class=&quot;math inline&quot;&gt;&#92;(M_{i j}&#92;)&lt;/span&gt; is a &lt;span class=&quot;math inline&quot;&gt;&#92;(3 &#92;times 3&#92;)&lt;/span&gt; matrix (or tensor), then&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;operatorname{det} M=&#92;epsilon_{i j k} M_{1 i} M_{2 j} M_{3 k}=&#92;frac{1}{6} &#92;epsilon_{i j k} &#92;epsilon_{&#92;ell m n} M_{i &#92;ell} M_{j m} M_{k n} .&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The Levi-Civita symbol has been defined here only on &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{R}^{3}&#92;)&lt;/span&gt;, but most of the properties above are easily generalized to &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{R}^{n}&#92;)&lt;/span&gt; (including the case &lt;span class=&quot;math inline&quot;&gt;&#92;(n=2&#92;)&lt;/span&gt; ). It only transforms as a tensor under proper orthogonal changes of coordinates, which is why we are calling it a &quot;symbol&quot; instead of a &quot;tensor.&quot; It can, however, be used to create so-called tensor densities on arbitrary manifolds with a metric, and has fascinating applications in Hodge-de Rham theory in differential geometry.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+
+&lt;/p&gt;&lt;p&gt;As a postscript to that last note on the Levi-Civita symbol (you should be glad I have not touched on the dozens of notations for differential geometry, &amp; all that.) I just wanted to give the definition and properties of the &#92;(n&#92;)-dimensional case for Levi-Civita from &lt;a href=&quot;https://en.wikipedia.org/wiki/Levi-Civita_symbol&quot;&gt;Wikipedia: Levi-Civita symbol&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+    &lt;p&gt;&#92;(n&#92;)-Levi-Civita Definition:&lt;/p&gt;
+    &lt;p&gt;
+        
+        More generally, in &#92;(n&#92;) dimensions, the Levi-Civita symbol is defined by:
+       &lt;/p&gt; 
+       &lt;p style=&quot;overflow: auto;&quot;&gt;
+        &#92;[
+        &#92;varepsilon_{a_1 a_2 a_3 &#92;ldots a_n} = 
+        &#92;begin{cases}
+        +1 &amp; &#92;text{if }(a_1, a_2, a_3, &#92;ldots, a_n) &#92;text{ is an even permutation of } (1, 2, 3, &#92;dots, n) &#92;&#92;
+        -1 &amp; &#92;text{if }(a_1, a_2, a_3, &#92;ldots, a_n) &#92;text{ is an odd permutation of } (1, 2, 3, &#92;dots, n) &#92;&#92;
+        0 &amp; &#92;text{otherwise}
+        &#92;end{cases}
+        &#92;]
+        &lt;/p&gt;
+        &lt;p&gt;
+        Thus, it is the sign of the permutation in the case of a permutation, and zero otherwise.
+        &lt;/p&gt;
+        &lt;p&gt;
+        Using the capital pi notation &#92;(&#92;Pi&#92;) for ordinary multiplication of numbers, an explicit expression for the symbol is:
+        &lt;/p&gt;
+        &lt;p style=&quot;overflow: auto;&quot;&gt;
+        &#92;[
+        &#92;begin{align*}
+        &#92;varepsilon_{a_1 a_2 a_3 &#92;ldots a_n} &amp; = &#92;prod_{1 &#92;leq i &lt; j &#92;leq n} &#92;text{sgn} (a_j - a_i) &#92;&#92;
+        &amp; = &#92;text{sgn}(a_2 - a_1) &#92;text{sgn}(a_3 - a_1) &#92;dotsm &#92;text{sgn}(a_n - a_1) &#92;text{sgn}(a_3 - a_2) &#92;text{sgn}(a_4 - a_2) &#92;dotsm &#92;text{sgn}(a_n - a_2) &#92;dotsm &#92;text{sgn}(a_n - a_{n-1})
+        &#92;end{align*}
+        &#92;]
+        &lt;/p&gt;
+        &lt;p&gt;
+        where the signum function (denoted &#92;(&#92;text{sgn}&#92;)) returns the sign of its argument while discarding the absolute value if nonzero. The formula is valid for all index values, and for any &#92;(n&#92;) (when &#92;(n = 0&#92;) or &#92;(n = 1&#92;), this is the empty product). However, computing the formula above naively has a time complexity of &#92;(O(n^2)&#92;), whereas the sign can be computed from the parity of the permutation from its disjoint cycles in only &#92;(O(n &#92;log(n))&#92;) cost.
+        &lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+
+&lt;p&gt;Now, the properties of &#92;(n&#92;)-Levi-Civita are harder to shoot off because the &#92;(n&#92;)-case is more like the top rung of the Levi-Civita latter. Where low dimensional intuition is merely helpful for the definition and general understanding of Levi-Civita, such low dimensional intuition is almost necessary for familiarity with the &#92;(n&#92;)-dimensional properties.&lt;/p&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+    &lt;p&gt;TLDR; this first paragraph describes the tensor properties of Levi-Civita, but that might warrant a whole different post, so I paraphrased plus reduced the font size and color it to skip or read as you please.&lt;/p&gt;
+   &lt;div class=&quot;text-secondary pl-5&quot;&gt; 
+    &lt;ul&gt;
+        &lt;li&gt;&lt;sub&gt;A permutation tensor has components given by the Levi-Civita symbol in an orthonormal basis. It is a tensor of covariant rank.&lt;/sub&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;sub&gt;The Levi-Civita symbol remains unchanged under pure rotations and in coordinate systems related by orthogonal transformations. However, it is classified as a pseudotensor because it does not change under certain orthogonal transformations that would result in a sign change if it were a tensor.&lt;/sub&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;sub&gt;Taking a cross product using the Levi-Civita symbol yields a pseudovector, not a vector.&lt;/sub&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;sub&gt;Under a general coordinate change, the components of the permutation tensor are scaled by the Jacobian of the transformation matrix. This means that in different coordinate frames, the components can differ from those of the Levi-Civita symbol by an overall factor. In an orthonormal frame, the factor will be ±1 depending on the orientation.&lt;/sub&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;sub&gt;In index-free tensor notation, the Hodge dual replaces the Levi-Civita symbol.&lt;/sub&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;sub&gt;Einstein notation allows the elimination of summation symbols, where a repeated index implies summation over that index.&lt;/sub&gt;&lt;/li&gt;
+      &lt;/ul&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;varepsilon_{ijk} &#92;varepsilon^{imn} &#92;equiv &#92;sum_{i=1,2,3} &#92;varepsilon_{ijk} &#92;varepsilon^{imn}&#92;]&lt;/span&gt;
+In the following examples, Einstein notation is used.&lt;/p&gt;
+&lt;b id=&quot;two_dimensions&quot;&gt;Two dimensions&lt;/b&gt;
+&lt;p&gt;In two dimensions, when all &#92;(i, &#92; j, &#92; m, &#92; n&#92;)  each take the values 1 and 2:&lt;/p&gt;
+&lt;p&gt;&#92;[&#92;varepsilon_{ij} &#92;varepsilon^{mn} = {&#92;delta_i}^m {&#92;delta_j}^n - {&#92;delta_i}^n {&#92;delta_j}^m&#92;]&lt;/p&gt;
+&lt;p&gt;&#92;[&#92;varepsilon_{ij} &#92;varepsilon^{in} = {&#92;delta_j}^n&#92;]&lt;/p&gt;
+&lt;p&gt;&#92;[&#92;varepsilon_{ij} &#92;varepsilon^{ij} = 2.&#92;]&lt;/p&gt;
+&lt;b id=&quot;three_dimensions&quot;&gt;Three dimensions&lt;/b&gt;
+&lt;p&gt;In three dimensions, when all &#92;(i, &#92; j, &#92; m, &#92; n&#92;) each take values 1, 2, and 3:&lt;/p&gt;
+
+&lt;p&gt;&#92;[&#92;varepsilon_{ijk} &#92;varepsilon^{pqk}=&#92;delta_i{}^{p}&#92;delta_j{}^q - &#92;delta_i{}^q&#92;delta_j{}^p&#92;] &lt;/p&gt;
+&lt;p&gt;&#92;[&#92;varepsilon_{jmn} &#92;varepsilon^{imn}=2{&#92;delta_j}^i&#92;] &lt;/p&gt;
+&lt;p&gt;&#92;[&#92;varepsilon_{ijk} &#92;varepsilon^{ijk}=6.&#92;] &lt;/p&gt;
+
+&lt;b id=&quot;product&quot;&gt;Product&lt;/b&gt;
+&lt;p&gt;The Levi-Civita symbol is related to the Kronecker delta. In three dimensions, the relationship is given by the following equations (vertical lines denote the determinant):&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+    &#92;[&#92;begin{align}
+  &#92;varepsilon_{ijk}&#92;varepsilon_{lmn} &amp;amp;= &#92;begin{vmatrix}
+    &#92;delta_{il} &amp;amp; &#92;delta_{im} &amp;amp; &#92;delta_{in} &#92;&#92;
+    &#92;delta_{jl} &amp;amp; &#92;delta_{jm} &amp;amp; &#92;delta_{jn} &#92;&#92;
+    &#92;delta_{kl} &amp;amp; &#92;delta_{km} &amp;amp; &#92;delta_{kn} &#92;&#92;
+  &#92;end{vmatrix} &#92;&#92;[6pt]
+                                     &amp;amp;= &#92;delta_{il}&#92;left( &#92;delta_{jm}&#92;delta_{kn} - &#92;delta_{jn}&#92;delta_{km}&#92;right) - &#92;delta_{im}&#92;left( &#92;delta_{jl}&#92;delta_{kn} - &#92;delta_{jn}&#92;delta_{kl} &#92;right) + &#92;delta_{in} &#92;left( &#92;delta_{jl}&#92;delta_{km} - &#92;delta_{jm}&#92;delta_{kl} &#92;right). 
+&#92;end{align}&#92;]&lt;/p&gt;
+&lt;p&gt;A special case of this result is&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;sum_{i=1}^3 &#92;varepsilon_{ijk}&#92;varepsilon_{imn} = &#92;delta_{jm}&#92;delta_{kn} - &#92;delta_{jn}&#92;delta_{km}&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;sometimes called the &quot;contracted epsilon identity&quot; &lt;/p&gt;
+&lt;p&gt;In Einstein notation, the duplication of the &#92;(i&#92;) index implies the sum on &#92;(i&#92;). The previous is then denoted &#92;( &#92;varepsilon_{ijk}&#92;varepsilon_{ijn} = &#92;delta_{jm}&#92;delta_{kn} - &#92;delta_{jn}&#92;delta_{km} &#92;).&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;sum_{i=1}^3 &#92;sum_{j=1}^3 &#92;varepsilon_{ijk}&#92;varepsilon_{ijn} = 2&#92;delta_{kn}&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+
+
+&lt;p&gt;Hopefully, that looked quite similar to the UC Berkeley physics exposition because here are the properties for the &#92;(n&#92;)-Levi-Civita case:&lt;/p&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+    &lt;p&gt;&#92;(n&#92;)-Levi-Civita Properties:&lt;/p&gt;
+    &lt;p&gt;In &#92;(n&#92;) dimensions, when all &#92;(i_1, &#92;ldots, i_n, j_1, &#92;ldots, j_n&#92;) take values from &#92;(1, 2, &#92;ldots, n&#92;):&lt;/p&gt;
+&lt;ul style=&quot;overflow: auto;&quot;&gt;
+&lt;li&gt;&#92;((A) &#92;quad &#92;varepsilon_{i_1 &#92;dots i_n} &#92;varepsilon^{j_1 &#92;dots j_n} = &#92;delta^{j_1 &#92;dots j_n}_{i_1 &#92;dots i_n} &#92;)&lt;/li&gt;
+&lt;li&gt;&#92;((B) &#92;quad &#92;varepsilon_{i_1 &#92;dots i_k~i_{k+1} &#92;dots i_n} &#92;varepsilon^{i_1 &#92;dots i_k~j_{k+1} &#92;dots j_n} = &#92;delta_{ i_1 &#92;ldots i_k~i_{k+1} &#92;ldots i_n}^{i_1 &#92;dots i_k~j_{k+1}&#92;ldots j_n} = k!~&#92;delta^{j_{k+1} &#92;dots j_n}_{i_{k+1} &#92;dots i_n}&#92;) &lt;/li&gt;
+&lt;li&gt;&#92;((C) &#92;quad &#92;varepsilon_{i_1 &#92;dots i_n}&#92;varepsilon^{i_1 &#92;dots i_n} = n!&#92;) &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;where the exclamation mark (&#92;(!&#92;)) denotes the factorial, and &#92;(&#92;delta^{&#92;text{α} &#92;ldots}_{&#92;text{β} &#92;ldots}&#92;) is the generalized Kronecker delta. For any &#92;(n&#92;), the property:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;sum_{i, j, k, &#92;ldots = 1}^n &#92;varepsilon_{ijk&#92;ldots}&#92;varepsilon_{ijk&#92;ldots} = n!&#92;]&lt;/p&gt;
+&lt;p&gt;follows from the facts that:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;every permutation is either even or odd,&lt;/li&gt;
+&lt;li&gt;&#92;(1 = (+1)^2 = (-1)^2 = 1&#92;), and&lt;/li&gt;
+&lt;li&gt;the number of permutations of any &#92;(n&#92;)-element set is exactly &#92;(n!&#92;).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The particular case above of &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;((B) &#92;quad &#92;varepsilon_{i_1 &#92;dots i_k~i_{k+1} &#92;dots i_n} &#92;varepsilon^{i_1 &#92;dots i_k~j_{k+1} &#92;dots j_n} = &#92;delta_{ i_1 &#92;ldots i_k~i_{k+1} &#92;ldots i_n}^{i_1 &#92;dots i_k~j_{k+1}&#92;ldots j_n} = k!~&#92;delta^{j_{k+1} &#92;dots j_n}_{i_{k+1} &#92;dots i_n}&#92;)&lt;/p&gt;
+&lt;p&gt; with &#92;(k = n-2&#92;) is:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;varepsilon_{i_1&#92;ldots i_{n-2}jk}&#92;varepsilon^{i_1&#92;ldots i_{n-2}lm} = (n-2)!(&#92;delta_j^l&#92;delta_k^m - &#92;delta_j^m&#92;delta_l^k)&#92;]&lt;/p&gt;
+&lt;b&gt;Product&lt;/b&gt;
+&lt;p&gt;In general, for &#92;(n&#92;) dimensions, the product of two Levi-Civita symbols can be written as:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;varepsilon_{i_1 i_2 &#92;ldots i_n} &#92;varepsilon_{j_1 j_2 &#92;ldots j_n} = &#92;begin{vmatrix}
+&#92;delta_{i_1 j_1} &amp; &#92;delta_{i_1 j_2} &amp; &#92;ldots  &amp; &#92;delta_{i_1 j_n} &#92;&#92;
+&#92;delta_{i_2 j_1} &amp; &#92;delta_{i_2 j_2} &amp; &#92;ldots  &amp; &#92;delta_{i_2 j_n} &#92;&#92;
+&#92;vdots           &amp; &#92;vdots           &amp; &#92;ddots &amp; &#92;vdots &#92;&#92;
+&#92;delta_{i_n j_1} &amp; &#92;delta_{i_n j_2} &amp; &#92;ldots  &amp; &#92;delta_{i_n j_n} &#92;&#92;
+&#92;end{vmatrix}&#92;]&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Proof:&lt;/strong&gt; Both sides change signs upon switching two indices, so without loss of generality, assume &#92;(i_1 &#92;leq &#92;ldots &#92;leq i_n&#92;) and &#92;(j_1 &#92;leq &#92;ldots &#92;leq j_n&#92;). If some &#92;(i_c = i_{c+1}&#92;), then the left side is zero, and the right side is also zero since two of its columns are equal. The same applies if &#92;(j_c = j_{c+1}&#92;). Finally, if &#92;(i_1 &lt; &#92;ldots &lt; i_n&#92;) and &#92;(j_1 &lt; &#92;ldots &lt; j_n&#92;), then both sides equal 1.&lt;/p&gt;
+
+&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+&lt;p&gt;Now, time to put that index notation to use!&lt;/p&gt;
 &lt;p&gt;
-  &lt;b&gt;Definition 4:&lt;/b&gt;  For a differentiable function &#92;( F: &#92;mathbb{R}^m &#92;rightarrow &#92;mathbb{R}^n &#92;), the differential &#92;( DF(y) &#92;) of &#92;( F &#92;) at a point &#92;( y &#92;) is the linear mapping from &#92;( &#92;mathbb{R}^m &#92;) to &#92;( &#92;mathbb{R}^n &#92;) with the matrix:
+  &lt;b id=&quot;def4&quot;&gt;Definition 4:&lt;/b&gt;  For a differentiable function &#92;( F: &#92;mathbb{R}^m &#92;rightarrow &#92;mathbb{R}^n &#92;), the differential &#92;( DF(y) &#92;) of &#92;( F &#92;) at a point &#92;( y &#92;) is the linear mapping from &#92;( &#92;mathbb{R}^m &#92;) to &#92;( &#92;mathbb{R}^n &#92;) with the matrix:
 &lt;/p&gt;
 
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
@@ -3796,15 +4093,18 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 &#92;]&lt;/p&gt;
 
 &lt;p&gt;
-  For a vector &#92;( x &#92;) of small norm, &#92;( DF(y)x &#92;) is the linear approximation of the change of the function &#92;( F(y + x) - F(y) &#92;), i.e.,
+  For a vector &#92;( x &#92;) of small norm, &#92;( DF(y)x &#92;) is the linear approximation of the change of the function &#92;( F(y + x) - F(y) &#92;), i.e., (Taylor formula of first order, or linearization formula):
 &lt;/p&gt;
 
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
-F(y + x) = F(y) + DF(y)x + o(|x|) &#92;quad &#92;text{(Taylor formula of first order, or linearization formula)}
-&#92;]&lt;/p&gt;
+F(y + x) = F(y) + DF(y)x + o(|x|)
+&#92;] &lt;/p&gt;
+
+
+&lt;p&gt;&lt;b&gt;Theorem 5:&lt;/b&gt;  Existence and Uniqueness Theorem.&lt;/p&gt;
 
 &lt;p&gt;
-  &lt;b&gt;Theorem 5:&lt;/b&gt;  Existence and Uniqueness Theorem.
+  
   Let &#92;( &#92;Omega &#92;subset &#92;mathbb{R}^n &#92;) be an open domain, &#92;( (a, b) &#92;) be an open segment of the line &#92;( &#92;mathbb{R} &#92;), and &#92;( F(t, x) &#92;) and &#92;( D_xF(t, x) &#92;) be continuous in &#92;( (a, b) &#92;times &#92;Omega &#92;).
   Then, for any point &#92;( (t_0, x_0) &#92;) in &#92;( (a, b) &#92;times &#92;Omega &#92;), there exists a unique solution &#92;( x(t) &#92;) of the IVP &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;(  &#92;frac{dx}{dt} = F(t, x) &#92;Longrightarrow x(t_0) = x_0 &#92;quad (8)&#92;)&lt;/span&gt; defined in a neighborhood of &#92;( t_0 &#92;).
 &lt;/p&gt;
@@ -3822,16 +4122,14 @@ F(y + x) = F(y) + DF(y)x + o(|x|) &#92;quad &#92;text{(Taylor formula of first o
 &lt;/ol&gt;
 
 
-&lt;h3&gt;7. Now about the proof: contraction mappings and such&lt;/h3&gt;
+&lt;h3&gt;Now about the proof: contraction mappings and such&lt;/h3&gt;
 
-&lt;h4&gt;7.1 Some notions and notations:&lt;/h4&gt;
+&lt;h4&gt;Some notions and notations:&lt;/h4&gt;
 &lt;p&gt;
   For a continuous function &#92;( x: [a, b] &#92;rightarrow &#92;mathbb{R}^n &#92;) on a finite segment &#92;([a, b]&#92;), we denote by
 &lt;/p&gt;
 
-&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
-&#92;| x &#92;| = &#92;max_{t &#92;in [a, b]} &#92;| x(t) &#92;| &#92;quad (10)
-&#92;]&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;( &#92;| x &#92;| = &#92;max_{t &#92;in [a, b]} &#92;| x(t) &#92;| &#92;quad (10) &#92;)&lt;/p&gt;
 
 &lt;p&gt;
   its norm in the space of such continuous functions, where &#92;( &#92;| x &#92;| &#92;) is the Euclidean norm of a vector in &#92;( &#92;mathbb{R}^n &#92;).
@@ -3841,7 +4139,7 @@ F(y + x) = F(y) + DF(y)x + o(|x|) &#92;quad &#92;text{(Taylor formula of first o
   &#92;( C^r &#92;) - class of &#92;( r &#92;) times continuously differentiable functions (applicable to both scalar and vector-valued functions of different numbers of variables, should be understandable from the context).
 &lt;/p&gt;
 
-&lt;p&gt;&lt;b&gt;Definition 7:&lt;/b&gt;  A real-valued function &#92;( A(x) &#92;) on &#92;( &#92;mathbb{R} &#92;) is a contraction if it satisfies the inequality&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Definition 7:&lt;/b&gt;  A real-valued function &#92;( A(x) &#92;) on &#92;( &#92;mathbb{R} &#92;) is a &lt;b&gt;contraction&lt;/b&gt; if it satisfies the inequality&lt;/p&gt;
 
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
 | A(x) - A(y) | &#92;leq K | x - y |
@@ -3855,14 +4153,14 @@ F(y + x) = F(y) + DF(y)x + o(|x|) &#92;quad &#92;text{(Taylor formula of first o
   &lt;strong&gt;Remark 8:&lt;/strong&gt;
 &lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;Condition of continuous differentiability of &#92;( A &#92;) and estimate &#92;( | A&#39;(x) | &#92;leq k &lt; 1 &#92;) guarantee that &#92;( A &#92;) is a contraction.&lt;/li&gt;
-  &lt;li&gt;The definition of a contraction can be naturally extended to any metric space &#92;( M &#92;) with a metric (distance function) &#92;( &#92;rho &#92;) instead of the real line, replacing &#92;( | A(x) - A(y) | &#92;), &#92;( | x - y | &#92;) above with &#92;( &#92;rho(A(x), A(y)) &#92;), &#92;( &#92;rho(x, y) &#92;).&lt;/li&gt;
+  &lt;li&gt;Condition of continuous differentiability of &#92;( A &#92;) and estimate &#92;( | A&#39;(x) | &#92;leq k &lt; 1 &#92;) guarantee that &#92;( A &#92;) is a &lt;b&gt;contraction&lt;/b&gt;.&lt;/li&gt;
+  &lt;li&gt;The definition of a &lt;b&gt;contraction&lt;/b&gt; can be naturally extended to any metric space &#92;( M &#92;) with a metric (distance function) &#92;( &#92;rho &#92;) instead of the real line, replacing &#92;( | A(x) - A(y) | &#92;), &#92;( | x - y | &#92;) above with &#92;( &#92;rho(A(x), A(y)) &#92;), &#92;( &#92;rho(x, y) &#92;).&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4&gt;7.2 A simple instance of the contraction mapping principle:&lt;/h4&gt;
+&lt;h4&gt;A simple instance of the contraction mapping principle:&lt;/h4&gt;
 
 &lt;p&gt;
-  &lt;strong&gt;&lt;b&gt;Theorem&lt;/b&gt; 9:&lt;/strong&gt; Let &#92;( A(x) &#92;) be a contraction on &#92;( &#92;mathbb{R} &#92;). Then:
+  &lt;strong&gt;Theorem 9:&lt;/strong&gt; Let &#92;( A(x) &#92;) be a contraction on &#92;( &#92;mathbb{R} &#92;). Then:
 &lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;The equation &#92;( x = A(x) &#92;) has a unique solution &#92;( x^* &#92;) (called the fixed point of &#92;( A(x) &#92;)).&lt;/li&gt;
@@ -3870,7 +4168,7 @@ F(y + x) = F(y) + DF(y)x + o(|x|) &#92;quad &#92;text{(Taylor formula of first o
 &lt;/ol&gt;
 
 
-&lt;h4&gt;7.3 The general contraction mapping principle:&lt;/h4&gt;
+&lt;h4&gt;The general contraction mapping principle:&lt;/h4&gt;
 
 &lt;p&gt;
   Let &#92;( X &#92;) be a &lt;b&gt;metric space&lt;/b&gt; (i.e., a set equipped with a metric or &quot;distance&quot; &#92;( &#92;rho(x, y) &#92;) with properties &#92;( &#92;rho &#92;geq 0 &#92;), &#92;( &#92;rho(x, y) = &#92;rho(y, x) &#92;), &#92;( &#92;rho(x, y) = 0 &#92;) only if &#92;( x = y &#92;), and the triangle inequality is satisfied &#92;( &#92;rho(x, y) &#92;leq &#92;rho(x, z) + &#92;rho(y, z) &#92;)).
@@ -3878,7 +4176,7 @@ F(y + x) = F(y) + DF(y)x + o(|x|) &#92;quad &#92;text{(Taylor formula of first o
 &lt;/p&gt;
 
 &lt;p&gt;
-  A mapping &#92;( A: X &#92;to X &#92;) is a contraction if
+  A mapping &#92;( A: X &#92;to X &#92;) is a &lt;b&gt;contraction&lt;/b&gt; if
 &lt;/p&gt;
 
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
@@ -3889,7 +4187,7 @@ F(y + x) = F(y) + DF(y)x + o(|x|) &#92;quad &#92;text{(Taylor formula of first o
   for some &#92;( K &lt; 1 &#92;) and all &#92;( x, y &#92;in X &#92;).
 &lt;/p&gt;
 
-&lt;b&gt;&lt;b&gt;Theorem&lt;/b&gt; 10:&lt;/b&gt;
+&lt;b&gt;Theorem 10:&lt;/b&gt;
 
 &lt;p&gt;
   Let &#92;( A(x) &#92;) be a contraction on a complete metric space &#92;( X &#92;). Then:
@@ -3900,18 +4198,16 @@ F(y + x) = F(y) + DF(y)x + o(|x|) &#92;quad &#92;text{(Taylor formula of first o
 &lt;/ol&gt;
 
 
-&lt;h4&gt;7.4 An equivalent integral equation reformulation of the IVP (8):&lt;/h4&gt;
+&lt;h4&gt;An equivalent integral equation reformulation of the IVP &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;(  &#92;frac{dx}{dt} = F(t, x) &#92;Longrightarrow x(t_0) = x_0 &#92;quad (8)&#92;)&lt;/span&gt;:&lt;/h4&gt;
 
-&lt;p style=&quot;overflow: auto;&quot;&gt;
-  &#92;( x(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, x(&#92;tau)) d&#92;tau  &#92;quad (11)&#92;)
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;( x(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, x(&#92;tau)) d&#92;tau  &#92;quad (11)&#92;)&lt;/p&gt;
+
+&lt;p&gt;
+  &lt;strong&gt;Lemma 11:&lt;/strong&gt; Continuous solutions of &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;( x(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, x(&#92;tau)) d&#92;tau  &#92;quad (11)&#92;)&lt;/span&gt; are exactly the continuously differentiable solutions of &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;(  &#92;frac{dx}{dt} = F(t, x) &#92;Longrightarrow x(t_0) = x_0 &#92;quad (8)&#92;)&lt;/span&gt;.
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;strong&gt;&lt;b&gt;Lemma&lt;/b&gt; 11:&lt;/strong&gt; Continuous solutions of (11) are exactly the continuously differentiable solutions of (8).
-&lt;/p&gt;
-
-&lt;p&gt;
-  Now the proof of &lt;b&gt;Theorem 5&lt;/b&gt; would be concluded if we prove the existence and uniqueness of continuous solutions of (11) on a small segment around &#92;( t_0 &#92;).
+  Now the proof of &lt;b&gt;Theorem 5&lt;/b&gt; would be concluded if we prove the existence and uniqueness of continuous solutions of &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;( x(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, x(&#92;tau)) d&#92;tau  &#92;quad (11)&#92;)&lt;/span&gt; on a small segment around &#92;( t_0 &#92;).
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -3930,8 +4226,8 @@ F(y + x) = F(y) + DF(y)x + o(|x|) &#92;quad &#92;text{(Taylor formula of first o
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;strong&gt;&lt;b&gt;Lemma&lt;/b&gt; 12:&lt;/strong&gt; For a sufficiently small &#92;( d &#92;), the operator &#92;( A(x) &#92;) maps the above class of functions into itself and is a contraction, i.e.,
-  &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;() &#92;| A(x) - A(y) &#92;| &#92;leq &#92;| x - y &#92;| &#92;)&lt;/span&gt; for some &#92;( k &lt; 1 &#92;).
+  &lt;strong&gt;Lemma 12:&lt;/strong&gt; For a sufficiently small &#92;( d &#92;), the operator &#92;( A(x) &#92;) maps the above class of functions into itself and is a contraction, i.e.,
+  &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;( &#92;| A(x) - A(y) &#92;| &#92;leq &#92;| x - y &#92;| &#92;)&lt;/span&gt; for some &#92;( k &lt; 1 &#92;).
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -3942,7 +4238,7 @@ F(y + x) = F(y) + DF(y)x + o(|x|) &#92;quad &#92;text{(Taylor formula of first o
 &lt;/ol&gt;
 
 
-&lt;p&gt;2. This solution can be found as the limit in the norm (10) of Picard iterations:&lt;/p&gt;
+&lt;p&gt;2. This solution can be found as the limit in the norm &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;( &#92;| x &#92;| = &#92;max_{t &#92;in [a, b]} &#92;| x(t) &#92;| &#92;quad (10) &#92;)&lt;/span&gt; of Picard iterations:&lt;/p&gt;
 
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
 y_{i+1}(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, y_i(&#92;tau)) d&#92;tau &#92;quad (14)
@@ -3954,10 +4250,10 @@ y_{i+1}(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, y_i(&#92;tau)) d&#92;tau &#92;qu
 
 &lt;p&gt;3. The Uniqueness and Existence &lt;b&gt;Theorem 5&lt;/b&gt;  is proven.&lt;/p&gt;
 
-&lt;p&gt;8. An existence theorem:&lt;/p&gt;
+&lt;h3&gt;An existence theorem:&lt;/h3&gt;
 
 &lt;p&gt;
-  &lt;strong&gt;&lt;b&gt;Theorem 14:&lt;/b&gt;  Peano&#39;s existence theorem.&lt;/strong&gt; Continuity of &#92;( F &#92;) alone guarantees local existence of a solution of the IVP (8).
+  &lt;strong&gt;&lt;b&gt;Theorem 14:&lt;/b&gt;  Peano&#39;s existence theorem.&lt;/strong&gt; Continuity of &#92;( F &#92;) alone guarantees local existence of a solution of the IVP &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;(  &#92;frac{dx}{dt} = F(t, x) &#92;Longrightarrow x(t_0) = x_0 &#92;quad (8)&#92;)&lt;/span&gt;.
 &lt;/p&gt;
 
 &lt;p&gt;
@@ -3966,12 +4262,12 @@ y_{i+1}(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, y_i(&#92;tau)) d&#92;tau &#92;qu
 
 &lt;blockquote&gt;
 &lt;ol&gt;
-    &lt;li&gt;Within the enigmatic proof of Peano&#39;s theorem, the solution unveils itself, emerging from the depths of the cosmic tapestry as the ethereal limit of a sequence of functions. However, unlike the delicate iterations of Picard&#39;s dance, a different path is chosen. The sequence weaves together the essence of Euler&#39;s piecewise linear functions, reminiscent of the numerical method that bears his name. Each step, a fragment of the grand puzzle, brings forth a revelation, guiding us closer to the elusive solution.&lt;/li&gt;
-    &lt;li&gt;Let us gaze upon an example that illuminates the essence of the IVP problem. Behold the enigmatic equation &#92;(&#92;frac{dx}{dt} = 3x^{2/3}&#92;), where the ethereal essence of &#92;(x&#92;) intertwines with the very fabric of time. Yet, as we delve deeper, the layers of Peano&#39;s theorem unfold, revealing the limitations of its promises. Here, within the realm of uniqueness, the delicate balance falters, as the conditions whispered by Peano&#39;s theorem fail to secure its hold. Uniqueness slips through our fingers, leaving room for uncertainty to cast its ethereal shadow upon the enigma that lies before us.&lt;/li&gt;
+    &lt;li&gt;In the proof of Peano&#39;s theorem, the solution is also found as the limit of some sequence of functions, but rather than Picard&#39;s iterations, a sequence of Euler&#39;s piecewise linear functions (recall the Euler&#39;s method of numerical solution) is constructed.&lt;/li&gt;
+    &lt;li&gt;Example of the IVP problem: &#92;(&#92;frac{dx}{dt} = 3x^{2/3}&#92;), &#92;(x(0) = 0&#92;) shows that the conditions of Peano&#39;s theorem cannot guarantee uniqueness.&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/blockquote&gt;
 
-&lt;h3&gt;9. Geometry of ODEs: vector fields&lt;/h3&gt;
+&lt;h3&gt;Geometry of ODEs: vector fields&lt;/h3&gt;
 
 &lt;p&gt;
   Consider the autonomous case:
@@ -4011,9 +4307,18 @@ y_{i+1}(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, y_i(&#92;tau)) d&#92;tau &#92;qu
 &lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;
-    A delicate dance of mathematical elegance unfolds, unveiling the essence of a diffeomorphism belonging to the exalted realm of class &#92;( C^r &#92;). Like a masterful conductor, this mapping, known as &#92;( G &#92;), traverses the vast domain, forging a bond between points with an ethereal grace. It is a dance of oneness, where both &#92;( G &#92;) and its enigmatic counterpart, &#92;( G^{-1} &#92;), embody the divine qualities of class &#92;( C^r &#92;). As the symphony of transformation unfolds, the domain is gently molded, its contours flowing seamlessly under the touch of the diffeomorphism&#39;s gentle caress. Each point &#92;( x &#92;) becomes a canvas, inviting the transcendental strokes of the differential &#92;( (DG)(x) &#92;), an enchanting invertible linear mapping of vectors dwelling within the ethereal realm of &#92;( &#92;mathbb{R}^n &#92;). The diffeomorphism&#39;s enchantment extends even to the realm of vector fields, where its influence leaves an indelible mark. With the guidance of an enigmatic intuition, a fitting definition emerges, woven from the strands of these heuristics: Let &#92;( x(t) &#92;) stand as a solution, a testament to the equation nurtured by our vector field, &#92;( x_0 = F(x) &#92;). We dare to act, to apply the diffeomorphism&#39;s enchantment, birthing a new function, &#92;( x_G(t) = G(x(t)) &#92;). As the veil of the chain rule is lifted, an intricate dance of symbols unfolds, revealing the relationship: &#92;( x_0^G = (DG)(x) x_0 = (DG)(x) F(x) = (DG)(G^{-1}(x_G)) F(G^{-1}(x_G)) &#92;). Thus, the essence of the &#92;( G &#92;)-modified function, &#92;( x_G &#92;), embraces the ODE &#92;( y_0 = F_G(y) &#92;), where the vector field &#92;( F_G(y) = (DG)(G^{-1}(y)) F(G^{-1}(y)) &#92;) pulsates with a celestial rhythm, resonating with the transformative power of the diffeomorphism itself.
-  &lt;/p&gt;
+    &lt;p&gt;
+        A diffeomorphism of class &#92;( C^r &#92;) is a mapping &#92;( G &#92;) from a domain such that it is one-to-one and both &#92;( G &#92;) and its inverse &#92;( G^{-1} &#92;) are of mappings class &#92;( C^r &#92;).
+        In other words, a diffeomorphism smoothly deforms the domain.
+        At each point &#92;( x &#92;), the differential &#92;( (DG)(x) &#92;) is an invertible linear mapping of vectors in &#92;( &#92;mathbb{R}^n &#92;).
+        One can act by diffeomorphisms on vector fields as well.
+        One can come up with a right definition using the following heuristics:
+        Let &#92;( x(t) &#92;) be a solution of the equation defined by our vector field: &#92;( x_0 = F(x) &#92;).
+        We can act on this solution by our diffeomorphism to get a new function &#92;( x_G(t) = G(x(t)) &#92;).
+        Then the chain rule gives &#92;( x_0^G = (DG)(x) x_0 = (DG)(x) F(x) = (DG)(G^{-1}(x_G)) F(G^{-1}(x_G)) &#92;).
+        In other words, the &#92;( G &#92;)-modified function &#92;( x_G &#92;) satisfies the ODE &#92;( y_0 = F_G(y) &#92;) with a vector field &#92;( F_G(y) = (DG)(G^{-1}(y)) F(G^{-1}(y)) &#92;).
+      &lt;/p&gt;
+        
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;b&gt;Definition 19:&lt;/b&gt; &lt;/p&gt;
@@ -4035,10 +4340,10 @@ y_{i+1}(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, y_i(&#92;tau)) d&#92;tau &#92;qu
 &lt;/p&gt;
 
 
-&lt;h3&gt;10. Dependence of solutions on parameters and initial data.&lt;/h3&gt;
+&lt;h3&gt;Dependence of solutions on parameters and initial data.&lt;/h3&gt;
 
 &lt;p&gt;
-  The solution of the IVP (8) depends on the values of &#92;( t_0 &#92;) and &#92;( x_0 &#92;). How smooth is this dependence?
+  The solution of the IVP &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;(  &#92;frac{dx}{dt} = F(t, x) &#92;Longrightarrow x(t_0) = x_0 &#92;quad (8)&#92;)&lt;/span&gt; depends on the values of &#92;( t_0 &#92;) and &#92;( x_0 &#92;). How smooth is this dependence?
   Another important question: Assume that the right hand side (the vector field) also depends on some parameter(s) &#92;( &#92;mu &#92;):
 &lt;/p&gt;
 
@@ -4049,7 +4354,7 @@ y_{i+1}(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, y_i(&#92;tau)) d&#92;tau &#92;qu
 &lt;p&gt;
   How smoothly does the solution depend on the parameter?
   In fact, it can be seen that dependence on the initial data reduces to dependence on parameters.
-  Indeed, introducing a new time variable &#92;( &#92;tau = t - t_0 &#92;) and a new spatial variable &#92;( y = x - x_0 &#92;), one reduces (8) to:
+  Indeed, introducing a new time variable &#92;( &#92;tau = t - t_0 &#92;) and a new spatial variable &#92;( y = x - x_0 &#92;), one reduces &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;(  &#92;frac{dx}{dt} = F(t, x) &#92;Longrightarrow x(t_0) = x_0 &#92;quad (8)&#92;)&lt;/span&gt; to:
 &lt;/p&gt;
 
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
@@ -4061,7 +4366,7 @@ y_{i+1}(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, y_i(&#92;tau)) d&#92;tau &#92;qu
 &lt;/p&gt;
 
 &lt;p&gt;
-  &lt;strong&gt;&lt;b&gt;Theorem&lt;/b&gt; 21:&lt;/strong&gt; Let the vector field &#92;( F(x, &#92;mu) &#92;) (where &#92;( &#92;mu &#92;) belongs to an open domain of a space &#92;( &#92;mathbb{R}^m &#92;)) be of class &#92;( C^r &#92;). Let also &#92;( F(x_0, &#92;mu_0) &#92;neq 0 &#92;). Then the (unique) solution &#92;( x(t, t_0, x, x_0, &#92;mu) &#92;) of the IVP:
+  &lt;strong&gt;Theorem 21:&lt;/strong&gt; Let the vector field &#92;( F(x, &#92;mu) &#92;) (where &#92;( &#92;mu &#92;) belongs to an open domain of a space &#92;( &#92;mathbb{R}^m &#92;)) be of class &#92;( C^r &#92;). Let also &#92;( F(x_0, &#92;mu_0) &#92;neq 0 &#92;). Then the (unique) solution &#92;( x(t, t_0, x, x_0, &#92;mu) &#92;) of the IVP:
 &lt;/p&gt;
 
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
@@ -4072,12 +4377,18 @@ y_{i+1}(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, y_i(&#92;tau)) d&#92;tau &#92;qu
   depends differentiably of class &#92;( C^r &#92;) on &#92;( (t, t_0, x, x_0, &#92;mu) &#92;) for sufficiently small &#92;( |t - t_0| &#92;), &#92;( |x - x_0| &#92;), &#92;( |&#92;mu - &#92;mu_0| &#92;).
 &lt;/p&gt;
 
-&lt;h3&gt;11. Extendability of local solutions.&lt;/h3&gt;
+&lt;h3&gt;Extendability of local solutions.&lt;/h3&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;
-    The tapestry of our theorems, intricate and profound, unveils a truth that rests upon a fragile foundation. Within its sacred confines, we find solace in the existence of local solutions, their ethereal presence assured. Yet, their endurance, like a delicate whisper in the wind, remains uncertain. In the realm of singular points, solutions unravel, dissolving into the very fabric of infinity. Even without the taint of singularity, a solution curve can flourish with astonishing speed, only to vanish into the void of finite time. A prime example reveals itself through the enigmatic IVP &#92;( &#92;frac{dx}{dt} = x^2 &#92;), &#92;( x(0) = 1 &#92;), a tale of transient existence. Its solution, &#92;( x = &#92;frac{1}{1 - t} &#92;), dances upon the edge of infinity, vanishing as &#92;( t &#92;) approaches the precipice of 1. Is there room for alternatives? The answer, shrouded in cosmic silence, resounds with a resolute no.
-  &lt;/p&gt;
+    &lt;p&gt;
+        Our theorems guaranteed the existence of a local solution only with no guarantee of how long it will survive.
+        Simple examples show the disappearance of solutions into a singular point.
+        Even without singular points, a solution curve can grow fast and disappear in a finite time.
+        An example is the IVP &#92;( &#92;frac{dx}{dt} = x^2 &#92;), &#92;( x(0) = 1 &#92;) that has the solution &#92;( x = &#92;frac{1}{1 - t} &#92;) that disappears at infinity when &#92;( t &#92;) approaches 1.
+        Are there any other options? Answer: no.
+      &lt;/p&gt;
+      
+      
 &lt;/blockquote&gt;
 
 
@@ -4085,17 +4396,17 @@ y_{i+1}(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, y_i(&#92;tau)) d&#92;tau &#92;qu
 &lt;p&gt;
   Let &#92;( N &#92;) be a compact (bounded closed) subset in &#92;( &#92;Omega &#92;) (the domain where the smooth field is defined).
   Let also &#92;( F &#92;) have no singular points in &#92;( N &#92;).
-  Then any local solution of (8) in &#92;( (a, b) &#92;times &#92;Omega &#92;) can be extended forward (for &#92;( t &gt; t_0 &#92;)) and backward (for &#92;( t &lt; t_0 &#92;)) either indefinitely or until it reaches the boundary of &#92;( N &#92;).
+  Then any local solution of &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;(  &#92;frac{dx}{dt} = F(t, x) &#92;Longrightarrow x(t_0) = x_0 &#92;quad (8)&#92;)&lt;/span&gt; in &#92;( (a, b) &#92;times &#92;Omega &#92;) can be extended forward (for &#92;( t &gt; t_0 &#92;)) and backward (for &#92;( t &lt; t_0 &#92;)) either indefinitely or until it reaches the boundary of &#92;( N &#92;).
 &lt;/p&gt;
-&lt;h3&gt;12. Boundary value problems (BVPs)&lt;/h3&gt;
+&lt;h3&gt;Boundary value problems (BVPs)&lt;/h3&gt;
 
 &lt;blockquote&gt;
-&lt;ul&gt;
-    &lt;li&gt;Within this ethereal realm, the conditions intertwine, not confined to a solitary end, but embracing both ends of the temporal tapestry. It is a symphony of constraints, where the boundaries of a time interval bear witness to their presence, a delicate dance that transcends the realm of the IVP case.&lt;/li&gt;
-    &lt;li&gt;Behold the vast landscape of important applications, where the ethereal essence of these conditions finds purpose and meaning. Here, the seeds of practicality are sown, sprouting into a rich tapestry of real-world relevance.&lt;/li&gt;
-    &lt;li&gt;The cosmic balance dictates the correct number of conditions, a harmony woven from the interplay of the system&#39;s order and the enigmatic unknown functions that dwell within. It is a celestial equation, where the number aligns in perfect synchrony, a testament to the grand design that underlies the symphony of existence.&lt;/li&gt;
-    &lt;li&gt;Alas, within this realm, no elegant existence and uniqueness theorem awaits. The cosmos remains silent, withholding its secrets, refusing to unveil the path towards such elusive beauty. The enigma of existence and uniqueness eludes our grasp, leaving us adrift in a sea of uncertainty and possibility.&lt;/li&gt;
-  &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Here the conditions are imposed at both ends of a time interval, rather than at one end only in the IVP case.&lt;/li&gt;
+        &lt;li&gt;Important applications.&lt;/li&gt;
+        &lt;li&gt;The number of conditions should still be correct (depending on the order of the system and the number of unknown functions).&lt;/li&gt;
+        &lt;li&gt;No such nice existence and uniqueness theorem.&lt;/li&gt;
+      &lt;/ul&gt;
 &lt;/blockquote&gt;
 			
 				
