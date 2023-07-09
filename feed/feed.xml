@@ -3362,7 +3362,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
     &lt;/style&gt;
 &lt;/head&gt;
 &lt;div class=&quot;container&quot; id=&quot;bsr-wrapper&quot;&gt;
-    &lt;p&gt;In July of 2022, I gathered all of these abstract algebra prinouts that I found online.&lt;/p&gt;
+    &lt;p&gt;In July of 2022, I gathered all of these abstract algebra print outs that I found online.&lt;/p&gt;
     &lt;p&gt;Coming back in July of 2023 with more knowledge of web development &amp; bored with these prinouts, I embeded a bunch of images from the &lt;a href=&quot;https://en.wikipedia.org/wiki/Space_(mathematics)&quot;&gt;Wikipedia: Space (mathematics)&lt;/a&gt; page.&lt;/p&gt;
     &lt;p&gt;I also generalized the &quot;zoom&quot; feature from &lt;b&gt;&lt;a href=&quot;https://codeconvey.com/html-image-zoom-on-click/&quot;&gt;this&lt;/a&gt;&lt;/b&gt; guide to work for &lt;code&gt;img&lt;/code&gt; tags of a given &lt;code&gt;class&lt;/code&gt; rather than a single &lt;code&gt;img&lt;/code&gt; of given &lt;code&gt;id&lt;/code&gt;. Oh, yes the zoom background is white too to see the black diagrams. That&#39;s all. It&#39;s mostly for the math. That means you can click all the images to zoom. Yes....&quot;Enjoy!&quot;&lt;/p&gt;
     &lt;hr&gt;
@@ -3687,7 +3687,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 
         &lt;div class=&quot;text-secondary pl-5&quot;&gt;
         &lt;p&gt;
-        Introducing new unknown functions, an ODE or a system (2) can be reduced to a first-order system:
+        Introducing new unknown functions, an ODE or a system &#92;(&#92;Phi(t, &#92;mathbf{x}) = 0, &#92;quad (2)&#92;) can be reduced to a first-order system:
         &lt;/p&gt;
 
         &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
@@ -3804,7 +3804,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
     &lt;p&gt;A note on index notation:&lt;/p&gt;
     &lt;p&gt;Thank you to &lt;em&gt;Prof. David Roylance&lt;/em&gt; for his brief &lt;a href=&quot;https://web.mit.edu/course/3/3.11/www/modules/index.pdf&quot;&gt;Matrix and Index Notation&lt;/a&gt; from MIT September 18, 2000&lt;/p&gt;
     &lt;p&gt;A vector can be represented by its components along the Cartesian axes, denoted as &#92;(u_x, u_y, u_z&#92;) for the displacement vector &#92;(&#92;mathbf{u}&#92;). The components can also be indicated with numerical subscripts, such as &#92;(u_1, u_2, u_3&#92;), corresponding to the &#92;(x, y&#92;), and &#92;(z&#92;) directions. In a shorthand notation, the displacement vector can be written as &#92;(u_i&#92;), where the subscript &#92;(i&#92;) ranges over 1, 2, 3 (or 1 and 2 in two-dimensional problems). This is known as the range convention for index notation. With this convention, the vector equation &#92;(u_i = a&#92;) yields three scalar equations:&lt;/p&gt;
-    &lt;p&gt;&lt;/p&gt;&lt;p&gt;&#92;[
+    &lt;p&gt;&lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
     &#92;begin{aligned}
     &amp; u_{1}=a &#92;&#92;
     &amp; u_{2}=a &#92;&#92;
@@ -3814,7 +3814,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
     
     &lt;/p&gt;&lt;p&gt;We will often find it convenient to denote a vector by listing its components in a vertical list enclosed in braces, and this form will help us keep track of matrix-vector multiplications a bit more easily. We therefore have the following equivalent forms of vector notation:
     
-    &lt;/p&gt;&lt;p&gt;&#92;[
+    &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
     &#92;mathbf{u}=u_{i}=&#92;left&#92;{&#92;begin{array}{l}
     u_{1} &#92;&#92;
     u_{2} &#92;&#92;
@@ -3828,7 +3828,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
     
     &lt;/p&gt;&lt;p&gt;Second-rank quantities such as stress, strain, moment of inertia, and curvature can be denoted as &#92;(3 &#92;times 3&#92;) matrix arrays; for instance the stress can be written using numerical indices as
     
-    &lt;/p&gt;&lt;p&gt;&#92;[
+    &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
     [&#92;sigma]=&#92;left[&#92;begin{array}{lll}
     &#92;sigma_{11} &amp; &#92;sigma_{12} &amp; &#92;sigma_{13} &#92;&#92;
     &#92;sigma_{21} &amp; &#92;sigma_{22} &amp; &#92;sigma_{23} &#92;&#92;
@@ -3846,25 +3846,25 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
     
     &lt;/p&gt;
     
-    &lt;p&gt;&#92;[
+    &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
     &#92;sigma_{k k}=&#92;sum_{k=1}^{3} &#92;sigma_{k k}=&#92;sigma_{11}+&#92;sigma_{22}+&#92;sigma_{33}
     &#92;]
     
     &lt;/p&gt;&lt;p&gt;The multiplication rule for matrices can be stated formally by taking &#92;(&#92;mathbf{A}=&#92;left(a_{i j}&#92;right)&#92;) to be an &#92;((M &#92;times N)&#92;) matrix and &#92;(&#92;mathbf{B}=&#92;left(b_{i j}&#92;right)&#92;) to be an &#92;((R &#92;times P)&#92;) matrix. The matrix product &#92;(&#92;mathbf{A B}&#92;) is defined only when &#92;(R=N&#92;), and is the &#92;((M &#92;times P)&#92;) matrix &#92;(&#92;mathbf{C}=&#92;left(c_{i j}&#92;right)&#92;) given by
     
-    &lt;/p&gt;&lt;p&gt;&#92;[
+    &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
     c_{i j}=&#92;sum_{k=1}^{N} a_{i k} b_{k j}=a_{i 1} b_{1 j}+a_{i 2} b_{2 j}+&#92;cdots+a_{i N} b_{N k}
     &#92;]
     
     &lt;/p&gt;&lt;p&gt;Using the summation convention, this can be written simply
     
-    &lt;/p&gt;&lt;p&gt;&#92;[
+    &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
     c_{i j}=a_{i k} b_{k j}
     &#92;]
     
     &lt;/p&gt;&lt;p&gt;where the summation is understood to be over the repeated index &#92;(k&#92;). In the case of a &#92;(3 &#92;times 3&#92;) matrix multiplying a &#92;(3 &#92;times 1&#92;) column vector we have
     
-    &lt;/p&gt;&lt;p&gt;&#92;[
+    &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
     &#92;left[&#92;begin{array}{lll}
     a_{11} &amp; a_{12} &amp; a_{13} &#92;&#92;
     a_{21} &amp; a_{22} &amp; a_{23} &#92;&#92;
@@ -3882,7 +3882,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
     
     &lt;/p&gt;&lt;p&gt;The comma convention uses a subscript comma to imply differentiation with respect to the variable following, so &#92;(f_{, 2}=&#92;partial f / &#92;partial y&#92;) and &#92;(u_{i, j}=&#92;partial u_{i} / &#92;partial x_{j}&#92;). For instance, the expression &#92;(&#92;sigma_{i j, j}=0&#92;) uses all of the three previously defined index conventions: range on &#92;(&#92;mathrm{i}&#92;), sum on &#92;(&#92;mathrm{j}&#92;), and differentiate:
     
-    &lt;/p&gt;&lt;p&gt;&#92;[
+    &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
     &#92;begin{aligned}
     &amp; &#92;frac{&#92;partial &#92;sigma_{x x}}{&#92;partial x}+&#92;frac{&#92;partial &#92;sigma_{x y}}{&#92;partial y}+&#92;frac{&#92;partial &#92;sigma_{x z}}{&#92;partial z}=0 &#92;&#92;
     &amp; &#92;frac{&#92;partial &#92;sigma_{y x}}{&#92;partial x}+&#92;frac{&#92;partial &#92;sigma_{y y}}{&#92;partial y}+&#92;frac{&#92;partial &#92;sigma_{y z}}{&#92;partial z}=0 &#92;&#92;
@@ -3892,13 +3892,13 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
     
     &lt;/p&gt;&lt;p&gt;The Kronecker delta is a useful entity is defined as
     
-    &lt;/p&gt;&lt;p&gt;&#92;[
+    &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
     &#92;delta_{i j}= &#92;begin{cases}0, &amp; i &#92;neq j &#92;&#92; 1, &amp; i=j&#92;end{cases}
     &#92;]
     
     &lt;/p&gt;&lt;p&gt;This is the index form of the unit matrix &#92;(&#92;mathbf{I}&#92;) :
     
-    &lt;/p&gt;&lt;p&gt;&#92;[
+    &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
     &#92;delta_{i j}=&#92;mathbf{I}=&#92;left[&#92;begin{array}{ccc}
     1 &amp; 0 &amp; 0 &#92;&#92;
     0 &amp; 1 &amp; 0 &#92;&#92;
@@ -3908,7 +3908,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
     
     &lt;/p&gt;&lt;p&gt;So, for instance
     
-    &lt;/p&gt;&lt;p&gt;&#92;[
+    &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
     &#92;sigma_{k k} &#92;delta_{i j}=&#92;left[&#92;begin{array}{ccc}
     &#92;sigma_{k k} &amp; 0 &amp; 0 &#92;&#92;
     0 &amp; &#92;sigma_{k k} &amp; 0 &#92;&#92;
@@ -3923,51 +3923,49 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 
 &lt;p&gt;Now, before returning to &lt;em&gt;Prof. Peter Kuchment&#39;s&lt;/em&gt; lovely review of the ODE, and for one last note beyond &lt;em&gt;Prof. David Roylance&#39;s&lt;/em&gt; notes on index notation, (this time from the faceless physics department at &lt;a href=&quot;https://bohr.physics.berkeley.edu/classes/209/f02/leviciv.pdf&quot;&gt;UC Berkeley, Fall 2002&lt;/a&gt;): I want to address the Levi-Civita Symbol which is closely tied to index notation and the Kronecker delta.
 
-    &lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;&lt;br&gt;
+    
 &lt;p&gt;The Levi-Civita symbol is useful for converting cross products and curls into the language of tensor analysis, and for many other purposes. The following is a summary of its most useful properties in three-dimensional Euclidean space.&lt;/p&gt;
 &lt;p&gt;The Levi-Civita symbol is defined by&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;epsilon_{i j k}= &#92;begin{cases}1, &amp;amp; &#92;text { if }(i j k) &#92;text { is an even permutation of }(123) ; &#92;&#92; -1, &amp;amp; &#92;text { if }(i j k) &#92;text { is an odd permutation of }(123) ; &#92;&#92; 0, &amp;amp; &#92;text { otherwise. }&#92;end{cases}&#92;]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;It has 27 components, of which only 6 are nonzero. It follows directly from this definition that &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;epsilon_{i j k}&#92;)&lt;/span&gt; changes sign if any two of its indices are exchanged,&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;epsilon_{i j k}=&#92;epsilon_{j k i}=&#92;epsilon_{k i j}=-&#92;epsilon_{j i k}=-&#92;epsilon_{i k j}=-&#92;epsilon_{k j i} .&#92;]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The Levi-Civita symbol is convenient for expressing cross products and curls in tensor notation. For example, if &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{A}&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{B}&#92;)&lt;/span&gt; are two vectors, then&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[(&#92;mathbf{A} &#92;times &#92;mathbf{B})_{i}=&#92;epsilon_{i j k} A_{j} B_{k}&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;epsilon_{ijk}= &#92;begin{cases}1, &amp; &#92;text{ if }(ijk) &#92;text{ is an even permutation of }(123) ; &#92;&#92; -1, &amp; &#92;text{ if }(ijk) &#92;text{ is an odd permutation of }(123) ; &#92;&#92; 0, &amp; &#92;text{ otherwise. }&#92;end{cases}&#92;]&lt;/p&gt;
+&lt;p&gt;It has 27 components, of which only 6 are nonzero. It follows directly from this definition that &#92;(&#92;epsilon_{ijk}&#92;) changes sign if any two of its indices are exchanged,&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;epsilon_{ijk}=&#92;epsilon_{jki}=&#92;epsilon_{kij}=-&#92;epsilon_{jik}=-&#92;epsilon_{ikj}=-&#92;epsilon_{kji} .&#92;]&lt;/p&gt;
+&lt;p&gt;The Levi-Civita symbol is convenient for expressing cross products and curls in tensor notation. For example, if &#92;(&#92;mathbf{A}&#92;) and &#92;(&#92;mathbf{B}&#92;) are two vectors, then&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[(&#92;mathbf{A} &#92;times &#92;mathbf{B})_{i}=&#92;epsilon_{ijk} A_{j} B_{k}&#92;]&lt;/p&gt;
 &lt;p&gt;and&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[(&#92;nabla &#92;times &#92;mathbf{B})_{i}=&#92;epsilon_{i j k} &#92;frac{&#92;partial B_{k}}{&#92;partial x_{j}}&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[(&#92;nabla &#92;times &#92;mathbf{B})_{i}=&#92;epsilon_{ijk} &#92;frac{&#92;partial B_{k}}{&#92;partial x_{j}}&#92;]&lt;/p&gt;
 &lt;p&gt;Any combination of an even number of Levi-Civita symbols (or an even number of cross products and curls) can be reduced to dot products with the following system of identities. Similarly, any combination of an odd number of Levi-Civita symbols (or an odd number of cross products and curls) can be reduced to a single Levi-Civita symbol (or a cross product or a curl) plus dot products. The first is the most general:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;epsilon_{i j k} &#92;epsilon_{&#92;ell m n}=&#92;left|&#92;begin{array}{ccc}
-&#92;delta_{i &#92;ell} &amp;amp; &#92;delta_{i m} &amp;amp; &#92;delta_{i n} &#92;&#92;
-&#92;delta_{j &#92;ell} &amp;amp; &#92;delta_{j m} &amp;amp; &#92;delta_{j n} &#92;&#92;
-&#92;delta_{k &#92;ell} &amp;amp; &#92;delta_{k m} &amp;amp; &#92;delta_{k n}
-&#92;end{array}&#92;right|&#92;]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Notice that the indices &lt;span class=&quot;math inline&quot;&gt;&#92;((i j k)&#92;)&lt;/span&gt; label the rows, while ( &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;ell m n)&#92;)&lt;/span&gt; label the columns. If this is contracted on &lt;span class=&quot;math inline&quot;&gt;&#92;(i&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(l&#92;)&lt;/span&gt;, we obtain&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;epsilon_{i j k} &#92;epsilon_{i m n}=&#92;left|&#92;begin{array}{cc}
-&#92;delta_{j m} &amp;amp; &#92;delta_{j n} &#92;&#92;
-&#92;delta_{k m} &amp;amp; &#92;delta_{k n}
-&#92;end{array}&#92;right|=&#92;delta_{j m} &#92;delta_{k n}-&#92;delta_{j n} &#92;delta_{k m} .&#92;]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;This identity is the one used most often, for boiling down two cross products that have one index in common, such as &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;nabla &#92;times(&#92;mathbf{A} &#92;times &#92;mathbf{B})&#92;)&lt;/span&gt;. By contracting &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;epsilon_{i j k} &#92;epsilon_{i m n}&#92;)&lt;/span&gt; in &lt;span class=&quot;math inline&quot;&gt;&#92;(j&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(m&#92;)&lt;/span&gt; we obtain&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;epsilon_{i j k} &#92;epsilon_{i j n}=2 &#92;delta_{k n} &#92;text {. }&#92;]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Finally, contracting on &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(n&#92;)&lt;/span&gt; we obtain&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;epsilon_{i j k} &#92;epsilon_{i j k}=6&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;epsilon_{ijk} &#92;epsilon_{&#92;ell mn}=&#92;left|&#92;begin{array}{ccc}
+&#92;delta_{i&#92;ell} &amp; &#92;delta_{im} &amp; &#92;delta_{in} &#92;&#92;
+&#92;delta_{j&#92;ell} &amp; &#92;delta_{jm} &amp; &#92;delta_{jn} &#92;&#92;
+&#92;delta_{k&#92;ell} &amp; &#92;delta_{km} &amp; &#92;delta_{kn}
+&#92;end{array}&#92;right|&#92;]&lt;/p&gt;&lt;p&gt;Notice that the indices &#92;((i j k)&#92;) label the rows, while ( &#92;(&#92;ell m n)&#92;) label the columns. If this is contracted on &#92;(i&#92;) and &#92;(l&#92;), we obtain&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;epsilon_{ijk} &#92;epsilon_{imn}=&#92;left|&#92;begin{array}{cc}
+&#92;delta_{jm} &amp; &#92;delta_{jn} &#92;&#92;
+&#92;delta_{km} &amp; &#92;delta_{kn}
+&#92;end{array}&#92;right|=&#92;delta_{jm} &#92;delta_{kn}-&#92;delta_{jn} &#92;delta_{km} .&#92;]&lt;/p&gt;
+&lt;p&gt;This identity is the one used most often, for boiling down two cross products that have one index in common, such as &#92;(&#92;nabla &#92;times(&#92;mathbf{A} &#92;times &#92;mathbf{B})&#92;). By contracting &#92;(&#92;epsilon_{ijk} &#92;epsilon_{ijn}&#92;) in &#92;(j&#92;) and &#92;(m&#92;) we obtain&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;epsilon_{ijk} &#92;epsilon_{ijn}=2 &#92;delta_{kn} &#92;text {. }&#92;]&lt;/p&gt;
+&lt;p&gt;Finally, contracting on &#92;(k&#92;) and &#92;(n&#92;) we obtain&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;epsilon_{ijk} &#92;epsilon_{ijk}=6&#92;]&lt;/p&gt;
 &lt;p&gt;It should be clear how to generalize these identities to higher dimensions.&lt;/p&gt;
-&lt;p&gt;If &lt;span class=&quot;math inline&quot;&gt;&#92;(A_{i j}=-A_{j i}&#92;)&lt;/span&gt; is an antisymmetric, &lt;span class=&quot;math inline&quot;&gt;&#92;(3 &#92;times 3&#92;)&lt;/span&gt; tensor, it has 3 independent components that we can associate with a 3 -vector &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{A}&#92;)&lt;/span&gt;, as follows:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[A_{i j}=&#92;left(&#92;begin{array}{ccc}
-0 &amp;amp; A_{3} &amp;amp; -A_{2} &#92;&#92;
--A_{3} &amp;amp; 0 &amp;amp; A_{1} &#92;&#92;
-A_{2} &amp;amp; -A_{1} &amp;amp; 0
-&#92;end{array}&#92;right)=&#92;epsilon_{i j k} A_{k} .&#92;]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The inverse of this is&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[A_{i j}=&#92;frac{1}{2} &#92;epsilon_{i j k} A_{k}&#92;]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Using thes identities, the multiplication of an antisymmetric matrix times a vector can be reexpressed in terms of a cross product. That is, if&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[X_{i}=A_{i j} Y_{j}&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;If &#92;(A_{ij}=-A_{ji}&#92;) is an antisymmetric, &#92;(3 &#92;times 3&#92;) tensor, it has 3 independent components that we can associate with a 3 -vector &#92;(&#92;mathbf{A}&#92;), as follows:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[A_{ij}=&#92;left(&#92;begin{array}{ccc}
+0 &amp; A_{3} &amp; -A_{2} &#92;&#92;
+-A_{3} &amp; 0 &amp; A_{1} &#92;&#92;
+A_{2} &amp; -A_{1} &amp; 0
+&#92;end{array}&#92;right)=&#92;epsilon_{ijk} A_{k} .&#92;]&lt;/p&gt;
+&lt;p&gt;The inverse of this is&lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[A_{ij}=&#92;frac{1}{2} &#92;epsilon_{ijk} A_{k}&#92;]&lt;/p&gt;
+&lt;p&gt;Using these identities, the multiplication of an antisymmetric matrix times a vector can be reexpressed in terms of a cross product. That is, if&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[X_{i}=A_{ij} Y_{j}&#92;]&lt;/p&gt;
 &lt;p&gt;then&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;mathbf{X}=&#92;mathbf{Y} &#92;times &#92;mathbf{A}&#92;]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Similarly, if &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{A}&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{B}&#92;)&lt;/span&gt; are two vectors, then&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[A_{i} B_{j}-A_{j} B_{i}=&#92;epsilon_{i j k}(&#92;mathbf{A} &#92;times &#92;mathbf{B})_{k},&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;mathbf{X}=&#92;mathbf{Y} &#92;times &#92;mathbf{A}&#92;]&lt;/p&gt;
+&lt;p&gt;Similarly, if &#92;(&#92;mathbf{A}&#92;) and &#92;(&#92;mathbf{B}&#92;) are two vectors, then&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[A_{i} B_{j}-A_{j} B_{i}=&#92;epsilon_{ijk}(&#92;mathbf{A} &#92;times &#92;mathbf{B})_{k},&#92;]&lt;/p&gt;
 &lt;p&gt;and&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;frac{&#92;partial B_{j}}{&#92;partial x_{i}}-&#92;frac{&#92;partial B_{i}}{&#92;partial x_{j}}=&#92;epsilon_{i j k}(&#92;nabla &#92;times &#92;mathbf{B})_{k}&#92;]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Finally, if &lt;span class=&quot;math inline&quot;&gt;&#92;(M_{i j}&#92;)&lt;/span&gt; is a &lt;span class=&quot;math inline&quot;&gt;&#92;(3 &#92;times 3&#92;)&lt;/span&gt; matrix (or tensor), then&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[&#92;operatorname{det} M=&#92;epsilon_{i j k} M_{1 i} M_{2 j} M_{3 k}=&#92;frac{1}{6} &#92;epsilon_{i j k} &#92;epsilon_{&#92;ell m n} M_{i &#92;ell} M_{j m} M_{k n} .&#92;]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The Levi-Civita symbol has been defined here only on &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{R}^{3}&#92;)&lt;/span&gt;, but most of the properties above are easily generalized to &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{R}^{n}&#92;)&lt;/span&gt; (including the case &lt;span class=&quot;math inline&quot;&gt;&#92;(n=2&#92;)&lt;/span&gt; ). It only transforms as a tensor under proper orthogonal changes of coordinates, which is why we are calling it a &quot;symbol&quot; instead of a &quot;tensor.&quot; It can, however, be used to create so-called tensor densities on arbitrary manifolds with a metric, and has fascinating applications in Hodge-de Rham theory in differential geometry.&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;frac{&#92;partial B_{j}}{&#92;partial x_{i}}-&#92;frac{&#92;partial B_{i}}{&#92;partial x_{j}}=&#92;epsilon_{ijk}(&#92;nabla &#92;times &#92;mathbf{B})_{k}&#92;]&lt;/p&gt;
+&lt;p&gt;Finally, if &#92;(M_{ij}&#92;) is a &#92;(3 &#92;times 3&#92;) matrix (or tensor), then&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;operatorname{det} M=&#92;epsilon_{ijk} M_{1i} M_{2j} M_{3k}=&#92;frac{1}{6} &#92;epsilon_{ijk} &#92;epsilon_{&#92;ell mn} M_{i&#92;ell} M_{jm} M_{kn} .&#92;]&lt;/p&gt;&lt;p&gt;The Levi-Civita symbol has been defined here only on &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{R}^{3}&#92;)&lt;/span&gt;, but most of the properties above are easily generalized to &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{R}^{n}&#92;)&lt;/span&gt; (including the case &lt;span class=&quot;math inline&quot;&gt;&#92;(n=2&#92;)&lt;/span&gt; ). It only transforms as a tensor under proper orthogonal changes of coordinates, which is why we are calling it a &quot;symbol&quot; instead of a &quot;tensor.&quot; It can, however, be used to create so-called tensor densities on arbitrary manifolds with a metric, and has fascinating applications in Hodge-de Rham theory in differential geometry.&lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;br&gt;
 
 &lt;/p&gt;&lt;p&gt;As a postscript to that last note on the Levi-Civita symbol (you should be glad I have not touched on the dozens of notations for differential geometry, &amp; all that.) I just wanted to give the definition and properties of the &#92;(n&#92;)-dimensional case for Levi-Civita from &lt;a href=&quot;https://en.wikipedia.org/wiki/Levi-Civita_symbol&quot;&gt;Wikipedia: Levi-Civita symbol&lt;/a&gt;&lt;/p&gt;
@@ -4023,15 +4021,15 @@ A_{2} &amp;amp; -A_{1} &amp;amp; 0
 In the following examples, Einstein notation is used.&lt;/p&gt;
 &lt;b id=&quot;two_dimensions&quot;&gt;Two dimensions&lt;/b&gt;
 &lt;p&gt;In two dimensions, when all &#92;(i, &#92; j, &#92; m, &#92; n&#92;)  each take the values 1 and 2:&lt;/p&gt;
-&lt;p&gt;&#92;[&#92;varepsilon_{ij} &#92;varepsilon^{mn} = {&#92;delta_i}^m {&#92;delta_j}^n - {&#92;delta_i}^n {&#92;delta_j}^m&#92;]&lt;/p&gt;
-&lt;p&gt;&#92;[&#92;varepsilon_{ij} &#92;varepsilon^{in} = {&#92;delta_j}^n&#92;]&lt;/p&gt;
-&lt;p&gt;&#92;[&#92;varepsilon_{ij} &#92;varepsilon^{ij} = 2.&#92;]&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;varepsilon_{ij} &#92;varepsilon^{mn} = {&#92;delta_i}^m {&#92;delta_j}^n - {&#92;delta_i}^n {&#92;delta_j}^m&#92;]&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;varepsilon_{ij} &#92;varepsilon^{in} = {&#92;delta_j}^n&#92;]&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;varepsilon_{ij} &#92;varepsilon^{ij} = 2.&#92;]&lt;/p&gt;
 &lt;b id=&quot;three_dimensions&quot;&gt;Three dimensions&lt;/b&gt;
 &lt;p&gt;In three dimensions, when all &#92;(i, &#92; j, &#92; m, &#92; n&#92;) each take values 1, 2, and 3:&lt;/p&gt;
 
-&lt;p&gt;&#92;[&#92;varepsilon_{ijk} &#92;varepsilon^{pqk}=&#92;delta_i{}^{p}&#92;delta_j{}^q - &#92;delta_i{}^q&#92;delta_j{}^p&#92;] &lt;/p&gt;
-&lt;p&gt;&#92;[&#92;varepsilon_{jmn} &#92;varepsilon^{imn}=2{&#92;delta_j}^i&#92;] &lt;/p&gt;
-&lt;p&gt;&#92;[&#92;varepsilon_{ijk} &#92;varepsilon^{ijk}=6.&#92;] &lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;varepsilon_{ijk} &#92;varepsilon^{pqk}=&#92;delta_i{}^{p}&#92;delta_j{}^q - &#92;delta_i{}^q&#92;delta_j{}^p&#92;] &lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;varepsilon_{jmn} &#92;varepsilon^{imn}=2{&#92;delta_j}^i&#92;] &lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;varepsilon_{ijk} &#92;varepsilon^{ijk}=6.&#92;] &lt;/p&gt;
 
 &lt;b id=&quot;product&quot;&gt;Product&lt;/b&gt;
 &lt;p&gt;The Levi-Civita symbol is related to the Kronecker delta. In three dimensions, the relationship is given by the following equations (vertical lines denote the determinant):&lt;/p&gt;
@@ -4315,9 +4313,10 @@ y_{i+1}(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, y_i(&#92;tau)) d&#92;tau &#92;qu
         One can come up with a right definition using the following heuristics:
         Let &#92;( x(t) &#92;) be a solution of the equation defined by our vector field: &#92;( x_0 = F(x) &#92;).
         We can act on this solution by our diffeomorphism to get a new function &#92;( x_G(t) = G(x(t)) &#92;).
-        Then the chain rule gives &#92;( x_0^G = (DG)(x) x_0 = (DG)(x) F(x) = (DG)(G^{-1}(x_G)) F(G^{-1}(x_G)) &#92;).
+        Then the chain rule gives &lt;/p&gt;
+        &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[ x_0^G = (DG)(x) x_0 = (DG)(x) F(x) = (DG)(G^{-1}(x_G)) F(G^{-1}(x_G)) &#92;]&lt;/p&gt;
         In other words, the &#92;( G &#92;)-modified function &#92;( x_G &#92;) satisfies the ODE &#92;( y_0 = F_G(y) &#92;) with a vector field &#92;( F_G(y) = (DG)(G^{-1}(y)) F(G^{-1}(y)) &#92;).
-      &lt;/p&gt;
+      &lt;p&gt;&lt;/p&gt;
         
 &lt;/blockquote&gt;
 
