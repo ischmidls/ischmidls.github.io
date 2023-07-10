@@ -1,3 +1,4 @@
+<div style="background-color: coral;font-weight: bolder;">DRAFT under construction 7/10/23-...</div>
 <p>As with most of these posts, what I have included here closely follows and often directly copies or quotes a text written by someone more errudite than me. In this case thank you to <em>Prof. Peter Kuchment</em> for <a href="https://www.math.tamu.edu/~kuchment/ode.pdf">A brief sketch of the main ODE theorems</a> written for Texas A&M University's Math 611, Fall 2017.</p>
 
 <h3>Main notions</h3>
@@ -52,7 +53,7 @@
   
 <p>I skipped section 2 because it's like three lines listing ODE vs PDE, Order, and Linear vs Non-linear.</p>
 <h3>Order reduction</h3>
-<p>TLDR; (<em>Prof. Peter Kuchment's</em>) idea: just use vectors to represent systems of equations, then its one row of vectors.</p>
+<p class="text-primary">TLDR; (<em>Prof. Peter Kuchment's</em>) idea: just use vectors to represent systems of equations, then its one row of vectors.</p>
 
         <div class="text-secondary pl-5">
         <p>
@@ -88,7 +89,7 @@
 <p>
   <b>Definition 3:</b> 
 </p>
-<p>TLDR; with all due respect to <em>Prof. Peter Kuchment</em> his is just about whether the ODE does rely (non-autonomous) on stuff other than the initial condition \(x=0\), or if the ODE does no and only relies on the intial condition (autonomous).</p>
+<p class="text-primary">TLDR; with all due respect to <em>Prof. Peter Kuchment</em> his is just about whether the ODE does rely (non-autonomous) on stuff other than the initial condition \(x=0\), or if the ODE does no and only relies on the intial condition (autonomous).</p>
     <div class="text-secondary pl-5">
     <ul>
     <li>Normal:</li>
@@ -376,7 +377,7 @@ A_{2} & -A_{1} & 0
 
 <p>Now, the properties of \(n\)-Levi-Civita are harder to shoot off because the \(n\)-case is more like the top rung of the Levi-Civita latter. Where low dimensional intuition is merely helpful for the definition and general understanding of Levi-Civita, such low dimensional intuition is almost necessary for familiarity with the \(n\)-dimensional properties.</p>
 <div class='card'><div class='card-body'>
-    <p>TLDR; this first paragraph describes the tensor properties of Levi-Civita, but that might warrant a whole different post, so I paraphrased plus reduced the font size and color it to skip or read as you please.</p>
+    <p class="text-primary">TLDR; this first paragraph describes the tensor properties of Levi-Civita, but that might warrant a whole different post, so I paraphrased plus reduced the font size and color it to skip or read as you please.</p>
    <div class="text-secondary pl-5"> 
     <ul>
         <li><sub>A permutation tensor has components given by the Levi-Civita symbol in an orthonormal basis. It is a tensor of covariant rank.</sub></li>
@@ -451,8 +452,10 @@ In the following examples, Einstein notation is used.</p>
 
 </div></div><br>
 <p>Now, time to put that index notation to use!</p>
+<p><b id="def4">Definition 4:</b></p>
+<p class="text-primary">TLDR; </p>
 <p>
-  <b id="def4">Definition 4:</b>  For a differentiable function \( F: \mathbb{R}^m \rightarrow \mathbb{R}^n \), the differential \( DF(y) \) of \( F \) at a point \( y \) is the linear mapping from \( \mathbb{R}^m \) to \( \mathbb{R}^n \) with the matrix:
+    For a differentiable function \( F: \mathbb{R}^m \rightarrow \mathbb{R}^n \), the differential \( DF(y) \) of \( F \) at a point \( y \) is the linear mapping from \( \mathbb{R}^m \) to \( \mathbb{R}^n \) with the matrix:
 </p>
 
 <p style="overflow: auto;">\[
@@ -505,8 +508,9 @@ F(y + x) = F(y) + DF(y)x + o(|x|)
 <p style="overflow: auto;">
   \( C^r \) - class of \( r \) times continuously differentiable functions (applicable to both scalar and vector-valued functions of different numbers of variables, should be understandable from the context).
 </p>
-
-<p><b>Definition 7:</b>  A real-valued function \( A(x) \) on \( \mathbb{R} \) is a <b>contraction</b> if it satisfies the inequality</p>
+<p><b>Definition 7:</b></p>
+<p class="text-primary">TLDR; </p>
+<p>  A real-valued function \( A(x) \) on \( \mathbb{R} \) is a <b>contraction</b> if it satisfies the inequality</p>
 
 <p style="overflow: auto;">\[
 | A(x) - A(y) | \leq K | x - y |
@@ -690,7 +694,7 @@ y_{i+1}(t) = x_0 + \int_{t_0}^t F(\tau, y_i(\tau)) d\tau \quad (14)
 </blockquote>
 
 <p><b>Definition 19:</b> </p>
-
+<p class="text-primary">TLDR; </p>
 <p>
   Let \( F(x) \) be a vector field and \( G \) be a diffeomorphism.
   Then one defines a new vector field as follows: \( F_G(x) = (DG)(G^{-1}(x)) F(G^{-1}(x)) \).

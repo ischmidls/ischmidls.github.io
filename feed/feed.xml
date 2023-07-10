@@ -3629,7 +3629,8 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 		<updated>2023-07-03T17:00:00-07:00</updated>
 		<id>https://ischmidls.github.io/posts/ode/</id>
 		<content type="html">
-		  &lt;p&gt;As with most of these posts, what I have included here closely follows and often directly copies or quotes a text written by someone more errudite than me. In this case thank you to &lt;em&gt;Prof. Peter Kuchment&lt;/em&gt; for &lt;a href=&quot;https://www.math.tamu.edu/~kuchment/ode.pdf&quot;&gt;A brief sketch of the main ODE theorems&lt;/a&gt; written for Texas A&amp;M University&#39;s Math 611, Fall 2017.&lt;/p&gt;
+		  &lt;div style=&quot;background-color: coral;font-weight: bolder;&quot;&gt;DRAFT under construction 7/10/23-...&lt;/div&gt;
+&lt;p&gt;As with most of these posts, what I have included here closely follows and often directly copies or quotes a text written by someone more errudite than me. In this case thank you to &lt;em&gt;Prof. Peter Kuchment&lt;/em&gt; for &lt;a href=&quot;https://www.math.tamu.edu/~kuchment/ode.pdf&quot;&gt;A brief sketch of the main ODE theorems&lt;/a&gt; written for Texas A&amp;M University&#39;s Math 611, Fall 2017.&lt;/p&gt;
 
 &lt;h3&gt;Main notions&lt;/h3&gt;
 &lt;p&gt;
@@ -3683,7 +3684,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
   
 &lt;p&gt;I skipped section 2 because it&#39;s like three lines listing ODE vs PDE, Order, and Linear vs Non-linear.&lt;/p&gt;
 &lt;h3&gt;Order reduction&lt;/h3&gt;
-&lt;p&gt;TLDR; (&lt;em&gt;Prof. Peter Kuchment&#39;s&lt;/em&gt;) idea: just use vectors to represent systems of equations, then its one row of vectors.&lt;/p&gt;
+&lt;p class=&quot;text-primary&quot;&gt;TLDR; (&lt;em&gt;Prof. Peter Kuchment&#39;s&lt;/em&gt;) idea: just use vectors to represent systems of equations, then its one row of vectors.&lt;/p&gt;
 
         &lt;div class=&quot;text-secondary pl-5&quot;&gt;
         &lt;p&gt;
@@ -3719,7 +3720,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 &lt;p&gt;
   &lt;b&gt;Definition 3:&lt;/b&gt; 
 &lt;/p&gt;
-&lt;p&gt;TLDR; with all due respect to &lt;em&gt;Prof. Peter Kuchment&lt;/em&gt; his is just about whether the ODE does rely (non-autonomous) on stuff other than the initial condition &#92;(x=0&#92;), or if the ODE does no and only relies on the intial condition (autonomous).&lt;/p&gt;
+&lt;p class=&quot;text-primary&quot;&gt;TLDR; with all due respect to &lt;em&gt;Prof. Peter Kuchment&lt;/em&gt; his is just about whether the ODE does rely (non-autonomous) on stuff other than the initial condition &#92;(x=0&#92;), or if the ODE does no and only relies on the intial condition (autonomous).&lt;/p&gt;
     &lt;div class=&quot;text-secondary pl-5&quot;&gt;
     &lt;ul&gt;
     &lt;li&gt;Normal:&lt;/li&gt;
@@ -4007,7 +4008,7 @@ A_{2} &amp; -A_{1} &amp; 0
 
 &lt;p&gt;Now, the properties of &#92;(n&#92;)-Levi-Civita are harder to shoot off because the &#92;(n&#92;)-case is more like the top rung of the Levi-Civita latter. Where low dimensional intuition is merely helpful for the definition and general understanding of Levi-Civita, such low dimensional intuition is almost necessary for familiarity with the &#92;(n&#92;)-dimensional properties.&lt;/p&gt;
 &lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
-    &lt;p&gt;TLDR; this first paragraph describes the tensor properties of Levi-Civita, but that might warrant a whole different post, so I paraphrased plus reduced the font size and color it to skip or read as you please.&lt;/p&gt;
+    &lt;p class=&quot;text-primary&quot;&gt;TLDR; this first paragraph describes the tensor properties of Levi-Civita, but that might warrant a whole different post, so I paraphrased plus reduced the font size and color it to skip or read as you please.&lt;/p&gt;
    &lt;div class=&quot;text-secondary pl-5&quot;&gt; 
     &lt;ul&gt;
         &lt;li&gt;&lt;sub&gt;A permutation tensor has components given by the Levi-Civita symbol in an orthonormal basis. It is a tensor of covariant rank.&lt;/sub&gt;&lt;/li&gt;
@@ -4082,8 +4083,10 @@ In the following examples, Einstein notation is used.&lt;/p&gt;
 
 &lt;/div&gt;&lt;/div&gt;&lt;br&gt;
 &lt;p&gt;Now, time to put that index notation to use!&lt;/p&gt;
+&lt;p&gt;&lt;b id=&quot;def4&quot;&gt;Definition 4:&lt;/b&gt;&lt;/p&gt;
+&lt;p class=&quot;text-primary&quot;&gt;TLDR; &lt;/p&gt;
 &lt;p&gt;
-  &lt;b id=&quot;def4&quot;&gt;Definition 4:&lt;/b&gt;  For a differentiable function &#92;( F: &#92;mathbb{R}^m &#92;rightarrow &#92;mathbb{R}^n &#92;), the differential &#92;( DF(y) &#92;) of &#92;( F &#92;) at a point &#92;( y &#92;) is the linear mapping from &#92;( &#92;mathbb{R}^m &#92;) to &#92;( &#92;mathbb{R}^n &#92;) with the matrix:
+    For a differentiable function &#92;( F: &#92;mathbb{R}^m &#92;rightarrow &#92;mathbb{R}^n &#92;), the differential &#92;( DF(y) &#92;) of &#92;( F &#92;) at a point &#92;( y &#92;) is the linear mapping from &#92;( &#92;mathbb{R}^m &#92;) to &#92;( &#92;mathbb{R}^n &#92;) with the matrix:
 &lt;/p&gt;
 
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
@@ -4136,8 +4139,9 @@ F(y + x) = F(y) + DF(y)x + o(|x|)
 &lt;p style=&quot;overflow: auto;&quot;&gt;
   &#92;( C^r &#92;) - class of &#92;( r &#92;) times continuously differentiable functions (applicable to both scalar and vector-valued functions of different numbers of variables, should be understandable from the context).
 &lt;/p&gt;
-
-&lt;p&gt;&lt;b&gt;Definition 7:&lt;/b&gt;  A real-valued function &#92;( A(x) &#92;) on &#92;( &#92;mathbb{R} &#92;) is a &lt;b&gt;contraction&lt;/b&gt; if it satisfies the inequality&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Definition 7:&lt;/b&gt;&lt;/p&gt;
+&lt;p class=&quot;text-primary&quot;&gt;TLDR; &lt;/p&gt;
+&lt;p&gt;  A real-valued function &#92;( A(x) &#92;) on &#92;( &#92;mathbb{R} &#92;) is a &lt;b&gt;contraction&lt;/b&gt; if it satisfies the inequality&lt;/p&gt;
 
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
 | A(x) - A(y) | &#92;leq K | x - y |
@@ -4321,7 +4325,7 @@ y_{i+1}(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, y_i(&#92;tau)) d&#92;tau &#92;qu
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;b&gt;Definition 19:&lt;/b&gt; &lt;/p&gt;
-
+&lt;p class=&quot;text-primary&quot;&gt;TLDR; &lt;/p&gt;
 &lt;p&gt;
   Let &#92;( F(x) &#92;) be a vector field and &#92;( G &#92;) be a diffeomorphism.
   Then one defines a new vector field as follows: &#92;( F_G(x) = (DG)(G^{-1}(x)) F(G^{-1}(x)) &#92;).
