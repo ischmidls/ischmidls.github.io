@@ -453,25 +453,12 @@ In the following examples, Einstein notation is used.</p>
 </div></div><br>
 <p>Now, time to put that index notation to use!</p>
 <p><b id="def4">Definition 4:</b></p>
-<p class="text-primary">TLDR; </p>
-<p>
-    For a differentiable function \( F: \mathbb{R}^m \rightarrow \mathbb{R}^n \), the differential \( DF(y) \) of \( F \) at a point \( y \) is the linear mapping from \( \mathbb{R}^m \) to \( \mathbb{R}^n \) with the matrix:
-</p>
-
-<p style="overflow: auto;">\[
-\{DF\}_{ij}(y) = \frac{\partial F_i}{\partial x_j}(y) \quad (9)
-\]</p>
-
-<p>
-  For a vector \( x \) of small norm, \( DF(y)x \) is the linear approximation of the change of the function \( F(y + x) - F(y) \), i.e., (Taylor formula of first order, or linearization formula):
-</p>
-
-<p style="overflow: auto;">\[
-F(y + x) = F(y) + DF(y)x + o(|x|)
-\] </p>
-
-
-<p><b>Theorem 5:</b>  Existence and Uniqueness Theorem.</p>
+<p class="text-primary">TLDR; <em>Prof. Peter Kuchment</em> says differentials are matrices (linear transforms) & small-norm differnetials are just first order Taylor polynomials, oh my.</p>
+<p>Even though <em>Prof. Peter Kuchment</em> does alright, I tried to clarify this a bit...</p>
+<p>A given differentiable function \(F: \mathbb{R}^m \rightarrow \mathbb{R}^n\) represents a function that maps points from an \(m\)-dimensional space to an \(n\)-dimensional space. For example, \(F\) could be a mapping from a 3D space to a 2D space.</p>
+<p>The differential \(DF(y)\) of function \(F\) at a point \(y\) is the linear mapping from \(\mathbb{R}^m\) to \(\mathbb{R}^n\). In other words, it is a linear transformation that takes vectors in the \(m\)-dimensional space as input and produces vectors in the \(n\)-dimensional space as output.</p>
+<p>The matrix representation of \(DF(y)\) is given by the expression \(\{DF\}_{ij}(y) = \frac{\partial F_i}{\partial x_j}(y)\), where \(\{DF\}_{ij}(y)\) represents the element in the \(i\)-th row and \(j\)-th column of the matrix. This element is calculated by taking the partial derivative of the \(i\)-th component of \(F\) with respect to the \(j\)-th variable evaluated at point \(y\).</p>
+<p>For a small vector \(x\) with a small norm, \(DF(y)x\) represents the linear approximation of the change in the function \(F\) between points \(y + x\) and \(y\). This approximation is given by the formula \(F(y + x) = F(y) + DF(y)x + o(|x|)\), where \(o(|x|)\) denotes a term that is "smaller" than \(|x|\) as \(x\) approaches the zero vector. This formula is known as the Taylor formula of the first order or the linearization formula.</p><p><b>Theorem 5:</b>  Existence and Uniqueness Theorem.</p>
 
 <p>
   
@@ -509,7 +496,7 @@ F(y + x) = F(y) + DF(y)x + o(|x|)
   \( C^r \) - class of \( r \) times continuously differentiable functions (applicable to both scalar and vector-valued functions of different numbers of variables, should be understandable from the context).
 </p>
 <p><b>Definition 7:</b></p>
-<p class="text-primary">TLDR; </p>
+<p class="text-primary">TLDR; a real-valued function \( A(x) \) is considered a contraction if it fulfills the inequality condition, indicating that the function values decrease as the input values become closer to each other, with the rate of decrease determined by the constant \( K \), which must be less than 1.</p>
 <p>  A real-valued function \( A(x) \) on \( \mathbb{R} \) is a <b>contraction</b> if it satisfies the inequality</p>
 
 <p style="overflow: auto;">\[
@@ -694,11 +681,12 @@ y_{i+1}(t) = x_0 + \int_{t_0}^t F(\tau, y_i(\tau)) d\tau \quad (14)
 </blockquote>
 
 <p><b>Definition 19:</b> </p>
-<p class="text-primary">TLDR; </p>
+<p class="text-primary">TLDR; this is about creating a new vector field called \( F_G(x) \). This is done by taking an existing vector field \( F(x) \) and using a special transformation called a diffeomorphism \( G \). We apply \( G \) to the point \( x \), then take the inverse of that transformed point \( G^{-1}(x) \). We use \( G^{-1}(x) \) as an input to \( F(x) \) and get a vector \( F(G^{-1}(x)) \). Finally, we use the differential of the diffeomorphism \( DG \) on the vector \( F(G^{-1}(x)) \) to get the new vector \( F_G(x) \).</p>
 <p>
   Let \( F(x) \) be a vector field and \( G \) be a diffeomorphism.
   Then one defines a new vector field as follows: \( F_G(x) = (DG)(G^{-1}(x)) F(G^{-1}(x)) \).
 </p>
+
 
 <p><b>Theorem 20:</b>  Vector Field Rectification Theorem.</p>
 

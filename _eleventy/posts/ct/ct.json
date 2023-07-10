@@ -1,0 +1,10 @@
+{
+    "title": "category theory for undergraduates",
+    "description": "category theory for undergraduates",
+    "date": "2023-03-24",
+    "tags": [
+      "math"
+    ],
+    "layout": "layouts/post.njk"
+  }
+  

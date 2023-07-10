@@ -1,7 +1,7 @@
 <ul>
 {% for post in postslist | reverse %}
   <li>
-    <a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    <strong><a href="{{ post.url | url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></strong>
     <time  class="text-secondary pl-5" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
       <!--tags-->
       <span class="pl-5">

@@ -1390,6 +1390,792 @@
 	</entry>
 	
 	<entry>
+		<title>category theory for undergraduates</title>
+		<link href="https://ischmidls.github.io/posts/ct/"/>
+		<updated>2023-03-23T17:00:00-07:00</updated>
+		<id>https://ischmidls.github.io/posts/ct/</id>
+		<content type="html">
+		  &lt;!--I converted this from a docx file with the Haskell program Pandoc, 
+    but the MathJax markup among other details were not quite right.
+    This is one reason for the font import below:
+--&gt;
+&lt;style&gt;
+        @font-face {
+            font-family: STIX;
+            src: url(&#92;fonts&#92;static&#92;STIXTwoText-BoldItalic.ttf);
+        }
+    .math.inline {
+        font-style: bold;
+        font-family: &quot;STIX&quot;;
+        }
+&lt;/style&gt;
+
+&lt;p&gt;Table of Contents&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;#introduction&quot;&gt;Introduction &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;#a-baseline-for-abstraction&quot;&gt;A Baseline for Abstraction
+&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;#direct-relationship-with-undergraduate-math&quot;&gt;Direct
+Relationship with Undergraduate Math&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;#category-theory-in-the-history-of-math&quot;&gt;Category Theory in
+the History of Math&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;#professional-opinions-on-category-theory&quot;&gt;Professional
+Opinions on Category Theory&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;#an-example-for-calculus-students&quot;&gt;An Example for Calculus
+Students&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;#conclusion&quot;&gt;Conclusion &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;#appendices&quot;&gt;Appendices &lt;/a&gt;&lt;/p&gt;
+    &lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;a href=&quot;#appendix-a&quot;&gt;Appendix A &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;#appendix-b&quot;&gt;Appendix B &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;#appendix-c&quot;&gt;Appendix C &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;#works-cited&quot;&gt;Works Cited &lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Math courses use memorization of calculations, theorems, lemmas, and
+corollaries, but category theory offers a way to study math holistically
+and intuitively. Category theory is the study of abstract mathematical
+structures as opposed to the memorization of formulas. Categories in
+math are analogous to the setting of a story. Just like every story has
+a protagonist, categories all have objects. The object is different in
+each category. An introduction to category theory for STEM
+undergraduates needs a balance of vernacular with complexity and
+abstraction. Understanding how math works is usually reserved for Ph.D.
+students but undergraduate students could learn some of these principles
+to understand and apply the principles of math. This raises the problem:
+how can an undergraduate course use category theory to reduce the
+required memorization without obscuring course material in abstraction?
+The development of category theory as a discipline, the history of
+mathematical research, and examples from mathematical practice
+illustrate the potential for an undergraduate course in category theory
+even while categorical treatment of these subjects falls back on
+multiple layers of abstraction.&lt;/p&gt;
+&lt;h1 id=&quot;a-baseline-for-abstraction&quot;&gt;A Baseline for Abstraction&lt;/h1&gt;
+&lt;p&gt;A popular case in the mathematics community is “Why can you turn
+clothing right-side-out?”, the highest scoring question under
+&lt;em&gt;topology&lt;/em&gt; on Mathematics Stack Exchange (Abichandani).&lt;a href=&quot;#fn1&quot; class=&quot;footnote-ref&quot; id=&quot;fnref1&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; In this case, the highest-scoring
+mathematical response touched largely on &lt;em&gt;manifold theory&lt;/em&gt; and
+&lt;em&gt;algebraic topology&lt;/em&gt;.&lt;a href=&quot;#fn2&quot; class=&quot;footnote-ref&quot; id=&quot;fnref2&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt; But, the questioner
+accepted the second highest-scoring response as the answer despite its
+using minimal math. This is because it is easy to get lost in
+abstraction. The contrast between discussing the “&lt;em&gt;homotopy long
+exact sequence of a fibration&lt;/em&gt;” and sewing pants cuffs together
+highlights the difficulty with category theory (“CT”).&lt;/p&gt;
+&lt;p&gt;This raises the question: how far should an undergraduate course go
+to balance understanding abstract concepts of CT without losing sight of
+the undergraduate math concepts? To understand the benefits of an
+undergraduate course in CT, it is crucial to know the level of
+complexity such a course would build up to. According to Lawvere and
+Schanuel, to begin a study of CT a student must start with basic
+examples such as a set&lt;a href=&quot;#fn3&quot; class=&quot;footnote-ref&quot; id=&quot;fnref3&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt; of colors &lt;span class=&quot;math inline&quot;&gt;{&lt;/span&gt;red, yellow, blue&lt;span class=&quot;math inline&quot;&gt;}&lt;/span&gt;. But sets are not immediately relevant to a
+calculus course. Further, most trivial examples of &lt;em&gt;groups&lt;/em&gt;&lt;a href=&quot;#fn4&quot; class=&quot;footnote-ref&quot; id=&quot;fnref4&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;4&lt;/sup&gt;&lt;/a&gt;—involve the integers rather than the
+real numbers&lt;a href=&quot;#fn5&quot; class=&quot;footnote-ref&quot; id=&quot;fnref5&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;5&lt;/sup&gt;&lt;/a&gt; which are preferred for calculus,
+matrix algebra, and differential equations.&lt;/p&gt;
+&lt;p&gt;To begin relating the basic examples of CT with conceptual math like
+calculus, introductory CT examples must be examined. The book
+&lt;em&gt;Conceptual Mathematics&lt;/em&gt; solely works in the category of sets,
+where &lt;em&gt;objects&lt;/em&gt; are sets and &lt;em&gt;morphisms&lt;/em&gt; are arrows that
+represent changes between objects i.e. functions for sets.&lt;a href=&quot;#fn6&quot; class=&quot;footnote-ref&quot; id=&quot;fnref6&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;6&lt;/sup&gt;&lt;/a&gt;
+Begin with a silly example the “set of people” &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;A&lt;/em&gt;=&lt;/span&gt;{Bilbo, Sam, Gandalf, Frodo} has a
+morphism &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;f&lt;/em&gt;=&lt;/span&gt; “favorite” to the
+“set of colors” &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;B&lt;/em&gt; = {&lt;/span&gt;red.
+orange, yellow, green, blue&lt;span class=&quot;math inline&quot;&gt;}&lt;/span&gt; (Lawvere
+and Schanuel 14). Notice, the map here does not reverse, as at least one
+of the colors is not a favorite, so &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;f&lt;/em&gt; : &lt;em&gt;A&lt;/em&gt; → &lt;em&gt;B&lt;/em&gt;&lt;/span&gt; is not
+an &lt;em&gt;isomorphism&lt;/em&gt;.&lt;a href=&quot;#fn7&quot; class=&quot;footnote-ref&quot; id=&quot;fnref7&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;7&lt;/sup&gt;&lt;/a&gt; Meanwhile, the morphism &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;f&lt;/em&gt; : &lt;em&gt;A&lt;/em&gt; → &lt;em&gt;A&lt;/em&gt;&lt;/span&gt; is
+isomorphic only if no two people have the same favorite person. This
+opens the door to calculus where isomorphism is a &lt;em&gt;one-to-one&lt;/em&gt;
+function. This categorical view of isomorphism does not require the
+abstractions from GEH that Appendix A illustrates. It is everywhere in
+calculus, where such theorems as Rolle’s theorem, the extreme value
+theorem, and the fundamental theorem of calculus all require functions
+to be isomorphic (Kofman). Instead of having numerous definitions from
+an advanced course like topology, students can draw arrows between
+letters to illustrate the same mathematical concept.&lt;a href=&quot;#fn8&quot; class=&quot;footnote-ref&quot; id=&quot;fnref8&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;8&lt;/sup&gt;&lt;/a&gt;
+This is one benefit of implementing CT as part of undergraduate
+studies.&lt;/p&gt;
+&lt;p&gt;A second major motivation of CT is the composition of morphisms,
+which &lt;strong&gt;Figure 1&lt;/strong&gt; (Appendix B) illustrates in the
+connection between integrals and derivatives in calculus. Working with
+the examples from &lt;em&gt;Conceptual Mathematics&lt;/em&gt; using sets, the
+equation &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;f&lt;/em&gt; ∘ &lt;em&gt;f&lt;/em&gt;: &lt;em&gt;A&lt;/em&gt; → &lt;em&gt;A&lt;/em&gt; → &lt;em&gt;B&lt;/em&gt;&lt;/span&gt;
+gives the favorite color of each person’s favorite person where &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;f&lt;/em&gt;&lt;/span&gt; is the “favorite morphism”, &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;A&lt;/em&gt;&lt;/span&gt; is the “people set”, and &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;B&lt;/em&gt;&lt;/span&gt; is the “color set” all in the
+category of sets. So, if Sam favors Bilbo, and Bilbo favors green, then
+this gives &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;f&lt;/em&gt; ∘ &lt;em&gt;f&lt;/em&gt;(&lt;em&gt;S&lt;/em&gt;&lt;em&gt;a&lt;/em&gt;&lt;em&gt;m&lt;/em&gt;) = &lt;em&gt;g&lt;/em&gt;&lt;em&gt;r&lt;/em&gt;&lt;em&gt;e&lt;/em&gt;&lt;em&gt;e&lt;/em&gt;&lt;em&gt;n&lt;/em&gt;&lt;/span&gt;
+for the morphism on these sets.&lt;/p&gt;
+&lt;p&gt;Now, the only two rules for composition, are &lt;em&gt;associativity&lt;/em&gt;
+or grouping of operations:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;f&lt;/em&gt; ∘ &lt;em&gt;g&lt;/em&gt; ∘ &lt;em&gt;h&lt;/em&gt; = (&lt;em&gt;f&lt;/em&gt;∘&lt;em&gt;g&lt;/em&gt;) ∘ &lt;em&gt;h&lt;/em&gt; = &lt;em&gt;f&lt;/em&gt; ∘ (&lt;em&gt;g&lt;/em&gt;∘&lt;em&gt;h&lt;/em&gt;)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;and &lt;em&gt;identity&lt;/em&gt; or sending the input to the output &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;f&lt;/em&gt; ∘ &lt;em&gt;f&lt;/em&gt;&lt;sup&gt;−1&lt;/sup&gt;: &lt;em&gt;x&lt;/em&gt; → &lt;em&gt;x&lt;/em&gt;&lt;/span&gt;.
+For example, as depicted in &lt;strong&gt;Figure 2&lt;/strong&gt; (Appendix B) let
+𝑓&lt;sub&gt;1&lt;/sub&gt; ⋅𝑓&lt;sub&gt;2&lt;/sub&gt; ⋅𝑓&lt;sub&gt;3&lt;/sub&gt; : A → A → A → A give
+“Gandalf favors Sam favors Bilbo favors Frodo”. We can find “Gandalf
+favors Sam favors Bilbo” first or “Sam favors Bilbo favors Frodo”
+first.&lt;a href=&quot;#fn9&quot; class=&quot;footnote-ref&quot; id=&quot;fnref9&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;9&lt;/sup&gt;&lt;/a&gt; For identity, simply put, if Gandalf
+favors Sam, and Sam’s favorer is Gandalf, we go in a full circle from
+Gandalf to Sam and back. While these are basic notions of CT, they apply
+to many mathematical concepts in calculus and other undergraduate math
+studies including objects such as sets, topological spaces, groups,
+rings, fields, manifolds, measure spaces, chain complexes, and field
+vector spaces with their appropriate morphisms (Riehl 5).&lt;a href=&quot;#fn10&quot; class=&quot;footnote-ref&quot; id=&quot;fnref10&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;10&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Beyond these basic definitions of morphisms and objects (arrows and
+letters), CT develops more advanced ideas relevant to undergraduate math
+students. However, for the purpose of drawing immediate connections
+between CT and calculus, morphisms and objects are sufficient.&lt;a href=&quot;#fn11&quot; class=&quot;footnote-ref&quot; id=&quot;fnref11&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;11&lt;/sup&gt;&lt;/a&gt; After considering the history of
+mathematics and professional opinions on category theory, the ideas of
+&lt;em&gt;objects&lt;/em&gt; and &lt;em&gt;isomorphism&lt;/em&gt; illustrated above provide a
+basic idea of how category theory can help undergraduates in
+calculus.&lt;/p&gt;
+&lt;h1 id=&quot;direct-relationship-with-undergraduate-math&quot;&gt;Direct Relationship
+with Undergraduate Math&lt;/h1&gt;
+&lt;p&gt;The problem is that CT immediately relates to elementary calculus,
+matrix algebra, and differential equations in a “trickle-down” manner.
+Category theory is a setting for mathematics, especially drawing
+connections between algebra and topology or geometry—much how pythogoras
+described a right triangle’s sides as &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;a&lt;/em&gt;&lt;sup&gt;2&lt;/sup&gt; + &lt;em&gt;b&lt;/em&gt;&lt;sup&gt;2&lt;/sup&gt; = &lt;em&gt;c&lt;/em&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/span&gt;
+(Lawvere and Schanuel xiii). Appendix A demonstrates how far away the
+category theory of group extensions and homology are from undergraduate
+math.&lt;a href=&quot;#fn12&quot; class=&quot;footnote-ref&quot; id=&quot;fnref12&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;12&lt;/sup&gt;&lt;/a&gt; While developing the topology of
+these group extensions relates to category theory, it falls into the
+same errors as the popular explanation for turning clothes right-side
+out, lost in abstraction.&lt;/p&gt;
+&lt;h1 id=&quot;category-theory-in-the-history-of-math&quot;&gt;Category Theory in the
+History of Math&lt;/h1&gt;
+&lt;p&gt;Undergraduates benefit from studying CT today because it is the
+culmination of unifying theories in the history of mathematics. Two
+revolutions in the breadth of mathematics occurred during the twentieth
+sources that set all fields of study in the direction of CT. First, in
+1900, at the International Congress of Mathematicians in Paris, David
+Hilbert proposed his project for an axiomatic foundation to unify all of
+mathematics using logic, a project that was successful over the course
+of the twentieth century, and second, the Nicholas Bourbaki group worked
+in France from the 1930s to the 1980s to develop a rigorous axiomatic
+treatment of mathematical subjects, a treatment that does not rely on
+applied application and thus solidifies mathematics as not only purely
+logical but also as a stand-alone abstract structure that does not rely
+on the disparate forays of historical thinkers in number games (Dyson
+213). The drawback of these initial formalizations is that they do not
+allow for the playful experimentations that CT now allows for:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Any rigorous foundation capable of supporting the ordinary theory of
+classes would equally well support our theory…leaving the reader free to
+insert whatever type of logical foundation (or absence thereof) he may
+prefer (Eilenberg and Mac Lane, “General Theory…”, 246)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;As Dyson recalls, &lt;em&gt;imaginary numbers&lt;/em&gt;&lt;a href=&quot;#fn13&quot; class=&quot;footnote-ref&quot; id=&quot;fnref13&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;13&lt;/sup&gt;&lt;/a&gt;
+were a purely elegant, artistic theory for thinkers from Bernhard
+Riemann and Karl Weierstrass back to Niels Henrik Abel in the 1800s,
+which after a century, Erwin’s Schroediger used by intuition for his
+uncertainty principle in quantum mechanics (213). CT is a central area
+for researching these broad and unifying mathematical concepts today,
+for which Hilbert and Bourbaki’s work is sufficient but not necessary.
+It works in tandem with mathematical research done at a more exact,
+detailed level, done by mathematicians whom Freeman Dyson terms “frogs”
+in contrast with the “birds” such as Schroedinger. That is, CT provides
+a pre-packaged birdseye view for anyone to employ—especially frogs in
+undergraduate engineering, medicine, etcetera.&lt;/p&gt;
+&lt;p&gt;The role of CT as a birdseye view evolved from the work of Samuel
+Eilenberg and Saunders Mac Lane. However, as seen in Appendix A, an
+overview of CT’s beginning demonstrates why critics of CT dismiss the
+field with such claims as Antoni Zygmund’s: “take a centipede and pull
+off ninety-nine of its legs and see what it can do” (Krantz 6). That is,
+every algebraic structure is a mutilated form of some previous one,
+removing a requirement, as illustrated in &lt;strong&gt;Figure 3&lt;/strong&gt;
+(Appendix B). All these new nouns raise the same memorization issue as
+do theorems, lemmas, and corollaries. Appendix A thus demonstrates that
+group theory and for a calculus student is just a centipede with only a
+few legs left, and Figure 3 suggests the problems that centipede math
+poses for memorization. While Dyson outlines the necessity for both
+birds and frogs in his speech, the practices for science and engineering
+classes are largely calculations and computations (Belk) that are more
+suitable to the case of frogs.&lt;/p&gt;
+&lt;h1 id=&quot;professional-opinions-on-category-theory&quot;&gt;Professional Opinions
+on Category Theory&lt;/h1&gt;
+&lt;p&gt;Professor Eugenia Cheng’s &lt;em&gt;Joy of Abstraction&lt;/em&gt; demonstrates
+how category theory applies to many areas of life, even social justice
+issues. She moves from a general philosophical discussion about topics
+such as patterns and relationships to examples of mathematical objects,
+even defining grandmothers as compositions of mother morphisms (101).
+But, by the time Cheng reaches the Yoneda Lemma her prose does not
+differ much from many textbooks (366).&lt;a href=&quot;#fn14&quot; class=&quot;footnote-ref&quot; id=&quot;fnref14&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;14&lt;/sup&gt;&lt;/a&gt;
+Nonetheless, this does not suggest the Yoneda Lemma is out of reach for
+a general audience so much as it suggests a more general idea in math,
+that understanding requires examples, as with adjoint functors
+(Lumsdale). Cheng’s more philosophical insights suggest how
+undergraduates can use category theory, as it provides a framework for
+understanding and organizing complex systems.&lt;/p&gt;
+&lt;p&gt;Cheng highlights that CT focuses on the relationships between objects
+rather than on the objects themselves. She says, “In basic category
+theory our insight begins by saying we should study relationships
+between objects, not just the objects themselves” (21). This approach is
+helpful in STEM fields, where different elements of systems interact
+with each other in chemistry, biology, physics, and computing. Cheng
+even suggests that CT provides a common language and framework that
+applies to a wide range of fields because it “makes connections between
+diverse situations to help us unify them and think about them more
+efficiently” (2). This means that students can develop skills that
+transfer across different disciplines, which is useful in STEM fields
+where interdisciplinary collaboration is becoming increasingly
+important.&lt;/p&gt;
+&lt;p&gt;Still, mathematics in general fits these claims. As to what sets CT
+apart, Cheng further argues that, “Sometimes category theory can feel
+like arbitrary abstractions for the sake of it; in that case I think
+something is missing” (397). By providing a way to abstract away from
+specific details and focus on the relationships between objects,
+category theory can help students to see the big picture and to identify
+underlying patterns and structures. By focusing on relationships rather
+than individual objects, providing a common language across disciplines,
+and helping to identify patterns and structures, category theory can
+help with understanding and analyzing complex systems.&lt;/p&gt;
+&lt;h1 id=&quot;an-example-for-calculus-students&quot;&gt;An Example for Calculus
+Students&lt;/h1&gt;
+&lt;p&gt;With this history in mind a further motivating example is something a
+calculus student might notice: that differentiation &lt;em&gt;undoes&lt;/em&gt;
+integration, but integration does not &lt;em&gt;undo&lt;/em&gt; differentiation. The
+exploration of the CT behind this observation is more abstract than
+anyone who has not taken calculus can appreciate, but it solely employs
+the ideas students learn in derivative and integral calculus classes.
+Thus for a layperson, this example faces the same issue as the topology
+of clothes folding, but a calculus student has all the tools necessary
+to benefit from the example.&lt;a href=&quot;#fn15&quot; class=&quot;footnote-ref&quot; id=&quot;fnref15&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;15&lt;/sup&gt;&lt;/a&gt; First, consider the
+case of the Fundamental Theorem of Calculus:&lt;a href=&quot;#fn16&quot; class=&quot;footnote-ref&quot; id=&quot;fnref16&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;16&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;frac{d}{dx}f(x)dx &#92;neq
+&#92;frac{d}{dx}f(x)dx&#92;)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Now, to illustrate, let &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;f&lt;/em&gt;(&lt;em&gt;x&lt;/em&gt;) = &lt;em&gt;x&lt;/em&gt;&lt;/span&gt; which
+defines &lt;span class=&quot;math inline&quot;&gt;&#92;(f(x)dx = &#92;frac{x^{2}}{2} + C&#92;)&lt;/span&gt;
+and also &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92; &#92;frac{d}{dx}f(x) = 1&#92;)&lt;/span&gt;,
+which gives&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;frac{d}{dx}(&#92;frac{x^{2}}{2} + C) &#92;neq
+1dx&#92;)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;x&lt;/em&gt; + 0 ≠ &lt;em&gt;x&lt;/em&gt; + &lt;em&gt;C&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;This is only true if &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;C&lt;/em&gt; = 0&lt;/span&gt;,
+which is not guaranteed for antiderivatives or indefinite integrals.
+This is not of concern for classical mechanics in physics—where the
+position is the integral of velocity, which is the integral of the
+acceleration all with respect to time—because an accelerating object
+generally has a starting position and velocity. For example, a car
+usually starts parked at someone’s house before it starts speeding up on
+the highway. Similarly, in finance, investments start with a certain
+value before increasing or decreasing at different rates. But, CT
+illustrates this with the commutative diagrams in &lt;strong&gt;Figure
+2&lt;/strong&gt; (Appendix B).&lt;/p&gt;
+&lt;p&gt;To allow this isomorphism to be &lt;em&gt;natural&lt;/em&gt; as GEH defines, one
+must not &lt;em&gt;choose&lt;/em&gt; &lt;em&gt;C=0&lt;/em&gt;, which is where the centipede
+comes in.&lt;a href=&quot;#fn17&quot; class=&quot;footnote-ref&quot; id=&quot;fnref17&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;17&lt;/sup&gt;&lt;/a&gt; Meanwhile, there exist no
+elementary integrals that send elementary functions to zero in this
+sense. Since it is so complicated to make this isomorphism natural, in
+this example might call the derivative a &lt;em&gt;left adjoint&lt;/em&gt; that
+“forgets” constants, while the integral is a &lt;em&gt;right adjoint&lt;/em&gt; that
+“remembers” constants. This is the same as having more possible favorite
+colors than there are people.&lt;a href=&quot;#fn18&quot; class=&quot;footnote-ref&quot; id=&quot;fnref18&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;18&lt;/sup&gt;&lt;/a&gt; Even the details of
+this example from calculus that treats first-year calculus with little
+more than morphisms verges on too much abstraction. But, readers who
+know category theory before calculus or linear algebra can get a gist of
+how derivatives and integrals relate by knowing that they are left and
+right adjoint functors without the symbolic mess of
+&lt;em&gt;C&lt;sup&gt;∞&lt;/sup&gt;&lt;/em&gt;(ℝ) and ∫𝑓(&lt;em&gt;x&lt;/em&gt;)&lt;em&gt;dx&lt;/em&gt; and
+&lt;em&gt;d&lt;/em&gt;𝑓/&lt;em&gt;dx&lt;/em&gt;.&lt;/p&gt;
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;Beyond this example in calculus, CT is applicable in other fields
+which would also be helpful to undergrads. Researchers in linguistics
+have used CT. They use morphisms between morphisms (arrows between
+arrows or higher order relationships showing connections) among
+different types of plural nouns such as a lot of coffee vs many coffees
+(La Palme, et al). Others have used category-theoretic concepts such as
+co-limits and higher algebras to describe structures, processes, and
+so-called “processes of processes” in neuroscience (Brown and Porter).
+Further still, the composition of functions in programming languages
+such as Haskell requires the use of morphisms, functors, and natural
+transformation to allow for transparency and optimization of concurrent,
+large-scale computer programming designs (Milewski). The development of
+category theory as a discipline, the history of mathematical research,
+and examples from mathematical practice illustrate the potential for an
+undergraduate course in category theory even while categorical treatment
+of these subjects falls back on multiple layers of abstraction. Students
+can then go on to apply categorical principles to any area of study to
+help them understand the “whys” and “hows” in their fields of study.&lt;/p&gt;
+&lt;p&gt;Word Count: 2474&lt;/p&gt;
+&lt;h1 id=&quot;appendices&quot;&gt;Appendices&lt;/h1&gt;
+&lt;h2 id=&quot;appendix-a&quot;&gt;Appendix A&lt;/h2&gt;
+&lt;p&gt;For readers interested in attempting the jump to group theory, such a
+jump illustrates how category theory can obscure math behind
+abstraction, and how far the fields of group theory and algebraic
+topology are from typical classes taken by STEM undergraduates. Appendix
+A is completely optional in relating CT to undergraduate math. The
+motivation for this appendix was to illuminate the structure of these
+functions the positive real numbers &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;/span&gt;, even to the point
+where a student can begin to form an intuition for why Riehl claims “the
+chain rule expresses the &lt;span&gt;[&lt;/span&gt;so-called&lt;span&gt;]&lt;/span&gt;
+functoriality of the derivative” (Riehl 14). The construction of other
+sets of numbers following the real numbers is elementary—the rational
+numbers or &lt;em&gt;fractions&lt;/em&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;Q&lt;/em&gt; = { &lt;em&gt;n&lt;/em&gt;, &lt;em&gt;q&lt;/em&gt;, &lt;em&gt;d&lt;/em&gt;,  ∈ &lt;em&gt;R&lt;/em&gt; | &lt;em&gt;n&lt;/em&gt; = &lt;em&gt;q&lt;/em&gt;&lt;em&gt;d&lt;/em&gt; + &lt;em&gt;r&lt;/em&gt; ,  &lt;em&gt;d&lt;/em&gt; ≠ 0,  &lt;em&gt;r&lt;/em&gt; = 0}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;the integers:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;Z&lt;/em&gt; = { &lt;em&gt;n&lt;/em&gt;, &lt;em&gt;q&lt;/em&gt;, &lt;em&gt;d&lt;/em&gt;,  ∈ &lt;em&gt;R&lt;/em&gt; | &lt;em&gt;n&lt;/em&gt; = &lt;em&gt;q&lt;/em&gt;&lt;em&gt;d&lt;/em&gt; + &lt;em&gt;r&lt;/em&gt; ,  &lt;em&gt;d&lt;/em&gt; ≠ 0,  &lt;em&gt;r&lt;/em&gt; = 0, &lt;em&gt;n&lt;/em&gt; = &lt;em&gt;d&lt;/em&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;and the complex numbers:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt; &lt;em&gt;C&lt;/em&gt; = {&lt;em&gt;x&lt;/em&gt; + &lt;em&gt;i&lt;/em&gt;&lt;em&gt;y&lt;/em&gt; | &lt;em&gt;x&lt;/em&gt;, &lt;em&gt;y&lt;/em&gt; ∈ &lt;em&gt;R&lt;/em&gt;  &lt;em&gt;a&lt;/em&gt;&lt;em&gt;n&lt;/em&gt;&lt;em&gt;d&lt;/em&gt;  &lt;em&gt;i&lt;/em&gt; = }&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;These definitions from elementary mathematics are a first step in
+clarifying the obscure beginnings of category, the very obscurity which
+prevents wider appreciation of CT today.&lt;/p&gt;
+&lt;p&gt;A general notion of the conception of categorical ideas from
+Eilenberg and Mac Lane’s seminal paper &lt;em&gt;Group Extensions and
+Homology&lt;/em&gt; (“GEH”) requires a background in group theory or algebraic
+topology. Formal &lt;em&gt;homology&lt;/em&gt;&lt;a href=&quot;#fn19&quot; class=&quot;footnote-ref&quot; id=&quot;fnref19&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;19&lt;/sup&gt;&lt;/a&gt; is the topic of GEH,
+but according to Bradley, it is beyond the scope of even an
+undergraduate topology course (Bradley et al. x).&lt;/p&gt;
+&lt;p&gt;An example of how an undergraduate course might get lost in
+abstraction lies in an attempt at an intuitive preview of GEH, a paper
+that introduces the motivation behind CT but makes no mention of the
+terms category, morphism, or functor, as the duo introduced these terms
+three years later in their paper “General Theory of Natural
+Equivalences” (EM). Rather the earlier paper outlines what is now known
+as the &lt;em&gt;natural transformation&lt;/em&gt;.&lt;a href=&quot;#fn20&quot; class=&quot;footnote-ref&quot; id=&quot;fnref20&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;20&lt;/sup&gt;&lt;/a&gt;
+The specific topics of this first paper employ abstract algebra and
+topology. Still, intuitive definitions can peak a student’s interest and
+set the course for future study. For example, the advanced notion of
+&lt;em&gt;homology&lt;/em&gt; identifies mathematically unchanging properties called
+&lt;em&gt;invariants&lt;/em&gt; in topology that can are intuitively holes or
+emptiness in shapes—the common joke being topologists cannot distinguish
+donuts from coffee cups, both having one hole. Now, EM’s use of group
+extensions to define the relationship between homology and cohomology in
+topological groups is more intricate than the general notion of homology
+(EM, “Group…”, 769). Even though this notion is more intricate, it is
+still crucial to the original motivations for CT that are found in the
+paper.&lt;/p&gt;
+&lt;p&gt;Without getting into the minutiae of EM’s employment of abstract
+algebra in homology theory, begin by considering the group extension. To
+start, group extensions provide a trivial construction of a &lt;em&gt;direct
+product&lt;/em&gt; (Idem. 767)—which high school algebra exemplifies by using
+the the real numbers &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;R&lt;/em&gt;&lt;/span&gt; as a
+horizontal line &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;x&lt;/em&gt;&lt;/span&gt; and vertical
+line &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;y&lt;/em&gt;&lt;/span&gt; to give the coordinates
+&lt;span class=&quot;math inline&quot;&gt;(&lt;em&gt;x&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;)&lt;/span&gt;, or &lt;span class=&quot;math inline&quot;&gt;{&lt;em&gt;x&lt;/em&gt;, &lt;em&gt;y&lt;/em&gt; ∈ &lt;em&gt;R&lt;/em&gt; | (&lt;em&gt;x&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;) ∈ &lt;em&gt;R&lt;/em&gt; × &lt;em&gt;R&lt;/em&gt; }&lt;/span&gt;.
+The result of this construction is familiar to any elementary algebra
+student, acting as another detail to motivate the wider practice of
+CT.&lt;/p&gt;
+&lt;p&gt;An undergraduate course in category theory that mediates abstraction
+can employ simple definitions from group theory. The direct product
+arises because a subgroup &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;G&lt;/em&gt;&lt;/span&gt;
+which also forms a factor group &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;H&lt;/em&gt; = &lt;em&gt;E&lt;/em&gt;/&lt;em&gt;G&lt;/em&gt;&lt;/span&gt; of the
+group &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;E&lt;/em&gt;&lt;/span&gt; forms an
+&lt;em&gt;extension&lt;/em&gt; of &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;G&lt;/em&gt;&lt;/span&gt; by
+&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt; (Idem 767). The trivial form
+can also be succinctly written in the more contemporary form that
+Saunders Mac Lane uses in his expository paper from 1999: &lt;span class=&quot;math inline&quot;&gt;0 → &lt;em&gt;G&lt;/em&gt; → &lt;em&gt;G&lt;/em&gt; × &lt;em&gt;H&lt;/em&gt; → &lt;em&gt;H&lt;/em&gt; → 0 &lt;/span&gt;
+where &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;E&lt;/em&gt; = &lt;em&gt;H&lt;/em&gt; × &lt;em&gt;G&lt;/em&gt;&lt;/span&gt; (Mac
+Lane 128). That is, G represents a &lt;em&gt;normal subgroup&lt;/em&gt;—meaning its
+elements &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;g&lt;/em&gt; ∈ &lt;em&gt;G&lt;/em&gt;&lt;/span&gt; can be
+composed with the elements &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;x&lt;/em&gt;, &lt;em&gt;x&lt;/em&gt;&lt;sup&gt;−1&lt;/sup&gt; ∈ &lt;em&gt;E&lt;/em&gt;&lt;/span&gt;
+such that &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;x&lt;/em&gt;&lt;em&gt;g&lt;/em&gt;&lt;em&gt;x&lt;/em&gt;&lt;sup&gt;−1&lt;/sup&gt; ∈ &lt;em&gt;G&lt;/em&gt;&lt;/span&gt;—
+or trivially, for all &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;g&lt;/em&gt; ∈ (&lt;em&gt;Z&lt;/em&gt;,+)&lt;/span&gt;, the element of
+the singleton set &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;g&lt;/em&gt; ∈ {&lt;em&gt;g&lt;/em&gt;}&lt;/span&gt; satisfies &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;x&lt;/em&gt;, &lt;em&gt;x&lt;/em&gt;&lt;sup&gt;−1&lt;/sup&gt; ∈ (&lt;em&gt;Z&lt;/em&gt;,+)&lt;/span&gt;
+such that &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;x&lt;/em&gt;&lt;em&gt;g&lt;/em&gt;&lt;em&gt;x&lt;/em&gt;&lt;sup&gt;−1&lt;/sup&gt; ∈ {&lt;em&gt;g&lt;/em&gt;}&lt;/span&gt;,
+for example letting &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;x&lt;/em&gt; = 2&lt;/span&gt;,
+&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;x&lt;/em&gt;&lt;sup&gt;−1&lt;/sup&gt; = ˗2  &lt;/span&gt;, and
+&lt;span class=&quot;math inline&quot;&gt; {&lt;em&gt;g&lt;/em&gt;} = {1} &lt;/span&gt; where &lt;span class=&quot;math inline&quot;&gt;1 + 1+ (−1) = 1 ∈ {1}&lt;/span&gt;. Now a factor group
+also called a &lt;em&gt;quotient group&lt;/em&gt;—which the group of odd integers
+exemplifies as the quotient group of the integers with the even integers
+&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;Z&lt;/em&gt;/2&lt;em&gt;Z&lt;/em&gt;&lt;/span&gt;. Further, a
+quotient group &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt; is only a
+&lt;em&gt;free group&lt;/em&gt;—which the group of integers under addition &lt;span class=&quot;math inline&quot;&gt;(&lt;em&gt;Z&lt;/em&gt;,+)&lt;/span&gt; exemplifies since its
+underlying set only contains the number &lt;span class=&quot;math inline&quot;&gt;1&lt;/span&gt;, or intuitively, any integer can be
+expressed as a sum or difference of ones—if any extension by &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt; is the trivial extension, or the
+direct product (Idem. 767). Of course, these definitions are in the
+field of study labeled abstract algebra, not strictly CT, but the latter
+is what ties these ideas into the larger picture of mathematics.&lt;/p&gt;
+&lt;p&gt;The final piece of the puzzle for this part of GEH is the
+&lt;em&gt;transformation group&lt;/em&gt;, which EM constructs precisely to show the
+linear or “affine” nature—intuitively, squashability and
+slide-ability—of this group over the set of invertible functions (EM,
+“Group…”, 768). But for the general reader, this group is exemplified in
+a simple principle: the transformation group for translations in
+Euclidian space, which is the space where high school math happens and
+is represented by &lt;span class=&quot;math inline&quot;&gt;(&lt;em&gt;x&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;) ∈ &lt;em&gt;R&lt;/em&gt; × &lt;em&gt;R&lt;/em&gt;&lt;/span&gt;,
+allow that a circle of a fixed radius has the same properties no matter
+where it is positioned, sliding vertically or horizontally in any order
+any number of times (Joyce).&lt;/p&gt;
+&lt;p&gt;These group definitions in the context of GEH are enough to explain
+the first method learned in an integral calculus class: substitution.
+Consider the group extension that correlates to the quadratic function
+seen in elementary algebra and calculus courses. Let &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;a&lt;/em&gt; ⋅ &lt;em&gt;b&lt;/em&gt;&lt;/span&gt; be multiplication,
+&lt;span class=&quot;math inline&quot;&gt;(&lt;em&gt;a&lt;/em&gt;,&lt;em&gt;b&lt;/em&gt;) ∈ &lt;em&gt;A&lt;/em&gt; × &lt;em&gt;B&lt;/em&gt;&lt;/span&gt;
+be a direct product, &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;y&lt;/em&gt; ∈ &lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;/span&gt; be &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;&lt;/sup&gt; &amp;gt; 0&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;R&lt;/em&gt;&lt;sub&gt; ≠ 0&lt;/sub&gt;&lt;/span&gt;be &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;x&lt;/em&gt; ∈ &lt;em&gt;R&lt;/em&gt; ≠ 0&lt;/span&gt;. Now, &lt;span class=&quot;math inline&quot;&gt;1 → (&lt;em&gt;R&lt;/em&gt;&lt;sub&gt; ≠ 0&lt;/sub&gt;,⋅) → (&lt;em&gt;R&lt;/em&gt;&lt;sub&gt; ≠ 0&lt;/sub&gt;×&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;,⋅) → (&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;,⋅) → 1&lt;/span&gt;.
+Where &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;H&lt;/em&gt; = (&lt;em&gt;R&lt;/em&gt;&lt;sub&gt; ≠ 0&lt;/sub&gt;,⋅)&lt;/span&gt;,
+&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;G&lt;/em&gt; = (&lt;em&gt;R&lt;/em&gt;&lt;sub&gt; ≠ 0&lt;/sub&gt;×&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;,⋅)&lt;/span&gt;,
+and &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;G&lt;/em&gt;/&lt;em&gt;H&lt;/em&gt; = (&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;,⋅)&lt;/span&gt;,
+so &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;G&lt;/em&gt;&lt;/span&gt; extends &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;G&lt;/em&gt;/&lt;em&gt;H&lt;/em&gt;&lt;/span&gt; by &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt;. This defines the equation &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;y&lt;/em&gt; = &lt;em&gt;x&lt;/em&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/span&gt;, but
+notice this does not satisfy &lt;span class=&quot;math inline&quot;&gt; =  = &lt;em&gt;x&lt;/em&gt;&lt;/span&gt; because &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;y&lt;/em&gt; &amp;gt; 0&lt;/span&gt; cannot give &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;x&lt;/em&gt; &amp;lt; 0&lt;/span&gt;, so &lt;span class=&quot;math inline&quot;&gt;(˗&lt;em&gt;x&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;)∉ &lt;em&gt;R&lt;/em&gt;&lt;sub&gt; ≠ 0&lt;/sub&gt; × &lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;/span&gt;,
+which is false. The group extension for the underlying set &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;R&lt;/em&gt;&lt;sub&gt; ≠ 0&lt;/sub&gt; × &lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;/span&gt;
+does not demonstrate the isomorphism &lt;span class=&quot;math inline&quot;&gt;(, &lt;em&gt;y&lt;/em&gt;)  ≅ (&lt;em&gt;x&lt;/em&gt;, &lt;em&gt;y&lt;/em&gt;&lt;sup&gt;2&lt;/sup&gt;)&lt;/span&gt;.
+Thus, to see EM’s full power considers the case where &lt;span class=&quot;math inline&quot;&gt;(&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;,⋅)&lt;/span&gt; extends itself, in
+turn allowing for the &lt;em&gt;transformation group&lt;/em&gt; which is essential
+to GEH.&lt;/p&gt;
+&lt;p&gt;Let &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;H&lt;/em&gt; = (&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;,⋅)&lt;/span&gt;,
+&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;G&lt;/em&gt; × &lt;em&gt;H&lt;/em&gt; = (&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;×&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;,⋅)&lt;/span&gt;,
+and &lt;span class=&quot;math inline&quot;&gt;(&lt;em&gt;G&lt;/em&gt;×&lt;em&gt;H&lt;/em&gt;)/&lt;em&gt;H&lt;/em&gt; = (&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;,⋅)&lt;/span&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;1 → (&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;,⋅) → (&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;×&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;,⋅) → (&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;,⋅) → 1&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;for which two relations satisfy &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;y&lt;/em&gt;=&lt;/span&gt;: &lt;span class=&quot;math inline&quot;&gt;   (&lt;em&gt;x&lt;/em&gt;, &lt;em&gt;y&lt;/em&gt;&lt;sup&gt;2&lt;/sup&gt;), (, &lt;em&gt;y&lt;/em&gt;) ∈ &lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt; × &lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;   &lt;/span&gt;
+But further, the group &lt;span class=&quot;math inline&quot;&gt;(&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;×&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;,⋅)&lt;/span&gt;
+being closed under multiplication also gives &lt;span class=&quot;math inline&quot;&gt;(&lt;em&gt;x&lt;/em&gt;&lt;sup&gt;2&lt;em&gt;n&lt;/em&gt;&lt;/sup&gt;, &lt;em&gt;y&lt;/em&gt;&lt;sup&gt;&lt;em&gt;n&lt;/em&gt;&lt;/sup&gt;) ∈ &lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt; × &lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;/span&gt;
+for &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;n&lt;/em&gt; ∈ &lt;em&gt;Q&lt;/em&gt;&lt;/span&gt;. This
+example also satisfies the definition (EM 768) of a transformation group
+&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;T&lt;/em&gt; ∋ &lt;em&gt;t&lt;/em&gt;&lt;/span&gt; for group &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;G&lt;/em&gt; ∋ &lt;em&gt;g&lt;/em&gt;(&lt;em&gt;h&lt;/em&gt;), &lt;em&gt;g&lt;/em&gt;(&lt;em&gt;k&lt;/em&gt;)&lt;/span&gt;
+with normal subgroup &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;H&lt;/em&gt; ∋ &lt;em&gt;h&lt;/em&gt;, &lt;em&gt;k&lt;/em&gt;&lt;/span&gt; that
+satisfies the function&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;t&lt;/em&gt;(&lt;em&gt;h&lt;/em&gt;,&lt;em&gt;k&lt;/em&gt;) = &lt;em&gt;g&lt;/em&gt;(&lt;em&gt;h&lt;/em&gt;) ∘ &lt;em&gt;g&lt;/em&gt;(&lt;em&gt;k&lt;/em&gt;) ∘ &lt;em&gt;g&lt;/em&gt;&lt;sup&gt;−1&lt;/sup&gt;(&lt;em&gt;h&lt;/em&gt;∘&lt;em&gt;k&lt;/em&gt;) &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;as trivially the identity under multiplication such that &lt;span class=&quot;math inline&quot;&gt;&#92;(1 = &#92; &#92;frac{&#92;sqrt{h} &#92;cdot &#92;sqrt{k}}{&#92;sqrt{h &#92;cdot k}}&#92; &#92;)&lt;/span&gt; which, further,
+proves a natural transformation for all possible extensions of &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;/span&gt;by &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;/span&gt; given EM’s next
+step.&lt;/p&gt;
+&lt;p&gt;With all of this intricate detail aside, the group extension relates
+to topology through a meta feat of mathematical acrobatics. The topology
+comes from the group formed from the sets of extensions for &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt; in &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;G&lt;/em&gt;&lt;/span&gt;, called &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;E&lt;/em&gt;&lt;em&gt;x&lt;/em&gt;&lt;em&gt;t&lt;/em&gt; {&lt;em&gt;G&lt;/em&gt;, &lt;em&gt;H&lt;/em&gt;}&lt;/span&gt;
+that is the quotient of the group of the factor sets &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;F&lt;/em&gt;&lt;em&gt;a&lt;/em&gt;&lt;em&gt;c&lt;/em&gt;&lt;em&gt;t&lt;/em&gt; {&lt;em&gt;G&lt;/em&gt;, &lt;em&gt;H&lt;/em&gt;}&lt;/span&gt;
+and the group of the transformation sets &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;T&lt;/em&gt;&lt;em&gt;r&lt;/em&gt;&lt;em&gt;a&lt;/em&gt;&lt;em&gt;n&lt;/em&gt;&lt;em&gt;s&lt;/em&gt; {&lt;em&gt;G&lt;/em&gt;, &lt;em&gt;H&lt;/em&gt;}&lt;/span&gt;
+of &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt; in &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;G&lt;/em&gt;&lt;/span&gt; (EM, “Group”, 770). That is&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;E&lt;/em&gt;&lt;em&gt;x&lt;/em&gt;&lt;em&gt;t&lt;/em&gt; {&lt;em&gt;G&lt;/em&gt;, &lt;em&gt;H&lt;/em&gt;} = &lt;em&gt;F&lt;/em&gt;&lt;em&gt;a&lt;/em&gt;&lt;em&gt;c&lt;/em&gt;&lt;em&gt;t&lt;/em&gt; {&lt;em&gt;G&lt;/em&gt;, &lt;em&gt;H&lt;/em&gt;}/&lt;em&gt;T&lt;/em&gt;&lt;em&gt;r&lt;/em&gt;&lt;em&gt;a&lt;/em&gt;&lt;em&gt;n&lt;/em&gt;&lt;em&gt;s&lt;/em&gt; {&lt;em&gt;G&lt;/em&gt;, &lt;em&gt;H&lt;/em&gt;}&lt;/span&gt;
+.&lt;/p&gt;
+&lt;p&gt;Note that the example on &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;/span&gt; requires the
+exploration of &lt;em&gt;function spaces&lt;/em&gt; formed by the set of functions
+that makes up &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;F&lt;/em&gt;&lt;em&gt;a&lt;/em&gt;&lt;em&gt;c&lt;/em&gt;&lt;em&gt;t&lt;/em&gt; {&lt;em&gt;G&lt;/em&gt;, &lt;em&gt;H&lt;/em&gt;}&lt;/span&gt;
+and &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;T&lt;/em&gt;&lt;em&gt;r&lt;/em&gt;&lt;em&gt;a&lt;/em&gt;&lt;em&gt;n&lt;/em&gt;&lt;em&gt;s&lt;/em&gt; {&lt;em&gt;G&lt;/em&gt;, &lt;em&gt;H&lt;/em&gt;}&lt;/span&gt;.&lt;a href=&quot;#fn21&quot; class=&quot;footnote-ref&quot; id=&quot;fnref21&quot; role=&quot;doc-noteref&quot;&gt;&lt;sup&gt;21&lt;/sup&gt;&lt;/a&gt; Before taking advantage of the
+topology that arises here, EM relates extensions to
+&lt;em&gt;homomorphisms&lt;/em&gt;. These change one group into another and are
+considered as a synonym for functions, transformations, and arrows
+(Lawvere and Schanuel 14, Riehl xi). EM takes several pages proving that
+a factor set or a homomorphism into &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;G&lt;/em&gt;&lt;/span&gt; from &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;R&lt;/em&gt;&lt;/span&gt; gives an extension by &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;H&lt;/em&gt;&lt;/span&gt; of &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;G&lt;/em&gt;&lt;/span&gt;, if &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;H&lt;/em&gt; = &lt;em&gt;F&lt;/em&gt;/&lt;em&gt;R&lt;/em&gt;&lt;/span&gt; the normal
+subgroup is itself a factor group of &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;F&lt;/em&gt;&lt;/span&gt; a free group and some group &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;R&lt;/em&gt;&lt;/span&gt;, then&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;E&lt;/em&gt;&lt;em&gt;x&lt;/em&gt;&lt;em&gt;t&lt;/em&gt; {&lt;em&gt;G&lt;/em&gt;, &lt;em&gt;H&lt;/em&gt;} ≅ &lt;em&gt;H&lt;/em&gt;&lt;em&gt;o&lt;/em&gt;&lt;em&gt;m&lt;/em&gt; {&lt;em&gt;R&lt;/em&gt;, &lt;em&gt;G&lt;/em&gt;}/&lt;em&gt;H&lt;/em&gt;&lt;em&gt;o&lt;/em&gt;&lt;em&gt;m&lt;/em&gt; {&lt;em&gt;F&lt;/em&gt;|&lt;em&gt;R&lt;/em&gt;, &lt;em&gt;G&lt;/em&gt;}&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;where ≅ denotes an isomorphism, and this expression as a whole is now
+deemed a &lt;em&gt;natural transformation&lt;/em&gt; which EM applies to homology
+and cohomology (EM, “Group”, 772). At this point, the reader can see
+categorical notions emerge as the isomorphism between the set of
+homomorphisms of some groups illustrates the notion of what is now known
+as a functor between categories, and the authors go on to prove a
+natural transformation through the existence of morphisms between all of
+these functors (Idem. 775). This lays out a view of the layers of
+abstraction at the heart of CT’s origin, a motivation for the subject’s
+conception which can even stretch to the subjects applications in more
+applied areas today.&lt;/p&gt;
+&lt;h2 id=&quot;appendix-b&quot;&gt;Appendix B&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://ischmidls.github.io/img/ct/image1.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; There is a superficial &lt;em&gt;adjunction&lt;/em&gt;
+between the left and right compositions of integration and
+differentiation, meaning they require a &lt;em&gt;morphism&lt;/em&gt; (change) to
+form an &lt;em&gt;identity&lt;/em&gt; (a change from something back to itself), but
+these commutative diagrams lack &lt;em&gt;algebraic structure&lt;/em&gt; (centipede
+mathematics) for the functions. Source: Izak Schmidlkofer, Feb 2023&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://ischmidls.github.io/img/ct/image2.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 2&lt;/strong&gt;. The trivial example of associativity among
+morphisms between sets generalizes to associativity in
+&lt;em&gt;group&lt;/em&gt;-like objects, where the motivation for CT emerges from
+&lt;em&gt;group extensions&lt;/em&gt; in GEH as the appendix begins to demonstrate
+for &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+ &lt;/sup&gt; × &lt;em&gt;R&lt;/em&gt;&lt;sup&gt;+&lt;/sup&gt;&lt;/span&gt;under
+multiplication.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://ischmidls.github.io/img/ct/image3.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 3&lt;/strong&gt; This diagram from a physics journal article
+(Source: Max Tegmark, 1998) illustrates so-called centipede mathematics,
+where category theory would occupy two positions: on a similar level as
+&lt;em&gt;sets&lt;/em&gt;, and as a means for tearing off the centipede’s
+legs—drawing arrows between the boxes.&lt;/p&gt;
+&lt;h2 id=&quot;appendix-c&quot;&gt;Appendix C&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Further Reading&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bradley, Tai-Danae. “What is an Adjunction? Part 1 (Motivation).”
+&lt;em&gt;Math3ma: Categories&lt;/em&gt;. 19&lt;/p&gt;
+&lt;p&gt;Sep 2019, Accessed 14 Feb 2023.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;https://www.math3ma.com/blog/what-is-an-adjunction-part-1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;——— “What is a Category? Definition and Examples.”&lt;/em&gt;
+&lt;em&gt;Math3ma: Categories&lt;/em&gt;. 23 Jan 2017,&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Accessed 14 Feb 2023.
+https://www.math3ma.com/blog/what-is-a-category&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;——— “What is a Functor? Definition and Examples, Part
+1.”&lt;/em&gt; &lt;em&gt;Math3ma: Categories&lt;/em&gt;. 31 Jan&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;2017, Accessed 14 Feb 2023.
+https://www.math3ma.com/blog/what-is-a-functor-part-1&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;——— “What is a Functor? Definitions and Examples, Part
+2.”&lt;/em&gt; &lt;em&gt;Math3ma: Categories&lt;/em&gt;. 2 Feb&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;2017, Accessed 14 Feb 2023.
+https://www.math3ma.com/blog/what-is-a-functor-part-2&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;——— “What is a Natural Transformation? Definition and
+Examples.”&lt;/em&gt; &lt;em&gt;Math3ma: Categories&lt;/em&gt;. 7&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Feb 2017, Accessed 14 Feb 2023.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;https://www.math3ma.com/blog/what-is-a-natural-transformation&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Holden, David. “Corresponding Isomorphism Real Number.”
+&lt;em&gt;Mathematics Stack Exchange&lt;/em&gt;. 8&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Dec 2013. Accessed 10 Mar 2023.
+https://math.stackexchange.com/a/597965/1098426&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Ikenaga, Bruce. “Direct Products.” &lt;em&gt;Abstract Algebra 1&lt;/em&gt;.
+Millersville University. 2 Mar 2018,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Accessed 8 Mar 2023.
+https://sites.millersville.edu/bikenaga/abstract-algebra-1/product/product.pdf&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;——— “First Isomorphism Theorem.”&lt;/em&gt; &lt;em&gt;Abstract Algebra
+1&lt;/em&gt;. Millersville University. 22 Mar 2018,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Accessed 8 Mar 2023.
+https://sites.millersville.edu/bikenaga/abstract-algebra-1/first-isomorphism-theorem/first-isomorphism-theorem.pdf&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;——— “Group Homomorphisms.”&lt;/em&gt; &lt;em&gt;Abstract Algebra 1&lt;/em&gt;.
+Millersville University. 17 Jan 2018,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Accessed 8 Mar 2023.
+&lt;em&gt;https://sites.millersville.edu/bikenaga/abstract-algebra-1/group-maps/group-maps.pdf&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;——— “Normal Subgroups and Quotient Groups.”&lt;/em&gt; &lt;em&gt;Abstract
+Algebra 1&lt;/em&gt;. Millersville University.&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;17 Mar 2018, Accessed 8 Mar 2023.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;https://sites.millersville.edu/bikenaga/abstract-algebra-1/normal-subgroups/normal-subgroups.pdf&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Karagila, Asaf. “Basis for R Over Q.” &lt;em&gt;Mathematics Stack
+Exchange&lt;/em&gt;, 24 Feb 2012, Accessed 10&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Mar. 2023. https://math.stackexchange.com/a/112867/1098426&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;———&lt;/em&gt; “What Is Aut(R,+)?” &lt;em&gt;Mathematics Stack
+Exchange&lt;/em&gt;, Mar. 2012, Accessed 10 Mar.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;2023.
+&lt;em&gt;https://math.stackexchange.com/a/115688/1098426&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Samuel, Matthew. “Automorphism Group of (R&lt;sup&gt;⨉&lt;/sup&gt;,·).”
+&lt;em&gt;Mathematics Stack Exchange&lt;/em&gt;. 23 Feb 2019,&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Accessed 10 Mar 2023,
+https://math.stackexchange.com/a/3123607/1098426&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Thurston, William. “On Proof and Progress in Mathematics.”
+&lt;em&gt;Bulletin of the American&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;Mathematical Society&lt;/em&gt;, vol. 30, no. 2, 1 Jan. 1994,
+pp. 161–178, https://doi.org/10.1090/s0273-0979-1994-00502-6.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;‌&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;‌&lt;/p&gt;
+&lt;h1 id=&quot;works-cited&quot;&gt;Works Cited&lt;/h1&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Abichandani, Christopher. “Why Can You Turn Clothing Right-Side-Out?”
+&lt;em&gt;Mathematics Stack&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;Exchange&lt;/em&gt;. 19 Aug 2010.
+https://math.stackexchange.com/q/2755/1098426&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Belk, James. “How much memorization should be required in a
+first-semester calculus course?”&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;Mathematics Educators Stack Exchange&lt;/em&gt;. 31 Mar 2014. Accessed
+28 February 2022. https://matheducators.stackexchange.com/a/1080&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Bradley, Tai-Danae, et al. &lt;em&gt;Topology: A Categorical Approach&lt;/em&gt;.
+Massachusetts Institute of&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Technology Press, 2020, https://topology.mitpress.mit.edu/.&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Brown, Ronald, and Timothy Porter. “Category Theory and Higher
+Dimensional Algebra:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Potential Descriptive Tools in Neuroscience.” &lt;em&gt;Mathematics:
+Category Theory&lt;/em&gt;. Arxiv, Feb 2008.
+https://arxiv.org/PS_cache/math/pdf/0306/0306223v1.pdf&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Cheng, Eugenia. &lt;em&gt;The Joy of Abstraction&lt;/em&gt;. Cambridge University
+Press, 2022.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Dyson, Freeman. “Birds and Frogs.” &lt;em&gt;Notices of the AMS&lt;/em&gt;.
+American Mathematical&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Society. Vol 56, No 2. Feb 2009. pp. 212-223.&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Eilenberg, Samuel, and Saunders Mac Lane. “General Theory of Natural
+Equivalences.”&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;Transactions of the American Mathematical Society&lt;/em&gt;, vol. 58,
+no. 2, 1945, pp. 231–94. &lt;em&gt;JSTOR&lt;/em&gt;,
+https://doi.org/10.2307/1990284. Accessed 26 Feb. 2023.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;———&lt;/em&gt;. “Group Extensions and Homology.” &lt;em&gt;Annals of
+Mathematics&lt;/em&gt;, vol. 43, no. 4, 1942, pp.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;757–831. &lt;em&gt;JSTOR&lt;/em&gt;, https://doi.org/10.2307/1968966. Accessed 26
+Feb. 2023.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Joyce, David. “Transformation Groups.” &lt;em&gt;Modern Algebra&lt;/em&gt;. Clark
+University. 2003. Accessed 26&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Feb 2023.
+http://aleph0.clarku.edu/~djoyce/modalg/transgroups.html.&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Kofman, Ilya. “Calculus Formulas.” &lt;em&gt;Calculus II&lt;/em&gt;. City
+University of New York. Accessed 26&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;February 2023.
+https://www.math.csi.cuny.edu/~ikofman/calculus_formulas.pdf&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Krantz, Steven. &lt;em&gt;Mathematical Apocrypha Redux: More Stories and
+Anecdotes of Mathematicians&lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;and the Mathematical&lt;/em&gt;. Mathematical Association of America,
+2005.&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Lawvere, William, and Stephen Schanuel. &lt;em&gt;Conceptual Mathematics: A
+First Introduction to &lt;/em&gt;&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;Categories&lt;/em&gt;. 2nd ed. Cambridge University Press, 2009.&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;La Palme Reyes, Marie, et al. “CountNouns, Mass Nouns and Their
+Transformations: a&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Category-Theoretic Unified Semantics.” &lt;em&gt;Language, Logic and
+Concepts&lt;/em&gt;. Bradford Book, MIT Press, 1999. pp 427-452.
+https://marieetgonzalo.files.wordpress.com/1999/06/mnmac1.pdf&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Logan, Matthew. “Why arent integration and differentiation inverses
+of each other?”&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;Mathematics Stack Exchange&lt;/em&gt;. 27 Dec 2014. Accessed 28 Feb
+2023. https://math.stackexchange.com/a/1082248/1098426&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Lumsdale, Peter. “In Category Theory Why Is a Right Adjoint Not a
+Left Adjoint?” &lt;em&gt;Mathematics&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;Stack Exchange&lt;/em&gt;, 22 Nov. 2011, Accessed 16 Mar 2023,
+https://math.stackexchange.com/a/84460/1098426&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Mac Lane, Saunders. “Samuel Eilenberg and Categories.” &lt;em&gt;Journal of
+Pure and Applied Algebra&lt;/em&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Vol 168, No 2. Elsevier Science, 2002. pp 127-131.
+https://doi.org/10.1016/S0022-4049(01)00092-5&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Magidin, Arturo. “What is the transformation group of a direct
+product (trivial group&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;extension)?” &lt;em&gt;Mathematics Stack Exchange&lt;/em&gt;. 28 Feb 2023.
+Accessed 28 Feb 2023.
+https://math.stackexchange.com/q/4648405/1098426&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Milewski, Bartosz. “Category Theory for Programmers: The Preface.”
+&lt;em&gt;Bartosz Milewskis&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;Programming Cafe: Category Theory, Haskell, Concurrency,
+C++&lt;/em&gt;. 28 Oct 2014.
+https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Riehl, Emily. &lt;em&gt;Category Theory in Context&lt;/em&gt;. Courier Dover
+Publications, 2016,&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;https://math.jhu.edu/~eriehl/context/.&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;Tegmark, Max. “Is ‘the theory of everything’ merely the ultimate
+ensemble theory?.” &lt;em&gt;Annals of&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;em&gt;Physics&lt;/em&gt;. Vol 270 No 1, 20 Nov 1998, pp 1-51.
+https://doi.org/10.1006/aphy.1998.5855&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;aside id=&quot;footnotes&quot; class=&quot;footnotes footnotes-end-of-document&quot; role=&quot;doc-endnotes&quot;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&quot;fn1&quot;&gt;&lt;p&gt;This relates to the “empty space” in a shape. For
+example, an inflatable bagel poked with a pin has three: the volume
+holding the air, the bagel hole, and the hole the needle pokes. This has
+the same shape as pants with the cuffs sewn together, and it cannot be
+turned inside out. Simply put, a shirt has no bagel hole despite having
+four needle holes, so it can turn inside out. &lt;em&gt;Homology&lt;/em&gt;
+describes these hole with &lt;em&gt;cycles&lt;/em&gt; and &lt;em&gt;boundaries&lt;/em&gt;.&lt;a href=&quot;#fnref1&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn2&quot;&gt;&lt;p&gt;&lt;strong&gt;Manifold theory&lt;/strong&gt; studies spaces that
+locally play by the rules of Euclid’s &lt;em&gt;Elements&lt;/em&gt;.
+&lt;strong&gt;Algebraic topology&lt;/strong&gt; studies how stretching and squishing
+preserve properties in shapes via abstract algebra—for structures see
+&lt;strong&gt;Figure 3&lt;/strong&gt; in the Appendix B.&lt;a href=&quot;#fnref2&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn3&quot;&gt;&lt;p&gt;&lt;strong&gt;Sets&lt;/strong&gt; are lists with no order or
+repetitions, where elements x of the set S are x 𝜖 S&lt;a href=&quot;#fnref3&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn4&quot;&gt;&lt;p&gt;&lt;strong&gt;Groups&lt;/strong&gt; are sets closed under an
+operation like addition, so adding any element to any other will only
+result in another element of the underlying set (See “Further Reading”
+in Appendix C).&lt;a href=&quot;#fnref4&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn5&quot;&gt;&lt;p&gt;&lt;strong&gt;Integers&lt;/strong&gt; ℤ={...˗2, ˗1, 0, 1, 2...}and
+&lt;strong&gt;real numbers&lt;/strong&gt; {1.543, ˗2, ½ , √3, 0} ⊂ ℝ&lt;a href=&quot;#fnref5&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn6&quot;&gt;&lt;p&gt;&lt;strong&gt;Functions&lt;/strong&gt; take inputs and applu the
+same rule to each output—for example 𝑓&lt;em&gt;(x) = x + 1&lt;/em&gt; adds one to
+every possible &lt;em&gt;x&lt;/em&gt; defined for 𝑓&lt;a href=&quot;#fnref6&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn7&quot;&gt;&lt;p&gt;&lt;strong&gt;Isomorphisms&lt;/strong&gt; can be thought of as
+reversible maps, which division exemplifies when it “undoes”
+multiplication on the real, rational, and complex numbers.&lt;a href=&quot;#fnref7&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn8&quot;&gt;&lt;p&gt;These theorems obscure this fact behind topological
+terms such as &lt;em&gt;continuity&lt;/em&gt; and &lt;em&gt;smoothness&lt;/em&gt; which gain
+intuition in this categorical perspective of isomorphisms. Consider for
+example the definition: “A function 𝑓: &lt;em&gt;X → Y&lt;/em&gt; between two
+topological spaces is &lt;em&gt;continuous&lt;/em&gt; if and only if
+𝑓&lt;sup&gt;-1&lt;/sup&gt;&lt;em&gt;U&lt;/em&gt; is open in &lt;em&gt;X&lt;/em&gt; whenever &lt;em&gt;U&lt;/em&gt; is
+open in &lt;em&gt;Y&lt;/em&gt;” (Bradley, et al. 3) which might deter general
+readers&lt;a href=&quot;#fnref8&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn9&quot;&gt;&lt;p&gt;More precisely, first find 𝑓&lt;sub&gt;1&lt;/sub&gt;⋅𝑓&lt;sub&gt;2&lt;/sub&gt;
+that Gandalf favors Sam favors Bilbo and move on to find Bilbo’s
+favorite, or we can find 𝑓&lt;sub&gt;2&lt;/sub&gt;⋅𝑓&lt;sub&gt;3&lt;/sub&gt; that Sam favors
+Bilbo favors Frodo and retroactively find that Gandalf favors Sam. In
+each case 𝑓 maps every person to the appropriate person, so no matter
+how we group 𝑓&lt;sub&gt;n&lt;/sub&gt;⋅𝑓&lt;sub&gt;n+1&lt;/sub&gt; starting with any given
+person in a series of three favorites always gives the final favorite
+person.&lt;a href=&quot;#fnref9&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn10&quot;&gt;&lt;p&gt;See &lt;strong&gt;Figure 3&lt;/strong&gt; in the Appendix B. Also,
+Of these categories, those involving topological spaces, manifolds, and
+field vector spaces are of most interest to the undergraduate in
+calculus, matrix algebra, and differential equations, where morphisms
+are functions.&lt;a href=&quot;#fnref10&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn11&quot;&gt;&lt;p&gt;They include further concepts as &lt;em&gt;functors&lt;/em&gt; or
+morphisms between categories, &lt;em&gt;adjunction&lt;/em&gt; or left and right
+morphisms with the identity, &lt;em&gt;natural isomorphism&lt;/em&gt;—or a morphism
+between functors, and the &lt;em&gt;Yoneda Lemma&lt;/em&gt; or defining every
+mathematical structure by all morphisms to or from it (Riehl 13, 116,
+24, 55). But an intuitive motivation for these ideas requires
+exploration of &lt;em&gt;universal properties&lt;/em&gt; and &lt;em&gt;duality&lt;/em&gt;, which
+leads to &lt;em&gt;initial objects&lt;/em&gt; and &lt;em&gt;terminal objects&lt;/em&gt;, and
+also &lt;em&gt;pushouts&lt;/em&gt; and &lt;em&gt;pullbacks&lt;/em&gt;. See Cheng (206-367)&lt;a href=&quot;#fnref11&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn12&quot;&gt;&lt;p&gt;Appendix A evaluates a real-valued group extension in
+relation to a few elementary functions, the latter of which many
+students learn in high school algebra and go on to study further in
+integral and differential calculus, but the process as a whole does not
+relate the group extension in algebraic topology to calculus through to
+category theory.&lt;a href=&quot;#fnref12&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn13&quot;&gt;&lt;p&gt;&lt;strong&gt;Imaginary numbers&lt;/strong&gt; extend the real
+number line &lt;strong&gt;ℝ&lt;/strong&gt; into a plane of complex numbers
+&lt;strong&gt;ℂ&lt;/strong&gt; where where &lt;em&gt;a + bi 𝜖&lt;/em&gt; &lt;strong&gt;ℂ&lt;/strong&gt; such
+that &lt;em&gt;a, b 𝜖&lt;/em&gt; &lt;strong&gt;ℝ&lt;/strong&gt; and &lt;em&gt;i&lt;sup&gt;2&lt;/sup&gt; =
+-1&lt;/em&gt;.&lt;a href=&quot;#fnref13&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn14&quot;&gt;&lt;p&gt;For examples see books in the Works Cited such as
+Riehl’s &lt;em&gt;Category Theory in Context&lt;/em&gt; and Bradley’s &lt;em&gt;Topology:
+A Categorical Approach&lt;/em&gt;&lt;a href=&quot;#fnref14&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn15&quot;&gt;&lt;p&gt;For the layperson: in geometry, a derivative (called d𝑓
+&lt;em&gt;⁄&lt;/em&gt;dx) gives the slope of a curve, and an integral (called ∫𝑓dx)
+gives the area under a curve. For a discussion of how to think about
+mathematical proofs and derivatives see Thurston in Appendix C.&lt;a href=&quot;#fnref15&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn16&quot;&gt;&lt;p&gt;FTC says that the derivative (rate of change) of the
+integral (accumulation) is the original function.&lt;a href=&quot;#fnref16&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn17&quot;&gt;&lt;p&gt;A linear algebra student might notice that the
+functions used for derivatives and integrals form transformations in the
+“vector space of smooth functions over the real numbers”—denoted
+&lt;em&gt;C&lt;sup&gt;∞&lt;/sup&gt;&lt;/em&gt;(ℝ) —where functions are scalable by
+multiplication with &lt;em&gt;r&lt;/em&gt; 𝜖 ℝ and additive with each other (the two
+axioms required for ) such that for 𝑓(&lt;em&gt;x&lt;/em&gt;) = &lt;em&gt;x&lt;/em&gt; there is
+&lt;em&gt;r⋅&lt;/em&gt;𝑓(&lt;em&gt;x&lt;/em&gt;) = &lt;em&gt;r⋅x&lt;/em&gt; and 𝑓(&lt;em&gt;x&lt;/em&gt;) +
+𝑓(&lt;em&gt;x&lt;/em&gt;) = &lt;em&gt;x&lt;/em&gt; + &lt;em&gt;x&lt;/em&gt;. Further, the derivatives are
+&lt;em&gt;D&lt;/em&gt;: &lt;em&gt;C&lt;sup&gt;∞&lt;/sup&gt;&lt;/em&gt;(ℝ) → &lt;em&gt;C&lt;sup&gt;∞&lt;/sup&gt;&lt;/em&gt;(ℝ) and 𝑓
+→ &lt;em&gt;d&lt;/em&gt;𝑓/&lt;em&gt;dx&lt;/em&gt; and the &lt;em&gt;kernel&lt;/em&gt; of this space where
+&lt;em&gt;D&lt;/em&gt;: 𝑓 → 0 is the set of constant functions such that &lt;em&gt;C&lt;/em&gt;
+𝜖 {&lt;em&gt;C&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; , &lt;em&gt;C&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt; ,
+&lt;em&gt;C&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt; , …} in &lt;strong&gt;Figure 3&lt;/strong&gt; (Logan,
+Appendix B).&lt;a href=&quot;#fnref17&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn18&quot;&gt;&lt;p&gt;In an elementary algebra class, this means integration
+and differentiation share the same &lt;em&gt;domain&lt;/em&gt; (possible input) and
+&lt;em&gt;codomain&lt;/em&gt; (possible output), but integration has a restricted
+&lt;em&gt;image&lt;/em&gt; (restricted output) —meaning differentiation is
+one-to-one, or categorically &lt;em&gt;isomorphic&lt;/em&gt;, while integration is
+into or injective—categorically &lt;em&gt;monomorphic&lt;/em&gt; (uses every
+input)—but not onto or surjective— categorically &lt;em&gt;epimorphic&lt;/em&gt;
+(uses every output). In this way, CT can illuminate the relationship
+between the integral and the derivative.&lt;a href=&quot;#fnref18&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn19&quot;&gt;&lt;p&gt;&lt;strong&gt;Homology&lt;/strong&gt; uses algebraic topology to
+label manifolds. In geometry, this looks like finding holes in shapes.
+In algebra, this requires many layers of abstraction.&lt;a href=&quot;#fnref19&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn20&quot;&gt;&lt;p&gt;&lt;strong&gt;Natural Transformation&lt;/strong&gt; can be thought
+of as a morphism between functors.&lt;a href=&quot;#fnref20&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&quot;fn21&quot;&gt;&lt;p&gt;The piecing apart of the goups fromed by the positive
+real numbers under multiplication is outlined by three sources (Holden,
+Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnref21&quot; class=&quot;footnote-back&quot; role=&quot;doc-backlink&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/aside&gt;
+
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fct%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=category%20theory%20for%20undergraduates&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
 		<title>heyting</title>
 		<link href="https://ischmidls.github.io/posts/pages/heyting/"/>
 		<updated>2023-04-30T17:00:00-07:00</updated>
@@ -4084,25 +4870,12 @@ In the following examples, Einstein notation is used.&lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;br&gt;
 &lt;p&gt;Now, time to put that index notation to use!&lt;/p&gt;
 &lt;p&gt;&lt;b id=&quot;def4&quot;&gt;Definition 4:&lt;/b&gt;&lt;/p&gt;
-&lt;p class=&quot;text-primary&quot;&gt;TLDR; &lt;/p&gt;
-&lt;p&gt;
-    For a differentiable function &#92;( F: &#92;mathbb{R}^m &#92;rightarrow &#92;mathbb{R}^n &#92;), the differential &#92;( DF(y) &#92;) of &#92;( F &#92;) at a point &#92;( y &#92;) is the linear mapping from &#92;( &#92;mathbb{R}^m &#92;) to &#92;( &#92;mathbb{R}^n &#92;) with the matrix:
-&lt;/p&gt;
-
-&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
-&#92;{DF&#92;}_{ij}(y) = &#92;frac{&#92;partial F_i}{&#92;partial x_j}(y) &#92;quad (9)
-&#92;]&lt;/p&gt;
-
-&lt;p&gt;
-  For a vector &#92;( x &#92;) of small norm, &#92;( DF(y)x &#92;) is the linear approximation of the change of the function &#92;( F(y + x) - F(y) &#92;), i.e., (Taylor formula of first order, or linearization formula):
-&lt;/p&gt;
-
-&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
-F(y + x) = F(y) + DF(y)x + o(|x|)
-&#92;] &lt;/p&gt;
-
-
-&lt;p&gt;&lt;b&gt;Theorem 5:&lt;/b&gt;  Existence and Uniqueness Theorem.&lt;/p&gt;
+&lt;p class=&quot;text-primary&quot;&gt;TLDR; &lt;em&gt;Prof. Peter Kuchment&lt;/em&gt; says differentials are matrices (linear transforms) &amp; small-norm differnetials are just first order Taylor polynomials, oh my.&lt;/p&gt;
+&lt;p&gt;Even though &lt;em&gt;Prof. Peter Kuchment&lt;/em&gt; does alright, I tried to clarify this a bit...&lt;/p&gt;
+&lt;p&gt;A given differentiable function &#92;(F: &#92;mathbb{R}^m &#92;rightarrow &#92;mathbb{R}^n&#92;) represents a function that maps points from an &#92;(m&#92;)-dimensional space to an &#92;(n&#92;)-dimensional space. For example, &#92;(F&#92;) could be a mapping from a 3D space to a 2D space.&lt;/p&gt;
+&lt;p&gt;The differential &#92;(DF(y)&#92;) of function &#92;(F&#92;) at a point &#92;(y&#92;) is the linear mapping from &#92;(&#92;mathbb{R}^m&#92;) to &#92;(&#92;mathbb{R}^n&#92;). In other words, it is a linear transformation that takes vectors in the &#92;(m&#92;)-dimensional space as input and produces vectors in the &#92;(n&#92;)-dimensional space as output.&lt;/p&gt;
+&lt;p&gt;The matrix representation of &#92;(DF(y)&#92;) is given by the expression &#92;(&#92;{DF&#92;}_{ij}(y) = &#92;frac{&#92;partial F_i}{&#92;partial x_j}(y)&#92;), where &#92;(&#92;{DF&#92;}_{ij}(y)&#92;) represents the element in the &#92;(i&#92;)-th row and &#92;(j&#92;)-th column of the matrix. This element is calculated by taking the partial derivative of the &#92;(i&#92;)-th component of &#92;(F&#92;) with respect to the &#92;(j&#92;)-th variable evaluated at point &#92;(y&#92;).&lt;/p&gt;
+&lt;p&gt;For a small vector &#92;(x&#92;) with a small norm, &#92;(DF(y)x&#92;) represents the linear approximation of the change in the function &#92;(F&#92;) between points &#92;(y + x&#92;) and &#92;(y&#92;). This approximation is given by the formula &#92;(F(y + x) = F(y) + DF(y)x + o(|x|)&#92;), where &#92;(o(|x|)&#92;) denotes a term that is &quot;smaller&quot; than &#92;(|x|&#92;) as &#92;(x&#92;) approaches the zero vector. This formula is known as the Taylor formula of the first order or the linearization formula.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Theorem 5:&lt;/b&gt;  Existence and Uniqueness Theorem.&lt;/p&gt;
 
 &lt;p&gt;
   
@@ -4140,7 +4913,7 @@ F(y + x) = F(y) + DF(y)x + o(|x|)
   &#92;( C^r &#92;) - class of &#92;( r &#92;) times continuously differentiable functions (applicable to both scalar and vector-valued functions of different numbers of variables, should be understandable from the context).
 &lt;/p&gt;
 &lt;p&gt;&lt;b&gt;Definition 7:&lt;/b&gt;&lt;/p&gt;
-&lt;p class=&quot;text-primary&quot;&gt;TLDR; &lt;/p&gt;
+&lt;p class=&quot;text-primary&quot;&gt;TLDR; a real-valued function &#92;( A(x) &#92;) is considered a contraction if it fulfills the inequality condition, indicating that the function values decrease as the input values become closer to each other, with the rate of decrease determined by the constant &#92;( K &#92;), which must be less than 1.&lt;/p&gt;
 &lt;p&gt;  A real-valued function &#92;( A(x) &#92;) on &#92;( &#92;mathbb{R} &#92;) is a &lt;b&gt;contraction&lt;/b&gt; if it satisfies the inequality&lt;/p&gt;
 
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[
@@ -4325,11 +5098,12 @@ y_{i+1}(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, y_i(&#92;tau)) d&#92;tau &#92;qu
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;b&gt;Definition 19:&lt;/b&gt; &lt;/p&gt;
-&lt;p class=&quot;text-primary&quot;&gt;TLDR; &lt;/p&gt;
+&lt;p class=&quot;text-primary&quot;&gt;TLDR; this is about creating a new vector field called &#92;( F_G(x) &#92;). This is done by taking an existing vector field &#92;( F(x) &#92;) and using a special transformation called a diffeomorphism &#92;( G &#92;). We apply &#92;( G &#92;) to the point &#92;( x &#92;), then take the inverse of that transformed point &#92;( G^{-1}(x) &#92;). We use &#92;( G^{-1}(x) &#92;) as an input to &#92;( F(x) &#92;) and get a vector &#92;( F(G^{-1}(x)) &#92;). Finally, we use the differential of the diffeomorphism &#92;( DG &#92;) on the vector &#92;( F(G^{-1}(x)) &#92;) to get the new vector &#92;( F_G(x) &#92;).&lt;/p&gt;
 &lt;p&gt;
   Let &#92;( F(x) &#92;) be a vector field and &#92;( G &#92;) be a diffeomorphism.
   Then one defines a new vector field as follows: &#92;( F_G(x) = (DG)(G^{-1}(x)) F(G^{-1}(x)) &#92;).
 &lt;/p&gt;
+
 
 &lt;p&gt;&lt;b&gt;Theorem 20:&lt;/b&gt;  Vector Field Rectification Theorem.&lt;/p&gt;
 

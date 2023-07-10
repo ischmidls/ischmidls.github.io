@@ -67,7 +67,7 @@
     <header>
       <nav>
         <div id="nav">
-          <h1><a href="{{ '/' | url }}" title="Homepage">{{ metadata.title }}</a></h1>
+          <h1><a href="{{ '/' | url }}" title="home">{{ metadata.title }}</a></h1>
           {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
           {%- for entry in collections.all | eleventyNavigation %}
             <a href="{{ entry.url | url }}">{{ entry.title }}</a>
@@ -101,7 +101,15 @@
     </main>
 
     <footer>
-      <a href="/">home</a>
+      <p>
+        <a style="float: left;" title="izak home" href="/">
+        izak home
+        </a>
+        <a style="float: right;" title="github" target="_blank" href="https://github.com/ischmidls">
+        github
+        </a>
+      <p>
+      
     </footer>
 
     <!-- Current page: {{ page.url | url }} -->
