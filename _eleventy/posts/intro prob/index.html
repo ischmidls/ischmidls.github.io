@@ -1,19 +1,19 @@
-<h2>table of contents</h2>
-<ul>
-  <li>1) <a href="#event-spaces">event spaces</a></li>
-  <li>2) <a href="#outer-measure">outer measure</a></li>
-  <li>3) <a href="#measurable-spaces">measurable spaces</a></li>
-  <li>4) <a href="#defining-a-measure">defining a measure</a></li>
-  <li>5) <a href="#measure-transformations">measure transformations</a></li>
-  <li>6) <a href="#probability-theory">probability theory</a>
+<h2>table of contents <a href="#top"><i class="bi bi-arrow-up"></i></a></h2>
+<ol>
+  <li><a href="#event-spaces">event spaces</a></li>
+  <li><a href="#outer-measure">outer measure</a></li>
+  <li><a href="#measurable-spaces">measurable spaces</a></li>
+  <li><a href="#defining-a-measure">defining a measure</a></li>
+  <li><a href="#measure-transformations">measure transformations</a></li>
+  <li><a href="#probability-theory">probability theory</a>
     <ul>
-      <li>6.1) <a href="#independence">independence</a></li>
+      <li><a href="#independence">independence</a></li>
     </ul>
     
   </li>
-</ul>
+</ol>
 <hr>
-<h2>intro</h2>
+<h2>intro <a href="#top"><i class="bi bi-arrow-up"></i></a></h2>
 <p>What follows &mdash; as with many of my posts &mdash; is my explanation of work from someone who is more erudite than me.</p>
 <p>This time it is "Formalizing the Beginnings of Bayesian Probability Theory in the Lean Theorem Prover" a Master's thesis from the lovely <em>Rishikesh Vaishnav</em>. You might find it <a href="https://escholarship.org/uc/item/8hb1w6js">here</a>, ceteris paribus.</p>
 <p>I skipped his intro on types &mdash; the foundation of Lean's formal proofs, so read that if you like. As you may know, I enjoy <a href="https://www.cse.chalmers.se/~peterd/papers/DependentTypesAtWork.pdf">Dependent Types at Work</a> by Ana Bove and Peter Dybjer (but this uses a different language &mdash; Agda). That being said, I will also disclude all of <em>Vaishnav's</em> code. So, this will read more like <a href="https://hott.github.io/book/hott-online-1404-g79e6d60.pdf">HoTT</a> in the line of Marin-Lof's or Hofmann's or Voevodsky's or Awodey's publications.</p>
@@ -77,7 +77,7 @@
 </blockquote>
 <p>(quoting nobody, I just prefer the <code>blockquote</code> markup to using the <code>pl-5</code> bootstrap; you can add that to the izak lore if you want)</p>
 <!--EVENT SPACES-->
-<h2 id="event-spaces">event spaces</h2>
+<h2 id="event-spaces">event spaces <a href="#top"><i class="bi bi-arrow-up"></i></a></h2>
 <p>Let a type \( \alpha \) be the "fundamental event space", 
   where each trial yields a value. 
   To assign a <em>measure</em> to sets in \( \alpha \), 
@@ -106,7 +106,7 @@ m(\varnothing) &= 0, \quad & (1) \\
 <p>The empty set property \((1)\) ensures that the empty set has zero mass. The monotonicity property \((2)\) guarantees that a set has at least as much mass as any of its subsets. The countable union property \((3)\) limits the mass of a set to the maximum mass present in any covering set of subsets.</p>
 <p>These propertis of <b>outer measure</b> allow us to talk about measure using <em>inequalities</em>.</p>
 <p>See <em>Vaishnav's</em> paper for info on "why countable".</p>
-<h2 id="outer-measure">outer measure</h2>
+<h2 id="outer-measure">outer measure <a href="#top"><i class="bi bi-arrow-up"></i></a></h2>
 <p><em>Vaishnav</em> defines:</p>
 <p>\[
   \text{fromfunc}(m_0(s)) = \inf_{ f : \mathbb{N} \rightarrow \text{set }\alpha} \left\{s \subseteq \bigcup_{i=0}^{\infty} f(i) \Rightarrow \sum_{i=0}^{\infty} m_0(f(i)) \right\}
@@ -168,7 +168,7 @@ m(\varnothing) &= 0, \quad & (1) \\
 </ol>
 
 </div></div><br>
-<h2 id="measurable-spaces">measurable spaces</h2>
+<h2 id="measurable-spaces">measurable spaces <a href="#top"><i class="bi bi-arrow-up"></i></a></h2>
 <p>Outer measures provide information about inequalities in measure functions. We are also interested in equalities between measures of sets in the event space. For disjoint sets \(A\) and \(B\) in \(\alpha\), we want to express the equality \(m(A \cup B) = m(A) + m(B)\). In the general case where \(A\) and \(B\) are not necessarily disjoint, we seek the equality \(m(A \cup B) = m(A \setminus B) + m(A \cap B) + m(B \setminus A)\).
 </p>
 <p>To control equality restrictions on measures, we introduce measurable spaces (\(σ\)-algebras). A measurable space \(M: \text{set}(\text{set} \ \alpha)\) includes "measurable sets" and satisfies:</p>
@@ -310,7 +310,7 @@ G(b) & \text{ is the largest element } \tilde{a} \text{ with } F(\tilde{a}) \leq
 
 <p>This is not too important to measure-theoretic probability theory?</p>
 
-<h2 id="defining-a-measure">defining a measure</h2>
+<h2 id="defining-a-measure">defining a measure <a href="#top"><i class="bi bi-arrow-up"></i></a></h2>
 
 <blockquote>
   <p>We now have all the definitions we need to define an outer measure that corresponds to the concept of probability, allowing us to derive useful equalities based on a measurable space. For any \( f : \mathbb{N} \to \text{set } \alpha \), let \( PD(f) \) indicate that \( f \) is pairwise disjoint, meaning the sets that \( f \) maps to with any distinct pair of indices are disjoint. Given a measurable space \( M \), we define a "measure" on \( M \) as an outer measure \( m \) that additionally satisfies the properties of <b>disjoint measurable set countable union</b> and trim invariance:</p>
@@ -326,7 +326,7 @@ G(b) & \text{ is the largest element } \tilde{a} \text{ with } F(\tilde{a}) \leq
 
 <p>As <em>Vaishnav</em> explains, the final criterion for an outer measure to correspond to a notion of probability is that it assigns a measure of 1 to the entire event space. A measure on the event space \(\alpha\) satisfying \(\mu(\text{univ} : \text{set } \alpha) = 1\) is referred to as a "probability measure". In general, probability measures are a type of "finite measure" that satisfies \(\mu(\text{univ}) < \infty\).</p>
 
-<h2 id="measure-transformations">measure transformations</h2>
+<h2 id="measure-transformations">measure transformations <a href="#top"><i class="bi bi-arrow-up"></i></a></h2>
 
 <p>Measures themselves are a type of outer measure that satisfies additional criteria. To achieve this, we "lift" outer measure transformations to the context of measures.</p>
 <p>Two specific transformations we focus on are \(restrict(·)\) and \(map(·)\), as defined earlier. However, directly applying these transformations to a measure may not always result in an outer measure that satisfies the criteria to be considered a measure. To address this, we need additional transformations that preserve the behavior of the original transformation on measurable sets and ensure that the resulting outer measure remains a measure.</p>
@@ -356,7 +356,7 @@ m(\varnothing) &= 0, \quad & (1) \\
   
   Now, consider an outer measure \(m\) and measurable space \(M\). It can be shown that the set of all Carathéodory sets forms a measurable space.</blockquote></p>
  <p>At this point, relies on higher levels of type-theoretic abstractions. The more elementary treatments thus far have been alright, with support from topology every now and then. Still, for those interested in a higher level type-theoretic persepctive, check out <em>Vaishnav's</em> subsections on "Lifting an Outer Measure Transformation", or "Restricting a Measure", or "Mapping a Measure". These topics can also be treated with topology outside the scope of these notes.</p>
-<h2 id="probability-theory">probability theory</h2>
+<h2 id="probability-theory">probability theory <a href="#top"><i class="bi bi-arrow-up"></i></a></h2>
   <h3 id="independence">independence</h3>
   <p>Given a measure \(\mu\) on \(\alpha\) and two events \(a\) and \(b\) from our event space, we define independence by requiring that the measure of their intersection is the product of their measures:</p>
   \[
@@ -418,9 +418,10 @@ m(\varnothing) &= 0, \quad & (1) \\
       <p>So, we now have license to use the "bundled" \(\operatorname{indep}_{-} \operatorname{set}_\mu(s, t)\) in place of our classical definition of independence (again, the equivalence can easily be seen by cases, but it's good to know the general result).</p>
 </blockquote>
 
-<h2>The End</h2>
+<h2>The End up <a href="#top"><i class="bi bi-arrow-up"></i></a></h2>
 
 <p>At this point, I do not find the remaining formalities conducive to my personal study of probabiity theory, although they might interest me more if I was more familiar with Lean.</p>
+<p>I have continued more relevant discussion of <em>measure theory</em> in the context of <em>intro to probability</em> at my recent post <a href="\posts\notes - cont. measure & intro prob\">notes - cont. measure & intro prob</a>.</p>
 <p>Check out the rest of <em>Vaishnav's</em> paper for (again, you might find it <a href="https://escholarship.org/uc/item/8hb1w6js">here</a>, ceteris paribus):</p>
 
 <ul>

@@ -5,7 +5,7 @@
 	
 	<link href="https://ischmidls.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://ischmidls.github.io"/>
-	<updated>2023-07-09T17:00:00-07:00</updated>
+	<updated>2023-07-12T17:00:00-07:00</updated>
 	<id>https://update-me.com</id>
 	<author>
 		<name>izak</name>
@@ -2202,7 +2202,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
         Approx. word count: ~3,700 words &lt;br&gt; 
         Approx math terms: ~300 LaTeX blocks&lt;/p&gt; --&gt;
 
-        &lt;h2&gt;Table of Contents&lt;/h2&gt;
+        &lt;h2&gt;Table of Contents &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
         &lt;ul&gt;
             &lt;li&gt;&lt;a href=&quot;#heyting-algebra&quot;&gt;Heyting Algebra&lt;/a&gt;&lt;/li&gt;
             &lt;li&gt;&lt;a href=&quot;#topologize-this&quot;&gt;Topologize This&lt;/a&gt;&lt;/li&gt;
@@ -2211,7 +2211,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
             &lt;li&gt;&lt;a href=&quot;#topoi-of-heyting-algebra-models&quot;&gt;Topoi of ʜᴇʏᴛɪɴɢ ᴀʟɢᴇʙʀᴀ Models&lt;/a&gt;&lt;/li&gt;
           &lt;/ul&gt;
           
-          &lt;h2 id=&quot;heyting-algebra&quot;&gt;Heyting Algebra&lt;/h2&gt;
+          &lt;h2 id=&quot;heyting-algebra&quot;&gt;Heyting Algebra &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
           
           
 &lt;p&gt;Now, Heyting algebras often take the unhelpful label—for those who are not yet students of topology—that: &quot;Every topology provides a complete Heyting algebra in the form of its open set lattice.&quot;&lt;/p&gt;
@@ -2232,7 +2232,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
 &lt;p&gt;Let’s take a turn from the big boys and churn out another spindle on the so-called Computational Trilogy.&lt;/p&gt;
 
 
-&lt;h2 id=&quot;topologize-this&quot;&gt;Topologize This&lt;/h2&gt;
+&lt;h2 id=&quot;topologize-this&quot;&gt;Topologize This &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;The question now: how do elementary topoi relate to Heyting algebras? Here is my transposition of knowledge dependencies—mostly from Wikipedia.
     The following sparse, definitional style is one of many manners for illustrating how these concepts hang together.
@@ -2284,7 +2284,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
 &lt;/ol&gt;
 
 
-&lt;h2 id=&quot;adjunction-boolean&quot;&gt;Adjunction Boolean&lt;/h2&gt;
+&lt;h2 id=&quot;adjunction-boolean&quot;&gt;Adjunction Boolean &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;(See nLab &lt;a href=&quot;https://ncatlab.org/nlab/show/Heyting+algebra&quot;&gt;ʜᴇʏᴛɪɴɢ ᴀʟɢᴇʙʀᴀ&lt;/a&gt; for source)&lt;/p&gt;
 &lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
@@ -2300,7 +2300,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
 &lt;p&gt;Therefore &#92;(U = &#92;neg&#92;neg: L &#92;to L(&#92;neg&#92;neg)&#92;) is a ʜᴇʏᴛɪɴɢ ᴀʟɢᴇʙʌ quotient which is the coequalizer of &#92;(1&#92;), &#92;(&#92;neg&#92;neg: L &#92;to L&#92;). It follows that a ʜᴇʏᴛɪɴɢ ᴀʟɢᴇʙʌ map &#92;(L &#92;to B&#92;) to any Boolean algebra &#92;(B&#92;), i.e., any ʜᴇʏᴛɪɴɢ ᴀʟɢᴇʙʌ where &#92;(1&#92;) and &#92;(&#92;neg&#92;neg&#92;) coincide, factors uniquely through this coequalizer, and the induced map &#92;(L(&#92;neg&#92;neg) &#92;to B&#92;) is a Boolean algebra map. In other words, &#92;(&#92;neg&#92;neg: L &#92;to L(&#92;neg&#92;neg)&#92;) is the universal ʜᴇʏᴛɪɴɢ ᴀʟɢᴇʙʌ map to a Boolean algebra, which establishes the adjunction.&lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;br&gt;
 
-&lt;h2 id=&quot;quantifiers-as-adjoints&quot;&gt;Quantifiers as Adjoints&lt;/h2&gt;
+&lt;h2 id=&quot;quantifiers-as-adjoints&quot;&gt;Quantifiers as Adjoints &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;
   (See
   &lt;a href=&quot;https://www.google.com/url?q=https://math.stackexchange.com/q/452795/1098426&amp;amp;sa=D&amp;amp;source=editors&amp;amp;ust=1688321707808674&amp;amp;usg=AOvVaw2DDZ2-k228Ur5-IiVPwFxy&quot;&gt;&quot;Quantifiers as Adjoints...&quot;. Math Stack Exchange&lt;/a&gt;
@@ -2351,7 +2351,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
 &lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;br&gt;
 
-&lt;h2 id=&quot;topoi-of-heyting-algebra-models&quot;&gt;Topoi of ʜᴇʏᴛɪɴɢ ᴀʟɢᴇʙʀᴀ Models&lt;/h2&gt;
+&lt;h2 id=&quot;topoi-of-heyting-algebra-models&quot;&gt;Topoi of ʜᴇʏᴛɪɴɢ ᴀʟɢᴇʙʀᴀ Models &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;(See &lt;a href=&quot;https://www.google.com/url?q=https://math.stackexchange.com/q/4506152/1098426&amp;amp;sa=D&amp;amp;source=editors&amp;amp;ust=1688321707815342&amp;amp;usg=AOvVaw31M2RPlEaOas6XPwEkKAzC&quot;&gt;&amp;quot;Is there a topos of Heyting...&amp;quot;,Math Stack Exchange&lt;/a&gt; for source)&lt;/p&gt;
 &lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
     
@@ -2486,7 +2486,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
         &lt;/li&gt;
       &lt;/ul&gt;
       &lt;hr&gt;
-      &lt;h2 id=&quot;dimension-theorem&quot;&gt;Dimension Theorem&lt;/h2&gt;
+      &lt;h2 id=&quot;dimension-theorem&quot;&gt;Dimension Theorem &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
       &lt;p&gt;All bases for a vector space have the same number of vectors.&lt;/p&gt;
       &lt;p&gt;Mathematically: &#92;( &#92;text{dim}(V) = &#92;text{dim}(W) &#92;) for any bases &#92;( V &#92;) and &#92;( W &#92;) of the vector space.&lt;/p&gt;
       &lt;div&gt;
@@ -2514,7 +2514,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
         &lt;p&gt;Both Basis 1 and Basis 2 consist of two vectors each. This example demonstrates that all bases (ok, at least &lt;em&gt;two&lt;/em&gt; bases) for &#92;(V&#92;) have the same number of vectors, which in this case is 2. This property holds true for any vector space, indicating that the number of vectors in a basis is a fundamental characteristic of the vector space itself. &lt;/p&gt;
       &lt;/div&gt;
       &lt;hr&gt;
-      &lt;h2 id=&quot;counting-theorem&quot;&gt;Counting Theorem&lt;/h2&gt;
+      &lt;h2 id=&quot;counting-theorem&quot;&gt;Counting Theorem &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
       &lt;p&gt;Dimension of column space + dimension of kernel = number of columns.&lt;/p&gt;
       &lt;p&gt;Mathematically: &#92;( &#92;text{dim}(&#92;text{col}(A)) + &#92;text{dim}(&#92;text{ker}(A)) = &#92;text{cols}(A) &#92;)&lt;/p&gt;
       &lt;div&gt;
@@ -2564,7 +2564,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
         &lt;p&gt;Here, &#92;( &#92;text{dim}(&#92;text{col}(A)) = 2 &#92;) and &#92;( &#92;text{dim}(&#92;text{ker}(A)) = 1 &#92;) so &#92;( &#92;text{cols}(A) = 2 + 1 = 3 &#92;). The number of columns in &#92;(A&#92;) is also &#92;(3&#92;).&lt;/p&gt;
       &lt;/div&gt;
       &lt;hr&gt;
-      &lt;h2 id=&quot;rank-theorem&quot;&gt;Rank Theorem&lt;/h2&gt;
+      &lt;h2 id=&quot;rank-theorem&quot;&gt;Rank Theorem &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
       &lt;p&gt;Dimension of column space = dimension of row space.&lt;/p&gt;
       &lt;p&gt;Mathematically: &#92;( &#92;text{dim}(&#92;text{col}(A)) = &#92;text{dim}(&#92;text{row}(A)) &#92;)&lt;/p&gt;
       &lt;div&gt;
@@ -2592,7 +2592,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
       &lt;/div&gt;
       &lt;hr&gt;
       &lt;!-- FUNDAMENTAL THEOREM --&gt;
-      &lt;h2 id=&quot;fundamental-theorem&quot;&gt;Fundamental Theorem&lt;/h2&gt;
+      &lt;h2 id=&quot;fundamental-theorem&quot;&gt;Fundamental Theorem &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
       &lt;p&gt;The row space and kernel of &#92;( A &#92;) are orthogonal complements in &#92;( &#92;mathbb{R}^n &#92;).&lt;/p&gt;
       &lt;p&gt;Mathematically: &#92;( &#92;text{row}(A) &#92;perp &#92;text{ker}(A) &#92;) in &#92;( &#92;mathbb{R}^n &#92;)&lt;/p&gt;
       &lt;p&gt;
@@ -2655,7 +2655,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
       &lt;p&gt;That is, &#92;( ( &#92;hat{n} = &#92;hat{s} ) &#92;Rightarrow ( &#92;hat{n} &#92;times &#92;hat{s} = 0 ) &#92;), and &#92;( ( &#92;hat{n} &#92;times &#92;hat{s} = 0 ) &#92;Rightarrow (&#92;hat{n} &#92;parallel &#92;hat{s}) &#92;), so finally, &#92;( &#92;hat{n} &#92;parallel &#92;hat{s} &#92;Rightarrow (&#92;text{row}(A) &#92;perp &#92;text{ker}(A)) &#92;).&lt;/p&gt;
       &lt;hr&gt;
       &lt;!-- SINGULAR VALUE DECOMPOSITION--&gt;
-      &lt;h2 id=&quot;singular-value-decomposition&quot;&gt;Singular Value Decomposition&lt;/h2&gt;
+      &lt;h2 id=&quot;singular-value-decomposition&quot;&gt;Singular Value Decomposition &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
       &lt;p&gt;This is where the computations become quite intense.&lt;/p&gt;
       &lt;p&gt;There are orthonormal bases (&#92;( v &#92;)&#39;s and &#92;( u &#92;)&#39;s) for the row and column spaces so that &#92;( Av_i = &#92;sigma_iu_i &#92;).&lt;/p&gt;
       &lt;p&gt;Mathematically: &#92;( A = US V^T &#92;) where &#92;( U &#92;) and &#92;( V &#92;) are orthonormal matrices, and &#92;( S &#92;) is a diagonal matrix of singular values.&lt;/p&gt;
@@ -3122,7 +3122,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
       &lt;/div&gt;
       &lt;hr&gt;
       &lt;!-- SPECTRAL THEOREM --&gt;
-      &lt;h2 id=&quot;spectral-theorem&quot;&gt;Spectral Theorem&lt;/h2&gt;
+      &lt;h2 id=&quot;spectral-theorem&quot;&gt;Spectral Theorem &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
       &lt;p&gt;If &#92;( A^T = A &#92;), there are orthonormal &#92;( q &#92;)&#39;s so that &#92;( Aq_i = &#92;lambda_iq_i &#92;) and &#92;( A = Q&#92;Lambda Q^T &#92;).&lt;/p&gt;
       &lt;p&gt;Mathematically: If &#92;( A &#92;) is symmetric, there exist orthonormal eigenvectors (&#92;( q &#92;)&#39;s) and eigenvalues (&#92;( &#92;lambda &#92;)&#39;s) such that &#92;( Aq_i = &#92;lambda_iq_i &#92;).&lt;/p&gt;
       &lt;p&gt;Now we&#39;re really talking.&lt;/p&gt;
@@ -3255,7 +3255,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
           
         &lt;sup&gt;We all &amp;#9825; Wolfram&lt;/sup&gt;&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
       &lt;hr&gt;
-      &lt;h2 id=&quot;nutshell&quot;&gt;Linear Algebra in a Nutshell&lt;/h2&gt;
+      &lt;h2 id=&quot;nutshell&quot;&gt;Linear Algebra in a Nutshell &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
       &lt;p&gt;As a bonus, here is the other part of the sections from from Gilbert Strang&#39;s &lt;em&gt;Introduction to Linear Algebra, 5th Ed&lt;/em&gt;. I was tempted not to include this because I cannot think of a sufficient example. But, I was struck by the similarity with &quot;The Key Theorem of Linear Algebra&quot; from Prof. Thomas Garrity&#39;s &lt;em&gt;All the Math you Missed, 2nd Ed&lt;/em&gt;. Prof. Garrity lays out his version after giving three definitions for the determinant (basically from induction, from linear rules, &amp; from signed volume), but Prof. Garrity does so before defining eigenvectors, as his intro to matrices as linear transformations.&lt;/p&gt;
       &lt;p&gt;&lt;b&gt;Let &#92;(A&#92;) be a &#92;(n&#92;times n&#92;) matrix...&lt;/b&gt;&lt;/p&gt;
       &lt;div class=&quot;table-responsive&quot;&gt;
@@ -3395,7 +3395,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
       &lt;a href=&quot;#to-be-continued&quot;&gt;to be continued&lt;/a&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
-  &lt;h2 id=&quot;consistency&quot;&gt;consistency&lt;/h2&gt;
+  &lt;h2 id=&quot;consistency&quot;&gt;consistency &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
   &lt;p&gt;Let Let &#92;(A&#92;) denote a matrix and &#92;(A | B &#92;) denote its augmented matrix.&lt;/p&gt;
   &lt;p&gt;Consistent Systems:&lt;/p&gt;
   &lt;ul&gt;
@@ -3453,7 +3453,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;br&gt;
-  &lt;h2 id=&quot;splitting-lemma&quot;&gt;splitting lemma&lt;/h2&gt;
+  &lt;h2 id=&quot;splitting-lemma&quot;&gt;splitting lemma &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
   &lt;div class=&quot;card&quot;&gt;
     &lt;div class=&quot;card-body&quot;&gt;
       
@@ -3562,7 +3562,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;br&gt;
-  &lt;h2 id=&quot;to-be-continued&quot;&gt;to be continued&lt;/h2&gt;
+  &lt;h2 id=&quot;to-be-continued&quot;&gt;to be continued &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
   &lt;p&gt;Now, we have a problem.&lt;/p&gt;
   &lt;a title=&quot;ARAKI Satoru, CC BY-SA 4.0 &amp;lt;https://creativecommons.org/licenses/by-sa/4.0&amp;gt;, via Wikimedia Commons&quot; href=&quot;https://commons.wikimedia.org/wiki/File:Rank-nullity.svg&quot;&gt;
     &lt;img style=&quot;width:50%;&quot; alt=&quot;Rank-nullity&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Rank-nullity.svg/256px-Rank-nullity.svg.png&quot;&gt;
@@ -3590,22 +3590,22 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
 		<updated>2023-07-01T17:00:00-07:00</updated>
 		<id>https://ischmidls.github.io/posts/intro%20prob/</id>
 		<content type="html">
-		  &lt;h2&gt;table of contents&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;1) &lt;a href=&quot;#event-spaces&quot;&gt;event spaces&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;2) &lt;a href=&quot;#outer-measure&quot;&gt;outer measure&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;3) &lt;a href=&quot;#measurable-spaces&quot;&gt;measurable spaces&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;4) &lt;a href=&quot;#defining-a-measure&quot;&gt;defining a measure&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;5) &lt;a href=&quot;#measure-transformations&quot;&gt;measure transformations&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;6) &lt;a href=&quot;#probability-theory&quot;&gt;probability theory&lt;/a&gt;
+		  &lt;h2&gt;table of contents &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#event-spaces&quot;&gt;event spaces&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#outer-measure&quot;&gt;outer measure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#measurable-spaces&quot;&gt;measurable spaces&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#defining-a-measure&quot;&gt;defining a measure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#measure-transformations&quot;&gt;measure transformations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#probability-theory&quot;&gt;probability theory&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;6.1) &lt;a href=&quot;#independence&quot;&gt;independence&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#independence&quot;&gt;independence&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
     
   &lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ol&gt;
 &lt;hr&gt;
-&lt;h2&gt;intro&lt;/h2&gt;
+&lt;h2&gt;intro &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;What follows &amp;mdash; as with many of my posts &amp;mdash; is my explanation of work from someone who is more erudite than me.&lt;/p&gt;
 &lt;p&gt;This time it is &quot;Formalizing the Beginnings of Bayesian Probability Theory in the Lean Theorem Prover&quot; a Master&#39;s thesis from the lovely &lt;em&gt;Rishikesh Vaishnav&lt;/em&gt;. You might find it &lt;a href=&quot;https://escholarship.org/uc/item/8hb1w6js&quot;&gt;here&lt;/a&gt;, ceteris paribus.&lt;/p&gt;
 &lt;p&gt;I skipped his intro on types &amp;mdash; the foundation of Lean&#39;s formal proofs, so read that if you like. As you may know, I enjoy &lt;a href=&quot;https://www.cse.chalmers.se/~peterd/papers/DependentTypesAtWork.pdf&quot;&gt;Dependent Types at Work&lt;/a&gt; by Ana Bove and Peter Dybjer (but this uses a different language &amp;mdash; Agda). That being said, I will also disclude all of &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; code. So, this will read more like &lt;a href=&quot;https://hott.github.io/book/hott-online-1404-g79e6d60.pdf&quot;&gt;HoTT&lt;/a&gt; in the line of Marin-Lof&#39;s or Hofmann&#39;s or Voevodsky&#39;s or Awodey&#39;s publications.&lt;/p&gt;
@@ -3669,7 +3669,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
 &lt;/blockquote&gt;
 &lt;p&gt;(quoting nobody, I just prefer the &lt;code&gt;blockquote&lt;/code&gt; markup to using the &lt;code&gt;pl-5&lt;/code&gt; bootstrap; you can add that to the izak lore if you want)&lt;/p&gt;
 &lt;!--EVENT SPACES--&gt;
-&lt;h2 id=&quot;event-spaces&quot;&gt;event spaces&lt;/h2&gt;
+&lt;h2 id=&quot;event-spaces&quot;&gt;event spaces &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Let a type &#92;( &#92;alpha &#92;) be the &quot;fundamental event space&quot;, 
   where each trial yields a value. 
   To assign a &lt;em&gt;measure&lt;/em&gt; to sets in &#92;( &#92;alpha &#92;), 
@@ -3698,7 +3698,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 &lt;p&gt;The empty set property &#92;((1)&#92;) ensures that the empty set has zero mass. The monotonicity property &#92;((2)&#92;) guarantees that a set has at least as much mass as any of its subsets. The countable union property &#92;((3)&#92;) limits the mass of a set to the maximum mass present in any covering set of subsets.&lt;/p&gt;
 &lt;p&gt;These propertis of &lt;b&gt;outer measure&lt;/b&gt; allow us to talk about measure using &lt;em&gt;inequalities&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;See &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; paper for info on &quot;why countable&quot;.&lt;/p&gt;
-&lt;h2 id=&quot;outer-measure&quot;&gt;outer measure&lt;/h2&gt;
+&lt;h2 id=&quot;outer-measure&quot;&gt;outer measure &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; defines:&lt;/p&gt;
 &lt;p&gt;&#92;[
   &#92;text{fromfunc}(m_0(s)) = &#92;inf_{ f : &#92;mathbb{N} &#92;rightarrow &#92;text{set }&#92;alpha} &#92;left&#92;{s &#92;subseteq &#92;bigcup_{i=0}^{&#92;infty} f(i) &#92;Rightarrow &#92;sum_{i=0}^{&#92;infty} m_0(f(i)) &#92;right&#92;}
@@ -3760,7 +3760,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 &lt;/ol&gt;
 
 &lt;/div&gt;&lt;/div&gt;&lt;br&gt;
-&lt;h2 id=&quot;measurable-spaces&quot;&gt;measurable spaces&lt;/h2&gt;
+&lt;h2 id=&quot;measurable-spaces&quot;&gt;measurable spaces &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Outer measures provide information about inequalities in measure functions. We are also interested in equalities between measures of sets in the event space. For disjoint sets &#92;(A&#92;) and &#92;(B&#92;) in &#92;(&#92;alpha&#92;), we want to express the equality &#92;(m(A &#92;cup B) = m(A) + m(B)&#92;). In the general case where &#92;(A&#92;) and &#92;(B&#92;) are not necessarily disjoint, we seek the equality &#92;(m(A &#92;cup B) = m(A &#92;setminus B) + m(A &#92;cap B) + m(B &#92;setminus A)&#92;).
 &lt;/p&gt;
 &lt;p&gt;To control equality restrictions on measures, we introduce measurable spaces (&#92;(σ&#92;)-algebras). A measurable space &#92;(M: &#92;text{set}(&#92;text{set} &#92; &#92;alpha)&#92;) includes &quot;measurable sets&quot; and satisfies:&lt;/p&gt;
@@ -3902,7 +3902,7 @@ G(b) &amp; &#92;text{ is the largest element } &#92;tilde{a} &#92;text{ with } F
 
 &lt;p&gt;This is not too important to measure-theoretic probability theory?&lt;/p&gt;
 
-&lt;h2 id=&quot;defining-a-measure&quot;&gt;defining a measure&lt;/h2&gt;
+&lt;h2 id=&quot;defining-a-measure&quot;&gt;defining a measure &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;We now have all the definitions we need to define an outer measure that corresponds to the concept of probability, allowing us to derive useful equalities based on a measurable space. For any &#92;( f : &#92;mathbb{N} &#92;to &#92;text{set } &#92;alpha &#92;), let &#92;( PD(f) &#92;) indicate that &#92;( f &#92;) is pairwise disjoint, meaning the sets that &#92;( f &#92;) maps to with any distinct pair of indices are disjoint. Given a measurable space &#92;( M &#92;), we define a &quot;measure&quot; on &#92;( M &#92;) as an outer measure &#92;( m &#92;) that additionally satisfies the properties of &lt;b&gt;disjoint measurable set countable union&lt;/b&gt; and trim invariance:&lt;/p&gt;
@@ -3918,7 +3918,7 @@ G(b) &amp; &#92;text{ is the largest element } &#92;tilde{a} &#92;text{ with } F
 
 &lt;p&gt;As &lt;em&gt;Vaishnav&lt;/em&gt; explains, the final criterion for an outer measure to correspond to a notion of probability is that it assigns a measure of 1 to the entire event space. A measure on the event space &#92;(&#92;alpha&#92;) satisfying &#92;(&#92;mu(&#92;text{univ} : &#92;text{set } &#92;alpha) = 1&#92;) is referred to as a &quot;probability measure&quot;. In general, probability measures are a type of &quot;finite measure&quot; that satisfies &#92;(&#92;mu(&#92;text{univ}) &lt; &#92;infty&#92;).&lt;/p&gt;
 
-&lt;h2 id=&quot;measure-transformations&quot;&gt;measure transformations&lt;/h2&gt;
+&lt;h2 id=&quot;measure-transformations&quot;&gt;measure transformations &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;Measures themselves are a type of outer measure that satisfies additional criteria. To achieve this, we &quot;lift&quot; outer measure transformations to the context of measures.&lt;/p&gt;
 &lt;p&gt;Two specific transformations we focus on are &#92;(restrict(·)&#92;) and &#92;(map(·)&#92;), as defined earlier. However, directly applying these transformations to a measure may not always result in an outer measure that satisfies the criteria to be considered a measure. To address this, we need additional transformations that preserve the behavior of the original transformation on measurable sets and ensure that the resulting outer measure remains a measure.&lt;/p&gt;
@@ -3948,7 +3948,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
   
   Now, consider an outer measure &#92;(m&#92;) and measurable space &#92;(M&#92;). It can be shown that the set of all Carathéodory sets forms a measurable space.&lt;/blockquote&gt;&lt;/p&gt;
  &lt;p&gt;At this point, relies on higher levels of type-theoretic abstractions. The more elementary treatments thus far have been alright, with support from topology every now and then. Still, for those interested in a higher level type-theoretic persepctive, check out &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; subsections on &quot;Lifting an Outer Measure Transformation&quot;, or &quot;Restricting a Measure&quot;, or &quot;Mapping a Measure&quot;. These topics can also be treated with topology outside the scope of these notes.&lt;/p&gt;
-&lt;h2 id=&quot;probability-theory&quot;&gt;probability theory&lt;/h2&gt;
+&lt;h2 id=&quot;probability-theory&quot;&gt;probability theory &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
   &lt;h3 id=&quot;independence&quot;&gt;independence&lt;/h3&gt;
   &lt;p&gt;Given a measure &#92;(&#92;mu&#92;) on &#92;(&#92;alpha&#92;) and two events &#92;(a&#92;) and &#92;(b&#92;) from our event space, we define independence by requiring that the measure of their intersection is the product of their measures:&lt;/p&gt;
   &#92;[
@@ -4010,9 +4010,10 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
       &lt;p&gt;So, we now have license to use the &quot;bundled&quot; &#92;(&#92;operatorname{indep}_{-} &#92;operatorname{set}_&#92;mu(s, t)&#92;) in place of our classical definition of independence (again, the equivalence can easily be seen by cases, but it&#39;s good to know the general result).&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2&gt;The End&lt;/h2&gt;
+&lt;h2&gt;The End up &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;At this point, I do not find the remaining formalities conducive to my personal study of probabiity theory, although they might interest me more if I was more familiar with Lean.&lt;/p&gt;
+&lt;p&gt;I have continued more relevant discussion of &lt;em&gt;measure theory&lt;/em&gt; in the context of &lt;em&gt;intro to probability&lt;/em&gt; at my recent post &lt;a href=&quot;https://ischmidls.github.io/posts/notes%20-%20cont.%20measure%20&amp;%20intro%20prob/&quot;&gt;notes - cont. measure &amp; intro prob&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Check out the rest of &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; paper for (again, you might find it &lt;a href=&quot;https://escholarship.org/uc/item/8hb1w6js&quot;&gt;here&lt;/a&gt;, ceteris paribus):&lt;/p&gt;
 
 &lt;ul&gt;
@@ -4410,14 +4411,69 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 	</entry>
 	
 	<entry>
-		<title>ordinary differential equations</title>
+		<title>notes - ode, index notation, etc</title>
 		<link href="https://ischmidls.github.io/posts/ode/"/>
 		<updated>2023-07-03T17:00:00-07:00</updated>
 		<id>https://ischmidls.github.io/posts/ode/</id>
 		<content type="html">
-		  &lt;div style=&quot;background-color: coral;font-weight: bolder;&quot;&gt;DRAFT under construction 7/10/23-...&lt;/div&gt;
+		  &lt;style&gt;
+    a {
+        font-weight: bold;
+    }
+&lt;/style&gt;
+&lt;div style=&quot;background-color: coral;font-weight: bolder;&quot;&gt;DRAFT under construction 7/10/23-...&lt;/div&gt;
+&lt;h3&gt;Table of Contents &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;ol&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#1&quot;&gt;Main notions
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#2&quot;&gt;Order reduction
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#3&quot;&gt;Reduction of a non-autonomous equation to an autonomous one
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#4&quot;&gt;What evolutionary (i.e., depending on time &#92;(t&#92;)) process can be described by ODEs?
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#5&quot;&gt;IVP (Initial Value Problems)
+    &lt;/a&gt;
+    &lt;ul&gt;&lt;li&gt;&lt;a href=&quot;#5.5&quot;&gt;Index Notation Aside&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#6&quot;&gt;Now about the proof: contraction mappings and such
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#7&quot;&gt;An existence theorem
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#8&quot;&gt;Geometry of ODEs: vector fields
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#9&quot;&gt;Dependence of solutions on parameters and initial data.
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#10&quot;&gt;Extendability of local solutions.
+    &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href=&quot;#11&quot;&gt;Boundary value problems (BVPs)
+    &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;hr&gt;
 &lt;p&gt;As with most of these posts, what I have included here closely follows and often directly copies or quotes a text written by someone more errudite than me. In this case thank you to &lt;em&gt;Prof. Peter Kuchment&lt;/em&gt; for &lt;a href=&quot;https://www.math.tamu.edu/~kuchment/ode.pdf&quot;&gt;A brief sketch of the main ODE theorems&lt;/a&gt; written for Texas A&amp;M University&#39;s Math 611, Fall 2017. &lt;/p&gt;
-&lt;h3&gt;Main notions&lt;/h3&gt;
+&lt;p class=&quot;pl-5&quot;&gt;&lt;sub&gt;For those with a lot of time on their hands, you may notice that the headings for this pages are &lt;code&gt;h3&lt;/code&gt; while the other posts so far use &lt;code&gt;h2&lt;/code&gt;, and the &lt;code&gt;a&lt;/code&gt; links are bold face!&lt;/sub&gt;&lt;/p&gt;
+&lt;h3 id=&quot;1&quot;&gt;Main notions &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;
   &lt;!-- EXPLAIN --&gt;&lt;b&gt;Definition 1:&lt;/b&gt; An ODE of order &#92;( k &#92;) is an equation relating the values of one or more unknown functions of a single variable &#92;( t &#92;) (which we will call &quot;time&quot;), their derivatives up to the order &#92;( k &#92;), and the independent variable itself:
 &lt;/p&gt;
@@ -4440,7 +4496,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
   &lt;li&gt;Do you know how the equations of the type shown in the last two examples are called?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I skipped section 2 because it&#39;s like three lines listing ODE vs PDE, Order, and Linear vs Non-linear.&lt;/p&gt;
-&lt;h3&gt;Order reduction&lt;/h3&gt;
+&lt;h3 id=&quot;2&quot;&gt;Order reduction &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p class=&quot;text-primary&quot;&gt;TLDR; ( &lt;em&gt;Prof. Peter Kuchment&#39;s&lt;/em&gt;) idea: just use vectors to represent systems of equations, then it&#39;s one equation of vectors. &lt;/p&gt;
 &lt;div class=&quot;pl-5&quot;&gt;
   &lt;p&gt; Introducing new unknown functions, an ODE or a system &#92;(&#92;Phi(t, &#92;mathbf{x}) = 0, &#92;quad (2)&#92;) can be reduced to a first-order system: &lt;/p&gt;
@@ -4465,12 +4521,12 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
   &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[ x_i = F(&#92;mathbf{x}) &#92;quad (6) &#92;]&lt;/p&gt;
   &lt;p&gt; and non-autonomous (5) equations. &lt;/p&gt;
 &lt;/div&gt;
-&lt;h4&gt;Reduction of a non-autonomous equation to an autonomous one:&lt;/h4&gt;
+&lt;h3 id=&quot;3&quot;&gt;Reduction of a non-autonomous equation to an autonomous one: &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt; Introduce a new time &#92;( &#92;tau &#92;) and consider the autonomous system: &lt;/p&gt;
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[ &#92;begin{align} x&#39;_0(&#92;tau) &amp;= F(t(&#92;tau), x(&#92;tau)) &#92;&#92; t&#39;_0(&#92;tau) &amp;= 1 &#92;end{align} &#92;]&lt;/p&gt;
 &lt;p&gt; This autonomous system is equivalent to the non-autonomous (5). In these notes, we will assume that &#92;( x(t) &#92;) is a differentiable function of &#92;( t &#92;in (a, b) &#92;subseteq &#92;mathbb{R}^n &#92;), and &#92;( F : &#92;mathbb{R}^{n+1} &#92;mapsto &#92;mathbb{R}^n &#92;). (The complex case is possible, but we will not consider it here.) &lt;/p&gt;
 
-&lt;h4&gt;What evolutionary (i.e., depending on time &#92;(t&#92;)) process can be described by ODEs?&lt;/h4&gt;
+&lt;h3 id=&quot;4&quot;&gt;What evolutionary (i.e., depending on time &#92;(t&#92;)) process can be described by ODEs? &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;When we have a process, whether it is mechanical, biological, or another type, where the instantaneous state can be described by a set of parameters &#92;(x&#92;), we can represent the evolution of this process with time &#92;(t&#92;) using ordinary differential equations (ODEs). The parameters &#92;(x&#92;) become functions of time &#92;(x(t)&#92;), and the space of these parameters is called the phase space.&lt;/p&gt;
 &lt;p&gt;For a process to be described by ODEs, three conditions must be satisfied:&lt;/p&gt;
 
@@ -4482,12 +4538,13 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 
 &lt;p&gt;If a process satisfies these three conditions - finite-dimensionality, smoothness, and determinism - it can be described by ODEs, which provide a mathematical framework for understanding and predicting its behavior over time.&lt;/p&gt;
 &lt;p&gt; Hence, &#92;( x&#39;_0(t) &#92;) is determined by &#92;( t &#92;) and &#92;( x(t) &#92;). In mathematical notations, we write that &#92;( x&#39;_0(t) &#92;) is a function of &#92;( t &#92;) and &#92;( x(t) &#92;): &#92;( x&#39;_0(t) = F(t, x(t)) &#92;), which is an ODE (a system of ODEs). &lt;/p&gt;
-&lt;h4&gt; IVP (Initial Value Problems): &lt;/h4&gt;
+&lt;h3 id=&quot;5&quot;&gt; IVP (Initial Value Problems):  &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[ &#92;begin{align} &#92;frac{dx}{dt} &amp;= F(t, x) &#92;&#92; x(t_0) &amp;= x_0 &#92;quad &#92;quad (8) &#92;end{align} &#92;]&lt;/p&gt;
 &lt;p&gt;For those familiar with index notation (i.e., Kronecker delta, Levi-Civita, and generally &quot;linear algebra without matrices&quot;), skip the following four cards, and jump into &lt;!-- EXPLAIN --&gt;&lt;b&gt;
     &lt;a href=&quot;#def4&quot;&gt;Definition 4&lt;/a&gt;
   &lt;/b&gt;. &lt;/p&gt;
-&lt;div class=&quot;card&quot;&gt;
+&lt;h4 id=&quot;5.5&quot;&gt;Index Notation Aside&lt;/h4&gt;
+  &lt;div class=&quot;card&quot;&gt;
   &lt;div class=&quot;card-body&quot;&gt;
     &lt;p&gt;A note on index notation:&lt;/p&gt;
     &lt;p&gt;Thank you to &lt;em&gt;Prof. David Roylance&lt;/em&gt; for his brief &lt;a href=&quot;https://web.mit.edu/course/3/3.11/www/modules/index.pdf&quot;&gt;Matrix and Index Notation&lt;/a&gt; from MIT September 18, 2000 &lt;/p&gt;
@@ -4658,6 +4715,27 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 &lt;/div&gt;
 &lt;br&gt;
 &lt;p&gt;Now, time to put that index notation to use!&lt;/p&gt;
+&lt;p&gt;Ha! Just kidding! What is a &lt;b&gt;norm&lt;/b&gt; &amp; why is it outside the scope of these notes?&lt;/p&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+    &lt;p&gt;To begin, &lt;a href=&quot;https://math.stackexchange.com/q/16963/1098426&quot;&gt;a well-phrased question&lt;/a&gt; from Math Stack Exchange:&lt;/p&gt;
+    &lt;p&gt;So if &#92;(X&#92;) is a vector space, and you define a norm, &#92;(x &#92;mapsto &#92;| x &#92;|&#92;), on it, then the bounded subset, &#92;(V = &#92;{ x &#92;in X: &#92;|x&#92;| &lt; &#92;infty &#92;}&#92;), is automatically a subspace.&lt;/p&gt;
+    &lt;p&gt;This follows from the definition of a norm, so for all &#92;(x,y &#92;in V&#92;), &#92;(c &#92;in &#92;mathbb{C}&#92;), &#92;(&#92;|x + c y&#92;| &#92;le &#92;|x&#92;| + &#92;|cy&#92;| = &#92;|x&#92;|+ |c| &#92;|y&#92;| &lt; &#92;infty&#92;), so &#92;(x+cy &#92;in V&#92;).&lt;/p&gt;
+    &lt;p&gt;Is this the reasoning behind the definition of a norm?&lt;/p&gt;
+    &lt;p&gt;Now, the top answer to this MSE question is from QC in 2011. While I love the guy, it is basically links to some funcitonal analysis resources. So, no.&lt;/p&gt;
+    &lt;p&gt;There is a better answer from &lt;a href=&quot;https://math.stackexchange.com/a/1380960/1098426&quot;&gt;another MSE question&lt;/a&gt;:&lt;/p&gt;
+    &lt;p&gt;Norms are inspired from the Euclidean distance function and refer to a generalized class of metrics &#92;(d&#92;) which for a normed linear space &#92;(V&#92;), satisfy the properties:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+    &lt;ul style=&quot;overflow: auto;&quot;&gt;
+        &lt;li&gt;&#92;(d(a,b) = d(a-b,0) = d(0,b-a) &#92;quad &#92;forall &#92;, a,b &#92;in V&#92;)&lt;/li&gt;
+        &lt;li&gt;&#92;(d(&#92;lambda u,0) = |&#92;lambda| d(u,0) &#92;quad &#92;forall &#92;, u &#92;in V&#92;)&lt;/li&gt;
+        &lt;li&gt;&#92;(d(a,b) &#92;le d(a,c)+d(c,b)&#92;)&lt;/li&gt;
+        &lt;li&gt;&#92;(d(a,b) &#92;ge 0 &#92;quad &#92;) with equality &#92;( &#92;Leftrightarrow a=b.&#92;)&lt;/li&gt;
+      &lt;/ul&gt;
+      
+&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+&lt;p&gt;Ok, I encourage you to read more about norms despite the looming shadow of &lt;em&gt;functional analysis&lt;/em&gt; just like I encourage you to learn more about &lt;em&gt;measures&lt;/em&gt; despite the looming shadow of real analysis.&lt;/p&gt;
+&lt;p&gt;A NOTE FROM THE FUTURE: &lt;span class=&quot;text-primary&quot;&gt;(this is intertextuality, not grift)&lt;/span&gt; I discuss this more in &lt;a href=&quot;https://ischmidls.github.io/posts/notes%20-%20cont.%20measure%20&amp;%20intro%20prob/&quot;&gt;notes - cont. measure &amp; intro prob&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;
   &lt;b id=&quot;def4&quot;&gt;Definition 4:&lt;/b&gt;
 &lt;/p&gt;
@@ -4675,7 +4753,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
   &lt;li&gt;The theorem does not guarantee global uniqueness of the solution, meaning that the uniqueness property may not hold for the entire interval &#92;((a, b)&#92;). There may be points where multiple solutions exist.&lt;/li&gt;
   &lt;li&gt;The proof of the theorem shows that the condition of Lipschitz continuity for &#92;(F&#92;) is sufficient for guaranteeing uniqueness. Lipschitz continuity means that there exists a constant &#92;(K&#92;) such that &#92;(|F(t, x) - F(t, y)| &#92;leq K|x - y|&#92;) for all &#92;((t, x)&#92;) and &#92;((t, y)&#92;) in the domain. This condition is weaker than requiring differentiability of &#92;(F&#92;) as stated in the theorem.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;Now about the proof: contraction mappings and such&lt;/h3&gt;
+&lt;h3 id=&quot;6&quot;&gt;Now about the proof: contraction mappings and such &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;h4&gt;Some notions and notations:&lt;/h4&gt;
 &lt;p&gt; For a continuous function &#92;( x: [a, b] &#92;rightarrow &#92;mathbb{R}^n &#92;) on a finite segment &#92;([a, b]&#92;), we denote by &lt;/p&gt;
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;( &#92;| x &#92;| = &#92;max_{t &#92;in [a, b]} &#92;| x(t) &#92;| &#92;quad (10) &#92;)&lt;/p&gt;
@@ -4741,7 +4819,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
         &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[ y_{i+1}(t) = x_0 + &#92;int_{t_0}^t F(&#92;tau, y_i(&#92;tau)) d&#92;tau &#92;quad (14) &#92;]&lt;/p&gt;
         &lt;p&gt; where &#92;( y_0 &#92;) can be chosen arbitrarily in such a way that &#92;( y_0(t_0) = x_0 &#92;), e.g., &#92;( y_0 &#92;equiv x_0 &#92;). &lt;/p&gt;
         &lt;p&gt;3. The Uniqueness and Existence &lt;!-- EXPLAIN --&gt;&lt;b&gt;Theorem 5&lt;/b&gt; is proven. &lt;/p&gt;
-        &lt;h3&gt;An existence theorem:&lt;/h3&gt;
+        &lt;h3 id=&quot;7&quot;&gt;An existence theorem: &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
         &lt;p&gt;
           &lt;!-- EXPLAIN --&gt;&lt;b&gt;
             &lt;!-- EXPLAIN --&gt;&lt;b&gt;Theorem 14:&lt;/b&gt; Peano&#39;s existence theorem. &lt;/b&gt; Continuity of &#92;( F &#92;) alone guarantees local existence of a solution of the IVP &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;( &#92;frac{dx}{dt} = F(t, x) &#92;Longrightarrow x(t_0) = x_0 &#92;quad (8)&#92;)&lt;/span&gt;.
@@ -4755,7 +4833,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
             &lt;li&gt;Example of the IVP problem: &#92;(&#92;frac{dx}{dt} = 3x^{2/3}&#92;), &#92;(x(0) = 0&#92;) shows that the conditions of Peano&#39;s theorem cannot guarantee uniqueness.&lt;/li&gt;
           &lt;/ol&gt;
         &lt;/blockquote&gt;
-        &lt;h3&gt;Geometry of ODEs: vector fields&lt;/h3&gt;
+        &lt;h3 id=&quot;8&quot;&gt;Geometry of ODEs: vector fields &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
         &lt;p&gt; Consider the autonomous case: &lt;/p&gt;
         &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[ &#92;frac{dx}{dt} = F(x), &#92;quad x(t) &#92;in &#92;mathbb{R}^n &#92;quad (15) &#92;]&lt;/p&gt;
         &lt;p&gt; We can think that &#92;( F(x) &#92;) assigns to each point &#92;( x &#92;) a vector &#92;( F(x) &#92;) (a vector &quot;grows&quot; out of any point). Then we call &#92;( F(x) &#92;) a vector field. We will consider at least continuous (or smoother) functions &#92;( F(x) &#92;) and corresponding vector fields. If &#92;( F &#92;) is of some class &#92;( C^r &#92;), we will also say that the field is of this class. &lt;/p&gt;
@@ -4786,7 +4864,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
     &lt;p&gt;
       &lt;!-- EXPLAIN --&gt;&lt;b&gt;Question:&lt;/b&gt; Can one do the converse, i.e., get an idea of the local construction of the rectifying diffeomorphism from a known solution?
     &lt;/p&gt;
-    &lt;h3&gt;Dependence of solutions on parameters and initial data.&lt;/h3&gt;
+    &lt;h3 id=&quot;9&quot;&gt;Dependence of solutions on parameters and initial data. &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
     &lt;p&gt; The solution of the IVP &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;( &#92;frac{dx}{dt} = F(t, x) &#92;Longrightarrow x(t_0) = x_0 &#92;quad (8)&#92;)&lt;/span&gt; depends on the values of &#92;( t_0 &#92;) and &#92;( x_0 &#92;). How smooth is this dependence? Another important question: Assume that the right hand side (the vector field) also depends on some parameter(s) &#92;( &#92;mu &#92;): &lt;/p&gt;
     &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[ &#92;frac{dx}{dt} = F(t, x, &#92;mu), &#92;quad x(t_0) = x_0. &#92;quad (16) &#92;]&lt;/p&gt;
     &lt;p&gt; How smoothly does the solution depend on the parameter? In fact, it can be seen that dependence on the initial data reduces to dependence on parameters. Indeed, introducing a new time variable &#92;( &#92;tau = t - t_0 &#92;) and a new spatial variable &#92;( y = x - x_0 &#92;), one reduces &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;( &#92;frac{dx}{dt} = F(t, x) &#92;Longrightarrow x(t_0) = x_0 &#92;quad (8)&#92;)&lt;/span&gt; to: &lt;/p&gt;
@@ -4797,7 +4875,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
     &lt;/p&gt;
     &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[ &#92;frac{dx}{dt} = F(x, &#92;mu), &#92;quad x(t_0) = x_0. &#92;quad (18) &#92;]&lt;/p&gt;
     &lt;p&gt; depends differentiably of class &#92;( C^r &#92;) on &#92;( (t, t_0, x, x_0, &#92;mu) &#92;) for sufficiently small &#92;( |t - t_0| &#92;), &#92;( |x - x_0| &#92;), &#92;( |&#92;mu - &#92;mu_0| &#92;). &lt;/p&gt;
-    &lt;h3&gt;Extendability of local solutions.&lt;/h3&gt;
+    &lt;h3 id=&quot;10&quot;&gt;Extendability of local solutions. &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
     &lt;blockquote&gt;
       &lt;p&gt; Our theorems guaranteed the existence of a local solution only with no guarantee of how long it will survive. Simple examples show the disappearance of solutions into a singular point. Even without singular points, a solution curve can grow fast and disappear in a finite time. An example is the IVP &#92;( &#92;frac{dx}{dt} = x^2 &#92;), &#92;( x(0) = 1 &#92;) that has the solution &#92;( x = &#92;frac{1}{1 - t} &#92;) that disappears at infinity when &#92;( t &#92;) approaches 1. Are there any other options? Answer: no. &lt;/p&gt;
     &lt;/blockquote&gt;
@@ -4805,7 +4883,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
       &lt;!-- EXPLAIN --&gt;&lt;b&gt;Theorem 22:&lt;/b&gt; Extendability Theorem.
     &lt;/p&gt;
     &lt;p&gt; Let &#92;( N &#92;) be a compact (bounded closed) subset in &#92;( &#92;Omega &#92;) (the domain where the smooth field is defined). Let also &#92;( F &#92;) have no singular points in &#92;( N &#92;). Then any local solution of &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;( &#92;frac{dx}{dt} = F(t, x) &#92;Longrightarrow x(t_0) = x_0 &#92;quad (8)&#92;)&lt;/span&gt; in &#92;( (a, b) &#92;times &#92;Omega &#92;) can be extended forward (for &#92;( t &gt; t_0 &#92;)) and backward (for &#92;( t &lt; t_0 &#92;)) either indefinitely or until it reaches the boundary of &#92;( N &#92;). &lt;/p&gt;
-        &lt;h3&gt;Boundary value problems (BVPs)&lt;/h3&gt;
+        &lt;h3 id=&quot;11&quot;&gt;Boundary value problems (BVPs) &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
         &lt;blockquote&gt;
           &lt;ul&gt;
             &lt;li&gt;Here the conditions are imposed at both ends of a time interval, rather than at one end only in the IVP case.&lt;/li&gt;
@@ -4817,7 +4895,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 			
 				
 				
-				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fode%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=ordinary%20differential%20equations&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fode%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=notes%20-%20ode%2C%20index%20notation%2C%20etc&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -5000,6 +5078,550 @@ the eigenvalues of &lt;span class=&quot;math inline&quot;&gt;&#92;(A&#92;)&lt;/s
 				
 				
 				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fode-coupled%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=ode%20coupled&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>langlands &amp; pendulum</title>
+		<link href="https://ischmidls.github.io/posts/langlands%20&amp;amp;%20pendulum/"/>
+		<updated>2023-07-10T17:00:00-07:00</updated>
+		<id>https://ischmidls.github.io/posts/langlands%20&amp;amp;%20pendulum/</id>
+		<content type="html">
+		  &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;a {font-weight: bold;}&lt;/style&gt;
+  &lt;!-- &lt;title&gt;Pendulum Simulation&lt;/title&gt; --&gt;
+  &lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css&quot;&gt; --&gt;
+  &lt;script&gt;
+    // Constants
+const canvasWidth = 600;
+const canvasHeight = 400;
+const pivotX = canvasWidth / 2;
+const pivotY = 50;
+const rodLength = 200;
+const gravity = 9.8;
+
+// Variables
+let angle = Math.PI / 4;
+let angularVelocity = 0;
+let angularAcceleration = 0;
+
+
+// UPDATE VARIABLES
+function updateVariables() {
+      const velocityInput = document.getElementById(&#39;velocityInput&#39;);
+      const accelerationInput = document.getElementById(&#39;accelerationInput&#39;);
+
+      angularVelocity = parseFloat(velocityInput.value);
+      angularAcceleration = parseFloat(accelerationInput.value);
+
+      console.log(&#39;Updated variables:&#39;);
+      console.log(&#39;Angular Velocity:&#39;, angularVelocity);
+      console.log(&#39;Angular Acceleration:&#39;, angularAcceleration);
+    }
+
+// UPDATE COLORS
+let bobColor = &#39;#f00&#39;;
+    let rodColor = &#39;#000&#39;;
+
+    function updateColors() {
+      const bobColorInput = document.getElementById(&#39;bobColorInput&#39;);
+      const rodColorInput = document.getElementById(&#39;rodColorInput&#39;);
+
+      bobColor = bobColorInput.value;
+      rodColor = rodColorInput.value;
+
+      console.log(&#39;Updated colors:&#39;);
+      console.log(&#39;Pendulum Bob Color:&#39;, bobColor);
+      console.log(&#39;Pendulum Rod Color:&#39;, rodColor);
+    }
+
+// Set up the canvas
+const canvas = document.createElement(&#39;canvas&#39;);
+canvas.width = canvasWidth;
+canvas.height = canvasHeight;
+document.body.appendChild(canvas);
+const ctx = canvas.getContext(&#39;2d&#39;);
+
+function updatePendulum() {
+  // Calculate the angular acceleration
+  angularAcceleration = -gravity / rodLength * Math.sin(angle);
+
+  // Update the angular velocity
+  angularVelocity += angularAcceleration;
+
+  // Limit the angular velocity to avoid excessive swing
+  angularVelocity *= 0.99;
+
+  // Update the angle
+  angle += angularVelocity;
+}
+
+function drawPendulum() {
+  // Clear the canvas
+  ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+
+  // Draw the pivot point
+  ctx.beginPath();
+  ctx.arc(pivotX, pivotY, 5, 0, 2 * Math.PI);
+  ctx.fillStyle = &#39;#000&#39;;
+  ctx.fill();
+
+  // Calculate the position of the bob
+  const bobX = pivotX + rodLength * Math.sin(angle);
+  const bobY = pivotY + rodLength * Math.cos(angle);
+
+      // Draw the rod
+      ctx.beginPath();
+      ctx.moveTo(pivotX, pivotY);
+      ctx.lineTo(bobX, bobY);
+      ctx.strokeStyle = rodColor;
+      ctx.stroke();
+
+      // Draw the bob
+      ctx.beginPath();
+      ctx.arc(bobX, bobY, 20, 0, 2 * Math.PI);
+      ctx.fillStyle = bobColor;
+      ctx.fill();
+}
+
+function animate() {
+  updatePendulum();
+  drawPendulum();
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;h2&gt;Langlands Program&lt;/h2&gt;
+    &lt;p&gt;Ha! Who do you think I am? For my first explanation of why I do not understand Langlands, take &lt;em&gt;Prof. G. Harder&lt;/em&gt; of Mathematisches Institut der Universitat Bonn&#39;s &lt;a href=&quot;https://mathweb.ucsd.edu/~csorense/teaching/math299/Harder_ICTP.pdf&quot;&gt;&quot;The Langlands Program (An Overview)&quot;&lt;/a&gt; where the first section is titled &quot;A Simple Example&quot;&lt;/p&gt;
+    &lt;blockquote&gt;
+      [...]
+      &lt;p&gt;The first object is a pair of integral, positive definite, quaternary quadratic forms:&lt;/p&gt;
+
+      &lt;p&gt;
+        &#92;( P(x, y, u, v) = x^2 + xy + 3y^2 + u^2 + uv + 3v^2 &#92;)
+      &lt;/p&gt;
+    
+      &lt;p&gt;
+        &#92;( Q(x, y, u, v) = 2(x^2 + y^2 + u^2 + v^2) + 2xu + xv + yu - 2yv &#92;)
+      &lt;/p&gt;
+      &lt;p&gt;These forms have discriminant &#92;(11^2&#92;), and I mention that these two quadratic forms &#92;(Q&#92;) and &#92;(P&#92;) are the only integral, positive definite quaternary forms with discriminant &#92;(11^2&#92;). This may not be so easy to verify, but it is true. (Rainer Schulze-Pillot pointed out that this is actually not true; there is a third form &#92;(S(x, y, u, v) = x^2 + 4(y^2 + u^2 + v^2) + xu + 4yu + 3yv + 7uv&#92;), but the two forms above are sufficient for the following considerations.&lt;/p&gt;
+
+      &lt;p&gt;This pair will give us automorphic forms; we come to this point later.&lt;/p&gt;
+    
+      &lt;p&gt;The second object is an elliptic curve &#92;(E&#92;), for us, this is simply a polynomial:&lt;/p&gt;
+    
+      &lt;p&gt;
+        &#92;(G(x, y) = y^2 + y - x^3 + x^2 + 10x + 20&#92;).
+      &lt;/p&gt;
+    
+      &lt;p&gt;This object is a diophantine equation. For any commutative ring &#92;(R&#92;) with identity, we can consider the set of solutions:&lt;/p&gt;
+    
+      &lt;p&gt;
+        &#92;(&#92;{(a, b) &#92;in R^2 | G(a, b) = 0&#92;}&#92;)
+      &lt;/p&gt;
+      [...]
+
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;Now, for an even more in-depth look at Langlands, I recommend &lt;a href=&quot;https://math.berkeley.edu/~frenkel/houches.pdf&quot;&gt;Lectures On The Langlands Program And Conformal Field Theory&lt;/a&gt; by UC Berkely&#39;s &lt;em&gt;Prof. Edward Frenkel&lt;/em&gt;.&lt;/p&gt;
+    
+    &lt;h2&gt;Pendulum Simulation&lt;/h2&gt;
+    &lt;table class=&quot;table&quot;&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;!--&lt;canvas id=&quot;pendulumCanvas&quot;&gt;&lt;/canvas&gt;--&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;label for=&quot;velocityInput&quot;&gt;Angular Velocity:&lt;/label&gt;
+            &lt;input type=&quot;number&quot; id=&quot;velocityInput&quot; value=&quot;0&quot;&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;label for=&quot;accelerationInput&quot;&gt;Angular Acceleration:&lt;/label&gt;
+            &lt;input type=&quot;number&quot; id=&quot;accelerationInput&quot; value=&quot;0&quot;&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;button onclick=&quot;updateVariables()&quot; class=&quot;btn btn-primary&quot;&gt;Update Acceleration &amp; Velocity&lt;/button&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;label for=&quot;bobColorInput&quot;&gt;Pendulum Bob Color:&lt;/label&gt;
+            &lt;input type=&quot;color&quot; id=&quot;bobColorInput&quot; value=&quot;#f00&quot;&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;label for=&quot;rodColorInput&quot;&gt;Pendulum Rod Color:&lt;/label&gt;
+            &lt;input type=&quot;color&quot; id=&quot;rodColorInput&quot; value=&quot;#000&quot;&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;
+            &lt;button onclick=&quot;updateColors()&quot; class=&quot;btn btn-primary&quot;&gt;Update Color&lt;/button&gt;
+          &lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Flanglands%20%26%20pendulum%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=langlands%20%26%20pendulum&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>notes - cont. measure &amp; intro prob</title>
+		<link href="https://ischmidls.github.io/posts/notes%20-%20cont.%20measure%20&amp;amp;%20intro%20prob/"/>
+		<updated>2023-07-10T17:00:00-07:00</updated>
+		<id>https://ischmidls.github.io/posts/notes%20-%20cont.%20measure%20&amp;amp;%20intro%20prob/</id>
+		<content type="html">
+		  
+&lt;style&gt;
+  a {
+      font-weight: bold;
+  }
+&lt;/style&gt;
+&lt;h2&gt;table of contents &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#intro&quot;&gt;intro&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#measure-for-probability&quot;&gt;measure for probability&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#measure-and-norm&quot;&gt;measure and norm&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#dipping-into-functional-analysis&quot;&gt;dipping into functional analysis&lt;/a&gt;&lt;/li&gt;
+  &lt;!-- &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt; --&gt;
+&lt;/ol&gt;
+&lt;h2&gt;intro &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;This post can be seen as a continuation of my recent post &lt;a href=&quot;https://ischmidls.github.io/posts/intro%20prob/&quot;&gt;notes - probability &amp; type&lt;/a&gt; which was long but ended somewhat prematurely because I felt the type-theoretic aspect was a distraction even if it motivated my initial look at &lt;em&gt;measure theory&lt;/em&gt; in the context of &lt;em&gt;intro to probability&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;This is not grift, as it is merely convenient for my personal site to be hypertextual: the previous end of my connection between &quot;measure&quot; and &quot;probability&quot; is like the end of &lt;a href=&quot;https://ischmidls.github.io/posts/ode/#5.5&quot;&gt;my connection between &lt;em&gt;differential equations&lt;/em&gt; and &lt;em&gt;norms&lt;/em&gt;&lt;/a&gt; (all thanks to the notorious 2011 Qiaochu Yuan, now better known as the ex-mathematician &quot;QC&quot;).&lt;/p&gt;
+
+&lt;h2 id=&quot;measure-for-probability&quot;&gt;measure for probability&lt;/h2&gt;
+&lt;p&gt;Now, what eaxactly did QC say?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  
+  &lt;p&gt;
+    You should be comfortable with real analysis on the level of Rudin&#39;s &lt;em&gt;Principles of Mathematical Analysis&lt;/em&gt;. Don&#39;t skimp on this; it&#39;s as much a maturity prerequisite as a prerequisite for actual concepts and techniques.
+  It might also help to study a little point-set topology, just so you&#39;re used to the idea of considering a collection of subsets of a set satisfying certain axioms (QC, 2011).
+  &lt;/p&gt;
+  &lt;blockquote&gt;
+    I think chapters 1-7 of Rudin&#39;s Principles of Mathematical Analysis furnish sufficient preparation for measure theory. However, the notions of &quot;pointwise convergence&quot; and &quot;uniform convergence&quot; in chapter 7 of this publication are essential prerequisites that are often neglected by students intending to study measure theory (Amitesh Datta, 2011).
+  &lt;/blockquote&gt;
+
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;Source: &lt;a href=&quot;https://math.stackexchange.com/a/65155/1098426&quot;&gt;Pre-requisites to study measure theory?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now, since analysis is one of the most rigorous subjects in math, and Rudin is one of the most rigorous treatments of analysis, I felt out of my depth.&lt;/p&gt;
+&lt;p&gt;Then, while reading about the &lt;em&gt;norm&lt;/em&gt; for the differential equations post, I stumbled upon a nicer thread.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;The standard answer is that measure theory is a more natural framework to work in. After all, in probability theory you are concerned with assigning probabilities to events (sets)... so you are dealing with functions whose inputs are sets and whose outputs are real numbers. This leads to sigma-algebras and measure theory if you want to do rigorous analysis.&lt;/p&gt;
+
+&lt;p&gt;But for the more practically-minded, here are two examples where I find measure theory to be more natural than elementary probability theory:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Suppose &#92;(X &#92;sim &#92;text{Uniform}(0,1)&#92;) and &#92;(Y = &#92;cos(X)&#92;). What does the joint density of &#92;((X,Y)&#92;) look like? What is the probability that &#92;((X,Y)&#92;) lies in some set &#92;(A&#92;)? This *can* be handled with delta functions but personally I find measure theory to be more natural.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Suppose you want to talk about choosing a random continuous &lt;em&gt;function&lt;/em&gt; (element of &#92;(C(0,1)&#92;) say). To define how you make this random choice, you would like to give a p.d.f., but what would that look like? (The technical issue here is that this space of continuous functions is infinite-dimensional and so Lebesgue measure cannot be defined). This problem is very natural in the field of Stochastic Processes including Financial Mathematics -- a stock price can be thought of as a random function. Under the measure theory framework, you talk in terms of probability measures instead of p.d.f.&#39;s, and so infinite dimensions do not pose an obstacle.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(Chris Evans, 2013)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Source: &lt;a href=&quot;https://math.stackexchange.com/a/394973/1098426&quot;&gt;why measure theory for probability?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There are two other helpful explanations from this post. The most informative excerpt from the first of these basically says that the motivation behind learning measure theory in probability and statistics is to provide a way to measure the probability of infinite sets of events. This is important when dealing with continuous random variables and determining the probability that a variable takes on a specific value or falls within a certain range. Measure theory allows for the definition of expectations and probability density functions (pdfs) for continuous random variables. It provides a framework for assigning probabilities to sets of events where individual events have zero probability.
+
+
+&lt;blockquote&gt;
+  &lt;p&gt;This motivation about pathological sets makes sense if you are coming from an analysis background, because so much effort is put into defining number systems, and functions on those number systems. So the Cantor set is an important set within the context of Analysis. However, I have never seen anyone try to assign probability to the Cantor set in any practical application. I am not saying that someone has not already done this, it is more likely that this problem was solved long ago--though I have not checked.&lt;/p&gt;
+
+&lt;p&gt;I think the more sensible motivation for why to learn measure theory as a probabilist or statistician has to do with finding a way to measure the probability of infinite sets of events. In probability and statistics we need a way to identify the probability that a continuous random variable takes a value less than or equal to a specific value, for example the probability density function&lt;/p&gt;
+&lt;p&gt;
+&#92;[
+pdf(X) := &#92;Pr(X &#92;leq x_0)
+&#92;]
+&lt;/p&gt;
+&lt;p&gt;where &#92;(x_0&#92;) is some particular value within the support of &#92;(X&#92;). For example, say we want &#92;(pdf(X) = &#92;Pr(X &#92;leq 0.5)&#92;). Given that &#92;(X&#92;) is continuous, the set of all possible values of &#92;(X&#92;)--also known as the support of &#92;(X&#92;)--is the set &#92;(&#92;{x : x &#92;in [0,1], x &#92;in &#92;mathbb{R} &#92;}&#92;). The set of all possible values in the event of interest: namely &#92;(X &#92;leq 0.5&#92;) is the set &#92;(&#92;{x : x &#92;in [0,0.5], x &#92;in &#92;mathbb{R}&#92;}&#92;).&lt;/p&gt;
+
+&lt;p&gt;Both the support of &#92;(X&#92;) and the event of interest are infinite sets. Intuitively, the size or cardinality of the support should be larger than the cardinality of the event of interest--though lacking a theory of measure we have no way to make that notion precise. But think if you were to try and figure out the frequency or probability of this event. You would have to divide &#92;(&#92;infty &#92;div &#92;infty&#92;).&lt;/p&gt;
+
+&lt;p&gt;So measure gives us a way to assign probability to sets of event where each individual event has zero probability. Another way of saying this is that measure theory gives us a way to define the expectations and pdfs for continuous random variables.&lt;/p&gt;
+&lt;p&gt;(Krishnab, 2018)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;/p&gt;&lt;p&gt;While that answer covered a lot of territory, a coarser sweep helps nail down that measure theory provides a unified mathematical framework for handling both discrete and continuous events in probability theory. While discrete events can be described using probability mass functions, continuous events require probability density functions. Measure theory allows for a consistent treatment of these concepts and eliminates the need to distinguish between different types of events. It provides a deeper understanding of probability theory and extends to more general objects in stochastic theory.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Simple answer: Tossing a coin.&lt;/p&gt;
+
+&lt;p&gt;Longer answer: You know that you treat discrete events like the above with probability mass functions or similar, but continuous things with probability density functions. Imagine you had &#92;(X&#92;) which is randomly uniform on &#92;([0,1]&#92;) half the time and &#92;(5&#92;) the rest of the time. Perfectly reasonable thing, could easily come up. Doesn&#39;t fit into either framework.&lt;/p&gt;
+
+&lt;p&gt;Measure theory provides a consistent language and mathematical framework unifying these ideas, and indeed much more general objects in stochastic theory. It removes any necessity to distinguish between fundamentally similar objects and crystallizes the relevant points out, allowing much deeper understanding of the theory.&lt;/p&gt;
+&lt;p&gt;(Carl &quot;not all wrong&quot; Turner)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;measure-and-norm&quot;&gt;measure and norm&lt;/h2&gt;
+
+&lt;p&gt;Recall from &lt;a href=&quot;https://ischmidls.github.io/posts/ode/#5.5&quot;&gt;my connection between &lt;em&gt;differential equations&lt;/em&gt; and &lt;em&gt;norms&lt;/em&gt;&lt;/a&gt;: &lt;/p&gt;
+
+&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+  &lt;p&gt;To begin, &lt;a href=&quot;https://math.stackexchange.com/q/16963/1098426&quot;&gt;a well-phrased question&lt;/a&gt; from Math Stack Exchange:&lt;/p&gt;
+  &lt;p&gt;So if &#92;(X&#92;) is a vector space, and you define a norm, &#92;(x &#92;mapsto &#92;| x &#92;|&#92;), on it, then the bounded subset, &#92;(V = &#92;{ x &#92;in X: &#92;|x&#92;| &lt; &#92;infty &#92;}&#92;), is automatically a subspace.&lt;/p&gt;
+  &lt;p&gt;This follows from the definition of a norm, so for all &#92;(x,y &#92;in V&#92;), &#92;(c &#92;in &#92;mathbb{C}&#92;), &#92;(&#92;|x + c y&#92;| &#92;le &#92;|x&#92;| + &#92;|cy&#92;| = &#92;|x&#92;|+ |c| &#92;|y&#92;| &lt; &#92;infty&#92;), so &#92;(x+cy &#92;in V&#92;).&lt;/p&gt;
+  &lt;p&gt;Is this the reasoning behind the definition of a norm?&lt;/p&gt;
+  &lt;p&gt;Now, the top answer to this MSE question is from QC in 2011. While I love the guy, it is basically links to some funcitonal analysis resources. So, no.&lt;/p&gt;
+  &lt;p&gt;There is a better answer from &lt;a href=&quot;https://math.stackexchange.com/a/1380960/1098426&quot;&gt;another MSE question&lt;/a&gt;:&lt;/p&gt;
+  &lt;p&gt;Norms are inspired from the Euclidean distance function and refer to a generalized class of metrics &#92;(d&#92;) which for a normed linear space &#92;(V&#92;), satisfy the properties:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+  &lt;ul style=&quot;overflow: auto;&quot;&gt;
+      &lt;li&gt;&#92;(d(a,b) = d(a-b,0) = d(0,b-a) &#92;quad &#92;forall &#92;, a,b &#92;in V&#92;)&lt;/li&gt;
+      &lt;li&gt;&#92;(d(&#92;lambda u,0) = |&#92;lambda| d(u,0) &#92;quad &#92;forall &#92;, u &#92;in V&#92;)&lt;/li&gt;
+      &lt;li&gt;&#92;(d(a,b) &#92;le d(a,c)+d(c,b)&#92;)&lt;/li&gt;
+      &lt;li&gt;&#92;(d(a,b) &#92;ge 0 &#92;quad &#92;) with equality &#92;( &#92;Leftrightarrow a=b.&#92;)&lt;/li&gt;
+    &lt;/ul&gt;
+    
+&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+
+&lt;p&gt;Again, as I&#39;ve said from that post and this post: &lt;em&gt;function analysis&lt;/em&gt; offers the best persepctive for appreciating &lt;em&gt;norms&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;However, &lt;a href=&quot;https://www.math.ucdavis.edu/~hunter/intro_analysis_pdf/intro_analysis.pdf&quot;&gt;my favorite notes on real analysis&lt;/a&gt; from lovely &lt;em&gt;Prof. J. K. Hunter&lt;/em&gt;, make uses of norms but concerning measures states: &lt;/p&gt;
+&lt;blockquote&gt;
+  The Lebesgue integral allows for the integration of unbounded or highly discontinuous functions that may not have Riemann integrals. It offers improved mathematical properties compared to the Riemann integral. The definition of the Lebesgue integral involves measure theory, which is beyond the scope of this discussion. However, it is worth noting that the Riemann integral is sufficient for many purposes. Even if the Lebesgue integral is needed, it is advisable to first understand the Riemann integral.
+&lt;/blockquote&gt;
+&lt;p&gt;The question remains: what is the difference between measure and norm, or at least, why might they be related?&lt;/p&gt;
+&lt;p&gt;For this first one, the basic idea is this. Norm and measure are mathematical concepts used in different contexts. A norm is primarily used in vector spaces and assigns non-negative numbers to vectors, while a measure is commonly used in sets and assigns non-negative numbers to subsets. Norms operate on individual elements, while measures consider subsets. The Euclidean norm, based on the square root of the sum of squared entries, is a basic example. Measures determine lengths, areas, or volumes and extend to unions and intersections of sets. Norms are denoted as &#92;(&#92;|&#92;cdot&#92;|&#92;), and measures are denoted as &#92;(&#92;mu&#92;). The axioms of a measure allow for non-empty sets to have non-zero measures, unlike norms where non-zero vectors always have non-zero norms. Pseudo-norms may assign zero to non-zero vectors but are not typically classified as norms.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Norm&lt;/em&gt; is mainly used in the context of vector spaces, i.e., a set equipped with a structure that enables us to sum up elements of the set and multiply them with scalars (e.g., real numbers).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Measure&lt;/em&gt; is mostly used in the context of sets which are not required to have any additional structure. Yet, to define the notion of measure, we need to require certain rules (about the open subsets of the given set and their unions and intersections) to hold.&lt;/p&gt;
+&lt;p&gt;Basic example of a norm would be the Euclidean norm (square all the entries of a given vector, sum them up and take the square root - classic). Basic example of a measure would be the length of an interval, area of a two-dimensional region, or a volume of some higher-dimensional object. But the objects we want to &lt;em&gt;measure&lt;/em&gt; are not just these elementary shapes, but also their unions and intersections (so things may get quite complicated as far as the general element to be measured is concerned - unlike with the case of vector spaces where the element may be uniquely represented with a sequence of numbers (components of the vector)).&lt;/p&gt;
+&lt;p&gt;Let our set be denoted by &#92;(S&#92;). Both the norm and the measure are certain functions on a set under consideration. A bit more precisely, norm (denoted &#92;(&#92;|&#92;cdot&#92;|&#92;)) takes only one argument from &#92;(S&#92;) and spits out a non-negative number, i.e., it is a mapping &#92;(&#92;|&#92;cdot&#92;| &#92;colon S &#92;rightarrow &#92;mathbb{R}&#92;) satisfying certain rules such as the norm of a zero vector to be zero. On the other hand, a measure takes a &lt;em&gt;subset&lt;/em&gt; of &#92;(S&#92;) and spits out a non-negative number. So &#92;(&#92;mu &#92;colon &#92;Omega(S) &#92;rightarrow &#92;mathbb{R}&#92;) is a function considered on a certain set &#92;(&#92;Omega(S)&#92;) consisting of subsets of &#92;(S&#92;), and we require some axioms about &#92;(&#92;Omega(S)&#92;) to hold (so actually some structure is hidden somewhere else anyway, yet different structure than the vector spaces have) in order for the measure to be definable nicely. Moreover, other axioms must be satisfied by &#92;(&#92;mu&#92;) to be a function called measure (e.g., that the empty set has zero measure).&lt;/p&gt;
+&lt;p&gt;Note: The axioms of a &lt;em&gt;measure&lt;/em&gt; do not require non-empty sets to be of zero measure - unlike the case of a &lt;em&gt;norm&lt;/em&gt; where a non-zero vector always has a non-zero norm... well, actually we can consider a type of norm which assigns zero to a non-zero vector, but those are usually called pseudo-norms.&lt;/p&gt;
+&lt;p&gt;(Radek Suchánek, 2017)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Source: &lt;a href=&quot;https://math.stackexchange.com/q/1483770/1098426&quot;&gt;Difference between a measure and a norm in a euclidean space&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Next, from the same source, is a more definition focused explanation. A norm is a function that assigns a non-negative number to a vector and behaves like a length function. It satisfies properties such as non-negativity, the triangle inequality, and homogeneity. The Euclidean norm in &#92;(&#92;mathbb{R}^2&#92;) is given as an example. On the other hand, a measure is a function that assigns non-negative numbers to sets. It satisfies properties such as non-negativity, assigning measure zero to the empty set, and countable additivity for disjoint sets. The Lebesgue Measure is mentioned as an example. The interpretation of objects in terms of norms and measures is discussed. The norm of a line depends on how it is viewed, with the length interpretation being relevant when considering the line as a vector. However, when considering the line as a subset of &#92;(&#92;mathbb{R}^2&#92;), the measure of the line (area) is typically zero. 
+&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;I think that if we see the &lt;em&gt;definitions&lt;/em&gt; of norm and measure, we can make the situation clearer.&lt;/p&gt;
+&lt;p&gt;A &lt;em&gt;norm&lt;/em&gt; is usually defined in a vector space and is a function that takes a vector and outputs a non-negative number. It is also required to have certain properties that make it behave &lt;em&gt;like a length function&lt;/em&gt;. These axioms are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&#92;(||x|| &amp;gt; 0&#92;) if &#92;(x &#92;ne 0&#92;) and &#92;(&#92;|x&#92;| = 0&#92;) if &#92;(x = 0&#92;) (as elements of the vector space you have)&lt;/li&gt;
+&lt;li&gt;&#92;(&#92;|x + y&#92;| &#92;le &#92;|x&#92;| + &#92;|y&#92;|&#92;) for all vectors (this is the analogue of the triangle inequality)&lt;/li&gt;
+&lt;li&gt;&#92;(&#92;|αx&#92;| = |α|&#92;cdot&#92;|x&#92;|&#92;) for all vectors &#92;(x&#92;) and scalars &#92;(α&#92;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The most usual example is the Euclidean norm in &#92;(&#92;mathbb{R}^2&#92;) which, given a vector &#92;(u=(x,y)&#92;), gives &#92;(&#92;|u&#92;| = &#92;sqrt{x^2 + y^2}&#92;).&lt;/p&gt;
+&lt;p&gt;Now, a &lt;em&gt;measure&lt;/em&gt; is a function that takes &lt;strong&gt;sets&lt;/strong&gt; (which, in a familiar setting like &#92;(&#92;mathbb{R}^2&#92;), can be thought of as shapes) and outputs non-negative numbers. The corresponding axioms are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&#92;(μ(A) &#92;ge 0&#92;) for all sets &#92;(A&#92;)&lt;/li&gt;
+&lt;li&gt;The empty set has measure zero&lt;/li&gt;
+&lt;li&gt;If we have a family of disjoint sets &#92;(A_i&#92;), then &#92;(μ&#92;left(&#92;bigcup_{i}^{&#92;infty} A_i&#92;right) = &#92;sum_{i}^{&#92;infty} μ(A_i)&#92;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The most usual measure is the Lebesgue Measure, which, in &lt;em&gt;good sets&lt;/em&gt;, coincides with our sense of length in &#92;(&#92;mathbb{R}^1&#92;), area in &#92;(&#92;mathbb{R}^2&#92;), and volume in &#92;(&#92;mathbb{R}^3&#92;).&lt;/p&gt;
+&lt;p&gt;Now, for your question: The answer depends on how you view your objects. If you want to see the line as a vector (with, say, the start to the origin), then the &lt;em&gt;norm&lt;/em&gt; would be the length of the line.&lt;/p&gt;
+&lt;p&gt;Now it gets trickier because the standard measure in &#92;(&#92;mathbb{R}^2&#92;) is area, so it is expected (and that&#39;s what happens) for every line, segment, or infinite to have measure (area) 0. But if you identify the line with &#92;(&#92;mathbb{R}^1&#92;), then you would have as measure what we usually understand as length.&lt;/p&gt;
+&lt;p&gt;To make this clear, let&#39;s say you have the line going from &#92;((0,0)&#92;) to &#92;((1,1)&#92;). This can be represented as:&lt;/p&gt;
+&lt;ul style=&quot;overflow: auto;&quot;&gt;
+&lt;li&gt;the vector: &#92;(u=(1,1)&#92;)&lt;/li&gt;
+&lt;li&gt;the subset of &#92;(&#92;mathbb{R}^2&#92;): &#92;(L = &#92;{ p = (x,y) &#92; | &#92; x,y &#92;in &#92;mathbb{R}^2  &#92; &#92;land &#92; (x,y) = (x,x) &#92; &#92;land &#92; 0 &#92;le x &#92;le 1 &#92;}&#92;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then the norm &#92;(&#92;|u&#92;| = &#92;sqrt{2}&#92;), and by identifying &#92;(L&#92;) with the set &#92;(L&#39; = [0,&#92;sqrt{2}]&#92;), you have &#92;(&#92;lambda^1(L&#39;) = &#92;sqrt{2}&#92;) with &#92;(&#92;lambda&#39;&#92;) being the measure of &#92;(&#92;mathbb{R}^1&#92;). (Note that as we said above, the Lebesgue measure of &#92;(&#92;mathbb{R}^2&#92;) would give the area of the line, so &#92;(&#92;lambda^2(L) = 0&#92;)).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+&lt;h2 id=&quot;dipping-into-functional-analysis&quot;&gt;dipping into functional analysis&lt;/h2&gt;
+&lt;p&gt;To broach this topic, I begin with another thread. This response considers a measure space &#92;((S, &#92;Sigma, &#92;mu)&#92;) and a normed vector space &#92;(&#92;mathcal{L}^2(&#92;mu)&#92;)  , which consists of functions with finite square integrals (&lt;span class=&quot;text-info&quot;&gt;Another way to define the integrability of a function is by considering the square of the function instead of its absolute value. In this case, for the square of the function to be Lebesgue integrable, both the integrals of the positive and negative parts of the real component, as well as those of the imaginary component, must be finite.&lt;/span&gt;). For a measurable function &#92;(f&#92;) belonging to &#92;(&#92;mathcal{L}^2(&#92;mu)&#92;), the norm is defined as the square root of the integral of &#92;(f^2&#92;) with respect to &#92;(&#92;mu&#92;), resembling the concept of &quot;length&quot; similar to the Euclidean norm in &#92;(&#92;mathbb{R}^n&#92;). Moving on to a probability space &#92;((&#92;Omega, &#92;mathcal{F}, P)&#92;) and the normed vector space &#92;(&#92;mathcal{L}^2(P)&#92;), the norm of a random variable &#92;(X&#92;) is defined as the square root of the expectation of &#92;(X^2&#92;). However, this is not the &quot;length&quot; of &#92;(X&#92;) unless the expected value of &#92;(X&#92;) is zero. In practice, the standard deviation is often considered as the &quot;length&quot; of &#92;(X&#92;) by subtracting the expected value &#92;(&#92;mu&#92;) from &#92;(X&#92;). This brings up questions about why the subtraction of &#92;(&#92;mu&#92;) is necessary to interpret it as the &quot;length&quot; and how to understand &#92;(X - &#92;mu&#92;) when thinking of &#92;(&#92;mathcal{L}^2(P)&#92;) as a vector space over &#92;(&#92;mathbb{R}&#92;). Additionally, there is an update discussing the desire to apply Euclidean geometry intuition to visualize the correlation coefficient &#92;(&#92;rho&#92;) as the cosine of the angle between random variables &#92;(X&#92;) and &#92;(Y&#92;), and the challenges in doing so due to differences in norms and inner products between vector spaces and &#92;(&#92;mathcal{L}^2(P)&#92;).&lt;/p&gt;
+&lt;p&gt;The question posed from &lt;a href=&quot;https://math.stackexchange.com/q/1885407/1098426&quot;&gt;&quot;Lengths&quot; of Random Variables in Infinite Dimensional Spaces&lt;/a&gt; is as follows:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Consider a measure space &#92;((S, &#92;Sigma, &#92;mu)&#92;) and the normed vector space &#92;(&#92;mathcal{L}^2(&#92;mu)&#92;). Then for any measurable function &#92;(f: S &#92;to &#92;mathbb{R}&#92;) with &#92;(f &#92;in &#92;mathcal{L}^2(&#92;mu)&#92;), the norm is defined as&lt;/p&gt;
+  &lt;p&gt;
+    &#92;[
+    ||f||_{&#92;mathcal{L}^2(&#92;mu)} := &#92;left(&#92;int_S f^2(x) &#92;, &#92;mu(dx)&#92;right)^{1/2},
+    &#92;]
+  &lt;/p&gt;
+  &lt;p&gt;and, as I understand it, this is exactly analogous to the &quot;length&quot; of &#92;(f&#92;), just as the Euclidean norm is the &quot;length&quot; of a vector in &#92;(&#92;mathbb{R}^n&#92;).&lt;/p&gt;
+  &lt;p&gt;Now consider a probability space &#92;((&#92;Omega, &#92;mathcal{F}, P)&#92;) and the normed vector space &#92;(&#92;mathcal{L}^2(P)&#92;). Let &#92;(X: &#92;Omega &#92;to &#92;mathbb{R}&#92;) be a random variable. Then for any such &#92;(X &#92;in &#92;mathcal{L}^2(P)&#92;), we define the norm of &#92;(X&#92;)&lt;/p&gt;
+  &lt;p&gt;
+    &#92;[
+    ||X||_{&#92;mathcal{L}^2(P)} := &#92;left( &#92;int_{&#92;Omega} X^2(&#92;omega) &#92;, P(d&#92;omega)&#92;right)^{1/2} = &#92;left(E&#92;left(X^2&#92;right)&#92;right)^{1/2},
+    &#92;]
+  &lt;/p&gt;
+  &lt;p&gt;but this is *not* the &quot;length&quot; of &#92;(X&#92;) unless &#92;(E(X) = 0&#92;). Instead, we usually think of the standard deviation as the length of &#92;(X&#92;) by subtracting &#92;(&#92;mu := E(X)&#92;) from &#92;(X&#92;) first:&lt;/p&gt;
+  &lt;p&gt;
+    &#92;[
+    std(X) := &#92;left(E&#92;left(&#92;left(X - &#92;mu&#92;right)^2&#92;right)&#92;right)^{1/2}.
+    &#92;]
+  &lt;/p&gt;
+  &lt;p&gt;This brings up two questions:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Why must we subtract &#92;(&#92;mu&#92;) to interpret this as the &quot;length&quot;?&lt;/li&gt;
+    &lt;li&gt;I&#39;m thinking of &#92;(&#92;mathcal{L}^2(P)&#92;) as a vector space over &#92;(&#92;mathbb{R}&#92;). Since &#92;(&#92;mu &#92;in &#92;mathbb{R}&#92;), what does &#92;(X - &#92;mu&#92;) mean? In Euclidean space, it doesn&#39;t make sense to write &#92;(&#92;vec{x} - c&#92;) for &#92;(&#92;vec{x} &#92;in &#92;mathbb{R}^n&#92;) and &#92;(c &#92;in &#92;mathbb{R}&#92;).&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt; I want to be able to apply the intuition of Euclidean geometry to visualize things like the correlation coefficient &#92;(&#92;rho&#92;) as the cosine of the angle between two random variables &#92;(X&#92;) and &#92;(Y&#92;), as explained &lt;a href=&quot;https://math.stackexchange.com/questions/48168/is-there-intuition-behind-the-pearson-correlation-coefficient&quot;&gt;here&lt;/a&gt;. In &#92;(&#92;mathbb{R}^n&#92;), the cosine of the angle between two vectors &#92;(&#92;vec{x}&#92;) and &#92;(&#92;vec{y}&#92;) is related to their inner product and lengths by&lt;/p&gt;
+  &lt;p&gt;
+    &#92;[
+    &#92;cos &#92;theta = &#92;frac{&#92;left&lt;&#92;vec{x}, &#92;vec{y}&#92;right=&quot;&quot;&gt;}{||&#92;vec{x}||&#92;cdot||&#92;vec{y}||}.
+    &#92;]
+  &lt;/&#92;vec{x},&gt;&lt;/p&gt;
+  &lt;p&gt;If &#92;(||X||_{&#92;mathcal{L}^2(P)}&#92;) were indeed the &quot;length&quot; of &#92;(X&#92;), then I feel like I should just be able to change the norms and inner products, but I can&#39;t because&lt;/p&gt;
+  &lt;p style=&quot;overflow-x: auto;&quot;&gt;
+    &#92;[&#92;cos &#92;theta =
+&#92;frac{&#92;left&amp;lt;X,Y&#92;right&amp;gt;_{&#92;mathcal{L}^2(P)}}{||X||_{&#92;mathcal{L}^2(P)}&#92;cdot||Y||_{&#92;mathcal{L}^2(P)}}
+&#92;neq &#92;frac{&#92;left&amp;lt;X - &#92;mu_X, Y -
+&#92;mu_Y&#92;right&amp;gt;_{&#92;mathcal{L}^2(P)}}{||X -
+&#92;mu_X||_{&#92;mathcal{L}^2(P)}&#92;cdot||Y - &#92;mu_Y||_{&#92;mathcal{L}^2(P)}} =
+&#92;frac{Cov(X,Y)}{std(X)&#92;cdot std(Y)} = &#92;rho&#92;]
+  &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now, consider the first, rather dismissive, answer. The basic idea is that the interpretation of norms in function spaces as lengths can be misleading and hinder understanding. Instead, it is more accurate to consider norms as offering a vague notion of size rather than geometric intuition. In vector spaces, norms are typically measured against the zero vector to maintain translation invariance. The choice of reference function in norm calculations can capture the distance between functions. For instance, in &#92;(L^{2}(&#92;mathbb{R})&#92;), norms can be taken with respect to different functions to measure their separation. The standard deviation example is specific to how it is defined as a result of linear functionals acting on the normed space. It is important to note that this is unrelated to the principles of vector spaces. Visualizing infinite-dimensional Hilbert spaces presents challenges due to our limited ability to visualize beyond three dimensions.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Length is not really the best way to think about norms in function spaces. It is much better to think of the norm as offering a vague notion of size. Thinking of the norm in function spaces as length just connotes too much geometric intuition where there is none. I think you are falling into a common trap when starting out in functional analysis, which is to try to interpret everything geometrically. I’ll just say that this is a very problematic way to approach the subject and will cause you more headaches than it will insight.&lt;/p&gt;
+&lt;p&gt;The reason that the norm is always taken against the zero vector by default is because in vector spaces, the length of vectors is translation invariant. For example, in &#92;(L^{2}(&#92;mathbb{R})&#92;), we take the norm against the zero function by default
+&#92;[&#92;lvert&#92;lvert f &#92;rvert&#92;rvert_{L^{2}}=&#92;lvert&#92;lvert f-0&#92;rvert&#92;rvert=&#92;left(&#92;int_{E &#92;subseteq &#92;mathbb{R}} &#92;lvert f-0 &#92;rvert^{2}&#92;,  d&#92;mu &#92;right)^{1/2}&#92;]
+but we could just as easily pick another function, say &#92;(g &#92;in L^{2}(&#92;mathbb{R})&#92;) and write
+&#92;[&#92;lvert&#92;lvert f-g &#92;rvert&#92;rvert_{L^{2}}=&#92;left(&#92;int_{E &#92;subseteq &#92;mathbb{R}} &#92;lvert f -g &#92;rvert^{2}&#92;,  d&#92;mu &#92;right)^{1/2}&#92;]
+which tells us how far apart these functions are in some sense (and there are many senses which do not coincide with your geometric intuition). Your standard deviation example just follows from the fact that you have a linear functional &#92;(&#92;mathbb{E}[&#92;cdot]:L^{2}(&#92;Omega,&#92;mathcal{F},&#92;mathbb{P}) &#92;to &#92;mathbb{R}&#92;) composed with another linear functional &#92;(&#92;sigma[&#92;cdot]:L^{2}(&#92;Omega,&#92;mathcal{F},&#92;mathbb{P}) &#92;to &#92;mathbb{R}&#92;) given by
+&#92;[&#92;sigma[X]=(&#92;mathbb{E}[(X-&#92;mathbb{E}[X])^{2}])^{1/2}&#92;]
+and this has nothing to do with how vector spaces work, it is just because of how &#92;(&#92;sigma[X]&#92;) is defined. It is the &quot;distance&quot; (or how much &quot;size&quot; is between them) from the constant function whose value is given by the functional &#92;(&#92;mathbb{E}[X]&#92;).&lt;/p&gt;
+&lt;p&gt;As for your second question, like I said before, our brains are limited to visualizing in 3 dimensions. Trying to &quot;visualize&quot; in an infinite dimensional Hilbert space simply isn’t going to work.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Lastly, in this explanation discusses different vector spaces and their associated norms. Examples of vector spaces include &#92;(&#92;mathcal{R}^n&#92;), the n-dimensional space of real numbers, and &#92;(L^2(&#92;mu)&#92;). Norms are defined as non-negative real-valued functions that satisfy specific properties. For instance, in &#92;(L^2(&#92;mu)&#92;), the norm is defined as &#92;(&#92;|f&#92;|_2 = &#92;left(&#92;int f^2 d&#92;mu&#92;right)^{1/2}&#92;), while in Euclidean space, the norm of a vector &#92;(x&#92;) is given by &#92;(&#92;|x&#92;| = &#92;left(&#92;sum_{i=1}^{n}x_i^2&#92;right)^{1/2}&#92;), representing the familiar Euclidean distance. Normed spaces also have an induced metric, which serves as a measure of distance between elements. The variance of a random variable &#92;(X&#92;) is related to the norm through &#92;(Var(X) = &#92;|&#92;mathbb{X} - &#92;mu&#92;|_2^2&#92;), where &#92;(&#92;mu&#92;) is the expectation of &#92;(X&#92;). The standard deviation corresponds to the actual norm, while the covariance between two random variables &#92;(X&#92;) and &#92;(Y&#92;) is defined as their inner product. Notably, the &#92;(L_2(P)&#92;) norm can be derived as a special case of the inner product when applied to &#92;(X = Y&#92;) and &#92;(E(X) = 0&#92;), but in general, norms in &#92;(L_2(P)&#92;) spaces cannot be obtained from an inner product.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Let &#92;(V&#92;) be a vector space. Examples of &#92;(V&#92;) are, &#92;(V=&#92;mathcal{R}^n&#92;), the n-dimensional space of reals or &#92;(V=L^2(&#92;mu)=&#92;{f:&#92;int f^2 d&#92;mu&amp;lt;&#92;infty&#92;}&#92;).&lt;/p&gt;
+&lt;p&gt;A norm &#92;(&#92;vert&#92;vert&#92;cdot&#92;vert&#92;vert&#92;) is non negative real-valued function on &#92;(V&#92;) which satisfies the three well known properties.&lt;/p&gt;
+&lt;p&gt;For &#92;(f&#92;in L^2(&#92;mu)&#92;), a norm is &#92;(&#92;vert&#92;vert f&#92;vert&#92;vert_2=(&#92;int f^2 d&#92;mu)^{1/2}&#92;).&lt;/p&gt;
+&lt;p&gt;In a Euclidean space, for &#92;(x=(x_1,&#92;ldots,x_n) &#92;in &#92;mathcal{R}^n&#92;) a norm is defined as &#92;(&#92;vert&#92;vert x&#92;vert&#92;vert=(&#92;sum^{n}_{i=1}x_i^2)^{1/2}&#92;)&lt;/p&gt;
+&lt;p&gt;In a normed space there is an induced metric(a &quot;distance&quot; between its elements) defined by: &#92;(&#92;vert&#92;vert v-w&#92;vert&#92;vert,&#92;;v,w&#92;in V&#92;).&lt;/p&gt;
+&lt;p&gt;For &#92;(f,g&#92;in L^2(&#92;mu)&#92;), &#92;(&#92;vert&#92;vert f-g&#92;vert&#92;vert_2=(&#92;int (f-g)^2 d&#92;mu)^{1/2}&#92;)
+and for &#92;(x,y&#92;in &#92;mathcal{R}^n&#92;) the induced metric is &#92;(&#92;vert&#92;vert x-y&#92;vert&#92;vert=(&#92;sum^{n}_{i=1}(x_i-y_i)^2)^{1/2}&#92;) which is the well known Euclidean distance between two vectors.&lt;/p&gt;
+&lt;p&gt;So, the length of a vector is actually the Euclidean norm on &#92;(&#92;mathcal{R}^n&#92;).&lt;/p&gt;
+&lt;p&gt;The variance is a special case. &#92;(X&#92;in &#92;mathcal{R}&#92;) is random variable ie a measurable function &#92;(&#92;mu&#92;in &#92;mathcal{R}&#92;) is a constant, the expectation of &#92;(X&#92;), and &#92;(P&#92;) is a probability measure on &#92;(X&#92;) then &#92;[Var(X)=&#92;vert&#92;vert X-&#92;mu&#92;vert&#92;vert_2^2=&#92;int(X-&#92;mu)^2dP=E(X-&#92;mu)^2&#92;]&lt;/p&gt;
+&lt;p&gt;The standard deviation is the actual norm.&lt;/p&gt;
+&lt;p&gt;The covariance between two random variables &#92;(X,Y&#92;) is the inner product &#92;(&amp;lt;X-E(X),Y-E(Y)&amp;gt;&#92;;=&#92;int (X-E(X))(Y-E(Y))dP&#92;).&lt;/p&gt;
+&lt;p&gt;Notice that this inner product can produce the &#92;(L_2(P)&#92;) norm as special case for &#92;(X=Y,&#92;;E(X)=0&#92;).
+&#92;[&amp;lt;X,X&amp;gt;&#92;;=&#92;int X^2 dP=&#92;vert&#92;vert X&#92;vert&#92;vert_2^2&#92;]
+This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
+&lt;p&gt;In general norms in &#92;(L_2(P)&#92;) spaces cannot be produced from an inner product.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;With all that in mind, even this brief dip into functional analysis to clarify norms and measures is not very helpful to someone who is for the first time learning differential equations or probability thoery.&lt;/p&gt;
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fnotes%20-%20cont.%20measure%20%26%20intro%20prob%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=notes%20-%20cont.%20measure%20%26%20intro%20prob&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>1st order integrating factors</title>
+		<link href="https://ischmidls.github.io/posts/1st%20order%20integrating%20factors/"/>
+		<updated>2023-07-12T17:00:00-07:00</updated>
+		<id>https://ischmidls.github.io/posts/1st%20order%20integrating%20factors/</id>
+		<content type="html">
+		  &lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/posts/1st%20order%20integrating%20factors/intro&quot;&gt;intro&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#fol&quot;&gt;first order linear equations (integrating factors)&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;#transformations&quot;&gt;transformations&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;intro&quot;&gt;intro&lt;/h2&gt;
+&lt;p&gt;Pretty straightforward for this one.&lt;br&gt; Adapted from notes for Oregon State Math 256.&lt;br&gt;&lt;/p&gt;
+&lt;h2 id=&quot;fol&quot;&gt;first order linear equations (integrating factors)&lt;/h2&gt;
+&lt;p&gt;Consider a first-order linear differential equation:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[a_1(x) &#92;frac{dy}{dx} + a_0(x) y = g(x).&lt;br&gt;&#92;]&lt;/p&gt;
+
+&lt;p&gt;By dividing through by &#92;(a_1(x)&#92;), we can rewrite it in the standard form:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;frac{dy}{dx} + p(x) y = f(x).&lt;br&gt;&#92;]&lt;/p&gt;
+
+&lt;p&gt;Looking at the LHS, it resembles the product rule applied to &#92;(y(x)&#92;) and some function &#92;(&#92;mu(x)&#92;):&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;frac{d}{dx}[&#92;mu(x) y] = &#92;mu(x) &#92;frac{dy}{dx} + &#92;mu&#39;(x) y.&lt;br&gt;&#92;]&lt;/p&gt;
+
+&lt;p&gt;Multiplying both sides of the equation by &#92;(&#92;mu(x)&#92;) gives:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;mu(x) &#92;frac{dy}{dx} + &#92;mu(x) p(x) y = &#92;mu(x) f(x).&lt;br&gt;&#92;]&lt;/p&gt;
+
+&lt;p&gt;To match the LHS to the form of the product rule for &#92;(&#92;mu(x) y&#92;), we need a function &#92;(&#92;mu(x)&#92;) that satisfies:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;mu&#39;(x) = &#92;mu(x) p(x).&lt;br&gt;&#92;]&lt;/p&gt;
+
+&lt;p&gt;Integrating both sides of this equation yields:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;ln |&#92;mu(x)| = &#92;int p(x) dx.&lt;br&gt;&#92;]&lt;/p&gt;
+
+&lt;p&gt;Therefore, the possibilities for &#92;(&#92;mu(x)&#92;) are:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;mu(x) = &#92;pm e^{&#92;int p(x) dx}.&lt;br&gt;&#92;]&lt;/p&gt;
+
+&lt;p&gt;These functions are known as integrating factors (IF).&lt;br&gt; In the case of first-order linear differential equations, we only need one IF.&lt;br&gt; To simplify the process, we choose &#92;(&#92;mu(x) = e^{&#92;int p(x) dx}&#92;) and set the constant of integration to 0.&lt;br&gt; With this choice, the equation &#92;(&#92;mu(x) &#92;frac{dy}{dx} + &#92;mu(x) p(x) y = &#92;mu(x) f(x)&#92;) becomes &#92;(&#92;left[y e^{&#92;int p(x) dx}&#92;right]&#39; = f(x) e^{&#92;int p(x) dx}&#92;).&lt;br&gt; This allows us to integrate both sides and solve for &#92;(y&#92;).&lt;br&gt; In general, an IF is a quantity that, when multiplied with the differential equation, makes it exact.&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;Examples:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&#92;(y&#39;+&#92;frac{3}{x}y=&#92;frac{4}{x^5}&#92;).&lt;br&gt; We can use an IF of &#92;(&#92;mu(x)=e^{&#92;int &#92;frac{3}{x} dx}=e^{3&#92;ln|x|}=&#92;pm x^3&#92;).&lt;br&gt; By multiplying both sides of &#92;(y&#39;+2xy=x^3&#92;) by &#92;(&#92;mu=x^3&#92;), we get &#92;(x^3y&#39;+3x^2y=&#92;frac{4}{x^2}&#92;).&lt;br&gt; This equation can be rewritten as &#92;(&#92;left(x^3y&#92;right)&#39;=&#92;frac{4}{x^2}&#92;).&lt;br&gt; By integrating both sides, &#92;(x^3y=-&#92;frac{4}{x}+C&#92;).&lt;br&gt; So &#92;(y=&#92;frac{C}{x^3}-&#92;frac{4}{x^4}&#92;) is the general solution.&lt;br&gt;&lt;/li&gt;
+  &lt;li&gt;&#92;(xy&#39;-3y=x^4e^x&#92;).&lt;br&gt; First, we rewrite this in the standard form to get &#92;(y&#39;-&#92;frac{3}{x}y=x^3e^x&#92;).&lt;br&gt; So an IF is &#92;(&#92;mu(x)=e^{&#92;int-&#92;frac{3}{x} dx}=e^{-3&#92;ln|x|}=&#92;pm x^{-3}&#92;).&lt;br&gt; Notice the integrand&#39;s sign here.&lt;br&gt; A common mistake is to leave it behind.&lt;br&gt; By multiplying both sides of &#92;(y&#39;-&#92;frac{3}{x}y=x^3e^x&#92;) by &#92;(&#92;mu=x^{-3}&#92;), we get &#92;(x^{-3}y&#39;-3x^{-4}y=e^x&#92;).&lt;br&gt; This equation can be rewritten as &#92;(&#92;left(x^{-3}y&#92;right)&#39;=e^x&#92;).&lt;br&gt; By integrating both sides, &#92;(x^{-3}y=e^x+C&#92;).&lt;br&gt; So &#92;(y=x^3e^x+Cx^3&#92;) is the general solution.&lt;br&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;3.&lt;br&gt; &#92;(y&#39;+2xy=x^3&#92;).&lt;br&gt; An IF is &#92;(&#92;mu=e^{&#92;int 2x dx}=e^{x^2}&#92;).&lt;br&gt; By multiplying both sides of &#92;(y&#39;+2xy=x^3&#92;) by &#92;(&#92;mu&#92;) we get&lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[e^{x^2} y&#39;+2x e^{x^2} y=x^3 e^{x^2}&#92;]&lt;/p&gt;&lt;p&gt;This equation can be rewritten as&lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;left(e^{x^2} y&#92;right)^{&#92;prime}=x^3 e^{x^2}&#92;]&lt;/p&gt;&lt;p&gt;By integration by parts,&lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[e^{x^2} y=&#92;frac{1}{2} e^{x^2}&#92;left(x^2-1&#92;right)+C&#92;]&lt;/p&gt;&lt;p&gt;Hence &#92;(y=&#92;frac{1}{2}&#92;left(x^2-1&#92;right)+C e^{-x^2}&#92;) is the general solution.&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;4.&lt;br&gt; &#92;(y&#39;+&#92;cos (t) y=&#92;sin (t), y(0)=2&#92;).&lt;br&gt; First we rewrite this in the standard form to get &#92;(y&#39;+y&#92;tan(t)=&#92;sec(t)&#92;).&lt;br&gt; So an IF is &#92;(&#92;mu=e^{&#92;int&#92;tan(t) dt}=e^{&#92;ln|&#92;sec(t)|}= &#92;pm &#92;sec(t)&#92;).&lt;br&gt; By
+
+ multiplying both sides of &#92;(y&#39;+y&#92;tan(t)=&#92;sec(t)&#92;) by &#92;(&#92;mu=&#92;sec(t)&#92;) we get&lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;sec(t) y&#39;+&#92;sec(t)&#92;tan(t) y=&#92;sec^2(t) .&lt;br&gt;&#92;]&lt;/p&gt;&lt;p&gt;This equation can be rewritten as&lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[(&#92;sec(t) y)^{&#92;prime}=&#92;sec^2(t) .&lt;br&gt;&#92;]&lt;/p&gt;&lt;p&gt;By integrating both sides, &#92;(&#92;sec(t) y=&#92;tan(t)+C .&lt;br&gt;&#92;) Then &#92;(y=&#92;sin(t)+C&#92;cos(t)&#92;) is the general solution.&lt;br&gt; Imposing the initial condition of &#92;(y(0)=2&#92;) yields &#92;(C=2&#92;) and a solution of &#92;(y=&#92;sin(t)+2&#92;cos(t) .&lt;br&gt;&#92;)&lt;/p&gt;
+&lt;p&gt;5.&lt;br&gt; &#92;(y&#39;-2xy=1, y(1)=e&#92;) An IF is &#92;(&#92;mu=e^{&#92;int-2x dx}=e^{-x^2}&#92;).&lt;br&gt; By multiplying both sides by &#92;(&#92;mu&#92;) we get&lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[e^{-x^2} y&#39;-2xe^{-x^2} y=e^{-x^2}&#92;]&lt;/p&gt;&lt;p&gt;This equation can be rewritten as&lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;left(e^{-x^2} y&#92;right)^{&#92;prime}=e^{-x^2}&#92;]&lt;/p&gt;&lt;p&gt;But the integral of &#92;(e^{-x^2}&#92;) does not have an expression in terms of elementary functions.&lt;br&gt; Looking at the initial condition of &#92;(y(1)=2&#92;) we will use the integral function &#92;(F(x)=&#92;int_1^x e^{-t^2} dt&#92;) as an antiderivative of &#92;(f(x)=e^{-x^2}&#92;).&lt;br&gt; So we may write that &#92;(e^{-x^2} y=&#92;int_1^x e^{-t^2} dt+C&#92;).&lt;br&gt; Then the general solution is &#92;(y=e^{x^2} &#92;int_1^x e^{-t^2} dt+C e^{x^2}&#92;) Imposing the initial condition of &#92;(y(1)=e&#92;) yields &#92;(C=1&#92;).&lt;br&gt; So the solution is &#92;(y=e^{x^2} &#92;int_1^x e^{-t^2} dt+e^{x^2}&#92;) Try doing the homework for this section using the method of IF instead of the method of variation of parameters shown in the text.&lt;br&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;transformations&quot;&gt;transformations&lt;/h2&gt;
+&lt;p&gt;Sometimes you can make a substitution to transform a differential equation into something more familiar.&lt;br&gt; Example: Solve &#92;(y&#39;=&#92;frac{x+y-1}{x+y+1}&#92;).&lt;br&gt; Try: &#92;(u=x+y&#92;) Then &#92;(y=u-x &#92;Rightarrow y&#39;=u&#39;-1 &#92;Rightarrow u&#39;-1=&#92;frac{u-1}{u+1} &#92;Rightarrow u&#39;=&#92;frac{u-1}{u+1}+1=&#92;frac{2u}{u+1}&#92;).&lt;br&gt; That’s separable.&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;begin{aligned} &amp;&#92;Rightarrow &#92;frac{u+1}{2u} du=dx &#92;Rightarrow &#92;int &#92;frac{1}{2}+&#92;frac{1}{2u} du=&#92;int dx &#92;Rightarrow &#92;frac{1}{2}u+&#92;frac{1}{2}&#92;ln|u|=x+c &#92;&#92; &amp;&#92;Rightarrow &#92;frac{1}{2}(x+y)+&#92;frac{1}{2}&#92;ln|x+y|=x+c &#92;Rightarrow &#92;frac{1}{2}y+&#92;frac{1}{2}&#92;ln|x+y|=x+C &#92;Rightarrow y+&#92;ln|x+y|=2x+2C &#92;end{aligned}&#92;]&lt;/p&gt;
+&lt;p&gt;If a thing appears multiple times in a differential equation then you might try that thing as your substitution.&lt;br&gt; Example: Solve &#92;(y+x&#92;tan&#92;left(&#92;frac{y}{x}&#92;right)-x&#92;frac{dy}{dx}=0&#92;) Try: Divide by &#92;(x&#92;) to get &#92;(&#92;frac{y}{x}&#92;) showing up more than once:&lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;frac{y}{x}+&#92;tan&#92;left(&#92;frac{y}{x}&#92;right)-&#92;frac{dy}{dx}=0&#92;]&lt;/p&gt;&lt;p&gt;Then try &#92;(u=&#92;frac{y}{x}&#92;): &#92;(&#92;Rightarrow y=ux &#92;Rightarrow y&#39;=u+xu&#39; &#92;Rightarrow u+&#92;tan(u)-&#92;left(u+xu&#39;&#92;right)=0 &#92;Rightarrow &#92;tan(u)-xu&#39;=0&#92;).&lt;br&gt; Separable.&lt;br&gt; &#92;(&#92;Rightarrow xu&#39;=&#92;tan(u) &#92;Rightarrow &#92;frac{&#92;cos(u)}{&#92;sin(u)}du=&#92;frac{dx}{x} &#92;Rightarrow &#92;int&#92;frac{&#92;cos(u)}{&#92;sin(u)}du=&#92;int&#92;frac{dx}{x}&#92;).&lt;br&gt; Using &#92;(w=&#92;sin(u) &#92;Rightarrow dw=&#92;cos(u)du&#92;), &#92;(&#92;Rightarrow &#92;int&#92;frac{dw}{w}=&#92;ln|x|+c &#92;Rightarrow &#92;ln|w|=&#92;ln|x|+c &#92;Rightarrow &#92;ln&#92;left|&#92;sin&#92;left(&#92;frac{y}{x}&#92;right)&#92;right|=&#92;ln|x|+c &#92;Rightarrow &#92;sin&#92;left(&#92;frac{y}{x}&#92;right)=Cx&#92;).&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Definition: If a first-order differential equation can be written in the form &lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[y&#39; = g&#92;left(&#92;frac{y}{x}&#92;right)&#92;]&lt;/p&gt;
+&lt;p&gt;then the differential equation is homogeneous.&lt;br&gt; [This is not the same as before, i.&lt;br&gt;e.&lt;br&gt;, &#92;(y&#39; + x^2 y = 0&#92;).&lt;br&gt; &lt;br&gt; This is a special case of the more general definition: &#92;(f&#92;) is homogeneous of degree &#92;(n&#92;) if &#92;(f(kx, ky) = k^n f(x, y)&#92;) for any constant &#92;(k&#92;).&lt;br&gt; &lt;br&gt; The substitution &#92;(u = &#92;frac{y}{x}&#92;) will always transform a homogeneous differential equation into a separable one: &lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[ &#92;begin{aligned} &amp;y = ux, &#92;quad y&#39; = g&#92;left(&#92;frac{y}{x}&#92;right) &#92;&#92; &amp;y&#39; = u + xu&#39; &#92;Rightarrow u + xu&#39; = g(u) &#92;Rightarrow &#92;frac{du}{g(u)-u} = &#92;frac{dx}{x}.&lt;br&gt; &#92;end{aligned} &#92;]&lt;/p&gt;
+&lt;p&gt;Example: &#92;(y&#39; = &#92;frac{x+y}{x} = 1 + &#92;frac{y}{x} = g&#92;left(&#92;frac{y}{x}&#92;right)&#92;) is homogeneous.&lt;br&gt; &lt;br&gt; Example: &#92;(y&#39; = &#92;frac{x^2+y}{x} = x + &#92;frac{y}{x} &#92;neq g&#92;left(&#92;frac{y}{x}&#92;right)&#92;) is not homogeneous.&lt;br&gt; &lt;br&gt; Example: &#92;(xy&#39; = xe^{-y/x} + y, &#92;quad x &gt; 0&#92;).&lt;br&gt; &lt;br&gt; &#92;(y&#39; = e^{-y/x} + &#92;frac{y}{x}&#92;) is homogeneous.&lt;br&gt; &lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[ &#92;begin{aligned} &amp;u = &#92;frac{y}{x} &#92;Rightarrow u + xu&#39; = e^{-u} + u &#92;Rightarrow xu&#39; = e^{-u} &#92;Rightarrow e^u du = &#92;frac{dx}{x} &#92;&#92; &amp;&#92;Rightarrow e^u = &#92;ln(x) + &#92;overbrace{C}^{&#92;ln(C)} = &#92;ln(Cx) &#92;quad (C &gt; 0) &#92;&#92; &amp;&#92;Rightarrow &#92;frac{y}{x} = &#92;ln(&#92;ln(Cx)) &#92;Rightarrow y = x&#92;ln(&#92;
+
+ln(Cx)) &#92;end{aligned} &#92;]&lt;/p&gt;
+&lt;p&gt;A useful class of nonlinear differential equations are &quot;Bernoulli differential equations.&lt;br&gt;&quot; These differential equations can always be made first-order linear by a substitution (so we can solve them) Definition: A differential equation of the form &lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;frac{dy}{dx}+p(x) y=f(x) y^r &#92;quad(r &#92;neq 0,1)&#92;]&lt;/p&gt;
+&lt;p&gt;is called a Bernoulli differential equation.&lt;br&gt; The substitution &#92;(u=y^{1-r}&#92;) transforms it into a first-order linear differential equation.&lt;br&gt; A technique called &quot;variation of parameters&quot; transforms it into a separable differential equation.&lt;br&gt; Here’s why the substitution &#92;(u=y^{1-r}&#92;) works: &lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[y&#39;+p(x) y=f(x) y^r &#92;quad(r &#92;neq 0,1)&#92;]&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;begin{gathered} &#92;xrightarrow[&#92;text {multiply } y^{-r}]{} &#92;quad y^{-r} y&#39;+p(x) y^{1-r}=f(x) &#92;&#92; u=y^{1-r} &#92;Rightarrow u&#39;= (1-r) y^{-r} y&#39; &#92;Rightarrow &#92;frac{1}{1-r} u&#39;=y^{-r} y&#39; &#92;&#92; &#92;Rightarrow &#92;underbrace{&#92;frac{1}{1-r} u&#39;+p(x) u=f(x)}_{&#92;text {1st-order linear } } &#92;quad &#92;end{gathered}&#92;]&lt;/p&gt;
+&lt;p&gt;Example: Solve the Bernoulli differential equation &#92;(y&#39;+&#92;frac{1}{x} y=3 y^3&#92;) (set &#92;(r=3&#92;)). Note: &#92;(y=0&#92;) is a solution.&lt;br&gt;
+    Let’s look for non-trivial solutions.&lt;br&gt;
+    &#92;[&#92;begin{aligned}
+    &amp; &#92;xrightarrow[&#92;times y^{-3}]{} &#92;quad y^{-3} y&#39;+&#92;frac{1}{x} y^{-2}=3. &#92;&#92;
+    &amp; &#92;xrightarrow[u&#92;text{-sub} ]{} &#92;quad u=y^{1-3}=y^{-2} &#92;Rightarrow u&#39;= -2 y^{-3} y&#39; &#92;Rightarrow-&#92;frac{1}{2} u&#39;=y^{-3} y&#39; &#92;&#92;
+    &amp; &#92;xrightarrow[ &#92;tiny{1^{&#92;text{st}}&#92;text{ order linear}} ]{} &#92;quad -&#92;frac{1}{2} u&#39;+&#92;frac{1}{x} u=3 &#92;Rightarrow u&#39;-&#92;frac{2}{x} u=-6 &#92;&#92; 
+    &amp; &#92;Rightarrow &#92;quad &#92;mu=e^{-2 &#92;ln |x|}=x^{-2} &#92;&#92;
+    &amp; &#92;xrightarrow[&#92;times &#92;mu]{} &#92;quad  x^{-2} u&#39; =-6 x^{-2} &#92;&#92; 
+    &amp; &#92;Rightarrow &#92;quad  x^{-2} u=6 x^{-1}+C &#92;Rightarrow u=6 x+C x^2 &#92;Rightarrow y^{-2}=6 x+C x^2 &#92;Rightarrow y= &#92;pm &#92;frac{1}{&#92;sqrt{6 x+C x^2}} &#92;&#92;
+    &amp; &#92;Rightarrow &#92;quad y= &#92;pm &#92;frac{1}{&#92;sqrt{6 x+C x^2}}, &#92;quad y=0 &#92;end{aligned}&#92;]&lt;/p&gt;
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2F1st%20order%20integrating%20factors%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=1st%20order%20integrating%20factors&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
