@@ -90,16 +90,16 @@ describe("check build output for a generic post", () => {
       expect(count).to.equal(1);
     });
 
-    /*
-    // Update me. Comment in if you turned on the CSP support.
-    it("should have a good CSP", () => {
-      const csp = select(
-        "meta[http-equiv='Content-Security-Policy']",
-        "content"
-      );
-      expect(csp).to.contain(";object-src 'none';");
-      expect(csp).to.match(/^default-src 'self';/);
-    });*/
+    // /*
+    // // Update me. Comment in if you turned on the CSP support.
+    // it("should have a good CSP", () => {
+    //   const csp = select(
+    //     "meta[http-equiv='Content-Security-Policy']",
+    //     "content"
+    //   );
+    //   expect(csp).to.contain(";object-src 'none';");
+    //   expect(csp).to.match(/^default-src 'self';/);
+    // });*/
 
     it("should have accessible buttons", () => {
       const buttons = doc.querySelectorAll("button");

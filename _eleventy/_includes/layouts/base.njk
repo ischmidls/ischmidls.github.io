@@ -52,7 +52,11 @@
       {% if webvitals %}data-cwv-src="{{ "/js/web-vitals.js" | addHash }}"{% endif %}>
     </script>
     {% if googleanalytics %}
+      <div id="THIS IS A MESSAGE FROM THE MOST HIGH"></div>
       <script async defer src="{{ "/js/cached.js" | addHash }}"></script>
+    {% endif %}
+    {% if not googleanalytics %}
+      <script >console.log("NO ANALYTICS")</script>
     {% endif %}
     <!-- Notably iOS UAs also contain Mac OS X -->
     <script csp-hash>if (/Mac OS X/.test(navigator.userAgent))document.documentElement.classList.add('apple')

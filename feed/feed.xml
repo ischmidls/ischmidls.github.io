@@ -5,7 +5,7 @@
 	
 	<link href="https://ischmidls.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://ischmidls.github.io"/>
-	<updated>2023-07-14T17:00:00-07:00</updated>
+	<updated>2023-07-15T17:00:00-07:00</updated>
 	<id>https://update-me.com</id>
 	<author>
 		<name>izak</name>
@@ -5672,7 +5672,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
     &lt;p&gt;(paraphrased from &lt;em&gt;Kanji Alive&lt;/em&gt;)&lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;br&gt;
 
-&lt;p lang=&quot;ja-jp&quot;&gt;
+&lt;p style=&quot;overflow: auto;&quot; lang=&quot;ja-jp&quot;&gt;
 
     &lt;table id=&quot;tablepress-17&quot; class=&quot;tablepress tablepress-id-17&quot;&gt;
         &lt;thead&gt;
@@ -9294,6 +9294,742 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 				
 				
 				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fjapanese%20radicals%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=japanese%20radicals&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>steady descent into vector calculus</title>
+		<link href="https://ischmidls.github.io/posts/curvilinear%20vector%20differentials/"/>
+		<updated>2023-07-15T17:00:00-07:00</updated>
+		<id>https://ischmidls.github.io/posts/curvilinear%20vector%20differentials/</id>
+		<content type="html">
+		  &lt;h3&gt;table of contents&lt;/h3&gt;
+&lt;ol&gt;
+    &lt;li&gt;&lt;a href=&quot;#the-vector-differential-drr&quot;&gt;vector differential&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#coord&quot;&gt;vector differential  in other coordinate systems&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#integration&quot;&gt;integration&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#line-integral&quot;&gt;line integral&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#scalar&quot;&gt;scalar line integrals&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#vec-line-int&quot;&gt;vector line integrals&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#path-ind&quot;&gt;path independence&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#con-vec&quot;&gt;conservative vector fields&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#surface&quot;&gt;surface&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#cross-prod&quot;&gt;a bigger better cross product&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#gen-surf&quot;&gt;general surface&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#flux&quot;&gt;flux&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#symm&quot;&gt;to symmetry or not to symmetry&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This time I am pulling from the lovely Oregon State &lt;b&gt;&lt;a href=&quot;https://sites.science.oregonstate.edu/math/BridgeBook/&quot;&gt;Bridge Book&lt;/a&gt;&lt;/b&gt;. It was written
+ by Tevian Dray and Corinne A. Manogue circa 2009&amp;mdash;2015 and funded by the National Science Foundation. &lt;/p&gt;
+
+
+ &lt;h3 id=&quot;the-vector-differential-drr&quot;&gt;&lt;span id=&quot;the_vector_differential_d_rr&quot;&gt;The Vector Differential, &#92;(d&#92;mathbf{r}&#92;)&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;Tevian Dray and Corinne A. Manogue kick it off with a great start.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://ischmidls.github.io/img/curvilinear%20vector%20differentials/mag%20vec%20diff.png&quot;&gt;&lt;/p&gt;
+    
+    &lt;p&gt;&lt;strong&gt;Figure 7&lt;/strong&gt; illustrates the infinitesimal displacement vector &#92;(d&#92;mathbf{r}&#92;) along a curve, shown in an &quot;infinite magnifying glass.&quot; The position vector &#92;(&#92;mathbf{r}=x&#92;mathbf{&#92;hat{x}}+y&#92;mathbf{&#92;hat{y}}+z&#92;mathbf{&#92;hat{z}}&#92;) represents the location of the point &#92;((x,y,z)&#92;) in rectangular coordinates, originating from the origin. It is helpful to visualize the small change &#92;(&#92;Delta&#92;mathbf{r}=&#92;Delta x&#92;mathbf{&#92;hat{x}}+&#92;Delta y&#92;mathbf{&#92;hat{y}}+&#92;Delta z&#92;mathbf{&#92;hat{z}}&#92;) in the position vector between nearby points. Taking a step further, we consider an infinitesimal change in position, denoted by &#92;(d&#92;mathbf{r}&#92;), representing the vector between infinitesimally close points. Figure 7 provides a magnified view of the curve to illustrate this concept.&lt;/p&gt;
+ 
+ 
+    &lt;p&gt;&lt;img src=&quot;https://ischmidls.github.io/img/curvilinear%20vector%20differentials/fig8a.png&quot; class=&quot;mediabox2&quot;&gt;&lt;/p&gt;
+ 
+&lt;p&gt; &lt;strong&gt;Figure 8a:&lt;/strong&gt;&lt;/p&gt;
+ &lt;p&gt;&lt;em&gt;The rectangular components of the vector differential &#92;(d&#92;mathbf{r}&#92;) in two dimensions.&lt;/em&gt;
+ &lt;/p&gt; 
+ &lt;p&gt;&lt;span id=&quot;ds1&quot;&gt;&lt;/span&gt;Like any vector, &#92;(d&#92;mathbf{r}&#92;) can be expanded with respect to &#92;(&#92;mathbf{&#92;hat{x}}&#92;), &#92;(&#92;mathbf{&#92;hat{y}}&#92;), &#92;(&#92;mathbf{&#92;hat{z}}&#92;); the components of &#92;(d&#92;mathbf{r}&#92;) are just the infinitesimal changes &#92;(dx&#92;), &#92;(dy&#92;), &#92;(dz&#92;) in the &#92;(x&#92;), &#92;(y&#92;), and &#92;(z&#92;) directions, respectively. That is,&lt;/p&gt;
+ 
+ &lt;p style=&quot;overflow: auto;&quot;&gt;
+ &#92;[
+ d&#92;mathbf{r} = dx&#92;mathbf{&#92;hat{x}} + dy&#92;mathbf{&#92;hat{y}} + dz&#92;mathbf{&#92;hat{z}} &#92;label{drdef} &#92;tag{1}
+ &#92;]
+&lt;/p&gt;
+ 
+ &lt;p&gt;as shown in Figure 8a. The geometric notion of &#92;(d&#92;mathbf{r}&#92;) as an infinitesimal vector displacement will be a unifying theme to help us visualize the geometry of all of vector calculus.&lt;/p&gt;
+ 
+ &lt;p&gt;&lt;span id=&quot;dsdef&quot;&gt;&lt;/span&gt;What is the infinitesimal distance &#92;(ds&#92;) between nearby points? It is simply the length of &#92;(d&#92;mathbf{r}&#92;). We have&lt;/p&gt;
+ 
+ &lt;p style=&quot;overflow: auto;&quot;&gt;
+ &#92;[
+ ds = |d&#92;mathbf{r}| = &#92;sqrt{d&#92;mathbf{r} &#92;cdot d&#92;mathbf{r}} = &#92;sqrt{dx^2 + dy^2 + dz^2} &#92;label{dsdef} &#92;tag{2}
+ &#92;]
+&lt;/p&gt;
+ 
+ 
+    &lt;p&gt;&lt;img src=&quot;https://ischmidls.github.io/img/curvilinear%20vector%20differentials/fig8b.png&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;strong&gt;Figure 8b:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt; &lt;em&gt;The infinitesimal version of the Pythagorean Theorem.&lt;/em&gt;&lt;/p&gt;
+ 
+ &lt;p&gt;&lt;span id=&quot;drdef&quot;&gt;&lt;/span&gt;Squaring both sides of Equation &#92;(&#92;ref{dsdef}&#92;) leads to&lt;/p&gt;
+ 
+ &lt;p style=&quot;overflow: auto;&quot;&gt;
+ &#92;[
+ ds^2 = |d&#92;mathbf{r}|^2 = d&#92;mathbf{r} &#92;cdot d&#92;mathbf{r} = dx^2 + dy^2 + dz^2 &#92;label{ds1} &#92;tag{3}
+ &#92;]
+&lt;/p&gt;
+ 
+ &lt;p&gt;which is just the infinitesimal Pythagorean Theorem, the two-dimensional version of which is shown in Figure 8b.&lt;/p&gt;
+ 
+ When dealing with infinitesimals, we prefer to avoid second-order errors by anchoring all vectors to the same point.
+ &lt;h3 id=&quot;coord&quot;&gt;vector differential  in other coordinate systems&lt;/h3&gt;
+&lt;p&gt;Staying strong with Tevian Dray and Corinne A. Manogue.&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://ischmidls.github.io/img/curvilinear%20vector%20differentials/vec%20diff.png&quot; title=&quot;&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+
+
+&lt;p&gt;      &lt;strong&gt;Figure 1a:&lt;/strong&gt;&lt;/p&gt;
+     &lt;p&gt; &lt;em&gt;The infinitesimal vector version of the Pythagorean Theorem in rectangular coordinates.&lt;/em&gt;
+     &lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://ischmidls.github.io/img/curvilinear%20vector%20differentials/polar%20vec%20diff.png&quot; class=&quot;mediabox2&quot; title=&quot;&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;
+    &lt;strong&gt;Figure 1b:&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;em&gt;The infinitesimal vector version of the Pythagorean Theorem, in polar coordinates.&lt;/em&gt;
+      &lt;/p&gt;
+      &lt;p&gt;The Pythagorean Theorem in rectangular coordinates does not define &#92;(d&#92;vec{r}&#92;) and &#92;(ds&#92;) in terms of component expressions (&#92;(d&#92;vec{r}&#92;) being coordinate-independent). Instead, studying &#92;(d&#92;vec{r}&#92;) in another coordinate system, such as polar coordinates (&#92;(r, &#92;phi&#92;)), is useful. In polar coordinates, basis vectors &#92;(&#92;{&#92;hat{r}, &#92;hat{p}&#92;}&#92;) are used, with &#92;(&#92;hat{r}&#92;) as the unit vector in the radial direction and &#92;(&#92;hat{p}&#92;) as the unit vector in the direction of increasing &#92;(&#92;phi&#92;).&lt;/p&gt;
+
+&lt;p&gt;By determining the lengths of the sides of the infinitesimal polar &quot;rectangle&quot; in Figure 1b, we find &#92;(d&#92;vec{r} = dr&#92;,&#92;hat{r} + r&#92;,d&#92;phi&#92;,&#92;hat{p}&#92;). Note that the &#92;(&#92;hat{p}&#92;) term includes a factor of &#92;(r&#92;), as &#92;(d&#92;phi&#92;) alone is not a length. The length of an infinitesimal arc is &#92;(r&#92;,d&#92;phi&#92;). Using Equation (3) from the Vector Differential section, the length of &#92;(d&#92;vec{r}&#92;) is given by &#92;(ds^2 = dr^2 + r^2&#92;,d&#92;phi^2&#92;), which is the infinitesimal Pythagorean Theorem in polar coordinates.&lt;/p&gt;
+
+&lt;p&gt;We adopt the polar angle &#92;(&#92;phi&#92;) to align with the standard conventions for spherical coordinates used universally, except by American mathematicians.&lt;/p&gt;
+
+&lt;p&gt;It is possible to relate &#92;(&#92;hat{r}&#92;) and &#92;(&#92;hat{p}&#92;) to &#92;(&#92;hat{x}&#92;) and &#92;(&#92;hat{y}&#92;), but in most physical applications, an appropriate choice of coordinates eliminates the need for this step.&lt;/p&gt;
+
+&lt;h3 id=&quot;integration&quot;&gt;integration&lt;/h3&gt;
+&lt;p&gt;Not too bad with Tevian Dray and Corinne A. Manogue at this point.&lt;/p&gt;
+&lt;p&gt;Integration involves dividing and adding smaller pieces, which is particularly useful for solving problems with multiple integrals. For example, when finding the mass of a straight wire with linear density &#92;(&#92;lambda&#92;), we chop it into small pieces of length &#92;(dx&#92;). Each piece has a mass of &#92;(&#92;lambda dx&#92;), and the total mass &#92;(M&#92;) is obtained by integrating &#92;(&#92;lambda(x)&#92;) with respect to &#92;(x&#92;).&lt;/p&gt;
+
+&lt;p&gt;Similarly, in higher dimensions, such as for a rectangular plate with surface density &#92;(&#92;sigma&#92;), we divide it into small rectangular pieces with area &#92;(dA = dxdy&#92;). The mass of each piece is &#92;(&#92;sigma dA&#92;), and the total mass &#92;(M&#92;) is obtained by integrating &#92;(&#92;sigma(&#92;mathbf{r})&#92;) with respect to &#92;(dA&#92;).&lt;/p&gt;
+
+&lt;p&gt;In polar coordinates, if we have a circular plate with density &#92;(&#92;sigma = &#92;sigma(r,&#92;phi)&#92;), we use polar pieces with area &#92;(dA = rdrd&#92;phi&#92;). The total mass &#92;(M&#92;) is obtained by integrating &#92;(&#92;sigma(r,&#92;phi)r&#92;) with respect to &#92;(r&#92;) and &#92;(&#92;phi&#92;).&lt;/p&gt;
+
+&lt;p&gt;While integration is commonly associated with finding antiderivatives and representing areas, it is important to understand the physical significance of infinitesimal mass &#92;(&#92;lambda dx&#92;) and the choice of differential notation. Infinitesimally small pieces can be achieved by taking limits, and the notation involving differentials allows for a concise representation of this concept.&lt;/p&gt;
+
+&lt;p&gt;Note:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Differential notation emphasizes the ability to make pieces arbitrarily small and is shorthand for using Riemann sums with appropriate limits.&lt;/li&gt;
+  &lt;li&gt;A single integral sign is used for adding rectangular pieces, while multiple integral signs are used for iterated single integrals.&lt;/li&gt;
+  &lt;li&gt;The areas of infinitesimal rectangular and polar pieces are not comparable, and the choice of how to divide them does not affect the final result.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;line-integral&quot;&gt;line integral&lt;/h3&gt;
+&lt;p&gt;Oh, you thought I&#39;d forget to mention Tevian Dray and Corinne A. Manogue.&lt;/p&gt;
+&lt;p&gt;There are many ways to describe a curve. Consider the following descriptions:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The unit circle&lt;/li&gt;
+  &lt;li&gt;&#92;(x^2 + y^2 = 1&#92;)&lt;/li&gt;
+  &lt;li&gt;&#92;(y = 1 - &#92;sqrt{1 - x^2}&#92;)&lt;/li&gt;
+  &lt;li&gt;&#92;(r = 1&#92;)&lt;/li&gt;
+  &lt;li&gt;&#92;(x = &#92;cos&#92;phi&#92;), &#92;(y = &#92;sin&#92;phi&#92;)&lt;/li&gt;
+  &lt;li&gt;&#92;(&#92;mathbf{r}(&#92;phi) = &#92;cos&#92;phi&#92;mathbf{&#92;hat{x}} + &#92;sin&#92;phi&#92;mathbf{&#92;hat{y}}&#92;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you want to add up something along a curve, you need to compute a line integral. Common examples include determining the length of a curve, the mass of a wire, or the amount of work done when moving an object along a specific path.&lt;/p&gt;
+
+&lt;p&gt;Let&#39;s consider the problem of finding the length of a quarter of a circle. In polar coordinates, a circle is represented by &#92;(r = &#92;text{constant}&#92;), which implies &#92;(dr = 0&#92;). By substituting this fact into the expression for arc length in polar coordinates, we immediately obtain:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[ds^2 = r^2d&#92;phi^2 &#92;quad (1)&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;and finally:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[&#92;int_C ds = &#92;int_0^{&#92;frac{&#92;pi}{2}} r d&#92;phi = &#92;frac{&#92;pi r^2}{2} &#92;quad (2)&#92;]
+&lt;/p&gt;
+
+&lt;p&gt; The calculation is not much harder in rectangular coordinates. You know that &#92;(x = r&#92;cos&#92;phi&#92;) and &#92;(y = r&#92;sin&#92;phi&#92;) with &#92;(r = &#92;text{constant}&#92;), which gives &#92;(dx = -r&#92;sin&#92;phi d&#92;phi&#92;) and &#92;(dy = r&#92;cos&#92;phi d&#92;phi&#92;). By inserting this into (3) of The Vector Differential, &#92;(ds^2 = |d&#92;mathbf{r}|^2 = d&#92;mathbf{r} &#92;cdot d&#92;mathbf{r} = dx^2 + dy^2 + dz^2 &#92;), we arrive at (2) again.&lt;/p&gt;
+
+&lt;p&gt;But what if you didn&#39;t even remember how to parameterize a circle or how to use polar coordinates? Well, you still know that &#92;(x^2 + y^2 = r^2 = &#92;text{constant}&#92;), which implies &#92;(2xdx + 2ydy = 0&#92;). Solving for &#92;(dy&#92;) and inserting this into (3) of The Vector Differential &#92;(ds^2 = |d&#92;mathbf{r}|^2 = d&#92;mathbf{r} &#92;cdot d&#92;mathbf{r} = dx^2 + dy^2 + dz^2 &#92;) yields:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[ds^2 = &#92;left(1 + &#92;frac{x^2}{y^2}&#92;right)dx^2 = &#92;frac{r^2}{r^2 - x^2}dx^2 &#92;quad (3)&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;This leads to the (improper!) integral:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[&#92;int_0^r &#92;frac{dx}{&#92;sqrt{1 - &#92;frac{x^2}{r^2}}} &#92;quad (4)&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;which can be easily computed using a trigonometric substitution or numerically, yielding the same answer.&lt;/p&gt;
+&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+    &lt;p&gt;&#92;[&#92;begin{aligned} &#92;int &#92;frac{d x}{&#92;sqrt{a^2-x^2}} &amp; =&#92;int &#92;frac{a &#92;cos &#92;theta d &#92;theta}{&#92;sqrt{a^2-a^2 &#92;sin ^2 &#92;theta}} &#92;&#92; &amp; =&#92;int &#92;frac{a &#92;cos &#92;theta d &#92;theta}{&#92;sqrt{a^2&#92;left(1-&#92;sin ^2 &#92;theta&#92;right)}} &#92;&#92; &amp; =&#92;int &#92;frac{a &#92;cos &#92;theta d &#92;theta}{&#92;sqrt{a^2 &#92;cos ^2 &#92;theta}} &#92;&#92; &amp; =&#92;int d &#92;theta &#92;&#92; &amp; =&#92;theta+C &#92;&#92; &amp; =&#92;arcsin &#92;frac{x}{a}+C&#92;end{aligned}&#92;]&lt;/p&gt;
+    &lt;p&gt;(Adapted from &lt;a href=&quot;https://en.wikipedia.org/wiki/Trigonometric_substitution&quot;&gt;Wikipedia: Trig sub&lt;/a&gt;)&lt;/p&gt;
+    &lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+
+&lt;h3 id=&quot;scalar&quot;&gt;scalar line integrals&lt;/h3&gt;
+&lt;p&gt;Tevian Dray and Corinne A. Manogue stay strong as we move deeper in.&lt;/p&gt;
+&lt;p&gt;What if you want to determine the mass of a wire in the shape of the curve &#92;(C&#92;) if you know the density &#92;(&#92;lambda&#92;)? The same procedure still works: chop and add. In this case, the length of a small piece of the wire is &#92;(ds = |&#92;mathbf{dr}|&#92;), so its mass is &#92;(&#92;lambda ds&#92;), and the integral becomes:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[m = &#92;int_C &#92;lambda ds &#92;quad (1)&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;which can also be written as:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[m = &#92;int_C &#92;lambda(&#92;mathbf{r}) |&#92;mathbf{dr}| &#92;quad (2)&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;which emphasizes both that &#92;(&#92;lambda&#92;) is not constant and that &#92;(ds&#92;) is the magnitude of &#92;(&#92;mathbf{dr}&#92;).&lt;/p&gt;
+
+&lt;p&gt;Another standard application of this type of line integral is to find the center of mass of a wire. This is done by averaging the values of the coordinates, weighted by the density &#92;(&#92;lambda&#92;) as follows:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[ &#92;bar{x} = &#92;frac{1}{m} &#92;int_C x &#92;lambda(&#92;mathbf{r}) ds &#92;quad (3) &#92;]
+&lt;/p&gt;
+
+&lt;p&gt;with &#92;(m&#92;) as defined above. Similar formulas hold for &#92;(&#92;bar{y}&#92;) and &#92;(&#92;bar{z}&#92;); the center of mass is then the point &#92;((&#92;bar{x}, &#92;bar{y}, &#92;bar{z})&#92;).&lt;/p&gt;
+
+&lt;h3 id=&quot;vec-line-int&quot;&gt;vector line integrals&lt;/h3&gt;
+
+&lt;p&gt;Tevian Dray and Corinne A. Manogue do not have much to say about &quot;Vector Line Integrals&quot;, but they give more context in other sections.&lt;/p&gt;
+
+&lt;p&gt;Consider now the problem of finding the work &#92;(W&#92;) done by a force &#92;(&#92;mathbf{F}&#92;) in moving a particle along a curve &#92;(C&#92;). We begin with the relationship:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[ &#92;text{work} = &#92;text{force} &#92;times &#92;text{distance} &#92;quad (1) &#92;]
+&lt;/p&gt;
+
+&lt;p&gt;Suppose you take a small step &#92;(&#92;mathbf{dr}&#92;) along the curve. How much work was done? Since only the component along the curve matters, we need to take the dot product of &#92;(&#92;mathbf{F}&#92;) with &#92;(&#92;mathbf{dr}&#92;). Adding this up along the curve yields:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[ W = &#92;int_C &#92;mathbf{F} &#92;cdot &#92;mathbf{dr} &#92;quad (2) &#92;]
+&lt;/p&gt;
+
+&lt;p&gt;So how do you evaluate such an integral?&lt;/p&gt;
+
+&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+    &lt;p&gt;Here&#39;s an example from &quot;Paul&#39;s Math Notes&quot; 
+        &lt;b&gt;
+        &lt;a href=&quot;https://tutorial.math.lamar.edu/classes/calciii/LineIntegralsVectorFields.aspx&quot;&gt;Line Integrals Of Vector Fields&lt;/a&gt;&lt;/b&gt;
+    &lt;/p&gt;
+
+    &lt;p&gt;Note the notation in the integral on the left side. That really is a dot product of the vector field and the differential, which really is a vector. Also, &#92;(&#92;mathbf{F}(&#92;mathbf{r}(t))&#92;) is a shorthand for:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+&#92;mathbf{F}(&#92;mathbf{r}(t)) = &#92;mathbf{F}(x(t), y(t), z(t))
+&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;We can also write line integrals of vector fields as a line integral with respect to arc length as follows:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+&#92;int_C &#92;mathbf{F} &#92;cdot d&#92;mathbf{r} = &#92;int_C &#92;mathbf{F} &#92;cdot &#92;mathbf{T} ds
+&#92;]
+&lt;/p&gt;
+where &#92;(&#92;mathbf{T}(t)&#92;) is the unit tangent vector given by:
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+&#92;mathbf{T}(t) = &#92;frac{&#92;mathbf{r}&#39;(t)}{&#92;|&#92;mathbf{r}&#39;(t)&#92;|}
+&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;If we use our knowledge of how to compute line integrals with respect to arc length, we can see that this second form is equivalent to the first form given above:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+&#92;int_C &#92;mathbf{F} &#92;cdot d&#92;mathbf{r} = &#92;int_a^b &#92;mathbf{F}(&#92;mathbf{r}(t)) &#92;cdot &#92;mathbf{r}&#39;(t) &#92;|&#92;mathbf{r}&#39;(t)&#92;| dt = &#92;int_a^b &#92;mathbf{F}(&#92;mathbf{r}(t)) &#92;cdot &#92;mathbf{r}&#39;(t) dt
+&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;In general, we use the first form to compute these line integrals as it is usually much easier to use.&lt;/p&gt;
+    
+        &lt;p&gt;Example 2: Evaluate&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[ &#92;int_C &#92;mathbf{F} &#92;cdot d&#92;mathbf{r} &#92;]
+&lt;/p&gt;
+where &#92;(&#92;mathbf{F}(x, y, z) = xz&#92;mathbf{i} - yz&#92;mathbf{k}&#92;) and &#92;(C&#92;) is the line segment from &#92;((-1, 2, 0)&#92;) to &#92;((3, 0, 1)&#92;).
+
+&lt;p&gt;&lt;strong&gt;Solution:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We&#39;ll first need the parameterization of the line segment. We saw how to get the parameterization of line segments in the first section on line integrals. Here is the parameterization for the line:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[ &#92;mathbf{r}(t) = (1 - t)&#92;langle -1, 2, 0 &#92;rangle + t&#92;langle 3, 0, 1 &#92;rangle = &#92;langle 4t - 1, 2 - 2t, t &#92;rangle, &#92;quad 0 &#92;leq t &#92;leq 1 &#92;]
+&lt;/p&gt;
+
+&lt;p&gt;Now let&#39;s evaluate the vector field along the curve:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[ &#92;mathbf{F}(&#92;mathbf{r}(t)) = (4t - 1)(t)&#92;mathbf{i} - (2 - 2t)(t)&#92;mathbf{k} = (4t^2 - t)&#92;mathbf{i} - (2t - 2t^2)&#92;mathbf{k} &#92;]
+&lt;/p&gt;
+
+&lt;p&gt;Next, we need the derivative of the parameterization:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[ &#92;mathbf{r}&#39;(t) = &#92;langle 4, -2, 1 &#92;rangle &#92;]
+&lt;/p&gt;
+
+&lt;p&gt;Now, we can calculate the dot product:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[ &#92;mathbf{F}(&#92;mathbf{r}(t)) &#92;cdot &#92;mathbf{r}&#39;(t) = 4(4t^2 - t) - (2t - 2t^2) = 18t^2 - 6t &#92;]
+&lt;/p&gt;
+
+&lt;p&gt;Finally, the line integral becomes:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[ &#92;int_C &#92;mathbf{F} &#92;cdot d&#92;mathbf{r} = &#92;int_0^1 (18t^2 - 6t) dt = &#92;left(6t^3 - 3t^2 &#92;right) &#92;bigg|_0^1 = 3 &#92;]
+&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+
+&lt;p&gt;An important special case of a line integral occurs when the curve &#92;(C&#92;) is closed, meaning it starts and ends at the same point. In this case, we write the integral in the form:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[W = &#92;oint_C &#92;mathbf{F} &#92;cdot d&#92;mathbf{r} &#92;quad (1)&#92;]
+&lt;/p&gt;
+&lt;p&gt;
+and refer to it as the circulation of &#92;(&#92;mathbf{F}&#92;) around &#92;(C&#92;). Unless otherwise specified, it is assumed that the curve is oriented in the counterclockwise direction. Reversing the orientation results in an overall minus sign, as with all vector line integrals.
+&lt;/p&gt;
+&lt;p&gt;This notation can also be used for scalar line integrals, such as finding the mass of a ring of wire, which could be written in the form:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[M = &#92;oint_C &#92;lambda ds &#92;quad (2)&#92;]
+&lt;/p&gt;
+&lt;p&gt;
+    Although in this case, the orientation doesn&#39;t matter. One way to remember this difference between vector and scalar integrals is to realize that &#92;(ds = |d&#92;mathbf{r}|&#92;), and the magnitude of a vector does not depend on its direction.
+    &lt;/p&gt;
+&lt;h3 id=&quot;path-ind&quot;&gt;path independence&lt;/h3&gt;
+&lt;p&gt;I am grateful for Tevian Dray and Corinne A. Manogue.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RECALL:&lt;/strong&gt; &#92;(&#92;int_a^b f&#39;(x) &#92;, dx = f(b) - f(a)&#92;)&lt;/p&gt;
+
+
+&lt;p&gt;This is the Fundamental Theorem of Calculus, which states that the integral of a derivative is equal to the original function. We can also write it simply as:
+&#92;(&#92;int df = f&#92;)&lt;/p&gt;
+
+&lt;p&gt;But recall the master formula of Gradients, which says:
+&#92;(df = &#92;nabla &#92;cdot f &#92;cdot d&#92;mathbf{r}&#92;)&lt;/p&gt;
+
+&lt;p&gt;Putting this all together, we arrive at the fundamental theorem for line integrals, which states that:&lt;/p&gt;
+&lt;p&gt;&#92;[&#92;int_C &#92;nabla &#92;cdot f &#92;cdot d&#92;mathbf{r} = f &#92;, &#92;bigg|_{A}^B&#92;[&lt;/p&gt;
+&lt;p&gt;for any curve &#92;(C&#92;) starting at point A and ending at point B &lt;/p&gt;
+
+&lt;p&gt;Notice that the right-hand side does not depend on the curve &#92;(C&#92;). &lt;/p&gt;
+&lt;p&gt;There is some fine print here: the curve must lie in a connected region (one without holes) where &#92;(&#92;nabla &#92;cdot f&#92;) is defined everywhere. This is usually not a problem if &#92;(f&#92;) is differentiable everywhere, but there are important examples where this condition fails.&lt;/p&gt;
+&lt;p&gt;This behavior leads us to the notion of path independence. A line integral of the form &#92;(&#92;int_C &#92;mathbf{F} &#92;cdot d&#92;mathbf{r}&#92;) is said to be path independent if its value depends only on the endpoints A and B of the curve &#92;(C&#92;), and not on the specific curve connecting them. If a line integral is path independent, we can simply write:&lt;/p&gt;
+&lt;p&gt;&#92;[&#92;int_{A}^B &#92;mathbf{F} &#92;cdot d&#92;mathbf{r}&#92;]&lt;/p&gt;
+
+&lt;p&gt;If you know that a line integral is path independent, you can choose a different path (with the same endpoints) that simplifies the evaluation of the integral as much as possible!&lt;/p&gt;
+
+
+&lt;h3 id=&quot;con-vec&quot;&gt;conservative vector fields&lt;/h3&gt;
+&lt;p&gt;Ok, Tevian Dray and Corinne A. Manogue really got into it for this section.&lt;/p&gt;
+&lt;p&gt;
+The fundamental theorem implies that vector fields of the form &#92;(&#92;mathbf{F} = &#92;nabla f&#92;) are special; the corresponding line integrals are always independent of path. One way to think of this is to imagine the level curves of &#92;(f&#92;); the change in &#92;(f&#92;) depends only on where you start and end, not on how you get there. These special vector fields have a name: A vector field &#92;(&#92;mathbf{F}&#92;) is said to be conservative if there exists a potential function &#92;(f&#92;) such that &#92;(&#92;mathbf{F} = &#92;nabla f&#92;).
+&lt;/p&gt;
+&lt;p&gt;
+If &#92;(&#92;mathbf{F}&#92;) is conservative, then &#92;(&#92;int_C &#92;mathbf{F} &#92;cdot d&#92;mathbf{r}&#92;) is independent of path; the converse is also true. But how do you know if a given vector field &#92;(&#92;mathbf{F}&#92;) is conservative? That&#39;s the next lesson.
+&lt;/p&gt;
+
+&lt;p&gt;
+    We describe here a variation of the usual procedure for determining whether a vector field is conservative and, if it is, for finding a potential function.
+    &lt;/p&gt;
+    &lt;p&gt;&lt;img alt=&quot;&quot; title=&quot;&quot; src=&quot;https://ischmidls.github.io/img/curvilinear%20vector%20differentials/1a.png&quot;&gt;&lt;/p&gt;
+    &lt;p&gt;
+    Figure 1a: Symbolic &quot;tree diagram&quot; for computing mixed partial derivatives with two variables.
+    &lt;/p&gt;
+    &lt;p&gt;&lt;img alt=&quot;&quot; title=&quot;&quot; src=&quot;https://ischmidls.github.io/img/curvilinear%20vector%20differentials/1b.png&quot;&gt;&lt;/p&gt;
+    &lt;p&gt;
+    Figure 1b: Symbolic &quot;tree diagram&quot; for computing mixed partial derivatives with three variables.
+    &lt;/p&gt;
+    &lt;p&gt;
+    It is helpful to make a diagram of the structure underlying potential functions and conservative vector fields. For functions of two variables, this is shown in Figure 1a. The potential function &#92;(f&#92;) is shown at the top. Slanted lines represent derivatives of &#92;(f&#92;); derivatives with respect to &#92;(x&#92;) go to the left, while derivatives with respect to &#92;(y&#92;) go to the right. The second line thus gives the components of &#92;(&#92;nabla f&#92;). The bottom line shows the mixed second derivatives, which can of course be computed in either order.
+    &lt;/p&gt;
+    &lt;p&gt;
+    But what if we are not given &#92;(f&#92;)? Suppose we are given a vector field, such as &#92;(&#92;mathbf{F} = y&#92;mathbf{i} + (x+2y)&#92;mathbf{j}&#92;) and need to determine whether it is conservative, that is, whether &#92;(&#92;mathbf{F}&#92;) is the gradient of some potential function &#92;(f&#92;). This is the second line of the diagram! We could start by checking that the mixed derivatives agree. However, what we really want is the potential function; we should be moving up the diagram, not down. What happens if we simply integrate both components, as shown in Figure 2a? The potential function is clearly contained in the results of these two integrals; it is just a question of combining them correctly.
+    &lt;/p&gt;
+    &lt;p&gt;
+    Furthermore, there is enough information here to determine whether &#92;(&#92;mathbf{F}&#92;) is conservative in the first place; there is no need to check the derivatives. For example, had we been given the vector field &#92;(&#92;mathbf{H} = y&#92;mathbf{i} + 2y&#92;mathbf{j}&#92;) and integrated its components, we would obtain Figure 2b. Simply by noticing that &#92;(xy&#92;), a function of two variables, only occurs once, we see that &#92;(&#92;mathbf{H}&#92;) is not conservative.
+    &lt;/p&gt;
+    &lt;p&gt;&lt;img alt=&quot;&quot; title=&quot;&quot; src=&quot;https://ischmidls.github.io/img/curvilinear%20vector%20differentials/2a.png&quot;&gt;&lt;/p&gt;
+    &lt;p&gt;
+    Figure 2a: An inverted tree diagram for trying to find a potential function.
+    &lt;/p&gt;
+    &lt;p&gt;&lt;img alt=&quot;&quot; title=&quot;&quot; src=&quot;https://ischmidls.github.io/img/curvilinear%20vector%20differentials/2b.png&quot;&gt;&lt;/p&gt;
+    &lt;p&gt;
+    Figure 2b: Another inverted tree diagram for trying to find a potential function.
+    &lt;/p&gt;
+    &lt;p&gt;
+    We describe this as a murder mystery. A crime has been committed by the unknown murderer &#92;(f&#92;); your job is to find the identity of &#92;(f&#92;) by interviewing the witnesses. Who are the witnesses? The components of the vector field. What do they tell you? Well, you have to integrate (&quot;interrogate&quot;) them! Now for the fun part.
+    &lt;/p&gt;
+    &lt;p&gt;
+    If two witnesses say they saw someone with red hair, that doesn&#39;t mean the suspect has two red hairs! So if you get the same clue more than once, you only count it once.
+    &lt;/p&gt;
+    &lt;p&gt;
+    On the other hand, some clues require corroboration. These witnesses were situated in such a way that each could only look in one direction. Thus, one witness, the &#92;(x&#92;)-component, only sees terms involving &#92;(x&#92;), etc. If a clue contains more than one variable, it should have been seen by more than one witness! In fact, functions of &#92;(n&#92;) variables should occur precisely &#92;(n&#92;) times. In the case of the vector field &#92;(&#92;mathbf{H}&#92;), the clue &#92;(xy&#92;) was only seen by one witness, not both; somebody is lying! In short, clues must be consistent.
+    &lt;/p&gt;
+    &lt;p&gt;
+    Here is the Murder Mystery Method in a nutshell:
+    &lt;/p&gt;
+    &lt;p&gt;
+    1. Integrate: Integrate the &#92;(x&#92;)-component with respect to &#92;(x&#92;), etc.
+    2. Check consistency: Functions of &#92;(n&#92;) variables must occur exactly &#92;(n&#92;) times. 
+       (If the consistency check fails, the vector field is not conservative.)
+    3. Combine clues: Use each clue once to determine the potential function.
+    &lt;/p&gt;
+    &lt;p&gt;
+    The power of the murder mystery method is even more apparent in three dimensions. We encourage you to try to find a potential function for the vector field &#92;(&#92;mathbf{G} = yz&#92;mathbf{i} + (xz+z)&#92;mathbf{j} + (xy+y+2z)&#92;mathbf{k}&#92;) using this method. The underlying structure is shown in Figure 1b, where now &#92;(y&#92;) derivatives are shown going straight down, and &#92;(z&#92;) derivatives go to the right.
+    &lt;/p&gt;
+    &lt;p&gt;
+    Consistency is traditionally checked by computing the last line of the appropriate diagram in Figures 1a and 1b. We reiterate that this is not necessary with the Murder Mystery Method. We will, however, return to these diagrams later when discussing the curl of a vector field.
+    &lt;/p&gt;
+    &lt;p&gt;
+    1) Checking consistency may not be straightforward. Are &#92;(-&#92;cos^2 x &#92;cos^2 y&#92;) and &#92;(&#92;sin^2 x &#92;cos^2 y&#92;) the same? We have &#92;(2&#92;sin^2 x &#92;cos^2 y = -&#92;cos^2 x &#92;cos^2 y + &#92;cos^2 y = &#92;sin^2 x &#92;cos^2 y + &#92;sin^2 x&#92;), which shows that the &quot;xy&quot; parts of these functions agree. (If this cannot be done, consistency fails.) But how do we count the remaining functions of 1 variable? Recall that the &#92;(x&#92;)-witness can only reliably provide clues involving &#92;(x&#92;)! If rewriting one or more functions this way generates a new such term, count it as usual. If instead, this generates a term involving the wrong variable(s), such as a clue provided by the &#92;(x&#92;)-witness that does not involve &#92;(x&#92;), discard it as unsubstantiated; this amounts to allowing the constant of integration to depend on the other variables. This procedure does not depend on the manner in which particular functions are rewritten, and such manipulations are not usually needed for typical classroom examples.
+    &lt;/p&gt;
+
+    &lt;h3 id=&quot;surface&quot;&gt;surface&lt;/h3&gt;
+&lt;p&gt;Tevian Dray and Corinne A. Manogue say it like it is here.&lt;/p&gt;
+    &lt;p&gt;Consider the following descriptions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;the unit sphere;&lt;/li&gt;
+&lt;li&gt;&#92;(x^2+y^2+z^2=1;&#92;)&lt;/li&gt;
+&lt;li&gt;&#92;(r=1&#92;) (where &#92;(r&#92;) is the spherical radial coordinate);&lt;/li&gt;
+&lt;li&gt;&#92;(x=&#92;sin&#92;theta&#92;cos&#92;phi&#92;), &#92;(y=&#92;sin&#92;theta&#92;sin&#92;phi&#92;), &#92;(z=&#92;cos&#92;theta;&#92;)&lt;/li&gt;
+&lt;li&gt;&#92;(&#92;mathbf{r}(&#92;theta,&#92;phi)=&#92;sin&#92;theta&#92;cos&#92;phi&#92;mathbf{i}+&#92;sin&#92;theta&#92;sin&#92;phi&#92;mathbf{j}+&#92;cos&#92;theta&#92;mathbf{k};&#92;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;all of which describe the same surface.&lt;/p&gt;
+
+&lt;p&gt;The simplest surfaces are those given by holding one of the coordinates constant. Thus, the xy-plane is given by &#92;(z=0&#92;). Its (surface) area element is &#92;(dA=(dx)(dy)=(dr)(rd&#92;phi)&#92;), as can easily be seen by drawing the appropriate small rectangle. The surface of a cylinder is nearly as easy, as it is given by &#92;(r=a&#92;) in cylindrical coordinates, and drawing a small &quot;rectangle&quot; yields for the surface element:&lt;/p&gt;
+
+&lt;p&gt;Cylinder: &#92;(dA=(a d&#92;phi)(dz)=a d&#92;phi dz&#92;)&lt;/p&gt;
+
+&lt;p&gt;While a similar construction for the sphere given by &#92;(r=a&#92;) in spherical coordinates yields:&lt;/p&gt;
+
+&lt;p&gt;Sphere: &#92;(dA=(a d&#92;theta)(a&#92;sin&#92;theta d&#92;phi)=a^2&#92;sin&#92;theta d&#92;theta d&#92;phi&#92;)&lt;/p&gt;
+
+&lt;p&gt;The last expression can of course be used to compute the surface area of a sphere, which is:&lt;/p&gt;
+
+&lt;p&gt;&#92;(&#92;int_{&#92;text{sphere}}dA=&#92;int_{0}^{2&#92;pi}&#92;int_{0}^{&#92;pi}a^2&#92;sin&#92;theta d&#92;theta d&#92;phi=4&#92;pi a^2&#92;)&lt;/p&gt;
+
+&lt;p&gt;What about more complicated surfaces?&lt;/p&gt;
+
+&lt;p&gt;The basic building block for surface integrals is the infinitesimal area &#92;(dA&#92;), obtained by chopping up the surface into small pieces. If the pieces are small parallelograms, then the area can be determined by taking the cross product of the sides!&lt;/p&gt;
+
+&lt;p&gt;Note: We write a single integral sign when talking about adding up &quot;bits of area&quot; (or &quot;bits of volume&quot;), reserving multiple integral signs for iterated single integrals. The notation &#92;(&#92;int&#92;int dA&#92;) is also common.&lt;/p&gt;
+
+&lt;h3 id=&quot;cross-prod&quot;&gt;a bigger better cross product&lt;/h3&gt;
+
+&lt;p&gt;Tevian Dray and Corinne A. Manogue did fine on this, but there&#39;s also a great stack exchange answer about cross products and antisymmetry.&lt;/p&gt;
+
+&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+    &lt;p&gt;There certainly is a connection! Other answers have shown that, of course, but it goes a little deeper than that: determinants and cross products are both based on antisymmetric linear combinations of permutations.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Antisymmetry in permutations&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Suppose you have two things, &#92;(a&#92;) and &#92;(b&#92;). There are two ways to order them, i.e. two permutations:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+&#92;begin{align*}
+ab &amp; ba
+&#92;end{align*}
+&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;Now, if these things can be multiplied and added/subtracted, you can combine these permutations in two distinctly different ways:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+&#92;begin{align*}
+ab + ba &amp; ab - ba
+&#92;end{align*}
+&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;The first one is called &lt;em&gt;symmetric&lt;/em&gt; because, if you exchange the two things, its value stays the same.&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+ab + ba &#92;underset{a&#92;leftrightarrow b} &#92;longrightarrow ba + ab = ab + ba
+&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;The second one is called &lt;em&gt;antisymmetric&lt;/em&gt; because, if you exchange the two things, it becomes the negative of itself (hence &quot;anti&quot;).&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+ab - ba &#92;underset{a&#92;leftrightarrow b} &#92;longrightarrow ba - ab = -(ab - ba)
+&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;If you add another thing &#92;(c&#92;) to the set, there are now six permutations:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+&#92;begin{align*}
+abc &amp; acb &amp; bca &amp; bac &amp; cab &amp; cba
+&#92;end{align*}
+&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;Again, there&#39;s a &lt;em&gt;symmetric&lt;/em&gt; way to combine these, where switching any two of the elements &#92;(a&#92;), &#92;(b&#92;), and &#92;(c&#92;) leaves the value unchanged:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+abc + acb + bac + bca + cab + cba
+&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;and there&#39;s a (totally&lt;sup&gt;1&lt;/sup&gt;) &lt;em&gt;antisymmetric&lt;/em&gt; way to combine them, where switching any two of &#92;(a&#92;), &#92;(b&#92;), and &#92;(c&#92;) turns it into the negative of the original value:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+abc - acb + bca - bac + cab - cba
+&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;(If you have a bit of time, I&#39;d encourage you to check all three possible swaps and verify this.)&lt;/p&gt;
+
+&lt;p&gt;There are, of course, other ways to add and subtract the six permutations, but none of them are totally symmetric or totally antisymmetric. (If you have a bit more time, feel free to to check all the combinations.)&lt;/p&gt;
+
+&lt;p&gt;And while I won&#39;t get into the details here, the antisymmetric case is particularly interesting because even if you go beyond permutations to allow repeats like &#92;(aaa&#92;), there&#39;s &lt;em&gt;still&lt;/em&gt; only one way to form a totally antisymmetric combination. This fact will be useful shortly.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cross products&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Now what does this have to do with cross products? Well, consider this: the &quot;ingredients&quot; that go into a cross product are three components of the first vector &#92;((a_1, a_2, a_3)&#92;), three components of the second vector &#92;((b_1, b_2, b_3)&#92;), and three unit vectors &#92;(&#92;hat{x}_1&#92;), &#92;(&#92;hat{x}_2&#92;), and &#92;(&#92;hat{x}_3&#92;). If you want to make a product out of these things and have it not be &quot;weird&quot;, hopefully it makes sense that it should probably involve multiplying a component of &#92;(a&#92;), a component of &#92;(b&#92;), and a unit vector.&lt;/p&gt;
+
+&lt;p&gt;So suppose you write out a generic formula for a product of these three things:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+a_i b_j &#92;hat{x}_k,&#92;quad i,j,k&#92;in&#92;{1,2,3&#92;}
+&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;You have to choose an index (&#92;(1&#92;), &#92;(2&#92;), or &#92;(3&#92;)) for each of the component of &#92;(a&#92;), the component of &#92;(b&#92;), and the unit vector. Of course there are many different ways to make this choice, but there&#39;s &lt;em&gt;one&lt;/em&gt; combination that will be totally antisymmetric:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+a_1 b_2 &#92;hat{x}_3 - a_1 b_3 &#92;hat{x}_2 + a_2 b_3 &#92;hat{x}_1 - a_2 b_1 &#92;hat{x}_3 + a_3 b_1 &#92;hat{x}_2 - a_3 b_2 &#92;hat{x}_1
+&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;That&#39;s a cross product. It&#39;s the unique totally antisymmetric linear combination of all possible terms that can be formed by multiplying one element of &#92;(a&#92;), one element of &#92;(b&#92;), and one unit vector without repeating indices.&lt;/p&gt;
+
+&lt;p&gt;If you think about it, it makes sense why you would want the cross product to be either totally symmetric or totally antisymmetric: if it weren&#39;t, then its value would change if you relabeled one dimension as another. You might have two vectors whose cross product is &#92;((5, 3, 2)&#92;) under regular coordinates, but if you changed your coordinate system to switch the first and second dimensions, without (anti)symmetry the cross product could have an entirely different value, like &#92;((-1, 4, 1)&#92;). A mathematical operation that depends on something totally unphysical like how you label your dimensions probably isn&#39;t very useful.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Determinants&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Given that way of looking at a cross product, the determinant of a &#92;(3&#92;times 3&#92;) matrix is almost trivially the same thing. Suppose you have this matrix:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+&#92;begin{matrix}
+a_{11} &amp; a_{12} &amp; a_{13} &#92;&#92;
+a_{21} &amp; a_{22} &amp; a_{23} &#92;&#92;
+a_{31} &amp; a_{32} &amp; a_{33}
+&#92;end{matrix}
+&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;If you choose set of three elements such that each set contains one element from each row and one element from each column, you get exactly six possible sets:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+(&#92;{a_{11}, a_{22}, a_{33}&#92;}, &#92;{a_{11}, a_{23}, a_{32}&#92;}, &#92;{a_{12}, a_{23}, a_{31}&#92;}, &#92;{a_{12}, a_{21}, a_{33}&#92;}, &#92;{a_{13}, a_{21}, a_{32}&#92;}, &#92;{a_{13}, a_{22}, a_{31}&#92;})
+&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;These sets, unsurprisingly correspond to the six permutations of &#92;(&#92;{1,2,3&#92;}&#92;). If you always choose the first index to be in numerical order, then the ways of choosing which second index corresponds to each first index are precisely the permutations. So you can multiply each set and form an antisymmetric linear combination of those products:&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+a_{11}a_{22}a_{33} - a_{11}a_{23}a_{32} + a_{12}a_{23}a_{31} - a_{12}a_{21}a_{33} + a_{13}a_{21}a_{32} - a_{13}a_{22}a_{31}
+&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;That&#39;s a determinant.&lt;/p&gt;
+
+&lt;p&gt;It makes sense for the determinant to be either totally symmetric or totally antisymmetric for much the same reason as the cross product: a matrix of this form can represent some kind of transformation on 3D vectors, in which case the three indices correspond to the three dimensions of space, and a quantity which changes in a major way when you relabel which dimension is which probably won&#39;t be very useful.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;sup&gt;1&lt;/sup&gt;&lt;em&gt;Totally antisymmetric&lt;/em&gt; is the term to use when exchanging &lt;em&gt;any&lt;/em&gt; two elements negates the expression. You can also have an expression which is &lt;em&gt;partially antisymmetric&lt;/em&gt;, meaning that exchanging some pairs of elements reverses the sign, but not others. For example, in&lt;p&gt;&lt;/p&gt;
+
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+&#92;[
+abc - acb + bca - bac - cab + cba
+&#92;]
+&lt;/p&gt;
+
+&lt;p&gt;if you switch &#92;(a&#92;leftrightarrow b&#92;), it negates the expression, but switching &#92;(a&#92;leftrightarrow c&#92;) or &#92;(b&#92;leftrightarrow c&#92;) does not. &lt;/p&gt;
+&lt;p&gt;Source: &lt;a href=&quot;https://math.stackexchange.com/a/3737205/1098426&quot;&gt;David Zaslavsky&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+
+&lt;p&gt;
+    The cross product is fundamentally a directed area. The magnitude of the cross product is defined to be the area of the parallelogram whose sides are the two vectors in the cross product.
+    &lt;/p&gt;
+    &lt;p&gt;
+    In the figure above, if the horizontal vector is &#92;(&#92;mathbf{v}&#92;) and the upward-pointing vector is &#92;(&#92;mathbf{w}&#92;), then the height of the parallelogram is &#92;(&#92;left|&#92;mathbf{w}&#92;right|&#92;sin&#92;theta&#92;), so its area is
+    &#92;(&#92;left|&#92;mathbf{v} &#92;times &#92;mathbf{w}&#92;right| = &#92;left|&#92;mathbf{v}&#92;right|&#92;left|&#92;mathbf{w}&#92;right|&#92;sin&#92;theta&#92;) &#92;((1)&#92;)
+    which is therefore the magnitude of the cross product.
+    &lt;/p&gt;
+    &lt;p&gt;
+    An immediate consequence of Equation &#92;((1)&#92;) is that, if two vectors are parallel, their cross product is zero,
+    &#92;(&#92;mathbf{v} &#92;parallel &#92;mathbf{w} &#92;implies &#92;mathbf{v} &#92;times &#92;mathbf{w} = &#92;mathbf{0}&#92;) &#92;((2)&#92;)
+    The direction of the cross product is given by the right-hand rule: Point the fingers of your right hand along the first vector (&#92;(&#92;mathbf{v}&#92;)), and curl your fingers toward the second vector (&#92;(&#92;mathbf{w}&#92;)). You may have to flip your hand over to make this work. Now stick out your thumb; that is the direction of &#92;(&#92;mathbf{v} &#92;times &#92;mathbf{w}&#92;). In the example shown above, &#92;(&#92;mathbf{v} &#92;times &#92;mathbf{w}&#92;) points out of the page. The right-hand rule implies that
+    &#92;(&#92;mathbf{w} &#92;times &#92;mathbf{v} = -&#92;mathbf{v} &#92;times &#92;mathbf{w}&#92;) &#92;((3)&#92;)
+    as you should verify for yourself by suitably positioning your hand. Thus, the cross product is not commutative. 1) Another important property of the cross product is that the cross product of a vector with itself is zero,
+    &#92;(&#92;mathbf{v} &#92;times &#92;mathbf{v} = &#92;mathbf{0}&#92;) &#92;((4)&#92;)
+    which follows from any of the preceding three equations.
+    &lt;/p&gt;
+    &lt;p&gt;
+    In terms of the standard orthonormal basis, the geometric formula quickly yields
+   
+    &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;
+    &#92;[
+    &#92;begin{align*}
+    &#92;hat{x} &#92;times &#92;hat{y} &amp;= &#92;hat{z} &#92;&#92;
+    &#92;hat{y} &#92;times &#92;hat{z} &amp;= &#92;hat{x} &#92;&#92;
+    &#92;hat{z} &#92;times &#92;hat{x} &amp;= &#92;hat{y}
+    &#92;end{align*}
+    &#92;]
+    &lt;/p&gt;
+    
+    This cyclic nature of the cross product can be emphasized by abbreviating this multiplication table as shown in the figure below. 2)Products in the direction of the arrow get a plus sign; products against the arrow get a minus sign.
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;
+    Using an orthonormal basis such as &#92;(&#92;{&#92;mathbf{x}, &#92;mathbf{y}, &#92;mathbf{z}&#92;}&#92;), the geometric formula reduces to the standard component form of the cross product. 3) If &#92;(&#92;mathbf{v} = v_x&#92;mathbf{x} + v_y&#92;mathbf{y} + v_z&#92;mathbf{z}&#92;) and &#92;(&#92;mathbf{w} = w_x&#92;mathbf{x} + w_y&#92;mathbf{y} + w_z&#92;mathbf{z}&#92;), then
+    &#92;(&#92;mathbf{v} &#92;times &#92;mathbf{w} = (v_xw_y - v_yw_x)&#92;mathbf{x} + (v_zw_x - v_xw_z)&#92;mathbf{y} + (v_yw_z - v_zw_y)&#92;mathbf{z}&#92;) &#92;((8)(9)&#92;)
+    which is often written as the symbolic determinant
+    
+    &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;
+    &#92;[&#92;mathbf{v} &#92;times &#92;mathbf{w} = &#92;begin{vmatrix} &#92;mathbf{x} &amp; &#92;mathbf{y} &amp; &#92;mathbf{z} &#92;&#92; v_x &amp; v_y &amp; v_z &#92;&#92; w_x &amp; w_y &amp; w_z &#92;end{vmatrix} &#92;quad (10)&#92;]
+    &lt;/p&gt;
+    
+    We encourage you to use &#92;((10)&#92;), rather than simply memorizing &#92;((9)&#92;). We also encourage you to compute the determinant as described below, rather than using minors; this tends to minimize sign errors. A &#92;(3 &#92;times 3&#92;) determinant can be computed in the form
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p style=&quot;overflow: auto;&quot;&gt;
+    &#92;[
+    &#92;begin{vmatrix} a &amp; b &amp; c &#92;&#92; d &amp; e &amp; f &#92;&#92; g &amp; h &amp; i &#92;end{vmatrix} = aei + bfg + cdh - ceg - bdi - afh
+    &#92;]
+    &lt;/p&gt;
+    &lt;p&gt;
+    where one multiplies the terms along each diagonal line, subtracting the products obtained along lines going down to the left from those along lines going down to the right. While this method works only for &#92;( (2 &#92;times 2&#92;) and &#92;(3 &#92;times 3&#92;) determinants, it emphasizes the cyclic nature of the cross product.
+    &lt;/p&gt;
+    &lt;p&gt;
+    Another important skill is knowing when not to use a determinant at all. For simple cross products, such as &#92;((&#92;mathbf{x} + 3&#92;mathbf{y}) &#92;times &#92;mathbf{z}&#92;), it is easier to use the multiplication table directly.
+    &lt;/p&gt;
+    &lt;p&gt;
+    It is also worth pointing out that the multiplication table and the determinant method generalize naturally to any (right-handed) orthonormal basis; all that is needed is to replace the rectangular basis &#92;(&#92;{&#92;mathbf{x}, &#92;mathbf{y}, &#92;mathbf{z}&#92;}&#92;) by the one being used (in the right order!). For example, in cylindrical coordinates, not only is
+    &lt;/p&gt;
+    &lt;p style=&quot;overflow: auto;&quot;&gt;
+    &#92;[&#92;mathbf{r} &#92;times &#92;boldsymbol{&#92;phi} = &#92;mathbf{z} &#92;quad (11)&#92;]
+        &lt;/p&gt;
+        &lt;p&gt;
+    (and cyclic permutations), but cross products can be computed as
+&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+    &#92;[&#92;mathbf{v} &#92;times &#92;mathbf{w} = &#92;begin{vmatrix} &#92;mathbf{r} &amp; v_r &amp; v_&#92;phi &amp; v_z &#92;&#92; &#92;mathbf{r} &amp; w_r &amp; w_&#92;phi &amp; w_z &#92;&#92; &#92;boldsymbol{&#92;phi} &amp; v_r &amp; v_&#92;phi &amp; v_z &#92;&#92; &#92;boldsymbol{&#92;phi} &amp; w_r &amp; w_&#92;phi &amp; w_z &#92;&#92; &#92;mathbf{z} &amp; v_r &amp; v_&#92;phi &amp; v_z &#92;&#92; &#92;mathbf{z} &amp; w_r &amp; w_&#92;phi &amp; w_z &#92;end{vmatrix} &#92;quad (12)&#92;]
+&lt;/p&gt;
+    &lt;p&gt;where of course &#92;(&#92;mathbf{v} = v_r&#92;mathbf{r} + v_&#92;phi&#92;boldsymbol{&#92;phi} + v_z&#92;mathbf{z}&#92;) and similarly for &#92;(&#92;mathbf{w}&#92;).&lt;/p&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;
+    A good problem emphasizing the geometry of the cross product is to find the area of the triangle formed by connecting the tips of the vectors &#92;(&#92;mathbf{x}&#92;), &#92;(&#92;mathbf{y}&#92;), &#92;(&#92;mathbf{z}&#92;) (whose base is at the origin).
+    &lt;/p&gt;
+    &lt;p&gt;
+    1) The cross product also fails to be associative, since for example &#92;(&#92;mathbf{x} &#92;times (&#92;mathbf{x} &#92;times &#92;mathbf{y}) = -&#92;mathbf{y}&#92;) but &#92;((&#92;mathbf{x} &#92;times &#92;mathbf{x}) &#92;times &#92;mathbf{y} = &#92;mathbf{0}&#92;).
+    &lt;/p&gt;
+    &lt;p&gt;
+    2) This is really the multiplication table for the unit imaginary quaternions, a number system which generalizes the familiar complex numbers. Quaternions predate vector analysis, which borrowed the &#92;(i&#92;), &#92;(j&#92;), &#92;(k&#92;) notation for the rectangular basis vectors, which are often written as &#92;(&#92;mathbf{i}&#92;), &#92;(&#92;mathbf{j}&#92;), &#92;(&#92;mathbf{k}&#92;). Here, we have adopted instead the more logical names &#92;(&#92;mathbf{x}&#92;), &#92;(&#92;mathbf{y}&#92;), &#92;(&#92;mathbf{z}&#92;).
+    &lt;/p&gt;
+    &lt;p&gt;
+    3) This argument uses the distributive property, which must be proved geometrically if one starts with &#92;((1)&#92;) and the right-hand rule. This is straightforward in two dimensions, but somewhat more difficult in three dimensions.
+    &lt;/p&gt;
+&lt;h3 id=&quot;gen-surf&quot;&gt;general surface&lt;/h3&gt;
+&lt;p&gt;It is getting real with Tevian Dray and Corinne A. Manogue.&lt;/p&gt;
+&lt;p&gt;
+    Since surfaces are two-dimensional, chopping up a surface is usually done by drawing two families of curves on the surface.  Then you can compute &#92;(d&#92;mathbf{r}&#92;) on each family and take the  cross product, to get the &lt;em&gt;vector surface element&lt;/em&gt; in the form  &#92;[
+    d&#92;mathbf{S} = d&#92;mathbf{r}_1 &#92;times d&#92;mathbf{r}_2 &#92;label{Surface} &#92;tag{1}
+    &#92;]  In order to determine the area of the vector surface element, we need the magnitude of this expression, which is &#92;[
+    dS = &#92;lvert d&#92;mathbf{r}_1&#92;times d&#92;mathbf{r}_2 &#92;rvert &#92;label{Scalar} &#92;tag{2}
+    &#92;]  and which is called the &lt;em&gt;(scalar) surface element&lt;/em&gt;.  This should remind you of the corresponding expression for line integrals, namely &#92;(ds=&#92;lvert d&#92;mathbf{r} &#92;rvert&#92;).
+    &lt;/p&gt;
+    
+    
+    
+    &lt;p&gt;
+    We illustrate this technique by computing the surface element for the paraboloid given by &#92;(z=x^2+y^2&#92;), as shown in  Figure&amp;nbsp;1, with the two families of curves corresponding to &#92;(&#92;{x=&#92;text{const}&#92;}&#92;) and &#92;(&#92;{y=&#92;text{const}&#92;}&#92;). We start with the basic formula for the vector differential &#92;(d&#92;mathbf{r}&#92;), namely &#92;[
+    d&#92;mathbf{r} = dx&#92;,&#92;mathbf{&#92;hat{x}} + dy&#92;,&#92;mathbf{&#92;hat{y}} + dz&#92;,&#92;mathbf{&#92;hat{z}}
+    &#92;] What do you know?  The expression for &#92;(z&#92;) leads to &#92;[
+    dz = 2x&#92;,dx + 2y&#92;,dy
+    &#92;] In rectangular coordinates, it is natural to consider infinitesimal displacements in the &#92;(x&#92;) and &#92;(y&#92;) directions.  In the &#92;(x&#92;) direction, &#92;(y&#92;) is constant, so &#92;(dy=0&#92;), and we obtain &#92;[
+    d&#92;mathbf{r}_1 = dx&#92;,&#92;mathbf{&#92;hat{x}} + 2x&#92;,dx&#92;,&#92;mathbf{&#92;hat{z}} = (&#92;mathbf{&#92;hat{x}} + 2x&#92;,&#92;mathbf{&#92;hat{z}})&#92;, dx
+    &#92;] Similarly, in the &#92;(y&#92;) direction, &#92;(dx=0&#92;), which leads to &#92;[
+    d&#92;mathbf{r}_2 = dy&#92;,&#92;mathbf{&#92;hat{y}} + 2y&#92;,dy&#92;,&#92;mathbf{&#92;hat{z}} = (&#92;mathbf{&#92;hat{y}} + 2y&#92;,&#92;mathbf{&#92;hat{z}})&#92;, dy
+    &#92;] Putting this together, we obtain  &#92;[
+    d&#92;mathbf{S}  =  d&#92;mathbf{r}_1 &#92;times d&#92;mathbf{r}_2  = (&#92;mathbf{&#92;hat{x}} + 2x&#92;,&#92;mathbf{&#92;hat{z}}) &#92;times (&#92;mathbf{&#92;hat{y}} + 2y&#92;,&#92;mathbf{&#92;hat{z}}) &#92;,dx&#92;,dy = (-2x&#92;,&#92;mathbf{&#92;hat{x}} - 2y&#92;,&#92;mathbf{&#92;hat{y}} + &#92;mathbf{&#92;hat{z}}) &#92;,dx&#92;,dy &#92;label{parabolaR}
+    &#92;] for the vector surface element, and &#92;[
+    dS = &#92;left|{-}2x&#92;,&#92;mathbf{&#92;hat{x}} - 2y&#92;,&#92;mathbf{&#92;hat{y}} + &#92;mathbf{&#92;hat{z}}&#92;right| &#92;,dx&#92;,dy = &#92;sqrt{1+4x^2+4y^2}&#92;,dx&#92;,dy
+    &#92;] for the scalar surface element.
+    &lt;/p&gt;
+    
+    &lt;p&gt;
+    This construction emphasizes that “area” is really a &lt;em&gt;vector&lt;/em&gt;, whose direction is perpendicular
+    
+     to the surface, and whose magnitude is the area. Note that there are always &lt;em&gt;two&lt;/em&gt; choices for the direction; choosing one determines the &lt;em&gt;orientation&lt;/em&gt; of the surface.
+    &lt;/p&gt;
+    
+    &lt;p&gt;
+    When using&amp;nbsp;&#92;(&#92;eqref{Surface}&#92;) and&amp;nbsp;&#92;(&#92;eqref{Scalar}&#92;), it doesn&#39;t matter how you chop up the surface.  It is of course possible to get the opposite orientation, for instance by interchanging the roles of &#92;(d&#92;mathbf{r}_1&#92;) and &#92;(d&#92;mathbf{r}_2&#92;). Rather than worrying too much about getting the “right” orientation from the beginning, it is usually simpler to check after you&#39;ve calculated &#92;(d&#92;mathbf{S}&#92;) whether the orientations you&#39;ve got agrees with the requirements of the problem.  If not, insert a minus sign.
+    &lt;/p&gt;
+    
+    &lt;p&gt;
+    Just as a curve is a 1-dimensional set of points, a surface is 2-dimensional. When computing line integrals, it was necessary to write everything in terms of a single parameter before integrating.  Similarly, for surface integrals you must write everything, including the limits of integration, in terms of exactly &lt;em&gt;two&lt;/em&gt; parameters before starting to integrate.
+    &lt;/p&gt;
+    
+    &lt;p&gt;
+    Finally, a word about notation.  You will often see &#92;(dS&#92;) instead of &#92;(dA&#92;), and &#92;(d&#92;vec{S}&#92;) instead of&amp;nbsp;&#92;(d&#92;mathbf{S}&#92;); most authors use &#92;(dA&#92;) in the &#92;(xy&#92;)-plane.
+    &lt;/p&gt;
+
+    &lt;h3 id=&quot;flux&quot;&gt;flux&lt;/h3&gt;
+    &lt;p&gt;Another slay from Tevian Dray and Corinne A. Manogue.&lt;/p&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;
+        At any given point along a curve, there is a natural vector, namely the (unit) tangent vector&amp;nbsp;&#92;(&#92;mathbf{T}&#92;).  Therefore, it is natural to add up the &lt;em&gt;tangential&lt;/em&gt; component of a given vector field along a curve.  When the vector field represents force, this integral represents the work done by the force along the curve.  But there is no natural tangential direction at a point on a surface, or rather there are too many of them.  The natural vector at a point on a surface is the (unit) &lt;em&gt;normal&lt;/em&gt; vector &#92;(&#92;mathbf{n}&#92;), so on a surface it is natural to add up the normal component of a given vector field; this integral is known as the &lt;em&gt;flux&lt;/em&gt; of the vector field through the surface.
+        &lt;/p&gt;
+        
+        &lt;p&gt;
+        We already know that the vector surface element is given by &#92;begin{equation} d&#92;mathbf{S} = d&#92;mathbf{r}_1 &#92;times d&#92;mathbf{r}_2 &#92;end{equation} Since &#92;(d&#92;mathbf{r}_1&#92;) and &#92;(d&#92;mathbf{r}_2&#92;) are both tangent to the surface, &#92;(d&#92;mathbf{S}&#92;) is perpendicular to the surface, and is therefore often written &#92;begin{equation} d&#92;mathbf{S} = &#92;mathbf{n} &#92;,&#92;mathrm{d}S &#92;end{equation} Putting this all together, the flux of a vector field &#92;(&#92;mathbf{F}&#92;) through the surface is given by &#92;begin{equation} &#92;text{flux of &#92;(&#92;mathbf{F}&#92;) through &#92;(S&#92;)} = &#92;iint_S &#92;mathbf{F} &#92;cdot d&#92;mathbf{S} &#92;end{equation}
+        &lt;/p&gt;
+        
+        
+        &lt;p&gt;
+        We first consider a problem typical of those in calculus textbooks, namely finding the flux of the vector field &#92;(&#92;mathbf{F}=z&#92;,&#92;mathbf{&#92;hat{z}}&#92;) up through the part of the plane &#92;(x+y+z=1&#92;) lying in the first octant, as shown in   Figure&amp;nbsp;1. We begin with the infinitesimal vector displacement in rectangular coordinates in 3 dimensions, namely &#92;begin{equation} d&#92;mathbf{r} = dx&#92;,&#92;mathbf{&#92;hat{x}} + dy&#92;,&#92;mathbf{&#92;hat{y}} + dz&#92;,&#92;mathbf{&#92;hat{z}} &#92;end{equation} A natural choice of curves on this surface is given by setting &#92;(y&#92;) or &#92;(x&#92;) constant, so that &#92;(dy=0&#92;) or &#92;(dx=0&#92;), respectively.  We thus obtain &#92;begin{eqnarray} d&#92;mathbf{r}_1 &amp;=&amp; dx&#92;,&#92;mathbf{&#92;hat{x}} + dz&#92;,&#92;mathbf{&#92;hat{z}} = (&#92;mathbf{&#92;hat{x}}-&#92;mathbf{&#92;hat{z}})&#92;,dx &#92;&#92; d&#92;mathbf{r}_2 &amp;=&amp; dy&#92;,&#92;mathbf{&#92;hat{y}} + dz&#92;,&#92;mathbf{&#92;hat{z}} = (&#92;mathbf{&#92;hat{y}}-&#92;mathbf{&#92;hat{z}})&#92;,dy &#92;end{eqnarray} where we have used the equation of the plane to determine each expression in terms of a single parameter.  The surface element is thus &lt;a id=&quot;triangle&quot;&gt;&lt;/a&gt; &#92;begin{equation} d&#92;mathbf{S} = d&#92;mathbf{r}_1&#92;times d&#92;mathbf{r}_2 = (&#92;mathbf{&#92;hat{x}}+&#92;mathbf{&#92;hat{y}}+&#92;mathbf{&#92;hat{z}})&#92;,dx&#92;,dy &#92;label{triangle} &#92;end{equation} and the flux becomes    &#92;begin{equation} &#92;iint_S &#92;mathbf{F}&#92;cdot d&#92;mathbf{S}   = &#92;iint_S z &#92;,&#92;mathrm{d}x&#92;,&#92;mathrm{d}y   = &#92;int_0^1 &#92;int_0^{1-y} (1-x-y) &#92;,&#92;mathrm{d}x&#92;,&#92;mathrm{d}y   =&#92;frac{1}{6} &#92;end{equation} The limits were chosen by visualizing the projection of the surface into the &#92;(xy&#92;)-plane, which is a triangle bounded by the &#92;(x&#92;)-axis, the &#92;(y&#92;)-axis, and the line whose equation is &#92;(x+y=1&#92;).  Note that this latter equation is obtained from the equation of the surface by using what we know, namely that &#92;(z=0&#92;).
+        &lt;/p&gt;
+        
+        &lt;p&gt;
+        Just as for line integrals, there is a rule of thumb which tells you when to stop using what you know to compute surface integrals: Don&#39;t start integrating until the integral is expressed in terms of &lt;em&gt;two&lt;/em&gt; parameters, and the limits in terms of those parameters have been determined.  Surfaces are two-dimensional!
+        &lt;/p&gt;
+        
+        &lt;p&gt;
+        Some readers will prefer to change the domain of integration in the second
+        integral to be the projection of &#92;(S&#92;) into the &#92;(xy&#92;)-plane.  We prefer to
+        integrate over the actual surface whenever possible.
+        &lt;/p&gt;
+        &lt;h3 id=&quot;symm&quot;&gt;to symmetry or not to symmetry&lt;/h3&gt;
+        &lt;p&gt;Tevian Dray and Corinne A. Manogue pull out the double bind.&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;to symmetry&lt;/strong&gt;&lt;/p&gt;
+        &lt;p&gt;
+            The electric field of a point charge &#92;(q&#92;) at the origin is given by &#92;begin{equation} &#92;mathbf{E} = &#92;frac{q}{4&#92;pi&#92;epsilon_0} &#92;frac{&#92;mathbf{&#92;hat{r}}}{r^2} = &#92;frac{q}{4&#92;pi&#92;epsilon_0}  &#92;frac{x&#92;,&#92;mathbf{&#92;hat{x}}+y&#92;,&#92;mathbf{&#92;hat{y}}+z&#92;,&#92;mathbf{&#92;hat{z}}}{(x^2+y^2+z^2)^{3/2}} &#92;end{equation} where &#92;(&#92;mathbf{&#92;hat{r}}&#92;) is the unit vector in the radial direction in &lt;em&gt;spherical&lt;/em&gt; coordinates.  Note that the first expression clearly indicates both the spherical symmetry of &#92;(&#92;mathbf{E}&#92;) and its &#92;(&#92;frac{1}{r^2}&#92;) fall-off behavior, while the second expression does neither.
+            &lt;/p&gt;
+            
+            &lt;p&gt;
+            It is easy to determine &#92;(d&#92;mathbf{S}&#92;) on the sphere by inspection; we nevertheless go through the details of the differential approach for this case.  We use &amp;ldquo;physicists&#39; conventions&amp;rdquo; for spherical coordinates, so that &#92;(&#92;theta&#92;) is the angle from the North Pole, and &#92;(&#92;phi&#92;) the angle in the &#92;(xy&#92;)-plane.  We use the obvious families of curves, namely the lines of latitude and longitude. Starting either from the general formula for &#92;(d&#92;mathbf{r}&#92;) in spherical coordinates, namely &#92;begin{equation} d&#92;mathbf{r} = dr&#92;,&#92;mathbf{&#92;hat{r}} + r&#92;,d&#92;theta&#92;,&#92;mathbf{&#92;hat{&#92;theta}} + r&#92;sin&#92;theta&#92;,d&#92;phi&#92;,&#92;mathbf{&#92;hat{&#92;phi}} &#92;end{equation} or directly using the geometry behind that formula, one quickly arrives at &#92;begin{eqnarray} d&#92;mathbf{r}_1 &amp;=&amp; r&#92;,d&#92;theta&#92;,&#92;mathbf{&#92;hat{&#92;theta}} &#92;&#92; d&#92;mathbf{r}_2 &amp;=&amp; r&#92;sin&#92;theta&#92;,d&#92;phi&#92;,&#92;mathbf{&#92;hat{&#92;phi}} &#92;&#92; d&#92;mathbf{S} &amp;=&amp; d&#92;mathbf{r}_1 &#92;times d&#92;mathbf{r}_2 = r^2&#92;sin&#92;theta&#92;,d&#92;theta&#92;,d&#92;phi&#92;,&#92;mathbf{&#92;hat{r}} &#92;end{eqnarray} so that &#92;begin{equation} &#92;iint_S &#92;mathbf{E}&#92;cdot d&#92;mathbf{S} = &#92;int_0^{2&#92;pi} &#92;int_0^&#92;pi &#92;frac{q}{4&#92;pi&#92;epsilon_0} &#92;frac{&#92;mathbf{&#92;hat{r}}}{r^2}  &#92;cdot r^2 &#92;sin&#92;theta&#92;,d&#92;theta&#92;,d&#92;phi &#92;,&#92;mathbf{&#92;hat{r}} = &#92;frac{q}{&#92;epsilon_0} &#92;label{Gauss0} &#92;end{equation}  You may recognize this result as &lt;em&gt;Gauss&#39; Law&lt;/em&gt;, which says that the equation above gives the relationship between the total charge &#92;(q&#92;) inside  &lt;em&gt;any&lt;/em&gt; closed surface &#92;(S&#92;) and the flux of the electric field through the surface.
+            &lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;not to symmetry&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;
+                The reader may have the feeling that two quite different languages are being spoken here. 
+                While the &quot;use what you know&quot; strategy may be somewhat unfamiliar, the basic idea should not be. On the other hand highly symmetric examples will be quite unfamiliar to most mathematicians, due to their use of adapted basis vectors such as &#92;(&#92;mathbf{&#92;hat{r}}&#92;). Mastering these examples helps develop experience looking for symmetry and making geometric arguments. At the same time, not all problems have symmetry!
+                &lt;/p&gt;
+                
+                &lt;p&gt;
+                We argue, however, that the approach being presented here is much more flexible than may appear at first sight. We demonstrate this flexibility by integrating over a paraboloid, the classic example found in calculus textbooks.
+                &lt;/p&gt;
+                
+                &lt;p&gt;
+                We compute the flux of the axially symmetric vector field &#92;(&#92;mathbf{F} = r&#92;,&#92;mathbf{&#92;hat{r}} = x&#92;,&#92;mathbf{&#92;hat{x}} + y&#92;,&#92;mathbf{&#92;hat{y}}&#92;) &quot;outwards&quot; through the part of the paraboloid &#92;(z=r^2&#92;) lying below the plane &#92;(z=4&#92;). The first thing we need is the formula for &#92;(d&#92;mathbf{r}&#92;) in cylindrical coordinates, which is a straightforward generalization  in polar coordinates, namely &#92;begin{equation} d&#92;mathbf{r} = dr&#92;,&#92;mathbf{&#92;hat{r}} + r&#92;,d&#92;phi&#92;,&#92;mathbf{&#92;hat{&#92;phi}} + dz&#92;,&#92;mathbf{&#92;hat{z}} &#92;label{dr3} &#92;end{equation}
+                &lt;/p&gt;
+                &lt;h3 id=&quot;&quot;&gt;&lt;/h3&gt;
+        &lt;p&gt;Tevian Dray and Corinne A. Manogue&lt;/p&gt;
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fcurvilinear%20vector%20differentials%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=steady%20descent%20into%20vector%20calculus&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
