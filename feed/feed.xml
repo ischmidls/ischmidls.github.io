@@ -9304,31 +9304,61 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 		<updated>2023-07-15T17:00:00-07:00</updated>
 		<id>https://ischmidls.github.io/posts/curvilinear%20vector%20differentials/</id>
 		<content type="html">
-		  &lt;div class=&quot;container&quot; id=&quot;bsr-wrapper&quot;&gt;
-&lt;h3&gt;table of contents&lt;/h3&gt;
+		  &lt;style&gt;
+        body {
+  background: linear-gradient(to bottom,  #f4d9a7, #f4a7b9, #a6c0e4, #437ccc);
+  text-shadow: 0.2em 0.2em 0.4em rgba(0, 0, 0, 0.5);
+}
+
+&lt;/style&gt;
+&lt;div class=&quot;container&quot; id=&quot;bsr-wrapper&quot;&gt;
+&lt;h3&gt;table of contents &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;ol&gt;
-    &lt;li&gt;&lt;a href=&quot;#the-vector-differential-drr&quot;&gt;vector differential&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#coord&quot;&gt;vector differential  in other coordinate systems&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#integration&quot;&gt;integration&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#line-integral&quot;&gt;line integral&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#scalar&quot;&gt;scalar line integrals&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#vec-line-int&quot;&gt;vector line integrals&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#path-ind&quot;&gt;path independence&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#con-vec&quot;&gt;conservative vector fields&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#in&quot;&gt;intro&lt;/a&gt;&lt;/li&gt;
+
+    &lt;li&gt;&lt;a href=&quot;#gradients&quot;&gt;gradients&lt;/a&gt;
+        &lt;ol&gt;
+        &lt;li&gt;&lt;a href=&quot;#multivariable-differential&quot;&gt;the multivariable differential&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#gradient&quot;&gt;gradient&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#gradient-properties&quot;&gt;properties of the gradient&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#directional-derivatives&quot;&gt;directional derivatives&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#gradient-curvilinear-coordinates&quot;&gt;the gradient in curvilinear coordinates&lt;/a&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;&lt;a href=&quot;#line-integrals&quot;&gt;line integrals&lt;/a&gt;
+        &lt;ol&gt;
+        &lt;li&gt;&lt;a href=&quot;#the-vector-differential-drr&quot;&gt;vector differential&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#coord&quot;&gt;vector differential  in other coordinate systems&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#integration&quot;&gt;integration&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#line-integral&quot;&gt;line integral&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#scalar&quot;&gt;scalar line integrals&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#vec-line-int&quot;&gt;vector line integrals&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#path-ind&quot;&gt;path independence&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#con-vec&quot;&gt;conservative vector fields&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;&lt;a href=&quot;#surface-integrals&quot;&gt;surface integrals&lt;/a&gt;
+        &lt;ol&gt;
     &lt;li&gt;&lt;a href=&quot;#surface&quot;&gt;surface&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#cross-prod&quot;&gt;a bigger better cross product&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#gen-surf&quot;&gt;general surface&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#flux&quot;&gt;flux&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#symm&quot;&gt;to symmetry or not to symmetry&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#spheres&quot;&gt;spheres&lt;/a&gt;&lt;/li&gt;
-
     &lt;li&gt;&lt;a href=&quot;#parametric&quot;&gt;parametric&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#scalar-surface&quot;&gt;scalar surface integrals&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#function-graphs&quot;&gt;function graphs&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#triple-product&quot;&gt;triple product&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#volume-integrals&quot;&gt;volume integrals&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#change-of-variables&quot;&gt;change of variables&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
 
+
+&lt;li&gt;&lt;a href=&quot;#vector-derivatives&quot;&gt;vector derivatives&lt;/a&gt;
+    &lt;ol&gt;
     &lt;li&gt;&lt;a href=&quot;#divergence&quot;&gt;divergence&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#divergence-theorem&quot;&gt;the divergence theorem&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#divergence-curvilinear&quot;&gt;the divergence in curvilinear coordinates&lt;/a&gt;&lt;/li&gt;
@@ -9341,16 +9371,19 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;#integration-parts&quot;&gt;integration by parts&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#second-derivatives&quot;&gt;second derivatives&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#laplacian&quot;&gt;the laplacian&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+
 
     &lt;!-- &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt; --&gt;
 &lt;/ol&gt;
 
-
+&lt;h3 id=&quot;in&quot;&gt;intro &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Before the steady descent, I would like to provide a glimpse of the sea floor from an answer I gave while braving the wilds of Stack Exchange.&lt;/p&gt;
 
 &lt;p&gt;Here is the transcription of that post:&lt;/p&gt;
 
-&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+&lt;blockquote&gt;
     &lt;p&gt;While Grant Sanderson gives intuitive explanations of each of these theorems in his &lt;a href=&quot;https://www.youtube.com/watch?v=TrcCbdWwCBc&amp;amp;list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&amp;amp;pp=iAQB&quot;&gt;Multivariable Calculus&lt;/a&gt; series on YouTube, I thank Prof. Rick Presman for his exposition of the &lt;a href=&quot;https://math.uchicago.edu/~may/REU2012/REUPapers/Presman.pdf&quot;&gt;Generalized Stokes’ Theorem&lt;/a&gt;, and also Prof. Oliver Knill for his exposition via &lt;a href=&quot;https://people.math.harvard.edu/~knill/teaching/summer2020/handouts/lecture25.pdf&quot;&gt;Calculus in four dimensions&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;And, Aleph Naught’s videos: &lt;a href=&quot;https://www.youtube.com/watch?v=1lGM5DEdMaw&quot;&gt;Stokes’ Theorem on Manifolds&lt;/a&gt; and &lt;a href=&quot;https://www.youtube.com/watch?v=2ptFnIj71SM&quot;&gt;The derivative isn’t what you think it is&lt;/a&gt; give intuition as to the Generalized Stokes’ Theorem and perhaps differential geometry more broadly. &lt;/p&gt;
 &lt;hr&gt;
@@ -9359,12 +9392,14 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
   &lt;em&gt;Note: Prof. Knill does not discuss chains, as this is made for students of multivariable calculus.&lt;/em&gt;
 &lt;/p&gt;
 &lt;p&gt;First, the ladder from &lt;span class=&quot;math inline&quot;&gt;&#92;(1&#92;)&lt;/span&gt;-d to &lt;span class=&quot;math inline&quot;&gt;&#92;(4&#92;)&lt;/span&gt;-d. &lt;/p&gt;
-&lt;p&gt;In two dimensions, we see: the line integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;int_{a}^{b} &#92;mathbf{F}(&#92;mathbf{r}(t)) &#92;cdot &#92;mathbf{r}&amp;#39;(t) &#92;, dt&#92;)&lt;/span&gt; and the double integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;iint_{G} f(u, v) &#92;, du &#92;, dv&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;In two dimensions, we see: the line integral 
+    &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;[&#92;int_{a}^{b} &#92;mathbf{F}(&#92;mathbf{r}(t)) &#92;cdot &#92;mathbf{r}&amp;#39;(t) &#92;, dt&#92;]&lt;/span&gt; 
+    &lt;/p&gt;&lt;p&gt;and the double integral &lt;span class=&quot;math inline&quot;&gt;&#92;[&#92;iint_{G} f(u, v) &#92;, du &#92;, dv&#92;]&lt;/span&gt;. &lt;/p&gt;
 &lt;p&gt;In three dimensions, in addition to the line integral, we have the flux integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;iint_{G} &#92;mathbf{F}(&#92;mathbf{r}(u, v)) &#92;cdot (&#92;mathbf{r}_u &#92;times &#92;mathbf{r}_v) &#92;, du &#92;, dv&#92;)&lt;/span&gt; and the triple integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;iiint_{G} f(u, v, w) &#92;, du &#92;, dv &#92;, dw&#92;)&lt;/span&gt;. &lt;/p&gt;
 &lt;p&gt;To express these integrals using differential forms, we can consider forms with one component for simplicity, but it is straightforward to extend to sums by linearity.&lt;/p&gt;
 &lt;p&gt;I cannot make Prof. Knill’s exposition and notation here more concise:&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;For a &lt;span class=&quot;math inline&quot;&gt;&#92;(1&#92;)&lt;/span&gt;-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F = A &#92;, dx&#92;)&lt;/span&gt;, we integrate &lt;span class=&quot;math display&quot;&gt;&#92;[ &#92;int_{a}^{b} A(&#92;mathbf{r}(u)) &#92;, x&amp;#39;(u) &#92;, du. &#92;]&lt;/span&gt;
+  &lt;p&gt;For a &#92;(1&#92;)-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F = A &#92;, dx&#92;)&lt;/span&gt;, we integrate &lt;span class=&quot;math display&quot;&gt;&#92;[ &#92;int_{a}^{b} A(&#92;mathbf{r}(u)) &#92;, x&amp;#39;(u) &#92;, du. &#92;]&lt;/span&gt;
   &lt;/p&gt;
   &lt;p&gt;For a &lt;span class=&quot;math inline&quot;&gt;&#92;(2&#92;)&lt;/span&gt;-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F = A &#92;, dx &#92;, dy&#92;)&lt;/span&gt;, we integrate &lt;span class=&quot;math display&quot;&gt;&#92;[ &#92;iint_{G} A(&#92;mathbf{r}(u, v)) &#92;det &#92;left(&#92;begin{array}{cc} (&#92;mathbf{r}_u)_1 &amp;amp; (&#92;mathbf{r}_v)_1 &#92;&#92; (&#92;mathbf{r}_u)_2 &amp;amp; (&#92;mathbf{r}_v)_2 &#92;&#92; &#92;end{array}&#92;right) &#92;, du &#92;, dv. &#92;]&lt;/span&gt;
   &lt;/p&gt;
@@ -9375,55 +9410,272 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
   &lt;/p&gt;
   &lt;p&gt;And for &lt;span class=&quot;math inline&quot;&gt;&#92;(F = A &#92;, dx &#92;, dz &#92;, dt&#92;)&lt;/span&gt;, we would compute the hyper flux as &lt;span class=&quot;math display&quot;&gt;&#92;[ &#92;iiint_{G} A(&#92;mathbf{r}(u, v, w)) &#92;det &#92;left(&#92;begin{array}{ccc} (&#92;mathbf{r}_u)_1 &amp;amp; (&#92;mathbf{r}_v)_1 &amp;amp; (&#92;mathbf{r}_w)_1 &#92;&#92; (&#92;mathbf{r}_u)_3 &amp;amp; (&#92;mathbf{r}_v)_3 &amp;amp; (&#92;mathbf{r}_w)_3 &#92;&#92; (&#92;mathbf{r}_u)_4 &amp;amp; (&#92;mathbf{r}_v)_4 &amp;amp; (&#92;mathbf{r}_w)_4 &#92;&#92; &#92;end{array}&#92;right) &#92;, du &#92;, dv &#92;, dw. &#92;]&lt;/span&gt;
   &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;A &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F&#92;)&lt;/span&gt; assigns, to each point &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{x}&#92;)&lt;/span&gt;, a &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-linear anti-symmetric map. It can be represented as &lt;span class=&quot;math inline&quot;&gt;&#92;(F(&#92;mathbf{x}) &#92;cdot (&#92;mathbf{v}_1, &#92;ldots, &#92;mathbf{v}_k)&#92;)&lt;/span&gt;, which yields a number. The maps &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{v}_j &#92;mapsto F(&#92;mathbf{x}) &#92;cdot (&#92;mathbf{v}_1, &#92;ldots, &#92;mathbf{v}_k)&#92;)&lt;/span&gt; are linear, and for any pair &lt;span class=&quot;math inline&quot;&gt;&#92;(i&#92;)&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;&#92;(j&#92;)&lt;/span&gt;, we have &lt;span class=&quot;math inline&quot;&gt;&#92;(F(&#92;mathbf{x}) &#92;cdot (&#92;mathbf{v}_1, &#92;ldots, &#92;mathbf{v}_i, &#92;mathbf{v}_j, &#92;ldots, &#92;mathbf{v}_k) = -F(&#92;mathbf{x}) &#92;cdot (&#92;mathbf{v}_1, &#92;ldots, &#92;mathbf{v}_j, &#92;mathbf{v}_i, &#92;ldots, &#92;mathbf{v}_k)&#92;)&lt;/span&gt;. &lt;/p&gt;
-&lt;p&gt;Let &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{r}: G &#92;rightarrow &#92;mathbf{r}(G)&#92;)&lt;/span&gt; be a parametrization, where &lt;span class=&quot;math inline&quot;&gt;&#92;(G&#92;)&lt;/span&gt; is a &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-dimensional region mapped into &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{R}^4&#92;)&lt;/span&gt;. We can assign to each point &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{x} = &#92;mathbf{r}(&#92;mathbf{u})&#92;)&lt;/span&gt; the number &lt;span class=&quot;math inline&quot;&gt;&#92;(F(&#92;mathbf{x}) &#92;, d&#92;mathbf{u} = F(&#92;mathbf{x}) &#92;cdot (&#92;mathbf{r}_u^1, &#92;ldots, &#92;mathbf{r}_u^k)&#92;)&lt;/span&gt;. The flux of the &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-form through the &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-surface &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{r}(G)&#92;)&lt;/span&gt; is then defined as &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;int_{G} F(&#92;mathbf{r}(&#92;mathbf{u})) &#92;cdot d&#92;mathbf{u}&#92;)&lt;/span&gt;. &lt;/p&gt;
-&lt;p&gt;A &lt;span class=&quot;math inline&quot;&gt;&#92;(1&#92;)&lt;/span&gt;-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F=A &#92; dx&#92;)&lt;/span&gt;, gives a line integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;int_{a}^{b} F(&#92;mathbf{r}(t)) &#92;cdot &#92;mathbf{r}&amp;#39;(t) &#92;, dt&#92;)&lt;/span&gt;. &lt;/p&gt;
-&lt;p&gt;A &lt;span class=&quot;math inline&quot;&gt;&#92;(2&#92;)&lt;/span&gt;-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F=A &#92; dx &#92; dy&#92;)&lt;/span&gt;, gives a flux integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;iint_{G} F(&#92;mathbf{r}(u, v)) &#92;cdot (&#92;mathbf{r}_u, &#92;mathbf{r}_v) &#92;, du &#92;, dv&#92;)&lt;/span&gt;. &lt;/p&gt;
-&lt;p&gt;A &lt;span class=&quot;math inline&quot;&gt;&#92;(3&#92;)&lt;/span&gt;-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F=A &#92; dx &#92; dy &#92; dt&#92;)&lt;/span&gt;, gives a hyper flux integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;iiint_{G} F(&#92;mathbf{r}(u, v, w)) &#92;cdot (&#92;mathbf{r}_u, &#92;mathbf{r}_v, &#92;mathbf{r}_w) &#92;, du &#92;, dv &#92;, dw&#92;)&lt;/span&gt;. &lt;/p&gt;
-&lt;p&gt;A &lt;span class=&quot;math inline&quot;&gt;&#92;(4&#92;)&lt;/span&gt;-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F = A &#92; dx &#92;, dy &#92;, dz &#92;, dt&#92;)&lt;/span&gt;, gives a volume integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;iint &#92;iint_{G} F(x, y, z, t) &#92;, dx &#92;, dy &#92;, dz &#92;, dt&#92;)&lt;/span&gt;. &lt;/p&gt;
+  &lt;/blockquote&gt;
+
+&lt;p&gt;A &lt;span class=&quot;math inline&quot;&gt; &#92;(k&#92;) &lt;/span&gt; -form &lt;span class=&quot;math inline&quot;&gt; &#92;(F&#92;) &lt;/span&gt; assigns, to each point &lt;span class=&quot;math inline&quot;&gt; &#92;(&#92;mathbf{x}&#92;) &lt;/span&gt; , a &lt;span class=&quot;math inline&quot;&gt; &#92;(k&#92;) &lt;/span&gt; -linear anti-symmetric map. It can be represented as &lt;span class=&quot;math inline&quot;&gt; &#92;(F(&#92;mathbf{x}) &#92;cdot (&#92;mathbf{v}_1, &#92;ldots, &#92;mathbf{v}_k)&#92;) &lt;/span&gt; , which yields a number. The maps &lt;span class=&quot;math inline&quot;&gt; &#92;(&#92;mathbf{v}_j &#92;mapsto F(&#92;mathbf{x}) &#92;cdot (&#92;mathbf{v}_1, &#92;ldots, &#92;mathbf{v}_k)&#92;) &lt;/span&gt; are linear, and for any pair &lt;span class=&quot;math inline&quot;&gt; &#92;(i&#92;) &lt;/span&gt; , &lt;span class=&quot;math inline&quot;&gt; &#92;(j&#92;) &lt;/span&gt; , we have &lt;span class=&quot;math inline&quot;&gt; &#92;(F(&#92;mathbf{x}) &#92;cdot (&#92;mathbf{v}_1, &#92;ldots, &#92;mathbf{v}_i, &#92;mathbf{v}_j, &#92;ldots, &#92;mathbf{v}_k) = -F(&#92;mathbf{x}) &#92;cdot (&#92;mathbf{v}_1, &#92;ldots, &#92;mathbf{v}_j, &#92;mathbf{v}_i, &#92;ldots, &#92;mathbf{v}_k)&#92;) &lt;/span&gt; . &lt;/p&gt;
+&lt;p&gt;Let &lt;span class=&quot;math inline&quot;&gt; &#92;(&#92;mathbf{r}: G &#92;rightarrow &#92;mathbf{r}(G)&#92;) &lt;/span&gt; be a parametrization, where &lt;span class=&quot;math inline&quot;&gt; &#92;(G&#92;) &lt;/span&gt; is a &lt;span class=&quot;math inline&quot;&gt; &#92;(k&#92;) &lt;/span&gt; -dimensional region mapped into &lt;span class=&quot;math inline&quot;&gt; &#92;(&#92;mathbb{R}^4&#92;) &lt;/span&gt; . We can assign to each point &lt;span class=&quot;math inline&quot;&gt; &#92;(&#92;mathbf{x} = &#92;mathbf{r}(&#92;mathbf{u})&#92;) &lt;/span&gt; the number &lt;span class=&quot;math inline&quot;&gt; &#92;(F(&#92;mathbf{x}) &#92;, d&#92;mathbf{u} = F(&#92;mathbf{x}) &#92;cdot (&#92;mathbf{r}_u^1, &#92;ldots, &#92;mathbf{r}_u^k)&#92;) &lt;/span&gt; . The flux of the &lt;span class=&quot;math inline&quot;&gt; &#92;(k&#92;) &lt;/span&gt; -form through the &lt;span class=&quot;math inline&quot;&gt; &#92;(k&#92;) &lt;/span&gt; -surface &lt;span class=&quot;math inline&quot;&gt; &#92;(&#92;mathbf{r}(G)&#92;) &lt;/span&gt; is then defined as &lt;span class=&quot;math inline&quot;&gt; &#92;(&#92;int_{G} F(&#92;mathbf{r}(&#92;mathbf{u})) &#92;cdot d&#92;mathbf{u}&#92;) &lt;/span&gt; . &lt;/p&gt;
+&lt;p&gt;A &lt;span class=&quot;math inline&quot;&gt; &#92;(1&#92;) &lt;/span&gt; -form &lt;span class=&quot;math inline&quot;&gt; &#92;(F=A &#92; dx&#92;) &lt;/span&gt; , gives a line integral &lt;span class=&quot;math inline&quot;&gt; &#92;(&#92;int_{a}^{b} F(&#92;mathbf{r}(t)) &#92;cdot &#92;mathbf{r}&amp;#39;(t) &#92;, dt&#92;) &lt;/span&gt; . &lt;/p&gt;
+&lt;p&gt;A &lt;span class=&quot;math inline&quot;&gt; &#92;(2&#92;) &lt;/span&gt; -form &lt;span class=&quot;math inline&quot;&gt; &#92;(F=A &#92; dx &#92; dy&#92;) &lt;/span&gt; , gives a flux integral &lt;/p&gt;
+&lt;p style=&quot;overflow:auto;&quot;&gt;
+  &lt;span class=&quot;math inline&quot;&gt; &#92;(&#92;iint_{G} F(&#92;mathbf{r}(u, v)) &#92;cdot (&#92;mathbf{r}_u, &#92;mathbf{r}_v) &#92;, du &#92;, dv&#92;) &lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;A &lt;span class=&quot;math inline&quot;&gt; &#92;(3&#92;) &lt;/span&gt; -form &lt;span class=&quot;math inline&quot;&gt; &#92;(F=A &#92; dx &#92; dy &#92; dt&#92;) &lt;/span&gt; , gives a hyper flux integral &lt;/p&gt;
+&lt;p style=&quot;overflow:auto;&quot;&gt;
+  &lt;span class=&quot;math inline&quot;&gt; &#92;(&#92;iiint_{G} F(&#92;mathbf{r}(u, v, w)) &#92;cdot (&#92;mathbf{r}_u, &#92;mathbf{r}_v, &#92;mathbf{r}_w) &#92;, du &#92;, dv &#92;, dw&#92;) &lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;A &lt;span class=&quot;math inline&quot;&gt; &#92;(4&#92;) &lt;/span&gt; -form &lt;span class=&quot;math inline&quot;&gt; &#92;(F = A &#92; dx &#92;, dy &#92;, dz &#92;, dt&#92;) &lt;/span&gt; , gives a volume integral &lt;/p&gt;
+&lt;p style=&quot;overflow:auto;&quot;&gt;
+  &lt;span class=&quot;math inline&quot;&gt; &#92;(&#92;iint &#92;iint_{G} F(x, y, z, t) &#92;, dx &#92;, dy &#92;, dz &#92;, dt&#92;) &lt;/span&gt;
+&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Now, &lt;span class=&quot;math inline&quot;&gt;&#92;(4&#92;)&lt;/span&gt;-d to &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-d &lt;/p&gt;
+&lt;p&gt;Now, &lt;span class=&quot;math inline&quot;&gt; &#92;(4&#92;) &lt;/span&gt; -d to &lt;span class=&quot;math inline&quot;&gt; &#92;(k&#92;) &lt;/span&gt; -d &lt;/p&gt;
 &lt;p&gt;In four dimensions, we have four integral theorems.&lt;/p&gt;
 &lt;p&gt;The fundamental theorem of line integrals:&lt;/p&gt;
 &lt;p style=&quot;overflow: auto;&quot;&gt;
-  &lt;span class=&quot;math display&quot;&gt;&#92;[&#92;int_a^b df(&#92;mathbf{r}(t)) &#92;cdot &#92;frac{d&#92;mathbf{r}}{dt}(u) &#92;, du = f(&#92;mathbf{r}(b)) - f(&#92;mathbf{r}(a))&#92;]&lt;/span&gt;
+  &lt;span class=&quot;math display&quot;&gt;&#92;[&#92;int_a^b df(&#92;mathbf{r}(t)) &#92;cdot &#92;frac{d&#92;mathbf{r}}{dt}(u) &#92;, du = f(&#92;mathbf{r}(b)) - f(&#92;mathbf{r}(a))&#92;] &lt;/span&gt;
 &lt;/p&gt;
-&lt;p&gt;Stokes’ theorem for a region &lt;span class=&quot;math inline&quot;&gt;&#92;(G&#92;)&lt;/span&gt; with boundary &lt;span class=&quot;math inline&quot;&gt;&#92;(C&#92;)&lt;/span&gt;: &lt;/p&gt;
+&lt;p&gt;Stokes’ theorem for a region &lt;span class=&quot;math inline&quot;&gt; &#92;(G&#92;) &lt;/span&gt; with boundary &lt;span class=&quot;math inline&quot;&gt; &#92;(C&#92;) &lt;/span&gt; : &lt;/p&gt;
 &lt;p style=&quot;overflow: auto;&quot;&gt;
-  &lt;span class=&quot;math display&quot;&gt;&#92;[&#92;iint_G d&#92;mathbf{F}(&#92;mathbf{r}(u, v)) &#92;cdot &#92;left(&#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial u}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial v}&#92;right) &#92;, dudv = &#92;int_C &#92;mathbf{F}(&#92;mathbf{r}(u)) &#92;cdot &#92;frac{d&#92;mathbf{r}}{du}(u) &#92;, du&#92;]&lt;/span&gt;
+  &lt;span class=&quot;math display&quot;&gt;&#92;[&#92;iint_G d&#92;mathbf{F}(&#92;mathbf{r}(u, v)) &#92;cdot &#92;left(&#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial u}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial v}&#92;right) &#92;, dudv = &#92;int_C &#92;mathbf{F}(&#92;mathbf{r}(u)) &#92;cdot &#92;frac{d&#92;mathbf{r}}{du}(u) &#92;, du&#92;] &lt;/span&gt;
 &lt;/p&gt;
 &lt;p&gt;The hyper Stokes’ theorem:&lt;/p&gt;
 &lt;p style=&quot;overflow: auto;&quot;&gt;
-  &lt;span class=&quot;math display&quot;&gt;&#92;[&#92;iiint_G d&#92;mathbf{F}(&#92;mathbf{r}(u, v, w)) &#92;cdot &#92;left(&#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial u}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial v}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial w}&#92;right) &#92;, dudvdw = &#92;iint_{&#92;delta G} &#92;mathbf{F}(&#92;mathbf{r}(u, v)) &#92;cdot &#92;left(&#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial u}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial v}&#92;right) &#92;, dudv&#92;]&lt;/span&gt;
+  &lt;span class=&quot;math display&quot;&gt;&#92;[&#92;iiint_G d&#92;mathbf{F}(&#92;mathbf{r}(u, v, w)) &#92;cdot &#92;left(&#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial u}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial v}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial w}&#92;right) &#92;, dudvdw = &#92;iint_{&#92;delta G} &#92;mathbf{F}(&#92;mathbf{r}(u, v)) &#92;cdot &#92;left(&#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial u}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial v}&#92;right) &#92;, dudv&#92;] &lt;/span&gt;
 &lt;/p&gt;
 &lt;p&gt;The divergence theorem:&lt;/p&gt;
 &lt;p style=&quot;overflow: auto;&quot;&gt;
-  &lt;span class=&quot;math display&quot;&gt;&#92;[&#92;iint &#92;iint_G d&#92;mathbf{F}(&#92;mathbf{x, y, z, t}) &#92;, dxdydzdt = &#92;iiint_{&#92;delta G} &#92;mathbf{F}(&#92;mathbf{r}(u, v, w)) &#92;cdot &#92;left(&#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial u}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial v}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial w}&#92;right) &#92;, dudvdw&#92;]&lt;/span&gt;
+  &lt;span class=&quot;math display&quot;&gt;&#92;[&#92;iint &#92;iint_G d&#92;mathbf{F}(&#92;mathbf{x, y, z, t}) &#92;, dxdydzdt = &#92;iiint_{&#92;delta G} &#92;mathbf{F}(&#92;mathbf{r}(u, v, w)) &#92;cdot &#92;left(&#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial u}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial v}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial w}&#92;right) &#92;, dudvdw&#92;] &lt;/span&gt;
 &lt;/p&gt;
 &lt;p&gt;All these integral theorems fall under:&lt;/p&gt;
 &lt;p style=&quot;overflow: auto;&quot;&gt;
-  &lt;span class=&quot;math display&quot;&gt;&#92;[&#92;int_G d&#92;mathbf{F} = &#92;int_{&#92;delta G} &#92;mathbf{F}&#92;]&lt;/span&gt;
+  &lt;span class=&quot;math display&quot;&gt;&#92;[&#92;int_G d&#92;mathbf{F} = &#92;int_{&#92;delta G} &#92;mathbf{F}&#92;] &lt;/span&gt;
 &lt;/p&gt;
-&lt;p&gt;where &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{F}&#92;)&lt;/span&gt; is a &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-form and &lt;span class=&quot;math inline&quot;&gt;&#92;(G&#92;)&lt;/span&gt; is a &lt;span class=&quot;math inline&quot;&gt;&#92;((k - 1)&#92;)&lt;/span&gt;-dimensional surface. &lt;/p&gt;
+&lt;p&gt;where &lt;span class=&quot;math inline&quot;&gt; &#92;(&#92;mathbf{F}&#92;) &lt;/span&gt; is a &lt;span class=&quot;math inline&quot;&gt; &#92;(k&#92;) &lt;/span&gt; -form and &lt;span class=&quot;math inline&quot;&gt; &#92;(G&#92;) &lt;/span&gt; is a &lt;span class=&quot;math inline&quot;&gt; &#92;((k - 1)&#92;) &lt;/span&gt; -dimensional surface. &lt;/p&gt;
 &lt;p&gt;The 4-dimensional framework extends to higher dimensions with more variables and larger determinant matrices. Confusion arises in 2 and 3 dimensions due to the identification of different spaces, attempting to fuse ideas that 4-d shows to be distinct.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Since Prof. Knill’s exposition of Stokes’ theorem relies on forms and exterior derivatives, here’s some of his exposition on those.&lt;/p&gt;
-&lt;p&gt;Differential forms relate to graphs &lt;span class=&quot;math inline&quot;&gt;&#92;((V, E)&#92;)&lt;/span&gt; with vertices &lt;span class=&quot;math inline&quot;&gt;&#92;(V&#92;)&lt;/span&gt; and edges &lt;span class=&quot;math inline&quot;&gt;&#92;(E&#92;)&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-cliques represent fully connected groups, and a &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F&#92;)&lt;/span&gt; is a function on oriented &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-cliques. The boundary &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;delta x&#92;)&lt;/span&gt; of a clique &lt;span class=&quot;math inline&quot;&gt;&#92;(x&#92;)&lt;/span&gt; consists of compatible subcliques obtained by removing one member, with dimensions determined by the number of members minus one. E.g. a triangle &lt;span class=&quot;math inline&quot;&gt;&#92;(x = (a, b, c)&#92;)&lt;/span&gt;, its boundary &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;delta x&#92;)&lt;/span&gt; includes three 1-dimensional edges &lt;span class=&quot;math inline&quot;&gt;&#92;((b, c), (c, a), (a, b)&#92;)&lt;/span&gt;. &lt;/p&gt;
-&lt;p&gt;The exterior derivative &lt;span class=&quot;math inline&quot;&gt;&#92;(df(x)&#92;)&lt;/span&gt; sums up values of &lt;span class=&quot;math inline&quot;&gt;&#92;(f&#92;)&lt;/span&gt; on the boundary &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;delta x&#92;)&lt;/span&gt;. Stokes’ theorem holds: &lt;span class=&quot;math inline&quot;&gt;&#92;(df(x) = f(&#92;delta x)&#92;)&lt;/span&gt;. A &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-dimensional surface &lt;span class=&quot;math inline&quot;&gt;&#92;(G&#92;)&lt;/span&gt; consists of oriented &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-dimensional cliques. The integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;int_G F&#92;)&lt;/span&gt; represents the &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-dimensional flux. Stokes’ theorem simplifies to &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;int_G dF = &#92;int_{&#92;delta G} F&#92;)&lt;/span&gt;. The space of &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-forms is &lt;span class=&quot;math inline&quot;&gt;&#92;(f_k&#92;)&lt;/span&gt;-dimensional ( &lt;span class=&quot;math inline&quot;&gt;&#92;(f_k&#92;)&lt;/span&gt; is the number of &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-dimensional cliques). The exterior derivatives are represented by matrices &lt;span class=&quot;math inline&quot;&gt;&#92;(d_k&#92;)&lt;/span&gt;. The overall exterior derivative is a matrix &lt;span class=&quot;math inline&quot;&gt;&#92;(d= &#92;sum_{k=0}^{d} f_k&#92;)&lt;/span&gt;. &lt;/p&gt;
-&lt;p&gt;E.g. the Dirac operator is &lt;span class=&quot;math inline&quot;&gt;&#92;(D = d + d^*&#92;)&lt;/span&gt;, and the Laplacian is &lt;span class=&quot;math inline&quot;&gt;&#92;(L = D^2 = d^*d + dd^*&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;Differential forms relate to graphs &lt;span class=&quot;math inline&quot;&gt; &#92;((V, E)&#92;) &lt;/span&gt; with vertices &lt;span class=&quot;math inline&quot;&gt; &#92;(V&#92;) &lt;/span&gt; and edges &lt;span class=&quot;math inline&quot;&gt; &#92;(E&#92;) &lt;/span&gt; , where &lt;span class=&quot;math inline&quot;&gt; &#92;(k&#92;) &lt;/span&gt; -cliques represent fully connected groups, and a &lt;span class=&quot;math inline&quot;&gt; &#92;(k&#92;) &lt;/span&gt; -form &lt;span class=&quot;math inline&quot;&gt; &#92;(F&#92;) &lt;/span&gt; is a function on oriented &lt;span class=&quot;math inline&quot;&gt; &#92;(k&#92;) &lt;/span&gt; -cliques. The boundary &lt;span class=&quot;math inline&quot;&gt; &#92;(&#92;delta x&#92;) &lt;/span&gt; of a clique &lt;span class=&quot;math inline&quot;&gt; &#92;(x&#92;) &lt;/span&gt; consists of compatible subcliques obtained by removing one member, with dimensions determined by the number of members minus one. E.g. a triangle &lt;span class=&quot;math inline&quot;&gt; &#92;(x = (a, b, c)&#92;) &lt;/span&gt; , its boundary &lt;span class=&quot;math inline&quot;&gt; &#92;(&#92;delta x&#92;) &lt;/span&gt; includes three 1-dimensional edges &lt;span class=&quot;math inline&quot;&gt; &#92;((b, c), (c, a), (a, b)&#92;) &lt;/span&gt; . &lt;/p&gt;
+&lt;p&gt;The exterior derivative &lt;span class=&quot;math inline&quot;&gt; &#92;(df(x)&#92;) &lt;/span&gt; sums up values of &lt;span class=&quot;math inline&quot;&gt; &#92;(f&#92;) &lt;/span&gt; on the boundary &lt;span class=&quot;math inline&quot;&gt; &#92;(&#92;delta x&#92;) &lt;/span&gt; . Stokes’ theorem holds: &lt;span class=&quot;math inline&quot;&gt; &#92;(df(x) = f(&#92;delta x)&#92;) &lt;/span&gt; . A &lt;span class=&quot;math inline&quot;&gt; &#92;(k&#92;) &lt;/span&gt; -dimensional surface &lt;span class=&quot;math inline&quot;&gt; &#92;(G&#92;) &lt;/span&gt; consists of oriented &lt;span class=&quot;math inline&quot;&gt; &#92;(k&#92;) &lt;/span&gt; -dimensional cliques. The integral &lt;span class=&quot;math inline&quot;&gt; &#92;(&#92;int_G F&#92;) &lt;/span&gt; represents the &lt;span class=&quot;math inline&quot;&gt; &#92;(k&#92;) &lt;/span&gt; -dimensional flux. Stokes’ theorem simplifies to &lt;span class=&quot;math inline&quot;&gt; &#92;(&#92;int_G dF = &#92;int_{&#92;delta G} F&#92;) &lt;/span&gt; . The space of &lt;span class=&quot;math inline&quot;&gt; &#92;(k&#92;) &lt;/span&gt; -forms is &lt;span class=&quot;math inline&quot;&gt; &#92;(f_k&#92;) &lt;/span&gt; -dimensional ( &lt;span class=&quot;math inline&quot;&gt; &#92;(f_k&#92;) &lt;/span&gt; is the number of &lt;span class=&quot;math inline&quot;&gt; &#92;(k&#92;) &lt;/span&gt; -dimensional cliques). The exterior derivatives are represented by matrices &lt;span class=&quot;math inline&quot;&gt; &#92;(d_k&#92;) &lt;/span&gt; . The overall exterior derivative is a matrix &lt;span class=&quot;math inline&quot;&gt; &#92;(d= &#92;sum_{k=0}^{d} f_k&#92;) &lt;/span&gt; . &lt;/p&gt;
+&lt;p&gt;E.g. the Dirac operator is &lt;span class=&quot;math inline&quot;&gt; &#92;(D = d + d^*&#92;) &lt;/span&gt; , and the Laplacian is &lt;span class=&quot;math inline&quot;&gt; &#92;(L = D^2 = d^*d + dd^*&#92;) &lt;/span&gt; . &lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;That is a summary of the clearest exposition of the generalized Stokes’ Theorem I have found. I recommend reading Prof. Knill’s article linked above. He goes on to very briefly relate PDE’s, which Prof. Steve Brunton does well in his &lt;a href=&quot;https://www.youtube.com/watch?v=Jt5R-Tm8cV8&amp;amp;list=PLMrJAkhIeNNQromC4WswpU1krLOq5Ro6S&amp;amp;pp=iAQB&quot;&gt;YouTube Series&lt;/a&gt;. &lt;/p&gt;
-
-        &lt;p&gt;&lt;a href=&quot;https://math.stackexchange.com/a/4723186/1098426&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
-
-&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+&lt;p&gt;
+  &lt;a href=&quot;https://math.stackexchange.com/a/4723186/1098426&quot;&gt;Source&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;This time I am pulling from the lovely Oregon State &lt;b&gt;&lt;a href=&quot;https://sites.science.oregonstate.edu/math/BridgeBook/&quot;&gt;Bridge Book&lt;/a&gt;&lt;/b&gt;. It was written
  by Tevian Dray and Corinne A. Manogue circa 2009&amp;mdash;2015 and funded by the National Science Foundation. &lt;/p&gt;
 
+ &lt;p&gt;Definitly go checkout the Bridge Book. The site is quite dated, even for something from 2009&amp;mdash;2015, but it has more external links, more foot notes, and more images than what I have drawn from it here.&lt;/p&gt;
 
- &lt;h3 id=&quot;the-vector-differential-drr&quot;&gt;&lt;span id=&quot;the_vector_differential_d_rr&quot;&gt;The Vector Differential, &#92;(d&#92;mathbf{r}&#92;)&lt;/span&gt;&lt;/h3&gt;
+ &lt;hr&gt;
+ &lt;h2 id=&quot;gradients&quot;&gt;gradients&lt;/h2&gt;
+ &lt;hr&gt;
+
+  &lt;h3 id=&quot;multivariable-differential&quot;&gt;the multivariable differential &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
+  &lt;!-- content for &quot;the multivariable differential&quot; --&gt;
+  &lt;p&gt;Tevian Dray and Corinne A. Manogue cannot be stopped.&lt;/p&gt;
+  &lt;p&gt;The tangent line to the graph of &#92;(y=f(x)&#92;) at the point &#92;((x_0, y_0)&#92;) is given by
+    &#92;[ y - y_0 = m(x - x_0) &#92;quad (1) &#92;]
+    where the slope &#92;(m&#92;) is, of course, just the derivative &#92;(&#92;frac{df}{dx} |_{x=x_0}^{}&#92;). It is tempting to rewrite the equation of the tangent line as&lt;/p&gt;
+    
+    &lt;p&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; Linear approximation using the tangent line.&lt;/p&gt;
+    &#92;[ &#92;Delta y = &#92;frac{df}{dx} &#92;Delta x &#92;quad (2) &#92;]
+    
+    &lt;p&gt;which is also used for linear approximation in the form&lt;/p&gt;
+    &#92;[ &#92;Delta f = f(x + &#92;Delta x) - f(x) &#92;approx &#92;frac{df}{dx} &#92;Delta x &#92;quad (3) &#92;]
+    &lt;p&gt;as shown in &lt;strong&gt;Figure 1&lt;/strong&gt;. Regarding &#92;(&#92;Delta x&#92;) as small, this also leads to the interpretation of the differential&lt;/p&gt;
+    &#92;[ df = &#92;frac{df}{dx} dx &#92;quad (4) &#92;]
+    &lt;p&gt;as the corresponding small change in &#92;(f&#92;).&lt;/p&gt;
+    
+    &lt;p&gt;What if &#92;(f&#92;) is a function of more than one variable? Consider the tangent plane to the graph of &#92;(z=f(x,y)&#92;) at the point &#92;((x_0,y_0,z_0)&#92;). What is the height difference &#92;(&#92;Delta z&#92;) between two points on the tangent plane? Hold a piece of paper at an arbitrary angle in front of you, and imagine moving on it first to the right, then directly forwards. How high did you go? The sum of the height differences in each step. How big are these height differences? As above, they are precisely the horizontal distance traveled multiplied by the appropriate slope.&lt;/p&gt;
+    
+    &lt;p&gt;In other words, the equation of the tangent plane is given by&lt;/p&gt;
+    &#92;[ z - z_0 = m_x(x - x_0) + m_y(y - y_0) &#92;quad (5) &#92;]
+    &lt;p&gt;where &#92;(m_x&#92;) and &#92;(m_y&#92;) are the slopes in the &#92;(x&#92;) and &#92;(y&#92;) directions. But these slopes are (by definition) the partial derivatives of &#92;(f&#92;) with respect to &#92;(x&#92;) and &#92;(y&#92;) (at the given point).&lt;/p&gt;
+    
+    &lt;p&gt;In the &#92;(xy&#92;)-plane, the partial derivative of &#92;(f&#92;) with respect to &#92;(x&#92;) is written as &#92;(&#92;frac{&#92;partial f}{&#92;partial x}&#92;), and means &quot;the derivative of &#92;(f&#92;) with respect to &#92;(x&#92;) with &#92;(y&#92;) held constant&quot;. In some contexts, it is necessary to state explicitly what variables are being held constant, in which case this partial derivative may be written as &#92;(&#92;left(&#92;frac{&#92;partial f}{&#92;partial x}&#92;right)_y&#92;). Make sure you distinguish between &#92;(d&#92;) and &#92;(&#92;partial&#92;); writing the letter &quot;d&quot; so that it looks like a &#92;(&#92;partial&#92;) is not correct mathematics.&lt;/p&gt;
+    
+    &lt;p&gt;Returning to our graph, we can, therefore, write the equation of the tangent plane as&lt;/p&gt;
+    &#92;[ &#92;Delta z = &#92;frac{&#92;partial f}{&#92;partial x} &#92;Delta x + &#92;frac{&#92;partial f}{&#92;partial y} &#92;Delta y &#92;quad (6) &#92;]
+    &lt;p&gt;which leads to the following expression for the differential of &#92;(f&#92;)&lt;/p&gt;
+    &#92;[ df = &#92;frac{&#92;partial f}{&#92;partial x} dx + &#92;frac{&#92;partial f}{&#92;partial y} dy &#92;quad (7) &#92;]
+    &lt;p&gt;which again can be thought of as the small change in &#92;(f&#92;) corresponding to small changes in &#92;(x&#92;) and &#92;(y&#92;). Similar expressions hold for functions of more than two variables.&lt;/p&gt;
+    
+    &lt;p&gt;Notice that there is nothing special about the variable names &#92;(x&#92;) and &#92;(y&#92;). If &#92;(f&#92;) is a function of any two parameters &#92;(&#92;alpha&#92;) and &#92;(&#92;beta&#92;), then we have a formula equivalent to (7), namely&lt;/p&gt;
+    &#92;[ df = &#92;frac{&#92;partial f}{&#92;partial &#92;alpha} d&#92;alpha + &#92;frac{&#92;partial f}{&#92;partial &#92;beta} d&#92;beta &#92;quad (8) &#92;]
+    &lt;p&gt;In particular, it is not necessary for &#92;(&#92;alpha&#92;) and &#92;(&#92;beta&#92;) to have the same dimensions.&lt;/p&gt;
+    
+
+  
+  &lt;h3 id=&quot;gradient&quot;&gt;gradient &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
+  &lt;!-- content for &quot;gradient&quot; --&gt;
+  &lt;p&gt;Tevian Dray and Corinne A. Manogue begin us on a soft path.&lt;/p&gt;
+
+  &lt;p&gt;As discussed in § &lt;a href=&quot;#the-multivariable-differential&quot;&gt;The Multivariable Differential&lt;/a&gt;, the chain rule for a function of several variables, written in terms of differentials, takes the form:&lt;/p&gt;
+
+&#92;[ df = &#92;frac{&#92;partial f}{&#92;partial x} dx + &#92;frac{&#92;partial f}{&#92;partial y} dy + &#92;frac{&#92;partial f}{&#92;partial z} dz &#92;quad (1) &#92;]
+
+&lt;p&gt;Each term is a product of two factors, labeled by &#92;( x &#92;), &#92;( y &#92;), and &#92;( z &#92;). This looks like a dot product. Separating out the pieces, we have&lt;/p&gt;
+
+&#92;[ df = &#92;left(&#92;frac{&#92;partial f}{&#92;partial x} &#92;mathbf{&#92;hat{x}} + &#92;frac{&#92;partial f}{&#92;partial y} &#92;mathbf{&#92;hat{y}} + &#92;frac{&#92;partial f}{&#92;partial z} &#92;mathbf{&#92;hat{z}}&#92;right) &#92;cdot &#92;left(dx &#92;mathbf{&#92;hat{x}} + dy &#92;mathbf{&#92;hat{y}} + dz &#92;mathbf{&#92;hat{z}}&#92;right) &#92;quad (2) &#92;]
+
+&lt;p&gt;The last factor is just &#92;( &#92;mathbf{dr} &#92;), and you may recognize the first factor as the gradient of &#92;( f &#92;) written in rectangular coordinates, that is&lt;/p&gt;
+
+&#92;[ &#92;nabla f = &#92;frac{&#92;partial f}{&#92;partial x} &#92;mathbf{&#92;hat{x}} + &#92;frac{&#92;partial f}{&#92;partial y} &#92;mathbf{&#92;hat{y}} + &#92;frac{&#92;partial f}{&#92;partial z} &#92;mathbf{&#92;hat{z}} &#92;quad (3) &#92;]
+
+&lt;p&gt;Putting this all together, we have&lt;/p&gt;
+
+&#92;[ df = &#92;nabla f &#92;cdot &#92;mathbf{dr} &#92;quad (4) &#92;]
+
+&lt;p&gt;which can, in fact, be taken as the geometric definition of the gradient, as further discussed in § &lt;a href=&quot;#the-geometry-of-gradient&quot;&gt;The Geometry of Gradient&lt;/a&gt;. We refer to (4) as the Master Formula because it contains all of the information needed to determine the gradient and does so without relying on a particular coordinate system.&lt;/p&gt;
+
+&lt;p&gt;Recall that &#92;( df &#92;) represents the infinitesimal change in &#92;( f &#92;) when moving to a &quot;nearby&quot; point. What information do you need in order to know how &#92;( f &#92;) changes? You must know something about how &#92;( f &#92;) behaves, where you started, and which way you went. The master formula organizes this information into two geometrically different pieces, namely the gradient, containing generic information about how &#92;( f &#92;) changes, and the vector differential &#92;( &#92;mathbf{dr} &#92;), containing information about the particular change in position being made.&lt;/p&gt;
+
+  
+  &lt;h3 id=&quot;gradient-properties&quot;&gt;properties of the gradient &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
+  &lt;!-- content for &quot;properties of the gradient&quot; --&gt;
+  &lt;p&gt;Tevian Dray and Corinne A. Manogue ease into it.&lt;/p&gt;
+
+  &lt;p&gt;What does the gradient mean geometrically? Along a particular path, &#92;(df&#92;) tells us something about how &#92;(f&#92;) is changing. But the Master Formula tells us that &#92;(df = &#92;nabla f &#92;cdot &#92;mathbf{dr}&#92;), which means that the dot product of &#92;(&#92;nabla f&#92;) with a vector tells us something about how &#92;(f&#92;) changes along that vector. So let &#92;(&#92;mathbf{w}&#92;) be a unit vector, and consider&lt;/p&gt;
+
+&#92;[ &#92;nabla f &#92;cdot &#92;mathbf{w}^ = |&#92;nabla f||&#92;mathbf{w}|&#92;cos&#92;theta = |&#92;nabla f|&#92;cos&#92;theta &#92;quad (1) &#92;]
+
+&lt;p&gt;which is clearly maximized by &#92;(&#92;theta = 0&#92;). Thus, the direction of &#92;(&#92;nabla f&#92;) is just the direction in which &#92;(f&#92;) increases the fastest, and the magnitude of &#92;(&#92;nabla f&#92;) is the rate of increase of &#92;(f&#92;) in that direction (per unit distance, since &#92;(&#92;mathbf{w}&#92;) is a unit vector). If you visualize the value of the scalar field &#92;(f&#92;) as represented by color, then the gradient points in the direction in which the rate of change of the color is greatest.&lt;/p&gt;
+
+&lt;p&gt;You can also visualize the gradient using the level surfaces on which &#92;(f(x,y,z) = &#92;text{const}&#92;). (In two dimensions, there is the analogous concept of level curves, on which &#92;(f(x,y) = &#92;text{const}&#92;).) Consider a small displacement &#92;(&#92;mathbf{dr}&#92;) that lies on the level surface, that is, start at a point on the level surface and move along the surface. Then &#92;(f&#92;) doesn&#39;t change in that direction, so &#92;(df = 0&#92;). But then&lt;/p&gt;
+
+&#92;[ 0 = df = &#92;nabla f &#92;cdot &#92;mathbf{dr} = 0 &#92;quad (2) &#92;]
+
+&lt;p&gt;so that &#92;(&#92;nabla f&#92;) is perpendicular to &#92;(&#92;mathbf{dr}&#92;). Since this argument works for any vector displacement &#92;(&#92;mathbf{dr}&#92;) in the surface, &#92;(&#92;nabla f&#92;) must be perpendicular to the level surface.&lt;/p&gt;
+
+&lt;p&gt;If you prefer working with derivatives instead of differentials, consider a curve &#92;(&#92;mathbf{r}(u)&#92;) that lies in the level surface. Now simply divide (2) by &#92;(du&#92;), obtaining&lt;/p&gt;
+
+&#92;[ 0 = &#92;frac{df}{du} = &#92;nabla f &#92;cdot &#92;frac{d&#92;mathbf{r}}{du} = 0 &#92;quad (3) &#92;]
+
+&lt;p&gt;so that &#92;(&#92;nabla f&#92;) is perpendicular to the tangent vector &#92;(&#92;frac{d&#92;mathbf{r}}{du}&#92;) (which is just the velocity vector if the parameter &#92;(u&#92;) represents time). Again, this argument applies to any curve in the level surface, so &#92;(&#92;nabla f&#92;) must be perpendicular to every such curve. In other words, &#92;(&#92;nabla f&#92;) is perpendicular to the level surfaces of &#92;(f&#92;):&lt;/p&gt;
+
+&#92;[ &#92;nabla f &#92;perp &#92;{f(x,y,z) = &#92;text{const}&#92;} &#92;quad (4) &#92;]
+
+
+&lt;p&gt;This orthogonality is shown for the case of level curves in Figure 1, which shows the gradient vector at several points along a particular level curve among several. You can think of such diagrams as topographic maps, showing the &quot;height&quot; at any location. The magnitude of the gradient vector is greatest where the level curves are close together, so that the &quot;hill&quot; is steepest.&lt;/p&gt;
+
+&lt;p&gt;An alternative way of seeing this orthogonality is to recognize that since the gradient is a derivative operator, its value depends only on what is happening locally. If you zoom in close enough to a given point, the level surfaces are parallel, and the gradient points in the direction from one level surface to the next.&lt;/p&gt;
+
+&lt;p&gt;Like all derivative operators, the gradient is linear (the gradient of a sum is the sum of the gradients) and also satisfies a product rule&lt;/p&gt;
+
+&#92;[ &#92;nabla(fg) = (&#92;nabla f)g + f(&#92;nabla g) &#92;quad (5) &#92;]
+
+&lt;p&gt;This formula can be obtained either by working out its components in, say, rectangular coordinates and using the product rule for partial derivatives, or directly from the product rule in differential form, which is&lt;/p&gt;
+
+&#92;[ d(fg) = (df)g + f(dg) &#92;quad (6) &#92;]
+
+ 
+  &lt;h3 id=&quot;directional-derivatives&quot;&gt;directional derivatives &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
+  &lt;!-- content for &quot;directional derivatives&quot; --&gt;
+  &lt;p&gt;Tevian Dray and Corinne A. Manogue start getting serious.&lt;/p&gt;
+
+  &lt;p&gt;Differentials such as &#92;(df&#92;) are rarely themselves the answer to any physical question. So what good is the Master Formula? The short answer is that you can use it to answer any question about how &#92;(f&#92;) changes. Here are some examples.&lt;/p&gt;
+
+&lt;p&gt;Suppose you are an ant walking in a puddle on a flat table. The depth of the puddle is given by &#92;(h(x,y)&#92;). You are given &#92;(x&#92;) and &#92;(y&#92;) as functions of time &#92;(t&#92;). How fast is the depth of water through which you are walking changing per unit time?&lt;/p&gt;
+
+&lt;p&gt;This problem is asking for the derivative of &#92;(h&#92;) with respect to &#92;(t&#92;). So divide the Master Formula by &#92;(dt&#92;) to get&lt;/p&gt;
+
+&#92;[ &#92;frac{dh}{dt} = &#92;nabla h &#92;cdot d&#92;mathbf{r} &#92;cdot dt &#92;]
+
+&lt;p&gt;where &#92;(&#92;mathbf{r}&#92;) describes the particular path you are taking. The factor &#92;(d&#92;mathbf{r} &#92;cdot dt&#92;) is simply your velocity. This dot product is easy to evaluate and yields the answer to the question.&lt;/p&gt;
+
+&lt;p&gt;(There are of course many ways to solve this problem; which method you choose may depend on how your path is described. It is often easiest to simply insert the given expressions for &#92;(x&#92;) and &#92;(y&#92;) in terms of &#92;(t&#92;) directly into &#92;(h&#92;), then differentiate the resulting function of a single variable, thus calculating the left-hand side directly.)&lt;/p&gt;
+
+&lt;p&gt;You are another ant on the same surface, moving on a path with &#92;(y=3x&#92;). How fast is the depth changing compared with &#92;(x&#92;)?&lt;/p&gt;
+
+&lt;p&gt;This problem is asking for the derivative of &#92;(h&#92;) with respect to &#92;(x&#92;) as you move along the path; note that this is the total derivative &#92;(&#92;frac{dh}{dx}&#92;), not the partial derivative &#92;(&#92;frac{&#92;partial h}{&#92;partial x}&#92;), which would only be appropriate if &#92;(y&#92;) were constant along the path. So divide the Master Formula by &#92;(dx&#92;) to get&lt;/p&gt;
+
+&#92;[ &#92;frac{dh}{dx} = &#92;nabla h &#92;cdot d&#92;mathbf{r} &#92;cdot dx &#92;]
+
+&lt;p&gt;then use what you know (&#92;(y=3x&#92;)) to relate the changes in &#92;(x&#92;) and &#92;(y&#92;) (&#92;(dy=3dx&#92;)), so that&lt;/p&gt;
+
+&#92;[ d&#92;mathbf{r} = dx&#92;mathbf{&#92;hat{x}} + dy&#92;mathbf{&#92;hat{y}} = dx&#92;mathbf{&#92;hat{x}} + 3dxd&#92;mathbf{&#92;hat{y}} = (x+3y)d&#92;mathbf{&#92;hat{x}} &#92;]
+
+&lt;p&gt;to obtain&lt;/p&gt;
+
+&#92;[ d&#92;mathbf{r} &#92;cdot dx = x+3y &#92;]
+
+&lt;p&gt;Evaluating the dot product yields the answer to the question.&lt;/p&gt;
+
+&lt;p&gt;You are still moving on the same surface, but now the question is, how fast is the depth changing per unit distance along the path?&lt;/p&gt;
+
+&lt;p&gt;This problem is asking for the derivative of &#92;(h&#92;) with respect to arclength &#92;(ds&#92;). We can divide the Master Formula by &#92;(ds&#92;), which leads to&lt;/p&gt;
+
+&#92;[ &#92;frac{dh}{ds} = &#92;nabla h &#92;cdot d&#92;mathbf{r} &#92;cdot ds &#92;]
+
+&lt;p&gt;Unfortunately, it is often difficult to determine &#92;(s&#92;); it is not always possible to express &#92;(h&#92;) as a function of &#92;(s&#92;). On the other hand, all we need to know is that&lt;/p&gt;
+
+&#92;[ ds = |d&#92;mathbf{r}| &#92;]
+
+&lt;p&gt;so that dividing &#92;(d&#92;mathbf{r}&#92;) by &#92;(ds&#92;) is just dividing by its length; the result must be a unit vector! Which unit vector? The one tangent to your path, namely the unit tangent vector &#92;(&#92;mathbf{T}^{}&#92;), so&lt;/p&gt;
+
+&#92;[ &#92;frac{dh}{ds} = &#92;nabla h &#92;cdot &#92;mathbf{T}^{} &#92;quad (1) &#92;]
+
+&lt;p&gt;Evaluating the dot product answers the question, without ever worrying about arclength.&lt;/p&gt;
+
+&lt;p&gt;We have just seen that the derivative of &#92;(f&#92;) along a curve splits into two parts: a derivative of &#92;(f&#92;) (namely &#92;(&#92;nabla f&#92;)), and a derivative of the curve (&#92;(d&#92;mathbf{r}/du&#92;)). But the latter depends only on the tangent direction of the curve at the given point, not on the detailed shape of the curve. This leads us to the concept of the directional derivative of &#92;(f&#92;) at a particular point &#92;(&#92;mathbf{r} = &#92;mathbf{r}_0 = &#92;mathbf{r}(u_0)&#92;) along the vector &#92;(&#92;mathbf{v}&#92;), which is traditionally defined as follows: 1)&lt;/p&gt;
+
+&#92;[ D&#92;mathbf{v} f = &#92;lim_{&#92;epsilon&#92;to0} &#92;frac{f(&#92;mathbf{r}_0+&#92;epsilon&#92;mathbf{v})-f(&#92;mathbf{r}_0)}{&#92;epsilon} &#92;]
+
+&lt;p&gt;According to the above discussion, this derivative is just &#92;(&#92;frac{df}{du}&#92;) along the tangent line, which according to the Master Formula is&lt;/p&gt;
+
+&#92;[ D&#92;mathbf{v} f = &#92;nabla f &#92;cdot &#92;mathbf{v} &#92;]
+
+&lt;p&gt;In Example 3 above, the left-hand side of (1) is just the directional derivative of &#92;(h&#92;) in the direction &#92;(&#92;mathbf{T}^{}&#92;), and could have been denoted by &#92;(D_&#92;mathbf{T} h&#92;).&lt;/p&gt;
+
+&lt;p&gt;1) It is often assumed that &#92;(&#92;mathbf{v}^{}&#92;) is a unit vector, although this is not necessary.&lt;/p&gt;
+
+
+  
+  &lt;h3 id=&quot;gradient-curvilinear-coordinates&quot;&gt;the gradient in curvilinear coordinates &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
+  &lt;!-- content for &quot;the gradient in curvilinear coordinates&quot; --&gt;
+  &lt;p&gt;Tevian Dray and Corinne A. Manogue are really going.&lt;/p&gt;
+
+
+  &lt;p&gt;The master formula can be used to derive formulas for the gradient in other coordinate systems. We illustrate the method for polar coordinates.&lt;/p&gt;
+
+&lt;p&gt;In polar coordinates, we have&lt;/p&gt;
+
+&#92;[ df = &#92;frac{&#92;partial f}{&#92;partial r} dr + &#92;frac{&#92;partial f}{&#92;partial &#92;phi} d&#92;phi &#92;]
+
+&lt;p&gt;and of course&lt;/p&gt;
+
+&#92;[ d&#92;mathbf{r} = dr&#92;mathbf{r} + r d&#92;phi &#92;boldsymbol{&#92;phi} &#92;]
+
+&lt;p&gt;which is (1) of § {Other Coordinate Systems}. Comparing these expressions with the Master Formula (4) of § {Gradient}, we see immediately that we must have&lt;/p&gt;
+
+&#92;[ &#92;nabla f = &#92;frac{&#92;partial f}{&#92;partial r} &#92;mathbf{r} + &#92;frac{1}{r} &#92;frac{&#92;partial f}{&#92;partial &#92;phi} &#92;boldsymbol{&#92;phi} &#92;quad (1) &#92;]
+
+&lt;p&gt;Note the factor of &#92;(&#92;frac{1}{r}&#92;), which is needed to compensate for the factor of &#92;(r&#92;) in (1) of § {Other Coordinate Systems}. Such factors are typical for the component expressions of vector derivatives in curvilinear coordinates.&lt;/p&gt;
+
+&lt;p&gt;Why would one want to compute the gradient in polar coordinates? Consider the computation of &#92;(&#92;nabla (&#92;ln(x^2 + y^2)^{&#92;frac{1}{2}})&#92;), which can be done by brute force in rectangular coordinates; the calculation is straightforward but messy, even if you first use the properties of logarithms to remove the square root. Alternatively, using (1), it follows immediately that&lt;/p&gt;
+
+&#92;[ &#92;nabla (&#92;ln(x^2 + y^2)^{&#92;frac{1}{2}}) = &#92;nabla (&#92;ln(r)) = &#92;frac{1}{r} &#92;mathbf{r} &#92;]
+
+&lt;p&gt;Exactly the same construction can be used to find the gradient in other coordinate systems. For instance, in cylindrical coordinates we have&lt;/p&gt;
+
+&#92;[ dV = &#92;frac{&#92;partial V}{&#92;partial r} dr + &#92;frac{&#92;partial V}{&#92;partial &#92;phi} d&#92;phi + &#92;frac{&#92;partial V}{&#92;partial z} dz &#92;]
+
+&lt;p&gt;and since in cylindrical coordinates&lt;/p&gt;
+
+&#92;[ d&#92;mathbf{r} = dr&#92;mathbf{r} + r d&#92;phi &#92;boldsymbol{&#92;phi} + dz&#92;mathbf{z} &#92;]
+
+&lt;p&gt;we obtain&lt;/p&gt;
+
+&#92;[ &#92;nabla V = &#92;frac{&#92;partial V}{&#92;partial r} &#92;mathbf{r} + &#92;frac{1}{r} &#92;frac{&#92;partial V}{&#92;partial &#92;phi} &#92;boldsymbol{&#92;phi} + &#92;frac{&#92;partial V}{&#92;partial z} &#92;mathbf{z} &#92;]
+
+&lt;hr&gt;
+&lt;h2 id=&quot;line-integrals&quot;&gt;line integrals&lt;/h2&gt;
+&lt;hr&gt;
+
+ &lt;h3 id=&quot;the-vector-differential-drr&quot;&gt;&lt;span id=&quot;the_vector_differential_d_rr&quot;&gt;The Vector Differential, &#92;(d&#92;mathbf{r}&#92;)&lt;/span&gt; &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Tevian Dray and Corinne A. Manogue kick it off with a great start.&lt;/p&gt;
 
     &lt;p&gt;&lt;img src=&quot;https://ischmidls.github.io/img/curvilinear%20vector%20differentials/mag%20vec%20diff.png&quot;&gt;&lt;/p&gt;
@@ -9471,7 +9723,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
  &lt;p&gt;which is just the infinitesimal Pythagorean Theorem, the two-dimensional version of which is shown in Figure 8b.&lt;/p&gt;
  
  When dealing with infinitesimals, we prefer to avoid second-order errors by anchoring all vectors to the same point.
- &lt;h3 id=&quot;coord&quot;&gt;vector differential  in other coordinate systems&lt;/h3&gt;
+ &lt;h3 id=&quot;coord&quot;&gt;vector differential  in other coordinate systems &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Staying strong with Tevian Dray and Corinne A. Manogue.&lt;/p&gt;
       &lt;p&gt;&lt;img src=&quot;https://ischmidls.github.io/img/curvilinear%20vector%20differentials/vec%20diff.png&quot; title=&quot;&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 
@@ -9494,7 +9746,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 
 &lt;p&gt;It is possible to relate &#92;(&#92;hat{r}&#92;) and &#92;(&#92;hat{p}&#92;) to &#92;(&#92;hat{x}&#92;) and &#92;(&#92;hat{y}&#92;), but in most physical applications, an appropriate choice of coordinates eliminates the need for this step.&lt;/p&gt;
 
-&lt;h3 id=&quot;integration&quot;&gt;integration&lt;/h3&gt;
+&lt;h3 id=&quot;integration&quot;&gt;integration &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Not too bad with Tevian Dray and Corinne A. Manogue at this point.&lt;/p&gt;
 &lt;p&gt;Integration involves dividing and adding smaller pieces, which is particularly useful for solving problems with multiple integrals. For example, when finding the mass of a straight wire with linear density &#92;(&#92;lambda&#92;), we chop it into small pieces of length &#92;(dx&#92;). Each piece has a mass of &#92;(&#92;lambda dx&#92;), and the total mass &#92;(M&#92;) is obtained by integrating &#92;(&#92;lambda(x)&#92;) with respect to &#92;(x&#92;).&lt;/p&gt;
 
@@ -9510,7 +9762,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
   &lt;li&gt;A single integral sign is used for adding rectangular pieces, while multiple integral signs are used for iterated single integrals.&lt;/li&gt;
   &lt;li&gt;The areas of infinitesimal rectangular and polar pieces are not comparable, and the choice of how to divide them does not affect the final result.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&quot;line-integral&quot;&gt;line integral&lt;/h3&gt;
+&lt;h3 id=&quot;line-integral&quot;&gt;line integral &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Oh, you thought I&#39;d forget to mention Tevian Dray and Corinne A. Manogue.&lt;/p&gt;
 &lt;p&gt;There are many ways to describe a curve. Consider the following descriptions:&lt;/p&gt;
 &lt;ol&gt;
@@ -9552,11 +9804,11 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 
 &lt;p&gt;which can be easily computed using a trigonometric substitution or numerically, yielding the same answer.&lt;/p&gt;
 &lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
-    &lt;p&gt;&#92;[&#92;begin{aligned} &#92;int &#92;frac{d x}{&#92;sqrt{a^2-x^2}} &amp; =&#92;int &#92;frac{a &#92;cos &#92;theta d &#92;theta}{&#92;sqrt{a^2-a^2 &#92;sin ^2 &#92;theta}} &#92;&#92; &amp; =&#92;int &#92;frac{a &#92;cos &#92;theta d &#92;theta}{&#92;sqrt{a^2&#92;left(1-&#92;sin ^2 &#92;theta&#92;right)}} &#92;&#92; &amp; =&#92;int &#92;frac{a &#92;cos &#92;theta d &#92;theta}{&#92;sqrt{a^2 &#92;cos ^2 &#92;theta}} &#92;&#92; &amp; =&#92;int d &#92;theta &#92;&#92; &amp; =&#92;theta+C &#92;&#92; &amp; =&#92;arcsin &#92;frac{x}{a}+C&#92;end{aligned}&#92;]&lt;/p&gt;
+    &lt;p style=&quot;overflow:auto;&quot;&gt;&#92;[&#92;begin{aligned} &#92;int &#92;frac{d x}{&#92;sqrt{a^2-x^2}} &amp; =&#92;int &#92;frac{a &#92;cos &#92;theta d &#92;theta}{&#92;sqrt{a^2-a^2 &#92;sin ^2 &#92;theta}} &#92;&#92; &amp; =&#92;int &#92;frac{a &#92;cos &#92;theta d &#92;theta}{&#92;sqrt{a^2&#92;left(1-&#92;sin ^2 &#92;theta&#92;right)}} &#92;&#92; &amp; =&#92;int &#92;frac{a &#92;cos &#92;theta d &#92;theta}{&#92;sqrt{a^2 &#92;cos ^2 &#92;theta}} &#92;&#92; &amp; =&#92;int d &#92;theta &#92;&#92; &amp; =&#92;theta+C &#92;&#92; &amp; =&#92;arcsin &#92;frac{x}{a}+C&#92;end{aligned}&#92;]&lt;/p&gt;
     &lt;p&gt;(Adapted from &lt;a href=&quot;https://en.wikipedia.org/wiki/Trigonometric_substitution&quot;&gt;Wikipedia: Trig sub&lt;/a&gt;)&lt;/p&gt;
     &lt;/div&gt;&lt;/div&gt;&lt;br&gt;
 
-&lt;h3 id=&quot;scalar&quot;&gt;scalar line integrals&lt;/h3&gt;
+&lt;h3 id=&quot;scalar&quot;&gt;scalar line integrals &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Tevian Dray and Corinne A. Manogue stay strong as we move deeper in.&lt;/p&gt;
 &lt;p&gt;What if you want to determine the mass of a wire in the shape of the curve &#92;(C&#92;) if you know the density &#92;(&#92;lambda&#92;)? The same procedure still works: chop and add. In this case, the length of a small piece of the wire is &#92;(ds = |&#92;mathbf{dr}|&#92;), so its mass is &#92;(&#92;lambda ds&#92;), and the integral becomes:&lt;/p&gt;
 
@@ -9580,7 +9832,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 
 &lt;p&gt;with &#92;(m&#92;) as defined above. Similar formulas hold for &#92;(&#92;bar{y}&#92;) and &#92;(&#92;bar{z}&#92;); the center of mass is then the point &#92;((&#92;bar{x}, &#92;bar{y}, &#92;bar{z})&#92;).&lt;/p&gt;
 
-&lt;h3 id=&quot;vec-line-int&quot;&gt;vector line integrals&lt;/h3&gt;
+&lt;h3 id=&quot;vec-line-int&quot;&gt;vector line integrals &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;Tevian Dray and Corinne A. Manogue do not have much to say about &quot;Vector Line Integrals&quot;, but they give more context in other sections.&lt;/p&gt;
 
@@ -9662,7 +9914,7 @@ where &#92;(&#92;mathbf{F}(x, y, z) = xz&#92;mathbf{i} - yz&#92;mathbf{k}&#92;) 
 
 &lt;p&gt;Finally, the line integral becomes:&lt;/p&gt;
 &lt;p style=&quot;overflow: auto;&quot;&gt;
-&#92;[ &#92;int_C &#92;mathbf{F} &#92;cdot d&#92;mathbf{r} = &#92;int_0^1 (18t^2 - 6t) dt = &#92;left(6t^3 - 3t^2 &#92;right) &#92;bigg|_0^1 = 3 &#92;]
+&#92;[ &#92;int_C &#92;mathbf{F} &#92;cdot d&#92;mathbf{r} = &#92;int_0^1 (18t^2 - 6t) dt = &#92;left(6t^3 - 3t^2 &#92;right) |_0^1 = 3 &#92;]
 &lt;/p&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;br&gt;
 
@@ -9680,7 +9932,7 @@ and refer to it as the circulation of &#92;(&#92;mathbf{F}&#92;) around &#92;(C&
 &lt;p&gt;
     Although in this case, the orientation doesn&#39;t matter. One way to remember this difference between vector and scalar integrals is to realize that &#92;(ds = |d&#92;mathbf{r}|&#92;), and the magnitude of a vector does not depend on its direction.
     &lt;/p&gt;
-&lt;h3 id=&quot;path-ind&quot;&gt;path independence&lt;/h3&gt;
+&lt;h3 id=&quot;path-ind&quot;&gt;path independence &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;I am grateful for Tevian Dray and Corinne A. Manogue.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;RECALL:&lt;/strong&gt; &#92;(&#92;int_a^b f&#39;(x) &#92;, dx = f(b) - f(a)&#92;)&lt;/p&gt;
 
@@ -9692,18 +9944,18 @@ and refer to it as the circulation of &#92;(&#92;mathbf{F}&#92;) around &#92;(C&
 &#92;(df = &#92;nabla &#92;cdot f &#92;cdot d&#92;mathbf{r}&#92;)&lt;/p&gt;
 
 &lt;p&gt;Putting this all together, we arrive at the fundamental theorem for line integrals, which states that:&lt;/p&gt;
-&lt;p&gt;&#92;[&#92;int_C &#92;nabla &#92;cdot f &#92;cdot d&#92;mathbf{r} = f &#92;, &#92;bigg|_{A}^B&#92;[&lt;/p&gt;
+&lt;p style=&quot;overflow:auto;&quot;&gt;&#92;[&#92;int_C &#92;nabla &#92;cdot f &#92;cdot d&#92;mathbf{r} = f &#92;, |_{A}^B&#92;[&lt;/p&gt;
 &lt;p&gt;for any curve &#92;(C&#92;) starting at point A and ending at point B &lt;/p&gt;
 
 &lt;p&gt;Notice that the right-hand side does not depend on the curve &#92;(C&#92;). &lt;/p&gt;
 &lt;p&gt;There is some fine print here: the curve must lie in a connected region (one without holes) where &#92;(&#92;nabla &#92;cdot f&#92;) is defined everywhere. This is usually not a problem if &#92;(f&#92;) is differentiable everywhere, but there are important examples where this condition fails.&lt;/p&gt;
 &lt;p&gt;This behavior leads us to the notion of path independence. A line integral of the form &#92;(&#92;int_C &#92;mathbf{F} &#92;cdot d&#92;mathbf{r}&#92;) is said to be path independent if its value depends only on the endpoints A and B of the curve &#92;(C&#92;), and not on the specific curve connecting them. If a line integral is path independent, we can simply write:&lt;/p&gt;
-&lt;p&gt;&#92;[&#92;int_{A}^B &#92;mathbf{F} &#92;cdot d&#92;mathbf{r}&#92;]&lt;/p&gt;
+&lt;p style=&quot;overflow:auto;&quot;&gt;&#92;[&#92;int_{A}^B &#92;mathbf{F} &#92;cdot d&#92;mathbf{r}&#92;]&lt;/p&gt;
 
 &lt;p&gt;If you know that a line integral is path independent, you can choose a different path (with the same endpoints) that simplifies the evaluation of the integral as much as possible!&lt;/p&gt;
 
 
-&lt;h3 id=&quot;con-vec&quot;&gt;conservative vector fields&lt;/h3&gt;
+&lt;h3 id=&quot;con-vec&quot;&gt;conservative vector fields &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Ok, Tevian Dray and Corinne A. Manogue really got into it for this section.&lt;/p&gt;
 &lt;p&gt;
 The fundamental theorem implies that vector fields of the form &#92;(&#92;mathbf{F} = &#92;nabla f&#92;) are special; the corresponding line integrals are always independent of path. One way to think of this is to imagine the level curves of &#92;(f&#92;); the change in &#92;(f&#92;) depends only on where you start and end, not on how you get there. These special vector fields have a name: A vector field &#92;(&#92;mathbf{F}&#92;) is said to be conservative if there exists a potential function &#92;(f&#92;) such that &#92;(&#92;mathbf{F} = &#92;nabla f&#92;).
@@ -9768,7 +10020,9 @@ If &#92;(&#92;mathbf{F}&#92;) is conservative, then &#92;(&#92;int_C &#92;mathbf
     1) Checking consistency may not be straightforward. Are &#92;(-&#92;cos^2 x &#92;cos^2 y&#92;) and &#92;(&#92;sin^2 x &#92;cos^2 y&#92;) the same? We have &#92;(2&#92;sin^2 x &#92;cos^2 y = -&#92;cos^2 x &#92;cos^2 y + &#92;cos^2 y = &#92;sin^2 x &#92;cos^2 y + &#92;sin^2 x&#92;), which shows that the &quot;xy&quot; parts of these functions agree. (If this cannot be done, consistency fails.) But how do we count the remaining functions of 1 variable? Recall that the &#92;(x&#92;)-witness can only reliably provide clues involving &#92;(x&#92;)! If rewriting one or more functions this way generates a new such term, count it as usual. If instead, this generates a term involving the wrong variable(s), such as a clue provided by the &#92;(x&#92;)-witness that does not involve &#92;(x&#92;), discard it as unsubstantiated; this amounts to allowing the constant of integration to depend on the other variables. This procedure does not depend on the manner in which particular functions are rewritten, and such manipulations are not usually needed for typical classroom examples.
     &lt;/p&gt;
 
-    &lt;h3 id=&quot;surface&quot;&gt;surface&lt;/h3&gt;
+    &lt;hr&gt;&lt;h2 id=&quot;surface-integrals&quot;&gt;surface integrals&lt;/h2&gt;&lt;hr&gt;
+    
+    &lt;h3 id=&quot;surface&quot;&gt;surface &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Tevian Dray and Corinne A. Manogue say it like it is here.&lt;/p&gt;
     &lt;p&gt;Consider the following descriptions:&lt;/p&gt;
 &lt;ol&gt;
@@ -9798,7 +10052,7 @@ If &#92;(&#92;mathbf{F}&#92;) is conservative, then &#92;(&#92;int_C &#92;mathbf
 
 &lt;p&gt;Note: We write a single integral sign when talking about adding up &quot;bits of area&quot; (or &quot;bits of volume&quot;), reserving multiple integral signs for iterated single integrals. The notation &#92;(&#92;int&#92;int dA&#92;) is also common.&lt;/p&gt;
 
-&lt;h3 id=&quot;cross-prod&quot;&gt;a bigger better cross product&lt;/h3&gt;
+&lt;h3 id=&quot;cross-prod&quot;&gt;a bigger better cross product &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;Tevian Dray and Corinne A. Manogue did fine on this, but there&#39;s also a great stack exchange answer about cross products and antisymmetry.&lt;/p&gt;
 
@@ -10027,7 +10281,7 @@ abc - acb + bca - bac - cab + cba
     &lt;p&gt;
     3) This argument uses the distributive property, which must be proved geometrically if one starts with &#92;((1)&#92;) and the right-hand rule. This is straightforward in two dimensions, but somewhat more difficult in three dimensions.
     &lt;/p&gt;
-&lt;h3 id=&quot;gen-surf&quot;&gt;general surface&lt;/h3&gt;
+&lt;h3 id=&quot;gen-surf&quot;&gt;general surface &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;It is getting real with Tevian Dray and Corinne A. Manogue.&lt;/p&gt;
 &lt;p&gt;
     Since surfaces are two-dimensional, chopping up a surface is usually done by drawing two families of curves on the surface.  Then you can compute &#92;(d&#92;mathbf{r}&#92;) on each family and take the  cross product, to get the &lt;em&gt;vector surface element&lt;/em&gt; in the form  &#92;[
@@ -10073,7 +10327,7 @@ abc - acb + bca - bac - cab + cba
     Finally, a word about notation.  You will often see &#92;(dS&#92;) instead of &#92;(dA&#92;), and &#92;(d&#92;vec{S}&#92;) instead of&amp;nbsp;&#92;(d&#92;mathbf{S}&#92;); most authors use &#92;(dA&#92;) in the &#92;(xy&#92;)-plane.
     &lt;/p&gt;
 
-    &lt;h3 id=&quot;flux&quot;&gt;flux&lt;/h3&gt;
+    &lt;h3 id=&quot;flux&quot;&gt;flux &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
     &lt;p&gt;Another slay from Tevian Dray and Corinne A. Manogue.&lt;/p&gt;
     &lt;p&gt;&lt;/p&gt;
     &lt;p&gt;
@@ -10098,7 +10352,7 @@ abc - acb + bca - bac - cab + cba
         integral to be the projection of &#92;(S&#92;) into the &#92;(xy&#92;)-plane.  We prefer to
         integrate over the actual surface whenever possible.
         &lt;/p&gt;
-        &lt;h3 id=&quot;symm&quot;&gt;to symmetry or not to symmetry&lt;/h3&gt;
+        &lt;h3 id=&quot;symm&quot;&gt;to symmetry or not to symmetry &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
         &lt;p&gt;Tevian Dray and Corinne A. Manogue pull out the double bind.&lt;/p&gt;
         &lt;p&gt;&lt;strong&gt;to symmetry&lt;/strong&gt;&lt;/p&gt;
         &lt;p&gt;
@@ -10121,7 +10375,7 @@ abc - acb + bca - bac - cab + cba
                 &lt;p&gt;
                 We compute the flux of the axially symmetric vector field &#92;(&#92;mathbf{F} = r&#92;,&#92;mathbf{&#92;hat{r}} = x&#92;,&#92;mathbf{&#92;hat{x}} + y&#92;,&#92;mathbf{&#92;hat{y}}&#92;) &quot;outwards&quot; through the part of the paraboloid &#92;(z=r^2&#92;) lying below the plane &#92;(z=4&#92;). The first thing we need is the formula for &#92;(d&#92;mathbf{r}&#92;) in cylindrical coordinates, which is a straightforward generalization  in polar coordinates, namely &#92;begin{equation} d&#92;mathbf{r} = dr&#92;,&#92;mathbf{&#92;hat{r}} + r&#92;,d&#92;phi&#92;,&#92;mathbf{&#92;hat{&#92;phi}} + dz&#92;,&#92;mathbf{&#92;hat{z}} &#92;label{dr3} &#92;end{equation}
                 &lt;/p&gt;
-                &lt;h3 id=&quot;spheres&quot;&gt;spheres&lt;/h3&gt;
+                &lt;h3 id=&quot;spheres&quot;&gt;spheres &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
         &lt;p&gt;Tevian Dray and Corinne A. Manogue have done it again.&lt;/p&gt;
 
         &lt;p&gt;
@@ -10132,7 +10386,7 @@ abc - acb + bca - bac - cab + cba
             The equation of a sphere of radius &#92;(a&#92;) in cylindrical coordinates is &lt;a href=&quot;#fn__1&quot; name=&quot;fnt__1&quot; id=&quot;fnt__1&quot; class=&quot;fn_top&quot;&gt;1)&lt;/a&gt; &#92;begin{equation} r^2 + z^2 = a^2 &#92;end{equation} so that &#92;begin{equation} 2r&#92;,dr + 2z&#92;,dz = 0 &#92;label{Spherecyl} &#92;end{equation} Proceeding as for the paraboloid, we take &#92;begin{align} d&#92;mathbf{r}_1 &amp;= r&#92;,d&#92;phi&#92;,&#92;mathbf{&#92;hat{&#92;phi}} &#92;&#92; d&#92;mathbf{r}_2 &amp;= dr&#92;,&#92;mathbf{&#92;hat{r}} + dz&#92;,&#92;mathbf{&#92;hat{z}} = &#92;left(-&#92;frac{z}{r}&#92;,&#92;mathbf{&#92;hat{r}} + &#92;mathbf{&#92;hat{z}}&#92;right) dz &#92;label{drdz} &#92;end{align} where we now view &#92;(r&#92;) as a function of &#92;(z&#92;). We therefore have &#92;begin{equation} d&#92;mathbf{S} = d&#92;mathbf{r}_1 &#92;times d&#92;mathbf{r}_2 = (r&#92;,&#92;mathbf{&#92;hat{r}} + z&#92;,&#92;mathbf{&#92;hat{z}})&#92;,d&#92;phi&#92;,dz &#92;end{equation} which results finally in &#92;begin{equation} dS = |d&#92;mathbf{S}| = a&#92;,d&#92;phi&#92;,dz &#92;end{equation} The surface element of a sphere is therefore the same as that of the cylinder of the same radius! Among other things, this means that projecting the Earth outward onto a cylinder is an equal-area projection, which is useful for cartographers.
             &lt;/p&gt;
 
-            &lt;h3&gt;&lt;a name=&quot;parametric&quot; id=&quot;parametric&quot;&gt;parametric&lt;/a&gt;&lt;/h3&gt;
+            &lt;h3&gt;&lt;a name=&quot;parametric&quot; id=&quot;parametric&quot;&gt;parametric&lt;/a&gt; &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
             &lt;p&gt;You guessed it: another great take from Tevian Dray and Corinne A. Manogue.&lt;/p&gt;
             &lt;p&gt;
                 The traditional approach to curves and surfaces involves parameterization, which we have deliberately saved for last. Recall that a parametric curve can be written &#92;( &#92;vec{r} = &#92;vec{r}(u) = x(u)&#92;,&#92;hat{x} + y(u)&#92;,&#92;hat{y} + z(u)&#92;,&#92;hat{z} &#92;) together with an appropriate domain for the parameter &#92;( u &#92;).  A &lt;em&gt;parametric surface&lt;/em&gt; is similar, except there are now two parameters &#92;( u &#92;), &#92;( v &#92;) (and an appropriate domain): &#92;( &#92;vec{r} = &#92;vec{r}(u,v) = x(u,v)&#92;,&#92;hat{x} + y(u,v)&#92;,&#92;hat{y} + z(u,v)&#92;,&#92;hat{z} &#92;)
@@ -10169,7 +10423,7 @@ abc - acb + bca - bac - cab + cba
                 &lt;/p&gt;
                 
             
-                &lt;h3&gt;&lt;a name=&quot;scalar-surface&quot; id=&quot;scalar-surface&quot;&gt;Scalar Surface Integrals&lt;/a&gt;&lt;/h3&gt;
+                &lt;h3&gt;&lt;a name=&quot;scalar-surface&quot; id=&quot;scalar-surface&quot;&gt;Scalar Surface Integrals&lt;/a&gt; &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
                 &lt;p&gt;It should never be doubted whether Tevian Dray and Corinne A. Manogue can succeed.&lt;/p&gt;
                 
                 &lt;p&gt;
@@ -10191,7 +10445,7 @@ abc - acb + bca - bac - cab + cba
                 &#92;]
                 &lt;/p&gt;
                 
-                &lt;h3&gt;&lt;a name=&quot;function-graphs&quot; id=&quot;function-graphs&quot;&gt;Function Graphs&lt;/a&gt;&lt;/h3&gt;
+                &lt;h3&gt;&lt;a name=&quot;function-graphs&quot; id=&quot;function-graphs&quot;&gt;Function Graphs&lt;/a&gt; &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
                 &lt;p&gt;Yes, please, more insight from Tevian Dray and Corinne A. Manogue.&lt;/p&gt;
                 
                 &lt;p&gt;
@@ -10224,7 +10478,7 @@ abc - acb + bca - bac - cab + cba
                 
                 &lt;h3&gt;
                     &lt;a name=&quot;triple-product&quot; id=&quot;triple-product&quot;&gt;Triple Product&lt;/a&gt;
-                &lt;/h3&gt;
+                 &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
                 &lt;p&gt;One might wonder whether Tevian Dray and Corinne A. Manogue have ever missed.&lt;/p&gt;
                 &lt;p&gt;
                 Just as a &lt;em&gt;parallelogram&lt;/em&gt; is the region in the plane spanned by 2 vectors, a &lt;em&gt;parallelepiped&lt;/em&gt; is the region in space spanned by 3 vectors. Each side of a parallelepiped is therefore a parallelogram.
@@ -10259,7 +10513,7 @@ abc - acb + bca - bac - cab + cba
                 
                 &lt;h3&gt;
                     &lt;a name=&quot;volume-integrals&quot; id=&quot;volume-integrals&quot;&gt;Volume Integrals&lt;/a&gt;
-                &lt;/h3&gt;
+                 &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
                 &lt;p&gt;Straight from the wonderful Tevian Dray and Corinne A. Manogue.&lt;/p&gt;
                 &lt;p&gt;
                 The basic building block for volume integrals is the infinitesimal volume, obtained by chopping up the volume into small &quot;parallelepipeds&quot;. Our approach for surface integrals can be extended to volume integrals using the triple product. The volume element becomes
@@ -10289,7 +10543,7 @@ abc - acb + bca - bac - cab + cba
                 
                 &lt;h3&gt;
                     &lt;a name=&quot;change-of-variables&quot; id=&quot;change-of-variables&quot;&gt;Change of Variables&lt;/a&gt;
-                &lt;/h3&gt;
+                 &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
                 &lt;p&gt;Tevian Dray and Corinne A. Manogue: in theaters near you.&lt;/p&gt;
                 &lt;p&gt;
                     &lt;/p&gt;&lt;p&gt;Change of Variables
@@ -10347,22 +10601,28 @@ abc - acb + bca - bac - cab + cba
                             reciprocal! really mean that the corresponding integrals are equal.
                             2) Recall that the determinant of the transpose of a matrix is the same as the determinant of the matrix&lt;/p&gt;
                     
-            
+                            &lt;hr&gt;&lt;h2 id=&quot;vector-derivatives&quot;&gt;vector derivatives&lt;/h2&gt;&lt;hr&gt;
             
                 &lt;h3&gt;
                     &lt;a name=&quot;divergence&quot; id=&quot;divergence&quot;&gt; divergence&lt;/a&gt;
-                  &lt;/h3&gt;
+                   &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
                   &lt;p&gt; Tevian Dray and Corinne A. Manogue convey divergence in the way they know best.&lt;/p&gt;
                   &lt;p&gt; Consider a small closed box, with sides parallel to the coordinate planes, as shown in Figure 1. What is the flux of &#92;(&#92;mathbf{E}&#92;) out of the box? &lt;/p&gt;
-                  &lt;p&gt; Consider first the vertical contribution, namely the flux &lt;em&gt; up&lt;/em&gt; through the top plus the flux &lt;em&gt; down&lt;/em&gt; through the bottom. These two sides each have area element &#92;(dA=dx&#92;,dy&#92;), but the outward normal vectors point in opposite directions, that is &#92;begin{eqnarray*} &#92;mathbf{n}_{&#92;text{up}} &amp;=&amp; &#92;mathbf{k} &#92;&#92; &#92;mathbf{n}_{&#92;text{down}} &amp;=&amp; -&#92;mathbf{k} &#92;end{eqnarray*} so we get &#92;begin{eqnarray*} &#92;sum_{&#92;text{top+bottom}} &#92;mathbf{E} &#92;cdot d&#92;mathbf{A} &amp;=&amp; &#92;mathbf{E}(z+dz) &#92;cdot &#92;mathbf{k} &gt; dx&#92;,dy - &#92;mathbf{E}(z) &#92;cdot&#92;mathbf{k} &gt; dx&#92;,dy &#92;&#92; &amp;=&amp; &#92;Bigl( E_z(z+dz) - E_z(z) &#92;Bigr) &gt; dx&#92;,dy &#92;&#92; &amp;=&amp; &#92;frac{E_z(z+dz) - E_z(z)}{dz} &gt; dx&#92;,dy&#92;,dz &#92;&#92; &amp;=&amp; &#92;frac{&#92;partial E_z}{&#92;partial z} &gt; &gt; dx&#92;,dy&#92;,dz &#92;end{eqnarray*} where we have multiplied and divided by &#92;(dz&#92;) to obtain the volume element &#92;(dV=dx&#92;,dy&#92;,dz&#92;) in the third step, and used the definition of the derivative in the final step. &lt;a href=&quot;#fn__1&quot; name=&quot;fnt__1&quot; id=&quot;fnt__1&quot; class=&quot;fn_top&quot;&gt; 1)&lt;/a&gt;
-                  &lt;/p&gt;
+                  &lt;p style=&quot;overflow:auto;&quot;&gt;Consider first the vertical contribution, namely the flux &lt;em&gt;up&lt;/em&gt; through the top plus the flux &lt;em&gt;down&lt;/em&gt; through the bottom. These two sides each have area element &#92;(dA=dx&#92;,dy&#92;), but the outward normal vectors point in opposite directions, that is&lt;/p&gt;
+&lt;p style=&quot;overflow:auto;&quot;&gt;&#92;[ &#92;mathbf{n}_{&#92;text{up}} = &#92;mathbf{k} &#92;&#92; &#92;mathbf{n}_{&#92;text{down}} = -&#92;mathbf{k} &#92;]&lt;/p&gt;
+&lt;p&gt;So, we get&lt;/p&gt;
+&lt;p style=&quot;overflow:auto;&quot;&gt;&#92;[ &#92;sum_{&#92;text{top+bottom}} &#92;mathbf{E} &#92;cdot d&#92;mathbf{A} = &#92;mathbf{E}(z+dz) &#92;cdot &#92;mathbf{k} &gt; dx&#92;,dy - &#92;mathbf{E}(z) &#92;cdot&#92;mathbf{k} &gt; dx&#92;,dy &#92;]&lt;/p&gt;
+&lt;p style=&quot;overflow:auto;&quot;&gt;&#92;[ = &#92;Bigl( E_z(z+dz) - E_z(z) &#92;Bigr) &gt; dx&#92;,dy &#92;]&lt;/p&gt;
+&lt;p style=&quot;overflow:auto;&quot;&gt;&#92;[ = &#92;frac{E_z(z+dz) - E_z(z)}{dz} &gt; dx&#92;,dy&#92;,dz &#92;]&lt;/p&gt;
+&lt;p&gt;where we have multiplied and divided by &#92;(dz&#92;) to obtain the volume element &#92;(dV=dx&#92;,dy&#92;,dz&#92;) in the third step, and used the definition of the derivative in the final step.&lt;/p&gt;
+
                   &lt;p&gt; Repeating this argument using the remaining pairs of faces, it follows that the total flux out of the box is &#92;[ &#92;text{total flux} = &#92;sum_{&#92;text{box}} &#92;mathbf{E} &#92;cdot d&#92;mathbf{A} = &#92;left( &#92;frac{&#92;partial E_x}{&#92;partial x} + &#92;frac{&#92;partial E_y}{&#92;partial y} + &#92;frac{&#92;partial E_z}{&#92;partial z} &#92;right) &gt; dV &#92;] Since the total flux is proportional to the volume of the box, it approaches zero as the box shrinks down to a point. The interesting quantity is therefore the ratio of the flux to volume; this ratio is called the divergence. &lt;/p&gt;
                   &lt;p&gt; At any point &#92;(P&#92;), we therefore define the &lt;em&gt; divergence&lt;/em&gt; of a vector field &#92;(&#92;mathbf{E}&#92;), written &#92;(&#92;nabla &#92;cdot &#92;mathbf{E}&#92;), to be the flux of &#92;(&#92;mathbf{E}&#92;) per unit volume leaving a small box around &#92;(P&#92;). In other words, the divergence is the limit as the box collapses around &#92;(P&#92;) of the ratio of the flux of the vector field out of the box to the volume of the box. Thus, the divergence of &#92;(&#92;mathbf{E}&#92;) at &#92;(P&#92;) is the flux per unit volume through a small box around &#92;(P&#92;), which is given in rectangular coordinates by &#92;[ &#92;nabla &#92;cdot &#92;mathbf{E} = &#92;frac{&#92;text{flux}}{&#92;text{unit volume}} = &#92;frac{&#92;partial E_x}{&#92;partial x} + &#92;frac{&#92;partial E_y}{&#92;partial y} + &#92;frac{&#92;partial E_z}{&#92;partial z} &#92;] &lt;/p&gt;
                   &lt;p&gt; You may have seen this formula before, but remember that it is merely the rectangular coordinate expression for the divergence of &#92;(&#92;mathbf{E}&#92;); the divergence is defined geometrically as flux per unit volume. Similar computations can be used to determine expressions for the divergence in other coordinate systems. Because of the geometric nature of divergence, these expressions turn out to give the same value at any point in space. &lt;/p&gt;
                   &lt;p&gt; The use of &#92;(V&#92;) for volume, and hence &#92;(dV&#92;) for the volume element, conflicts with the use of &#92;(V&#92;) to denote electrostatic potential. We nonetheless write &#92;(dV&#92;) for the volume element whenever the context is clear, and use &#92;(d&#92;tau&#92;) instead only when necessary to avoid confusion. &lt;/p&gt;
                   &lt;h3&gt;
                     &lt;a name=&quot;divergence-theorem&quot; id=&quot;divergence-theorem&quot;&gt; the divergence theorem&lt;/a&gt;
-                  &lt;/h3&gt;
+                   &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
                   &lt;p&gt; Tevian Dray and Corinne A. Manogue take divergence to the next level.&lt;/p&gt;
                   &lt;p&gt; The total flux of the electric field out through a small rectangular box is &#92;[ &#92;text{flux} = &#92;sum_{&#92;text{box}} &#92;mathbf{E} &#92;cdot d&#92;mathbf{A} = &#92;nabla &#92;cdot &#92;mathbf{E} / dV &#92;]&lt;/p&gt;
                   
@@ -10370,7 +10630,7 @@ abc - acb + bca - bac - cab + cba
                   &lt;p&gt; This is the Divergence Theorem. &lt;/p&gt;
                   &lt;h3&gt;
                     &lt;a name=&quot;divergence-curvilinear&quot; id=&quot;divergence-curvilinear&quot;&gt; the divergence in curvilinear coordinates&lt;/a&gt;
-                  &lt;/h3&gt;
+                   &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
                   &lt;p&gt; Tevian Dray and Corinne A. Manogue cannot be stopped with this divergence.&lt;/p&gt;
 
 
@@ -10396,10 +10656,41 @@ abc - acb + bca - bac - cab + cba
                   
                   &lt;h3&gt;
                     &lt;a name=&quot;curl&quot; id=&quot;curl&quot;&gt; curl&lt;/a&gt;
-                  &lt;/h3&gt;
+                   &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
                   &lt;p&gt; Tevian Dray and Corinne A. Manogue have gone beyond divergence.&lt;/p&gt;
                   &lt;p&gt; Consider a small rectangular loop in the &#92;(yz&#92;)-plane, with sides parallel to the coordinate axes, as shown in Figure 1. What is the circulation of &#92;(&#92;mathbf{A}&#92;) around this loop? &lt;/p&gt;
-                  &lt;p&gt; Consider first the horizontal edges, on each of which &#92;(&#92;mathrm{d}&#92;mathbf{r}=dy&#92;,&#92;mathbf{&#92;hat{y}}&#92;). However, when computing the circulation of &#92;(&#92;mathbf{A}&#92;) around this loop, we traverse these two edges in opposite directions. In particular, when traversing the loop in the counterclockwise direction, &#92;(dy&amp;lt;0&#92;) on top and &#92;(dy&amp;gt;0&#92;) on the bottom. We would like to compare these two edges, but we have &#92;[ dy_{&#92;text{top}} = -dy_{&#92;text{bot}} &#92;] so we conventionally set &#92;(dy=dy_{&#92;text{bot}}&#92;), leading to &#92;(dy_{&#92;text{top}}=-dy&#92;). &lt;a href=&quot;#fn__1&quot; name=&quot;fnt__1&quot; id=&quot;fnt__1&quot; class=&quot;fn_top&quot;&gt; 1)&lt;/a&gt; Thus, &#92;[ &#92;sum_{&#92;text{top+bottom}} &#92;mathbf{A} &#92;cdot &#92;mathrm{d}&#92;mathbf{r} = - &#92;mathbf{A}(z+dz)&#92;cdot&#92;mathbf{&#92;hat{y}}&#92;,dy + &#92;mathbf{A}(z)&#92;cdot&#92;mathbf{&#92;hat{y}}&#92;,dy = - &#92;Bigl( A_y(z+dz) - A_y(z) &#92;Bigr)&#92;,dy = - &#92;frac{A_y(z+dz) - A_y(z)}{dz}&#92;,dy&#92;,dz = - &#92;frac{&#92;partial A_y}{&#92;partial z}&#92;,dy&#92;,dz &#92;] where we have multiplied and divided by &#92;(dz&#92;) to obtain the surface element &#92;(dA=dy&#92;,dz&#92;) in the third step, and used the definition of the derivative in the final step. &lt;/p&gt;
+                  &lt;p&gt; Consider first the horizontal edges, on each of which 
+                    &#92;(&#92;mathrm{d}&#92;mathbf{r}=dy&#92;,&#92;mathbf{&#92;hat{y}}&#92;)
+                    . However, when computing the circulation of 
+                    &#92;(&#92;mathbf{A}&#92;)
+                     around this loop, we traverse these two edges in opposite directions. In particular, when traversing the loop in the counterclockwise direction, 
+                    &#92;(dy&amp;lt;0&#92;)
+                     on top and 
+                    &#92;(dy&amp;gt;0&#92;)
+                     on the bottom. We would like to compare these two edges, but we have 
+                    &#92;[ dy_{&#92;text{top}} = -dy_{&#92;text{bot}} &#92;]
+                     so we conventionally set 
+                    &#92;(dy=dy_{&#92;text{bot}}&#92;)
+                    , leading to 
+                    &#92;(dy_{&#92;text{top}}=-dy&#92;)
+                    . Thus, 
+                    &lt;/p&gt;&lt;p style=&quot;overflow:auto;&quot;&gt;
+                    &#92;[
+                    &#92;begin{align*}
+                    &#92;sum_{&#92;text{top+bottom}} &#92;mathbf{A} &#92;cdot &#92;mathrm{d}&#92;mathbf{r} &amp;= - &#92;mathbf{A}(z+dz)&#92;cdot&#92;mathbf{&#92;hat{y}}&#92;,dy + &#92;mathbf{A}(z)&#92;cdot&#92;mathbf{&#92;hat{y}}&#92;,dy &#92;&#92;
+                    &amp;= - &#92;Bigl( A_y(z+dz) - A_y(z) &#92;Bigr)&#92;,dy &#92;&#92;
+                    &amp;= - &#92;frac{A_y(z+dz) - A_y(z)}{dz}&#92;,dy&#92;,dz &#92;&#92;
+                    &amp;= - &#92;frac{&#92;partial A_y}{&#92;partial z}&#92;,dy&#92;,dz
+                    &#92;end{align*}
+                    &#92;]
+                    &lt;/p&gt;&lt;p&gt;
+                     where we have multiplied and divided by 
+                    &#92;(dz&#92;)
+                     to obtain the surface element 
+                    &#92;(dA=dy&#92;,dz&#92;)
+                     in the third step, and used the definition of the derivative in the final step. 
+                     &lt;/p&gt;
+                                      
                   &lt;p&gt; Just as with the divergence, in making this argument we are assuming that &#92;(&#92;mathbf{A}&#92;) doesn&#39;t change much in the &#92;(x&#92;) and &#92;(y&#92;) directions, while nonetheless caring about the change in the &#92;(z&#92;) direction. We are again subtracting the values at two points separated in the &#92;(z&#92;) direction, so we are canceling the zeroth order term in &#92;(z&#92;), and therefore need the next order term. This can be made precise using a multivariable Taylor series expansion. &lt;/p&gt;
                   &lt;p&gt; Repeating this argument for the remaining two sides leads to 
                     
@@ -10412,7 +10703,7 @@ abc - acb + bca - bac - cab + cba
                   &lt;p&gt; A similar argument using a finite box would require integrating around the loop, in which case the limits of integration would be equal and opposite for these two edges, leading to an equivalent minus sign when adding the integrals. &lt;/p&gt;
                   &lt;h3&gt;
                     &lt;a name=&quot;geometry-curl&quot; id=&quot;geometry-curl&quot;&gt; the geometry of curl&lt;/a&gt;
-                  &lt;/h3&gt;
+                   &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
                   &lt;p&gt; Tevian Dray and Corinne A. Manogue take curl beyond curl.&lt;/p&gt;
                   &lt;p&gt; Put a paddlewheel into a moving body of water. Depending on the details of the flow, the paddlewheel might spin. Keeping its center fixed, change the orientation of the paddlewheel. There will be a preferred orientation, in which the paddlewheel spins the fastest. &lt;/p&gt;
                   &lt;p&gt; We can investigate this situation for any vector field &#92;(&#92;mathbf{A}&#92;). Pick a point &#92;(P&#92;) and compute the circulation of &#92;(&#92;mathbf{A}&#92;) around a small loop centered at &#92;(P&#92;). Now change the orientation of the loop and do it again. The result depends on the size of the loop, so we divide by its area. There will be a preferred orientation in which the circulation per unit area will be a maximum. We define the &lt;em&gt; curl&lt;/em&gt; of &#92;(&#92;mathbf{A}&#92;), written &#92;(&#92;nabla&#92;times&#92;mathbf{A}&#92;), to be the vector whose direction is given by the normal vector to the plane in which the circulation is greatest, and whose magnitude is that circulation divided by the area of the loop, in the limit as the loop shrinks to a point. This construction yields the curl of &#92;(&#92;mathbf{A}&#92;) at &#92;(P&#92;), and we can repeat the process at any point; the curl of &#92;(&#92;mathbf{A}&#92;) is a vector field. &lt;/p&gt;
@@ -10420,7 +10711,7 @@ abc - acb + bca - bac - cab + cba
                   &lt;p&gt; By choosing &#92;(&#92;hat{&#92;mathbf{u}}&#92;) to be &#92;(&#92;mathbf{&#92;hat{x}}&#92;), &#92;(&#92;mathbf{&#92;hat{y}}&#92;), and &#92;(&#92;mathbf{&#92;hat{z}}&#92;) in turn, we can therefore compute the components of &#92;(&#92;nabla&#92;times&#92;mathbf{A}&#92;) in rectangular coordinates. For further details, see &amp;sect;&amp;nbsp; &lt;a href=&quot;https://ischmidls.github.io/posts/mathcontent/curl2.html&quot; class=&quot;wikilink1&quot; title=&quot;book:mathcontent:curl2&quot;&gt; Curl&lt;/a&gt; . &lt;/p&gt;
                   &lt;h3&gt;
                     &lt;a name=&quot;formulas-div-grad-curl&quot; id=&quot;formulas-div-grad-curl&quot;&gt; formulas for div, grad, curl&lt;/a&gt;
-                  &lt;/h3&gt;
+                   &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
                   &lt;p&gt; Tevian Dray and Corinne A. Manogue enumerate the formulas here.&lt;/p&gt;
                   &lt;p&gt;
                     &lt;strong&gt; Rectangular Coordinates&lt;/strong&gt;
@@ -10439,7 +10730,7 @@ abc - acb + bca - bac - cab + cba
                   &lt;p style=&quot;overflow: auto;&quot;&gt; &#92;[ &#92;begin{align*} &#92;boldsymbol{&#92;nabla} f &amp;= &#92;frac{&#92;partial f}{&#92;partial r}&#92;,&#92;mathbf{&#92;hat{r}} + &#92;frac{1}{r}&#92;frac{&#92;partial f}{&#92;partial &#92;theta}&#92;,&#92;mathbf{&#92;hat{&#92;theta}} + &#92;frac{1}{r&#92;sin&#92;theta}&#92;frac{&#92;partial f}{&#92;partial &#92;phi}&#92;,&#92;mathbf{&#92;hat{&#92;phi}} &#92;&#92; &#92;boldsymbol{&#92;nabla}&#92;cdot&#92;mathbf{F} &amp;= &#92;frac{1}{r^2}&#92;frac{&#92;partial}{&#92;partial r}&#92;left(r^2F_{r}&#92;right) + &#92;frac{1}{r&#92;sin&#92;theta}&#92;frac{&#92;partial}{&#92;partial &#92;theta}&#92;left(&#92;sin&#92;theta F_{&#92;theta}&#92;right) + &#92;frac{1}{r&#92;sin&#92;theta}&#92;frac{&#92;partial F_&#92;phi}{&#92;partial &#92;phi} &#92;&#92; &#92;boldsymbol{&#92;nabla}&#92;times&#92;mathbf{F} &amp;= &#92;frac{1}{r&#92;sin&#92;theta} &#92;left(&#92;frac{&#92;partial}{&#92;partial &#92;theta}&#92;left(&#92;sin&#92;theta F_{&#92;phi}&#92;right) - &#92;frac{&#92;partial F_&#92;theta}{&#92;partial &#92;phi}&#92;right)&#92;mathbf{&#92;hat{r}} + &#92;frac{1}{r} &#92;left(&#92;frac{1}{&#92;sin&#92;theta} &#92;frac{&#92;partial F_r}{&#92;partial &#92;phi} - &#92;frac{&#92;partial}{&#92;partial r}&#92;left(rF_{&#92;phi}&#92;right)&#92;right)&#92;mathbf{&#92;hat{&#92;theta}} + &#92;frac{1}{r} &#92;left(&#92;frac{&#92;partial}{&#92;partial r}&#92;left(rF_{&#92;theta}&#92;right) - &#92;frac{&#92;partial F_r}{&#92;partial &#92;theta}&#92;right)&#92;mathbf{&#92;hat{&#92;phi}} &#92;end{align*} &#92;] &lt;/p&gt;
                   &lt;h3&gt;
                     &lt;a name=&quot;stokes-theorem&quot; id=&quot;stokes-theorem&quot;&gt; stokes&#39; theorem&lt;/a&gt;
-                  &lt;/h3&gt;
+                   &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
                   &lt;p&gt; Tevian Dray and Corinne A. Manogue have brought it to the pinnacle.&lt;/p&gt;
                   &lt;p&gt;
                     The total circulation of the magnetic field around a small loop is given by
@@ -10482,7 +10773,7 @@ abc - acb + bca - bac - cab + cba
                     
                   &lt;h3&gt;
                     &lt;a name=&quot;visualizing-divergence-curl&quot; id=&quot;visualizing-divergence-curl&quot;&gt; visualizing divergence and curl&lt;/a&gt;
-                  &lt;/h3&gt;
+                   &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
                   &lt;p&gt; Tevian Dray and Corinne A. Manogue bring it back to Earth.&lt;/p&gt;
                   &lt;p&gt; The Divergence Theorem says &#92;begin{equation} &#92;int_{&#92;text{box}} &#92;mathbf{F} &#92;cdot d&#92;mathbf{S} = &#92;int_{&#92;text{inside}} &#92;nabla &#92;cdot &#92;mathbf{F} &#92;, dV &#92;end{equation} which tells us that &#92;begin{equation} &#92;nabla &#92;cdot &#92;mathbf{F} &#92;approx &#92;frac{&#92;int &#92;mathbf{F} &#92;cdot d&#92;mathbf{S}}{&#92;text{volume of box}} = &#92;frac{&#92;text{flux}}{&#92;text{unit volume}} &#92;end{equation} so that the divergence measures how much a vector field &quot;points out&quot; of a box. Similarly, Stokes&#39; Theorem says &#92;begin{equation} &#92;oint_{&#92;text{loop}} &#92;mathbf{F} &#92;cdot d&#92;mathbf{r} = &#92;int_{&#92;text{inside}} (&#92;nabla &#92;times &#92;mathbf{F}) &#92;cdot d&#92;mathbf{S} &#92;end{equation} which tells us that &#92;begin{equation} (&#92;nabla &#92;times &#92;mathbf{F}) &#92;cdot &#92;mathbf{n} &#92;approx &#92;frac{&#92;oint &#92;mathbf{F} &#92;cdot d&#92;mathbf{r}}{&#92;text{area of loop}} = &#92;frac{&#92;text{(oriented) circulation}}{&#92;text{unit area}} &#92;end{equation} so that the (orthogonal component of the) curl measures how much a vector field &quot;goes around&quot; a loop. &lt;/p&gt;
                   &lt;p&gt;
@@ -10505,7 +10796,7 @@ abc - acb + bca - bac - cab + cba
                   &lt;p&gt;&lt;/p&gt;
                   &lt;h3&gt;
                     &lt;a name=&quot;product-rules&quot; id=&quot;product-rules&quot;&gt; product rules&lt;/a&gt;
-                  &lt;/h3&gt;
+                   &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
                   &lt;p&gt; Tevian Dray and Corinne A. Manogue broach the topic without index notation!&lt;/p&gt;
                   &lt;p&gt; We digress briefly to discuss product rules for vector derivatives, which are discussed in &amp;sect;1.2.6 of Griffiths, and summarized on the inside front cover. &lt;/p&gt;
                   &lt;p&gt; All types of derivatives have product rules, all of which take the form:
@@ -10518,13 +10809,13 @@ abc - acb + bca - bac - cab + cba
                   &lt;p&gt; How do you prove these rules? The simplest way is to work out the components of both sides in rectangular coordinates, using the ordinary product rule for partial derivatives. &lt;/p&gt;
                   &lt;h3&gt;
                     &lt;a name=&quot;integration-parts&quot; id=&quot;integration-parts&quot;&gt; integration by parts&lt;/a&gt;
-                  &lt;/h3&gt;
+                   &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
                   &lt;p&gt; Tevian Dray and Corinne A. Manogue move to a similarly nuanced topic.&lt;/p&gt;
                   &lt;p&gt; For ordinary functions of one variable, the rule for integration by parts follows immediately from integrating the product rule: &#92;begin{align*} &#92;frac{d}{dx}(fg) &amp;= &#92;frac{df}{dx}g + f&#92;frac{dg}{dx} &#92;&#92; &#92;int_a^b&#92;frac{d}{dx}(fg)&#92;, dx &amp;= &#92;int_a^b&#92;frac{df}{dx}g&#92;, dx + &#92;int_a^b f&#92;frac{dg}{dx}&#92;, dx &#92;&#92; &#92;left. fg &#92;right&#92;vert_a^b &amp;= &#92;int_a^b&#92;frac{df}{dx}g&#92;, dx + &#92;int_a^b f&#92;frac{dg}{dx}&#92;, dx &#92;end{align*} Rearranging, we obtain: &#92;[ &#92;int_a^b&#92;frac{df}{dx}g&#92;, dx = &#92;left. fg &#92;right&#92;vert_a^b - &#92;int_a^b f&#92;frac{dg}{dx}&#92;, dx &#92;] &lt;/p&gt;
                   &lt;p&gt; In an analogous way, we can obtain a rule for integration by parts for the divergence of a vector field by starting from the product rule for the divergence: &#92;[ &#92;nabla &#92;cdot (f&#92;mathbf{G}) = (&#92;nabla f) &#92;cdot &#92;mathbf{G} + f(&#92;nabla &#92;cdot &#92;mathbf{G}) &#92;] Integrating both sides yields: &#92;[ &#92;int &#92;nabla &#92;cdot (f&#92;mathbf{G}) &#92;,d&#92;tau = &#92;int (&#92;nabla f) &#92;cdot &#92;mathbf{G} &#92;,d&#92;tau + &#92;int f(&#92;nabla &#92;cdot &#92;mathbf{G}) &#92;,d&#92;tau &#92;] Now use the Divergence Theorem to rewrite the first term, leading to: &#92;[ &#92;int (f&#92;mathbf{G}) &#92;cdot d&#92;mathbf{A} = &#92;int (&#92;nabla f) &#92;cdot &#92;mathbf{G} &#92;,d&#92;tau + &#92;int f(&#92;nabla &#92;cdot &#92;mathbf{G}) &#92;,d&#92;tau &#92;] which can be rearranged to: &#92;[ &#92;int f(&#92;nabla &#92;cdot &#92;mathbf{G}) &#92;,d&#92;tau = &#92;int (f&#92;mathbf{G}) &#92;cdot d&#92;mathbf{A} - &#92;int (&#92;nabla f) &#92;cdot &#92;mathbf{G} &#92;,d&#92;tau &#92;] which is the desired integration by parts. &lt;/p&gt;
                   &lt;h3&gt;
                     &lt;a name=&quot;second-derivatives&quot; id=&quot;second-derivatives&quot;&gt; second derivatives&lt;/a&gt;
-                  &lt;/h3&gt;
+                   &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
                   &lt;p&gt; Tevian Dray and Corinne A. Manogue take the nuance further still.&lt;/p&gt;
                   
                   &lt;p&gt;
@@ -10554,7 +10845,7 @@ abc - acb + bca - bac - cab + cba
 
                   &lt;h3&gt;
                     &lt;a name=&quot;laplacian&quot; id=&quot;laplacian&quot;&gt; the laplacian&lt;/a&gt;
-                  &lt;/h3&gt;
+                   &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
                   &lt;p&gt; Tevian Dray and Corinne A. Manogue should put a content warning for the territory of differential equations.&lt;/p&gt;
                   &lt;p&gt; One second derivative, the divergence of the gradient, occurs so often it has its own name and notation. It is called the &lt;em&gt; Laplacian&lt;/em&gt; of the function &#92;(V&#92;), and is written in any of the forms: &#92;[ &#92;triangle V = &#92;nabla^2 V = &#92;nabla &#92;cdot &#92;nabla V &#92;] In rectangular coordinates, it is easy to compute: &#92;[ &#92;triangle V = &#92;nabla &#92;cdot &#92;nabla V = &#92;frac{&#92;partial V}{&#92;partial x} + &#92;frac{&#92;partial V}{&#92;partial y} + &#92;frac{&#92;partial V}{&#92;partial z} &#92;] &lt;/p&gt;
                   &lt;p&gt; The simplest homogeneous partial differential equation involving the Laplacian: &#92;[ &#92;nabla^2 V = 0 &#92;] is called Laplace&#39;s equation. The inhomogeneous version: &#92;[ &#92;nabla^2 V = f(&#92;mathbf{r}) &#92;] is known as Poisson&#39;s equation. There are many important techniques for solving these equations that are beyond the scope of this text. &lt;/p&gt;
