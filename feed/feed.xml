@@ -9304,7 +9304,8 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 		<updated>2023-07-15T17:00:00-07:00</updated>
 		<id>https://ischmidls.github.io/posts/curvilinear%20vector%20differentials/</id>
 		<content type="html">
-		  &lt;h3&gt;table of contents&lt;/h3&gt;
+		  &lt;div class=&quot;container&quot; id=&quot;bsr-wrapper&quot;&gt;
+&lt;h3&gt;table of contents&lt;/h3&gt;
 &lt;ol&gt;
     &lt;li&gt;&lt;a href=&quot;#the-vector-differential-drr&quot;&gt;vector differential&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#coord&quot;&gt;vector differential  in other coordinate systems&lt;/a&gt;&lt;/li&gt;
@@ -9317,11 +9318,107 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
     &lt;li&gt;&lt;a href=&quot;#surface&quot;&gt;surface&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#cross-prod&quot;&gt;a bigger better cross product&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#gen-surf&quot;&gt;general surface&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#flux&quot;&gt;flux&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#flux&quot;&gt;flux&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;#symm&quot;&gt;to symmetry or not to symmetry&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#spheres&quot;&gt;spheres&lt;/a&gt;&lt;/li&gt;
+
+    &lt;li&gt;&lt;a href=&quot;#parametric&quot;&gt;parametric&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#scalar-surface&quot;&gt;scalar surface integrals&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#function-graphs&quot;&gt;function graphs&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#triple-product&quot;&gt;triple product&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#volume-integrals&quot;&gt;volume integrals&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#change-of-variables&quot;&gt;change of variables&lt;/a&gt;&lt;/li&gt;
+
+    &lt;li&gt;&lt;a href=&quot;#divergence&quot;&gt;divergence&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#divergence-theorem&quot;&gt;the divergence theorem&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#divergence-curvilinear&quot;&gt;the divergence in curvilinear coordinates&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#curl&quot;&gt;curl&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#geometry-curl&quot;&gt;the geometry of curl&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#formulas-div-grad-curl&quot;&gt;formulas for div, grad, curl&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#stokes-theorem&quot;&gt;stokes&#39; theorem&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#visualizing-divergence-curl&quot;&gt;visualizing divergence and curl&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#product-rules&quot;&gt;product rules&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#integration-parts&quot;&gt;integration by parts&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#second-derivatives&quot;&gt;second derivatives&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#laplacian&quot;&gt;the laplacian&lt;/a&gt;&lt;/li&gt;
+
+    &lt;!-- &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/li&gt; --&gt;
 &lt;/ol&gt;
+
+
+&lt;p&gt;Before the steady descent, I would like to provide a glimpse of the sea floor from an answer I gave while braving the wilds of Stack Exchange.&lt;/p&gt;
+
+&lt;p&gt;Here is the transcription of that post:&lt;/p&gt;
+
+&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+    &lt;p&gt;While Grant Sanderson gives intuitive explanations of each of these theorems in his &lt;a href=&quot;https://www.youtube.com/watch?v=TrcCbdWwCBc&amp;amp;list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&amp;amp;pp=iAQB&quot;&gt;Multivariable Calculus&lt;/a&gt; series on YouTube, I thank Prof. Rick Presman for his exposition of the &lt;a href=&quot;https://math.uchicago.edu/~may/REU2012/REUPapers/Presman.pdf&quot;&gt;Generalized Stokes’ Theorem&lt;/a&gt;, and also Prof. Oliver Knill for his exposition via &lt;a href=&quot;https://people.math.harvard.edu/~knill/teaching/summer2020/handouts/lecture25.pdf&quot;&gt;Calculus in four dimensions&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;And, Aleph Naught’s videos: &lt;a href=&quot;https://www.youtube.com/watch?v=1lGM5DEdMaw&quot;&gt;Stokes’ Theorem on Manifolds&lt;/a&gt; and &lt;a href=&quot;https://www.youtube.com/watch?v=2ptFnIj71SM&quot;&gt;The derivative isn’t what you think it is&lt;/a&gt; give intuition as to the Generalized Stokes’ Theorem and perhaps differential geometry more broadly. &lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Here is the gist of Prof. Knill’s exposition on generalized integration and, in turn, Stokes’ Theorem.&lt;/p&gt;
+&lt;p&gt;
+  &lt;em&gt;Note: Prof. Knill does not discuss chains, as this is made for students of multivariable calculus.&lt;/em&gt;
+&lt;/p&gt;
+&lt;p&gt;First, the ladder from &lt;span class=&quot;math inline&quot;&gt;&#92;(1&#92;)&lt;/span&gt;-d to &lt;span class=&quot;math inline&quot;&gt;&#92;(4&#92;)&lt;/span&gt;-d. &lt;/p&gt;
+&lt;p&gt;In two dimensions, we see: the line integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;int_{a}^{b} &#92;mathbf{F}(&#92;mathbf{r}(t)) &#92;cdot &#92;mathbf{r}&amp;#39;(t) &#92;, dt&#92;)&lt;/span&gt; and the double integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;iint_{G} f(u, v) &#92;, du &#92;, dv&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;In three dimensions, in addition to the line integral, we have the flux integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;iint_{G} &#92;mathbf{F}(&#92;mathbf{r}(u, v)) &#92;cdot (&#92;mathbf{r}_u &#92;times &#92;mathbf{r}_v) &#92;, du &#92;, dv&#92;)&lt;/span&gt; and the triple integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;iiint_{G} f(u, v, w) &#92;, du &#92;, dv &#92;, dw&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;To express these integrals using differential forms, we can consider forms with one component for simplicity, but it is straightforward to extend to sums by linearity.&lt;/p&gt;
+&lt;p&gt;I cannot make Prof. Knill’s exposition and notation here more concise:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;For a &lt;span class=&quot;math inline&quot;&gt;&#92;(1&#92;)&lt;/span&gt;-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F = A &#92;, dx&#92;)&lt;/span&gt;, we integrate &lt;span class=&quot;math display&quot;&gt;&#92;[ &#92;int_{a}^{b} A(&#92;mathbf{r}(u)) &#92;, x&amp;#39;(u) &#92;, du. &#92;]&lt;/span&gt;
+  &lt;/p&gt;
+  &lt;p&gt;For a &lt;span class=&quot;math inline&quot;&gt;&#92;(2&#92;)&lt;/span&gt;-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F = A &#92;, dx &#92;, dy&#92;)&lt;/span&gt;, we integrate &lt;span class=&quot;math display&quot;&gt;&#92;[ &#92;iint_{G} A(&#92;mathbf{r}(u, v)) &#92;det &#92;left(&#92;begin{array}{cc} (&#92;mathbf{r}_u)_1 &amp;amp; (&#92;mathbf{r}_v)_1 &#92;&#92; (&#92;mathbf{r}_u)_2 &amp;amp; (&#92;mathbf{r}_v)_2 &#92;&#92; &#92;end{array}&#92;right) &#92;, du &#92;, dv. &#92;]&lt;/span&gt;
+  &lt;/p&gt;
+  &lt;p&gt;For a &lt;span class=&quot;math inline&quot;&gt;&#92;(3&#92;)&lt;/span&gt;-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F = A &#92;, dx &#92;, dy &#92;, dz&#92;)&lt;/span&gt;, we integrate &lt;span class=&quot;math display&quot;&gt;&#92;[ &#92;iiint_{G} A(&#92;mathbf{r}(u, v, w)) &#92;det &#92;left(&#92;begin{array}{ccc} (&#92;mathbf{r}_u)_1 &amp;amp; (&#92;mathbf{r}_v)_1 &amp;amp; (&#92;mathbf{r}_w)_1 &#92;&#92; (&#92;mathbf{r}_u)_2 &amp;amp; (&#92;mathbf{r}_v)_2 &amp;amp; (&#92;mathbf{r}_w)_2 &#92;&#92; (&#92;mathbf{r}_u)_3 &amp;amp; (&#92;mathbf{r}_v)_3 &amp;amp; (&#92;mathbf{r}_w)_3 &#92;&#92; &#92;end{array}&#92;right) &#92;, du &#92;, dv &#92;, dw. &#92;]&lt;/span&gt;
+  &lt;/p&gt;
+  &lt;p&gt;This determinant is the triple scalar product of the three column vectors. So, we can still work in principle without having seen any linear algebra course.&lt;/p&gt;
+  &lt;p&gt;For example, for &lt;span class=&quot;math inline&quot;&gt;&#92;(F = B &#92;, dy&#92;)&lt;/span&gt;, we would compute the line integral as &lt;span class=&quot;math display&quot;&gt;&#92;[ &#92;int_{a}^{b} B(&#92;mathbf{r}(u)) &#92;, y&amp;#39;(u) &#92;, du. &#92;]&lt;/span&gt;
+  &lt;/p&gt;
+  &lt;p&gt;And for &lt;span class=&quot;math inline&quot;&gt;&#92;(F = A &#92;, dx &#92;, dz &#92;, dt&#92;)&lt;/span&gt;, we would compute the hyper flux as &lt;span class=&quot;math display&quot;&gt;&#92;[ &#92;iiint_{G} A(&#92;mathbf{r}(u, v, w)) &#92;det &#92;left(&#92;begin{array}{ccc} (&#92;mathbf{r}_u)_1 &amp;amp; (&#92;mathbf{r}_v)_1 &amp;amp; (&#92;mathbf{r}_w)_1 &#92;&#92; (&#92;mathbf{r}_u)_3 &amp;amp; (&#92;mathbf{r}_v)_3 &amp;amp; (&#92;mathbf{r}_w)_3 &#92;&#92; (&#92;mathbf{r}_u)_4 &amp;amp; (&#92;mathbf{r}_v)_4 &amp;amp; (&#92;mathbf{r}_w)_4 &#92;&#92; &#92;end{array}&#92;right) &#92;, du &#92;, dv &#92;, dw. &#92;]&lt;/span&gt;
+  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F&#92;)&lt;/span&gt; assigns, to each point &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{x}&#92;)&lt;/span&gt;, a &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-linear anti-symmetric map. It can be represented as &lt;span class=&quot;math inline&quot;&gt;&#92;(F(&#92;mathbf{x}) &#92;cdot (&#92;mathbf{v}_1, &#92;ldots, &#92;mathbf{v}_k)&#92;)&lt;/span&gt;, which yields a number. The maps &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{v}_j &#92;mapsto F(&#92;mathbf{x}) &#92;cdot (&#92;mathbf{v}_1, &#92;ldots, &#92;mathbf{v}_k)&#92;)&lt;/span&gt; are linear, and for any pair &lt;span class=&quot;math inline&quot;&gt;&#92;(i&#92;)&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;&#92;(j&#92;)&lt;/span&gt;, we have &lt;span class=&quot;math inline&quot;&gt;&#92;(F(&#92;mathbf{x}) &#92;cdot (&#92;mathbf{v}_1, &#92;ldots, &#92;mathbf{v}_i, &#92;mathbf{v}_j, &#92;ldots, &#92;mathbf{v}_k) = -F(&#92;mathbf{x}) &#92;cdot (&#92;mathbf{v}_1, &#92;ldots, &#92;mathbf{v}_j, &#92;mathbf{v}_i, &#92;ldots, &#92;mathbf{v}_k)&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;Let &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{r}: G &#92;rightarrow &#92;mathbf{r}(G)&#92;)&lt;/span&gt; be a parametrization, where &lt;span class=&quot;math inline&quot;&gt;&#92;(G&#92;)&lt;/span&gt; is a &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-dimensional region mapped into &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{R}^4&#92;)&lt;/span&gt;. We can assign to each point &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{x} = &#92;mathbf{r}(&#92;mathbf{u})&#92;)&lt;/span&gt; the number &lt;span class=&quot;math inline&quot;&gt;&#92;(F(&#92;mathbf{x}) &#92;, d&#92;mathbf{u} = F(&#92;mathbf{x}) &#92;cdot (&#92;mathbf{r}_u^1, &#92;ldots, &#92;mathbf{r}_u^k)&#92;)&lt;/span&gt;. The flux of the &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-form through the &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-surface &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{r}(G)&#92;)&lt;/span&gt; is then defined as &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;int_{G} F(&#92;mathbf{r}(&#92;mathbf{u})) &#92;cdot d&#92;mathbf{u}&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;A &lt;span class=&quot;math inline&quot;&gt;&#92;(1&#92;)&lt;/span&gt;-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F=A &#92; dx&#92;)&lt;/span&gt;, gives a line integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;int_{a}^{b} F(&#92;mathbf{r}(t)) &#92;cdot &#92;mathbf{r}&amp;#39;(t) &#92;, dt&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;A &lt;span class=&quot;math inline&quot;&gt;&#92;(2&#92;)&lt;/span&gt;-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F=A &#92; dx &#92; dy&#92;)&lt;/span&gt;, gives a flux integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;iint_{G} F(&#92;mathbf{r}(u, v)) &#92;cdot (&#92;mathbf{r}_u, &#92;mathbf{r}_v) &#92;, du &#92;, dv&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;A &lt;span class=&quot;math inline&quot;&gt;&#92;(3&#92;)&lt;/span&gt;-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F=A &#92; dx &#92; dy &#92; dt&#92;)&lt;/span&gt;, gives a hyper flux integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;iiint_{G} F(&#92;mathbf{r}(u, v, w)) &#92;cdot (&#92;mathbf{r}_u, &#92;mathbf{r}_v, &#92;mathbf{r}_w) &#92;, du &#92;, dv &#92;, dw&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;A &lt;span class=&quot;math inline&quot;&gt;&#92;(4&#92;)&lt;/span&gt;-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F = A &#92; dx &#92;, dy &#92;, dz &#92;, dt&#92;)&lt;/span&gt;, gives a volume integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;iint &#92;iint_{G} F(x, y, z, t) &#92;, dx &#92;, dy &#92;, dz &#92;, dt&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Now, &lt;span class=&quot;math inline&quot;&gt;&#92;(4&#92;)&lt;/span&gt;-d to &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-d &lt;/p&gt;
+&lt;p&gt;In four dimensions, we have four integral theorems.&lt;/p&gt;
+&lt;p&gt;The fundamental theorem of line integrals:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+  &lt;span class=&quot;math display&quot;&gt;&#92;[&#92;int_a^b df(&#92;mathbf{r}(t)) &#92;cdot &#92;frac{d&#92;mathbf{r}}{dt}(u) &#92;, du = f(&#92;mathbf{r}(b)) - f(&#92;mathbf{r}(a))&#92;]&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;Stokes’ theorem for a region &lt;span class=&quot;math inline&quot;&gt;&#92;(G&#92;)&lt;/span&gt; with boundary &lt;span class=&quot;math inline&quot;&gt;&#92;(C&#92;)&lt;/span&gt;: &lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+  &lt;span class=&quot;math display&quot;&gt;&#92;[&#92;iint_G d&#92;mathbf{F}(&#92;mathbf{r}(u, v)) &#92;cdot &#92;left(&#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial u}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial v}&#92;right) &#92;, dudv = &#92;int_C &#92;mathbf{F}(&#92;mathbf{r}(u)) &#92;cdot &#92;frac{d&#92;mathbf{r}}{du}(u) &#92;, du&#92;]&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;The hyper Stokes’ theorem:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+  &lt;span class=&quot;math display&quot;&gt;&#92;[&#92;iiint_G d&#92;mathbf{F}(&#92;mathbf{r}(u, v, w)) &#92;cdot &#92;left(&#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial u}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial v}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial w}&#92;right) &#92;, dudvdw = &#92;iint_{&#92;delta G} &#92;mathbf{F}(&#92;mathbf{r}(u, v)) &#92;cdot &#92;left(&#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial u}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial v}&#92;right) &#92;, dudv&#92;]&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;The divergence theorem:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+  &lt;span class=&quot;math display&quot;&gt;&#92;[&#92;iint &#92;iint_G d&#92;mathbf{F}(&#92;mathbf{x, y, z, t}) &#92;, dxdydzdt = &#92;iiint_{&#92;delta G} &#92;mathbf{F}(&#92;mathbf{r}(u, v, w)) &#92;cdot &#92;left(&#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial u}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial v}, &#92;frac{&#92;partial&#92;mathbf{r}}{&#92;partial w}&#92;right) &#92;, dudvdw&#92;]&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;All these integral theorems fall under:&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;
+  &lt;span class=&quot;math display&quot;&gt;&#92;[&#92;int_G d&#92;mathbf{F} = &#92;int_{&#92;delta G} &#92;mathbf{F}&#92;]&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;where &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbf{F}&#92;)&lt;/span&gt; is a &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-form and &lt;span class=&quot;math inline&quot;&gt;&#92;(G&#92;)&lt;/span&gt; is a &lt;span class=&quot;math inline&quot;&gt;&#92;((k - 1)&#92;)&lt;/span&gt;-dimensional surface. &lt;/p&gt;
+&lt;p&gt;The 4-dimensional framework extends to higher dimensions with more variables and larger determinant matrices. Confusion arises in 2 and 3 dimensions due to the identification of different spaces, attempting to fuse ideas that 4-d shows to be distinct.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Since Prof. Knill’s exposition of Stokes’ theorem relies on forms and exterior derivatives, here’s some of his exposition on those.&lt;/p&gt;
+&lt;p&gt;Differential forms relate to graphs &lt;span class=&quot;math inline&quot;&gt;&#92;((V, E)&#92;)&lt;/span&gt; with vertices &lt;span class=&quot;math inline&quot;&gt;&#92;(V&#92;)&lt;/span&gt; and edges &lt;span class=&quot;math inline&quot;&gt;&#92;(E&#92;)&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-cliques represent fully connected groups, and a &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-form &lt;span class=&quot;math inline&quot;&gt;&#92;(F&#92;)&lt;/span&gt; is a function on oriented &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-cliques. The boundary &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;delta x&#92;)&lt;/span&gt; of a clique &lt;span class=&quot;math inline&quot;&gt;&#92;(x&#92;)&lt;/span&gt; consists of compatible subcliques obtained by removing one member, with dimensions determined by the number of members minus one. E.g. a triangle &lt;span class=&quot;math inline&quot;&gt;&#92;(x = (a, b, c)&#92;)&lt;/span&gt;, its boundary &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;delta x&#92;)&lt;/span&gt; includes three 1-dimensional edges &lt;span class=&quot;math inline&quot;&gt;&#92;((b, c), (c, a), (a, b)&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;The exterior derivative &lt;span class=&quot;math inline&quot;&gt;&#92;(df(x)&#92;)&lt;/span&gt; sums up values of &lt;span class=&quot;math inline&quot;&gt;&#92;(f&#92;)&lt;/span&gt; on the boundary &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;delta x&#92;)&lt;/span&gt;. Stokes’ theorem holds: &lt;span class=&quot;math inline&quot;&gt;&#92;(df(x) = f(&#92;delta x)&#92;)&lt;/span&gt;. A &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-dimensional surface &lt;span class=&quot;math inline&quot;&gt;&#92;(G&#92;)&lt;/span&gt; consists of oriented &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-dimensional cliques. The integral &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;int_G F&#92;)&lt;/span&gt; represents the &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-dimensional flux. Stokes’ theorem simplifies to &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;int_G dF = &#92;int_{&#92;delta G} F&#92;)&lt;/span&gt;. The space of &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-forms is &lt;span class=&quot;math inline&quot;&gt;&#92;(f_k&#92;)&lt;/span&gt;-dimensional ( &lt;span class=&quot;math inline&quot;&gt;&#92;(f_k&#92;)&lt;/span&gt; is the number of &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt;-dimensional cliques). The exterior derivatives are represented by matrices &lt;span class=&quot;math inline&quot;&gt;&#92;(d_k&#92;)&lt;/span&gt;. The overall exterior derivative is a matrix &lt;span class=&quot;math inline&quot;&gt;&#92;(d= &#92;sum_{k=0}^{d} f_k&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;E.g. the Dirac operator is &lt;span class=&quot;math inline&quot;&gt;&#92;(D = d + d^*&#92;)&lt;/span&gt;, and the Laplacian is &lt;span class=&quot;math inline&quot;&gt;&#92;(L = D^2 = d^*d + dd^*&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;That is a summary of the clearest exposition of the generalized Stokes’ Theorem I have found. I recommend reading Prof. Knill’s article linked above. He goes on to very briefly relate PDE’s, which Prof. Steve Brunton does well in his &lt;a href=&quot;https://www.youtube.com/watch?v=Jt5R-Tm8cV8&amp;amp;list=PLMrJAkhIeNNQromC4WswpU1krLOq5Ro6S&amp;amp;pp=iAQB&quot;&gt;YouTube Series&lt;/a&gt;. &lt;/p&gt;
+
+        &lt;p&gt;&lt;a href=&quot;https://math.stackexchange.com/a/4723186/1098426&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
+
+&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
+
 &lt;p&gt;This time I am pulling from the lovely Oregon State &lt;b&gt;&lt;a href=&quot;https://sites.science.oregonstate.edu/math/BridgeBook/&quot;&gt;Bridge Book&lt;/a&gt;&lt;/b&gt;. It was written
  by Tevian Dray and Corinne A. Manogue circa 2009&amp;mdash;2015 and funded by the National Science Foundation. &lt;/p&gt;
 
@@ -10024,8 +10121,444 @@ abc - acb + bca - bac - cab + cba
                 &lt;p&gt;
                 We compute the flux of the axially symmetric vector field &#92;(&#92;mathbf{F} = r&#92;,&#92;mathbf{&#92;hat{r}} = x&#92;,&#92;mathbf{&#92;hat{x}} + y&#92;,&#92;mathbf{&#92;hat{y}}&#92;) &quot;outwards&quot; through the part of the paraboloid &#92;(z=r^2&#92;) lying below the plane &#92;(z=4&#92;). The first thing we need is the formula for &#92;(d&#92;mathbf{r}&#92;) in cylindrical coordinates, which is a straightforward generalization  in polar coordinates, namely &#92;begin{equation} d&#92;mathbf{r} = dr&#92;,&#92;mathbf{&#92;hat{r}} + r&#92;,d&#92;phi&#92;,&#92;mathbf{&#92;hat{&#92;phi}} + dz&#92;,&#92;mathbf{&#92;hat{z}} &#92;label{dr3} &#92;end{equation}
                 &lt;/p&gt;
-                &lt;h3 id=&quot;&quot;&gt;&lt;/h3&gt;
-        &lt;p&gt;Tevian Dray and Corinne A. Manogue&lt;/p&gt;
+                &lt;h3 id=&quot;spheres&quot;&gt;spheres&lt;/h3&gt;
+        &lt;p&gt;Tevian Dray and Corinne A. Manogue have done it again.&lt;/p&gt;
+
+        &lt;p&gt;
+            Surprisingly, it often turns out to be simpler to solve problems involving spheres by working in cylindrical coordinates. We indicate here one of the reasons for this.
+            &lt;/p&gt;
+            
+            &lt;p&gt;
+            The equation of a sphere of radius &#92;(a&#92;) in cylindrical coordinates is &lt;a href=&quot;#fn__1&quot; name=&quot;fnt__1&quot; id=&quot;fnt__1&quot; class=&quot;fn_top&quot;&gt;1)&lt;/a&gt; &#92;begin{equation} r^2 + z^2 = a^2 &#92;end{equation} so that &#92;begin{equation} 2r&#92;,dr + 2z&#92;,dz = 0 &#92;label{Spherecyl} &#92;end{equation} Proceeding as for the paraboloid, we take &#92;begin{align} d&#92;mathbf{r}_1 &amp;= r&#92;,d&#92;phi&#92;,&#92;mathbf{&#92;hat{&#92;phi}} &#92;&#92; d&#92;mathbf{r}_2 &amp;= dr&#92;,&#92;mathbf{&#92;hat{r}} + dz&#92;,&#92;mathbf{&#92;hat{z}} = &#92;left(-&#92;frac{z}{r}&#92;,&#92;mathbf{&#92;hat{r}} + &#92;mathbf{&#92;hat{z}}&#92;right) dz &#92;label{drdz} &#92;end{align} where we now view &#92;(r&#92;) as a function of &#92;(z&#92;). We therefore have &#92;begin{equation} d&#92;mathbf{S} = d&#92;mathbf{r}_1 &#92;times d&#92;mathbf{r}_2 = (r&#92;,&#92;mathbf{&#92;hat{r}} + z&#92;,&#92;mathbf{&#92;hat{z}})&#92;,d&#92;phi&#92;,dz &#92;end{equation} which results finally in &#92;begin{equation} dS = |d&#92;mathbf{S}| = a&#92;,d&#92;phi&#92;,dz &#92;end{equation} The surface element of a sphere is therefore the same as that of the cylinder of the same radius! Among other things, this means that projecting the Earth outward onto a cylinder is an equal-area projection, which is useful for cartographers.
+            &lt;/p&gt;
+
+            &lt;h3&gt;&lt;a name=&quot;parametric&quot; id=&quot;parametric&quot;&gt;parametric&lt;/a&gt;&lt;/h3&gt;
+            &lt;p&gt;You guessed it: another great take from Tevian Dray and Corinne A. Manogue.&lt;/p&gt;
+            &lt;p&gt;
+                The traditional approach to curves and surfaces involves parameterization, which we have deliberately saved for last. Recall that a parametric curve can be written &#92;( &#92;vec{r} = &#92;vec{r}(u) = x(u)&#92;,&#92;hat{x} + y(u)&#92;,&#92;hat{y} + z(u)&#92;,&#92;hat{z} &#92;) together with an appropriate domain for the parameter &#92;( u &#92;).  A &lt;em&gt;parametric surface&lt;/em&gt; is similar, except there are now two parameters &#92;( u &#92;), &#92;( v &#92;) (and an appropriate domain): &#92;( &#92;vec{r} = &#92;vec{r}(u,v) = x(u,v)&#92;,&#92;hat{x} + y(u,v)&#92;,&#92;hat{y} + z(u,v)&#92;,&#92;hat{z} &#92;)
+                &lt;/p&gt;
+                
+                &lt;p&gt;
+                Here are some examples of parametric surfaces (without domains):
+                &#92;[
+                &#92;begin{align*}
+                &#92;text{sphere}: &#92;quad &amp; &#92;vec{r}(&#92;theta,&#92;phi) =  a&#92;sin&#92;theta&#92;cos&#92;phi&#92;,&#92;hat{x} + a&#92;sin&#92;theta&#92;sin&#92;phi&#92;,&#92;hat{y}  + a&#92;cos&#92;theta&#92;,&#92;hat{z} &#92;&#92;
+                &#92;text{cylinder}: &#92;quad &amp; &#92;vec{r}(&#92;phi,z) =  a&#92;cos&#92;phi&#92;,&#92;hat{x} + a&#92;sin&#92;phi&#92;,&#92;hat{y} + z&#92;,&#92;hat{z} &#92;&#92;
+                z=f(x,y): &#92;quad &amp; &#92;vec{r}(x,y) = x&#92;,&#92;hat{x} + y&#92;,&#92;hat{y} + f(x,y)&#92;,&#92;hat{z} &#92;&#92;
+                z=f(r,&#92;phi): &#92;quad &amp; &#92;vec{r}(r,&#92;phi) =  r&#92;cos&#92;phi&#92;,&#92;hat{x} + r&#92;sin&#92;phi&#92;,&#92;hat{y} + f(r,&#92;phi)&#92;,&#92;hat{z} &#92;&#92;
+                &#92;text{surface of revolution}: &#92;quad &amp; &#92;vec{r}(x,&#92;phi) =  x&#92;,&#92;hat{x} + f(x)&#92;cos&#92;phi&#92;,&#92;hat{y} + f(x)&#92;sin&#92;phi&#92;,&#92;hat{z} &#92;&#92;
+                &#92;text{change of variables}: &#92;quad &amp; &#92;vec{r}(u,v) = x(u,v)&#92;,&#92;hat{x} + y(u,v)&#92;,&#92;hat{y}
+                &#92;end{align*}
+                &#92;]
+                &lt;/p&gt;
+                
+                &lt;p&gt;
+                Recall further that for a parametric curve we have &#92;( d&#92;vec{r} = &#92;frac{d&#92;vec{r}}{du} &#92;,du &#92;). On a parametric surface it is natural to construct &#92;( d&#92;textbf{S} &#92;) using curves of constant parameter.  But along a curve with &#92;( v=&#92;text{constant} &#92;), we have &#92;( d&#92;vec{r}_1 = &#92;frac{&#92;partial&#92;vec{r}}{&#92;partial u} &#92;,du &#92;) and similarly along a curve with &#92;( u=&#92;text{constant} &#92;) we have &#92;( d&#92;vec{r}_2 = &#92;frac{&#92;partial&#92;vec{r}}{&#92;partial v} &#92;,dv &#92;). Thus,
+                &#92;[
+                d&#92;textbf{S}   = d&#92;vec{r}_1&#92;times d&#92;vec{r}_2   = &#92;left(&#92;frac{&#92;partial&#92;vec{r}}{&#92;partial u} &#92;times &#92;frac{&#92;partial&#92;vec{r}}{&#92;partial v}&#92;right) &#92;,du&#92;,dv
+                &#92;]
+                and
+                &#92;[
+                dS   = |d&#92;textbf{S}|   = &#92;left| &#92;frac{&#92;partial&#92;vec{r}}{&#92;partial u} &#92;times &#92;frac{&#92;partial&#92;vec{r}}{&#92;partial v} &#92;right| &#92;,du &#92;, dv
+                &#92;]
+                These formulas can be found in most calculus texts, and may help to relate our approach to the more traditional one.
+                &lt;/p&gt;
+                
+                &lt;p&gt;
+                However, expression (1) of &amp;sect; &lt;a href=&quot;https://ischmidls.github.io/posts/curvilinear%20vector%20differentials/davec.html&quot; class=&quot;wikilink1&quot; title=&quot;book:math:davec&quot;&gt;Surface Elements&lt;/a&gt; for &#92;( d&#92;textbf{S} &#92;) makes no reference to the parameters!  In fact, &#92;( d&#92;textbf{S} &#92;) can be computed using &lt;em&gt;any&lt;/em&gt; two (independent) infinitesimal displacements in the surface; no parameterization is needed!  You will have to decide for yourself which approach you prefer.  But real-world problems rarely come equipped with parameterizations, unlike those found in calculus texts.  We reiterate that it is not always necessary to have an explicit parameterization in order to determine the surface element, as illustrated by our computation for the paraboloid in &amp;sect; &lt;a href=&quot;https://ischmidls.github.io/posts/curvilinear%20vector%20differentials/losym.html&quot; class=&quot;wikilink1&quot; title=&quot;book:math:losym&quot;&gt;Less Symmetric Surfaces&lt;/a&gt;.
+                &lt;/p&gt;
+                
+            
+                &lt;h3&gt;&lt;a name=&quot;scalar-surface&quot; id=&quot;scalar-surface&quot;&gt;Scalar Surface Integrals&lt;/a&gt;&lt;/h3&gt;
+                &lt;p&gt;It should never be doubted whether Tevian Dray and Corinne A. Manogue can succeed.&lt;/p&gt;
+                
+                &lt;p&gt;
+                Consider again the example in &amp;sect; &lt;a href=&quot;https://ischmidls.github.io/posts/curvilinear%20vector%20differentials/flux.html&quot; class=&quot;wikilink1&quot; title=&quot;book:math:flux&quot;&gt;Flux&lt;/a&gt;, which involved the part of the plane &#92;(x+y+z=1&#92;) which lies in the first quadrant. Suppose you want to find the average height of this triangular region above the &#92;(xy&#92;)-plane. To do this, chop the surface into small pieces, each at height &#92;(z=1-x-y&#92;). In order to compute the average height, we need to find 
+                &#92;[
+                &#92;text{avg height} = &#92;frac{1}{&#92;text{area}} &#92;int z &#92;,dS
+                &#92;]
+                where the total area of the surface can be found either as 
+                &#92;[
+                &#92;text{area} = &#92;int dS
+                &#92;]
+                or from simple geometry. So we need to determine &#92;(dS&#92;). But we already know &#92;(d&#92;mathbf{S}&#92;) for this surface from (5) of &amp;sect; &lt;a href=&quot;https://ischmidls.github.io/posts/curvilinear%20vector%20differentials/flux.html&quot; class=&quot;wikilink1&quot; title=&quot;book:math:flux&quot;&gt;Flux&lt;/a&gt;! It is therefore straightforward to compute 
+                &#92;[
+                dS = |d&#92;mathbf{S}| = |&#92;mathbf{n} &#92;cdot d&#92;mathbf{S}| = |&#92;mathbf{n}| &#92;,dS = &#92;sqrt{3} &#92;,dS
+                &#92;]
+                and therefore 
+                &#92;[
+                &#92;text{avg height} = &#92;frac{1}{&#92;sqrt{3}/2} &#92;int_0^1 &#92;int_0^{1-x} (1-x-y) &#92;sqrt{3} &#92;,dy &#92;,dx = &#92;frac{1}{3}
+                &#92;]
+                &lt;/p&gt;
+                
+                &lt;h3&gt;&lt;a name=&quot;function-graphs&quot; id=&quot;function-graphs&quot;&gt;Function Graphs&lt;/a&gt;&lt;/h3&gt;
+                &lt;p&gt;Yes, please, more insight from Tevian Dray and Corinne A. Manogue.&lt;/p&gt;
+                
+                &lt;p&gt;
+                We can apply these techniques to surfaces which are the graphs of functions. Suppose &#92;(z=f(x,y)&#92;). We slice the surface using curves along which either &#92;(y&#92;) is constant or &#92;(x&#92;) is constant. Since 
+                &#92;[dz = df = &#92;frac{&#92;partial f}{&#92;partial x}&#92;,dx + &#92;frac{&#92;partial f}{&#92;partial y}&#92;,dy&#92;]
+                we obtain 
+                &#92;[
+                d&#92;mathbf{r}_1 = dx&#92;,&#92;mathbf{&#92;hat{x}} + dz&#92;,&#92;mathbf{&#92;hat{z}} = &#92;left(&#92;mathbf{&#92;hat{x}} + &#92;frac{&#92;partial f}{&#92;partial x}&#92;,&#92;mathbf{&#92;hat{z}}&#92;right)dx
+                &#92;]
+                &#92;[
+                d&#92;mathbf{r}_2 = dy&#92;,&#92;mathbf{&#92;hat{y}} + dz&#92;,&#92;mathbf{&#92;hat{z}} = &#92;left(&#92;mathbf{&#92;hat{y}} + &#92;frac{&#92;partial f}{&#92;partial y}&#92;,&#92;mathbf{&#92;hat{z}}&#92;right)dy
+                &#92;]
+                so that 
+                &#92;[
+                d&#92;mathbf{S} = d&#92;mathbf{r}_1&#92;times d&#92;mathbf{r}_2 = &#92;left( -&#92;frac{&#92;partial f}{&#92;partial x}&#92;,&#92;mathbf{&#92;hat{x}} - &#92;frac{&#92;partial f}{&#92;partial y}&#92;,&#92;mathbf{&#92;hat{y}} + &#92;mathbf{&#92;hat{z}} &#92;right) &#92;,dx&#92;,dy
+                &#92;]
+                &lt;/p&gt;
+                
+                &lt;p&gt;
+                Similarly, if a scalar surface integral is needed, we can compute 
+                &#92;[
+                dS = |d&#92;mathbf{S}| = &#92;sqrt{1+&#92;left(&#92;frac{&#92;partial f}{&#92;partial x}&#92;right)^2+&#92;left(&#92;frac{&#92;partial f}{&#92;partial y}&#92;right)^2}&#92;,dx&#92;,dy
+                &#92;]
+                &lt;/p&gt;
+                
+                &lt;p&gt;
+                You can find these formulas for &#92;(d&#92;mathbf{S}&#92;) and &#92;(dS&#92;) in most textbooks on vector calculus.
+                &lt;/p&gt;
+                
+                
+                &lt;h3&gt;
+                    &lt;a name=&quot;triple-product&quot; id=&quot;triple-product&quot;&gt;Triple Product&lt;/a&gt;
+                &lt;/h3&gt;
+                &lt;p&gt;One might wonder whether Tevian Dray and Corinne A. Manogue have ever missed.&lt;/p&gt;
+                &lt;p&gt;
+                Just as a &lt;em&gt;parallelogram&lt;/em&gt; is the region in the plane spanned by 2 vectors, a &lt;em&gt;parallelepiped&lt;/em&gt; is the region in space spanned by 3 vectors. Each side of a parallelepiped is therefore a parallelogram.
+                &lt;/p&gt;
+                &lt;p&gt;
+                What is the volume of a parallelepiped? The area of its base times its height. But the &lt;em&gt;base&lt;/em&gt; of a parallelepiped is a parallelogram, and the area of a parallelogram is just the magnitude of the cross product of its vector sides. The &lt;em&gt;height&lt;/em&gt; of a parallelepiped must be measured perpendicular to the base, which is the same direction (up to sign) as that of the cross product just computed. Thus, the height of a parallelepiped is just the projection of the remaining side onto the direction of the cross product, and projections are accomplished by taking a dot product. This construction is illustrated in Figure 1. Putting this all together, the (signed) volume &#92;(V&#92;) of a parallelepiped spanned by the vectors &#92;(&#92;mathbf{u}&#92;), &#92;(&#92;mathbf{v}&#92;), &#92;(&#92;mathbf{w}&#92;) is given by the &lt;em&gt;(scalar) triple product&lt;/em&gt;
+                &#92;[
+                V = (&#92;mathbf{u}&#92;times&#92;mathbf{v})&#92;cdot&#92;mathbf{w}
+                &#92;]
+                which is positive if &#92;(&#92;{&#92;mathbf{u},&#92;mathbf{v},&#92;mathbf{w}&#92;}&#92;) are right-handed, and negative otherwise.
+                &lt;/p&gt;
+                &lt;p&gt;
+                The geometric argument used in the above construction shows that the volume, and hence the triple product, is independent (up to sign) of the order of the vectors used to define it. Taking signs into account, we have:
+                &#92;[
+                (&#92;mathbf{u}&#92;times&#92;mathbf{v})&#92;cdot&#92;mathbf{w} = (&#92;mathbf{v}&#92;times&#92;mathbf{w})&#92;cdot&#92;mathbf{u} = (&#92;mathbf{w}&#92;times&#92;mathbf{u})&#92;cdot&#92;mathbf{v}
+                &#92;]
+                with the other three orderings differing by a minus sign. The three orderings &#92;(&#92;{&#92;mathbf{u},&#92;mathbf{v},&#92;mathbf{w}&#92;}&#92;), &#92;(&#92;{&#92;mathbf{v},&#92;mathbf{w},&#92;mathbf{u}&#92;}&#92;), &#92;(&#92;{&#92;mathbf{w},&#92;mathbf{u},&#92;mathbf{v}&#92;}&#92;) are called &lt;em&gt;cyclic&lt;/em&gt; permutations of each other; if one is right-handed, they are all right-handed. Note also that
+                &#92;[
+                &#92;mathbf{w}&#92;cdot(&#92;mathbf{u}&#92;times&#92;mathbf{v}) = (&#92;mathbf{u}&#92;times&#92;mathbf{v})&#92;cdot&#92;mathbf{w} = (&#92;mathbf{w}&#92;times&#92;mathbf{u})&#92;cdot&#92;
+                
+                mathbf{v}
+                &#92;]
+                so that it doesn&#39;t matter whether the dot product is at the beginning or at the end. The cyclic nature of the triple product is summarized symbolically in Figure 2: So long as you write down the vectors in the order indicated by the arrow, it doesn&#39;t matter where you start, nor does it matter which product is a dot product, and which is a cross product. Of course, the parentheses do matter — you must evaluate the cross product before evaluating the dot product.
+                &lt;/p&gt;
+                &lt;p&gt;
+                Using a symbolic determinant to compute the cross product, one quickly sees that the triple product is given by
+                &#92;[
+                (&#92;mathbf{v}&#92;times&#92;mathbf{w})&#92;cdot&#92;mathbf{u} = &#92;left| &#92;begin{matrix} u_x &amp; u_y &amp; u_z &#92;&#92; v_x &amp; v_y &amp; v_z &#92;&#92; w_x &amp; w_y &amp; w_z &#92;end{matrix} &#92;right|
+                &#92;]
+                from which the cyclic nature of the triple product also follows immediately, using standard properties of the determinant.
+                &lt;/p&gt;
+                
+                &lt;h3&gt;
+                    &lt;a name=&quot;volume-integrals&quot; id=&quot;volume-integrals&quot;&gt;Volume Integrals&lt;/a&gt;
+                &lt;/h3&gt;
+                &lt;p&gt;Straight from the wonderful Tevian Dray and Corinne A. Manogue.&lt;/p&gt;
+                &lt;p&gt;
+                The basic building block for volume integrals is the infinitesimal volume, obtained by chopping up the volume into small &quot;parallelepipeds&quot;. Our approach for surface integrals can be extended to volume integrals using the triple product. The volume element becomes
+                &#92;[
+                dV = (&#92;mathbf{d&#92;mathbf{r}_1}&#92;times&#92;mathbf{d&#92;mathbf{r}_2})&#92;cdot&#92;mathbf{d&#92;mathbf{r}_3}
+                &#92;]
+                for the &#92;(&#92;mathbf{d&#92;mathbf{r}}&#92;)&#39;s computed for (any!) 3 non-coplanar families of curves. &lt;a href=&quot;#fn__1&quot; name=&quot;fnt__1&quot; id=&quot;fnt__1&quot; class=&quot;fn_top&quot;&gt; 1)&lt;/a&gt; (The volume element is often written as &#92;(dV&#92;), but we prefer &#92;(&#92;mathbf{dV}&#92;) to avoid confusion with the electrostatic potential &#92;(V&#92;).) Using the natural families of curves in spherical coordinates, we could take
+                &#92;[
+                &#92;mathbf{d&#92;mathbf{r}_1} = r &#92;,d&#92;theta &#92;,&#92;mathbf{&#92;hat{&#92;theta}}
+                &#92;]
+                &#92;[
+                &#92;mathbf{d&#92;mathbf{r}_2} = r &#92;,&#92;sin&#92;theta &#92;,d&#92;phi &#92;,&#92;mathbf{&#92;hat{&#92;phi}}
+                &#92;]
+                as before, and add
+                &#92;[
+                &#92;mathbf{d&#92;mathbf{r}_3} = dr &#92;,&#92;mathbf{&#92;hat{r}}
+                &#92;]
+                leading to
+                &#92;[
+                &#92;mathbf{dV} = r^2 &#92;sin&#92;theta &#92;,dr &#92;,d&#92;theta &#92;,d&#92;phi
+                &#92;]
+                as expected. For any orthogonal coordinate system, this method is of course equivalent to visualizing a small coordinate box and multiplying the lengths of the three sides.
+                &lt;/p&gt;
+                &lt;p&gt;
+                The triple product has a cyclic symmetry, but the orientation matters — the order must be chosen so that &#92;(&#92;mathbf{dV}&#92;) is positive.
+                &lt;/p&gt;
+                
+                &lt;h3&gt;
+                    &lt;a name=&quot;change-of-variables&quot; id=&quot;change-of-variables&quot;&gt;Change of Variables&lt;/a&gt;
+                &lt;/h3&gt;
+                &lt;p&gt;Tevian Dray and Corinne A. Manogue: in theaters near you.&lt;/p&gt;
+                &lt;p&gt;
+                    &lt;/p&gt;&lt;p&gt;Change of Variables
+                        &#92;(R E C A L L: d A=d x d y=&#92;boldsymbol{r} d &#92;boldsymbol{r} d &#92;boldsymbol{&#92;phi}&#92;) is the product &#92;((d &#92;boldsymbol{d})(&#92;boldsymbol{r} d &#92;boldsymbol{d}) .1)&#92;) dimensions, yi el ding
+                        &#92;[d V=(d x)(d y)(d z)=(d r)(r d &#92;phi)(d z)=(d r)(r d &#92;theta)(r &#92;sin &#92;theta d &#92;phi)&#92;]
+                        in Cartesi an, cylindrical, and spherical coordinates respectively.
+                        But what do we do if the coordinates are not orthogonal? We start by revi ewing the 1 -dimensional case, which is just the method of substitution.
+                        &#92;(R E C A L L=x(u) &#92;quad &#92;Rightarrow &#92;quad &#92;int f d x=&#92;int f &#92;frac{d x}{d u} d u&#92;)
+                        When making such a substitution, of course, one must replace &#92;(&#92;boldsymbol{x}&#92;) everywhere by &#92;(&#92;boldsymbol{u}&#92;), so that both &#92;(&#92;boldsymbol{f}&#92;) and the integration limits must be rewritten in terms of &#92;(&#92;boldsymbol{u}&#92;).
+                        Consider now a change of variables in two dimensions
+                        &#92;[x=x(u, v) &#92;quad y=y(u, v)&#92;]
+                        We can therefore write the position vector as
+                        &#92;[&#92;overrightarrow{&#92;mathbf{r}}=&#92;overrightarrow{&#92;mathbf{r}}(u, v)=&#92;varkappa(u, v) &#92;hat{&#92;mathbf{x}}+v(u, v) &#92;hat{&#92;mathrm{y}}&#92;]
+                        But this is just a special case of a parametric surface!
+                        We already know how to find the surface element of such surfaces. First compute
+                        &#92;[d &#92;overrightarrow{&#92;mathbf{A}}=&#92;overrightarrow{&#92;mathbb{R}}_1 &#92;times &#92;overrightarrow{&#92;vec{R}_2}=&#92;left(&#92;frac{&#92;partial &#92;overrightarrow{&#92;mathbf{r}}}{&#92;partial u} &#92;times &#92;frac{&#92;partial &#92;overrightarrow{&#92;mathbf{r}}}{&#92;partial v}&#92;right) d u d v&#92;]
+                        and then take the magnitude of &#92;(&#92;mathbf{d} &#92;mathbf{A}&#92;) to obtain &#92;(&#92;boldsymbol{d} &#92;mathbf{A}&#92;). We have
+                        This determinant is important enough to have its own name; we define the Jacobian of the transformation from &#92;(&#92;boldsymbol{u}, &#92;boldsymbol{v}&#92;) to &#92;(&#92;boldsymbol{x}, &#92;boldsymbol{y}&#92;) to be 2)
+                        &#92;[&#92;frac{&#92;partial(x, y)}{&#92;partial(u, v)}=&#92;left|&#92;begin{array}{ll}
+                        &#92;frac{&#92;partial x}{&#92;partial v} &amp;amp; &#92;frac{&#92;partial y}{&#92;partial v} &#92;&#92;
+                        &#92;frac{&#92;partial z}{&#92;partial v} &amp;amp; &#92;frac{&#92;partial v}{&#92;partial v}
+                        &#92;end{array}&#92;right|=&#92;left|&#92;begin{array}{ll}
+                        &#92;frac{&#92;partial z}{&#92;partial u} &amp;amp; &#92;frac{&#92;partial z}{&#92;partial v} &#92;&#92;
+                        &#92;frac{&#92;partial y}{&#92;partial u} &amp;amp; &#92;frac{&#92;partial v}{&#92;partial v}
+                        &#92;end{array}&#92;right|&#92;]
+                        Putting this all together, we obtain
+                        &#92;[d A=&#92;left|&#92;frac{&#92;partial(x, y)}{&#92;partial(u, v)}&#92;right| d u d v&#92;]
+                        Note that there are two sets of vertical bars here - this expressi on contains the absolute value of the Jacobian, since areas are positive.
+                        Not surprisingly, when this procedure is applied to the polar coordinate transformation
+                        &#92;[x=r &#92;cos &#92;phi &#92;quad y=r &#92;sin &#92;phi&#92;]
+                        we get (check this yourself!)
+                        &#92;[&#92;frac{&#92;partial(x, y)}{&#92;partial(r, &#92;phi)}=r&#92;]
+                        so that, as we already knew, &#92;(&#92;boldsymbol{d A}=&#92;boldsymbol{r} &#92;boldsymbol{d} &#92;boldsymbol{r} &#92;boldsymbol{d &#92;phi}&#92;). therefore have
+                        &#92;[&#92;iint_R f d x d y=&#92;iint f&#92;left|&#92;frac{&#92;partial(x, y)}{&#92;partial(u, v)}&#92;right| d u d v&#92;]
+                        what you know to rewrite all occurrences of &#92;(&#92;boldsymbol{x}&#92;) and &#92;(&#92;boldsymbol{y}&#92;) in terms of &#92;(&#92;boldsymbol{u}&#92;) and &#92;(&#92;boldsymbol{v}&#92;).
+                        To change variables in a double integral,
+                        Rewrite &#92;(&#92;boldsymbol{d A}&#92;) in terms of the new variables using the above formula
+                        Rewrite the function being integrated in terms of the new variables.
+                        Change the limits from the old variables &#92;((&#92;boldsymbol{R})&#92;) to the new ones &#92;((&#92;boldsymbol{D})&#92;).
+                        A similar formula holds for triple integrals. Given &#92;(&#92;boldsymbol{x}, &#92;boldsymbol{y}, &#92;boldsymbol{z}&#92;) as functions of &#92;(&#92;boldsymbol{u}, &#92;boldsymbol{v}, &#92;boldsymbol{w}&#92;), the corresponding infinitesimal box is a parallelepiped with sides
+                        The volume of such a parallelepiped is given by the triple product
+                        &#92;[d V=&#92;left|&#92;left({&#92;overrightarrow{I_1}}_1 &#92;times &#92;overrightarrow{&#92;vec{m}_2}&#92;right) &#92;cdot d &#92;overrightarrow{&#92;vec{r}_3}&#92;right| d u d v d w&#92;]
+                        Defining the Jacobian for transformations of three variables to be
+                        we obtain
+                        &#92;[d V=&#92;left|&#92;frac{&#92;partial(x, y, z)}{&#92;partial(u, v, w)}&#92;right| d u d v d w&#92;]&lt;/p&gt;
+                        &lt;p&gt;Knowing &#92;(&#92;boldsymbol{d} &#92;boldsymbol{V}&#92;) we can convert any integral using
+                            &#92;[&#92;iiint f d x d y d z=&#92;iiint f&#92;left|&#92;frac{&#92;partial(x, y, z)}{&#92;partial(u, v, w)}&#92;right| d u d v d w&#92;]
+                            for appropriate regions &#92;(&#92;boldsymbol{V}&#92;) and &#92;(&#92;boldsymbol{W}&#92;) (and with &#92;(&#92;boldsymbol{f}&#92;) rewritten along the lines above). The above method for double integrals adapts easily to triple integrals. not only
+                            &#92;[d x d y=&#92;left|&#92;frac{&#92;partial(x, y)}{&#92;partial(u, v)}&#92;right| d u d v&#92;]
+                            but also
+                            &#92;[d u d v=&#92;left|&#92;frac{&#92;partial(u, v)}{&#92;partial(x, y)}&#92;right| d u d y&#92;]
+                            (17)
+                            from which we can conclude that
+                            &#92;[&#92;frac{&#92;partial(x, y)}{&#92;partial(u, v)}=1 / &#92;frac{&#92;partial(u, v)}{&#92;partial(x, y)}&#92;]
+                            reciprocal! really mean that the corresponding integrals are equal.
+                            2) Recall that the determinant of the transpose of a matrix is the same as the determinant of the matrix&lt;/p&gt;
+                    
+            
+            
+                &lt;h3&gt;
+                    &lt;a name=&quot;divergence&quot; id=&quot;divergence&quot;&gt; divergence&lt;/a&gt;
+                  &lt;/h3&gt;
+                  &lt;p&gt; Tevian Dray and Corinne A. Manogue convey divergence in the way they know best.&lt;/p&gt;
+                  &lt;p&gt; Consider a small closed box, with sides parallel to the coordinate planes, as shown in Figure 1. What is the flux of &#92;(&#92;mathbf{E}&#92;) out of the box? &lt;/p&gt;
+                  &lt;p&gt; Consider first the vertical contribution, namely the flux &lt;em&gt; up&lt;/em&gt; through the top plus the flux &lt;em&gt; down&lt;/em&gt; through the bottom. These two sides each have area element &#92;(dA=dx&#92;,dy&#92;), but the outward normal vectors point in opposite directions, that is &#92;begin{eqnarray*} &#92;mathbf{n}_{&#92;text{up}} &amp;=&amp; &#92;mathbf{k} &#92;&#92; &#92;mathbf{n}_{&#92;text{down}} &amp;=&amp; -&#92;mathbf{k} &#92;end{eqnarray*} so we get &#92;begin{eqnarray*} &#92;sum_{&#92;text{top+bottom}} &#92;mathbf{E} &#92;cdot d&#92;mathbf{A} &amp;=&amp; &#92;mathbf{E}(z+dz) &#92;cdot &#92;mathbf{k} &gt; dx&#92;,dy - &#92;mathbf{E}(z) &#92;cdot&#92;mathbf{k} &gt; dx&#92;,dy &#92;&#92; &amp;=&amp; &#92;Bigl( E_z(z+dz) - E_z(z) &#92;Bigr) &gt; dx&#92;,dy &#92;&#92; &amp;=&amp; &#92;frac{E_z(z+dz) - E_z(z)}{dz} &gt; dx&#92;,dy&#92;,dz &#92;&#92; &amp;=&amp; &#92;frac{&#92;partial E_z}{&#92;partial z} &gt; &gt; dx&#92;,dy&#92;,dz &#92;end{eqnarray*} where we have multiplied and divided by &#92;(dz&#92;) to obtain the volume element &#92;(dV=dx&#92;,dy&#92;,dz&#92;) in the third step, and used the definition of the derivative in the final step. &lt;a href=&quot;#fn__1&quot; name=&quot;fnt__1&quot; id=&quot;fnt__1&quot; class=&quot;fn_top&quot;&gt; 1)&lt;/a&gt;
+                  &lt;/p&gt;
+                  &lt;p&gt; Repeating this argument using the remaining pairs of faces, it follows that the total flux out of the box is &#92;[ &#92;text{total flux} = &#92;sum_{&#92;text{box}} &#92;mathbf{E} &#92;cdot d&#92;mathbf{A} = &#92;left( &#92;frac{&#92;partial E_x}{&#92;partial x} + &#92;frac{&#92;partial E_y}{&#92;partial y} + &#92;frac{&#92;partial E_z}{&#92;partial z} &#92;right) &gt; dV &#92;] Since the total flux is proportional to the volume of the box, it approaches zero as the box shrinks down to a point. The interesting quantity is therefore the ratio of the flux to volume; this ratio is called the divergence. &lt;/p&gt;
+                  &lt;p&gt; At any point &#92;(P&#92;), we therefore define the &lt;em&gt; divergence&lt;/em&gt; of a vector field &#92;(&#92;mathbf{E}&#92;), written &#92;(&#92;nabla &#92;cdot &#92;mathbf{E}&#92;), to be the flux of &#92;(&#92;mathbf{E}&#92;) per unit volume leaving a small box around &#92;(P&#92;). In other words, the divergence is the limit as the box collapses around &#92;(P&#92;) of the ratio of the flux of the vector field out of the box to the volume of the box. Thus, the divergence of &#92;(&#92;mathbf{E}&#92;) at &#92;(P&#92;) is the flux per unit volume through a small box around &#92;(P&#92;), which is given in rectangular coordinates by &#92;[ &#92;nabla &#92;cdot &#92;mathbf{E} = &#92;frac{&#92;text{flux}}{&#92;text{unit volume}} = &#92;frac{&#92;partial E_x}{&#92;partial x} + &#92;frac{&#92;partial E_y}{&#92;partial y} + &#92;frac{&#92;partial E_z}{&#92;partial z} &#92;] &lt;/p&gt;
+                  &lt;p&gt; You may have seen this formula before, but remember that it is merely the rectangular coordinate expression for the divergence of &#92;(&#92;mathbf{E}&#92;); the divergence is defined geometrically as flux per unit volume. Similar computations can be used to determine expressions for the divergence in other coordinate systems. Because of the geometric nature of divergence, these expressions turn out to give the same value at any point in space. &lt;/p&gt;
+                  &lt;p&gt; The use of &#92;(V&#92;) for volume, and hence &#92;(dV&#92;) for the volume element, conflicts with the use of &#92;(V&#92;) to denote electrostatic potential. We nonetheless write &#92;(dV&#92;) for the volume element whenever the context is clear, and use &#92;(d&#92;tau&#92;) instead only when necessary to avoid confusion. &lt;/p&gt;
+                  &lt;h3&gt;
+                    &lt;a name=&quot;divergence-theorem&quot; id=&quot;divergence-theorem&quot;&gt; the divergence theorem&lt;/a&gt;
+                  &lt;/h3&gt;
+                  &lt;p&gt; Tevian Dray and Corinne A. Manogue take divergence to the next level.&lt;/p&gt;
+                  &lt;p&gt; The total flux of the electric field out through a small rectangular box is &#92;[ &#92;text{flux} = &#92;sum_{&#92;text{box}} &#92;mathbf{E} &#92;cdot d&#92;mathbf{A} = &#92;nabla &#92;cdot &#92;mathbf{E} / dV &#92;]&lt;/p&gt;
+                  
+                  &lt;p&gt; But any closed region can be filled with such boxes, as shown in Figure 1a. Furthermore, the flux out of such a region is just the sum of the flux out of each of the smaller boxes, since the net flux through any common face will be zero (because adjacent boxes have opposite notions of &quot;out of&quot;), as indicated schematically in Figure 1b. Thus, the total flux out of any closed box is given by &#92;[ &#92;int_{&#92;text{box}} &#92;mathbf{E} &#92;cdot d&#92;mathbf{A} = &#92;int_{&#92;text{inside}} &#92;nabla &#92;cdot &#92;mathbf{E} &gt; &gt; dV &#92;] &lt;/p&gt;
+                  &lt;p&gt; This is the Divergence Theorem. &lt;/p&gt;
+                  &lt;h3&gt;
+                    &lt;a name=&quot;divergence-curvilinear&quot; id=&quot;divergence-curvilinear&quot;&gt; the divergence in curvilinear coordinates&lt;/a&gt;
+                  &lt;/h3&gt;
+                  &lt;p&gt; Tevian Dray and Corinne A. Manogue cannot be stopped with this divergence.&lt;/p&gt;
+
+
+                  &lt;p&gt;
+                    The divergence is defined in terms of flux per unit volume. We used this geometric definition to derive an expression for &#92;(&#92;nabla &#92;cdot &#92;mathbf{E}&#92;) in rectangular coordinates, namely
+                    &#92;[ &#92;nabla &#92;cdot &#92;mathbf{E} = &#92;frac{&#92;text{flux}}{&#92;text{unit volume}} = &#92;frac{&#92;partial E_x}{&#92;partial x} + &#92;frac{&#92;partial E_y}{&#92;partial y} + &#92;frac{&#92;partial E_z}{&#92;partial z} &#92;]
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                    Similar computations to those in rectangular coordinates can be done using boxes adapted to other coordinate systems. Not surprisingly, this introduces some additional factors of &#92;(r&#92;) (and &#92;(&#92;sin&#92;theta&#92;)). For instance, consider a radial vector field of the form
+                    &#92;[ &#92;mathbf{E} = E_r &#92;hat{r} &#92;]
+                    where &#92;(&#92;hat{r}&#92;) is the unit vector in the radial direction. The electric field of a point charge would have this form. What is the flux of &#92;(&#92;mathbf{E}&#92;) through a small box around an arbitrary point &#92;(P&#92;), whose sides are surfaces with one of the spherical coordinates held constant, as shown in Figure 1? Only the two sides which are parts of spheres contribute, and each such contribution takes the form
+                    &#92;[ &#92;mathbf{E} &#92;cdot d&#92;mathbf{A} = &#92;pm E_r r^2 &#92;sin&#92;theta &#92;, d&#92;theta &#92;, d&#92;phi &#92;]
+                    An argument similar to the one used in rectangular coordinates leads to
+                    &#92;[ &#92;mathbf{E} &#92;cdot d&#92;mathbf{A} = &#92;frac{1}{r^2} &#92;frac{&#92;partial}{&#92;partial r} &#92;left(r^2 E_r&#92;right) &#92;sin&#92;theta &#92;, dr &#92;, d&#92;theta &#92;, d&#92;phi = &#92;frac{1}{r^2} &#92;frac{&#92;partial}{&#92;partial r} &#92;left(r^2 E_r&#92;right) &#92;, dV &#92;]
+                    where it is important to note that the factor of &#92;(r^2&#92;) must also be differentiated. It now finally follows that
+                    &#92;[ &#92;nabla &#92;cdot &#92;mathbf{E} = &#92;frac{1}{r^2} &#92;frac{&#92;partial}{&#92;partial r} &#92;left(r^2 E_r&#92;right) &#92;]
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                    This expression only gives the divergence of the very special vector field &#92;(&#92;mathbf{E}&#92;) given above. The full expression for the divergence in spherical coordinates is obtained by performing a similar analysis of the flux of an arbitrary vector field &#92;(&#92;mathbf{F}&#92;) through our small box.
+                    &lt;/p&gt;
+                    
+
+                  
+                  &lt;h3&gt;
+                    &lt;a name=&quot;curl&quot; id=&quot;curl&quot;&gt; curl&lt;/a&gt;
+                  &lt;/h3&gt;
+                  &lt;p&gt; Tevian Dray and Corinne A. Manogue have gone beyond divergence.&lt;/p&gt;
+                  &lt;p&gt; Consider a small rectangular loop in the &#92;(yz&#92;)-plane, with sides parallel to the coordinate axes, as shown in Figure 1. What is the circulation of &#92;(&#92;mathbf{A}&#92;) around this loop? &lt;/p&gt;
+                  &lt;p&gt; Consider first the horizontal edges, on each of which &#92;(&#92;mathrm{d}&#92;mathbf{r}=dy&#92;,&#92;mathbf{&#92;hat{y}}&#92;). However, when computing the circulation of &#92;(&#92;mathbf{A}&#92;) around this loop, we traverse these two edges in opposite directions. In particular, when traversing the loop in the counterclockwise direction, &#92;(dy&amp;lt;0&#92;) on top and &#92;(dy&amp;gt;0&#92;) on the bottom. We would like to compare these two edges, but we have &#92;[ dy_{&#92;text{top}} = -dy_{&#92;text{bot}} &#92;] so we conventionally set &#92;(dy=dy_{&#92;text{bot}}&#92;), leading to &#92;(dy_{&#92;text{top}}=-dy&#92;). &lt;a href=&quot;#fn__1&quot; name=&quot;fnt__1&quot; id=&quot;fnt__1&quot; class=&quot;fn_top&quot;&gt; 1)&lt;/a&gt; Thus, &#92;[ &#92;sum_{&#92;text{top+bottom}} &#92;mathbf{A} &#92;cdot &#92;mathrm{d}&#92;mathbf{r} = - &#92;mathbf{A}(z+dz)&#92;cdot&#92;mathbf{&#92;hat{y}}&#92;,dy + &#92;mathbf{A}(z)&#92;cdot&#92;mathbf{&#92;hat{y}}&#92;,dy = - &#92;Bigl( A_y(z+dz) - A_y(z) &#92;Bigr)&#92;,dy = - &#92;frac{A_y(z+dz) - A_y(z)}{dz}&#92;,dy&#92;,dz = - &#92;frac{&#92;partial A_y}{&#92;partial z}&#92;,dy&#92;,dz &#92;] where we have multiplied and divided by &#92;(dz&#92;) to obtain the surface element &#92;(dA=dy&#92;,dz&#92;) in the third step, and used the definition of the derivative in the final step. &lt;/p&gt;
+                  &lt;p&gt; Just as with the divergence, in making this argument we are assuming that &#92;(&#92;mathbf{A}&#92;) doesn&#39;t change much in the &#92;(x&#92;) and &#92;(y&#92;) directions, while nonetheless caring about the change in the &#92;(z&#92;) direction. We are again subtracting the values at two points separated in the &#92;(z&#92;) direction, so we are canceling the zeroth order term in &#92;(z&#92;), and therefore need the next order term. This can be made precise using a multivariable Taylor series expansion. &lt;/p&gt;
+                  &lt;p&gt; Repeating this argument for the remaining two sides leads to 
+                    
+                    &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;
+                    &#92;[ &#92;sum_{&#92;text{sides}}&#92;mathbf{A} &#92;cdot &#92;mathrm{d}&#92;mathbf{r} = &#92;mathbf{A}(y+dy)&#92;cdot&#92;mathbf{&#92;hat{z}}&#92;,dz - &#92;mathbf{A}(y)&#92;cdot&#92;mathbf{&#92;hat{z}}&#92;,dz = &#92;Bigl( A_z(y+dy) - A_z(y) &#92;Bigr)&#92;,dz = &#92;frac{A_z(y+dy) - A_z(y)}{dy}&#92;,dy&#92;,dz = &#92;frac{&#92;partial A_z}{&#92;partial y}&#92;,dy&#92;,dz &#92;] 
+                &lt;/p&gt;&lt;p&gt;
+                    where care must be taken with the signs, which are different from those in the equation (1). Adding up both expressions, we obtain &#92;[ &#92;text{total &#92;(yz&#92;)-circulation} = &#92;left( &#92;frac{&#92;partial A_z}{&#92;partial y} - &#92;frac{&#92;partial A_y}{&#92;partial z} &#92;right) dx&#92;,dy &#92;] Since this is proportional to the area of the loop, it approaches zero as the loop shrinks down to a point. The interesting quantity is therefore the ratio of the circulation to area. This ratio is almost the curl, but not quite. &lt;/p&gt;
+                  &lt;p&gt; We could have oriented our loop any way we liked. We have a circulation for each orientation, which we can associate with the normal vector to the loop; curl is a vector quantity. Our loop has counterclockwise orientation of the loop as seen from the positive &#92;(x&#92;)-axis; we are computing the &#92;(&#92;mathbf{&#92;hat{x}}&#92;)-component of the curl. &lt;/p&gt;
+                  &lt;p&gt; Putting this all together, we define the &#92;(&#92;mathbf{&#92;hat{x}}&#92;)-component of the &lt;em&gt; curl&lt;/em&gt; of a vector field &#92;(&#92;mathbf{A}&#92;) to be &#92;[ &#92;text{curl}(&#92;mathbf{A})&#92;cdot&#92;mathbf{&#92;hat{x}} = &#92;frac{&#92;text{&#92;(yz&#92;)-circulation}}{&#92;text{unit area}} = &#92;frac{&#92;partial A_z}{&#92;partial y} - &#92;frac{&#92;partial A_y}{&#92;partial z} &#92;] The rectangular expression for the full curl now follows by cyclic symmetry, yielding &#92;[ &#92;text{curl}(&#92;mathbf{A}) = &#92;nabla&#92;times&#92;mathbf{A} = &#92;left| &#92;begin{matrix} &#92;mathbf{&#92;hat{x}} &amp; &#92;mathbf{&#92;hat{y}} &amp; &#92;mathbf{&#92;hat{z}} &#92;&#92; &#92;frac{&#92;partial}{&#92;partial x} &amp; &#92;frac{&#92;partial}{&#92;partial y} &amp; &#92;frac{&#92;partial}{&#92;partial z} &#92;&#92; A_x &amp; A_y &amp; A_z &#92;end{matrix} &#92;right| &#92;]&lt;/p&gt;
+                  &lt;p&gt; A similar argument using a finite box would require integrating around the loop, in which case the limits of integration would be equal and opposite for these two edges, leading to an equivalent minus sign when adding the integrals. &lt;/p&gt;
+                  &lt;h3&gt;
+                    &lt;a name=&quot;geometry-curl&quot; id=&quot;geometry-curl&quot;&gt; the geometry of curl&lt;/a&gt;
+                  &lt;/h3&gt;
+                  &lt;p&gt; Tevian Dray and Corinne A. Manogue take curl beyond curl.&lt;/p&gt;
+                  &lt;p&gt; Put a paddlewheel into a moving body of water. Depending on the details of the flow, the paddlewheel might spin. Keeping its center fixed, change the orientation of the paddlewheel. There will be a preferred orientation, in which the paddlewheel spins the fastest. &lt;/p&gt;
+                  &lt;p&gt; We can investigate this situation for any vector field &#92;(&#92;mathbf{A}&#92;). Pick a point &#92;(P&#92;) and compute the circulation of &#92;(&#92;mathbf{A}&#92;) around a small loop centered at &#92;(P&#92;). Now change the orientation of the loop and do it again. The result depends on the size of the loop, so we divide by its area. There will be a preferred orientation in which the circulation per unit area will be a maximum. We define the &lt;em&gt; curl&lt;/em&gt; of &#92;(&#92;mathbf{A}&#92;), written &#92;(&#92;nabla&#92;times&#92;mathbf{A}&#92;), to be the vector whose direction is given by the normal vector to the plane in which the circulation is greatest, and whose magnitude is that circulation divided by the area of the loop, in the limit as the loop shrinks to a point. This construction yields the curl of &#92;(&#92;mathbf{A}&#92;) at &#92;(P&#92;), and we can repeat the process at any point; the curl of &#92;(&#92;mathbf{A}&#92;) is a vector field. &lt;/p&gt;
+                  &lt;p&gt; What is the circulation per unit area at the point &#92;(P&#92;) in an arbitrary direction? That&#39;s just the projection of &#92;(&#92;nabla&#92;times&#92;mathbf{A}&#92;) in the given direction. That is, &#92;((&#92;nabla&#92;times&#92;mathbf{A})&#92;cdot&#92;hat{&#92;mathbf{u}}&#92;) is the (limiting value of) the circulation per unit area around a loop whose normal vector is &#92;(&#92;hat{&#92;mathbf{u}}&#92;). &lt;/p&gt;
+                  &lt;p&gt; By choosing &#92;(&#92;hat{&#92;mathbf{u}}&#92;) to be &#92;(&#92;mathbf{&#92;hat{x}}&#92;), &#92;(&#92;mathbf{&#92;hat{y}}&#92;), and &#92;(&#92;mathbf{&#92;hat{z}}&#92;) in turn, we can therefore compute the components of &#92;(&#92;nabla&#92;times&#92;mathbf{A}&#92;) in rectangular coordinates. For further details, see &amp;sect;&amp;nbsp; &lt;a href=&quot;https://ischmidls.github.io/posts/mathcontent/curl2.html&quot; class=&quot;wikilink1&quot; title=&quot;book:mathcontent:curl2&quot;&gt; Curl&lt;/a&gt; . &lt;/p&gt;
+                  &lt;h3&gt;
+                    &lt;a name=&quot;formulas-div-grad-curl&quot; id=&quot;formulas-div-grad-curl&quot;&gt; formulas for div, grad, curl&lt;/a&gt;
+                  &lt;/h3&gt;
+                  &lt;p&gt; Tevian Dray and Corinne A. Manogue enumerate the formulas here.&lt;/p&gt;
+                  &lt;p&gt;
+                    &lt;strong&gt; Rectangular Coordinates&lt;/strong&gt;
+                  &lt;/p&gt;
+                  &lt;p style=&quot;overflow: auto;&quot;&gt; &#92;[ &#92;begin{align*} d&#92;mathbf{r} &amp;= dx&#92;,&#92;mathbf{&#92;hat{x}} + dy&#92;,&#92;mathbf{&#92;hat{y}} + dz&#92;,&#92;mathbf{&#92;hat{z}} &#92;&#92; &#92;mathbf{F} &amp;= F_x&#92;,&#92;mathbf{&#92;hat{x}} + F_y&#92;,&#92;mathbf{&#92;hat{y}} + F_z&#92;,&#92;mathbf{&#92;hat{z}} &#92;end{align*} &#92;] &lt;/p&gt;
+                  &lt;p style=&quot;overflow: auto;&quot;&gt; &#92;[ &#92;begin{align*} &#92;boldsymbol{&#92;nabla} f &amp;= &#92;frac{&#92;partial f}{&#92;partial x}&#92;,&#92;mathbf{&#92;hat{x}} + &#92;frac{&#92;partial f}{&#92;partial y}&#92;,&#92;mathbf{&#92;hat{y}} + &#92;frac{&#92;partial f}{&#92;partial z}&#92;,&#92;mathbf{&#92;hat{z}} &#92;&#92; &#92;boldsymbol{&#92;nabla}&#92;cdot&#92;mathbf{F} &amp;= &#92;frac{&#92;partial F_x}{&#92;partial x} + &#92;frac{&#92;partial F_y}{&#92;partial y} + &#92;frac{&#92;partial F_z}{&#92;partial z} &#92;&#92; &#92;boldsymbol{&#92;nabla}&#92;times&#92;mathbf{F} &amp;= &#92;left(&#92;frac{&#92;partial F_z}{&#92;partial y}-&#92;frac{&#92;partial F_y}{&#92;partial z}&#92;right)&#92;mathbf{&#92;hat{x}} + &#92;left(&#92;frac{&#92;partial F_x}{&#92;partial z}-&#92;frac{&#92;partial F_z}{&#92;partial x}&#92;right)&#92;mathbf{&#92;hat{y}} + &#92;left(&#92;frac{&#92;partial F_y}{&#92;partial x}-&#92;frac{&#92;partial F_x}{&#92;partial y}&#92;right)&#92;mathbf{&#92;hat{z}} &#92;end{align*} &#92;] &lt;/p&gt;
+                  &lt;p&gt;
+                    &lt;strong&gt; Cylindrical Coordinates&lt;/strong&gt;
+                  &lt;/p&gt;
+                  &lt;p style=&quot;overflow: auto;&quot;&gt; &#92;[ &#92;begin{align*} d&#92;mathbf{r} &amp;= dr&#92;,&#92;mathbf{&#92;hat{r}} + r&#92;,d&#92;phi&#92;,&#92;mathbf{&#92;hat{&#92;phi}} + dz&#92;,&#92;mathbf{&#92;hat{z}} &#92;&#92; &#92;mathbf{F} &amp;= F_r&#92;,&#92;mathbf{&#92;hat{r}} + F_&#92;phi&#92;,&#92;mathbf{&#92;hat{&#92;phi}} + F_z&#92;,&#92;mathbf{&#92;hat{z}} &#92;end{align*} &#92;] &lt;/p&gt;
+                  &lt;p style=&quot;overflow: auto;&quot;&gt; &#92;[ &#92;begin{align*} &#92;boldsymbol{&#92;nabla} f &amp;= &#92;frac{&#92;partial f}{&#92;partial r}&#92;,&#92;mathbf{&#92;hat{r}} + &#92;frac{1}{r}&#92;frac{&#92;partial f}{&#92;partial &#92;phi}&#92;,&#92;mathbf{&#92;hat{&#92;phi}} + &#92;frac{&#92;partial f}{&#92;partial z}&#92;,&#92;mathbf{&#92;hat{z}} &#92;&#92; &#92;boldsymbol{&#92;nabla}&#92;cdot&#92;mathbf{F} &amp;= &#92;frac{1}{r}&#92;frac{&#92;partial}{&#92;partial r}&#92;left(rF_r&#92;right) + &#92;frac{1}{r}&#92;frac{&#92;partial F_&#92;phi}{&#92;partial &#92;phi} + &#92;frac{&#92;partial F_z}{&#92;partial z} &#92;&#92; &#92;boldsymbol{&#92;nabla}&#92;times&#92;mathbf{F} &amp;= &#92;left(&#92;frac{1}{r}&#92;frac{&#92;partial F_z}{&#92;partial &#92;phi} - &#92;frac{&#92;partial F_&#92;phi}{&#92;partial z}&#92;right)&#92;mathbf{&#92;hat{r}} + &#92;left(&#92;frac{&#92;partial F_r}{&#92;partial z}-&#92;frac{&#92;partial F_z}{&#92;partial r}&#92;right)&#92;mathbf{&#92;hat{&#92;phi}} + &#92;frac{1}{r} &#92;left(&#92;frac{&#92;partial}{&#92;partial r}&#92;left(rF_{&#92;phi}&#92;right) - &#92;frac{&#92;partial F_r}{&#92;partial &#92;phi}&#92;right)&#92;mathbf{&#92;hat{z}} &#92;end{align*} &#92;] &lt;/p&gt;
+                  &lt;p&gt;
+                    &lt;strong&gt; Spherical Coordinates&lt;/strong&gt;
+                  &lt;/p&gt;
+                  &lt;p style=&quot;overflow: auto;&quot;&gt; &#92;[ &#92;begin{align*} d&#92;mathbf{r} &amp;= dr&#92;,&#92;mathbf{&#92;hat{r}} + r&#92;,d&#92;theta&#92;,&#92;mathbf{&#92;hat{&#92;theta}} + r&#92;,&#92;sin&#92;theta&#92;,d&#92;phi&#92;,&#92;mathbf{&#92;hat{&#92;phi}} &#92;&#92; &#92;mathbf{F} &amp;= F_r&#92;,&#92;mathbf{&#92;hat{r}} + F_&#92;theta&#92;,&#92;mathbf{&#92;hat{&#92;theta}} + F_&#92;phi&#92;,&#92;mathbf{&#92;hat{&#92;phi}} &#92;end{align*} &#92;] &lt;/p&gt;
+                  &lt;p style=&quot;overflow: auto;&quot;&gt; &#92;[ &#92;begin{align*} &#92;boldsymbol{&#92;nabla} f &amp;= &#92;frac{&#92;partial f}{&#92;partial r}&#92;,&#92;mathbf{&#92;hat{r}} + &#92;frac{1}{r}&#92;frac{&#92;partial f}{&#92;partial &#92;theta}&#92;,&#92;mathbf{&#92;hat{&#92;theta}} + &#92;frac{1}{r&#92;sin&#92;theta}&#92;frac{&#92;partial f}{&#92;partial &#92;phi}&#92;,&#92;mathbf{&#92;hat{&#92;phi}} &#92;&#92; &#92;boldsymbol{&#92;nabla}&#92;cdot&#92;mathbf{F} &amp;= &#92;frac{1}{r^2}&#92;frac{&#92;partial}{&#92;partial r}&#92;left(r^2F_{r}&#92;right) + &#92;frac{1}{r&#92;sin&#92;theta}&#92;frac{&#92;partial}{&#92;partial &#92;theta}&#92;left(&#92;sin&#92;theta F_{&#92;theta}&#92;right) + &#92;frac{1}{r&#92;sin&#92;theta}&#92;frac{&#92;partial F_&#92;phi}{&#92;partial &#92;phi} &#92;&#92; &#92;boldsymbol{&#92;nabla}&#92;times&#92;mathbf{F} &amp;= &#92;frac{1}{r&#92;sin&#92;theta} &#92;left(&#92;frac{&#92;partial}{&#92;partial &#92;theta}&#92;left(&#92;sin&#92;theta F_{&#92;phi}&#92;right) - &#92;frac{&#92;partial F_&#92;theta}{&#92;partial &#92;phi}&#92;right)&#92;mathbf{&#92;hat{r}} + &#92;frac{1}{r} &#92;left(&#92;frac{1}{&#92;sin&#92;theta} &#92;frac{&#92;partial F_r}{&#92;partial &#92;phi} - &#92;frac{&#92;partial}{&#92;partial r}&#92;left(rF_{&#92;phi}&#92;right)&#92;right)&#92;mathbf{&#92;hat{&#92;theta}} + &#92;frac{1}{r} &#92;left(&#92;frac{&#92;partial}{&#92;partial r}&#92;left(rF_{&#92;theta}&#92;right) - &#92;frac{&#92;partial F_r}{&#92;partial &#92;theta}&#92;right)&#92;mathbf{&#92;hat{&#92;phi}} &#92;end{align*} &#92;] &lt;/p&gt;
+                  &lt;h3&gt;
+                    &lt;a name=&quot;stokes-theorem&quot; id=&quot;stokes-theorem&quot;&gt; stokes&#39; theorem&lt;/a&gt;
+                  &lt;/h3&gt;
+                  &lt;p&gt; Tevian Dray and Corinne A. Manogue have brought it to the pinnacle.&lt;/p&gt;
+                  &lt;p&gt;
+                    The total circulation of the magnetic field around a small loop is given by
+                    &#92;[ &#92;begin{align*}
+                    &#92;text{circulation} &amp;= &#92;sum_{&#92;text{box}} &#92;mathbf{B} &#92;cdot d&#92;mathbf{r} &#92;&#92;
+                    &amp;= (&#92;boldsymbol{&#92;nabla}&#92;times&#92;mathbf{B}) &#92;cdot d&#92;mathbf{A}
+                    &#92;end{align*} &#92;]
+                    where &#92;(d&#92;mathbf{A}=&#92;mathbf{n}&#92;,dA&#92;), and &#92;(&#92;mathbf{n}&#92;) is perpendicular to the (filled-in) loop.
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                    But any surface can be filled with such loops, as shown in Figure 1a. Furthermore, the circulation around the edge of the surface is just the sum of the circulations around each of the smaller loops, since the circulation through any common side will be zero (because adjacent loops have opposite notions of &quot;around&quot;), as indicated schematically in Figure 1b. Thus, the total circulation around any loop is given by
+                    &#92;[ &#92;begin{align*}
+                    &#92;oint&#92;limits_{&#92;text{loop}} &#92;mathbf{B} &#92;cdot d&#92;mathbf{r} = &#92;int_{&#92;text{inside}} (&#92;boldsymbol{&#92;nabla}&#92;times&#92;mathbf{B}) &#92;cdot d&#92;mathbf{A}
+                    &#92;end{align*} &#92;]
+                    This is &lt;em&gt;Stokes&#39; Theorem&lt;/em&gt;.
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                    There is no need for the &quot;inside&quot; of the loop to be planar. &lt;a href=&quot;#fn__1&quot; name=&quot;fnt__1&quot; id=&quot;fnt__1&quot; class=&quot;fn_top&quot;&gt;1)&lt;/a&gt; Consider the surface shown in Figure 1c, which has the same boundary as the original loop. The circulation around interior loops cancels just as before, and Stokes&#39; Theorem holds without modification. We like to describe such surfaces as &quot;butterfly nets,&quot; whose rim is the original loop. Butterfly nets should be able to catch butterflies! In other words, they need an opening and a net. &lt;a href=&quot;#fn__2&quot; name=&quot;fnt__2&quot; id=&quot;fnt__2&quot; class=&quot;fn_top&quot;&gt;2)&lt;/a&gt;
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                    The orientations used in the two integrals in Stokes&#39; Theorem must be compatible. This is easy if the loop lies in the &#92;(xy&#92;)-plane: Choose the circulation counterclockwise and the flux upward. More generally, for any loop which is more-or-less planar, the circulation should be counterclockwise when looking at the loop from &quot;above&quot;, that is, from the direction in which the flux is being taken. (So you&#39;re really looking in the direction of negative flux.) An easy way to remember this is to take the flux up and the circulation counterclockwise when seen from above, with obvious modifications should the loop be sideways.
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                    But what if the loop is not planar? What about a cylinder that is closed at one end? There are several strategies that can be used to obtain compatible orientations:
+                    &lt;ul&gt;
+                      &lt;li&gt;
+                        &lt;strong&gt;Gears:&lt;/strong&gt; Break up the surface into small loops, which can be thought of as small gears. Choose an orientation of the surface and look at the surface from &quot;above&quot;. As the gears turn counterclockwise, the edge of the surface also turns; use that orientation to compute the circulation.
+                      &lt;/li&gt;
+                      &lt;li&gt;
+                        &lt;strong&gt;Toothpicks:&lt;/strong&gt; Think of the surface as a rubber sheet. Move the rubber sheet so that it is taut across the loop. Choose a compatible orientation using the &quot;up&quot; and &quot;counterclockwise&quot; rule. Now imagine putting toothpicks in the surface on the &quot;up&quot; side only, and move the rubber sheet back to the original position. The direction of the toothpicks gives you the compatible orientation of the surface.
+                      &lt;/li&gt;
+                      &lt;li&gt;
+                        &lt;strong&gt;Left-Hand Rule:&lt;/strong&gt; Walk around the edge of the surface, with your head up. That is, face in the direction &#92;(&#92;mathbf{T}&#92;), with your head in the direction &#92;(&#92;mathbf{n}&#92;) (where &#92;(d&#92;mathbf{r}=&#92;mathbf{T}&#92;,ds&#92;) and &#92;(d&#92;mathbf{S}=&#92;mathbf{n}&#92;,&#92;mathbf{dS}&#92;)). In a compatible orientation, your &lt;em&gt;left&lt;/em&gt; hand should point along the surface; if it doesn&#39;t, turn around (or stand on your head, but not both).
+                      &lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                    There is also no need for the loop itself to be planar.
+                    &lt;/p&gt;
+                    
+                  &lt;h3&gt;
+                    &lt;a name=&quot;visualizing-divergence-curl&quot; id=&quot;visualizing-divergence-curl&quot;&gt; visualizing divergence and curl&lt;/a&gt;
+                  &lt;/h3&gt;
+                  &lt;p&gt; Tevian Dray and Corinne A. Manogue bring it back to Earth.&lt;/p&gt;
+                  &lt;p&gt; The Divergence Theorem says &#92;begin{equation} &#92;int_{&#92;text{box}} &#92;mathbf{F} &#92;cdot d&#92;mathbf{S} = &#92;int_{&#92;text{inside}} &#92;nabla &#92;cdot &#92;mathbf{F} &#92;, dV &#92;end{equation} which tells us that &#92;begin{equation} &#92;nabla &#92;cdot &#92;mathbf{F} &#92;approx &#92;frac{&#92;int &#92;mathbf{F} &#92;cdot d&#92;mathbf{S}}{&#92;text{volume of box}} = &#92;frac{&#92;text{flux}}{&#92;text{unit volume}} &#92;end{equation} so that the divergence measures how much a vector field &quot;points out&quot; of a box. Similarly, Stokes&#39; Theorem says &#92;begin{equation} &#92;oint_{&#92;text{loop}} &#92;mathbf{F} &#92;cdot d&#92;mathbf{r} = &#92;int_{&#92;text{inside}} (&#92;nabla &#92;times &#92;mathbf{F}) &#92;cdot d&#92;mathbf{S} &#92;end{equation} which tells us that &#92;begin{equation} (&#92;nabla &#92;times &#92;mathbf{F}) &#92;cdot &#92;mathbf{n} &#92;approx &#92;frac{&#92;oint &#92;mathbf{F} &#92;cdot d&#92;mathbf{r}}{&#92;text{area of loop}} = &#92;frac{&#92;text{(oriented) circulation}}{&#92;text{unit area}} &#92;end{equation} so that the (orthogonal component of the) curl measures how much a vector field &quot;goes around&quot; a loop. &lt;/p&gt;
+                  &lt;p&gt;
+                    &lt;img src=&quot;https://ischmidls.github.io/_media/book/figures/radd3e4.png?w=200&amp;amp;h=&amp;amp;cache=cache&quot; class=&quot;medialeft&quot; alt=&quot;&quot; width=&quot;200&quot;&gt;
+                    &lt;img src=&quot;https://ischmidls.github.io/_media/book/figures/rotd3e4.png?w=200&amp;amp;h=&amp;amp;cache=cache&quot; class=&quot;media&quot; alt=&quot;&quot; width=&quot;200&quot;&gt;
+                  &lt;/p&gt;
+                  &lt;p&gt; Can we use these ideas to investigate graphically the divergence and curl of a given vector field? Consider the two vector fields above. In each case, can you find the divergence? The &#92;(k&#92;)-component of the curl? &lt;/p&gt;
+                  &lt;p&gt; A natural place to start is at the origin. So draw a small box around the origin. &lt;a href=&quot;#fn__1&quot; name=&quot;fnt__1&quot; id=&quot;fnt__1&quot; class=&quot;fn_top&quot;&gt; 1)&lt;/a&gt; Is there circulation around the loop? Is there flux across the loop? &lt;/p&gt;
+                  &lt;p&gt;
+                    &lt;img src=&quot;https://ischmidls.github.io/_media/book/figures/rad1d3e4.png?w=200&amp;amp;h=&amp;amp;cache=cache&quot; class=&quot;medialeft&quot; alt=&quot;&quot; width=&quot;200&quot;&gt;
+                    &lt;img src=&quot;https://ischmidls.github.io/_media/book/figures/rot1d3e4.png?w=200&amp;amp;h=&amp;amp;cache=cache&quot; class=&quot;media&quot; alt=&quot;&quot; width=&quot;200&quot;&gt;
+                  &lt;/p&gt;
+                  &lt;p&gt; The figures above help us determine the divergence and curl &lt;em&gt; at the origin&lt;/em&gt; , but not elsewhere. The divergence is a function, and the curl is a vector field, so both can vary from point to point. We therefore need to examine loops that are &lt;em&gt; not&lt;/em&gt; at the origin. It is useful to adapt the shape of our loop to the vector field under consideration. Both of our vector fields are better adapted to polar coordinates than to rectangular, so we use polar boxes. Can you determine the divergence and the $k$-component of the curl using the loops below? Imagine trying to do the same thing with a rectangular loop or even a circular loop. &lt;/p&gt;
+                  &lt;p&gt;
+                    &lt;img src=&quot;https://ischmidls.github.io/_media/book/figures/rad2d3e4.png?w=200&amp;amp;h=&amp;amp;cache=cache&quot; class=&quot;medialeft&quot; alt=&quot;&quot; width=&quot;200&quot;&gt;
+                    &lt;img src=&quot;https://ischmidls.github.io/_media/book/figures/rot2d3e4.png?w=200&amp;amp;h=&amp;amp;cache=cache&quot; class=&quot;media&quot; alt=&quot;&quot; width=&quot;200&quot;&gt;
+                  &lt;/p&gt;
+                  &lt;p&gt; Finally, it is important to realize that not all vector fields that point away from the origin have divergence, and not all vector fields that go around the origin have curl. The two examples below demonstrate this important principle; they have no divergence or curl away from the origin. These examples represent solutions of Maxwell&#39;s equations for electromagnetism. The figure on the left describes the electric field of an infinite charged wire, and the figure on the right describes the magnetic field due to an infinite current-carrying wire (with current coming out of the page at the origin). &lt;/p&gt;
+                  &lt;p&gt; In two dimensions, both &quot;boxes&quot; are loops. In three dimensions, the oriented box used to measure circulation is still a loop, but the box used to measure flux is now an ordinary, 3-dimensional box. &lt;/p&gt;&lt;/div&gt;
+                  &lt;p&gt;&lt;/p&gt;
+                  &lt;h3&gt;
+                    &lt;a name=&quot;product-rules&quot; id=&quot;product-rules&quot;&gt; product rules&lt;/a&gt;
+                  &lt;/h3&gt;
+                  &lt;p&gt; Tevian Dray and Corinne A. Manogue broach the topic without index notation!&lt;/p&gt;
+                  &lt;p&gt; We digress briefly to discuss product rules for vector derivatives, which are discussed in &amp;sect;1.2.6 of Griffiths, and summarized on the inside front cover. &lt;/p&gt;
+                  &lt;p&gt; All types of derivatives have product rules, all of which take the form:
+                  &lt;ul&gt;
+                    &lt;li&gt;
+                      &lt;em&gt; The derivative of a product is the derivative of the first quantity times the second plus the first quantity times the derivative of the second.&lt;/em&gt;
+                    &lt;/li&gt;
+                  &lt;/ul&gt; For example, the familiar product rule for functions of one variable is: &#92;[ &#92;frac{d}{dx}(fg) = &#92;frac{df}{dx}g + f&#92;frac{dg}{dx} &#92;] &lt;/p&gt;
+                  &lt;p&gt; For more complicated functions, the only trick is figuring out which derivative to take and what multiplication to use! Here are the product rules for the various incarnations of the del operator: &#92;begin{align*} &#92;nabla(fg) &amp;= (&#92;nabla f)g + f(&#92;nabla g) &#92;&#92; &#92;nabla &#92;cdot (f&#92;mathbf{G}) &amp;= (&#92;nabla f) &#92;cdot &#92;mathbf{G} + f(&#92;nabla &#92;cdot &#92;mathbf{G}) &#92;&#92; &#92;nabla &#92;times (f&#92;mathbf{G}) &amp;= (&#92;nabla f) &#92;times &#92;mathbf{G} + f(&#92;nabla &#92;times &#92;mathbf{G}) &#92;end{align*} Care must be taken with the order of the factors in the last of these rules since the cross product is not commutative. &lt;/p&gt;
+                  &lt;p&gt; How do you prove these rules? The simplest way is to work out the components of both sides in rectangular coordinates, using the ordinary product rule for partial derivatives. &lt;/p&gt;
+                  &lt;h3&gt;
+                    &lt;a name=&quot;integration-parts&quot; id=&quot;integration-parts&quot;&gt; integration by parts&lt;/a&gt;
+                  &lt;/h3&gt;
+                  &lt;p&gt; Tevian Dray and Corinne A. Manogue move to a similarly nuanced topic.&lt;/p&gt;
+                  &lt;p&gt; For ordinary functions of one variable, the rule for integration by parts follows immediately from integrating the product rule: &#92;begin{align*} &#92;frac{d}{dx}(fg) &amp;= &#92;frac{df}{dx}g + f&#92;frac{dg}{dx} &#92;&#92; &#92;int_a^b&#92;frac{d}{dx}(fg)&#92;, dx &amp;= &#92;int_a^b&#92;frac{df}{dx}g&#92;, dx + &#92;int_a^b f&#92;frac{dg}{dx}&#92;, dx &#92;&#92; &#92;left. fg &#92;right&#92;vert_a^b &amp;= &#92;int_a^b&#92;frac{df}{dx}g&#92;, dx + &#92;int_a^b f&#92;frac{dg}{dx}&#92;, dx &#92;end{align*} Rearranging, we obtain: &#92;[ &#92;int_a^b&#92;frac{df}{dx}g&#92;, dx = &#92;left. fg &#92;right&#92;vert_a^b - &#92;int_a^b f&#92;frac{dg}{dx}&#92;, dx &#92;] &lt;/p&gt;
+                  &lt;p&gt; In an analogous way, we can obtain a rule for integration by parts for the divergence of a vector field by starting from the product rule for the divergence: &#92;[ &#92;nabla &#92;cdot (f&#92;mathbf{G}) = (&#92;nabla f) &#92;cdot &#92;mathbf{G} + f(&#92;nabla &#92;cdot &#92;mathbf{G}) &#92;] Integrating both sides yields: &#92;[ &#92;int &#92;nabla &#92;cdot (f&#92;mathbf{G}) &#92;,d&#92;tau = &#92;int (&#92;nabla f) &#92;cdot &#92;mathbf{G} &#92;,d&#92;tau + &#92;int f(&#92;nabla &#92;cdot &#92;mathbf{G}) &#92;,d&#92;tau &#92;] Now use the Divergence Theorem to rewrite the first term, leading to: &#92;[ &#92;int (f&#92;mathbf{G}) &#92;cdot d&#92;mathbf{A} = &#92;int (&#92;nabla f) &#92;cdot &#92;mathbf{G} &#92;,d&#92;tau + &#92;int f(&#92;nabla &#92;cdot &#92;mathbf{G}) &#92;,d&#92;tau &#92;] which can be rearranged to: &#92;[ &#92;int f(&#92;nabla &#92;cdot &#92;mathbf{G}) &#92;,d&#92;tau = &#92;int (f&#92;mathbf{G}) &#92;cdot d&#92;mathbf{A} - &#92;int (&#92;nabla f) &#92;cdot &#92;mathbf{G} &#92;,d&#92;tau &#92;] which is the desired integration by parts. &lt;/p&gt;
+                  &lt;h3&gt;
+                    &lt;a name=&quot;second-derivatives&quot; id=&quot;second-derivatives&quot;&gt; second derivatives&lt;/a&gt;
+                  &lt;/h3&gt;
+                  &lt;p&gt; Tevian Dray and Corinne A. Manogue take the nuance further still.&lt;/p&gt;
+                  
+                  &lt;p&gt;
+                    A conservative vector field is the gradient of some function, for example:
+                    &#92;[ &#92;mathbf{E} = -&#92;nabla V &#92;]
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                    But integrals of conservative vector fields are independent of path, so that evaluating the integral along two different paths between the same two points yields the same answer, as illustrated in Figure 1. Combining two such paths into a closed loop changes the orientation of one path, as shown in Figure 2, and the integrals now cancel; the integral of &#92;(&#92;nabla V&#92;) around any closed loop vanishes. Using Stokes&#39; Theorem, we therefore obtain:
+                    &#92;[ &#92;oint_{&#92;rm loop} &#92;nabla V &#92;cdot d&#92;mathbf{r} = &#92;int_{&#92;rm inside} (&#92;nabla &#92;times &#92;nabla V) &#92;cdot d&#92;mathbf{A} = 0 &#92;]
+                    Equivalently, the Master Formula tells us how to evaluate the left-hand side of this equation, namely by evaluating the potential at the endpoints. Since both endpoints are the same, the integral must be zero. But since the left-hand side must vanish for &lt;em&gt;any&lt;/em&gt; closed curve, the integrand must be identically zero. We have proved that:
+                    &#92;[ &#92;nabla &#92;times &#92;nabla V = &#92;mathbf{0} &#92;]
+                    for &lt;em&gt;any&lt;/em&gt; function &#92;(V&#92;).
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                    A similar argument can be used to show that:
+                    &#92;[ &#92;nabla &#92;cdot (&#92;nabla &#92;times &#92;mathbf{F}) = 0 &#92;]
+                    for &lt;em&gt;any&lt;/em&gt; vector field &#92;(&#92;mathbf{F}&#92;). Consider a closed surface. Cut it in half along some closed curve, as shown in Figure 3a. Then each piece of the surface is a butterfly net with the same rim, as shown in Figure 3b (with the pieces separated for clarity). Applying Stokes&#39; Theorem to each piece leads to the conclusion that the flux of the curl of &#92;(&#92;mathbf{F}&#92;) &lt;em&gt;upward&lt;/em&gt; through each piece must be the same, so that the flux &lt;em&gt;up&lt;/em&gt; through the top cancels the flux &lt;em&gt;downward&lt;/em&gt; through the bottom. This cancellation forces the flux of the curl of &#92;(&#92;mathbf{F}&#92;) &lt;em&gt;outward&lt;/em&gt; through the entire surface to vanish. Using the Divergence Theorem, we get:
+                    &#92;[ &#92;int_{&#92;rm inside} &#92;nabla &#92;cdot (&#92;nabla &#92;times &#92;mathbf{F}) &#92;, d&#92;tau = &#92;int_{&#92;rm surface} (&#92;nabla &#92;times &#92;mathbf{F}) &#92;cdot d&#92;mathbf{A} = 0 &#92;]
+                    This argument shows that the first integral is zero over &lt;em&gt;any&lt;/em&gt; volume, forcing the integrand to vanish, as claimed.
+                    &lt;/p&gt;
+                    &lt;p&gt;
+                    The above identities can also be derived by direct computation, most easily done in rectangular coordinates. For instance, when calculating the curl of &#92;(&#92;nabla V&#92;), each component will contain mixed second-order partial derivatives of &#92;(V&#92;), for example:
+                    &#92;[ &#92;nabla &#92;times &#92;nabla V = &#92;ldots + &#92;left( &#92;frac{&#92;partial}{&#92;partial x} &#92;frac{&#92;partial V}{&#92;partial y} - &#92;frac{&#92;partial}{&#92;partial y} &#92;frac{&#92;partial V}{&#92;partial x} &#92;right) &#92;mathbf{k} &#92;]
+                    But partial derivatives can be taken in any order, so the derivatives above cancel, thus proving the identity. Similar second-order derivatives arise when computing the divergence of &#92;(&#92;nabla &#92;times &#92;mathbf{A}&#92;), establishing the other identity.
+                    &lt;/p&gt;
+                    
+
+                  &lt;h3&gt;
+                    &lt;a name=&quot;laplacian&quot; id=&quot;laplacian&quot;&gt; the laplacian&lt;/a&gt;
+                  &lt;/h3&gt;
+                  &lt;p&gt; Tevian Dray and Corinne A. Manogue should put a content warning for the territory of differential equations.&lt;/p&gt;
+                  &lt;p&gt; One second derivative, the divergence of the gradient, occurs so often it has its own name and notation. It is called the &lt;em&gt; Laplacian&lt;/em&gt; of the function &#92;(V&#92;), and is written in any of the forms: &#92;[ &#92;triangle V = &#92;nabla^2 V = &#92;nabla &#92;cdot &#92;nabla V &#92;] In rectangular coordinates, it is easy to compute: &#92;[ &#92;triangle V = &#92;nabla &#92;cdot &#92;nabla V = &#92;frac{&#92;partial V}{&#92;partial x} + &#92;frac{&#92;partial V}{&#92;partial y} + &#92;frac{&#92;partial V}{&#92;partial z} &#92;] &lt;/p&gt;
+                  &lt;p&gt; The simplest homogeneous partial differential equation involving the Laplacian: &#92;[ &#92;nabla^2 V = 0 &#92;] is called Laplace&#39;s equation. The inhomogeneous version: &#92;[ &#92;nabla^2 V = f(&#92;mathbf{r}) &#92;] is known as Poisson&#39;s equation. There are many important techniques for solving these equations that are beyond the scope of this text. &lt;/p&gt;
+                
 			
 				
 				

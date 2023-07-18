@@ -3,9 +3,23 @@
     domain="{{ metadata.domain }}"
     {% if googleanalytics %}
     ga-id="{{ googleanalytics }}"
-    {% endif %}
-  >
+    {% endif %}>
+
   <head>
+
+    <!-- THIS IS INSECURE, BUT 11TY ANALYTICS IS NOT WORKING-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CY1SRH6BVP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CY1SRH6BVP');
+</script>
+
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- See _data/csp.js for how to add to the CSP. 
@@ -51,13 +65,13 @@
     <script async defer src="{{ "/js/min.js" | addHash }}"
       {% if webvitals %}data-cwv-src="{{ "/js/web-vitals.js" | addHash }}"{% endif %}>
     </script>
-    {% if googleanalytics %}
-      <div id="THIS IS A MESSAGE FROM THE MOST HIGH"></div>
+
+    <!--NOT WORKING-->
+    {# {% if googleanalytics %}
+
       <script async defer src="{{ "/js/cached.js" | addHash }}"></script>
-    {% endif %}
-    {% if not googleanalytics %}
-      <script >console.log("NO ANALYTICS")</script>
-    {% endif %}
+    {% endif %} #}
+
     <!-- Notably iOS UAs also contain Mac OS X -->
     <script csp-hash>if (/Mac OS X/.test(navigator.userAgent))document.documentElement.classList.add('apple')
     </script>
@@ -82,12 +96,14 @@
       <h1>{{ title }}</h1>
       {% block extraArticleHeader %}{% endblock %}
       <dialog id="message"></dialog>
-      {% if googleanalytics %}
+          
+          <!--NOT WORKING-->
+      {# {% if googleanalytics %}
       <noscript>
         <img src="/api/ga?v=1&_v=j83&t=pageview&dr=https%3A%2F%2Fno-script.com&_s=1&dh={{ metadata.domain | encodeURIComponent }}&dp={{ page.url | encodeURIComponent }}&ul=en-us&de=UTF-8&dt={{title|encodeURIComponent}}&tid={{googleanalytics}}" width="1" height="1"
         style="display:none" alt="">
       </noscript>
-      {% endif %}
+      {% endif %} #}
     </header>
 
     <main>
