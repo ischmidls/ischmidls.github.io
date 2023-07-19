@@ -5,7 +5,7 @@
 	
 	<link href="https://ischmidls.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://ischmidls.github.io"/>
-	<updated>2023-07-15T17:00:00-07:00</updated>
+	<updated>2023-07-17T17:00:00-07:00</updated>
 	<id>https://update-me.com</id>
 	<author>
 		<name>izak</name>
@@ -10248,6 +10248,303 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 				
 				
 				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fcurvilinear%20vector%20differentials%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=steady%20descent%20into%20vector%20calculus&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>hiragana</title>
+		<link href="https://ischmidls.github.io/posts/hiragana/"/>
+		<updated>2023-07-17T17:00:00-07:00</updated>
+		<id>https://ischmidls.github.io/posts/hiragana/</id>
+		<content type="html">
+		  &lt;style&gt;
+    table {overflow: auto;}
+&lt;/style&gt;
+&lt;p&gt;To begin, here is a table of the 46 hiragana (&amp; the romaji for their pronunciation).&lt;/p&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;&lt;/th&gt;
+        &lt;th&gt;あ &lt;br&gt;(a)&lt;/th&gt;
+        &lt;th&gt;い &lt;br&gt;(i)&lt;/th&gt;
+        &lt;th&gt;う &lt;br&gt;(u)&lt;/th&gt;
+        &lt;th&gt;え &lt;br&gt;(e)&lt;/th&gt;
+        &lt;th&gt;お &lt;br&gt;(o)&lt;/th&gt;
+    &lt;/tr&gt;
+    
+    &lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;か &lt;br&gt;(ka)&lt;/td&gt;&lt;td&gt; き &lt;br&gt;(ki)&lt;/td&gt;&lt;td&gt; く &lt;br&gt;(ku)&lt;/td&gt;&lt;td&gt; け &lt;br&gt;(ke)&lt;/td&gt;&lt;td&gt; こ &lt;br&gt;(ko)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;さ &lt;br&gt;(sa)&lt;/td&gt;&lt;td&gt; し &lt;br&gt;(shi)&lt;/td&gt;&lt;td&gt; す &lt;br&gt;(su)&lt;/td&gt;&lt;td&gt; せ &lt;br&gt;(se)&lt;/td&gt;&lt;td&gt; そ &lt;br&gt;(so)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;た &lt;br&gt;(ta)&lt;/td&gt;&lt;td&gt; ち &lt;br&gt;(chi)&lt;/td&gt;&lt;td&gt; つ &lt;br&gt;(tsu)&lt;/td&gt;&lt;td&gt; て &lt;br&gt;(te)&lt;/td&gt;&lt;td&gt; と &lt;br&gt;(to)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;な &lt;br&gt;(na)&lt;/td&gt;&lt;td&gt; に &lt;br&gt;(ni)&lt;/td&gt;&lt;td&gt; ぬ &lt;br&gt;(nu)&lt;/td&gt;&lt;td&gt; ね &lt;br&gt;(ne)&lt;/td&gt;&lt;td&gt; の &lt;br&gt;(no)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;は &lt;br&gt;(ha)&lt;/td&gt;&lt;td&gt; ひ &lt;br&gt;(hi)&lt;/td&gt;&lt;td&gt; ふ &lt;br&gt;(fu)&lt;/td&gt;&lt;td&gt; へ &lt;br&gt;(he)&lt;/td&gt;&lt;td&gt; ほ &lt;br&gt;(ho)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ま &lt;br&gt;(ma)&lt;/td&gt;&lt;td&gt; み &lt;br&gt;(mi)&lt;/td&gt;&lt;td&gt; む &lt;br&gt;(mu)&lt;/td&gt;&lt;td&gt; め &lt;br&gt;(me)&lt;/td&gt;&lt;td&gt; も &lt;br&gt;(mo)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;や &lt;br&gt;(ya)&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt; ゆ &lt;br&gt;(yu)&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt; よ &lt;br&gt;(yo)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ら &lt;br&gt;(ra)&lt;/td&gt;&lt;td&gt; り &lt;br&gt;(ri)&lt;/td&gt;&lt;td&gt; る &lt;br&gt;(ru)&lt;/td&gt;&lt;td&gt; れ &lt;br&gt;(re)&lt;/td&gt;&lt;td&gt; ろ &lt;br&gt;(ro)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;わ &lt;br&gt;(wa)&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt; を &lt;br&gt;(wo)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;ん &lt;br&gt;(n)&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;&lt;br&gt;
+
+&lt;p&gt;These characters represent the phonetic sounds of the Japanese language. Each hiragana character corresponds to a syllable, which consists of a consonant sound followed by a vowel sound. &lt;/p&gt;
+&lt;h3&gt;voicing marks&lt;/h3&gt;
+&lt;p&gt;There are modified versions of some hiragana characters, called dakuten and handakuten, which change the pronunciation of the base character. This brings the total number of hiragana characters to 107 when including the modified versions.&lt;/p&gt;
+&lt;blockquote&gt;
+    &lt;p&gt;
+    The handakuten (半濁点, &quot;half voicing mark&quot;), colloquially maru (丸, &quot;circle&quot;), is a diacritic used with the kana for syllables starting with h to indicate that they should instead be pronounced with p
+        &lt;/p&gt;
+        &lt;p&gt;
+            The dakuten (Japanese: 濁点, &quot;voicing mark&quot;), colloquially ten-ten (点々, &quot;dots&quot;), is a diacritic most often used in the Japanese kana syllabaries to indicate that the consonant of a syllable should be pronounced voiced, for instance, on sounds that have undergone rendaku (sequential voicing).
+        &lt;/p&gt;
+
+        &lt;table class=&quot;wikitable&quot; style=&quot;text-align:center; overflow:auto;&quot;&gt;
+            &lt;tr&gt;
+              &lt;th&gt;&lt;/th&gt;
+              &lt;th&gt;&lt;i&gt;dakuten&lt;/i&gt;&lt;/th&gt;
+              &lt;th&gt;&lt;i&gt;handakuten&lt;/i&gt;&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;か&lt;/span&gt;&lt;br&gt;&#39;ka&#39;&lt;/strong&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span lang=&quot;ja&quot;&gt;が&lt;/span&gt;&lt;br&gt;&#39;ga&#39;&lt;/td&gt;
+              &lt;td&gt;&lt;span class=&quot;rarely&quot;&gt;&lt;span lang=&quot;ja&quot;&gt;か゚&lt;/span&gt;&lt;br&gt;&#39;nga&#39;&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;さ&lt;/span&gt;&lt;br&gt;&#39;sa&#39;&lt;/strong&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span lang=&quot;ja&quot;&gt;ざ&lt;/span&gt;&lt;br&gt;&#39;za&#39;&lt;/td&gt;
+              &lt;td&gt;&lt;span class=&quot;no&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;た&lt;/span&gt;&lt;br&gt;&#39;ta&#39;&lt;/strong&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span lang=&quot;ja&quot;&gt;だ&lt;/span&gt;&lt;br&gt;&#39;da&#39;&lt;/td&gt;
+              &lt;td&gt;&lt;span class=&quot;no&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;は&lt;/span&gt;&lt;br&gt;&#39;ha&#39;&lt;/strong&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span lang=&quot;ja&quot;&gt;ば&lt;/span&gt;&lt;br&gt;&#39;ba&#39;&lt;/td&gt;
+              &lt;td&gt;&lt;span lang=&quot;ja&quot;&gt;ぱ&lt;/span&gt;&lt;br&gt;&#39;pa&#39;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;ら&lt;/span&gt;&lt;br&gt;&#39;ra&#39;&lt;/strong&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span class=&quot;no&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span class=&quot;rarely&quot;&gt;&lt;span lang=&quot;ja&quot;&gt;ら゚&lt;/span&gt;&lt;br&gt;&#39;la&#39;&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;&lt;strong&gt;&lt;span lang=&quot;ja&quot;&gt;わ&lt;/span&gt;&lt;br&gt;&#39;wa&#39;&lt;/strong&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span class=&quot;rarely&quot;&gt;&lt;span lang=&quot;ja&quot;&gt;わ゙&lt;/span&gt;&lt;br&gt;&#39;va&#39;&lt;/span&gt;&lt;/td&gt;
+              &lt;td&gt;&lt;span class=&quot;no&quot;&gt;&lt;/span&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/table&gt;&lt;br&gt;
+          
+
+        &lt;p&gt;Source: &lt;a href=&quot;https://en.wikipedia.org/wiki/Dakuten_and_handakuten#:~:text=The%20handakuten%20(%E5%8D%8A%E6%BF%81%E7%82%B9%2C%20Japanese,be%20pronounced%20with%20%5Bp%5D.&quot;&gt;Wikipedia: Dakuten and handakuten&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+&lt;p&gt;Here is the table with the corresponding dakuten and handakuten bolded.&lt;/p&gt;
+
+
+&lt;table&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;
+    &lt;td&gt;か &lt;br&gt;(ka)&lt;/td&gt;
+    &lt;td&gt;き &lt;br&gt;(ki)&lt;/td&gt;
+    &lt;td&gt;く &lt;br&gt;(ku)&lt;/td&gt;
+    &lt;td&gt;け &lt;br&gt;(ke)&lt;/td&gt;
+    &lt;td&gt;こ &lt;br&gt;(ko)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+
+            &lt;td&gt;&lt;strong&gt;が &lt;br&gt;(ga)&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;strong&gt;ぎ &lt;br&gt;(gi)&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;strong&gt;ぐ &lt;br&gt;(gu)&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;strong&gt;げ &lt;br&gt;(ge)&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;strong&gt;ご &lt;br&gt;(go)&lt;/strong&gt;&lt;/td&gt;            
+
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+    &lt;td&gt;さ &lt;br&gt;(sa)&lt;/td&gt;
+    &lt;td&gt;し &lt;br&gt;(shi)&lt;/td&gt;
+    &lt;td&gt;す &lt;br&gt;(su)&lt;/td&gt;
+    &lt;td&gt;せ &lt;br&gt;(se)&lt;/td&gt;
+    &lt;td&gt;そ &lt;br&gt;(so)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;strong&gt;ざ &lt;br&gt;(za)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;じ &lt;br&gt;(ji)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ず &lt;br&gt;(zu)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ぜ &lt;br&gt;(ze)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ぞ &lt;br&gt;(zo)&lt;/strong&gt;&lt;/td&gt;        
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+    &lt;td&gt;た &lt;br&gt;(ta)&lt;/td&gt;
+    &lt;td&gt;ち &lt;br&gt;(chi)&lt;/td&gt;
+    &lt;td&gt;つ &lt;br&gt;(tsu)&lt;/td&gt;
+    &lt;td&gt;て &lt;br&gt;(te)&lt;/td&gt;
+    &lt;td&gt;と &lt;br&gt;(to)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        
+            &lt;td&gt;&lt;strong&gt;だ &lt;br&gt;(da)&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;strong&gt;ぢ &lt;br&gt;(ji)&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;strong&gt;づ &lt;br&gt;(zu)&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;strong&gt;で &lt;br&gt;(de)&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;strong&gt;ど &lt;br&gt;(do)&lt;/strong&gt;&lt;/td&gt;            
+        &lt;/tr&gt;
+
+    &lt;tr&gt;
+    &lt;td&gt;な &lt;br&gt;(na)&lt;/td&gt;
+    &lt;td&gt;に &lt;br&gt;(ni)&lt;/td&gt;
+    &lt;td&gt;ぬ &lt;br&gt;(nu)&lt;/td&gt;
+    &lt;td&gt;ね &lt;br&gt;(ne)&lt;/td&gt;
+    &lt;td&gt;の &lt;br&gt;(no)&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+    &lt;td&gt;は &lt;br&gt;(ha)&lt;/td&gt;
+    &lt;td&gt;ひ &lt;br&gt;(hi)&lt;/td&gt;
+    &lt;td&gt;ふ &lt;br&gt;(fu)&lt;/td&gt;
+    &lt;td&gt;へ &lt;br&gt;(he)&lt;/td&gt;
+    &lt;td&gt;ほ &lt;br&gt;(ho)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;strong&gt;ば &lt;br&gt;(ba)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;び &lt;br&gt;(bi)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ぶ &lt;br&gt;(bu)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;べ &lt;br&gt;(be)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ぼ &lt;br&gt;(bo)&lt;/strong&gt;&lt;/td&gt;        
+    
+    &lt;/tr&gt;&lt;tr&gt;
+        &lt;td&gt;&lt;strong&gt;ぱ &lt;br&gt;(pa)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ぴ &lt;br&gt;(pi)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ぷ &lt;br&gt;(pu)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ぺ &lt;br&gt;(pe)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ぽ &lt;br&gt;(po)&lt;/strong&gt;&lt;/td&gt;
+
+
+
+    &lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;br&gt;
+
+    &lt;p&gt;Now, there is a further level of complexity.&lt;/p&gt;
+    &lt;h3&gt;combinations&lt;/h3&gt;
+    &lt;p&gt;Here&amp;#39;s the combinations of basic hiragana characters with &amp;quot;ya&amp;quot; (や), &amp;quot;yu&amp;quot; (ゆ), and &amp;quot;yo&amp;quot; (よ) presented in a table:&lt;/p&gt;
+    &lt;p&gt;Notice: there are also i (い) and e (え) combinations, but there is no hiragana with vowels e or i whose consontant is y (no ye or yi hiragana).&lt;/p&gt;
+
+    &lt;table&gt;
+        &lt;thead&gt;
+        &lt;tr&gt;
+        &lt;th&gt;&lt;/th&gt;
+        &lt;th&gt;a &lt;br&gt;(あ)&lt;/th&gt;
+        &lt;th&gt;i &lt;br&gt;(い)&lt;/th&gt;
+        &lt;th&gt;u &lt;br&gt;(う)&lt;/th&gt;
+        &lt;th&gt;e &lt;br&gt;(え)&lt;/th&gt;
+        &lt;th&gt;o &lt;br&gt;(お)&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+        &lt;tr&gt;
+        &lt;td&gt;k &lt;br&gt;(か)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;きゃ &lt;br&gt;(kya)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;きぃ &lt;br&gt;(ki)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;きゅ &lt;br&gt;(kyu)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;きぇ &lt;br&gt;(ke)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;きょ &lt;br&gt;(kyo)&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;s &lt;br&gt;(さ)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;しゃ &lt;br&gt;(sha)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;しぃ &lt;br&gt;(shi)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;しゅ &lt;br&gt;(shu)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;しぇ &lt;br&gt;(she)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;しょ &lt;br&gt;(sho)&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;c &lt;br&gt;(ち)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ちゃ &lt;br&gt;(cha)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;ちぃ &lt;br&gt;(chi)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ちゅ &lt;br&gt;(chu)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;ちぇ &lt;br&gt;(che)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ちょ &lt;br&gt;(cho)&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;n &lt;br&gt;(な)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;にゃ &lt;br&gt;(nya)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;にぃ &lt;br&gt;(ni)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;にゅ &lt;br&gt;(nyu)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;にぇ &lt;br&gt;(ne)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;にょ &lt;br&gt;(nyo)&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;h &lt;br&gt;(は)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ひゃ &lt;br&gt;(hya)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;ひぃ &lt;br&gt;(hi)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ひゅ &lt;br&gt;(hyu)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;ひぇ &lt;br&gt;(he)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ひょ &lt;br&gt;(hyo)&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;m &lt;br&gt;(ま)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;みゃ &lt;br&gt;(mya)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;みぃ &lt;br&gt;(mi)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;みゅ &lt;br&gt;(myu)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;みぇ &lt;br&gt;(me)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;みょ &lt;br&gt;(myo)&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;r &lt;br&gt;(ら)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;りゃ &lt;br&gt;(rya)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;りぃ &lt;br&gt;(ri)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;りゅ &lt;br&gt;(ryu)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;りぇ &lt;br&gt;(re)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;りょ &lt;br&gt;(ryo)&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;g &lt;br&gt;(が)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ぎゃ &lt;br&gt;(gya)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;ぎぃ &lt;br&gt;(gi)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ぎゅ &lt;br&gt;(gyu)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;ぎぇ &lt;br&gt;(ge)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ぎょ &lt;br&gt;(gyo)&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;j &lt;br&gt;(じ)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;じゃ &lt;br&gt;(jya)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;じぃ &lt;br&gt;(ji)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;じゅ &lt;br&gt;(ju)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;じぇ &lt;br&gt;(je)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;じょ &lt;br&gt;(jyo)&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;b &lt;br&gt;(ば)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;びゃ &lt;br&gt;(bya)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;びぃ &lt;br&gt;(bi)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;びゅ &lt;br&gt;(byu)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;びぇ &lt;br&gt;(be)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;びょ &lt;br&gt;(byo)&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt;p &lt;br&gt;(ぱ)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ぴゃ &lt;br&gt;(pya)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;ぴぃ &lt;br&gt;(pi)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ぴゅ &lt;br&gt;(pyu)&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;ぴぇ &lt;br&gt;(pe)&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;ぴょ &lt;br&gt;(pyo)&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;
+        &lt;/table&gt;&lt;br&gt;
+
+        &lt;p&gt;
+    On a final note, many students in Japan learn hiragana at school through writing with a very specific stroke order. While some foreign language resources consider this method to be inefficient&amp;mdash;as speaking, typing, reading, and listening are all far more common than writing&amp;mdash;some people still prefer the hand-written learning method. An artile by the lovely by Nick Hoyt from the site &lt;a href=&quot;https://japanesetactics.com/how-to-learn-hiragana#:~:text=of%20these%20now.-,Writing%20it%20down,few%20times%20to%20memorize%20it.&quot;&gt;Japanese Tactics&lt;/a&gt; has a similar summary to mine here where I found the diagram below. Hoyt also notes that classical Japanese reading is top to bottom then right to left, where &quot;western&quot; reading is left to right then top to bottom.
+&lt;/p&gt;
+&lt;p&gt;Here is a Wiki Commons diagram with the stroke instructions (including 2 dated hiragana ゐ &quot;wi&quot; and ゑ &quot;we&quot;):&lt;/p&gt;
+&lt;img style=&quot;width:100%&quot; alt=&quot;Table hiragana&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Table_hiragana.svg/512px-Table_hiragana.svg.png&quot;&gt;
+&lt;a title=&quot;User:Pmx, CC BY-SA 3.0 &amp;lt;http://creativecommons.org/licenses/by-sa/3.0/&amp;gt;, via Wikimedia Commons&quot; href=&quot;https://commons.wikimedia.org/wiki/File:Table_hiragana.svg&quot;&gt;Image Source&lt;/a&gt;
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fhiragana%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=hiragana&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
