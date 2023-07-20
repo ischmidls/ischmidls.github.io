@@ -1,6 +1,6 @@
 {
     "title": "steady descent into vector calculus",
-    "description": "curvilinear vector differentials",
+    "description": "steady descent into vector calculus",
     "date": "2023-07-16",
     "tags": "math",
     "layout": "layouts/post.njk"

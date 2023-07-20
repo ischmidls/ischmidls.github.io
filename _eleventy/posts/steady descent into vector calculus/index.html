@@ -1,11 +1,14 @@
-<style>
-  body {
-   background: linear-gradient(to bottom, #f4d9a7, #f4a7b9, #a6c0e4, #437ccc);
-   text-shadow: 0.2em 0.2em 0.4em rgba(0, 0, 0, 0.5);
-  }
-  .math.inline {overflow:auto;}
-  .math.display {overflow:auto;}
- </style>
+<head>
+  <style>
+    body {
+     background: linear-gradient(to bottom, #f4d9a7, #f4a7b9, #a6c0e4, #437ccc);
+     text-shadow: 0.2em 0.2em 0.4em rgba(0, 0, 0, 0.5);
+    }
+    .math.inline {overflow:auto;}
+    .math.display {overflow:auto;}
+   </style>
+</head>
+<body>
  <div class="container" id="bsr-wrapper">
   <h3>table of contents <a href="#top">
     <i class="bi bi-arrow-up"></i>
@@ -760,11 +763,11 @@
   <p style="overflow:auto;">Consider first the vertical contribution, namely the flux <em>up</em> through the top plus the flux <em>down</em> through the bottom. These two sides each have area element \(dA=dx\,dy\), but the outward normal vectors point in opposite directions, that is </p>
   <p style="overflow:auto;">\[ \mathbf{n}_{\text{up}} = \mathbf{k} \\ \mathbf{n}_{\text{down}} = -\mathbf{k} \]</p>
   <p>So, we get</p>
-  <p style="overflow:auto;">\[ \sum_{\text{top+bottom}} \mathbf{E} \cdot d\mathbf{A} = \mathbf{E}(z+dz) \cdot \mathbf{k} > dx\,dy - \mathbf{E}(z) \cdot\mathbf{k} > dx\,dy \]</p>
-  <p style="overflow:auto;">\[ = \Bigl( E_z(z+dz) - E_z(z) \Bigr) > dx\,dy \]</p>
-  <p style="overflow:auto;">\[ = \frac{E_z(z+dz) - E_z(z)}{dz} > dx\,dy\,dz \]</p>
+  <p style="overflow:auto;">\[ \sum_{\text{top+bottom}} \mathbf{E} \cdot d\mathbf{A} = \mathbf{E}(z+dz) \cdot \mathbf{k} &gt; dx\,dy - \mathbf{E}(z) \cdot\mathbf{k} &gt; dx\,dy \]</p>
+  <p style="overflow:auto;">\[ = \Bigl( E_z(z+dz) - E_z(z) \Bigr) &gt; dx\,dy \]</p>
+  <p style="overflow:auto;">\[ = \frac{E_z(z+dz) - E_z(z)}{dz} &gt; dx\,dy\,dz \]</p>
   <p>where we have multiplied and divided by \(dz\) to obtain the volume element \(dV=dx\,dy\,dz\) in the third step, and used the definition of the derivative in the final step.</p>
-  <p> Repeating this argument using the remaining pairs of faces, it follows that the total flux out of the box is \[ \text{total flux} = \sum_{\text{box}} \mathbf{E} \cdot d\mathbf{A} = \left( \frac{\partial E_x}{\partial x} + \frac{\partial E_y}{\partial y} + \frac{\partial E_z}{\partial z} \right) > dV \] Since the total flux is proportional to the volume of the box, it approaches zero as the box shrinks down to a point. The interesting quantity is therefore the ratio of the flux to volume; this ratio is called the divergence. </p>
+  <p> Repeating this argument using the remaining pairs of faces, it follows that the total flux out of the box is \[ \text{total flux} = \sum_{\text{box}} \mathbf{E} \cdot d\mathbf{A} = \left( \frac{\partial E_x}{\partial x} + \frac{\partial E_y}{\partial y} + \frac{\partial E_z}{\partial z} \right) &gt; dV \] Since the total flux is proportional to the volume of the box, it approaches zero as the box shrinks down to a point. The interesting quantity is therefore the ratio of the flux to volume; this ratio is called the divergence. </p>
   <p> At any point \(P\), we therefore define the <em> divergence</em> of a vector field \(\mathbf{E}\), written \(\nabla \cdot \mathbf{E}\), to be the flux of \(\mathbf{E}\) per unit volume leaving a small box around \(P\). In other words, the divergence is the limit as the box collapses around \(P\) of the ratio of the flux of the vector field out of the box to the volume of the box. Thus, the divergence of \(\mathbf{E}\) at \(P\) is the flux per unit volume through a small box around \(P\), which is given in rectangular coordinates by \[ \nabla \cdot \mathbf{E} = \frac{\text{flux}}{\text{unit volume}} = \frac{\partial E_x}{\partial x} + \frac{\partial E_y}{\partial y} + \frac{\partial E_z}{\partial z} \] </p>
   <p> You may have seen this formula before, but remember that it is merely the rectangular coordinate expression for the divergence of \(\mathbf{E}\); the divergence is defined geometrically as flux per unit volume. Similar computations can be used to determine expressions for the divergence in other coordinate systems. Because of the geometric nature of divergence, these expressions turn out to give the same value at any point in space. </p>
   <p> The use of \(V\) for volume, and hence \(dV\) for the volume element, conflicts with the use of \(V\) to denote electrostatic potential. We nonetheless write \(dV\) for the volume element whenever the context is clear, and use \(d\tau\) instead only when necessary to avoid confusion. </p>
@@ -776,7 +779,7 @@
   </h3>
   <p> Tevian Dray and Corinne A. Manogue take divergence to the next level.</p>
   <p> The total flux of the electric field out through a small rectangular box is \[ \text{flux} = \sum_{\text{box}} \mathbf{E} \cdot d\mathbf{A} = \nabla \cdot \mathbf{E} / dV \]</p>
-  <p> But any closed region can be filled with such boxes, as shown in Figure 1a. Furthermore, the flux out of such a region is just the sum of the flux out of each of the smaller boxes, since the net flux through any common face will be zero (because adjacent boxes have opposite notions of "out of"), as indicated schematically in Figure 1b. Thus, the total flux out of any closed box is given by \[ \int_{\text{box}} \mathbf{E} \cdot d\mathbf{A} = \int_{\text{inside}} \nabla \cdot \mathbf{E} > > dV \] </p>
+  <p> But any closed region can be filled with such boxes, as shown in Figure 1a. Furthermore, the flux out of such a region is just the sum of the flux out of each of the smaller boxes, since the net flux through any common face will be zero (because adjacent boxes have opposite notions of "out of"), as indicated schematically in Figure 1b. Thus, the total flux out of any closed box is given by \[ \int_{\text{box}} \mathbf{E} \cdot d\mathbf{A} = \int_{\text{inside}} \nabla \cdot \mathbf{E} &gt; > dV \] </p>
   <p> This is the Divergence Theorem. </p>
   <h3>
    <a name="divergence-curvilinear" id="divergence-curvilinear"> the divergence in curvilinear coordinates</a>
@@ -938,3 +941,4 @@
  <p> One second derivative, the divergence of the gradient, occurs so often it has its own name and notation. It is called the <em> Laplacian</em> of the function \(V\), and is written in any of the forms: \[ \triangle V = \nabla^2 V = \nabla \cdot \nabla V \] In rectangular coordinates, it is easy to compute: \[ \triangle V = \nabla \cdot \nabla V = \frac{\partial V}{\partial x} + \frac{\partial V}{\partial y} + \frac{\partial V}{\partial z} \] </p>
  <p> The simplest homogeneous partial differential equation involving the Laplacian: \[ \nabla^2 V = 0 \] is called Laplace's equation. The inhomogeneous version: \[ \nabla^2 V = f(\mathbf{r}) \] is known as Poisson's equation. There are many important techniques for solving these equations that are beyond the scope of this text. </p>
  </div>
+</body>

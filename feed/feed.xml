@@ -2215,7 +2215,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
           
           
 &lt;p&gt;Now, Heyting algebras often take the unhelpful label—for those who are not yet students of topology—that: &quot;Every topology provides a complete Heyting algebra in the form of its open set lattice.&quot;&lt;/p&gt;
-&lt;p&gt;NOTE: An &quot;open&quot; set is defined as a set where each point is surrounded by other members of the set. To provide a precise definition, one begins with a &quot;basic open set&quot; and forms other open sets from it. In the presence of a metric, basic open sets can be represented by &#92;(ϵ&#92;)-neighborhoods (points are less than &#92;(ϵ&#92;) away from some point for &#92;(ϵ &gt; 0&#92;)). &#92;(A&#92;) set &#92;(S&#92;) is considered open if, for every point &#92;(P ∈ S&#92;), there exists a basic open set &#92;(U&#92;) containing &#92;(P&#92;) such that &#92;(U ⊆ S&#92;). &#92;(A&#92;) set is classified as closed if it either has no complement or if its complement is open.&lt;/p&gt;
+&lt;p&gt;NOTE: An &quot;open&quot; set is defined as a set where each point is surrounded by other members of the set. To provide a precise definition, one begins with a &quot;basic open set&quot; and forms other open sets from it. In the presence of a metric, basic open sets can be represented by &#92;(ϵ&#92;)-neighborhoods (points are less than &#92;(ϵ&#92;) away from some point for &#92;(ϵ &amp;gt; 0&#92;)). &#92;(A&#92;) set &#92;(S&#92;) is considered open if, for every point &#92;(P ∈ S&#92;), there exists a basic open set &#92;(U&#92;) containing &#92;(P&#92;) such that &#92;(U ⊆ S&#92;). &#92;(A&#92;) set is classified as closed if it either has no complement or if its complement is open.&lt;/p&gt;
 &lt;p&gt;A subset lattice (also called powerset lattice) is prototypical. Where join is disjunction, union, and inclusion, and meet is conjunction, intersection, and (something like) includes. In the case of Heyting algebras, these might also be maximum and minimum respectively.&lt;/p&gt;
 &lt;img alt=&quot;&quot; src=&quot;https://ischmidls.github.io/posts/pages/heyting/images/image2.png&quot; style=&quot;width: 100%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);&quot; title=&quot;&quot;&gt;
 &lt;p&gt;Source: &lt;a href=&quot;https://en.wikipedia.org/wiki/Power_set&quot;&gt;Wikipedia Power set&lt;/a&gt;&lt;/p&gt;
@@ -3292,11 +3292,11 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
           &lt;td&gt;&#92;(Ax=b&#92;) has one solution &#92;(x=A^{-1}b&#92;)&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-          &lt;td&gt;&#92;(A&#92;) has &#92;(r &lt; n&#92;) pivots&lt;/td&gt;
+          &lt;td&gt;&#92;(A&#92;) has &#92;(r &amp;lt; n&#92;) pivots&lt;/td&gt;
           &lt;td&gt;&#92;(A&#92;) has &#92;(n&#92;) (nonzero) pivots&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-          &lt;td&gt;&#92;(A&#92;) has rank &#92;(r &lt; n&#92;)&lt;/td&gt;
+          &lt;td&gt;&#92;(A&#92;) has rank &#92;(r &amp;lt; n&#92;)&lt;/td&gt;
           &lt;td&gt;&#92;(A&#92;) has full rank &#92;(r=n&#92;)&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -3304,11 +3304,11 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
           &lt;td&gt;Reduced row echelon form is &#92;(R=I&#92;)&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-          &lt;td&gt;The column space has dimension &#92;(r &lt; n&#92;)&lt;/td&gt;
+          &lt;td&gt;The column space has dimension &#92;(r &amp;lt; n&#92;)&lt;/td&gt;
           &lt;td&gt;The column space is all of &#92;(R^n&#92;)&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-          &lt;td&gt;The row space has dimension &#92;(r &lt; n&#92;)&lt;/td&gt;
+          &lt;td&gt;The row space has dimension &#92;(r &amp;lt; n&#92;)&lt;/td&gt;
           &lt;td&gt;The row space is all of &#92;(R^n&#92;)&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
@@ -3320,7 +3320,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
           &lt;td&gt;&#92;(A^TA&#92;) is symmetric positive definite&lt;/td&gt;
         &lt;/tr&gt;
         &lt;tr&gt;
-          &lt;td&gt;&#92;(A&#92;) has &#92;(r &lt; n&#92;) singular values&lt;/td&gt;
+          &lt;td&gt;&#92;(A&#92;) has &#92;(r &amp;lt; n&#92;) singular values&lt;/td&gt;
           &lt;td&gt;&#92;(A&#92;) has &#92;(n&#92;) (positive) singular values&lt;/td&gt;
         &lt;/tr&gt;
       &lt;/tbody&gt;
@@ -3396,6 +3396,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
     &lt;/li&gt;
   &lt;/ul&gt;
   &lt;h2 id=&quot;consistency&quot;&gt;consistency &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+  &lt;p&gt;Just to get it out of the way,  If &#92;(&#92;operatorname{rank}(A) &amp;lt; &#92;operatorname{rank}(A|B)&#92;), then the system is inconsistent.&lt;/p&gt;
   &lt;p&gt;Let Let &#92;(A&#92;) denote a matrix and &#92;(A | B &#92;) denote its augmented matrix.&lt;/p&gt;
   &lt;p&gt;Consistent Systems:&lt;/p&gt;
   &lt;ul&gt;
@@ -3403,12 +3404,12 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
       &lt;b&gt;Def 1&lt;/b&gt; Full Rank: Unique solution. &#92;(&#92;text{rank} (A) = &#92;text{rank} (A|B) = &#92;text{col} (A)&#92;)
     &lt;/li&gt;
     &lt;li&gt;
-      &lt;b&gt;Def 2&lt;/b&gt; Underdetermined: Infinitely many solutions. &#92;(&#92;text{rank} (A) = &#92;text{rank} (A|B) &lt; &#92;text{col} (A) &#92;) &lt;/li&gt;
+      &lt;b&gt;Def 2&lt;/b&gt; Underdetermined: Infinitely many solutions. &#92;(&#92;text{rank} (A) = &#92;text{rank} (A|B) &amp;lt; &#92;text{col} (A) &#92;) &lt;/li&gt;
   &lt;/ul&gt;
   &lt;p&gt;Inconsistent System:&lt;/p&gt;
   &lt;ul&gt;
     &lt;li&gt;
-      &lt;b&gt;Def 3&lt;/b&gt; Overdetermined: No solution. &#92;(&#92;text{rank} (A) &gt; &#92;text{col} (A) &#92;)
+      &lt;b&gt;Def 3&lt;/b&gt; Overdetermined: No solution. &#92;(&#92;text{rank} (A) &amp;gt; &#92;text{col} (A) &#92;)
     &lt;/li&gt;
   &lt;/ul&gt;
   &lt;p&gt;Proofs&lt;/p&gt;
@@ -3473,7 +3474,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
           &lt;p&gt;which is exact at &#92;(H&#92;), &#92;(G&#92;), and &#92;(K&#92;). That means &#92;(&#92;alpha&#92;) is injective, &#92;(&#92;beta&#92;) is surjective, and &#92;(&#92;operatorname{im}(&#92;alpha) = &#92;operatorname{ker}(&#92;beta)&#92;).&lt;/p&gt;
           &lt;p&gt;A more general exact sequence can have lots of terms:&lt;/p&gt;
           &lt;p&gt;&#92;(G_1 &#92;xrightarrow{&#92;alpha_1} G_2 &#92;xrightarrow{&#92;alpha_2} &#92;ldots &#92;xrightarrow{&#92;alpha_{n-1}} G_n&#92;),&lt;/p&gt;
-          &lt;p&gt;and it must be exact at each &#92;(G_i&#92;) for &#92;(1 &lt; i &lt; n&#92;). Exact sequences can also be of infinite length in one or both directions. We will only deal with short exact sequences here. &lt;/p&gt;
+          &lt;p&gt;and it must be exact at each &#92;(G_i&#92;) for &#92;(1 &amp;lt; i &amp;lt; n&#92;). Exact sequences can also be of infinite length in one or both directions. We will only deal with short exact sequences here. &lt;/p&gt;
               &lt;p&gt;Exact sequences first arose in algebraic topology, and the later development of homological algebra (the type of algebra underlying algebraic topology) spread exact sequences into the rest of mathematics.&lt;/p&gt;
               &lt;p&gt;Theorem 3.2. Let &#92;(1 &#92;rightarrow H &#92;xrightarrow{&#92;alpha} G &#92;xrightarrow{&#92;beta} K &#92;rightarrow 1&#92;) be a short exact sequence of groups. The following are equivalent:&lt;/p&gt;
               &lt;p&gt;(1) There is a homomorphism &#92;(&#92;alpha_0: G &#92;rightarrow H&#92;) such that &#92;(&#92;alpha_0(&#92;alpha(h)) = h&#92;) for all &#92;(h &#92;in H&#92;).&lt;/p&gt;
@@ -3590,449 +3591,416 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;#fnr
 		<updated>2023-07-01T17:00:00-07:00</updated>
 		<id>https://ischmidls.github.io/posts/intro%20prob/</id>
 		<content type="html">
-		  &lt;h2&gt;table of contents &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;ol&gt;
+		  &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+  MathJax.Hub.Config({
+    jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
+    extensions: [&quot;tex2jax.js&quot;],
+    &quot;HTML-CSS&quot;: { preferredFont: &quot;TeX&quot;, availableFonts: [&quot;STIX&quot;,&quot;TeX&quot;] },
+    tex2jax: { inlineMath: [ [&quot;$&quot;, &quot;$&quot;], [&quot;&#92;&#92;(&quot;,&quot;&#92;&#92;)&quot;] ], displayMath: [ [&quot;$$&quot;,&quot;$$&quot;], [&quot;&#92;&#92;[&quot;, &quot;&#92;&#92;]&quot;] ], processEscapes: true, ignoreClass: &quot;tex2jax_ignore|dno&quot; },
+    TeX: { noUndefined: { attributes: { mathcolor: &quot;red&quot;, mathbackground: &quot;#FFEEEE&quot;, mathsize: &quot;90%&quot; } } },
+    messageStyle: &quot;none&quot;
+  });
+  &lt;/script&gt;    
+  &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;table-of-contents&quot;&gt;table of contents
+  &lt;a href=&quot;#top&quot;&gt;&lt;em&gt;&lt;/em&gt;&lt;/a&gt;&lt;/h2&gt;
+  &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;#event-spaces&quot;&gt;event spaces&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#outer-measure&quot;&gt;outer measure&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#measurable-spaces&quot;&gt;measurable spaces&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#defining-a-measure&quot;&gt;defining a measure&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#measure-transformations&quot;&gt;measure transformations&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#probability-theory&quot;&gt;probability theory&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#independence&quot;&gt;independence&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-    
-  &lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2&gt;intro &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;What follows &amp;mdash; as with many of my posts &amp;mdash; is my explanation of work from someone who is more erudite than me.&lt;/p&gt;
-&lt;p&gt;This time it is &quot;Formalizing the Beginnings of Bayesian Probability Theory in the Lean Theorem Prover&quot; a Master&#39;s thesis from the lovely &lt;em&gt;Rishikesh Vaishnav&lt;/em&gt;. You might find it &lt;a href=&quot;https://escholarship.org/uc/item/8hb1w6js&quot;&gt;here&lt;/a&gt;, ceteris paribus.&lt;/p&gt;
-&lt;p&gt;I skipped his intro on types &amp;mdash; the foundation of Lean&#39;s formal proofs, so read that if you like. As you may know, I enjoy &lt;a href=&quot;https://www.cse.chalmers.se/~peterd/papers/DependentTypesAtWork.pdf&quot;&gt;Dependent Types at Work&lt;/a&gt; by Ana Bove and Peter Dybjer (but this uses a different language &amp;mdash; Agda). That being said, I will also disclude all of &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; code. So, this will read more like &lt;a href=&quot;https://hott.github.io/book/hott-online-1404-g79e6d60.pdf&quot;&gt;HoTT&lt;/a&gt; in the line of Marin-Lof&#39;s or Hofmann&#39;s or Voevodsky&#39;s or Awodey&#39;s publications.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Vaishnav&#39;s&lt;/em&gt; organization follows: &lt;/p&gt;
-&lt;p&gt;
   &lt;ul&gt;
-    &lt;li&gt;Measure-Theoretic Foundations&lt;/li&gt;
-    &lt;li&gt;The Event Space&lt;/li&gt;
-    &lt;li&gt;The Outer Measure
-        &lt;ul&gt;
-            &lt;li&gt;Outer Measure Transformations&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;Measurable Spaces
-        &lt;ul&gt;
-            &lt;li&gt;Transforming Measurable Spaces&lt;/li&gt;
-            &lt;li&gt;A Galois Connection&lt;/li&gt;
-            &lt;li&gt;The Trimmed Outer Measure&lt;/li&gt;
-            &lt;li&gt;Measurable Spaces on Pi Types&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;Defining a Measure&lt;/li&gt;
-    &lt;li&gt;Measure Transformations
-        &lt;ul&gt;
-            &lt;li&gt;From a Partial Function&lt;/li&gt;
-            &lt;li&gt;The Carathéodory Criterion&lt;/li&gt;
-            &lt;li&gt;Lifting an Outer Measure Transformation&lt;/li&gt;
-            &lt;li&gt;Restricting a Measure&lt;/li&gt;
-            &lt;li&gt;Mapping a Measure&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;Probability Theory
-        &lt;ul&gt;
-            &lt;li&gt;Independence
-            &lt;/li&gt;
-            &lt;li&gt;Conditional Probability
-            &lt;/li&gt;
-            &lt;li&gt;Random Variables
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/p&gt;
-&lt;p&gt;Now, &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; details mostly fall under &quot;Probability Theory&quot;. He also numbered everything, but that&#39;s a bit much for me (I use my own numbering here). Right now, I am taking a probability class, not a measure theory class, so I should probably focus on the &quot;Probability Theory&quot; section myself.&lt;/p&gt;
-&lt;p&gt;The list above is somewhat decieving, as Vasishnav included sub-sub-headings for the &quot;Probability&quot; section splitting &quot;Independence&quot; and &quot;Conditional&quot; into subsections for definitions and properties. But more importantly, &quot;Random Variables&quot; includes:&lt;/p&gt;
-&lt;p&gt;
-  &lt;ul&gt;&lt;li&gt;Random Variables
-      &lt;ul&gt;
-          &lt;li&gt;The Joint Distribution&lt;/li&gt;
-          &lt;li&gt;Restricting a Pi&lt;/li&gt;
-          &lt;li&gt;The Marginal Distribution&lt;/li&gt;
-          &lt;li&gt;Marginalization&lt;/li&gt;
-          &lt;li&gt;Independence on Random Variables&lt;/li&gt;
-          &lt;li&gt;Conditional Independence on Random Variables&lt;/li&gt;
-      &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;That brings me to the fact of the matter. I took an &quot;Engineering Stats&quot; class and forgot everything. I still do not know what any of this means:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Random variable: A variable that takes on different values based on the outcome of a random event. &#92;(X&#92;)&lt;/p&gt;&lt;p&gt;Distribution: The function that describes the probabilities of different outcomes or values of a random variable. &#92;(P(X = x)&#92;)&lt;/p&gt;&lt;p&gt;Mean: The average value of a set of numbers or a random variable. &#92;(&#92;mu&#92;)&lt;/p&gt;&lt;p&gt;Variance: A measure of the spread or dispersion of a set of numbers or a random variable. &#92;(&#92;sigma^2&#92;)&lt;/p&gt;&lt;p&gt;Standard deviation: The square root of the variance, providing a measure of the average distance between each data point and the mean. &#92;(&#92;sigma&#92;)&lt;/p&gt;&lt;p&gt;Normal distribution: A symmetric probability distribution that is commonly used to model real-world phenomena. &#92;(N(&#92;mu, &#92;sigma^2)&#92;)&lt;/p&gt;&lt;p&gt;Hypothesis testing: A statistical method to make inferences or conclusions about a population based on sample data.&lt;/p&gt;&lt;p&gt;Confidence interval: A range of values that is likely to contain the true value of a population parameter with a certain level of confidence. &#92;([a, b]&#92;)&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;(quoting nobody, I just prefer the &lt;code&gt;blockquote&lt;/code&gt; markup to using the &lt;code&gt;pl-5&lt;/code&gt; bootstrap; you can add that to the izak lore if you want)&lt;/p&gt;
-&lt;!--EVENT SPACES--&gt;
-&lt;h2 id=&quot;event-spaces&quot;&gt;event spaces &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Let a type &#92;( &#92;alpha &#92;) be the &quot;fundamental event space&quot;, 
-  where each trial yields a value. 
-  To assign a &lt;em&gt;measure&lt;/em&gt; to sets in &#92;( &#92;alpha &#92;), 
-  representing probabilities: use a random variable, denoted &#92;( X: &#92;alpha &#92;rightarrow &#92;beta &#92;), 
-  a transformation on the event space. 
-  &lt;/p&gt;
-  &lt;p&gt;With a measure function on &#92;( &#92;alpha &#92;), we can define a measure function on 
-  &#92;( &#92;beta &#92;) corresponding to &#92;( X &#92;). For any set &#92;( s &#92;) in &#92;( &#92;beta &#92;), 
-  the measure of &#92;( s &#92;) is the measure of the preimage of &#92;( s &#92;) under &#92;( X &#92;) 
-  (denoted as &#92;( X^{-1}(s) &#92;)). This relationship between &#92;(&#92;alpha&#92;) and &#92;(&#92;beta&#92;) comes to fruition during the &quot;Mapping/Co-Mapping Measurable Spaces&quot; part of &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; &quot;Outer Measure&quot; section.
-&lt;/p&gt;
-&lt;p&gt;Restrictions on a measure function &#92;(m&#92;) come from the &quot;&lt;b&gt;outer measure&lt;/b&gt;&quot;, 
-  which states that, for a function &#92;(m : &#92;text{set } &#92;alpha &#92;rightarrow &#92;mathbb{R}^+_&#92;infty&#92;) 
-  to be an &lt;b&gt;outer measure&lt;/b&gt; &#92;((&#92;)&lt;span class=&quot;text-secondary&quot;&gt;where &#92;(&#92;mathbb{R}^+_&#92;infty&#92;) represents the non-negative real numbers including infinity&lt;/span&gt;&#92;()&#92;), 
-  we have the empty set property &#92;((1)&#92;), monotonicity property &#92;((2)&#92;), and countable union property &#92;((3)&#92;):
-&lt;/p&gt;
-&lt;p&gt;
-  &#92;[
-&#92;begin{align*}
-m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
-&#92;forall A, B : &#92;text{set } &#92;alpha, A &#92;subseteq B &amp; &#92;Rightarrow m(A) &#92;leq m(B), &#92;quad &amp; (2) &#92;&#92;
-&#92;forall f : &#92;mathbb{N} &#92;rightarrow &#92;text{set } &#92;alpha, m&#92;left(&#92;bigcup_{i=0}^&#92;infty f(i)&#92;right) &amp; &#92;leq &#92;sum_{i=0}^&#92;infty m(f(i)), &#92;quad &amp; (3)
-&#92;end{align*}
-&#92;]
-&lt;/p&gt;
-&lt;p&gt;The empty set property &#92;((1)&#92;) ensures that the empty set has zero mass. The monotonicity property &#92;((2)&#92;) guarantees that a set has at least as much mass as any of its subsets. The countable union property &#92;((3)&#92;) limits the mass of a set to the maximum mass present in any covering set of subsets.&lt;/p&gt;
-&lt;p&gt;These propertis of &lt;b&gt;outer measure&lt;/b&gt; allow us to talk about measure using &lt;em&gt;inequalities&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;See &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; paper for info on &quot;why countable&quot;.&lt;/p&gt;
-&lt;h2 id=&quot;outer-measure&quot;&gt;outer measure &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; defines:&lt;/p&gt;
-&lt;p&gt;&#92;[
-  &#92;text{fromfunc}(m_0(s)) = &#92;inf_{ f : &#92;mathbb{N} &#92;rightarrow &#92;text{set }&#92;alpha} &#92;left&#92;{s &#92;subseteq &#92;bigcup_{i=0}^{&#92;infty} f(i) &#92;Rightarrow &#92;sum_{i=0}^{&#92;infty} m_0(f(i)) &#92;right&#92;}
-  &#92;]&lt;/p&gt;
-&lt;p&gt;Satisfying: &#92;(∀ s : set &#92; α, m(s) ≤ m_0(s).&#92;)&lt;/p&gt;
-&lt;p&gt;In the type theory style that verges on pseudocode, we have &#92;(&#92;text{fromfunc}(m_0(s))&#92;) &amp;mdash; which &lt;em&gt;Vaishnav&lt;/em&gt; denotes &#92;(&#92;text{fromfunc}(m_0)(s)&#92;). &lt;/p&gt;
-&lt;p&gt;The condition &#92;(s &#92;subseteq &#92;bigcup_{i=0}^{&#92;infty} f(i)&#92;) ensures that the sets &#92;(f(i)&#92;) cover the set &#92;(s&#92;). If this condition is not satisfied for some &#92;(f&#92;), the value is effectively considered &#92;(&#92;infty&#92;).&lt;/p&gt;
-
-&lt;p&gt;The function &#92;(&#92;text{fromfunc}(m_0)&#92;) is then defined as a valid outer measure, which satisfies the condition &#92;(m(s) &#92;leq m_0(s)&#92;) for all sets &#92;(s&#92;). It is also proven that &#92;(&#92;text{fromfunc}(m_0)&#92;) is the unique maximum outer measure that satisfies this condition. No other outer measure can exceed it on any set.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; also formalizes this for a more general case of partial functions where &#92;(m_0 : S → &#92;mathbb{R}^{+&#92;infty}&#92;)  such that:&lt;/p&gt;
-&lt;p&gt;&#92;[ &#92;text{extend} (m_0) (s) = &#92;begin{cases} 
-  m_0 (s) &#92;quad s &#92;in S &#92;&#92;
-
-  &#92;infty &#92;quad s &#92;notin S 
-&#92;end{cases}
-&#92;]&lt;/p&gt;
-&lt;p&gt;Now is the moment you&#39;ve been waiting for since &lt;a href=&quot;https://ischmidls.github.io/posts/intro%20prob/&quot; event-spaces=&quot;&quot;&gt;event spaces&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Given a function &#92;(f: &#92;alpha &#92;to &#92;beta&#92;) and an outer measure &#92;(m_0&#92;) on &#92;(&#92;alpha&#92;), we define &#92;(&#92;text{map}_f(m_0)&#92;) as:&lt;/p&gt;
-&lt;p&gt;
-&#92;[
-&#92;text{map}_f(m_0)(s) = m_0(f^{-1}(s))
-&#92;]
-&lt;/p&gt;
-&lt;p&gt;Similarly, for an outer measure &#92;(m_1&#92;) on &#92;(&#92;beta&#92;), we define &#92;(&#92;text{comap}_f(m_1)&#92;) as:&lt;/p&gt;
-&lt;p&gt;
-&#92;[
-&#92;text{comap}_f(m_1)(s) = m_1(f(s))
-&#92;]
-&lt;/p&gt;
-&lt;p&gt;Both &#92;(&#92;text{map}_f(m_0)&#92;) and &#92;(&#92;text{comap}_f(m_1)&#92;) are outer measures.&lt;/p&gt;
-&lt;p&gt;Given an outer measure &#92;(m_0&#92;) on &#92;(&#92;alpha&#92;), we can restrict it to a set &#92;(t&#92;) by defining:&lt;/p&gt;
-
-&#92;[
-&#92;text{restrict}_t(m_0)(s) = m_0(s &#92;cap t)
-&#92;]
-
-&lt;p&gt;This measures the intersection of &#92;(s&#92;) with &#92;(t&#92;). The function &#92;(&#92;text{restrict}_t(m_0)&#92;) is proven to be an outer measure. In Lean, we can use the coercion function &#92;(c_t: t &#92;to &#92;alpha&#92;) to avoid the explicit proof. We can express it as:&lt;/p&gt;
-
-&#92;[
-&#92;text{restrict}_t(m_0) = &#92;text{map}_{c_t}(&#92;text{comap}_{c_t}(m_0))
-&#92;]
-
-&lt;p&gt;Alternatively, for any &#92;(s&#92;), it can be simplified to:&lt;/p&gt;
-
-&#92;[
-&#92;text{restrict}_t(m_0)(s) = m_0(c_t(c_t^{-1}(s)))
-&#92;]
-
-&lt;p&gt;where &#92;(c_t(c_t^{-1}(s))&#92;) represents the intersection &#92;(s &#92;cap t&#92;). Since &#92;(&#92;text{map}(&#92;cdot)&#92;) and &#92;(&#92;text{comap}(&#92;cdot)&#92;) preserve outer measures, we can conclude that &#92;(&#92;text{restrict}_t(m_0)(s)&#92;) is an outer measure.&lt;/p&gt;
-
-&lt;p&gt;Now, that was a very close paraphase of &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; text.&lt;/p&gt;
-&lt;p&gt;Alternatively, the beloved Wikipedia says:&lt;/p&gt;
-&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
-  &lt;p&gt;Given a set &#92;(X&#92;), let &#92;(2^X&#92;) denote the collection of all subsets of &#92;(X&#92;), including the empty set &#92;(&#92;varnothing&#92;).&lt;/p&gt;
-&lt;p&gt;An outer measure on &#92;(X&#92;) is a set function &#92;(&#92;mu: 2^X &#92;to [0, &#92;infty]&#92;) such that:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Null empty set: &#92;(&#92;mu(&#92;varnothing) = 0&#92;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#independence&quot;&gt;independence&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;hr&gt;
+  &lt;h2 id=&quot;intro&quot;&gt;intro
+  &lt;a href=&quot;#top&quot;&gt;&lt;em&gt;&lt;/em&gt;&lt;/a&gt;&lt;/h2&gt;
+  &lt;p&gt;What follows — as with many of my posts — is my explanation of work from someone who is more erudite than me.&lt;/p&gt;
+  &lt;p&gt;This time it is &quot;Formalizing the Beginnings of Bayesian Probability Theory in the Lean Theorem Prover&quot; a Master&#39;s thesis from the lovely &lt;em&gt;Rishikesh Vaishnav&lt;/em&gt;. You might find it &lt;a href=&quot;https://escholarship.org/uc/item/8hb1w6js&quot;&gt;here&lt;/a&gt;, ceteris paribus.&lt;/p&gt;
+  &lt;p&gt;I skipped his intro on types — the foundation of Lean&#39;s formal proofs, so read that if you like. As you may know, I enjoy &lt;a href=&quot;https://www.cse.chalmers.se/~peterd/papers/DependentTypesAtWork.pdf&quot;&gt;Dependent Types at Work&lt;/a&gt; by Ana Bove and Peter Dybjer (but this uses a different language — Agda). That being said, I will also disclude all of &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; code. So, this will read more like &lt;a href=&quot;https://hott.github.io/book/hott-online-1404-g79e6d60.pdf&quot;&gt;HoTT&lt;/a&gt; in the line of Marin-Lof&#39;s or Hofmann&#39;s or Voevodsky&#39;s or Awodey&#39;s publications.&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;Vaishnav&#39;s&lt;/em&gt; organization follows:&lt;/p&gt;
+  &lt;ul&gt;
+  &lt;li&gt;Measure-Theoretic Foundations&lt;/li&gt;
+  &lt;li&gt;The Event Space&lt;/li&gt;
+  &lt;li&gt;The Outer Measure
+  &lt;ul&gt;
+  &lt;li&gt;Outer Measure Transformations&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+  &lt;li&gt;Measurable Spaces
+  &lt;ul&gt;
+  &lt;li&gt;Transforming Measurable Spaces&lt;/li&gt;
+  &lt;li&gt;A Galois Connection&lt;/li&gt;
+  &lt;li&gt;The Trimmed Outer Measure&lt;/li&gt;
+  &lt;li&gt;Measurable Spaces on Pi Types&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+  &lt;li&gt;Defining a Measure&lt;/li&gt;
+  &lt;li&gt;Measure Transformations
+  &lt;ul&gt;
+  &lt;li&gt;From a Partial Function&lt;/li&gt;
+  &lt;li&gt;The Carathéodory Criterion&lt;/li&gt;
+  &lt;li&gt;Lifting an Outer Measure Transformation&lt;/li&gt;
+  &lt;li&gt;Restricting a Measure&lt;/li&gt;
+  &lt;li&gt;Mapping a Measure&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+  &lt;li&gt;Probability Theory
+  &lt;ul&gt;
+  &lt;li&gt;Independence&lt;/li&gt;
+  &lt;li&gt;Conditional Probability&lt;/li&gt;
+  &lt;li&gt;Random Variables&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;Now, &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; details mostly fall under &quot;Probability Theory&quot;. He also numbered everything, but that&#39;s a bit much for me (I use my own numbering here). Right now, I am taking a probability class, not a measure theory class, so I should probably focus on the &quot;Probability Theory&quot; section myself.&lt;/p&gt;
+  &lt;p&gt;The list above is somewhat decieving, as Vasishnav included sub-sub-headings for the &quot;Probability&quot; section splitting &quot;Independence&quot; and &quot;Conditional&quot; into subsections for definitions and properties. But more importantly, &quot;Random Variables&quot; includes:&lt;/p&gt;
+  &lt;ul&gt;
+  &lt;li&gt;Random Variables
+  &lt;ul&gt;
+  &lt;li&gt;The Joint Distribution&lt;/li&gt;
+  &lt;li&gt;Restricting a Pi&lt;/li&gt;
+  &lt;li&gt;The Marginal Distribution&lt;/li&gt;
+  &lt;li&gt;Marginalization&lt;/li&gt;
+  &lt;li&gt;Independence on Random Variables&lt;/li&gt;
+  &lt;li&gt;Conditional Independence on Random Variables&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;That brings me to the fact of the matter. I took an &quot;Engineering Stats&quot; class and forgot everything. I still do not know what any of this means:&lt;/p&gt;
+  &lt;blockquote&gt;
+  &lt;p&gt;Random variable: A variable that takes on different values based on the outcome of a random event. &#92;(X&#92;)&lt;/p&gt;
+  &lt;p&gt;Distribution: The function that describes the probabilities of different outcomes or values of a random variable. &#92;(P(X = x)&#92;)&lt;/p&gt;
+  &lt;p&gt;Mean: The average value of a set of numbers or a random variable. &#92;(&#92;mu&#92;)&lt;/p&gt;
+  &lt;p&gt;Variance: A measure of the spread or dispersion of a set of numbers or a random variable. &#92;(&#92;sigma^2&#92;)&lt;/p&gt;
+  &lt;p&gt;Standard deviation: The square root of the variance, providing a measure of the average distance between each data point and the mean. &#92;(&#92;sigma&#92;)&lt;/p&gt;
+  &lt;p&gt;Normal distribution: A symmetric probability distribution that is commonly used to model real-world phenomena. &#92;(N(&#92;mu, &#92;sigma^2)&#92;)&lt;/p&gt;
+  &lt;p&gt;Hypothesis testing: A statistical method to make inferences or conclusions about a population based on sample data.&lt;/p&gt;
+  &lt;p&gt;Confidence interval: A range of values that is likely to contain the true value of a population parameter with a certain level of confidence. &#92;([a, b]&#92;)&lt;/p&gt;
+  &lt;/blockquote&gt;
+  &lt;p&gt;(quoting nobody, I just prefer the &lt;code&gt;blockquote&lt;/code&gt; markup to using the &lt;code&gt;pl-5&lt;/code&gt; bootstrap; you can add that to the izak lore if you want)&lt;/p&gt;
+  &lt;h2 id=&quot;event-spaces&quot;&gt;event spaces
+  &lt;a href=&quot;#top&quot;&gt;&lt;em&gt;&lt;/em&gt;&lt;/a&gt;&lt;/h2&gt;
+  &lt;p&gt;Let a type &#92;( &#92;alpha &#92;) be the &quot;fundamental event space&quot;, where each trial yields a value. To assign a &lt;em&gt;measure&lt;/em&gt; to sets in &#92;( &#92;alpha &#92;), representing probabilities: use a random variable, denoted &#92;( X: &#92;alpha &#92;rightarrow &#92;beta &#92;), a transformation on the event space.&lt;/p&gt;
+  &lt;p&gt;With a measure function on &#92;( &#92;alpha &#92;), we can define a measure function on &#92;( &#92;beta &#92;) corresponding to &#92;( X &#92;). For any set &#92;( s &#92;) in &#92;( &#92;beta &#92;), the measure of &#92;( s &#92;) is the measure of the preimage of &#92;( s &#92;) under &#92;( X &#92;) (denoted as &#92;( X^{-1}(s) &#92;)). This relationship between &#92;(&#92;alpha&#92;) and &#92;(&#92;beta&#92;) comes to fruition during the &quot;Mapping/Co-Mapping Measurable Spaces&quot; part of &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; &quot;Outer Measure&quot; section.&lt;/p&gt;
+  &lt;p&gt;Restrictions on a measure function &#92;(m&#92;) come from the &quot; &lt;strong&gt;outer measure&lt;/strong&gt;&quot;, which states that, for a function &#92;(m : &#92;text{set } &#92;alpha &#92;rightarrow &#92;mathbb{R}^+_&#92;infty&#92;) to be an &lt;strong&gt;outer measure&lt;/strong&gt; &#92;((&#92;) &lt;span class=&quot;text-secondary&quot;&gt;where &#92;(&#92;mathbb{R}^+_&#92;infty&#92;) represents the non-negative real numbers including infinity&lt;/span&gt;&#92;()&#92;), we have the empty set property &#92;((1)&#92;), monotonicity property &#92;((2)&#92;), and countable union property &#92;((3)&#92;):&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;begin{align*} m(&#92;emptyset) &amp;amp;= 0, &#92;quad &amp;amp; (1) &#92;&#92; &#92;forall A, B : &#92;text{set } &#92;alpha, A &#92;subseteq B &amp;amp; &#92;Rightarrow m(A) &#92;leq m(B), &#92;quad &amp;amp; (2) &#92;&#92; &#92;forall f : &#92;mathbb{N} &#92;rightarrow &#92;text{set } &#92;alpha, m&#92;left(&#92;bigcup_{i=0}^&#92;infty f(i)&#92;right) &amp;amp; &#92;leq &#92;sum_{i=0}^&#92;infty m(f(i)), &#92;quad &amp;amp; (3) &#92;end{align*} &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;The empty set property &#92;((1)&#92;) ensures that the empty set has zero mass. The monotonicity property &#92;((2)&#92;) guarantees that a set has at least as much mass as any of its subsets. The countable union property &#92;((3)&#92;) limits the mass of a set to the maximum mass present in any covering set of subsets.&lt;/p&gt;
+  &lt;p&gt;These propertis of &lt;strong&gt;outer measure&lt;/strong&gt; allow us to talk about measure using &lt;em&gt;inequalities&lt;/em&gt;.&lt;/p&gt;
+  &lt;p&gt;See &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; paper for info on &quot;why countable&quot;.&lt;/p&gt;
+  &lt;h2 id=&quot;outer-measure&quot;&gt;outer measure
+  &lt;a href=&quot;#top&quot;&gt;&lt;em&gt;&lt;/em&gt;&lt;/a&gt;&lt;/h2&gt;
+  &lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; defines:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;text{fromfunc}(m_0(s)) = &#92;inf_{ f : &#92;mathbb{N} &#92;rightarrow &#92;text{set }&#92;alpha} &#92;left&#92;{s &#92;subseteq &#92;bigcup_{i=0}^{&#92;infty} f(i) &#92;Rightarrow &#92;sum_{i=0}^{&#92;infty} m_0(f(i)) &#92;right&#92;} &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;Satisfying: &#92;(∀ s : set &#92; α, m(s) ≤ m_0(s).&#92;)&lt;/p&gt;
+  &lt;p&gt;In the type theory style that verges on pseudocode, we have &#92;(&#92;text{fromfunc}(m_0(s))&#92;) — which &lt;em&gt;Vaishnav&lt;/em&gt; denotes &#92;(&#92;text{fromfunc}(m_0)(s)&#92;).&lt;/p&gt;
+  &lt;p&gt;The condition &#92;(s &#92;subseteq &#92;bigcup_{i=0}^{&#92;infty} f(i)&#92;) ensures that the sets &#92;(f(i)&#92;) cover the set &#92;(s&#92;). If this condition is not satisfied for some &#92;(f&#92;), the value is effectively considered &#92;(&#92;infty&#92;).&lt;/p&gt;
+  &lt;p&gt;The function &#92;(&#92;text{fromfunc}(m_0)&#92;) is then defined as a valid outer measure, which satisfies the condition &#92;(m(s) &#92;leq m_0(s)&#92;) for all sets &#92;(s&#92;). It is also proven that &#92;(&#92;text{fromfunc}(m_0)&#92;) is the unique maximum outer measure that satisfies this condition. No other outer measure can exceed it on any set.&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; also formalizes this for a more general case of partial functions where &#92;(m_0 : S → &#92;mathbb{R}^{+&#92;infty}&#92;) such that:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;text{extend} (m_0) (s) = &#92;begin{cases} m_0 (s) &#92;quad s &#92;in S &#92;&#92; &#92;infty &#92;quad s &#92;notin S &#92;end{cases} &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;Now is the moment you&#39;ve been waiting for since &lt;a href=&quot;https://ischmidls.github.io/posts/intro%20prob/&quot; data-event-spaces=&quot;&quot;&gt;event spaces&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;Given a function &#92;(f: &#92;alpha &#92;to &#92;beta&#92;) and an outer measure &#92;(m_0&#92;) on &#92;(&#92;alpha&#92;), we define &#92;(&#92;text{map}_f(m_0)&#92;) as:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;text{map}_f(m_0)(s) = m_0(f^{-1}(s)) &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;Similarly, for an outer measure &#92;(m_1&#92;) on &#92;(&#92;beta&#92;), we define &#92;(&#92;text{comap}_f(m_1)&#92;) as:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;text{comap}_f(m_1)(s) = m_1(f(s)) &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;Both &#92;(&#92;text{map}_f(m_0)&#92;) and &#92;(&#92;text{comap}_f(m_1)&#92;) are outer measures.&lt;/p&gt;
+  &lt;p&gt;Given an outer measure &#92;(m_0&#92;) on &#92;(&#92;alpha&#92;), we can restrict it to a set &#92;(t&#92;) by defining:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;text{restrict}_t(m_0)(s) = m_0(s &#92;cap t) &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;This measures the intersection of &#92;(s&#92;) with &#92;(t&#92;). The function &#92;(&#92;text{restrict}_t(m_0)&#92;) is proven to be an outer measure. In Lean, we can use the coercion function &#92;(c_t: t &#92;to &#92;alpha&#92;) to avoid the explicit proof. We can express it as:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;text{restrict}_t(m_0) = &#92;text{map}_{c_t}(&#92;text{comap}_{c_t}(m_0)) &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;Alternatively, for any &#92;(s&#92;), it can be simplified to:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;text{restrict}_t(m_0)(s) = m_0(c_t(c_t^{-1}(s))) &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;where &#92;(c_t(c_t^{-1}(s))&#92;) represents the intersection &#92;(s &#92;cap t&#92;). Since &#92;(&#92;text{map}(&#92;cdot)&#92;) and &#92;(&#92;text{comap}(&#92;cdot)&#92;) preserve outer measures, we can conclude that &#92;(&#92;text{restrict}_t(m_0)(s)&#92;) is an outer measure.&lt;/p&gt;
+  &lt;p&gt;Now, that was a very close paraphase of &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; text.&lt;/p&gt;
+  &lt;p&gt;Alternatively, the beloved Wikipedia says:&lt;/p&gt;
+  &lt;div class=&quot;card&quot;&gt;
+  &lt;div class=&quot;card-body&quot;&gt;
+  &lt;p&gt;Given a set &#92;(X&#92;), let &#92;(2^X&#92;) denote the collection of all subsets of &#92;(X&#92;), including the empty set &#92;(&#92;emptyset&#92;).&lt;/p&gt;
+  &lt;p&gt;An outer measure on &#92;(X&#92;) is a set function &#92;(&#92;mu: 2^X &#92;to [0, &#92;infty]&#92;) such that:&lt;/p&gt;
+  &lt;ol&gt;
+  &lt;li&gt;Null empty set: &#92;(&#92;mu(&#92;emptyset) = 0&#92;)&lt;/li&gt;
   &lt;li&gt;Countably subadditive: For arbitrary subsets &#92;(A, B_1, B_2, &#92;ldots&#92;) of &#92;(X&#92;), if &#92;(A &#92;subseteq &#92;bigcup_{j=1}^&#92;infty B_j&#92;), then &#92;(&#92;mu(A) &#92;leq &#92;sum_{j=1}^&#92;infty &#92;mu(B_j)&#92;).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
-&lt;h2 id=&quot;measurable-spaces&quot;&gt;measurable spaces &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Outer measures provide information about inequalities in measure functions. We are also interested in equalities between measures of sets in the event space. For disjoint sets &#92;(A&#92;) and &#92;(B&#92;) in &#92;(&#92;alpha&#92;), we want to express the equality &#92;(m(A &#92;cup B) = m(A) + m(B)&#92;). In the general case where &#92;(A&#92;) and &#92;(B&#92;) are not necessarily disjoint, we seek the equality &#92;(m(A &#92;cup B) = m(A &#92;setminus B) + m(A &#92;cap B) + m(B &#92;setminus A)&#92;).
-&lt;/p&gt;
-&lt;p&gt;To control equality restrictions on measures, we introduce measurable spaces (&#92;(σ&#92;)-algebras). A measurable space &#92;(M: &#92;text{set}(&#92;text{set} &#92; &#92;alpha)&#92;) includes &quot;measurable sets&quot; and satisfies:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Empty set measurability: &#92;(&#92;varnothing &#92;in M&#92;)&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;&lt;br&gt;
+  &lt;/p&gt;
+  &lt;h2 id=&quot;measurable-spaces&quot;&gt;measurable spaces
+  &lt;a href=&quot;#top&quot;&gt;&lt;em&gt;&lt;/em&gt;&lt;/a&gt;&lt;/h2&gt;
+  &lt;p&gt;Outer measures provide information about inequalities in measure functions. We are also interested in equalities between measures of sets in the event space. For disjoint sets &#92;(A&#92;) and &#92;(B&#92;) in &#92;(&#92;alpha&#92;), we want to express the equality &#92;(m(A &#92;cup B) = m(A) + m(B)&#92;). In the general case where &#92;(A&#92;) and &#92;(B&#92;) are not necessarily disjoint, we seek the equality &#92;(m(A &#92;cup B) = m(A &#92;setminus B) + m(A &#92;cap B) + m(B &#92;setminus A)&#92;).&lt;/p&gt;
+  &lt;p&gt;To control equality restrictions on measures, we introduce measurable spaces (&#92;(σ&#92;)-algebras). A measurable space &#92;(M: &#92;text{set}(&#92;text{set} &#92; &#92;alpha)&#92;) includes &quot;measurable sets&quot; and satisfies:&lt;/p&gt;
+  &lt;ul&gt;
+  &lt;li&gt;Empty set measurability: &#92;(&#92;emptyset &#92;in M&#92;)&lt;/li&gt;
   &lt;li&gt;Complement closure: For any set &#92;(s&#92;) in &#92;(&#92;alpha&#92;), if &#92;(s &#92;in M&#92;), then its complement &#92;(s^c &#92;in M&#92;)&lt;/li&gt;
   &lt;li&gt;Countable union closure: For any sequence &#92;(f: &#92;mathbb{N} &#92;to &#92;text{set} &#92; &#92;alpha&#92;), if &#92;(f(i) &#92;in M&#92;) for all &#92;(i&#92;) in &#92;(&#92;mathbb{N}&#92;), then &#92;(&#92;bigcup&#92;limits_{i=0}^&#92;infty f(i) &#92;in M&#92;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;From these properties, we can derive other intuitive closures, including those of countable intersection:&lt;/p&gt;
-&lt;p&gt;&#92;[ &#92;forall f : &#92;mathbb{N} &#92;to &#92;text{set} &#92; &#92;alpha, &#92;forall i : &#92;mathbb{N}, f(i) &#92;in M &#92;Rightarrow &#92;bigcap_{i=0}^&#92;infty f(i) &#92;in M, &#92;]&lt;/p&gt;
-&lt;p&gt;and difference:&lt;/p&gt;
-&lt;p&gt;&#92;[ &#92;forall a,b : &#92;text{set} &#92; &#92;alpha, &#92; a &#92;in M &#92;Rightarrow b &#92;in M &#92;Rightarrow a &#92;setminus b &#92;in M. &#92;]&lt;/p&gt;
-&lt;p&gt;Now, how does &lt;em&gt;Vaishnav&lt;/em&gt; define measure transformations?&lt;/p&gt;
-&lt;p&gt;Given &#92;(S : &#92;text{set}(&#92;text{set} &#92; &#92;alpha)&#92;), the measurable space &quot;closure&quot; of &#92;(S&#92;) is the smallest measurable space that includes every set in &#92;(S&#92;). The generated measurable space can be visualized as the &quot;mosaic&quot; of set intersections and differences formed by &#92;(S&#92;) and the universal set (&quot;univ&quot;) in our event space. The set of measurable sets consists of all possible countable unions of the &quot;tiles&quot; in this mosaic.
-
- &lt;/p&gt;&lt;p&gt; Now, let &#92;(C : &#92;text{set} &#92; &#92;alpha &#92;rightarrow &#92;text{Prop}&#92;) be a predicate. To show that &#92;(C&#92;) holds for all sets in &#92;(&#92;text{generate}(S)&#92;), we can prove that it holds for &#92;(S&#92;) itself &#92;((1)&#92;), the empty set &#92;((2)&#92;), under complement &#92;((3)&#92;), and under countable union &#92;((4)&#92;).&lt;/p&gt;
- &lt;p&gt;&#92;((1) &#92;quad &#92;forall s &#92;in S&#92;), &#92;(C(s) &#92;quad (1) &#92;) &lt;/p&gt;
- &lt;p&gt;&#92;((2) &#92;quad C(&#92;varnothing) &#92;quad (2) &#92;) &lt;/p&gt;
- &lt;p&gt;&#92;((3) &#92;quad &#92;forall s &#92;in &#92;text{generate}(S)&#92;), &#92;(C(s) &#92;Rightarrow C(s^c)&#92;)&lt;/p&gt;
- &lt;p&gt;&#92;((4) &#92;quad &#92;forall f : &#92;mathbb{N} &#92;to &#92;text{set} &#92; &#92;alpha, &#92;quad &#92;left(&#92;forall i : &#92;mathbb{N}, &#92; f(i) &#92;in &#92;text{generate}(S) &#92;land C(f(i)&#92;right) &#92;Rightarrow C(&#92;bigcup_{i=0}^{&#92;infty} f(i))&#92;)&lt;/p&gt;
- &lt;p&gt;The &lt;a href=&quot;https://encyclopediaofmath.org/wiki/Measurable_space&quot;&gt;Encyclopedia of Mathematics&lt;/a&gt; describes this more mathematically as:&lt;/p&gt;
- &lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;From these properties, we can derive other intuitive closures, including those of countable intersection:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;forall f : &#92;mathbb{N} &#92;to &#92;text{set} &#92; &#92;alpha, &#92;forall i : &#92;mathbb{N}, f(i) &#92;in M &#92;Rightarrow &#92;bigcap_{i=0}^&#92;infty f(i) &#92;in M, &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;and difference:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;forall a,b : &#92;text{set} &#92; &#92;alpha, &#92; a &#92;in M &#92;Rightarrow b &#92;in M &#92;Rightarrow a &#92;setminus b &#92;in M. &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;Now, how does &lt;em&gt;Vaishnav&lt;/em&gt; define measure transformations?&lt;/p&gt;
+  &lt;p&gt;Given &#92;(S : &#92;text{set}(&#92;text{set} &#92; &#92;alpha)&#92;), the measurable space &quot;closure&quot; of &#92;(S&#92;) is the smallest measurable space that includes every set in &#92;(S&#92;). The generated measurable space can be visualized as the &quot;mosaic&quot; of set intersections and differences formed by &#92;(S&#92;) and the universal set (&quot;univ&quot;) in our event space. The set of measurable sets consists of all possible countable unions of the &quot;tiles&quot; in this mosaic.&lt;/p&gt;
+  &lt;p&gt;Now, let &#92;(C : &#92;text{set} &#92; &#92;alpha &#92;rightarrow &#92;text{Prop}&#92;) be a predicate. To show that &#92;(C&#92;) holds for all sets in &#92;(&#92;text{generate}(S)&#92;), we can prove that it holds for &#92;(S&#92;) itself &#92;((1)&#92;), the empty set &#92;((2)&#92;), under complement &#92;((3)&#92;), and under countable union &#92;((4)&#92;).&lt;/p&gt;
+  &lt;p&gt;&#92;((1) &#92;quad &#92;forall s &#92;in S&#92;), &#92;(C(s) &#92;quad (1) &#92;)&lt;/p&gt;
+  &lt;p&gt;&#92;((2) &#92;quad C(&#92;emptyset) &#92;quad (2) &#92;)&lt;/p&gt;
+  &lt;p&gt;&#92;((3) &#92;quad &#92;forall s &#92;in &#92;text{generate}(S)&#92;), &#92;(C(s) &#92;Rightarrow C(s^c)&#92;)&lt;/p&gt;
+  &lt;p&gt;&#92;((4) &#92;quad &#92;forall f : &#92;mathbb{N} &#92;to &#92;text{set} &#92; &#92;alpha, &#92;quad &#92;left(&#92;forall i : &#92;mathbb{N}, &#92; f(i) &#92;in &#92;text{generate}(S) &#92;land C(f(i)&#92;right) &#92;Rightarrow C(&#92;bigcup_{i=0}^{&#92;infty} f(i))&#92;)&lt;/p&gt;
+  &lt;p&gt;The &lt;a href=&quot;https://encyclopediaofmath.org/wiki/Measurable_space&quot;&gt;Encyclopedia of Mathematics&lt;/a&gt; describes this more mathematically as:&lt;/p&gt;
+  &lt;div class=&quot;card&quot;&gt;
+  &lt;div class=&quot;card-body&quot;&gt;
   &lt;p&gt;Let &#92;((X,A)&#92;) and &#92;((Y,B)&#92;) be measurable spaces.&lt;/p&gt;
-&lt;p&gt;A map &#92;(f:X&#92;rightarrow Y&#92;) is called measurable if &#92;(f^{-1}(B)&#92;in A&#92;) for every &#92;(B&#92;in B&#92;).&lt;/p&gt;
-&lt;p&gt;These two measurable spaces are called isomorphic if there exists a bijection &#92;(f:X&#92;rightarrow Y&#92;) such that &#92;(f&#92;) and &#92;(f^{-1}&#92;) are measurable (such &#92;(f&#92;) is called an isomorphism).&lt;/p&gt;
-&lt;p&gt;Let &#92;(X&#92;) be a set, &#92;((Y,B)&#92;) a measurable space, and &#92;((f_i)_{i&#92;in I}&#92;) a family of maps &#92;(f_i:X&#92;rightarrow Y&#92;). The &#92;(&#92;sigma&#92;)-algebra generated by these maps is defined as the smallest &#92;(&#92;sigma&#92;)-algebra &#92;(A&#92;) on &#92;(X&#92;) such that all &#92;(f_i&#92;) are measurable from &#92;((X,A)&#92;) to &#92;((Y,B)&#92;). More generally, one may take measurable spaces &#92;((Y_i,B_i)&#92;) and maps &#92;(f_i:X&#92;rightarrow Y_i&#92;). On the other hand, if &#92;(Y&#92;) is &#92;(&#92;mathbb{R}&#92;) (or &#92;(&#92;mathbb{C}&#92;), &#92;(&#92;mathbb{R}^n&#92;), etc.) then &#92;(B&#92;) is by default the Borel &#92;(&#92;sigma&#92;)-algebra.&lt;/p&gt;
- &lt;/div&gt;&lt;/div&gt;&lt;br&gt;
- &lt;p&gt;But, even this description has a very topological tone. Note: a Borel set is simply formed by open sets &quot;through the operations of countable union, countable intersection, and relative complement&quot; (&lt;a href=&quot;https://en.wikipedia.org/wiki/Borel_sets&quot;&gt;Wikipedia: Borel sets&lt;/a&gt;) &amp;mdash; this also follows transfinite induction, etc, but that&#39;s outside our scope.&lt;/p&gt;
- &lt;p&gt;This props us up for a more intuitive (while less rigorous) picture:&lt;/p&gt;
- &lt;blockquote&gt;
-  &lt;b&gt;Definition 4&lt;/b&gt;
-&lt;p&gt;Let &#92;(F&#92;) be a collection of subsets of &#92;(&#92;Omega&#92;) such that:&lt;/p&gt;
-&lt;ol&gt;
+  &lt;p&gt;A map &#92;(f:X&#92;rightarrow Y&#92;) is called measurable if &#92;(f^{-1}(B)&#92;in A&#92;) for every &#92;(B&#92;in B&#92;).&lt;/p&gt;
+  &lt;p&gt;These two measurable spaces are called isomorphic if there exists a bijection &#92;(f:X&#92;rightarrow Y&#92;) such that &#92;(f&#92;) and &#92;(f^{-1}&#92;) are measurable (such &#92;(f&#92;) is called an isomorphism).&lt;/p&gt;
+  &lt;p&gt;Let &#92;(X&#92;) be a set, &#92;((Y,B)&#92;) a measurable space, and &#92;((f_i)_{i&#92;in I}&#92;) a family of maps &#92;(f_i:X&#92;rightarrow Y&#92;). The &#92;(&#92;sigma&#92;)-algebra generated by these maps is defined as the smallest &#92;(&#92;sigma&#92;)-algebra &#92;(A&#92;) on &#92;(X&#92;) such that all &#92;(f_i&#92;) are measurable from &#92;((X,A)&#92;) to &#92;((Y,B)&#92;). More generally, one may take measurable spaces &#92;((Y_i,B_i)&#92;) and maps &#92;(f_i:X&#92;rightarrow Y_i&#92;). On the other hand, if &#92;(Y&#92;) is &#92;(&#92;mathbb{R}&#92;) (or &#92;(&#92;mathbb{C}&#92;), &#92;(&#92;mathbb{R}^n&#92;), etc.) then &#92;(B&#92;) is by default the Borel &#92;(&#92;sigma&#92;)-algebra.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;&lt;br&gt;
+  &lt;/p&gt;
+  &lt;p&gt;But, even this description has a very topological tone. Note: a Borel set is simply formed by open sets &quot;through the operations of countable union, countable intersection, and relative complement&quot; ( &lt;a href=&quot;https://en.wikipedia.org/wiki/Borel_sets&quot;&gt;Wikipedia: Borel sets&lt;/a&gt;) — this also follows transfinite induction, etc, but that&#39;s outside our scope.&lt;/p&gt;
+  &lt;p&gt;This props us up for a more intuitive (while less rigorous) picture:&lt;/p&gt;
+  &lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Definition 4&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;Let &#92;(F&#92;) be a collection of subsets of &#92;(&#92;Omega&#92;) such that:&lt;/p&gt;
+  &lt;ol&gt;
   &lt;li&gt;Closed under complements: If &#92;(A &#92;in F&#92;), then &#92;(A^C &#92;in F&#92;).&lt;/li&gt;
   &lt;li&gt;Closed under countable unions: If &#92;(A_1, A_2, &#92;ldots&#92;) are all in &#92;(F&#92;), then &#92;(&#92;bigcup_{i=1}^&#92;infty A_i &#92;in F&#92;).&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;We call &#92;(F&#92;) a &#92;(&#92;sigma&#92;)-algebra, and the elements of &#92;(F&#92;) measurable sets.&lt;/p&gt;
-&lt;p&gt;(&lt;a href=&quot;https://www.markhuberdatascience.org/probability-textbook&quot;&gt;Huber, Probability: Lectures and Labs&lt;/a&gt;)&lt;/p&gt;
- &lt;/blockquote&gt;
- &lt;p&gt;No mention of topology&#39;s maps, Borel, &amp; generating or type theory&#39;s ... predicates ... (I guess the type theory is not too bad yet).&lt;/p&gt;
-&lt;p&gt;That being said, Huber does clarify:&lt;/p&gt;
- &lt;blockquote&gt;
-  Whenever Ω is a finite set, F will be the set of all subsets of Ω. When Ω = R, F is typically taken to be the Borel sets. In this first course in probability we
-will not define the Borel sets precisely, except to note that any interval (open or closed, finite or
-infinite) is a member of the Borel sets.
-&lt;/blockquote&gt;
- &lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; also looks at &quot;Combining Measurable Spaces&quot;:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Given a set &#92;(S&#92;) of measurable spaces, we can now define their &quot;combination&quot; into the smallest measurable space that contains both of them (i.e. their supremum) as&lt;/p&gt;
-&#92;[ &#92;text{sup}(S) = &#92;text{generate}&#92;left(&#92;bigcup_{s &#92;in S} s&#92;right), &#92;]
-&lt;p&gt;the measurable space generation on the union (set supremum) of all of their sets of measurable sets.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Again, &lt;em&gt;Vaishnav&lt;/em&gt; considers &quot;Mapping/Co-Mapping Measurable Spaces&quot;:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;As for &lt;b&gt;outer measures&lt;/b&gt;, a map/comap on &#92;((M, &#92;alpha)&#92;) with respect to &#92;(s&#92;) is defined given a second type &#92;(&#92;beta&#92;), a function &#92;(f : &#92;alpha &#92;to &#92;beta&#92;), and a measurable space &#92;((M, &#92;alpha)&#92;) on &#92;(&#92;alpha&#92;). The map is the set of all sets &#92;(&#92;beta&#92;) such that their preimage is a measurable set:&lt;/p&gt;
-&#92;[ &#92;text{map}_f((M, &#92;alpha)) = &#92;{ b : &#92;text{set} &#92; &#92;beta &#92;mid f^{-1}(b) &#92;in (M, &#92;alpha) &#92;} &#92;]
-
-&lt;p&gt;Given a measurable space &#92;((M, &#92;beta)&#92;) on &#92;(&#92;beta&#92;), we define our comap to be the set of all sets &#92;(&#92;alpha&#92;) such that they are the preimage of some measurable set:&lt;/p&gt;
-&#92;[ &#92;text{comap}_f((M, &#92;beta)) = &#92;{ a : &#92;text{set} &#92; &#92;alpha &#92;mid &#92;exists b : &#92;text{set} &#92; &#92;beta, f^{-1}(b) = a &#92;} &#92;]
-&lt;p&gt;(you can also think of this as simply taking the preimages of every set in &#92;((M, &#92;beta)&#92;)).&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;From here, the lovely &lt;em&gt;Vaishnav&lt;/em&gt; mentions:&lt;/p&gt;
-&lt;p&gt;In mathematical notation, the definition can be written as follows:&lt;/p&gt;
-
-&lt;p&gt;A Galois connection is a pair of functions &#92;(l: &#92;alpha &#92;to &#92;beta&#92;) and &#92;(u: &#92;beta &#92;to &#92;alpha&#92;) between preordered sets &#92;(&#92;alpha&#92;) and &#92;(&#92;beta&#92;) that satisfy the following property:&lt;/p&gt;
-
-&#92;[
-&#92;forall a &#92;in &#92;alpha, b &#92;in &#92;beta, &#92;quad l(a) &#92;leq b &#92;iff a &#92;leq u(b)
-&#92;]
-
-&lt;p&gt;Here, &#92;(&#92;leq&#92;) represents the order relation in the respective preordered sets &#92;(&#92;alpha&#92;) and &#92;(&#92;beta&#92;). The functions &#92;(l&#92;) and &#92;(u&#92;) establish a connection between the orders in &#92;(&#92;alpha&#92;) and &#92;(&#92;beta&#92;) such that if &#92;(l(a)&#92;) is less than or equal to &#92;(b&#92;), then &#92;(a&#92;) is less than or equal to &#92;(u(b)&#92;), and vice versa.&lt;/p&gt;
-
-
-&lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; explains the effect of this, but gives the lemmas in Lean, so here is the property of the lemmas NOT in Lean!&lt;/p&gt;
-&lt;p&gt;In mathematical notation, an essential property of a Galois connection is that an upper/lower adjoint of a Galois connection uniquely determines the other:&lt;/p&gt;
-&lt;p&gt;
-&#92;[
-&#92;begin{align*}
-F(a) &amp; &#92;text{ is the least element } &#92;tilde{b} &#92;text{ with } a &#92;leq G(&#92;tilde{b}), &#92;&#92;
-G(b) &amp; &#92;text{ is the largest element } &#92;tilde{a} &#92;text{ with } F(&#92;tilde{a}) &#92;leq b.
-&#92;end{align*}
-&#92;]
-&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Galois_connection&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;But, as &lt;em&gt;Vaishnav&lt;/em&gt; explains:&lt;/p&gt;
-&lt;blockquote&gt;
+  &lt;/ol&gt;
+  &lt;p&gt;We call &#92;(F&#92;) a &#92;(&#92;sigma&#92;)-algebra, and the elements of &#92;(F&#92;) measurable sets.&lt;/p&gt;
+  &lt;p&gt;( &lt;a href=&quot;https://www.markhuberdatascience.org/probability-textbook&quot;&gt;Huber, Probability: Lectures and Labs&lt;/a&gt;)&lt;/p&gt;
+  &lt;/blockquote&gt;
+  &lt;p&gt;No mention of topology&#39;s maps, Borel, &amp;amp; generating or type theory&#39;s ... predicates ... (I guess the type theory is not too bad yet).&lt;/p&gt;
+  &lt;p&gt;That being said, Huber does clarify:&lt;/p&gt;
+  &lt;blockquote&gt;
+  Whenever Ω is a finite set, F will be the set of all subsets of Ω. When Ω = R, F is typically taken to be the Borel sets. In this first course in probability we will not define the Borel sets precisely, except to note that any interval (open or closed, finite or infinite) is a member of the Borel sets.
+  &lt;/blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; also looks at &quot;Combining Measurable Spaces&quot;:&lt;/p&gt;
+  &lt;blockquote&gt;
+  &lt;p&gt;Given a set &#92;(S&#92;) of measurable spaces, we can now define their &quot;combination&quot; into the smallest measurable space that contains both of them (i.e. their supremum) as&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;text{sup}(S) = &#92;text{generate}&#92;left(&#92;bigcup_{s &#92;in S} s&#92;right), &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;the measurable space generation on the union (set supremum) of all of their sets of measurable sets.&lt;/p&gt;
+  &lt;/blockquote&gt;
+  &lt;p&gt;Again, &lt;em&gt;Vaishnav&lt;/em&gt; considers &quot;Mapping/Co-Mapping Measurable Spaces&quot;:&lt;/p&gt;
+  &lt;blockquote&gt;
+  &lt;p&gt;As for &lt;strong&gt;outer measures&lt;/strong&gt;, a map/comap on &#92;((M, &#92;alpha)&#92;) with respect to &#92;(s&#92;) is defined given a second type &#92;(&#92;beta&#92;), a function &#92;(f : &#92;alpha &#92;to &#92;beta&#92;), and a measurable space &#92;((M, &#92;alpha)&#92;) on &#92;(&#92;alpha&#92;). The map is the set of all sets &#92;(&#92;beta&#92;) such that their preimage is a measurable set:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;text{map}_f((M, &#92;alpha)) = &#92;{ b : &#92;text{set} &#92; &#92;beta &#92;mid f^{-1}(b) &#92;in (M, &#92;alpha) &#92;} &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;Given a measurable space &#92;((M, &#92;beta)&#92;) on &#92;(&#92;beta&#92;), we define our comap to be the set of all sets &#92;(&#92;alpha&#92;) such that they are the preimage of some measurable set:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;text{comap}_f((M, &#92;beta)) = &#92;{ a : &#92;text{set} &#92; &#92;alpha &#92;mid &#92;exists b : &#92;text{set} &#92; &#92;beta, f^{-1}(b) = a &#92;} &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;(you can also think of this as simply taking the preimages of every set in &#92;((M, &#92;beta)&#92;)).&lt;/p&gt;
+  &lt;/blockquote&gt;
+  &lt;p&gt;From here, the lovely &lt;em&gt;Vaishnav&lt;/em&gt; mentions:&lt;/p&gt;
+  &lt;p&gt;In mathematical notation, the definition can be written as follows:&lt;/p&gt;
+  &lt;p&gt;A Galois connection is a pair of functions &#92;(l: &#92;alpha &#92;to &#92;beta&#92;) and &#92;(u: &#92;beta &#92;to &#92;alpha&#92;) between preordered sets &#92;(&#92;alpha&#92;) and &#92;(&#92;beta&#92;) that satisfy the following property:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;forall a &#92;in &#92;alpha, b &#92;in &#92;beta, &#92;quad l(a) &#92;leq b &#92;iff a &#92;leq u(b) &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;Here, &#92;(&#92;leq&#92;) represents the order relation in the respective preordered sets &#92;(&#92;alpha&#92;) and &#92;(&#92;beta&#92;). The functions &#92;(l&#92;) and &#92;(u&#92;) establish a connection between the orders in &#92;(&#92;alpha&#92;) and &#92;(&#92;beta&#92;) such that if &#92;(l(a)&#92;) is less than or equal to &#92;(b&#92;), then &#92;(a&#92;) is less than or equal to &#92;(u(b)&#92;), and vice versa.&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; explains the effect of this, but gives the lemmas in Lean, so here is the property of the lemmas NOT in Lean!&lt;/p&gt;
+  &lt;p&gt;In mathematical notation, an essential property of a Galois connection is that an upper/lower adjoint of a Galois connection uniquely determines the other:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;begin{align*} F(a) &amp;amp; &#92;text{ is the least element } &#92;tilde{b} &#92;text{ with } a &#92;leq G(&#92;tilde{b}), &#92;&#92; G(b) &amp;amp; &#92;text{ is the largest element } &#92;tilde{a} &#92;text{ with } F(&#92;tilde{a}) &#92;leq b. &#92;end{align*} &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Galois_connection&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;But, as &lt;em&gt;Vaishnav&lt;/em&gt; explains:&lt;/p&gt;
+  &lt;blockquote&gt;
   &lt;p&gt;In our case, we can show that, for any &#92;(f: &#92;alpha &#92;to &#92;beta&#92;), there is a Galois Connection between &#92;(&#92;text{comap}_f(&#92;cdot)&#92;) and &#92;(&#92;text{map}_f(&#92;cdot)&#92;) (where the &#92;(&#92;leq&#92;) relation on measurable spaces is the subset relation). To see this, consider an arbitrary measurable space &#92;(M_&#92;beta&#92;) on &#92;(&#92;beta&#92;) and &#92;(M_&#92;alpha&#92;) on &#92;(&#92;alpha&#92;). Here, &#92;(&#92;text{comap}_f(M_&#92;beta) &#92;subseteq M_&#92;alpha&#92;) means that every set in &#92;(M_&#92;beta&#92;) has a preimage in &#92;(M_&#92;alpha&#92;), which is exactly the same statement as &#92;(M_&#92;beta &#92;subseteq &#92;text{map}_f(M_&#92;alpha)&#92;).&lt;/p&gt;
   &lt;p&gt;The Galois Connection gives us the fact that, for any list of measurable spaces &#92;(M_{&#92;beta_i}&#92;) on &#92;(&#92;beta&#92;) indexed by &#92;(i&#92;) in &#92;(&#92;iota&#92;), we have that the &#92;(&#92;text{comap}_f&#92;) of the indexed supremum of &#92;(M_{&#92;beta_i}&#92;) is the indexed supremum of the &#92;(&#92;text{comap}_f&#92;) of each measurable space (regardless of whether the index type is countable):&lt;/p&gt;
-&#92;[
-&#92;text{comap}_f &#92;left( &#92;sup_{i &#92;in &#92;iota} M_{&#92;beta_i} &#92;right) = &#92;sup_{i &#92;in &#92;iota} &#92;left( &#92;text{comap}_f (M_{&#92;beta_i}) &#92;right)
-&#92;]&lt;p&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; has even more to say about &lt;b&gt;trimmed outer measure&lt;/b&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Suppose we have a measurable space &#92;( M &#92;) on &#92;( &#92;alpha &#92;) and a partial set function &#92;( m_0 &#92;) defined on &#92;( M &#92;), satisfying the three properties of an &lt;b&gt;outer measure&lt;/b&gt; restricted to sets from &#92;( M &#92;). We can define the outer measure &lt;i&gt;induce&lt;/i&gt;&#92;( (m_0) &#92;) as &lt;i&gt;fromfunc&lt;/i&gt;(&lt;i&gt;extend&lt;/i&gt;&#92;( (m_0) &#92;)). Interestingly, with this function, we have the property:&lt;/p&gt;
-
-&#92;[
-&#92;forall s &#92;in &#92;text{set } &#92;alpha, &#92;text{induce}(m_0)(s) = &#92;inf_{t &#92;in &#92;text{set} &#92;alpha} s &#92;subseteq t &#92;land t &#92;in M &#92;Rightarrow m_0(t)
-&#92;]
-
-&lt;p&gt;In other words, the measurable sets retain their values from the partial function due to the monotonicity property, and each non-measurable set is assigned the infimum of the values of all its measurable supersets.&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;text{comap}_f &#92;left( &#92;sup_{i &#92;in &#92;iota} M_{&#92;beta_i} &#92;right) = &#92;sup_{i &#92;in &#92;iota} &#92;left( &#92;text{comap}_f (M_{&#92;beta_i}) &#92;right) &#92;]
+  &lt;/div&gt;
+  &lt;/blockquote&gt;
+  &lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; has even more to say about &lt;strong&gt;trimmed outer measure&lt;/strong&gt;:&lt;/p&gt;
+  &lt;blockquote&gt;
+  &lt;p&gt;Suppose we have a measurable space &#92;( M &#92;) on &#92;( &#92;alpha &#92;) and a partial set function &#92;( m_0 &#92;) defined on &#92;( M &#92;), satisfying the three properties of an &lt;strong&gt;outer measure&lt;/strong&gt; restricted to sets from &#92;( M &#92;). We can define the outer measure &lt;em&gt;induce&lt;/em&gt;&#92;( (m_0) &#92;) as &lt;em&gt;fromfunc&lt;/em&gt;( &lt;em&gt;extend&lt;/em&gt;&#92;( (m_0) &#92;)). Interestingly, with this function, we have the property:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;forall s &#92;in &#92;text{set } &#92;alpha, &#92;text{induce}(m_0)(s) = &#92;inf_{t &#92;in &#92;text{set} &#92;alpha} s &#92;subseteq t &#92;land t &#92;in M &#92;Rightarrow m_0(t) &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;In other words, the measurable sets retain their values from the partial function due to the monotonicity property, and each non-measurable set is assigned the infimum of the values of all its measurable supersets.&lt;/p&gt;
   &lt;p&gt;&#92;([...]&#92;)&lt;/p&gt;
   &lt;p&gt;As a matter of fact, there exists a measurable superset that exactly matches this infimum:&lt;/p&gt;
-&#92;[
-&#92;forall s &#92;in &#92;text{set } &#92;alpha, &#92;exists t &#92;in &#92;text{set } &#92;alpha, s &#92;subseteq t &#92;land t &#92;in &#92;mathcal{M} &#92;land &#92;text{induce}(m_0)(s) = m_0(t)
-&#92;]
-&lt;p&gt;The proof of this relies on constructing a list &#92;(f: &#92;mathbb{N} &#92;to &#92;text{set } &#92;alpha&#92;) of measurable sets that &quot;narrows down&quot; to &#92;(&#92;text{induce}(m_0)(s)&#92;) in the sense that:&lt;/p&gt;
-&#92;[
-&#92;forall i &#92;in &#92;mathbb{N}, m_0(f(i)) &lt; &#92;text{induce}(m_0)(s) + i - 1
-&#92;]
-&lt;p&gt;Now, given an arbitrary outer measure &#92;(m&#92;) and a measurable set &#92;(M&#92;), we can check whether &#92;(m&#92;) was constructed as above using the notion of a &quot;trimmed&quot; outer measure. Let &#92;(&#92;text{sub}_M(m)&#92;) be &#92;(m&#92;) restricted to the domain &#92;(M&#92;). Defining:&lt;/p&gt;
-&#92;[
-&#92;text{trim}_M(m) = &#92;text{induce}(&#92;text{sub}_M(m))
-&#92;]
-&lt;p&gt;We can now check whether &#92;(&#92;text{trim}_M(m) = m&#92;), i.e., whether &#92;(&#92;text{trim}_M&#92;) assigns the same values to non-measurable sets as &#92;(m&#92;) originally had.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Finally, &lt;em&gt;Vaishnav&lt;/em&gt; touches on Pi-types, which are a unique perspective on measure theory coming from type theory.&lt;/p&gt;
-
-&lt;p&gt;Here is a definition I like of Pi-types:&lt;/p&gt;
-
-&lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;forall s &#92;in &#92;text{set } &#92;alpha, &#92;exists t &#92;in &#92;text{set } &#92;alpha, s &#92;subseteq t &#92;land t &#92;in &#92;mathcal{M} &#92;land &#92;text{induce}(m_0)(s) = m_0(t) &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;The proof of this relies on constructing a list &#92;(f: &#92;mathbb{N} &#92;to &#92;text{set } &#92;alpha&#92;) of measurable sets that &quot;narrows down&quot; to &#92;(&#92;text{induce}(m_0)(s)&#92;) in the sense that:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;forall i &#92;in &#92;mathbb{N}, m_0(f(i)) &amp;lt; &#92;text{induce}(m_0)(s) + i - 1 &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;Now, given an arbitrary outer measure &#92;(m&#92;) and a measurable set &#92;(M&#92;), we can check whether &#92;(m&#92;) was constructed as above using the notion of a &quot;trimmed&quot; outer measure. Let &#92;(&#92;text{sub}_M(m)&#92;) be &#92;(m&#92;) restricted to the domain &#92;(M&#92;). Defining:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;text{trim}_M(m) = &#92;text{induce}(&#92;text{sub}_M(m)) &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;We can now check whether &#92;(&#92;text{trim}_M(m) = m&#92;), i.e., whether &#92;(&#92;text{trim}_M&#92;) assigns the same values to non-measurable sets as &#92;(m&#92;) originally had.&lt;/p&gt;
+  &lt;/blockquote&gt;
+  &lt;p&gt;Finally, &lt;em&gt;Vaishnav&lt;/em&gt; touches on Pi-types, which are a unique perspective on measure theory coming from type theory.&lt;/p&gt;
+  &lt;p&gt;Here is a definition I like of Pi-types:&lt;/p&gt;
+  &lt;div class=&quot;card&quot;&gt;
+  &lt;div class=&quot;card-body&quot;&gt;
   &lt;p&gt;Given a dependent type &#92;(x : C &#92;vdash D(x)&#92;), the Pi-type &#92;(&#92;Pi x : C. D(x)&#92;) can be thought of as the set of all functions &#92;(f&#92;) from &#92;(C&#92;) to &#92;(&#92;prod_{x : C} D(x)&#92;) such that &#92;(f(x) &#92;in D(x)&#92;) for all &#92;(x &#92;in C&#92;). These functions are called dependent maps from &#92;(C&#92;) to &#92;(D&#92;). In set theory, we interpret simple types &#92;(C&#92;) as sets &#92;(C&#92;) and terms &#92;(x : C&#92;) as elements &#92;(x &#92;in C&#92;). Dependent types &#92;(D&#92;) over &#92;(C&#92;) are interpreted as families &#92;(D = (D(x))_{x &#92;in C}&#92;) of sets &#92;(D(x)&#92;).&lt;/p&gt;
   &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1905.00993.pdf&quot;&gt;Source&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;&lt;br&gt;
-
-&lt;p&gt;Suppose we have an index of types &#92;(&#92;beta : &#92;iota &#92;rightarrow &#92;text{Type}&#92;) and a mapping &#92;(M&#92;) that assigns a measurable space to each type. We want to define a measurable space on the function space &#92;(&#92;prod_{i:&#92;iota} &#92;beta(i)&#92;) that corresponds to &#92;(M&#92;).&lt;/p&gt;
-
-&lt;p&gt;To accomplish this, we define a &quot;function evaluation&quot; function &#92;(eval(i)&#92;) that extracts the value at a specific index. Given a function &#92;(f : &#92;prod_{i:&#92;iota} &#92;beta(i)&#92;), &#92;(eval(i)(f)&#92;) gives us the value of &#92;(f&#92;) at index &#92;(i&#92;).&lt;/p&gt;
-}}
-&lt;p&gt;Next, we consider the preimage of a set &#92;(s&#92;) in type &#92;(&#92;beta(i)&#92;) under the function &#92;(eval(i)&#92;). This preimage consists of all functions whose value at index &#92;(i&#92;) lies in the set &#92;(s&#92;).&lt;/p&gt;
-
-&lt;p&gt;By applying the comap operation to &#92;(eval(i)&#92;) with respect to &#92;(M(i)&#92;), we obtain the measurable sets in &#92;(&#92;beta(i)&#92;) that correspond to these preimages. We repeat this process for all indices &#92;(i&#92;) and combine the resulting measurable spaces using the supremum operation. This gives us the definition of the &quot;pi measurable space&quot;:&lt;/p&gt;
-
-&lt;p&gt;&#92;(&#92;Pi&#92;text{-measurable-space}(M) = &#92;sup_{i:&#92;iota} &#92;left( &#92;text{comap}_{&#92;text{eval}(i)}(M(i)) &#92;right)&#92;).&lt;/p&gt;
-
-&lt;p&gt;This is not too important to measure-theoretic probability theory?&lt;/p&gt;
-
-&lt;h2 id=&quot;defining-a-measure&quot;&gt;defining a measure &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;We now have all the definitions we need to define an outer measure that corresponds to the concept of probability, allowing us to derive useful equalities based on a measurable space. For any &#92;( f : &#92;mathbb{N} &#92;to &#92;text{set } &#92;alpha &#92;), let &#92;( PD(f) &#92;) indicate that &#92;( f &#92;) is pairwise disjoint, meaning the sets that &#92;( f &#92;) maps to with any distinct pair of indices are disjoint. Given a measurable space &#92;( M &#92;), we define a &quot;measure&quot; on &#92;( M &#92;) as an outer measure &#92;( m &#92;) that additionally satisfies the properties of &lt;b&gt;disjoint measurable set countable union&lt;/b&gt; and trim invariance:&lt;/p&gt;
-&lt;p style=&quot;overflow: auto;&quot;&gt;
-&#92;[
-&#92;forall f : &#92;mathbb{N} &#92;to &#92;text{set } &#92;alpha, (&#92;forall i : &#92;mathbb{N}, f(i) &#92;in M) &#92;land (PD(f)) &#92;Rightarrow &#92;] &#92;[&#92;quad m&#92;left(&#92;bigcup_{i=0}^&#92;infty f(i)&#92;right) = &#92;sum_{i=0}^{&#92;infty} m(f(i)),
-&#92;]
-&#92;[ &#92;text{trim}_M(m) = m&#92;]
-&lt;/p&gt;
-
-&lt;p&gt;The disjoint measurable set countable union property ensures that this measure corresponds to the notion of probability, as we know it, where the measure of the union of any list of disjoint measurable sets can be expressed as the sum of their individual measures.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;As &lt;em&gt;Vaishnav&lt;/em&gt; explains, the final criterion for an outer measure to correspond to a notion of probability is that it assigns a measure of 1 to the entire event space. A measure on the event space &#92;(&#92;alpha&#92;) satisfying &#92;(&#92;mu(&#92;text{univ} : &#92;text{set } &#92;alpha) = 1&#92;) is referred to as a &quot;probability measure&quot;. In general, probability measures are a type of &quot;finite measure&quot; that satisfies &#92;(&#92;mu(&#92;text{univ}) &lt; &#92;infty&#92;).&lt;/p&gt;
-
-&lt;h2 id=&quot;measure-transformations&quot;&gt;measure transformations &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;Measures themselves are a type of outer measure that satisfies additional criteria. To achieve this, we &quot;lift&quot; outer measure transformations to the context of measures.&lt;/p&gt;
-&lt;p&gt;Two specific transformations we focus on are &#92;(restrict(·)&#92;) and &#92;(map(·)&#92;), as defined earlier. However, directly applying these transformations to a measure may not always result in an outer measure that satisfies the criteria to be considered a measure. To address this, we need additional transformations that preserve the behavior of the original transformation on measurable sets and ensure that the resulting outer measure remains a measure.&lt;/p&gt;
-&lt;p&gt;This, again, comes down to varifying properties of &lt;b&gt;outer measure&lt;/b&gt; and properties of &lt;b&gt;transformations on measurable spaces&lt;/b&gt; already stated.&lt;/p&gt;
-&lt;p&gt;Recall, for &lt;b&gt;outer measure&lt;/b&gt;, we have the empty set property &#92;((1)&#92;), monotonicity property &#92;((2)&#92;), and countable union property &#92;((3)&#92;):&lt;/p&gt;
-&lt;p&gt;
-  &#92;[
-&#92;begin{align*}
-m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
-&#92;forall A, B : &#92;text{set } &#92;alpha, A &#92;subseteq B &amp; &#92;Rightarrow m(A) &#92;leq m(B), &#92;quad &amp; (2) &#92;&#92;
-&#92;forall f : &#92;mathbb{N} &#92;rightarrow &#92;text{set } &#92;alpha, m&#92;left(&#92;bigcup_{i=0}^&#92;infty f(i)&#92;right) &amp; &#92;leq &#92;sum_{i=0}^&#92;infty m(f(i)), &#92;quad &amp; (3)
-&#92;end{align*}
-&#92;]
-&lt;/p&gt;
-&lt;p&gt;Recall, for &lt;b&gt;transforming measurable spaces&lt;/b&gt; let &#92;(C : &#92;text{set} &#92; &#92;alpha &#92;rightarrow &#92;text{Prop}&#92;) be a predicate. To show that &#92;(C&#92;) holds for all sets in &#92;(&#92;text{generate}(S)&#92;), we can prove that it holds for &#92;(S&#92;) itself &#92;((1)&#92;), the empty set &#92;((2)&#92;), under complement &#92;((3)&#92;), and under countable union &#92;((4)&#92;).&lt;/p&gt;
- &lt;p&gt;&#92;((1) &#92;quad &#92;forall s &#92;in S&#92;), &#92;(C(s) &#92;quad (1) &#92;) &lt;/p&gt;
- &lt;p&gt;&#92;((2) &#92;quad C(&#92;varnothing) &#92;quad (2) &#92;) &lt;/p&gt;
- &lt;p&gt;&#92;((3) &#92;quad &#92;forall s &#92;in &#92;text{generate}(S)&#92;), &#92;(C(s) &#92;Rightarrow C(s^c)&#92;)&lt;/p&gt;
- &lt;p&gt;&#92;((4) &#92;quad &#92;forall f : &#92;mathbb{N} &#92;to &#92;text{set} &#92; &#92;alpha, &#92;quad &#92;left(&#92;forall i : &#92;mathbb{N}, &#92; f(i) &#92;in &#92;text{generate}(S) &#92;land C(f(i)&#92;right) &#92;Rightarrow C(&#92;bigcup_{i=0}^{&#92;infty} f(i))&#92;)&lt;/p&gt;
-&lt;p&gt;But, most importantly, we must have &lt;b&gt;disjoint measurable set countable union&lt;/b&gt;:&lt;/p&gt;
-&#92;[
-&#92;forall f : &#92;mathbb{N} &#92;to &#92;text{set } &#92;alpha, (&#92;forall i : &#92;mathbb{N}, f(i) &#92;in M) &#92;land (PD(f)) &#92;Rightarrow &#92;] &#92;[&#92;quad m&#92;left(&#92;bigcup_{i=0}^&#92;infty f(i)&#92;right) = &#92;sum_{i=0}^{&#92;infty} m(f(i)),
-&#92;]
-&lt;p&gt;And, the &lt;b&gt;Caratheodory Criterion&lt;/b&gt; is sufficient for to prove &lt;b&gt;disjoint measurable set countable union&lt;/b&gt;. &lt;blockquote&gt;Given a set function &#92;(f : &#92;text{set} &#92;alpha &#92;rightarrow &#92;mathbb{R}^+&#92;cup&#92;{&#92;infty&#92;}&#92;) and a set &#92;(s&#92;), &#92;(s&#92;) is referred to as &quot;Carathéodory&quot; (written as &#92;(&#92;text{cara } f(s)&#92;)) if
-  &#92;(&#92;forall t : &#92;text{set} &#92;alpha, f(t) = f(t &#92;cap s) + f(t &#92;setminus s)&#92;),
-  which means that the measure of any set &#92;(t&#92;) can be decomposed into the measure of its intersection with &#92;(s&#92;) and the measure of its difference with &#92;(s&#92;). 
-  
-  Now, consider an outer measure &#92;(m&#92;) and measurable space &#92;(M&#92;). It can be shown that the set of all Carathéodory sets forms a measurable space.&lt;/blockquote&gt;&lt;/p&gt;
- &lt;p&gt;At this point, relies on higher levels of type-theoretic abstractions. The more elementary treatments thus far have been alright, with support from topology every now and then. Still, for those interested in a higher level type-theoretic persepctive, check out &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; subsections on &quot;Lifting an Outer Measure Transformation&quot;, or &quot;Restricting a Measure&quot;, or &quot;Mapping a Measure&quot;. These topics can also be treated with topology outside the scope of these notes.&lt;/p&gt;
-&lt;h2 id=&quot;probability-theory&quot;&gt;probability theory &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;p&gt;&lt;br&gt;
+  &lt;/p&gt;
+  &lt;p&gt;Suppose we have an index of types &#92;(&#92;beta : &#92;iota &#92;rightarrow &#92;text{Type}&#92;) and a mapping &#92;(M&#92;) that assigns a measurable space to each type. We want to define a measurable space on the function space &#92;(&#92;prod_{i:&#92;iota} &#92;beta(i)&#92;) that corresponds to &#92;(M&#92;).&lt;/p&gt;
+  &lt;p&gt;To accomplish this, we define a &quot;function evaluation&quot; function &#92;(eval(i)&#92;) that extracts the value at a specific index. Given a function &#92;(f : &#92;prod_{i:&#92;iota} &#92;beta(i)&#92;), &#92;(eval(i)(f)&#92;) gives us the value of &#92;(f&#92;) at index &#92;(i&#92;).&lt;/p&gt;
+  &lt;p&gt;Next, we consider the preimage of a set &#92;(s&#92;) in type &#92;(&#92;beta(i)&#92;) under the function &#92;(eval(i)&#92;). This preimage consists of all functions whose value at index &#92;(i&#92;) lies in the set &#92;(s&#92;).&lt;/p&gt;
+  &lt;p&gt;By applying the comap operation to &#92;(eval(i)&#92;) with respect to &#92;(M(i)&#92;), we obtain the measurable sets in &#92;(&#92;beta(i)&#92;) that correspond to these preimages. We repeat this process for all indices &#92;(i&#92;) and combine the resulting measurable spaces using the supremum operation. This gives us the definition of the &quot;pi measurable space&quot;:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[&#92;Pi &#92;text{-measurable-space}(M) = &#92;sup_{i:&#92;iota} &#92;left( &#92;text{comap}_{&#92;text{eval}(i)}(M(i)) &#92;right)&#92;]
+  &lt;/div&gt;
+  &lt;p&gt;This is not too important to measure-theoretic probability theory?&lt;/p&gt;
+  &lt;h2 id=&quot;defining-a-measure&quot;&gt;defining a measure
+  &lt;a href=&quot;#top&quot;&gt;&lt;em&gt;&lt;/em&gt;&lt;/a&gt;&lt;/h2&gt;
+  &lt;blockquote&gt;
+  &lt;p&gt;We now have all the definitions we need to define an outer measure that corresponds to the concept of probability, allowing us to derive useful equalities based on a measurable space. For any &#92;( f : &#92;mathbb{N} &#92;to &#92;text{set } &#92;alpha &#92;), let &#92;( PD(f) &#92;) indicate that &#92;( f &#92;) is pairwise disjoint, meaning the sets that &#92;( f &#92;) maps to with any distinct pair of indices are disjoint. Given a measurable space &#92;( M &#92;), we define a &quot;measure&quot; on &#92;( M &#92;) as an outer measure &#92;( m &#92;) that additionally satisfies the properties of &lt;strong&gt;disjoint measurable set countable union&lt;/strong&gt; and trim invariance:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;forall f : &#92;mathbb{N} &#92;to &#92;text{set } &#92;alpha, (&#92;forall i : &#92;mathbb{N}, f(i) &#92;in M) &#92;land (PD(f)) &#92;Rightarrow &#92;]
+  &lt;/div&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[&#92;quad m&#92;left(&#92;bigcup_{i=0}^&#92;infty f(i)&#92;right) = &#92;sum_{i=0}^{&#92;infty} m(f(i)), &#92;]
+  &lt;/div&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;text{trim}_M(m) = m&#92;]
+  &lt;/div&gt;
+  &lt;p&gt;The disjoint measurable set countable union property ensures that this measure corresponds to the notion of probability, as we know it, where the measure of the union of any list of disjoint measurable sets can be expressed as the sum of their individual measures.&lt;/p&gt;
+  &lt;/blockquote&gt;
+  &lt;p&gt;As &lt;em&gt;Vaishnav&lt;/em&gt; explains, the final criterion for an outer measure to correspond to a notion of probability is that it assigns a measure of 1 to the entire event space. A measure on the event space &#92;(&#92;alpha&#92;) satisfying &#92;(&#92;mu(&#92;text{univ} : &#92;text{set } &#92;alpha) = 1&#92;) is referred to as a &quot;probability measure&quot;. In general, probability measures are a type of &quot;finite measure&quot; that satisfies &#92;(&#92;mu(&#92;text{univ}) &amp;lt; &#92;infty&#92;).&lt;/p&gt;
+  &lt;h2 id=&quot;measure-transformations&quot;&gt;measure transformations
+  &lt;a href=&quot;#top&quot;&gt;&lt;em&gt;&lt;/em&gt;&lt;/a&gt;&lt;/h2&gt;
+  &lt;p&gt;Measures themselves are a type of outer measure that satisfies additional criteria. To achieve this, we &quot;lift&quot; outer measure transformations to the context of measures.&lt;/p&gt;
+  &lt;p&gt;Two specific transformations we focus on are &#92;(restrict(·)&#92;) and &#92;(map(·)&#92;), as defined earlier. However, directly applying these transformations to a measure may not always result in an outer measure that satisfies the criteria to be considered a measure. To address this, we need additional transformations that preserve the behavior of the original transformation on measurable sets and ensure that the resulting outer measure remains a measure.&lt;/p&gt;
+  &lt;p&gt;This, again, comes down to varifying properties of &lt;strong&gt;outer measure&lt;/strong&gt; and properties of &lt;strong&gt;transformations on measurable spaces&lt;/strong&gt; already stated.&lt;/p&gt;
+  &lt;p&gt;Recall, for &lt;strong&gt;outer measure&lt;/strong&gt;, we have the empty set property &#92;((1)&#92;), monotonicity property &#92;((2)&#92;), and countable union property &#92;((3)&#92;):&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;begin{align*} m(&#92;emptyset) &amp;amp;= 0, &#92;quad &amp;amp; (1) &#92;&#92; &#92;forall A, B : &#92;text{set } &#92;alpha, A &#92;subseteq B &amp;amp; &#92;Rightarrow m(A) &#92;leq m(B), &#92;quad &amp;amp; (2) &#92;&#92; &#92;forall f : &#92;mathbb{N} &#92;rightarrow &#92;text{set } &#92;alpha, m&#92;left(&#92;bigcup_{i=0}^&#92;infty f(i)&#92;right) &amp;amp; &#92;leq &#92;sum_{i=0}^&#92;infty m(f(i)), &#92;quad &amp;amp; (3) &#92;end{align*} &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;Recall, for &lt;strong&gt;transforming measurable spaces&lt;/strong&gt; let &#92;(C : &#92;text{set} &#92; &#92;alpha &#92;rightarrow &#92;text{Prop}&#92;) be a predicate. To show that &#92;(C&#92;) holds for all sets in &#92;(&#92;text{generate}(S)&#92;), we can prove that it holds for &#92;(S&#92;) itself &#92;((1)&#92;), the empty set &#92;((2)&#92;), under complement &#92;((3)&#92;), and under countable union &#92;((4)&#92;).&lt;/p&gt;
+  &lt;p&gt;&#92;[(1) &#92;quad &#92;forall s &#92;in S, &#92; C(s) &#92;quad (1) &#92;]&lt;/p&gt;
+  &lt;p&gt;&#92;[(2) &#92;quad C(&#92;emptyset) &#92;quad (2) &#92;]&lt;/p&gt;
+  &lt;p&gt;&#92;[(3) &#92;quad &#92;forall s &#92;in &#92;text{generate}(S), &#92; C(s) &#92;Rightarrow C(s^c)&#92;]&lt;/p&gt;
+  &lt;p&gt;&#92;[ (4) &#92;quad &#92;forall f : &#92;mathbb{N} &#92;to &#92;text{set} &#92; &#92;alpha, &#92;quad ( &#92;forall i : &#92;mathbb{N}, &#92; f(i) &#92;in &#92;text{generate}(S) &#92;land C(f(i) ) &#92;Rightarrow C(&#92;bigcup_{i=0}^{&#92;infty} f(i)) &#92;]&lt;/p&gt;
+  &lt;p&gt;But, most importantly, we must have &lt;strong&gt;disjoint measurable set countable union&lt;/strong&gt;:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;forall f : &#92;mathbb{N} &#92;to &#92;text{set } &#92;alpha, (&#92;forall i : &#92;mathbb{N}, f(i) &#92;in M) &#92;land (PD(f)) &#92;Rightarrow &#92;]
+  &lt;/div&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[&#92;quad m&#92;left(&#92;bigcup_{i=0}^&#92;infty f(i)&#92;right) = &#92;sum_{i=0}^{&#92;infty} m(f(i)), &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;And, the &lt;strong&gt;Caratheodory Criterion&lt;/strong&gt; is sufficient for to prove &lt;strong&gt;disjoint measurable set countable union&lt;/strong&gt;.&lt;/p&gt;
+  &lt;blockquote&gt;
+  Given a set function &#92;(f : &#92;text{set} &#92;alpha &#92;rightarrow &#92;mathbb{R}^+&#92;cup&#92;{&#92;infty&#92;}&#92;) and a set &#92;(s&#92;), &#92;(s&#92;) is referred to as &quot;Carathéodory&quot; (written as &#92;(&#92;text{cara } f(s)&#92;)) if &#92;(&#92;forall t : &#92;text{set} &#92;alpha, f(t) = f(t &#92;cap s) + f(t &#92;setminus s)&#92;), which means that the measure of any set &#92;(t&#92;) can be decomposed into the measure of its intersection with &#92;(s&#92;) and the measure of its difference with &#92;(s&#92;). Now, consider an outer measure &#92;(m&#92;) and measurable space &#92;(M&#92;). It can be shown that the set of all Carathéodory sets forms a measurable space.
+  &lt;/blockquote&gt;
+  &lt;p&gt;At this point, relies on higher levels of type-theoretic abstractions. The more elementary treatments thus far have been alright, with support from topology every now and then. Still, for those interested in a higher level type-theoretic persepctive, check out &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; subsections on &quot;Lifting an Outer Measure Transformation&quot;, or &quot;Restricting a Measure&quot;, or &quot;Mapping a Measure&quot;. These topics can also be treated with topology outside the scope of these notes.&lt;/p&gt;
+  &lt;h2 id=&quot;probability-theory&quot;&gt;probability theory
+  &lt;a href=&quot;#top&quot;&gt;&lt;em&gt;&lt;/em&gt;&lt;/a&gt;&lt;/h2&gt;
   &lt;h3 id=&quot;independence&quot;&gt;independence&lt;/h3&gt;
   &lt;p&gt;Given a measure &#92;(&#92;mu&#92;) on &#92;(&#92;alpha&#92;) and two events &#92;(a&#92;) and &#92;(b&#92;) from our event space, we define independence by requiring that the measure of their intersection is the product of their measures:&lt;/p&gt;
-  &#92;[
-  &#92;mu(a &#92;cap b) = &#92;mu(a) &#92;mu(b)
-  &#92;]
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;mu(a &#92;cap b) = &#92;mu(a) &#92;mu(b) &#92;]
+  &lt;/div&gt;
   &lt;p&gt;However, we can extend this notion of independence to sets of events. We define independence between sets of events &#92;(A&#92;) and &#92;(B&#92;) under &#92;(&#92;mu&#92;) as follows:&lt;/p&gt;
   &lt;p&gt;&#92;(A&#92;) and &#92;(B&#92;) are independent under &#92;(&#92;mu&#92;) if for any pair of events &#92;(a &#92;in A&#92;) and &#92;(b &#92;in B&#92;), the measure of their intersection is the product of their measures:&lt;/p&gt;
-  &#92;[
-  &#92;text{indep_sets}_&#92;mu(A, B) &#92;Leftrightarrow &#92;forall a &#92;in A, b &#92;in B, &#92;mu(a &#92;cap b) = &#92;mu(a) &#92;mu(b)
-  &#92;]
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;text{indep_sets}_&#92;mu(A, B) &#92;Leftrightarrow &#92;forall a &#92;in A, b &#92;in B, &#92;mu(a &#92;cap b) = &#92;mu(a) &#92;mu(b) &#92;]
+  &lt;/div&gt;
   &lt;p&gt;This basically says that: two measurable spaces are independent with respect to their measures if their sets-of-events (which are, again, sets of sets) are independent with respect to the measures. This does not need math markup, sorry &lt;em&gt;Vaishnav&lt;/em&gt;.&lt;/p&gt;
   &lt;p&gt;Given two sets &#92;(a,b : &#92;text{set } &#92;alpha&#92;), we define independence between them under &#92;(&#92;mu&#92;) as:&lt;/p&gt;
-&#92;[ &#92;text{indep_set}_&#92;mu(a,b) &#92;Leftrightarrow &#92;text{indep}_&#92;mu(&#92;text{generate}(&#92;{a&#92;}), &#92;text{generate}(&#92;{b&#92;})), &#92;]
-&lt;p&gt;which is the independence of their generated measurable spaces. Note that for any set &#92;(s : &#92;text{set } &#92;alpha&#92;), &#92;(&#92;text{generate}(&#92;{s&#92;}) = &#92;{0,&#92;emptyset,s,s^c,&#92;alpha&#92;}&#92;) exactly. It may be immediately obvious that this definition is equivalent to &#92;(&#92;mu(a &#92;cap b) = &#92;mu(a) &#92;mu(b)&#92;), but we will soon show that this fact arises from a more general result regarding independence on the measurable spaces generated by a pair of independent &quot;&#92;(π&#92;)-systems&quot;.&lt;/p&gt;
-
-&lt;p&gt;Now, that was &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; idea of definitions, so here are the &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; idea of properties.&lt;/p&gt;
-&lt;blockquote&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;text{indep_set}_&#92;mu(a,b) &#92;Leftrightarrow &#92;text{indep}_&#92;mu(&#92;text{generate}(&#92;{a&#92;}), &#92;text{generate}(&#92;{b&#92;})), &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;which is the independence of their generated measurable spaces. Note that for any set &#92;(s : &#92;text{set } &#92;alpha&#92;), &#92;(&#92;text{generate}(&#92;{s&#92;}) = &#92;{0,&#92;emptyset,s,s^c,&#92;alpha&#92;}&#92;) exactly. It may be immediately obvious that this definition is equivalent to &#92;(&#92;mu(a &#92;cap b) = &#92;mu(a) &#92;mu(b)&#92;), but we will soon show that this fact arises from a more general result regarding independence on the measurable spaces generated by a pair of independent &quot;&#92;(π&#92;)-systems&quot;.&lt;/p&gt;
+  &lt;p&gt;Now, that was &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; idea of definitions, so here are the &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; idea of properties.&lt;/p&gt;
+  &lt;blockquote&gt;
   &lt;p&gt;A &quot;Dynkin system,&quot; also known as a &quot;&#92;(λ&#92;)-system,&quot; is a generalization of measurable spaces that enables an induction principles. We define a Dynkin system as a set of sets &#92;(M : &#92;text{set } (&#92;text{set } &#92;alpha)&#92;) with the properties of &#92;(1&#92;) empty set measurability, &#92;(2&#92;) complement closure, and &#92;(3&#92;) &lt;em&gt;disjoint&lt;/em&gt; countable union closure:&lt;/p&gt;
-&lt;ul style=&quot;overflow:auto;&quot;&gt;
-&lt;li&gt;&#92;(&#92;emptyset &#92;in M &#92;quad (1) &#92;)&lt;/li&gt;
-&lt;li&gt;&#92;(&#92;forall s : &#92;text{set } &#92;alpha, s &#92;in M &#92;Rightarrow s^c &#92;in M &#92;quad (2) &#92;)&lt;/li&gt;
-&lt;li&gt;&#92;(&#92;forall f : &#92;mathbb{N} &#92;rightarrow &#92;text{set } &#92;alpha, &#92;forall i : &#92;mathbb{N}, f(i) &#92;in M &#92;land &#92;text{PD}(f) &#92;Rightarrow &#92;bigcup_{i=0}^{&#92;infty} f(i) &#92;in M &#92;quad (3) &#92;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The disjointedness condition in &#92;(1&#92;) is the only difference from the definition of measurable spaces (see (2.7)).&lt;/p&gt;
-&lt;p&gt;Given any &#92;(S : &#92;text{set } (&#92;text{set } &#92;alpha)&#92;), we can consider its Dynkin system &quot;closure,&quot; which is the smallest Dynkin system including every set in &#92;(S&#92;). We define this closure similarly to how we did for measurable spaces with &#92;(&#92;text{generate}(S)&#92;), modifying the last construction rule to union only over disjoint sets. We denote this generator as &#92;(&#92;text{generate}_D(S)&#92;).&lt;/p&gt;
-&lt;p&gt;Now, suppose we have some predicate &#92;(C : &#92;text{set } &#92;alpha &#92;rightarrow &#92;text{Prop}&#92;). If we want to show that &#92;(C&#92;) holds for all sets in &#92;(&#92;text{generate}_D(S)&#92;), we have to prove that &#92;(1&#92;) it holds for &#92;(S&#92;) itself, &#92;(2&#92;) for the empty set, &#92;(3&#92;) under complement, and &#92;(4&#92;) under &lt;em&gt;disjoint&lt;/em&gt; countable union:&lt;/p&gt;
-&lt;ul style=&quot;overflow:auto;&quot;&gt;
-&lt;li&gt;&#92;(&#92;forall s &#92;in S, C(s)&#92;quad (1) &#92;)&lt;/li&gt;
-&lt;li&gt;&#92;(C(&#92;emptyset) &#92;quad (2) &#92;)&lt;/li&gt;
-&lt;li&gt;&#92;(&#92;forall s &#92;in &#92;text{generate}_D(S), C(s) &#92;Rightarrow C(s^c) &#92;quad (3) &#92;)&lt;/li&gt;
-&lt;li&gt;&#92;(&#92;forall f : &#92;mathbb{N} &#92;rightarrow &#92;text{set } &#92;alpha, &#92;left( &#92;forall i : &#92;mathbb{N}, f(i) &#92;in &#92;text{generate}_D(S) &#92;land C(f(i)) &#92;right) &#92;land &#92;text{PD}(f) &#92;Rightarrow C &#92;left( &#92;bigcup_{i=0}^{&#92;infty} f(i) &#92;right) &#92;quad (4) &#92;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;As &lt;em&gt;Vaishnav&lt;/em&gt; explains that Dynkin systems have an important property: closure under intersection implies measurability. The proof relies on the ability to derive difference closure from intersection closure, enabling the decomposition of sets into a disjoint list with the same union. Additionally, the set &#92;(&#92;{t &#92;mid t &#92;cap s &#92;in D&#92;}&#92;), where &#92;(D&#92;) is a Dynkin system and &#92;(s &#92;in D&#92;), is also a Dynkin system.&lt;/p&gt;
-&lt;p&gt;To determine the applicability of the extra disjointedness condition, we introduce &#92;(&#92;pi&#92;)-systems. These systems establish the equivalence between generated measurable spaces and generated Dynkin systems, allowing us to leverage &#92;(&#92;pi&#92;)-system properties in specific situations.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; then describes Dykin&#39;s &lt;b&gt;&#92;(&#92;pi&#92;)-&#92;(&#92;lambda&#92;) theorem&lt;/b&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
+  &lt;ul&gt;
+  &lt;li&gt;&#92;(&#92;emptyset &#92;in M &#92;quad (1) &#92;)&lt;/li&gt;
+  &lt;li&gt;&#92;(&#92;forall s : &#92;text{set } &#92;alpha, s &#92;in M &#92;Rightarrow s^c &#92;in M &#92;quad (2) &#92;)&lt;/li&gt;
+  &lt;li&gt;&#92;(&#92;forall f : &#92;mathbb{N} &#92;rightarrow &#92;text{set } &#92;alpha, &#92;forall i : &#92;mathbb{N}, f(i) &#92;in M &#92;land &#92;text{PD}(f) &#92;Rightarrow &#92;bigcup_{i=0}^{&#92;infty} f(i) &#92;in M &#92;quad (3) &#92;)&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;p&gt;The disjointedness condition in &#92;(1&#92;) is the only difference from the definition of measurable spaces (see (2.7)).&lt;/p&gt;
+  &lt;p&gt;Given any &#92;(S : &#92;text{set } (&#92;text{set } &#92;alpha)&#92;), we can consider its Dynkin system &quot;closure,&quot; which is the smallest Dynkin system including every set in &#92;(S&#92;). We define this closure similarly to how we did for measurable spaces with &#92;(&#92;text{generate}(S)&#92;), modifying the last construction rule to union only over disjoint sets. We denote this generator as &#92;(&#92;text{generate}_D(S)&#92;).&lt;/p&gt;
+  &lt;p&gt;Now, suppose we have some predicate &#92;(C : &#92;text{set } &#92;alpha &#92;rightarrow &#92;text{Prop}&#92;). If we want to show that &#92;(C&#92;) holds for all sets in &#92;(&#92;text{generate}_D(S)&#92;), we have to prove that &#92;(1&#92;) it holds for &#92;(S&#92;) itself, &#92;(2&#92;) for the empty set, &#92;(3&#92;) under complement, and &#92;(4&#92;) under &lt;em&gt;disjoint&lt;/em&gt; countable union:&lt;/p&gt;
+  &lt;ul&gt;
+  &lt;li&gt;&#92;(&#92;forall s &#92;in S, C(s)&#92;quad (1) &#92;)&lt;/li&gt;
+  &lt;li&gt;&#92;(C(&#92;emptyset) &#92;quad (2) &#92;)&lt;/li&gt;
+  &lt;li&gt;&#92;(&#92;forall s &#92;in &#92;text{generate}_D(S), C(s) &#92;Rightarrow C(s^c) &#92;quad (3) &#92;)&lt;/li&gt;
+  &lt;li&gt;&#92;(&#92;forall f : &#92;mathbb{N} &#92;rightarrow &#92;text{set } &#92;alpha, &#92;left( &#92;forall i : &#92;mathbb{N}, f(i) &#92;in &#92;text{generate}_D(S) &#92;land C(f(i)) &#92;right) &#92;land &#92;text{PD}(f) &#92;Rightarrow C &#92;left( &#92;bigcup_{i=0}^{&#92;infty} f(i) &#92;right) &#92;quad (4) &#92;)&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;/blockquote&gt;
+  &lt;p&gt;As &lt;em&gt;Vaishnav&lt;/em&gt; explains that Dynkin systems have an important property: closure under intersection implies measurability. The proof relies on the ability to derive difference closure from intersection closure, enabling the decomposition of sets into a disjoint list with the same union. Additionally, the set &#92;(&#92;{t &#92;mid t &#92;cap s &#92;in D&#92;}&#92;), where &#92;(D&#92;) is a Dynkin system and &#92;(s &#92;in D&#92;), is also a Dynkin system.&lt;/p&gt;
+  &lt;p&gt;To determine the applicability of the extra disjointedness condition, we introduce &#92;(&#92;pi&#92;)-systems. These systems establish the equivalence between generated measurable spaces and generated Dynkin systems, allowing us to leverage &#92;(&#92;pi&#92;)-system properties in specific situations.&lt;/p&gt;
+  &lt;p&gt;&lt;em&gt;Vaishnav&lt;/em&gt; then describes Dykin&#39;s &lt;strong&gt;&#92;(&#92;pi&#92;)-&#92;(&#92;lambda&#92;) theorem&lt;/strong&gt;.&lt;/p&gt;
+  &lt;blockquote&gt;
   &lt;p&gt;We define the &quot;&#92;(π&#92;)-system&quot; criterion for a set &#92;(S : &#92;text{set } (&#92;text{set } &#92;alpha)&#92;) as:&lt;/p&gt;
-&#92;[PI(S) &#92;Leftrightarrow &#92;forall s, t &#92;in S, s &#92;cap t &#92;neq &#92;varnothing &#92;Rightarrow s &#92;cap t &#92;in S,&#92;]
-&lt;p&gt;which simply requires that &#92;(S&#92;) is closed under non-empty intersection. The inclusion of the non-empty requirement allows for greater generality, although it is not necessary for our results. It is immediately evident that singleton sets satisfy the &#92;(π&#92;)-system criterion:&lt;/p&gt;
-&#92;[&#92;forall s : &#92;text{set } &#92;alpha, PI(&#92;{s&#92;})&#92;]
-&lt;p&gt;Remarkably, if &#92;(PI(S)&#92;), then the generated Dynkin system, &#92;(&#92;text{generate}_D(S)&#92;), is closed under intersection, making it a measurable space. Furthermore, we have &#92;(&#92;text{generate}_D(S) = &#92;text{generate}(S)&#92;), indicating that the generated measurable space and Dynkin systems are identical. This result is known as Dynkin&#39;s &#92;(π&#92;)-&#92;(λ&#92;) theorem.&lt;/p&gt;
-&lt;p&gt;We now have the criterion needed for a new induction principle on generated measurable spaces: If they are generated by a &#92;(π&#92;)-system, we can replace &quot;countable union for generating measuable spaces&quot; (recall:) 
-  &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;forall f : &#92;mathbb{N} &#92;rightarrow &#92;text{set } &#92;alpha, &#92;left( &#92;forall i : &#92;mathbb{N}, f(i) &#92;in &#92;text{generate}_D(S) &#92;land C(f(i)) &#92;right) &#92;land &#92;text{PD}(f) &#92;Rightarrow C &#92;left( &#92;bigcup_{i=0}^{&#92;infty} f(i) &#92;right)&#92;]&lt;/p&gt;&lt;p&gt; 
-  with &quot;countable union for generating &#92;(π&#92;)-systems&quot;:&lt;/p&gt;
-  &lt;p&gt;&lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;
-    &#92;[(&#92;forall i : &#92;mathbb{N}, &#92; f(i) &#92;in generate(S) &#92;land C(f(i))) &#92;land PD(f) &#92;Rightarrow C&#92;left(&#92;bigcup_{i=0}^&#92;infty f(i)&#92;right),&#92;]
-  &lt;/p&gt;
-    &lt;p&gt;where the new hypothesis, &#92;(PD(f)&#92;), assists in the proof.&lt;/p&gt;
-    &lt;p&gt;Now, &lt;em&gt;Vaishnav&lt;/em&gt; offer&#39;s an axiomatic defintiion of independence:&lt;/p&gt;
-    &lt;p&gt;With the help of &quot;countable union for generating &#92;(π&#92;)-systems&quot; we can prove that,
-      &lt;/p&gt;&lt;p style=&quot;overflow: auto;&quot;&gt;
-      &#92;[
-      &#92;forall S, T: &#92;operatorname{set}(&#92;operatorname{set} &#92;alpha), &#92;operatorname{PI}(S) &#92;wedge &#92;operatorname{PI}(T) &#92;Longrightarrow{&#92;operatorname{indep} &#92;_&#92;operatorname{set}_&#92;mu}_&#92;mu(S, T) &#92;Longleftrightarrow &#92;operatorname{indep}_&#92;mu(&#92;operatorname{generate}(S), &#92;operatorname{generate}(T))
-      &#92;]
-      &lt;/p&gt;&lt;p&gt;
-      in English, the independence of &#92;(&#92;pi&#92;)-systems implies the independence of the measurable spaces they generate. We can now simplify our criterion for independence of sets: from (&quot;the independence of &#92;(&#92;pi&#92;)-systems implies the independence of the measurable spaces they generate&quot;), and the fact that singletons are &#92;(&#92;pi&#92;)-systems, we have &lt;/p&gt;
-      &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;forall s, t : &#92;text{set } &#92;alpha, &#92;text{indep_set}_&#92;mu (s, t) &#92;Leftrightarrow &#92;text{indep_sets}_&#92;mu (&#92;{s&#92;}, &#92;{t&#92;}) &#92;Leftrightarrow &#92;mu(s &#92;cap t) = &#92;mu(s) &#92;mu(t)&#92;]&lt;/p&gt;
-      &lt;p&gt;So, we now have license to use the &quot;bundled&quot; &#92;(&#92;operatorname{indep}_{-} &#92;operatorname{set}_&#92;mu(s, t)&#92;) in place of our classical definition of independence (again, the equivalence can easily be seen by cases, but it&#39;s good to know the general result).&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2&gt;The End up &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;At this point, I do not find the remaining formalities conducive to my personal study of probabiity theory, although they might interest me more if I was more familiar with Lean.&lt;/p&gt;
-&lt;p&gt;I have continued more relevant discussion of &lt;em&gt;measure theory&lt;/em&gt; in the context of &lt;em&gt;intro to probability&lt;/em&gt; at my recent post &lt;a href=&quot;https://ischmidls.github.io/posts/notes%20-%20cont.%20measure%20&amp;%20intro%20prob/&quot;&gt;notes - cont. measure &amp; intro prob&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Check out the rest of &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; paper for (again, you might find it &lt;a href=&quot;https://escholarship.org/uc/item/8hb1w6js&quot;&gt;here&lt;/a&gt;, ceteris paribus):&lt;/p&gt;
-
-&lt;ul&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[PI(S) &#92;Leftrightarrow &#92;forall s, t &#92;in S, s &#92;cap t &#92;neq &#92;emptyset &#92;Rightarrow s &#92;cap t &#92;in S,&#92;]
+  &lt;/div&gt;
+  &lt;p&gt;which simply requires that &#92;(S&#92;) is closed under non-empty intersection. The inclusion of the non-empty requirement allows for greater generality, although it is not necessary for our results. It is immediately evident that singleton sets satisfy the &#92;(π&#92;)-system criterion:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[&#92;forall s : &#92;text{set } &#92;alpha, PI(&#92;{s&#92;})&#92;]
+  &lt;/div&gt;
+  &lt;p&gt;Remarkably, if &#92;(PI(S)&#92;), then the generated Dynkin system, &#92;(&#92;text{generate}_D(S)&#92;), is closed under intersection, making it a measurable space. Furthermore, we have &#92;(&#92;text{generate}_D(S) = &#92;text{generate}(S)&#92;), indicating that the generated measurable space and Dynkin systems are identical. This result is known as Dynkin&#39;s &#92;(π&#92;)-&#92;(λ&#92;) theorem.&lt;/p&gt;
+  &lt;p&gt;We now have the criterion needed for a new induction principle on generated measurable spaces: If they are generated by a &#92;(π&#92;)-system, we can replace &quot;countable union for generating measuable spaces&quot; (recall:)&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[&#92;forall f : &#92;mathbb{N} &#92;rightarrow &#92;text{set } &#92;alpha, &#92;left( &#92;forall i : &#92;mathbb{N}, f(i) &#92;in &#92;text{generate}_D(S) &#92;land C(f(i)) &#92;right) &#92;land &#92;text{PD}(f) &#92;Rightarrow C &#92;left( &#92;bigcup_{i=0}^{&#92;infty} f(i) &#92;right)&#92;]
+  &lt;/div&gt;
+  &lt;p&gt;with &quot;countable union for generating &#92;(π&#92;)-systems&quot;:&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[(&#92;forall i : &#92;mathbb{N}, &#92; f(i) &#92;in generate(S) &#92;land C(f(i))) &#92;land PD(f) &#92;Rightarrow C&#92;left(&#92;bigcup_{i=0}^&#92;infty f(i)&#92;right),&#92;]
+  &lt;/div&gt;
+  &lt;p&gt;where the new hypothesis, &#92;(PD(f)&#92;), assists in the proof.&lt;/p&gt;
+  &lt;p&gt;Now, &lt;em&gt;Vaishnav&lt;/em&gt; offer&#39;s an axiomatic defintiion of independence:&lt;/p&gt;
+  &lt;p&gt;With the help of &quot;countable union for generating &#92;(π&#92;)-systems&quot; we can prove that,&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[ &#92;forall S, T: &#92;operatorname{set}(&#92;operatorname{set} &#92;alpha), &#92;operatorname{PI}(S) &#92;wedge &#92;operatorname{PI}(T) &#92;Longrightarrow{&#92;operatorname{indep} &#92;_&#92;operatorname{set}_&#92;mu}_&#92;mu(S, T) &#92;Longleftrightarrow &#92;operatorname{indep}_&#92;mu(&#92;operatorname{generate}(S), &#92;operatorname{generate}(T)) &#92;]
+  &lt;/div&gt;
+  &lt;p&gt;in English, the independence of &#92;(&#92;pi&#92;)-systems implies the independence of the measurable spaces they generate. We can now simplify our criterion for independence of sets: from (&quot;the independence of &#92;(&#92;pi&#92;)-systems implies the independence of the measurable spaces they generate&quot;), and the fact that singletons are &#92;(&#92;pi&#92;)-systems, we have&lt;/p&gt;
+  &lt;div style=&quot;overflow: auto;&quot;&gt;
+  &#92;[&#92;forall s, t : &#92;text{set } &#92;alpha, &#92;text{indep_set}_&#92;mu (s, t) &#92;Leftrightarrow &#92;text{indep_sets}_&#92;mu (&#92;{s&#92;}, &#92;{t&#92;}) &#92;Leftrightarrow &#92;mu(s &#92;cap t) = &#92;mu(s) &#92;mu(t)&#92;]
+  &lt;/div&gt;
+  &lt;p&gt;So, we now have license to use the &quot;bundled&quot; &#92;(&#92;operatorname{indep}_{-} &#92;operatorname{set}_&#92;mu(s, t)&#92;) in place of our classical definition of independence (again, the equivalence can easily be seen by cases, but it&#39;s good to know the general result).&lt;/p&gt;
+  &lt;/blockquote&gt;
+  &lt;h2 id=&quot;the-end-up&quot;&gt;The End up
+  &lt;a href=&quot;#top&quot;&gt;&lt;em&gt;&lt;/em&gt;&lt;/a&gt;&lt;/h2&gt;
+  &lt;p&gt;At this point, I do not find the remaining formalities conducive to my personal study of probabiity theory, although they might interest me more if I was more familiar with Lean.&lt;/p&gt;
+  &lt;p&gt;I have continued more relevant discussion of &lt;em&gt;measure theory&lt;/em&gt; in the context of &lt;em&gt;intro to probability&lt;/em&gt; at my recent post &lt;a href=&quot;https://ischmidls.github.io/posts/intro%20prob/empty/posts/notes%20-%20cont.%20measure%20&amp;amp;%20intro%20prob/set&quot;&gt;notes - cont. measure &amp;amp; intro prob&lt;/a&gt;.&lt;/p&gt;
+  &lt;p&gt;Check out the rest of &lt;em&gt;Vaishnav&#39;s&lt;/em&gt; paper for (again, you might find it &lt;a href=&quot;https://escholarship.org/uc/item/8hb1w6js&quot;&gt;here&lt;/a&gt;, ceteris paribus):&lt;/p&gt;
+  &lt;ul&gt;
   &lt;li&gt;conditional probability&lt;/li&gt;
   &lt;li&gt;random variables
-    &lt;ul&gt;
-      &lt;li&gt;the joint distribution&lt;/li&gt;
-      &lt;li&gt;restricting a pi&lt;/li&gt;
-      &lt;li&gt;the marginal distribution&lt;/li&gt;
-      &lt;li&gt;marginalization&lt;/li&gt;
-      &lt;li&gt;independence on random variables&lt;/li&gt;
-      &lt;li&gt;conditional independence on random variables&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-
+  &lt;ul&gt;
+  &lt;li&gt;the joint distribution&lt;/li&gt;
+  &lt;li&gt;restricting a pi&lt;/li&gt;
+  &lt;li&gt;the marginal distribution&lt;/li&gt;
+  &lt;li&gt;marginalization&lt;/li&gt;
+  &lt;li&gt;independence on random variables&lt;/li&gt;
+  &lt;li&gt;conditional independence on random variables&lt;/li&gt;
+  &lt;/ul&gt;&lt;/li&gt;
+  &lt;/ul&gt;
 			
 				
 				
@@ -4625,7 +4593,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
     &lt;p style=&quot;overflow: auto;&quot;&gt; &#92;[ &#92;varepsilon_{a_1 a_2 a_3 &#92;ldots a_n} = &#92;begin{cases} +1 &amp; &#92;text{if }(a_1, a_2, a_3, &#92;ldots, a_n) &#92;text{ is an even permutation of } (1, 2, 3, &#92;dots, n) &#92;&#92; -1 &amp; &#92;text{if }(a_1, a_2, a_3, &#92;ldots, a_n) &#92;text{ is an odd permutation of } (1, 2, 3, &#92;dots, n) &#92;&#92; 0 &amp; &#92;text{otherwise} &#92;end{cases} &#92;] &lt;/p&gt;
     &lt;p&gt; Thus, it is the sign of the permutation in the case of a permutation, and zero otherwise. &lt;/p&gt;
     &lt;p&gt; Using the capital pi notation &#92;(&#92;Pi&#92;) for ordinary multiplication of numbers, an explicit expression for the symbol is: &lt;/p&gt;
-    &lt;p style=&quot;overflow: auto;&quot;&gt; &#92;[ &#92;begin{align*} &#92;varepsilon_{a_1 a_2 a_3 &#92;ldots a_n} &amp; = &#92;prod_{1 &#92;leq i &lt; j &#92;leq n} &#92;text{sgn} (a_j - a_i) &#92;&#92; &amp;=&#92;text{sgn}(a_2 - a_1) &#92;text{sgn}(a_3 - a_1) &#92;dotsm &#92;text{sgn}(a_n - a_1) &#92;text{sgn}(a_3 - a_2) &#92;text{sgn}(a_4 - a_2) &#92;dotsm &#92;text{sgn}(a_n - a_2) &#92;dotsm &#92;text{sgn}(a_n - a_{n-1}) &#92;end{align*} &#92;] &lt;/p&gt;
+    &lt;p style=&quot;overflow: auto;&quot;&gt; &#92;[ &#92;begin{align*} &#92;varepsilon_{a_1 a_2 a_3 &#92;ldots a_n} &amp; = &#92;prod_{1 &#92;leq i &amp;lt; j &#92;leq n} &#92;text{sgn} (a_j - a_i) &#92;&#92; &amp;=&#92;text{sgn}(a_2 - a_1) &#92;text{sgn}(a_3 - a_1) &#92;dotsm &#92;text{sgn}(a_n - a_1) &#92;text{sgn}(a_3 - a_2) &#92;text{sgn}(a_4 - a_2) &#92;dotsm &#92;text{sgn}(a_n - a_2) &#92;dotsm &#92;text{sgn}(a_n - a_{n-1}) &#92;end{align*} &#92;] &lt;/p&gt;
         &lt;p&gt; where the signum function (denoted &#92;(&#92;text{sgn}&#92;)) returns the sign of its argument while discarding the absolute value if nonzero. The formula is valid for all index values, and for any &#92;(n&#92;) (when &#92;(n = 0&#92;) or &#92;(n = 1&#92;), this is the empty product). However, computing the formula above naively has a time complexity of &#92;(O(n^2)&#92;), whereas the sign can be computed from the parity of the permutation from its disjoint cycles in only &#92;(O(n &#92;log(n))&#92;) cost. &lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -4710,7 +4678,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
     &lt;p&gt;In general, for &#92;(n&#92;) dimensions, the product of two Levi-Civita symbols can be written as:&lt;/p&gt;
     &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;varepsilon_{i_1 i_2 &#92;ldots i_n} &#92;varepsilon_{j_1 j_2 &#92;ldots j_n} = &#92;begin{vmatrix} &#92;delta_{i_1 j_1} &amp; &#92;delta_{i_1 j_2} &amp; &#92;ldots &amp; &#92;delta_{i_1 j_n} &#92;&#92; &#92;delta_{i_2 j_1} &amp; &#92;delta_{i_2 j_2} &amp; &#92;ldots &amp; &#92;delta_{i_2 j_n} &#92;&#92; &#92;vdots &amp; &#92;vdots &amp; &#92;ddots &amp; &#92;vdots &#92;&#92; &#92;delta_{i_n j_1} &amp; &#92;delta_{i_n j_2} &amp; &#92;ldots &amp; &#92;delta_{i_n j_n} &#92;&#92; &#92;end{vmatrix}&#92;]&lt;/p&gt;
     &lt;p&gt;
-      &lt;!-- EXPLAIN --&gt;&lt;b&gt;Proof:&lt;/b&gt; Both sides change signs upon switching two indices, so without loss of generality, assume &#92;(i_1 &#92;leq &#92;ldots &#92;leq i_n&#92;) and &#92;(j_1 &#92;leq &#92;ldots &#92;leq j_n&#92;). If some &#92;(i_c = i_{c+1}&#92;), then the left side is zero, and the right side is also zero since two of its columns are equal. The same applies if &#92;(j_c = j_{c+1}&#92;). Finally, if &#92;(i_1 &lt; &#92;ldots &lt; i_n&#92;) and &#92;(j_1 &lt; &#92;ldots &lt; j_n&#92;), then both sides equal 1. &lt;/p&gt;
+      &lt;!-- EXPLAIN --&gt;&lt;b&gt;Proof:&lt;/b&gt; Both sides change signs upon switching two indices, so without loss of generality, assume &#92;(i_1 &#92;leq &#92;ldots &#92;leq i_n&#92;) and &#92;(j_1 &#92;leq &#92;ldots &#92;leq j_n&#92;). If some &#92;(i_c = i_{c+1}&#92;), then the left side is zero, and the right side is also zero since two of its columns are equal. The same applies if &#92;(j_c = j_{c+1}&#92;). Finally, if &#92;(i_1 &amp;lt; &#92;ldots &amp;lt; i_n&#92;) and &#92;(j_1 &amp;lt; &#92;ldots &amp;lt; j_n&#92;), then both sides equal 1. &lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;br&gt;
@@ -4718,8 +4686,8 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 &lt;p&gt;Ha! Just kidding! What is a &lt;b&gt;norm&lt;/b&gt; &amp; why is it outside the scope of these notes?&lt;/p&gt;
 &lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
     &lt;p&gt;To begin, &lt;a href=&quot;https://math.stackexchange.com/q/16963/1098426&quot;&gt;a well-phrased question&lt;/a&gt; from Math Stack Exchange:&lt;/p&gt;
-    &lt;p&gt;So if &#92;(X&#92;) is a vector space, and you define a norm, &#92;(x &#92;mapsto &#92;| x &#92;|&#92;), on it, then the bounded subset, &#92;(V = &#92;{ x &#92;in X: &#92;|x&#92;| &lt; &#92;infty &#92;}&#92;), is automatically a subspace.&lt;/p&gt;
-    &lt;p&gt;This follows from the definition of a norm, so for all &#92;(x,y &#92;in V&#92;), &#92;(c &#92;in &#92;mathbb{C}&#92;), &#92;(&#92;|x + c y&#92;| &#92;le &#92;|x&#92;| + &#92;|cy&#92;| = &#92;|x&#92;|+ |c| &#92;|y&#92;| &lt; &#92;infty&#92;), so &#92;(x+cy &#92;in V&#92;).&lt;/p&gt;
+    &lt;p&gt;So if &#92;(X&#92;) is a vector space, and you define a norm, &#92;(x &#92;mapsto &#92;| x &#92;|&#92;), on it, then the bounded subset, &#92;(V = &#92;{ x &#92;in X: &#92;|x&#92;| &amp;lt; &#92;infty &#92;}&#92;), is automatically a subspace.&lt;/p&gt;
+    &lt;p&gt;This follows from the definition of a norm, so for all &#92;(x,y &#92;in V&#92;), &#92;(c &#92;in &#92;mathbb{C}&#92;), &#92;(&#92;|x + c y&#92;| &#92;le &#92;|x&#92;| + &#92;|cy&#92;| = &#92;|x&#92;|+ |c| &#92;|y&#92;| &amp;lt; &#92;infty&#92;), so &#92;(x+cy &#92;in V&#92;).&lt;/p&gt;
     &lt;p&gt;Is this the reasoning behind the definition of a norm?&lt;/p&gt;
     &lt;p&gt;Now, the top answer to this MSE question is from QC in 2011. While I love the guy, it is basically links to some funcitonal analysis resources. So, no.&lt;/p&gt;
     &lt;p&gt;There is a better answer from &lt;a href=&quot;https://math.stackexchange.com/a/1380960/1098426&quot;&gt;another MSE question&lt;/a&gt;:&lt;/p&gt;
@@ -4768,12 +4736,12 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
 &lt;p class=&quot;text-primary&quot;&gt;TLDR; a real-valued function &#92;( A(x) &#92;) is considered a contraction if it fulfills the inequality condition, indicating that the function values decrease as the input values become closer to each other, with the rate of decrease determined by the constant &#92;( K &#92;), which must be less than 1.&lt;/p&gt;
 &lt;p&gt; A real-valued function &#92;( A(x) &#92;) on &#92;( &#92;mathbb{R} &#92;) is a &lt;!-- EXPLAIN --&gt;&lt;b&gt;contraction&lt;/b&gt; if it satisfies the inequality &lt;/p&gt;
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[ | A(x) - A(y) | &#92;leq K | x - y | &#92;]&lt;/p&gt;
-&lt;p&gt; for some &#92;( K &lt; 1 &#92;) and all real &#92;( x &#92;) and &#92;( y &#92;). &lt;/p&gt;
+&lt;p&gt; for some &#92;( K &amp;lt; 1 &#92;) and all real &#92;( x &#92;) and &#92;( y &#92;). &lt;/p&gt;
     &lt;p&gt;
       &lt;!-- EXPLAIN --&gt;&lt;b&gt;Remark 8:&lt;/b&gt;
     &lt;/p&gt;
     &lt;ol&gt;
-      &lt;li&gt;Condition of continuous differentiability of &#92;( A &#92;) and estimate &#92;( | A&#39;(x) | &#92;leq k &lt; 1 &#92;) guarantee that &#92;( A &#92;) is a &lt;!-- EXPLAIN --&gt;&lt;b&gt;contraction&lt;/b&gt;. &lt;/li&gt;
+      &lt;li&gt;Condition of continuous differentiability of &#92;( A &#92;) and estimate &#92;( | A&#39;(x) | &#92;leq k &amp;lt; 1 &#92;) guarantee that &#92;( A &#92;) is a &lt;!-- EXPLAIN --&gt;&lt;b&gt;contraction&lt;/b&gt;. &lt;/li&gt;
       &lt;li&gt;The definition of a &lt;!-- EXPLAIN --&gt;&lt;b&gt;contraction&lt;/b&gt; can be naturally extended to any metric space &#92;( M &#92;) with a metric (distance function) &#92;( &#92;rho &#92;) instead of the real line, replacing &#92;( | A(x) - A(y) | &#92;), &#92;( | x - y | &#92;) above with &#92;( &#92;rho(A(x), A(y)) &#92;), &#92;( &#92;rho(x, y) &#92;). &lt;/li&gt;
     &lt;/ol&gt;
     &lt;h4&gt;A simple instance of the contraction mapping principle:&lt;/h4&gt;
@@ -4808,7 +4776,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
     &lt;p&gt;&lt;/p&gt;
     &lt;p&gt; Note that this definition works for functions that map &#92;([t_0 - d, t_0 + d]&#92;) to &#92;( B &#92;). &lt;/p&gt;
     &lt;p&gt;
-      &lt;!-- EXPLAIN --&gt;&lt;b&gt;Lemma 12:&lt;/b&gt; For a sufficiently small &#92;( d &#92;), the operator &#92;( A(x) &#92;) maps the above class of functions into itself and is a contraction, i.e., &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;( &#92;| A(x) - A(y) &#92;| &#92;leq &#92;| x - y &#92;| &#92;)&lt;/span&gt; for some &#92;( k &lt; 1 &#92;). &lt;/p&gt;
+      &lt;!-- EXPLAIN --&gt;&lt;b&gt;Lemma 12:&lt;/b&gt; For a sufficiently small &#92;( d &#92;), the operator &#92;( A(x) &#92;) maps the above class of functions into itself and is a contraction, i.e., &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;( &#92;| A(x) - A(y) &#92;| &#92;leq &#92;| x - y &#92;| &#92;)&lt;/span&gt; for some &#92;( k &amp;lt; 1 &#92;). &lt;/p&gt;
         &lt;p&gt;
           &lt;!-- EXPLAIN --&gt;&lt;b&gt;Corollary 13:&lt;/b&gt;
         &lt;/p&gt;
@@ -4882,7 +4850,7 @@ m(&#92;varnothing) &amp;= 0, &#92;quad &amp; (1) &#92;&#92;
     &lt;p&gt;
       &lt;!-- EXPLAIN --&gt;&lt;b&gt;Theorem 22:&lt;/b&gt; Extendability Theorem.
     &lt;/p&gt;
-    &lt;p&gt; Let &#92;( N &#92;) be a compact (bounded closed) subset in &#92;( &#92;Omega &#92;) (the domain where the smooth field is defined). Let also &#92;( F &#92;) have no singular points in &#92;( N &#92;). Then any local solution of &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;( &#92;frac{dx}{dt} = F(t, x) &#92;Longrightarrow x(t_0) = x_0 &#92;quad (8)&#92;)&lt;/span&gt; in &#92;( (a, b) &#92;times &#92;Omega &#92;) can be extended forward (for &#92;( t &gt; t_0 &#92;)) and backward (for &#92;( t &lt; t_0 &#92;)) either indefinitely or until it reaches the boundary of &#92;( N &#92;). &lt;/p&gt;
+    &lt;p&gt; Let &#92;( N &#92;) be a compact (bounded closed) subset in &#92;( &#92;Omega &#92;) (the domain where the smooth field is defined). Let also &#92;( F &#92;) have no singular points in &#92;( N &#92;). Then any local solution of &lt;span style=&quot;overflow: auto;&quot;&gt;&#92;( &#92;frac{dx}{dt} = F(t, x) &#92;Longrightarrow x(t_0) = x_0 &#92;quad (8)&#92;)&lt;/span&gt; in &#92;( (a, b) &#92;times &#92;Omega &#92;) can be extended forward (for &#92;( t &amp;gt; t_0 &#92;)) and backward (for &#92;( t &amp;lt; t_0 &#92;)) either indefinitely or until it reaches the boundary of &#92;( N &#92;). &lt;/p&gt;
         &lt;h3 id=&quot;11&quot;&gt;Boundary value problems (BVPs) &lt;a href=&quot;#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
         &lt;blockquote&gt;
           &lt;ul&gt;
@@ -5384,8 +5352,8 @@ pdf(X) := &#92;Pr(X &#92;leq x_0)
 
 &lt;div class=&quot;card&quot;&gt;&lt;div class=&quot;card-body&quot;&gt;
   &lt;p&gt;To begin, &lt;a href=&quot;https://math.stackexchange.com/q/16963/1098426&quot;&gt;a well-phrased question&lt;/a&gt; from Math Stack Exchange:&lt;/p&gt;
-  &lt;p&gt;So if &#92;(X&#92;) is a vector space, and you define a norm, &#92;(x &#92;mapsto &#92;| x &#92;|&#92;), on it, then the bounded subset, &#92;(V = &#92;{ x &#92;in X: &#92;|x&#92;| &lt; &#92;infty &#92;}&#92;), is automatically a subspace.&lt;/p&gt;
-  &lt;p&gt;This follows from the definition of a norm, so for all &#92;(x,y &#92;in V&#92;), &#92;(c &#92;in &#92;mathbb{C}&#92;), &#92;(&#92;|x + c y&#92;| &#92;le &#92;|x&#92;| + &#92;|cy&#92;| = &#92;|x&#92;|+ |c| &#92;|y&#92;| &lt; &#92;infty&#92;), so &#92;(x+cy &#92;in V&#92;).&lt;/p&gt;
+  &lt;p&gt;So if &#92;(X&#92;) is a vector space, and you define a norm, &#92;(x &#92;mapsto &#92;| x &#92;|&#92;), on it, then the bounded subset, &#92;(V = &#92;{ x &#92;in X: &#92;|x&#92;| &amp;lt; &#92;infty &#92;}&#92;), is automatically a subspace.&lt;/p&gt;
+  &lt;p&gt;This follows from the definition of a norm, so for all &#92;(x,y &#92;in V&#92;), &#92;(c &#92;in &#92;mathbb{C}&#92;), &#92;(&#92;|x + c y&#92;| &#92;le &#92;|x&#92;| + &#92;|cy&#92;| = &#92;|x&#92;|+ |c| &#92;|y&#92;| &amp;lt; &#92;infty&#92;), so &#92;(x+cy &#92;in V&#92;).&lt;/p&gt;
   &lt;p&gt;Is this the reasoning behind the definition of a norm?&lt;/p&gt;
   &lt;p&gt;Now, the top answer to this MSE question is from QC in 2011. While I love the guy, it is basically links to some funcitonal analysis resources. So, no.&lt;/p&gt;
   &lt;p&gt;There is a better answer from &lt;a href=&quot;https://math.stackexchange.com/a/1380960/1098426&quot;&gt;another MSE question&lt;/a&gt;:&lt;/p&gt;
@@ -5477,9 +5445,9 @@ pdf(X) := &#92;Pr(X &#92;leq x_0)
   &lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt; I want to be able to apply the intuition of Euclidean geometry to visualize things like the correlation coefficient &#92;(&#92;rho&#92;) as the cosine of the angle between two random variables &#92;(X&#92;) and &#92;(Y&#92;), as explained &lt;a href=&quot;https://math.stackexchange.com/questions/48168/is-there-intuition-behind-the-pearson-correlation-coefficient&quot;&gt;here&lt;/a&gt;. In &#92;(&#92;mathbb{R}^n&#92;), the cosine of the angle between two vectors &#92;(&#92;vec{x}&#92;) and &#92;(&#92;vec{y}&#92;) is related to their inner product and lengths by&lt;/p&gt;
   &lt;p&gt;
     &#92;[
-    &#92;cos &#92;theta = &#92;frac{&#92;left&lt;&#92;vec{x}, &#92;vec{y}&#92;right=&quot;&quot;&gt;}{||&#92;vec{x}||&#92;cdot||&#92;vec{y}||}.
+    &#92;cos &#92;theta = &#92;frac{&#92;langle&#92;vec{x}, &#92;vec{y}&#92;rangle}{||&#92;vec{x}||&#92;cdot||&#92;vec{y}||}.
     &#92;]
-  &lt;/&#92;vec{x},&gt;&lt;/p&gt;
+  &lt;/p&gt;
   &lt;p&gt;If &#92;(||X||_{&#92;mathcal{L}^2(P)}&#92;) were indeed the &quot;length&quot; of &#92;(X&#92;), then I feel like I should just be able to change the norms and inner products, but I can&#39;t because&lt;/p&gt;
   &lt;p style=&quot;overflow-x: auto;&quot;&gt;
     &#92;[&#92;cos &#92;theta =
@@ -5625,10 +5593,10 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[ &#92;begin{aligned} &amp;y = ux, &#92;quad y&#39; = g&#92;left(&#92;frac{y}{x}&#92;right) &#92;&#92; &amp;y&#39; = u + xu&#39; &#92;Rightarrow u + xu&#39; = g(u) &#92;Rightarrow &#92;frac{du}{g(u)-u} = &#92;frac{dx}{x}. &lt;br&gt; &#92;end{aligned} &#92;] &lt;/p&gt;
 &lt;p&gt;Example: &#92;(y&#39; = &#92;frac{x+y}{x} = 1 + &#92;frac{y}{x} = g&#92;left(&#92;frac{y}{x}&#92;right)&#92;) is homogeneous. &lt;br&gt;
   &lt;br&gt; Example: &#92;(y&#39; = &#92;frac{x^2+y}{x} = x + &#92;frac{y}{x} &#92;neq g&#92;left(&#92;frac{y}{x}&#92;right)&#92;) is not homogeneous. &lt;br&gt;
-  &lt;br&gt; Example: &#92;(xy&#39; = xe^{-y/x} + y, &#92;quad x &gt; 0&#92;) &lt;br&gt;
+  &lt;br&gt; Example: &#92;(xy&#39; = xe^{-y/x} + y, &#92;quad x &amp;gt; 0&#92;) &lt;br&gt;
   &lt;br&gt; &#92;(y&#39; = e^{-y/x} + &#92;frac{y}{x}&#92;) is homogeneous. &lt;br&gt;
 &lt;/p&gt;
-&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[ &#92;begin{aligned} &amp;u = &#92;frac{y}{x} &#92;Rightarrow u + xu&#39; = e^{-u} + u &#92;Rightarrow xu&#39; = e^{-u} &#92;Rightarrow e^u du = &#92;frac{dx}{x} &#92;&#92; &amp;&#92;Rightarrow e^u = &#92;ln(x) + &#92;overbrace{C}^{&#92;ln(C)} = &#92;ln(Cx) &#92;quad (C &gt; 0) &#92;&#92; &amp;&#92;Rightarrow &#92;frac{y}{x} = &#92;ln(&#92;ln(Cx)) &#92;Rightarrow y = x&#92;ln(&#92; ln(Cx)) &#92;end{aligned} &#92;]&lt;/p&gt;
+&lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[ &#92;begin{aligned} &amp;u = &#92;frac{y}{x} &#92;Rightarrow u + xu&#39; = e^{-u} + u &#92;Rightarrow xu&#39; = e^{-u} &#92;Rightarrow e^u du = &#92;frac{dx}{x} &#92;&#92; &amp;&#92;Rightarrow e^u = &#92;ln(x) + &#92;overbrace{C}^{&#92;ln(C)} = &#92;ln(Cx) &#92;quad (C &amp;gt; 0) &#92;&#92; &amp;&#92;Rightarrow &#92;frac{y}{x} = &#92;ln(&#92;ln(Cx)) &#92;Rightarrow y = x&#92;ln(&#92; ln(Cx)) &#92;end{aligned} &#92;]&lt;/p&gt;
 &lt;p&gt;A useful class of nonlinear differential equations are &quot;Bernoulli differential equations.&quot; &lt;br&gt; These differential equations can always be made first-order linear by a substitution (so we can solve them) Definition: A differential equation of the form &lt;/p&gt;
 &lt;p style=&quot;overflow: auto;&quot;&gt;&#92;[&#92;frac{dy}{dx}+p(x) y=f(x) y^r &#92;quad(r &#92;neq 0,1)&#92;]&lt;/p&gt;
 &lt;p&gt;A Bernoulli differential equation can be transformed into a first-order linear differential equation using the substitution &#92;(u=y^{1-r}&#92;) or into a separable differential equation using the variation of parameters technique.&lt;/p&gt;
@@ -9300,18 +9268,21 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 	
 	<entry>
 		<title>steady descent into vector calculus</title>
-		<link href="https://ischmidls.github.io/posts/curvilinear%20vector%20differentials/"/>
+		<link href="https://ischmidls.github.io/posts/steady%20descent%20into%20vector%20calculus/"/>
 		<updated>2023-07-15T17:00:00-07:00</updated>
-		<id>https://ischmidls.github.io/posts/curvilinear%20vector%20differentials/</id>
+		<id>https://ischmidls.github.io/posts/steady%20descent%20into%20vector%20calculus/</id>
 		<content type="html">
-		  &lt;style&gt;
-  body {
-   background: linear-gradient(to bottom, #f4d9a7, #f4a7b9, #a6c0e4, #437ccc);
-   text-shadow: 0.2em 0.2em 0.4em rgba(0, 0, 0, 0.5);
-  }
-  .math.inline {overflow:auto;}
-  .math.display {overflow:auto;}
- &lt;/style&gt;
+		  &lt;head&gt;
+  &lt;style&gt;
+    body {
+     background: linear-gradient(to bottom, #f4d9a7, #f4a7b9, #a6c0e4, #437ccc);
+     text-shadow: 0.2em 0.2em 0.4em rgba(0, 0, 0, 0.5);
+    }
+    .math.inline {overflow:auto;}
+    .math.display {overflow:auto;}
+   &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
  &lt;div class=&quot;container&quot; id=&quot;bsr-wrapper&quot;&gt;
   &lt;h3&gt;table of contents &lt;a href=&quot;#top&quot;&gt;
     &lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;
@@ -10003,7 +9974,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
   &lt;p&gt; The traditional approach to curves and surfaces involves parameterization, which we have deliberately saved for last. Recall that a parametric curve can be written &#92;( &#92;vec{r} = &#92;vec{r}(u) = x(u)&#92;,&#92;hat{x} + y(u)&#92;,&#92;hat{y} + z(u)&#92;,&#92;hat{z} &#92;) together with an appropriate domain for the parameter &#92;( u &#92;). A &lt;em&gt;parametric surface&lt;/em&gt; is similar, except there are now two parameters &#92;( u &#92;), &#92;( v &#92;) (and an appropriate domain): &#92;( &#92;vec{r} = &#92;vec{r}(u,v) = x(u,v)&#92;,&#92;hat{x} + y(u,v)&#92;,&#92;hat{y} + z(u,v)&#92;,&#92;hat{z} &#92;) &lt;/p&gt;
   &lt;p&gt; Here are some examples of parametric surfaces (without domains): &#92;[ &#92;begin{align*} &#92;text{sphere}: &#92;quad &amp; &#92;vec{r}(&#92;theta,&#92;phi) = a&#92;sin&#92;theta&#92;cos&#92;phi&#92;,&#92;hat{x} + a&#92;sin&#92;theta&#92;sin&#92;phi&#92;,&#92;hat{y} + a&#92;cos&#92;theta&#92;,&#92;hat{z} &#92;&#92; &#92;text{cylinder}: &#92;quad &amp; &#92;vec{r}(&#92;phi,z) = a&#92;cos&#92;phi&#92;,&#92;hat{x} + a&#92;sin&#92;phi&#92;,&#92;hat{y} + z&#92;,&#92;hat{z} &#92;&#92; z=f(x,y): &#92;quad &amp; &#92;vec{r}(x,y) = x&#92;,&#92;hat{x} + y&#92;,&#92;hat{y} + f(x,y)&#92;,&#92;hat{z} &#92;&#92; z=f(r,&#92;phi): &#92;quad &amp; &#92;vec{r}(r,&#92;phi) = r&#92;cos&#92;phi&#92;,&#92;hat{x} + r&#92;sin&#92;phi&#92;,&#92;hat{y} + f(r,&#92;phi)&#92;,&#92;hat{z} &#92;&#92; &#92;text{surface of revolution}: &#92;quad &amp; &#92;vec{r}(x,&#92;phi) = x&#92;,&#92;hat{x} + f(x)&#92;cos&#92;phi&#92;,&#92;hat{y} + f(x)&#92;sin&#92;phi&#92;,&#92;hat{z} &#92;&#92; &#92;text{change of variables}: &#92;quad &amp; &#92;vec{r}(u,v) = x(u,v)&#92;,&#92;hat{x} + y(u,v)&#92;,&#92;hat{y} &#92;end{align*} &#92;] &lt;/p&gt;
   &lt;p&gt; Recall further that for a parametric curve we have &#92;( d&#92;vec{r} = &#92;frac{d&#92;vec{r}}{du} &#92;,du &#92;). On a parametric surface it is natural to construct &#92;( d&#92;textbf{S} &#92;) using curves of constant parameter. But along a curve with &#92;( v=&#92;text{constant} &#92;), we have &#92;( d&#92;vec{r}_1 = &#92;frac{&#92;partial&#92;vec{r}}{&#92;partial u} &#92;,du &#92;) and similarly along a curve with &#92;( u=&#92;text{constant} &#92;) we have &#92;( d&#92;vec{r}_2 = &#92;frac{&#92;partial&#92;vec{r}}{&#92;partial v} &#92;,dv &#92;). Thus, &#92;[ d&#92;textbf{S} = d&#92;vec{r}_1&#92;times d&#92;vec{r}_2 = &#92;left(&#92;frac{&#92;partial&#92;vec{r}}{&#92;partial u} &#92;times &#92;frac{&#92;partial&#92;vec{r}}{&#92;partial v}&#92;right) &#92;,du&#92;,dv &#92;] and &#92;[ dS = |d&#92;textbf{S}| = &#92;left| &#92;frac{&#92;partial&#92;vec{r}}{&#92;partial u} &#92;times &#92;frac{&#92;partial&#92;vec{r}}{&#92;partial v} &#92;right| &#92;,du &#92;, dv &#92;] These formulas can be found in most calculus texts, and may help to relate our approach to the more traditional one. &lt;/p&gt;
-  &lt;p&gt; However, expression (1) of &amp;sect; &lt;a href=&quot;https://ischmidls.github.io/posts/curvilinear%20vector%20differentials/davec.html&quot; class=&quot;wikilink1&quot; title=&quot;book:math:davec&quot;&gt;Surface Elements&lt;/a&gt; for &#92;( d&#92;textbf{S} &#92;) makes no reference to the parameters! In fact, &#92;( d&#92;textbf{S} &#92;) can be computed using &lt;em&gt;any&lt;/em&gt; two (independent) infinitesimal displacements in the surface; no parameterization is needed! You will have to decide for yourself which approach you prefer. But real-world problems rarely come equipped with parameterizations, unlike those found in calculus texts. We reiterate that it is not always necessary to have an explicit parameterization in order to determine the surface element, as illustrated by our computation for the paraboloid in &amp;sect; &lt;a href=&quot;https://ischmidls.github.io/posts/curvilinear%20vector%20differentials/losym.html&quot; class=&quot;wikilink1&quot; title=&quot;book:math:losym&quot;&gt;Less Symmetric Surfaces&lt;/a&gt;. &lt;/p&gt;
+  &lt;p&gt; However, expression (1) of &amp;sect; &lt;a href=&quot;https://ischmidls.github.io/posts/steady%20descent%20into%20vector%20calculus/davec.html&quot; class=&quot;wikilink1&quot; title=&quot;book:math:davec&quot;&gt;Surface Elements&lt;/a&gt; for &#92;( d&#92;textbf{S} &#92;) makes no reference to the parameters! In fact, &#92;( d&#92;textbf{S} &#92;) can be computed using &lt;em&gt;any&lt;/em&gt; two (independent) infinitesimal displacements in the surface; no parameterization is needed! You will have to decide for yourself which approach you prefer. But real-world problems rarely come equipped with parameterizations, unlike those found in calculus texts. We reiterate that it is not always necessary to have an explicit parameterization in order to determine the surface element, as illustrated by our computation for the paraboloid in &amp;sect; &lt;a href=&quot;https://ischmidls.github.io/posts/steady%20descent%20into%20vector%20calculus/losym.html&quot; class=&quot;wikilink1&quot; title=&quot;book:math:losym&quot;&gt;Less Symmetric Surfaces&lt;/a&gt;. &lt;/p&gt;
   &lt;h3&gt;
    &lt;a name=&quot;scalar-surface&quot; id=&quot;scalar-surface&quot;&gt;Scalar Surface Integrals&lt;/a&gt;
    &lt;a href=&quot;#top&quot;&gt;
@@ -10011,7 +9982,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
    &lt;/a&gt;
   &lt;/h3&gt;
   &lt;p&gt;It should never be doubted whether Tevian Dray and Corinne A. Manogue can succeed.&lt;/p&gt;
-  &lt;p&gt; Consider again the example in &amp;sect; &lt;a href=&quot;https://ischmidls.github.io/posts/curvilinear%20vector%20differentials/flux.html&quot; class=&quot;wikilink1&quot; title=&quot;book:math:flux&quot;&gt;Flux&lt;/a&gt;, which involved the part of the plane &#92;(x+y+z=1&#92;) which lies in the first quadrant. Suppose you want to find the average height of this triangular region above the &#92;(xy&#92;)-plane. To do this, chop the surface into small pieces, each at height &#92;(z=1-x-y&#92;). In order to compute the average height, we need to find &#92;[ &#92;text{avg height} = &#92;frac{1}{&#92;text{area}} &#92;int z &#92;,dS &#92;] where the total area of the surface can be found either as &#92;[ &#92;text{area} = &#92;int dS &#92;] or from simple geometry. So we need to determine &#92;(dS&#92;). But we already know &#92;(d&#92;mathbf{S}&#92;) for this surface from (5) of &amp;sect; &lt;a href=&quot;https://ischmidls.github.io/posts/curvilinear%20vector%20differentials/flux.html&quot; class=&quot;wikilink1&quot; title=&quot;book:math:flux&quot;&gt;Flux&lt;/a&gt;! It is therefore straightforward to compute &#92;[ dS = |d&#92;mathbf{S}| = |&#92;mathbf{n} &#92;cdot d&#92;mathbf{S}| = |&#92;mathbf{n}| &#92;,dS = &#92;sqrt{3} &#92;,dS &#92;] and therefore &#92;[ &#92;text{avg height} = &#92;frac{1}{&#92;sqrt{3}/2} &#92;int_0^1 &#92;int_0^{1-x} (1-x-y) &#92;sqrt{3} &#92;,dy &#92;,dx = &#92;frac{1}{3} &#92;] &lt;/p&gt;
+  &lt;p&gt; Consider again the example in &amp;sect; &lt;a href=&quot;https://ischmidls.github.io/posts/steady%20descent%20into%20vector%20calculus/flux.html&quot; class=&quot;wikilink1&quot; title=&quot;book:math:flux&quot;&gt;Flux&lt;/a&gt;, which involved the part of the plane &#92;(x+y+z=1&#92;) which lies in the first quadrant. Suppose you want to find the average height of this triangular region above the &#92;(xy&#92;)-plane. To do this, chop the surface into small pieces, each at height &#92;(z=1-x-y&#92;). In order to compute the average height, we need to find &#92;[ &#92;text{avg height} = &#92;frac{1}{&#92;text{area}} &#92;int z &#92;,dS &#92;] where the total area of the surface can be found either as &#92;[ &#92;text{area} = &#92;int dS &#92;] or from simple geometry. So we need to determine &#92;(dS&#92;). But we already know &#92;(d&#92;mathbf{S}&#92;) for this surface from (5) of &amp;sect; &lt;a href=&quot;https://ischmidls.github.io/posts/steady%20descent%20into%20vector%20calculus/flux.html&quot; class=&quot;wikilink1&quot; title=&quot;book:math:flux&quot;&gt;Flux&lt;/a&gt;! It is therefore straightforward to compute &#92;[ dS = |d&#92;mathbf{S}| = |&#92;mathbf{n} &#92;cdot d&#92;mathbf{S}| = |&#92;mathbf{n}| &#92;,dS = &#92;sqrt{3} &#92;,dS &#92;] and therefore &#92;[ &#92;text{avg height} = &#92;frac{1}{&#92;sqrt{3}/2} &#92;int_0^1 &#92;int_0^{1-x} (1-x-y) &#92;sqrt{3} &#92;,dy &#92;,dx = &#92;frac{1}{3} &#92;] &lt;/p&gt;
   &lt;h3&gt;
    &lt;a name=&quot;function-graphs&quot; id=&quot;function-graphs&quot;&gt;Function Graphs&lt;/a&gt;
    &lt;a href=&quot;#top&quot;&gt;
@@ -10066,11 +10037,11 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
   &lt;p style=&quot;overflow:auto;&quot;&gt;Consider first the vertical contribution, namely the flux &lt;em&gt;up&lt;/em&gt; through the top plus the flux &lt;em&gt;down&lt;/em&gt; through the bottom. These two sides each have area element &#92;(dA=dx&#92;,dy&#92;), but the outward normal vectors point in opposite directions, that is &lt;/p&gt;
   &lt;p style=&quot;overflow:auto;&quot;&gt;&#92;[ &#92;mathbf{n}_{&#92;text{up}} = &#92;mathbf{k} &#92;&#92; &#92;mathbf{n}_{&#92;text{down}} = -&#92;mathbf{k} &#92;]&lt;/p&gt;
   &lt;p&gt;So, we get&lt;/p&gt;
-  &lt;p style=&quot;overflow:auto;&quot;&gt;&#92;[ &#92;sum_{&#92;text{top+bottom}} &#92;mathbf{E} &#92;cdot d&#92;mathbf{A} = &#92;mathbf{E}(z+dz) &#92;cdot &#92;mathbf{k} &gt; dx&#92;,dy - &#92;mathbf{E}(z) &#92;cdot&#92;mathbf{k} &gt; dx&#92;,dy &#92;]&lt;/p&gt;
-  &lt;p style=&quot;overflow:auto;&quot;&gt;&#92;[ = &#92;Bigl( E_z(z+dz) - E_z(z) &#92;Bigr) &gt; dx&#92;,dy &#92;]&lt;/p&gt;
-  &lt;p style=&quot;overflow:auto;&quot;&gt;&#92;[ = &#92;frac{E_z(z+dz) - E_z(z)}{dz} &gt; dx&#92;,dy&#92;,dz &#92;]&lt;/p&gt;
+  &lt;p style=&quot;overflow:auto;&quot;&gt;&#92;[ &#92;sum_{&#92;text{top+bottom}} &#92;mathbf{E} &#92;cdot d&#92;mathbf{A} = &#92;mathbf{E}(z+dz) &#92;cdot &#92;mathbf{k} &amp;gt; dx&#92;,dy - &#92;mathbf{E}(z) &#92;cdot&#92;mathbf{k} &amp;gt; dx&#92;,dy &#92;]&lt;/p&gt;
+  &lt;p style=&quot;overflow:auto;&quot;&gt;&#92;[ = &#92;Bigl( E_z(z+dz) - E_z(z) &#92;Bigr) &amp;gt; dx&#92;,dy &#92;]&lt;/p&gt;
+  &lt;p style=&quot;overflow:auto;&quot;&gt;&#92;[ = &#92;frac{E_z(z+dz) - E_z(z)}{dz} &amp;gt; dx&#92;,dy&#92;,dz &#92;]&lt;/p&gt;
   &lt;p&gt;where we have multiplied and divided by &#92;(dz&#92;) to obtain the volume element &#92;(dV=dx&#92;,dy&#92;,dz&#92;) in the third step, and used the definition of the derivative in the final step.&lt;/p&gt;
-  &lt;p&gt; Repeating this argument using the remaining pairs of faces, it follows that the total flux out of the box is &#92;[ &#92;text{total flux} = &#92;sum_{&#92;text{box}} &#92;mathbf{E} &#92;cdot d&#92;mathbf{A} = &#92;left( &#92;frac{&#92;partial E_x}{&#92;partial x} + &#92;frac{&#92;partial E_y}{&#92;partial y} + &#92;frac{&#92;partial E_z}{&#92;partial z} &#92;right) &gt; dV &#92;] Since the total flux is proportional to the volume of the box, it approaches zero as the box shrinks down to a point. The interesting quantity is therefore the ratio of the flux to volume; this ratio is called the divergence. &lt;/p&gt;
+  &lt;p&gt; Repeating this argument using the remaining pairs of faces, it follows that the total flux out of the box is &#92;[ &#92;text{total flux} = &#92;sum_{&#92;text{box}} &#92;mathbf{E} &#92;cdot d&#92;mathbf{A} = &#92;left( &#92;frac{&#92;partial E_x}{&#92;partial x} + &#92;frac{&#92;partial E_y}{&#92;partial y} + &#92;frac{&#92;partial E_z}{&#92;partial z} &#92;right) &amp;gt; dV &#92;] Since the total flux is proportional to the volume of the box, it approaches zero as the box shrinks down to a point. The interesting quantity is therefore the ratio of the flux to volume; this ratio is called the divergence. &lt;/p&gt;
   &lt;p&gt; At any point &#92;(P&#92;), we therefore define the &lt;em&gt; divergence&lt;/em&gt; of a vector field &#92;(&#92;mathbf{E}&#92;), written &#92;(&#92;nabla &#92;cdot &#92;mathbf{E}&#92;), to be the flux of &#92;(&#92;mathbf{E}&#92;) per unit volume leaving a small box around &#92;(P&#92;). In other words, the divergence is the limit as the box collapses around &#92;(P&#92;) of the ratio of the flux of the vector field out of the box to the volume of the box. Thus, the divergence of &#92;(&#92;mathbf{E}&#92;) at &#92;(P&#92;) is the flux per unit volume through a small box around &#92;(P&#92;), which is given in rectangular coordinates by &#92;[ &#92;nabla &#92;cdot &#92;mathbf{E} = &#92;frac{&#92;text{flux}}{&#92;text{unit volume}} = &#92;frac{&#92;partial E_x}{&#92;partial x} + &#92;frac{&#92;partial E_y}{&#92;partial y} + &#92;frac{&#92;partial E_z}{&#92;partial z} &#92;] &lt;/p&gt;
   &lt;p&gt; You may have seen this formula before, but remember that it is merely the rectangular coordinate expression for the divergence of &#92;(&#92;mathbf{E}&#92;); the divergence is defined geometrically as flux per unit volume. Similar computations can be used to determine expressions for the divergence in other coordinate systems. Because of the geometric nature of divergence, these expressions turn out to give the same value at any point in space. &lt;/p&gt;
   &lt;p&gt; The use of &#92;(V&#92;) for volume, and hence &#92;(dV&#92;) for the volume element, conflicts with the use of &#92;(V&#92;) to denote electrostatic potential. We nonetheless write &#92;(dV&#92;) for the volume element whenever the context is clear, and use &#92;(d&#92;tau&#92;) instead only when necessary to avoid confusion. &lt;/p&gt;
@@ -10082,7 +10053,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
   &lt;/h3&gt;
   &lt;p&gt; Tevian Dray and Corinne A. Manogue take divergence to the next level.&lt;/p&gt;
   &lt;p&gt; The total flux of the electric field out through a small rectangular box is &#92;[ &#92;text{flux} = &#92;sum_{&#92;text{box}} &#92;mathbf{E} &#92;cdot d&#92;mathbf{A} = &#92;nabla &#92;cdot &#92;mathbf{E} / dV &#92;]&lt;/p&gt;
-  &lt;p&gt; But any closed region can be filled with such boxes, as shown in Figure 1a. Furthermore, the flux out of such a region is just the sum of the flux out of each of the smaller boxes, since the net flux through any common face will be zero (because adjacent boxes have opposite notions of &quot;out of&quot;), as indicated schematically in Figure 1b. Thus, the total flux out of any closed box is given by &#92;[ &#92;int_{&#92;text{box}} &#92;mathbf{E} &#92;cdot d&#92;mathbf{A} = &#92;int_{&#92;text{inside}} &#92;nabla &#92;cdot &#92;mathbf{E} &gt; &gt; dV &#92;] &lt;/p&gt;
+  &lt;p&gt; But any closed region can be filled with such boxes, as shown in Figure 1a. Furthermore, the flux out of such a region is just the sum of the flux out of each of the smaller boxes, since the net flux through any common face will be zero (because adjacent boxes have opposite notions of &quot;out of&quot;), as indicated schematically in Figure 1b. Thus, the total flux out of any closed box is given by &#92;[ &#92;int_{&#92;text{box}} &#92;mathbf{E} &#92;cdot d&#92;mathbf{A} = &#92;int_{&#92;text{inside}} &#92;nabla &#92;cdot &#92;mathbf{E} &amp;gt; &gt; dV &#92;] &lt;/p&gt;
   &lt;p&gt; This is the Divergence Theorem. &lt;/p&gt;
   &lt;h3&gt;
    &lt;a name=&quot;divergence-curvilinear&quot; id=&quot;divergence-curvilinear&quot;&gt; the divergence in curvilinear coordinates&lt;/a&gt;
@@ -10244,10 +10215,11 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
  &lt;p&gt; One second derivative, the divergence of the gradient, occurs so often it has its own name and notation. It is called the &lt;em&gt; Laplacian&lt;/em&gt; of the function &#92;(V&#92;), and is written in any of the forms: &#92;[ &#92;triangle V = &#92;nabla^2 V = &#92;nabla &#92;cdot &#92;nabla V &#92;] In rectangular coordinates, it is easy to compute: &#92;[ &#92;triangle V = &#92;nabla &#92;cdot &#92;nabla V = &#92;frac{&#92;partial V}{&#92;partial x} + &#92;frac{&#92;partial V}{&#92;partial y} + &#92;frac{&#92;partial V}{&#92;partial z} &#92;] &lt;/p&gt;
  &lt;p&gt; The simplest homogeneous partial differential equation involving the Laplacian: &#92;[ &#92;nabla^2 V = 0 &#92;] is called Laplace&#39;s equation. The inhomogeneous version: &#92;[ &#92;nabla^2 V = f(&#92;mathbf{r}) &#92;] is known as Poisson&#39;s equation. There are many important techniques for solving these equations that are beyond the scope of this text. &lt;/p&gt;
  
+&lt;/body&gt;
 			
 				
 				
-				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fcurvilinear%20vector%20differentials%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=steady%20descent%20into%20vector%20calculus&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fsteady%20descent%20into%20vector%20calculus%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=steady%20descent%20into%20vector%20calculus&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -10261,6 +10233,12 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 		  &lt;style&gt;
     table {overflow: auto;}
 &lt;/style&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#voice&quot;&gt;voicing marks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#combo&quot;&gt;combinations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#notes&quot;&gt;more notes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ischmidls.github.io/posts/hiragana/&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;To begin, here is a table of the 46 hiragana (&amp; the romaji for their pronunciation).&lt;/p&gt;
 &lt;table&gt;
     &lt;tr&gt;
@@ -10287,7 +10265,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 &lt;/table&gt;&lt;br&gt;
 
 &lt;p&gt;These characters represent the phonetic sounds of the Japanese language. Each hiragana character corresponds to a syllable, which consists of a consonant sound followed by a vowel sound. &lt;/p&gt;
-&lt;h3&gt;voicing marks&lt;/h3&gt;
+&lt;h3 id=&quot;voice&quot;&gt;voicing marks&lt;/h3&gt;
 &lt;p&gt;There are modified versions of some hiragana characters, called dakuten and handakuten, which change the pronunciation of the base character. This brings the total number of hiragana characters to 107 when including the modified versions.&lt;/p&gt;
 &lt;blockquote&gt;
     &lt;p&gt;
@@ -10428,7 +10406,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
     &lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;br&gt;
 
     &lt;p&gt;Now, there is a further level of complexity.&lt;/p&gt;
-    &lt;h3&gt;combinations&lt;/h3&gt;
+    &lt;h3 id=&quot;#combo&quot;&gt;combinations&lt;/h3&gt;
     &lt;p&gt;Here&amp;#39;s the combinations of basic hiragana characters with &amp;quot;ya&amp;quot; (や), &amp;quot;yu&amp;quot; (ゆ), and &amp;quot;yo&amp;quot; (よ) presented in a table:&lt;/p&gt;
     &lt;p&gt;Notice: there are also i (い) and e (え) combinations, but there is no hiragana with vowels e or i whose consontant is y (no ye or yi hiragana).&lt;/p&gt;
 
@@ -10534,13 +10512,14 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
         &lt;/tr&gt;
         &lt;/tbody&gt;
         &lt;/table&gt;&lt;br&gt;
+        &lt;h3 id=&quot;notes&quot;&gt;more notes&lt;/h3&gt;
 &lt;p&gt;I also just wanted to mention the small form the &lt;span lang=&quot;ja-jp&quot;&gt;っ&lt;/span&gt; (tsu) is used for double consonants like in &lt;span lang=&quot;ja-jp&quot;&gt;さっか&lt;/span&gt; (sakka) meaning &quot;author&quot;.&lt;/p&gt;
 &lt;p&gt;Further, The vowels i and u (い and う) are sometimes dropped when placed between voiceless consonants (k &quot;か&quot;, s &quot;さ&quot;, t &quot;た&quot;, p &quot;ぱ&quot;, and h &quot;は&quot;), or at the end of an utterance preceded by voiceless consonants.&lt;/p&gt;        
 &lt;p&gt;
     On a final note, many students in Japan learn hiragana at school through writing with a very specific stroke order. While some foreign language resources consider this method to be inefficient&amp;mdash;as speaking, typing, reading, and listening are all far more common than writing&amp;mdash;some people still prefer the hand-written learning method. An artile by the lovely by Nick Hoyt from the site &lt;a href=&quot;https://japanesetactics.com/how-to-learn-hiragana#:~:text=of%20these%20now.-,Writing%20it%20down,few%20times%20to%20memorize%20it.&quot;&gt;Japanese Tactics&lt;/a&gt; has a similar summary to mine here where I found the diagram below. Hoyt also notes that classical Japanese reading is top to bottom then right to left, where &quot;western&quot; reading is left to right then top to bottom.
 &lt;/p&gt;
 &lt;p&gt;Here is a Wiki Commons diagram with the stroke instructions (including 2 dated hiragana ゐ &quot;wi&quot; and ゑ &quot;we&quot;):&lt;/p&gt;
-&lt;img style=&quot;width:100%&quot; alt=&quot;Table hiragana&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Table_hiragana.svg/512px-Table_hiragana.svg.png&quot;&gt;
+&lt;img style=&quot;width:100%&quot; alt=&quot;Table hiragana&quot; src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Table_hiragana.svg/2560px-Table_hiragana.svg.png&quot;&gt;
 &lt;a title=&quot;User:Pmx, CC BY-SA 3.0 &amp;lt;http://creativecommons.org/licenses/by-sa/3.0/&amp;gt;, via Wikimedia Commons&quot; href=&quot;https://commons.wikimedia.org/wiki/File:Table_hiragana.svg&quot;&gt;Image Source&lt;/a&gt;
 			
 				

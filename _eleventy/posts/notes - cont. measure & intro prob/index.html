@@ -86,8 +86,8 @@ pdf(X) := \Pr(X \leq x_0)
 
 <div class='card'><div class='card-body'>
   <p>To begin, <a href="https://math.stackexchange.com/q/16963/1098426">a well-phrased question</a> from Math Stack Exchange:</p>
-  <p>So if \(X\) is a vector space, and you define a norm, \(x \mapsto \| x \|\), on it, then the bounded subset, \(V = \{ x \in X: \|x\| < \infty \}\), is automatically a subspace.</p>
-  <p>This follows from the definition of a norm, so for all \(x,y \in V\), \(c \in \mathbb{C}\), \(\|x + c y\| \le \|x\| + \|cy\| = \|x\|+ |c| \|y\| < \infty\), so \(x+cy \in V\).</p>
+  <p>So if \(X\) is a vector space, and you define a norm, \(x \mapsto \| x \|\), on it, then the bounded subset, \(V = \{ x \in X: \|x\| &lt; \infty \}\), is automatically a subspace.</p>
+  <p>This follows from the definition of a norm, so for all \(x,y \in V\), \(c \in \mathbb{C}\), \(\|x + c y\| \le \|x\| + \|cy\| = \|x\|+ |c| \|y\| &lt; \infty\), so \(x+cy \in V\).</p>
   <p>Is this the reasoning behind the definition of a norm?</p>
   <p>Now, the top answer to this MSE question is from QC in 2011. While I love the guy, it is basically links to some funcitonal analysis resources. So, no.</p>
   <p>There is a better answer from <a href="https://math.stackexchange.com/a/1380960/1098426">another MSE question</a>:</p>
@@ -179,7 +179,7 @@ pdf(X) := \Pr(X \leq x_0)
   <p><strong>Update</strong> I want to be able to apply the intuition of Euclidean geometry to visualize things like the correlation coefficient \(\rho\) as the cosine of the angle between two random variables \(X\) and \(Y\), as explained <a href="https://math.stackexchange.com/questions/48168/is-there-intuition-behind-the-pearson-correlation-coefficient">here</a>. In \(\mathbb{R}^n\), the cosine of the angle between two vectors \(\vec{x}\) and \(\vec{y}\) is related to their inner product and lengths by</p>
   <p>
     \[
-    \cos \theta = \frac{\left<\vec{x}, \vec{y}\right>}{||\vec{x}||\cdot||\vec{y}||}.
+    \cos \theta = \frac{\langle\vec{x}, \vec{y}\rangle}{||\vec{x}||\cdot||\vec{y}||}.
     \]
   </p>
   <p>If \(||X||_{\mathcal{L}^2(P)}\) were indeed the "length" of \(X\), then I feel like I should just be able to change the norms and inner products, but I can't because</p>

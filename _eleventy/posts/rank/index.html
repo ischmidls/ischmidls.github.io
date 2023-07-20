@@ -10,6 +10,7 @@
     </li>
   </ul>
   <h2 id="consistency">consistency <a href="#top"><i class="bi bi-arrow-up"></i></a></h2>
+  <p>Just to get it out of the way,  If \(\operatorname{rank}(A) &lt; \operatorname{rank}(A|B)\), then the system is inconsistent.</p>
   <p>Let Let \(A\) denote a matrix and \(A | B \) denote its augmented matrix.</p>
   <p>Consistent Systems:</p>
   <ul>
@@ -17,12 +18,12 @@
       <b>Def 1</b> Full Rank: Unique solution. \(\text{rank} (A) = \text{rank} (A|B) = \text{col} (A)\)
     </li>
     <li>
-      <b>Def 2</b> Underdetermined: Infinitely many solutions. \(\text{rank} (A) = \text{rank} (A|B) < \text{col} (A) \) </li>
+      <b>Def 2</b> Underdetermined: Infinitely many solutions. \(\text{rank} (A) = \text{rank} (A|B) &lt; \text{col} (A) \) </li>
   </ul>
   <p>Inconsistent System:</p>
   <ul>
     <li>
-      <b>Def 3</b> Overdetermined: No solution. \(\text{rank} (A) > \text{col} (A) \)
+      <b>Def 3</b> Overdetermined: No solution. \(\text{rank} (A) &gt; \text{col} (A) \)
     </li>
   </ul>
   <p>Proofs</p>
@@ -87,7 +88,7 @@
           <p>which is exact at \(H\), \(G\), and \(K\). That means \(\alpha\) is injective, \(\beta\) is surjective, and \(\operatorname{im}(\alpha) = \operatorname{ker}(\beta)\).</p>
           <p>A more general exact sequence can have lots of terms:</p>
           <p>\(G_1 \xrightarrow{\alpha_1} G_2 \xrightarrow{\alpha_2} \ldots \xrightarrow{\alpha_{n-1}} G_n\),</p>
-          <p>and it must be exact at each \(G_i\) for \(1 < i < n\). Exact sequences can also be of infinite length in one or both directions. We will only deal with short exact sequences here. </p>
+          <p>and it must be exact at each \(G_i\) for \(1 &lt; i &lt; n\). Exact sequences can also be of infinite length in one or both directions. We will only deal with short exact sequences here. </p>
               <p>Exact sequences first arose in algebraic topology, and the later development of homological algebra (the type of algebra underlying algebraic topology) spread exact sequences into the rest of mathematics.</p>
               <p>Theorem 3.2. Let \(1 \rightarrow H \xrightarrow{\alpha} G \xrightarrow{\beta} K \rightarrow 1\) be a short exact sequence of groups. The following are equivalent:</p>
               <p>(1) There is a homomorphism \(\alpha_0: G \rightarrow H\) such that \(\alpha_0(\alpha(h)) = h\) for all \(h \in H\).</p>

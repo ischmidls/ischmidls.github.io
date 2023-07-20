@@ -207,7 +207,7 @@
     <p style="overflow: auto;"> \[ \varepsilon_{a_1 a_2 a_3 \ldots a_n} = \begin{cases} +1 & \text{if }(a_1, a_2, a_3, \ldots, a_n) \text{ is an even permutation of } (1, 2, 3, \dots, n) \\ -1 & \text{if }(a_1, a_2, a_3, \ldots, a_n) \text{ is an odd permutation of } (1, 2, 3, \dots, n) \\ 0 & \text{otherwise} \end{cases} \] </p>
     <p> Thus, it is the sign of the permutation in the case of a permutation, and zero otherwise. </p>
     <p> Using the capital pi notation \(\Pi\) for ordinary multiplication of numbers, an explicit expression for the symbol is: </p>
-    <p style="overflow: auto;"> \[ \begin{align*} \varepsilon_{a_1 a_2 a_3 \ldots a_n} & = \prod_{1 \leq i < j \leq n} \text{sgn} (a_j - a_i) \\ &=\text{sgn}(a_2 - a_1) \text{sgn}(a_3 - a_1) \dotsm \text{sgn}(a_n - a_1) \text{sgn}(a_3 - a_2) \text{sgn}(a_4 - a_2) \dotsm \text{sgn}(a_n - a_2) \dotsm \text{sgn}(a_n - a_{n-1}) \end{align*} \] </p>
+    <p style="overflow: auto;"> \[ \begin{align*} \varepsilon_{a_1 a_2 a_3 \ldots a_n} & = \prod_{1 \leq i &lt; j \leq n} \text{sgn} (a_j - a_i) \\ &=\text{sgn}(a_2 - a_1) \text{sgn}(a_3 - a_1) \dotsm \text{sgn}(a_n - a_1) \text{sgn}(a_3 - a_2) \text{sgn}(a_4 - a_2) \dotsm \text{sgn}(a_n - a_2) \dotsm \text{sgn}(a_n - a_{n-1}) \end{align*} \] </p>
         <p> where the signum function (denoted \(\text{sgn}\)) returns the sign of its argument while discarding the absolute value if nonzero. The formula is valid for all index values, and for any \(n\) (when \(n = 0\) or \(n = 1\), this is the empty product). However, computing the formula above naively has a time complexity of \(O(n^2)\), whereas the sign can be computed from the parity of the permutation from its disjoint cycles in only \(O(n \log(n))\) cost. </p>
   </div>
 </div>
@@ -292,7 +292,7 @@
     <p>In general, for \(n\) dimensions, the product of two Levi-Civita symbols can be written as:</p>
     <p style="overflow: auto;">\[\varepsilon_{i_1 i_2 \ldots i_n} \varepsilon_{j_1 j_2 \ldots j_n} = \begin{vmatrix} \delta_{i_1 j_1} & \delta_{i_1 j_2} & \ldots & \delta_{i_1 j_n} \\ \delta_{i_2 j_1} & \delta_{i_2 j_2} & \ldots & \delta_{i_2 j_n} \\ \vdots & \vdots & \ddots & \vdots \\ \delta_{i_n j_1} & \delta_{i_n j_2} & \ldots & \delta_{i_n j_n} \\ \end{vmatrix}\]</p>
     <p>
-      <!-- EXPLAIN --><b>Proof:</b> Both sides change signs upon switching two indices, so without loss of generality, assume \(i_1 \leq \ldots \leq i_n\) and \(j_1 \leq \ldots \leq j_n\). If some \(i_c = i_{c+1}\), then the left side is zero, and the right side is also zero since two of its columns are equal. The same applies if \(j_c = j_{c+1}\). Finally, if \(i_1 < \ldots < i_n\) and \(j_1 < \ldots < j_n\), then both sides equal 1. </p>
+      <!-- EXPLAIN --><b>Proof:</b> Both sides change signs upon switching two indices, so without loss of generality, assume \(i_1 \leq \ldots \leq i_n\) and \(j_1 \leq \ldots \leq j_n\). If some \(i_c = i_{c+1}\), then the left side is zero, and the right side is also zero since two of its columns are equal. The same applies if \(j_c = j_{c+1}\). Finally, if \(i_1 &lt; \ldots &lt; i_n\) and \(j_1 &lt; \ldots &lt; j_n\), then both sides equal 1. </p>
   </div>
 </div>
 <br>
@@ -300,8 +300,8 @@
 <p>Ha! Just kidding! What is a <b>norm</b> & why is it outside the scope of these notes?</p>
 <div class='card'><div class='card-body'>
     <p>To begin, <a href="https://math.stackexchange.com/q/16963/1098426">a well-phrased question</a> from Math Stack Exchange:</p>
-    <p>So if \(X\) is a vector space, and you define a norm, \(x \mapsto \| x \|\), on it, then the bounded subset, \(V = \{ x \in X: \|x\| < \infty \}\), is automatically a subspace.</p>
-    <p>This follows from the definition of a norm, so for all \(x,y \in V\), \(c \in \mathbb{C}\), \(\|x + c y\| \le \|x\| + \|cy\| = \|x\|+ |c| \|y\| < \infty\), so \(x+cy \in V\).</p>
+    <p>So if \(X\) is a vector space, and you define a norm, \(x \mapsto \| x \|\), on it, then the bounded subset, \(V = \{ x \in X: \|x\| &lt; \infty \}\), is automatically a subspace.</p>
+    <p>This follows from the definition of a norm, so for all \(x,y \in V\), \(c \in \mathbb{C}\), \(\|x + c y\| \le \|x\| + \|cy\| = \|x\|+ |c| \|y\| &lt; \infty\), so \(x+cy \in V\).</p>
     <p>Is this the reasoning behind the definition of a norm?</p>
     <p>Now, the top answer to this MSE question is from QC in 2011. While I love the guy, it is basically links to some funcitonal analysis resources. So, no.</p>
     <p>There is a better answer from <a href="https://math.stackexchange.com/a/1380960/1098426">another MSE question</a>:</p>
@@ -350,12 +350,12 @@
 <p class="text-primary">TLDR; a real-valued function \( A(x) \) is considered a contraction if it fulfills the inequality condition, indicating that the function values decrease as the input values become closer to each other, with the rate of decrease determined by the constant \( K \), which must be less than 1.</p>
 <p> A real-valued function \( A(x) \) on \( \mathbb{R} \) is a <!-- EXPLAIN --><b>contraction</b> if it satisfies the inequality </p>
 <p style="overflow: auto;">\[ | A(x) - A(y) | \leq K | x - y | \]</p>
-<p> for some \( K < 1 \) and all real \( x \) and \( y \). </p>
+<p> for some \( K &lt; 1 \) and all real \( x \) and \( y \). </p>
     <p>
       <!-- EXPLAIN --><b>Remark 8:</b>
     </p>
     <ol>
-      <li>Condition of continuous differentiability of \( A \) and estimate \( | A'(x) | \leq k < 1 \) guarantee that \( A \) is a <!-- EXPLAIN --><b>contraction</b>. </li>
+      <li>Condition of continuous differentiability of \( A \) and estimate \( | A'(x) | \leq k &lt; 1 \) guarantee that \( A \) is a <!-- EXPLAIN --><b>contraction</b>. </li>
       <li>The definition of a <!-- EXPLAIN --><b>contraction</b> can be naturally extended to any metric space \( M \) with a metric (distance function) \( \rho \) instead of the real line, replacing \( | A(x) - A(y) | \), \( | x - y | \) above with \( \rho(A(x), A(y)) \), \( \rho(x, y) \). </li>
     </ol>
     <h4>A simple instance of the contraction mapping principle:</h4>
@@ -390,7 +390,7 @@
     </p>
     <p> Note that this definition works for functions that map \([t_0 - d, t_0 + d]\) to \( B \). </p>
     <p>
-      <!-- EXPLAIN --><b>Lemma 12:</b> For a sufficiently small \( d \), the operator \( A(x) \) maps the above class of functions into itself and is a contraction, i.e., <span style="overflow: auto;">\( \| A(x) - A(y) \| \leq \| x - y \| \)</span> for some \( k < 1 \). </p>
+      <!-- EXPLAIN --><b>Lemma 12:</b> For a sufficiently small \( d \), the operator \( A(x) \) maps the above class of functions into itself and is a contraction, i.e., <span style="overflow: auto;">\( \| A(x) - A(y) \| \leq \| x - y \| \)</span> for some \( k &lt; 1 \). </p>
         <p>
           <!-- EXPLAIN --><b>Corollary 13:</b>
         </p>
@@ -464,7 +464,7 @@
     <p>
       <!-- EXPLAIN --><b>Theorem 22:</b> Extendability Theorem.
     </p>
-    <p> Let \( N \) be a compact (bounded closed) subset in \( \Omega \) (the domain where the smooth field is defined). Let also \( F \) have no singular points in \( N \). Then any local solution of <span style="overflow: auto;">\( \frac{dx}{dt} = F(t, x) \Longrightarrow x(t_0) = x_0 \quad (8)\)</span> in \( (a, b) \times \Omega \) can be extended forward (for \( t > t_0 \)) and backward (for \( t < t_0 \)) either indefinitely or until it reaches the boundary of \( N \). </p>
+    <p> Let \( N \) be a compact (bounded closed) subset in \( \Omega \) (the domain where the smooth field is defined). Let also \( F \) have no singular points in \( N \). Then any local solution of <span style="overflow: auto;">\( \frac{dx}{dt} = F(t, x) \Longrightarrow x(t_0) = x_0 \quad (8)\)</span> in \( (a, b) \times \Omega \) can be extended forward (for \( t &gt; t_0 \)) and backward (for \( t &lt; t_0 \)) either indefinitely or until it reaches the boundary of \( N \). </p>
         <h3 id="11">Boundary value problems (BVPs) <a href="#top"><i class="bi bi-arrow-up"></i></a></h3>
         <blockquote>
           <ul>
