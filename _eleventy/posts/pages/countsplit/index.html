@@ -5,39 +5,47 @@
   </head>
   <body>
     <label for="inputString">Input string:</label>
-<input type="text" id="inputString"><br><br>
-<label for="maxChar">Max characters:</label>
-<input type="number" id="maxChar"><br><br>
-<button onclick="splitString()">Split string</button><br><br>
-<label for="output">Output:</label>
-<textarea id="output" rows="10" cols="50"></textarea>
-
-<script>
-  function splitString() {
-    var input = document.getElementById("inputString").value;
-    var max = parseInt(document.getElementById("maxChar").value);
-    var substrings = [];
-
-    var i = 0;
-    while (i < input.length) {
-      var end = i + max;
-      if (end >= input.length) {
-        end = input.length;
-      } else {
-        var lastPunctuation = input.lastIndexOf('.', end);
-        if (lastPunctuation !== -1) {
-          end = lastPunctuation + 1; // Include the punctuation itself in the substring
+    <input type="text" id="inputString"><br><br>
+    <label for="maxChar">Max characters:</label>
+    <input type="number" id="maxChar"><br><br>
+    <label for="startString">Start string:</label>
+    <input type="text" id="startString"><br><br>
+    <label for="endString">End string:</label>
+    <input type="text" id="endString"><br><br>
+    <button onclick="splitString()">Split string</button><br><br>
+    <label for="output">Output:</label>
+    <textarea id="output" rows="10" cols="50"></textarea>
+    
+    <script>
+      function splitString() {
+        var input = document.getElementById("inputString").value;
+        var max = parseInt(document.getElementById("maxChar").value);
+        var startString = document.getElementById("startString").value;
+        var endString = document.getElementById("endString").value;
+        var substrings = [];
+    
+        var i = 0;
+        while (i < input.length) {
+          var end = i + max;
+          if (end >= input.length) {
+            end = input.length;
+          } else {
+            var lastPunctuation = input.lastIndexOf('.', end);
+            if (lastPunctuation !== -1) {
+              end = lastPunctuation + 1; // Include the punctuation itself in the substring
+            }
+            // You can add more punctuation characters to consider here (e.g., !, ?)
+          }
+    
+          var substring = input.substring(i, end);
+          substrings.push(startString + substring + endString);
+          i = end;
         }
-        // You can add more punctuation characters to consider here (e.g., !, ?)
+    
+        document.getElementById("output").value = substrings.join("\n\n\n");
       }
-
-      substrings.push(input.substring(i, end));
-      i = end;
-    }
-
-    document.getElementById("output").value = substrings.join("\n\n\n");
-  }
-</script>
+    </script>
+    
 
   </body>
 </html>
