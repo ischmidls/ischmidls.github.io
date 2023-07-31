@@ -865,33 +865,39 @@
     
     &lt;script&gt;
       function splitString() {
-        var input = document.getElementById(&quot;inputString&quot;).value;
-        var max = parseInt(document.getElementById(&quot;maxChar&quot;).value);
-        var startString = document.getElementById(&quot;startString&quot;).value;
-        var endString = document.getElementById(&quot;endString&quot;).value;
-        var substrings = [];
+        try {
+          var input = document.getElementById(&quot;inputString&quot;).value;
+          var max = parseInt(document.getElementById(&quot;maxChar&quot;).value);
+          var startString = document.getElementById(&quot;startString&quot;).value;
+          var endString = document.getElementById(&quot;endString&quot;).value;
+          var substrings = [];
     
-        var i = 0;
-        while (i &lt; input.length) {
-          var end = i + max;
-          if (end &gt;= input.length) {
-            end = input.length;
-          } else {
-            var lastPunctuation = input.lastIndexOf(&#39;.&#39;, end);
-            if (lastPunctuation !== -1) {
-              end = lastPunctuation + 1; // Include the punctuation itself in the substring
+          var i = 0;
+          while (i &lt; input.length) {
+            var end = i + max;
+            if (end &gt;= input.length) {
+              end = input.length;
+            } else {
+              var lastPunctuation = input.lastIndexOf(&#39;.&#39;, end);
+              if (lastPunctuation !== -1) {
+                end = lastPunctuation + 1; // Include the punctuation itself in the substring
+              }
+              // You can add more punctuation characters to consider here (e.g., !, ?)
             }
-            // You can add more punctuation characters to consider here (e.g., !, ?)
+    
+            var substring = input.substring(i, end);
+            substrings.push(startString + substring + endString);
+            i = end;
           }
     
-          var substring = input.substring(i, end);
-          substrings.push(startString + substring + endString);
-          i = end;
+          document.getElementById(&quot;output&quot;).value = substrings.join(&quot;&#92;n&#92;n&#92;n&quot;);
+        } catch (error) {
+          // Handle any potential errors here
+          alert(&quot;An error occurred: &quot; + error.message);
         }
-    
-        document.getElementById(&quot;output&quot;).value = substrings.join(&quot;&#92;n&#92;n&#92;n&quot;);
       }
     &lt;/script&gt;
+    
     
 
   &lt;/body&gt;
