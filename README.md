@@ -18,6 +18,11 @@ i always forget the command line tools.
 
 here is a reminder
 
+### where to run cammand line
+
+- in `\_eleventy` folder run `npm` stuff
+- in `\ischmidls.github.io` folder run `git` stuff
+
 ### git command aliases
    - `pacp` means                 `!f() { git pull && git add -A && git commit -m "$@" && git push; }; f`
 
