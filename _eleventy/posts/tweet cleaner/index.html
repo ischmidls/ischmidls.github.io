@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tweet cleaner</title>
+</head>
+<body>
+
+  <label for="inputText">Input Text:</label>
+  <textarea id="inputText" rows="4" cols="50"></textarea>
+
+  <br>
+
+  <label for="screenName">Screen Name to Remove:</label>
+  <input type="text" id="screenName">
+
+  <br>
+
+  <button onclick="removeAndDisplay()">Remove Substrings</button>
+
+  <br>
+
+  <label for="outputText">Output Text:</label>
+  <textarea id="outputText" rows="4" cols="50" readonly></textarea>
+
+  <script>
+    function removeSubstrings(inputText, regexList) {
+      // Apply each regex in the list
+      regexList.forEach(regex => {
+        inputText = inputText.replace(regex, '');
+      });
+
+      return inputText;
+    }
+
+    function removeAndDisplay() {
+      const inputText = document.getElementById('inputText').value;
+      const screenNameToRemove = document.getElementById('screenName').value;
+
+      // Define your list of regex expressions
+      const regexList = [
+        /@.*\n/g, // Remove lines with only user's tag
+        /^\d+h$/gm, // Remove lines containing only digits and the letter 'h'
+        /\n{2,}/g,  // Remove double newlines
+        /·/g,       // Remove the character "·"
+        new RegExp(`^${screenNameToRemove}$`, 'gm'), // Remove lines containing only the specified screen name
+        "See new posts\n",
+        "\nConversation\n",
+        // Add more regex expressions as needed
+      ];
+
+      const modifiedText = removeSubstrings(inputText, regexList);
+      document.getElementById('outputText').value = modifiedText;
+    }
+  </script>
+
+</body>
+</html>

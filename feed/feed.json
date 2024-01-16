@@ -9,6 +9,12 @@
     "url": ""
   },
   "items": [{
+      "id": "https://ischmidls.github.io/posts/tweet%20cleaner/",
+      "url": "https://ischmidls.github.io/posts/tweet%20cleaner/",
+      "title": "tweet cleaner",
+      "content_html": "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>tweet cleaner</title>\r\n</head>\r\n<body>\r\n\r\n  <label for=\"inputText\">Input Text:</label>\r\n  <textarea id=\"inputText\" rows=\"4\" cols=\"50\"></textarea>\r\n\r\n  <br>\r\n\r\n  <label for=\"screenName\">Screen Name to Remove:</label>\r\n  <input type=\"text\" id=\"screenName\">\r\n\r\n  <br>\r\n\r\n  <button onclick=\"removeAndDisplay()\">Remove Substrings</button>\r\n\r\n  <br>\r\n\r\n  <label for=\"outputText\">Output Text:</label>\r\n  <textarea id=\"outputText\" rows=\"4\" cols=\"50\" readonly></textarea>\r\n\r\n  <script>\r\n    function removeSubstrings(inputText, regexList) {\r\n      // Apply each regex in the list\r\n      regexList.forEach(regex => {\r\n        inputText = inputText.replace(regex, '');\r\n      });\r\n\r\n      return inputText;\r\n    }\r\n\r\n    function removeAndDisplay() {\r\n      const inputText = document.getElementById('inputText').value;\r\n      const screenNameToRemove = document.getElementById('screenName').value;\r\n\r\n      // Define your list of regex expressions\r\n      const regexList = [\r\n        /@.*\\n/g, // Remove lines with only user's tag\r\n        /^\\d+h$/gm, // Remove lines containing only digits and the letter 'h'\r\n        /\\n{2,}/g,  // Remove double newlines\r\n        /·/g,       // Remove the character \"·\"\r\n        new RegExp(`^${screenNameToRemove}$`, 'gm'), // Remove lines containing only the specified screen name\r\n        \"See new posts\\n\",\r\n        \"\\nConversation\\n\",\r\n        // Add more regex expressions as needed\r\n      ];\r\n\r\n      const modifiedText = removeSubstrings(inputText, regexList);\r\n      document.getElementById('outputText').value = modifiedText;\r\n    }\r\n  </script>\r\n\r\n</body>\r\n</html>",
+      "date_published": "2024-01-15T16:00:00-08:00"
+    },{
       "id": "https://ischmidls.github.io/posts/determinants/",
       "url": "https://ischmidls.github.io/posts/determinants/",
       "title": "down with determinants",

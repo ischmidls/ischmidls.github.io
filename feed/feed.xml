@@ -5,7 +5,7 @@
 	
 	<link href="https://ischmidls.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://ischmidls.github.io"/>
-	<updated>2023-10-12T17:00:00-07:00</updated>
+	<updated>2024-01-15T16:00:00-08:00</updated>
 	<id>https://update-me.com</id>
 	<author>
 		<name>izak</name>
@@ -10584,6 +10584,79 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 				
 				
 				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fdeterminants%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=down%20with%20determinants&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>tweet cleaner</title>
+		<link href="https://ischmidls.github.io/posts/tweet%20cleaner/"/>
+		<updated>2024-01-15T16:00:00-08:00</updated>
+		<id>https://ischmidls.github.io/posts/tweet%20cleaner/</id>
+		<content type="html">
+		  &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;tweet cleaner&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;label for=&quot;inputText&quot;&gt;Input Text:&lt;/label&gt;
+  &lt;textarea id=&quot;inputText&quot; rows=&quot;4&quot; cols=&quot;50&quot;&gt;&lt;/textarea&gt;
+
+  &lt;br&gt;
+
+  &lt;label for=&quot;screenName&quot;&gt;Screen Name to Remove:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;screenName&quot;&gt;
+
+  &lt;br&gt;
+
+  &lt;button onclick=&quot;removeAndDisplay()&quot;&gt;Remove Substrings&lt;/button&gt;
+
+  &lt;br&gt;
+
+  &lt;label for=&quot;outputText&quot;&gt;Output Text:&lt;/label&gt;
+  &lt;textarea id=&quot;outputText&quot; rows=&quot;4&quot; cols=&quot;50&quot; readonly=&quot;&quot;&gt;&lt;/textarea&gt;
+
+  &lt;script&gt;
+    function removeSubstrings(inputText, regexList) {
+      // Apply each regex in the list
+      regexList.forEach(regex =&gt; {
+        inputText = inputText.replace(regex, &#39;&#39;);
+      });
+
+      return inputText;
+    }
+
+    function removeAndDisplay() {
+      const inputText = document.getElementById(&#39;inputText&#39;).value;
+      const screenNameToRemove = document.getElementById(&#39;screenName&#39;).value;
+
+      // Define your list of regex expressions
+      const regexList = [
+        /@.*&#92;n/g, // Remove lines with only user&#39;s tag
+        /^&#92;d+h$/gm, // Remove lines containing only digits and the letter &#39;h&#39;
+        /&#92;n{2,}/g,  // Remove double newlines
+        /·/g,       // Remove the character &quot;·&quot;
+        new RegExp(`^${screenNameToRemove}$`, &#39;gm&#39;), // Remove lines containing only the specified screen name
+        &quot;See new posts&#92;n&quot;,
+        &quot;&#92;nConversation&#92;n&quot;,
+        // Add more regex expressions as needed
+      ];
+
+      const modifiedText = removeSubstrings(inputText, regexList);
+      document.getElementById(&#39;outputText&#39;).value = modifiedText;
+    }
+  &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Ftweet%20cleaner%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=tweet%20cleaner&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
