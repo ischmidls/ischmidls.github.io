@@ -1,8 +1,0 @@
-{
-    "title": "tab away",
-    "description": "input tabbed, output un-tabbed!",
-    "date": "2023-01-01",
-    "tags": "javascript",
-    "layout": "layouts/post.njk"
-  }
-  

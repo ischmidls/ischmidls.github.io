@@ -1,8 +1,0 @@
-{
-    "title": "first sentence",
-    "description": "input wiki page title, utput 1st sentence",
-    "date": "2023-01-01",
-    "tags": "javascript",
-    "layout": "layouts/post.njk"
-  }
-  

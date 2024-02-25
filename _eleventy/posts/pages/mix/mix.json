@@ -1,8 +1,0 @@
-{
-    "title": "mix list",
-    "description": "input list, output mixed order",
-    "date": "2023-01-01",
-    "tags": "javascript",
-    "layout": "layouts/post.njk"
-  }
-  
