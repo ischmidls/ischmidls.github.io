@@ -10690,7 +10690,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot; /&gt;
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-&lt;title&gt;remove conjunctive phrases&lt;/title&gt;
+&lt;title&gt;Replace conjunctives&lt;/title&gt;
 &lt;style&gt;
     textarea {
         width: 100%;
@@ -10700,22 +10700,33 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
+    &lt;h1&gt;Replace conjunctives&lt;/h1&gt;
+    &lt;p&gt;Conjunctive phrases join two independent clauses. They&#39;re like typical conjunctions (and, or, but, yet, ...). An example is &quot;The dog sat. And, she ran.&quot; Here, &quot;And&quot; functions as a conjunctive phrase. They are form of transition words. This program replaces an expression falling between a newline and a comma without any extra spaces. So, this program replaces conjunctive phrases and syntactic analogues. Jouis!&lt;/p&gt;
     &lt;textarea id=&quot;inputText&quot; placeholder=&quot;Enter text here...&quot;&gt;&lt;/textarea&gt;
-    &lt;button onclick=&quot;removeExpression()&quot;&gt;remove conjunctive phrases&lt;/button&gt;
+    &lt;button onclick=&quot;removeExpressions()&quot;&gt;Remove Expressions&lt;/button&gt;
     &lt;br /&gt;
     &lt;textarea id=&quot;outputText&quot; placeholder=&quot;Edited text will appear here...&quot; readonly=&quot;&quot;&gt;&lt;/textarea&gt;
 
     &lt;script&gt;
-        function removeExpression() {
+        function removeExpressions() {
             // Get the input text
             var inputText = document.getElementById(&quot;inputText&quot;).value;
             
             // Define the regular expression to match the expression between a period and a comma without spaces
-            var regex = /&#92;. (?![^,]*&#92;s)[^.,]+(?=,)/g;
+            var regex1 = /(&#92;. )(?![^,]*&#92;s)[^.,]*, /g;
+            var regex2 = /&#92;n(?![^,]*&#92;s)[^.,]*, /g;
             
-            // Remove all instances of the expression
-            var editedText = inputText.replace(regex, &quot;&quot;);
+            // Replace all instances of the second expression with a newline character
+            var editedText = inputText.replace(regex2, &quot;&#92;n&quot;);
 
+            // Remove all instances of the first expression
+            editedText = editedText.replace(regex1, &quot;. &quot;);
+
+            // Capitalize the next word after each period
+            editedText = editedText.replace(/&#92;.&#92;s+(&#92;w)/g, function(match, p1) {
+                return &quot;. &quot; + p1.toUpperCase();
+            });
+            
             // Set the edited text as the output
             document.getElementById(&quot;outputText&quot;).value = editedText;
         }
