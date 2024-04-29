@@ -5,7 +5,7 @@
 	
 	<link href="https://ischmidls.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://ischmidls.github.io"/>
-	<updated>2024-03-29T00:00:00Z</updated>
+	<updated>2024-04-29T00:00:00Z</updated>
 	<id>https://update-me.com</id>
 	<author>
 		<name>izak</name>
@@ -10738,6 +10738,101 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 				
 				
 				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fremove-conjunctive%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=remove%20conjunctive%20phrases&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>the little prince</title>
+		<link href="https://ischmidls.github.io/posts/prince/"/>
+		<updated>2024-04-29T00:00:00Z</updated>
+		<id>https://ischmidls.github.io/posts/prince/</id>
+		<content type="html">
+		  &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot; /&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+  &lt;title&gt;the little prince&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h1&gt;The Little Prince in Spanish and French&lt;/h1&gt;
+  &lt;p&gt;I just made this to view the &lt;a href=&quot;https://microtop.ca/lepetitprince/&quot;&gt;Microtop&lt;/a&gt; (Spanish education program
+    for French speakers) French and Spanish versions of The Little Prince. I wanted both at the same time.&lt;/p&gt;
+  &lt;p&gt; This page uses JS to dynamically load iframes (and incidentally also dynamically load the selection menu for the 27
+    chapters of the book).&lt;/p&gt;&lt;!-- Select dropdown for chapter selection --&gt;
+  &lt;select id=&quot;chapterSelect&quot;&gt;
+    &lt;!-- JavaScript will populate options dynamically --&gt;
+  &lt;/select&gt;
+
+  &lt;!-- Button to trigger loading of selected chapter(s) --&gt;
+  &lt;button id=&quot;loadChapterButton&quot;&gt;Load Chapter&lt;/button&gt;
+
+  &lt;!-- Container for iframes --&gt;
+  &lt;div id=&quot;iframeContainer&quot;&gt;&lt;/div&gt;
+  &lt;script&gt;
+    document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+      // Select the button, select dropdown, and iframe container
+      const loadButton = document.getElementById(&#39;loadChapterButton&#39;);
+      const chapterSelect = document.getElementById(&#39;chapterSelect&#39;);
+      const iframeContainer = document.getElementById(&#39;iframeContainer&#39;);
+
+      // Function to populate chapter options with leading zeros
+      function populateChapterOptions() {
+        const totalChapters = 27; // Total number of chapters
+        const chapterOptions = chapterSelect;
+
+        // Loop to generate options for chapters 01 to 27
+        for (let i = 1; i &lt;= totalChapters; i++) {
+          const chapterNumber = i.toString().padStart(2, &#39;0&#39;); // Format with leading zero
+          const option = document.createElement(&#39;option&#39;);
+          option.value = chapterNumber;
+          option.textContent = `Chapter ${chapterNumber}`;
+          chapterOptions.appendChild(option);
+        }
+      }
+
+      // Function to load the selected chapter into an iframe
+      function loadChapter() {
+        // Get the selected chapter number from the dropdown
+        const selectedChapter = chapterSelect.value;
+
+        // Create a new iframe element
+        const spanishIframe = document.createElement(&#39;iframe&#39;);
+        const frenchIframe = document.createElement(&#39;iframe&#39;);
+
+        // Set the src attributes of the iframes (URLs for Spanish and French chapters)
+        const spanishChapterUrl = `https://microtop.ca/lepetitprince/capitulo${selectedChapter}.html`;
+        const frenchChapterUrl = `https://microtop.ca/lepetitprince/chapitre${selectedChapter}.html`;
+
+        spanishIframe.src = spanishChapterUrl;
+        frenchIframe.src = frenchChapterUrl;
+
+        // Clear previous iframes from the container
+        iframeContainer.innerHTML = &#39;&#39;;
+
+        // Append the iframes to the container
+        iframeContainer.appendChild(spanishIframe);
+        iframeContainer.appendChild(frenchIframe);
+      }
+
+      // Populate chapter options when the DOM content is fully loaded
+      populateChapterOptions();
+
+      // Event listener for the button click
+      loadButton.addEventListener(&#39;click&#39;, loadChapter);
+    });
+
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fprince%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=the%20little%20prince&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
