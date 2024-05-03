@@ -10756,7 +10756,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
   &lt;title&gt;le petit prince &amp; el principito&lt;/title&gt;
   &lt;style&gt; 
-  iframe {height:50vh; width:90vw;}
+  iframe {height:50vh; width:100%;}
   /*#iframeContainer {height:50vh; width:90vw;}*/
   &lt;/style&gt;
 &lt;/head&gt;
