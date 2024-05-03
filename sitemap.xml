@@ -414,9 +414,11 @@
     
   
   
+    
+  
   <url>
     <loc>https://ischmidls.github.io/about/</loc>
-    <lastmod>2024-03-29T18:22:17.445Z</lastmod>
+    <lastmod>2024-05-03T16:55:14.000Z</lastmod>
   </url>
   
   
@@ -480,7 +482,7 @@
   
   
   <url>
-    <loc>https://ischmidls.github.io/tags/language/</loc>
+    <loc>https://ischmidls.github.io/tags/javascript/</loc>
     <lastmod>2024-03-29T18:22:18.212Z</lastmod>
   </url>
   
@@ -493,7 +495,7 @@
   
   
   <url>
-    <loc>https://ischmidls.github.io/tags/javascript/</loc>
+    <loc>https://ischmidls.github.io/tags/language/</loc>
     <lastmod>2024-03-29T18:22:18.212Z</lastmod>
   </url>
   
@@ -537,6 +539,6 @@
   
   <url>
     <loc>https://ischmidls.github.io/posts/prince/</loc>
-    <lastmod>2024-04-29T17:19:41.000Z</lastmod>
+    <lastmod>2024-05-03T16:55:14.000Z</lastmod>
   </url>
 </urlset>

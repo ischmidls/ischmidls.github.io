@@ -10743,7 +10743,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 	</entry>
 	
 	<entry>
-		<title>the little prince</title>
+		<title>le petit prince &amp; el principito</title>
 		<link href="https://ischmidls.github.io/posts/prince/"/>
 		<updated>2024-04-29T00:00:00Z</updated>
 		<id>https://ischmidls.github.io/posts/prince/</id>
@@ -10754,11 +10754,14 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 &lt;head&gt;
   &lt;meta charset=&quot;utf-8&quot; /&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
-  &lt;title&gt;the little prince&lt;/title&gt;
+  &lt;title&gt;le petit prince &amp; el principito&lt;/title&gt;
+  &lt;style&gt; 
+  iframe {height:50vh; width:90vw;}
+  /*#iframeContainer {height:50vh; width:90vw;}*/
+  &lt;/style&gt;
 &lt;/head&gt;
 
 &lt;body&gt;
-  &lt;h1&gt;The Little Prince in Spanish and French&lt;/h1&gt;
   &lt;p&gt;I just made this to view the &lt;a href=&quot;https://microtop.ca/lepetitprince/&quot;&gt;Microtop&lt;/a&gt; (Spanish education program
     for French speakers) French and Spanish versions of The Little Prince. I wanted both at the same time.&lt;/p&gt;
   &lt;p&gt; This page uses JS to dynamically load iframes (and incidentally also dynamically load the selection menu for the 27
@@ -10772,6 +10775,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 
   &lt;!-- Container for iframes --&gt;
   &lt;div id=&quot;iframeContainer&quot;&gt;&lt;/div&gt;
+  
   &lt;script&gt;
     document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
       // Select the button, select dropdown, and iframe container
@@ -10832,7 +10836,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 			
 				
 				
-				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fprince%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=the%20little%20prince&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fprince%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=le%20petit%20prince%20%26%20el%20principito&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
