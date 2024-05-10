@@ -5,7 +5,7 @@
 	
 	<link href="https://ischmidls.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://ischmidls.github.io"/>
-	<updated>2024-05-09T00:00:00Z</updated>
+	<updated>2024-05-10T00:00:00Z</updated>
 	<id>https://update-me.com</id>
 	<author>
 		<name>izak</name>
@@ -10946,6 +10946,85 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 				
 				
 				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fmodular-multiplicative-inverse%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=modular%20multiplicative%20inverse&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>quaternion multiplication</title>
+		<link href="https://ischmidls.github.io/posts/quaternion-multiplication/"/>
+		<updated>2024-05-10T00:00:00Z</updated>
+		<id>https://ischmidls.github.io/posts/quaternion-multiplication/</id>
+		<content type="html">
+		  &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Quaternion Multiplication Formula&lt;/title&gt;
+    &lt;script src=&quot;https://polyfill.io/v3/polyfill.min.js?features=es6&quot;&gt;&lt;/script&gt;
+    &lt;script id=&quot;MathJax-script&quot; async=&quot;&quot; src=&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        // Function to update the LaTeX formula based on input values
+        function updateFormula() {
+            // Get input values from the form
+            let a1 = document.getElementById(&#39;a1&#39;).value;
+            let b1 = document.getElementById(&#39;b1&#39;).value;
+            let c1 = document.getElementById(&#39;c1&#39;).value;
+            let d1 = document.getElementById(&#39;d1&#39;).value;
+            let a2 = document.getElementById(&#39;a2&#39;).value;
+            let b2 = document.getElementById(&#39;b2&#39;).value;
+            let c2 = document.getElementById(&#39;c2&#39;).value;
+            let d2 = document.getElementById(&#39;d2&#39;).value;
+
+            // Construct the LaTeX formula with the input values
+            let formula = `&#92;&#92;( &#92;&#92;begin{align*}`;
+            formula += `(${a1}+${b1}i+${c1}j+${d1}k)&#92;&#92;odot (${a2}+${b2}i+${c2}j+${d2}k)`;
+            formula += `&amp;= (${a1} &#92;&#92;cdot ${a2} - ${b1} &#92;&#92;cdot ${b2} - ${c1} &#92;&#92;cdot ${c2} - ${d1} &#92;&#92;cdot ${d2}) &#92;&#92;&#92;&#92;[8pt]`;
+            formula += `&amp;&#92;&#92;quad + (${a1} &#92;&#92;cdot ${b2} + ${b1} &#92;&#92;cdot ${a2} + ${c1} &#92;&#92;cdot ${d2} - ${d1} &#92;&#92;cdot ${c2})i &#92;&#92;&#92;&#92;[8pt]`;
+            formula += `&amp;&#92;&#92;quad + (${a1} &#92;&#92;cdot ${c2} + ${c1} &#92;&#92;cdot ${a2} + ${d1} &#92;&#92;cdot ${b2} - ${b1} &#92;&#92;cdot ${d2})j &#92;&#92;&#92;&#92;[8pt]`;
+            formula += `&amp;&#92;&#92;quad + (${a1} &#92;&#92;cdot ${d2} + ${d1} &#92;&#92;cdot ${a2} + ${b1} &#92;&#92;cdot ${c2} - ${c1} &#92;&#92;cdot ${b2})k.`;
+            formula += `&#92;&#92;end{align*} &#92;&#92;)`;
+
+            // Set the content of the formula div
+            document.getElementById(&#39;formula&#39;).innerHTML = formula;
+
+            // Use MathJax to typeset the updated formula
+            MathJax.typesetPromise().catch((err) =&gt; console.log(err));
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h2&gt;Quaternion Multiplication Formula&lt;/h2&gt;
+  &lt;p&gt;&#92;begin{align*}
+  (a_1+b_1i+c_1j+d_1k)&#92;odot (a_2+b_2i+c_2j+d_2k) &amp;= (a_1a_2 - b_1b_2 - c_1c_2 - d_1d_2)&#92;&#92;
+  &amp;&#92;quad + (a_1b_2 + b_1a_2 + c_1d_2 - d_1c_2)i&#92;&#92;
+  &amp;&#92;quad +  (a_1c_2 + c_1a_2 + d_1b_2 - b_1d_2)j &#92;&#92;
+  &amp;&#92;quad+ (a_1d_2 + d_1a_2 + b_1c_2 - c_1b_2)k.
+  &#92;end{align*}&lt;/p&gt;
+    &lt;p&gt;Enter values for quaternion components to display the quaternion multiplication formula:&lt;/p&gt;
+    &lt;form&gt;
+        Quaternion 1 (a1, b1, c1, d1):&lt;br /&gt;
+        a1: &lt;input type=&quot;number&quot; id=&quot;a1&quot; value=&quot;1&quot; /&gt;&lt;br /&gt;
+        b1: &lt;input type=&quot;number&quot; id=&quot;b1&quot; value=&quot;0&quot; /&gt;&lt;br /&gt;
+        c1: &lt;input type=&quot;number&quot; id=&quot;c1&quot; value=&quot;0&quot; /&gt;&lt;br /&gt;
+        d1: &lt;input type=&quot;number&quot; id=&quot;d1&quot; value=&quot;0&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
+        Quaternion 2 (a2, b2, c2, d2):&lt;br /&gt;
+        a2: &lt;input type=&quot;number&quot; id=&quot;a2&quot; value=&quot;1&quot; /&gt;&lt;br /&gt;
+        b2: &lt;input type=&quot;number&quot; id=&quot;b2&quot; value=&quot;0&quot; /&gt;&lt;br /&gt;
+        c2: &lt;input type=&quot;number&quot; id=&quot;c2&quot; value=&quot;0&quot; /&gt;&lt;br /&gt;
+        d2: &lt;input type=&quot;number&quot; id=&quot;d2&quot; value=&quot;0&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
+        &lt;button type=&quot;button&quot; onclick=&quot;updateFormula()&quot;&gt;Update Formula&lt;/button&gt;
+    &lt;/form&gt;
+    &lt;p&gt;Quaternion Multiplication Formula:&lt;/p&gt;
+    &lt;div id=&quot;formula&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fquaternion-multiplication%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=quaternion%20multiplication&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
