@@ -5,7 +5,7 @@
 	
 	<link href="https://ischmidls.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://ischmidls.github.io"/>
-	<updated>2024-05-10T00:00:00Z</updated>
+	<updated>2024-05-15T00:00:00Z</updated>
 	<id>https://update-me.com</id>
 	<author>
 		<name>izak</name>
@@ -11025,6 +11025,90 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 				
 				
 				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fquaternion-multiplication%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=quaternion%20multiplication&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>divisors and totient</title>
+		<link href="https://ischmidls.github.io/posts/divisors-and-totient/"/>
+		<updated>2024-05-15T00:00:00Z</updated>
+		<id>https://ischmidls.github.io/posts/divisors-and-totient/</id>
+		<content type="html">
+		  &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Divisors and Primes Finder&lt;/title&gt;
+    &lt;script&gt;
+        function findDivisorsAndPrimes() {
+            // Get the user input value
+            let inputValue = document.getElementById(&quot;numberInput&quot;).value;
+            let number = parseInt(inputValue);
+
+            // Validate if the input is a positive integer
+            if (isNaN(number) || number &lt;= 0) {
+                alert(&quot;Please enter a positive integer.&quot;);
+                return;
+            }
+
+            // Function to find all divisors of a number
+            function findDivisors(n) {
+                let divisors = [];
+                for (let i = 1; i &lt;= n; i++) {
+                    if (n % i === 0) {
+                        divisors.push(i);
+                    }
+                }
+                return divisors;
+            }
+
+            // Function to check if a number is prime
+            function isPrime(n) {
+                if (n &lt;= 1) {
+                    return false;
+                }
+                for (let i = 2; i &lt;= Math.sqrt(n); i++) {
+                    if (n % i === 0) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            // Find divisors and primes less than the input number
+            let divisors = findDivisors(number);
+            let primes = [];
+            for (let i = 2; i &lt; number; i++) {
+                if (isPrime(i)) {
+                    primes.push(i);
+                }
+            }
+
+            // Display the results including length of lists
+            let divisorsLength = divisors.length;
+            let primesLength = primes.length;
+
+            document.getElementById(&quot;divisors&quot;).textContent = `Divisors (${divisorsLength}): ` + divisors.join(&quot;, &quot;);
+            document.getElementById(&quot;primes&quot;).textContent = `Primes less than ${number} (${primesLength}): ` + primes.join(&quot;, &quot;);
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;Find Divisors and Primes&lt;/p&gt;
+    &lt;label for=&quot;numberInput&quot;&gt;Enter a positive integer:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;numberInput&quot; /&gt;
+    &lt;button onclick=&quot;findDivisorsAndPrimes()&quot;&gt;Find&lt;/button&gt;
+    &lt;p id=&quot;divisors&quot;&gt;&lt;/p&gt;
+    &lt;p id=&quot;primes&quot;&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fdivisors-and-totient%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=divisors%20and%20totient&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
