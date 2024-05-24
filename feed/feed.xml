@@ -5,7 +5,7 @@
 	
 	<link href="https://ischmidls.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://ischmidls.github.io"/>
-	<updated>2024-05-15T00:00:00Z</updated>
+	<updated>2024-05-24T00:00:00Z</updated>
 	<id>https://update-me.com</id>
 	<author>
 		<name>izak</name>
@@ -11109,6 +11109,100 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 				
 				
 				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fdivisors-and-totient%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=divisors%20and%20totient&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>field extension practice</title>
+		<link href="https://ischmidls.github.io/posts/field-extension-practice/"/>
+		<updated>2024-05-24T00:00:00Z</updated>
+		<id>https://ischmidls.github.io/posts/field-extension-practice/</id>
+		<content type="html">
+		  &lt;script src=&quot;https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+  
+&lt;p&gt;To show that &lt;span class=&quot;math inline&quot;&gt;&#92;(F / &#92;{0&#92;} &#92;cong F&#92;)&lt;/span&gt;,
+    we need to establish an isomorphism between the quotient ring &lt;span class=&quot;math inline&quot;&gt;&#92;(F / &#92;{0&#92;}&#92;)&lt;/span&gt; and the field &lt;span class=&quot;math inline&quot;&gt;&#92;(F&#92;)&lt;/span&gt;.&lt;/p&gt;
+    &lt;p&gt;Let &lt;span class=&quot;math inline&quot;&gt;&#92;(F&#92;)&lt;/span&gt; be a field. &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;{0&#92;}&#92;)&lt;/span&gt; is the zero ideal in &lt;span class=&quot;math inline&quot;&gt;&#92;(F&#92;)&lt;/span&gt;.&lt;/p&gt;
+    &lt;p&gt;The quotient ring &lt;span class=&quot;math inline&quot;&gt;&#92;(F / &#92;{0&#92;}&#92;)&lt;/span&gt; is
+    constructed by partitioning &lt;span class=&quot;math inline&quot;&gt;&#92;(F&#92;)&lt;/span&gt; into
+    cosets of the ideal &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;{0&#92;}&#92;)&lt;/span&gt;. Since
+    &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;{0&#92;}&#92;)&lt;/span&gt; contains only the zero
+    element, every element &lt;span class=&quot;math inline&quot;&gt;&#92;(a &#92;in F&#92;)&lt;/span&gt;
+    forms a distinct coset &lt;span class=&quot;math inline&quot;&gt;&#92;(a +
+    &#92;{0&#92;}&#92;)&lt;/span&gt;.&lt;/p&gt;
+    &lt;p&gt;Each coset &lt;span class=&quot;math inline&quot;&gt;&#92;(a + &#92;{0&#92;}&#92;)&lt;/span&gt; is simply
+    &lt;span class=&quot;math inline&quot;&gt;&#92;(a&#92;)&lt;/span&gt;. Hence, the set of cosets is just
+    the set of elements of &lt;span class=&quot;math inline&quot;&gt;&#92;(F&#92;)&lt;/span&gt;.&lt;/p&gt;
+    &lt;p&gt;The addition and multiplication operations on the cosets are defined
+    as follows: &lt;span class=&quot;math display&quot;&gt;&#92;[(a + &#92;{0&#92;}) + (b + &#92;{0&#92;}) = (a
+    + b) + &#92;{0&#92;}&#92;]&lt;/span&gt; &lt;span class=&quot;math display&quot;&gt;&#92;[(a + &#92;{0&#92;}) &#92;cdot (b
+    + &#92;{0&#92;}) = (a &#92;cdot b) + &#92;{0&#92;}&#92;]&lt;/span&gt; Since &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;{0&#92;}&#92;)&lt;/span&gt; is the zero ideal, these operations
+    reduce to: &lt;span class=&quot;math display&quot;&gt;&#92;[a + b + &#92;{0&#92;} = a + b&#92;]&lt;/span&gt;
+    &lt;span class=&quot;math display&quot;&gt;&#92;[a &#92;cdot b + &#92;{0&#92;} = a &#92;cdot b&#92;]&lt;/span&gt;&lt;/p&gt;
+    &lt;p&gt;Define the map &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;varphi: F / &#92;{0&#92;} &#92;to
+    F&#92;)&lt;/span&gt; by &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;varphi(a + &#92;{0&#92;}) =
+    a&#92;)&lt;/span&gt;. This map is well-defined because each coset &lt;span class=&quot;math inline&quot;&gt;&#92;(a + &#92;{0&#92;}&#92;)&lt;/span&gt; corresponds uniquely to &lt;span class=&quot;math inline&quot;&gt;&#92;(a&#92;)&lt;/span&gt;.&lt;/p&gt;
+    &lt;p&gt;Check that &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;varphi&#92;)&lt;/span&gt; is a ring
+    homomorphism: &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;varphi&#92;)&lt;/span&gt; is injective:
+    If &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;varphi(a + &#92;{0&#92;}) = &#92;varphi(b +
+    &#92;{0&#92;})&#92;)&lt;/span&gt;, then &lt;span class=&quot;math inline&quot;&gt;&#92;(a = b&#92;)&lt;/span&gt;. &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;varphi&#92;)&lt;/span&gt; is surjective: For any &lt;span class=&quot;math inline&quot;&gt;&#92;(a &#92;in F&#92;)&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;&#92;(a =
+    &#92;varphi(a + &#92;{0&#92;})&#92;)&lt;/span&gt;.&lt;/p&gt;
+    &lt;p&gt;Since &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;varphi&#92;)&lt;/span&gt; is a bijective
+    homomorphism, it is an isomorphism. Therefore, &lt;span class=&quot;math inline&quot;&gt;&#92;(F / &#92;{0&#92;} &#92;cong F&#92;)&lt;/span&gt;.&lt;/p&gt;
+    &lt;p&gt;Thus, we have shown that &lt;span class=&quot;math inline&quot;&gt;&#92;(F /
+    &#92;{0&#92;}&#92;)&lt;/span&gt; is isomorphic to &lt;span class=&quot;math inline&quot;&gt;&#92;(F&#92;)&lt;/span&gt;.
+    &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;square&#92;)&lt;/span&gt;&lt;/p&gt;
+    &lt;h4 id=&quot;lecture-exercise-for-reader&quot;&gt;Lecture Exercise for Reader&lt;/h4&gt;
+    &lt;p&gt;(a) Want to show that &lt;span class=&quot;math inline&quot;&gt;&#92;(f = x^3 + 2x +
+    1&#92;)&lt;/span&gt; is irreducible over &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3&#92;)&lt;/span&gt; and that &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3[x] / I&#92;)&lt;/span&gt; is a field of order
+    27 containing a subfield isomorphic to &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3&#92;)&lt;/span&gt;. A polynomial of degree 3 is
+    irreducible over &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3&#92;)&lt;/span&gt; if it
+    has no roots in &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3&#92;)&lt;/span&gt; and
+    cannot be factored into polynomials of lower degrees. To check for
+    roots, evaluate &lt;span class=&quot;math inline&quot;&gt;&#92;(f(x) = x^3 + 2x + 1&#92;)&lt;/span&gt;
+    at &lt;span class=&quot;math inline&quot;&gt;&#92;(x = 0, 1, 2&#92;)&lt;/span&gt; in &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3&#92;)&lt;/span&gt;. For &lt;span class=&quot;math inline&quot;&gt;&#92;(f(0) = 0^3 + 2 &#92;cdot 0 + 1 = 1&#92;)&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;&#92;(f(1) = 1^3 + 2 &#92;cdot 1 + 1 = 1 + 2 + 1 = 4 &#92;equiv
+    1 &#92;pmod{3}&#92;)&lt;/span&gt;, and &lt;span class=&quot;math inline&quot;&gt;&#92;(f(2) = 2^3 + 2
+    &#92;cdot 2 + 1 = 8 + 4 + 1 = 13 &#92;equiv 1 &#92;pmod{3}&#92;)&lt;/span&gt;, none of these
+    are zero, so &lt;span class=&quot;math inline&quot;&gt;&#92;(f(x)&#92;)&lt;/span&gt; has no roots in
+    &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3&#92;)&lt;/span&gt;. Since &lt;span class=&quot;math inline&quot;&gt;&#92;(f(x)&#92;)&lt;/span&gt; has no roots, it cannot be factored
+    into a product of a linear polynomial and a quadratic polynomial in
+    &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3[x]&#92;)&lt;/span&gt;. Thus, &lt;span class=&quot;math inline&quot;&gt;&#92;(f(x)&#92;)&lt;/span&gt; is irreducible over &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3&#92;)&lt;/span&gt;. Since &lt;span class=&quot;math inline&quot;&gt;&#92;(f&#92;)&lt;/span&gt; is irreducible, the ideal &lt;span class=&quot;math inline&quot;&gt;&#92;((f)&#92;)&lt;/span&gt; is maximal, and the quotient ring
+    &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3[x] / (f)&#92;)&lt;/span&gt; is a field.
+    The polynomial &lt;span class=&quot;math inline&quot;&gt;&#92;(f(x)&#92;)&lt;/span&gt; is of degree 3,
+    and the quotient ring &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3[x] /
+    (f)&#92;)&lt;/span&gt; consists of equivalence classes of polynomials of degree
+    less than 3: &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3[x] / (f) = &#92;{ a +
+    bx + cx^2 + (f) &#92;mid a, b, c &#92;in &#92;mathbb{Z}_3 &#92;}&#92;)&lt;/span&gt;. There are
+    &lt;span class=&quot;math inline&quot;&gt;&#92;(3^3 = 27&#92;)&lt;/span&gt; such equivalence classes,
+    so &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3[x] / (f)&#92;)&lt;/span&gt; is a field
+    of order 27. The field &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3&#92;)&lt;/span&gt;
+    is naturally embedded in &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3[x] /
+    (f)&#92;)&lt;/span&gt; as &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;{ a + (f) &#92;mid a &#92;in
+    &#92;mathbb{Z}_3 &#92;}&#92;)&lt;/span&gt;, forming a subfield isomorphic to &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3&#92;)&lt;/span&gt;. &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;square&#92;)&lt;/span&gt;&lt;/p&gt;
+    &lt;p&gt;(b) Want to show that &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3[x] /
+    (f)&#92;)&lt;/span&gt; is a field extension of &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;overline{&#92;mathbb{Z}}_3&#92;)&lt;/span&gt; and is a
+    3-dimensional vector space over &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;overline{&#92;mathbb{Z}}_3&#92;)&lt;/span&gt; with basis &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;{1 + (f), x + (f), x^2 + (f)&#92;}&#92;)&lt;/span&gt;. Let
+    &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;overline{&#92;mathbb{Z}}_3 = &#92;{ 0 + (f), 1 +
+    (f), 2 + (f) &#92;}&#92;)&lt;/span&gt;, which is isomorphic to &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3&#92;)&lt;/span&gt;. The field &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3[x] / (f)&#92;)&lt;/span&gt; contains &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;overline{&#92;mathbb{Z}}_3&#92;)&lt;/span&gt; as its subfield,
+    making it a field extension. Any element of &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3[x] / (f)&#92;)&lt;/span&gt; can be written as
+    &lt;span class=&quot;math inline&quot;&gt;&#92;(a + bx + cx^2 + (f)&#92;)&lt;/span&gt; where &lt;span class=&quot;math inline&quot;&gt;&#92;(a, b, c &#92;in &#92;mathbb{Z}_3&#92;)&lt;/span&gt;, and the
+    elements &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;{1 + (f), x + (f), x^2 +
+    (f)&#92;}&#92;)&lt;/span&gt; span &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3[x] /
+    (f)&#92;)&lt;/span&gt;. To show that &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;{1 + (f), x +
+    (f), x^2 + (f)&#92;}&#92;)&lt;/span&gt; is a basis, we need to establish linear
+    independence and spanning. For linear independence, suppose &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;alpha (1 + (f)) + &#92;beta (x + (f)) + &#92;gamma (x^2 +
+    (f)) = 0 + (f)&#92;)&lt;/span&gt;, which implies &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;alpha + &#92;beta x + &#92;gamma x^2 &#92;equiv 0
+    &#92;pmod{f}&#92;)&lt;/span&gt;. Since &lt;span class=&quot;math inline&quot;&gt;&#92;(1, x, x^2&#92;)&lt;/span&gt;
+    are linearly independent in &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3[x]&#92;)&lt;/span&gt; modulo &lt;span class=&quot;math inline&quot;&gt;&#92;(f(x)&#92;)&lt;/span&gt;, it follows that &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;alpha = &#92;beta = &#92;gamma = 0&#92;)&lt;/span&gt;. For
+    spanning, any element in &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3[x] /
+    (f)&#92;)&lt;/span&gt; can be expressed as a linear combination of &lt;span class=&quot;math inline&quot;&gt;&#92;(1, x, x^2&#92;)&lt;/span&gt; over &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;overline{&#92;mathbb{Z}}_3&#92;)&lt;/span&gt;. Thus, &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3[x] / (f)&#92;)&lt;/span&gt; is a 3-dimensional
+    vector space over &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;overline{&#92;mathbb{Z}}_3&#92;)&lt;/span&gt; with basis &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;{1 + (f), x + (f), x^2 + (f)&#92;}&#92;)&lt;/span&gt;. &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;square&#92;)&lt;/span&gt;&lt;/p&gt;
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Ffield-extension-practice%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=field%20extension%20practice&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
