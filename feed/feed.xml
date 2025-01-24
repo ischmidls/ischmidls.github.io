@@ -11366,6 +11366,7 @@ const handleExplore = (command) =&gt; {
         case &quot;explore&quot;:
             appendOutput(&quot;You continue to explore...&quot;)
             startExplore()
+            break;
         default:
             appendOutput(&quot;Invalid resource. Please specify &#39;wood&#39; or &#39;seeds&#39;, or type &#39;exit&#39; to leave.&quot;);
     }
