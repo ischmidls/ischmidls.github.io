@@ -41,18 +41,61 @@ let monster_attack_damage = 5;
 let void_fall = false;
 let slain_by_monster = false;
 let mining_strength = 0
-const recipes = {
-    "Wooden Sword": new Array(2).fill("Plank").concat(new Array(1).fill("Stick")),
-    "Wooden Pickaxe": new Array(3).fill("Plank").concat(new Array(2).fill("Stick")),
-    "Cobblestone Sword": new Array(2).fill("Cobblestone").concat(new Array(1).fill("Stick")),
-    "Cobblestone Pickaxe": new Array(3).fill("Cobblestone").concat(new Array(2).fill("Stick")),
-    "Iron Sword": new Array(2).fill("Iron").concat(new Array(1).fill("Stick")),
-    "Iron Pickaxe": new Array(3).fill("Iron").concat(new Array(2).fill("Stick")),
-    "Gold Sword": new Array(2).fill("Gold").concat(new Array(1).fill("Stick")),
-    "Gold Pickaxe": new Array(3).fill("Gold").concat(new Array(2).fill("Stick")),
-    "Diamond Sword": new Array(2).fill("Diamond").concat(new Array(1).fill("Stick")),
-    "Diamond Pickaxe": new Array(3).fill("Diamond").concat(new Array(2).fill("Stick"))
+const items = {
+    "Wooden Sword": {
+        recipe: new Array(2).fill("Plank").concat(new Array(1).fill("Stick")),
+        damage: 1,
+        miningStrength: 0,
+    },
+    "Wooden Pickaxe": {
+        recipe: new Array(3).fill("Plank").concat(new Array(2).fill("Stick")),
+        damage: 1,
+        miningStrength: 1,
+    },
+    "Cobblestone Sword": {
+        recipe: new Array(2).fill("Cobblestone").concat(new Array(1).fill("Stick")),
+        damage: 2,
+        miningStrength: 0,
+    },
+    "Cobblestone Pickaxe": {
+        recipe: new Array(3).fill("Cobblestone").concat(new Array(2).fill("Stick")),
+        damage: 2,
+        miningStrength: 2,
+    },
+    "Iron Sword": {
+        recipe: new Array(2).fill("Iron").concat(new Array(1).fill("Stick")),
+        damage: 3,
+        miningStrength: 0,
+    },
+    "Iron Pickaxe": {
+        recipe: new Array(3).fill("Iron").concat(new Array(2).fill("Stick")),
+        damage: 3,
+        miningStrength: 3,
+    },
+    "Gold Sword": {
+        recipe: new Array(2).fill("Gold").concat(new Array(1).fill("Stick")),
+        damage: 3,
+        miningStrength: 0,
+    },
+    "Gold Pickaxe": {
+        recipe: new Array(3).fill("Gold").concat(new Array(2).fill("Stick")),
+        damage: 3,
+        miningStrength: 3,
+    },
+    "Diamond Sword": {
+        recipe: new Array(2).fill("Diamond").concat(new Array(1).fill("Stick")),
+        damage: 3,
+        miningStrength: 0,
+    },
+    "Diamond Pickaxe": {
+        recipe: new Array(3).fill("Diamond").concat(new Array(2).fill("Stick")),
+        damage: 4,
+        miningStrength: 4,
+    },
 };
+
+
+
 
 const appendOutput = (text) => {
     output.textContent += `\n${text}`;
@@ -65,45 +108,21 @@ const startEquip = () => {
 }
 
 const handleEquip = (command) => {
-    switch (command.toLowerCase()) {
-        case "Wooden Sword":
-            player_attack_damage = 3
-            break;
-        case "Wooden Pickaxe":
-            mining_strength = 1
-            break;
-        case "Cobblestone Sword":
-            player_attack_damage = 5
-            break;
-        case "Cobblestone Pickaxe":
-            mining_strength = 2
-            break;
-        case "Iron Sword":
-            player_attack_damage = 7
-            break;
-        case "Iron Pickaxe":
-            mining_strength = 3
-            break;
-        case "Gold Sword":
-            player_attack_damage = 9
-            break;
-        case "Gold Pickaxe":
-            mining_strength = 4
-            break;
-        case "Diamond Sword":
-            player_attack_damage = 11
-            break;
-        case "Diamond Pickaxe":
-            mining_strength = 5
-            break;
-        case "exit":
-            appendOutput("You stopped equipping.")
-        default:
+    const item = items[toTitleCase(command)];
+
+    if (item) {
+        // Update global variables based on the item's properties
+        player_attack_damage = item.damage;
+        mining_strength = item.miningStrength;
+        appendOutput(
+            `Equipped ${command}. Attack damage is now ${player_attack_damage}, and mining strength is ${mining_strength}.`
+        );
+    } else {
+        appendOutput(`Item "${command}" not found.`);
+    }
             "That's not an item?"
-            break;
     }
 
-}
 
 const startExplore = () => {
     currentBiome = biomes[Math.floor(Math.random() * biomes.length)];
@@ -154,30 +173,78 @@ const startMine = () => {
     appendOutput("Greater treasures appear at lower depths.")
 };
 
+// function mine() {
+//     const move = Math.floor(Math.random() * 5) + 1
+//     if (coordinates[2] <= -50 && move === 1 && mining_strength >= 3) {
+//         appendOutput("You mined a Diamond");
+//         inventory.push("Diamond");
+//     } else if (coordinates[2] <= -50 && move === 1) {
+//         appendOutput("You found a Diamond but need at least an Iron Pickaxe");
+//     } else if (coordinates[2] <= -30 && [2,3].includes(move) && mining_strength >= 3) {
+//         appendOutput("You mined three Gold Ore");
+//         inventory.concat(new Array(3).fill("Gold Ore"));
+//     } else if (coordinates[2] <= -30 && [2,3].includes(move)) {
+//         appendOutput("You found Gold but need at least an Iron Pickaxe");
+//     } else if (coordinates[2] <= -20 && [2,3,4].includes(move) && mining_strength >= 2) {
+//         appendOutput("You mined three Iron Ore");
+//         inventory.concat(new Array(3).fill("Iron Ore"));
+//     } else if (coordinates[2] <= -20 && [2,3,4].includes(move)) {
+//         appendOutput("You found Iron but need at least a Cobblestone Pickaxe");
+//     } else if (coordinates[2] <= -10 && [2,3,4,5].includes(move) && mining_strength >= 1) {
+//         appendOutput("You mined three Coal")
+//         inventory.concat(new Array(3).fill("Coal"))
+//     }  else if (coordinates[2] <= -20 && [2,3,4].includes(move)) {
+//         appendOutput("You found Coal but need at least a Wooden Pickaxe");
+//     }
+// }
+
 function mine() {
-    const move = Math.floor(Math.random() * 5) + 1
-    if (coordinates[2] <= -50 && move === 1) {
-        appendOutput("You mined a Diamond")
-        inventory.push("Diamond")
-    } else if (coordinates[2] <= -50 && move === 1 && mining_strength < 3) {
-        appendOutput("You found a Diamond but need at least an Iron Pickaxe")
-    } else if (coordinates[2] <= -30  && [2,3].includes(move)) {
-        appendOutput("You mined three Gold Ore")
-        inventory.concat(new Array(3).fill("Gold Ore"))
-    } else if (coordinates[2] <= -30  && [2,3].includes(move) && mining_strength < 3) {
-        appendOutput("You found Gold but need at least an Iron Pickaxe")
-    } else if (coordinates[2] <= -20 && [2,3,4].includes(move)) {
-        appendOutput("You mined three Iron Ore")
-        inventory.concat(new Array(3).fill("Iron Ore"))
-    } else if (coordinates[2] <= -20 && [2,3,4].includes(move) && mining_strength < 2) {
-        appendOutput("You found Iron but need at least a Cobblestone Pickaxe")
-    } else if (coordinates[2] <= -10 && [2,3,4,5].includes(move)) {
-        appendOutput("You mined three Coal")
-        inventory.concat(new Array(3).fill("Coal"))
-    } else if (coordinates[2] <= -10 && [2,3,4,5].includes(move) && mining_strength < 1) {
-        appendOutput("You found Gold but need at least a Wooden Pickaxe")
+    const miningRules = [
+        {
+            depth: -50,
+            moves: [1],
+            requiredStrength: 3,
+            reward: { item: "Diamond", amount: 1 },
+            failureMessage: "You found a Diamond but need at least an Iron Pickaxe",
+        },
+        {
+            depth: -30,
+            moves: [2, 3],
+            requiredStrength: 3,
+            reward: { item: "Gold Ore", amount: 3 },
+            failureMessage: "You found Gold but need at least an Iron Pickaxe",
+        },
+        {
+            depth: -20,
+            moves: [2, 3, 4],
+            requiredStrength: 2,
+            reward: { item: "Iron Ore", amount: 3 },
+            failureMessage: "You found Iron but need at least a Cobblestone Pickaxe",
+        },
+        {
+            depth: -10,
+            moves: [2, 3, 4, 5],
+            requiredStrength: 1,
+            reward: { item: "Coal", amount: 3 },
+            failureMessage: "You found Coal but need at least a Wooden Pickaxe",
+        },
+    ];
+
+    const move = Math.floor(Math.random() * 5) + 1;
+
+    for (const rule of miningRules) {
+        if (coordinates[2] <= rule.depth && rule.moves.includes(move)) {
+            if (mining_strength >= rule.requiredStrength) {
+                appendOutput(`You mined ${rule.reward.amount} ${rule.reward.item}(s)`);
+                inventory.push(...new Array(rule.reward.amount).fill(rule.reward.item));
+            } else {
+                appendOutput(rule.failureMessage);
+            }
+            return; // Exit after the first match
+        }
     }
 }
+
 
 const handleCoordinates = () => {
     if (coordinates[2] <= -64) {
@@ -325,7 +392,7 @@ const handleSmelt = (command) => {
             } else if (inventory.includes('Coal')) {
                 inventory  = drop(inventory, 'Coal');
             } else {
-                console.log('You cannot smelt that.');
+                appendOutput('You cannot smelt that.');
                 return;
             }
             inventory.push('Gold Ingot');
@@ -338,11 +405,11 @@ const handleSmelt = (command) => {
             } else if (inventory.includes('Coal')) {
                 inventory  = drop(inventory, 'Coal');
             } else {
-                console.log('You cannot smelt that.');
+                appendOutput('You cannot smelt that.');
                 return;
             }
             inventory.push('Iron Ingot');
-            console.log('You smelted Iron!');
+            appendOutput('You smelted Iron!');
         case "exit":
             gameState = "idle"
         defualt:
@@ -381,11 +448,11 @@ const handleCraft = (command) => {
         appendOutput("You left the crafting.")
         gameState = "idle"
         return;
-    } else if (!Object.keys(recipes).includes(item)) {
+    } else if (!Object.keys(items).includes(item)) {
         appendOutput("That's not an item")
         return;
     } else {
-        recipe = recipes[item]
+        recipe = recipes[item]["recipe"]
         craft(recipe)
         inventory.push(item)
         appendOutput(`You crafted ${item}`)
@@ -412,6 +479,9 @@ const handleCommand = (command) => {
         case "craft":
             handleCraft(command);
             return;
+        case "equip":
+            handleEquip(command)
+            return;
         default:
             break;
             // appendOutput("Would you like to explore, mine, or attack?");
@@ -436,8 +506,11 @@ const handleCommand = (command) => {
         case "craft":
             startCraft();
             break;
+        case "equip":
+            startEquip();
+            break;
         case "help":
-            appendOutput("Available commands: explore, mine, attack, smelt, inventory, craft, help.");
+            appendOutput("Commands: explore, mine, attack, smelt, inventory, craft, equip, & help.");
             break;
         default:
             appendOutput("I don't understand that command.");
