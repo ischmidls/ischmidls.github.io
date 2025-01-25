@@ -11321,7 +11321,12 @@ const items = {
 };
 
 
-
+const toTitleCase = (str) =&gt; {
+    return str.replace(
+        /&#92;w&#92;S*/g,
+        text =&gt; text.charAt(0).toUpperCase() + text.substring(1).toLowerCase()
+    );
+}
 
 const appendOutput = (text) =&gt; {
     output.textContent += `&#92;n${text}`;
@@ -11343,6 +11348,9 @@ const handleEquip = (command) =&gt; {
         appendOutput(
             `Equipped ${command}. Attack damage is now ${player_attack_damage}, and mining strength is ${mining_strength}.`
         );
+    } else if (command.toLowerCase() === &quot;exit&quot;) {
+        gameState = &quot;idle&quot;
+        appendOutput(&quot;Exiting equip&quot;)
     } else {
         appendOutput(`Item &quot;${command}&quot; not found.`);
     }
@@ -11606,11 +11614,12 @@ const startSmelt = () =&gt; {
         return;
     };
     gameState = &quot;smelt&quot;; // Transition to the explore state
-    appendOutput(`Would you like to smelt Iron or Gold? (or exit)`);
+    appendOutput(`Would you like to smelt Iron Ore or Gold Ore? (or exit)`);
 };
 
 const handleSmelt = (command) =&gt; {
     switch (command.toLowerCase()) {
+        case &quot;gold&quot;:
         case &quot;gold ore&quot;:
             inventory  = drop(inventory, &#39;Gold Ore&#39;);
             if (inventory.includes(&#39;Planks&#39;)) {
@@ -11624,6 +11633,7 @@ const handleSmelt = (command) =&gt; {
             inventory.push(&#39;Gold Ingot&#39;);
             appendOutput(&#39;You smelted Gold!&#39;);
             break;
+        case &quot;iron&quot;:
         case &quot;iron ore&quot;:
             inventory  = drop(inventory, &#39;Iron Ore&#39;);
             if (inventory.includes(&#39;Planks&#39;)) {
@@ -11636,8 +11646,11 @@ const handleSmelt = (command) =&gt; {
             }
             inventory.push(&#39;Iron Ingot&#39;);
             appendOutput(&#39;You smelted Iron!&#39;);
+            break;
         case &quot;exit&quot;:
             gameState = &quot;idle&quot;
+            appendOutput(&quot;You exited smelting&quot;)
+            break;
         defualt:
             appendOutput(&quot;Something went wrong&quot;)
             gameState = &quot;idle&quot;
@@ -11647,13 +11660,6 @@ const handleSmelt = (command) =&gt; {
 const startCraft  = () =&gt; {
     appendOutput(&quot;Would you like to craft a(n) wooden/cobblestone/iron/gold pickaxe/sword? (or exit)&quot;)
     gameState = &quot;craft&quot;
-}
-
-function toTitleCase(str) {
-    return str.replace(
-        /&#92;w&#92;S*/g,
-        text =&gt; text.charAt(0).toUpperCase() + text.substring(1).toLowerCase()
-    );
 }
 
 function craft(recipe) {
@@ -11678,7 +11684,7 @@ const handleCraft = (command) =&gt; {
         appendOutput(&quot;That&#39;s not an item&quot;)
         return;
     } else {
-        recipe = recipes[item][&quot;recipe&quot;]
+        recipe = items[item][&quot;recipe&quot;]
         craft(recipe)
         inventory.push(item)
         appendOutput(`You crafted ${item}`)
@@ -11687,7 +11693,7 @@ const handleCraft = (command) =&gt; {
 }
 
 const handleCommand = (command) =&gt; {
-    appendOutput(`Coordinates: ${coordinates}`)
+    appendOutput(`&#92;n&#92;n&#92;nCoordinates: ${coordinates}`)
     appendOutput(`HP: ${player_health}`)
     switch (gameState) {
         case &quot;explore&quot;:
