@@ -11667,8 +11667,8 @@ function craft(recipe) {
         appendOutput(&quot;You need materials.&quot;)
         return;
     } else {
-        for (item in recipe) {
-            drop(inventory, item)
+        for (let item of recipe) {
+            inventory = drop(inventory, item)
         }
     }
 }
