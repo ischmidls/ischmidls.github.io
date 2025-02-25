@@ -13,6 +13,132 @@
 	</author>
 	
 	<entry>
+		<title>mix list</title>
+		<link href="https://ischmidls.github.io/posts/pages/mix/"/>
+		<updated>2022-06-06T00:00:00Z</updated>
+		<id>https://ischmidls.github.io/posts/pages/mix/</id>
+		<content type="html">
+		  &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Randomly Mix Elements&lt;/title&gt;
+  &lt;script&gt;
+    function mixElements() {
+      let inputString = document.getElementById(&quot;inputString&quot;).value;
+      
+      // Split the input string into an array
+      let elementsArray = inputString.split(&quot;,&quot;);
+      
+      // Randomly shuffle the elements array
+      for (let i = elementsArray.length - 1; i &gt; 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        let temp = elementsArray[i];
+        elementsArray[i] = elementsArray[j];
+        elementsArray[j] = temp;
+      }
+      
+      // Join the elements array into a mixed-up string
+      let mixedString = elementsArray.join(&quot;,&quot;);
+      
+      // Display the mixed-up string
+      document.getElementById(&quot;result&quot;).innerHTML = mixedString;
+    }
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;label for=&quot;inputString&quot;&gt;Enter a comma-delimited string:&lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;inputString&quot; /&gt;
+  &lt;button onclick=&quot;mixElements()&quot;&gt;Mix Elements&lt;/button&gt;
+  &lt;p id=&quot;result&quot;&gt;&lt;/p&gt;
+  &lt;script src=&quot;https://gist.github.com/ischmidls/f68dba52c7191c785afb11df89f92749.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fpages%2Fmix%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=mix%20list&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>number paragraphs</title>
+		<link href="https://ischmidls.github.io/posts/pages/numberparagraphs/"/>
+		<updated>2022-06-06T00:00:00Z</updated>
+		<id>https://ischmidls.github.io/posts/pages/numberparagraphs/</id>
+		<content type="html">
+		  &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;Print Substring&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;label for=&quot;end&quot;&gt;Enter an integer (N):&lt;/label&gt;
+	&lt;input type=&quot;number&quot; id=&quot;end&quot; /&gt;
+	&lt;button onclick=&quot;printSubstring()&quot;&gt;Print Substring&lt;/button&gt;
+    &lt;p&gt;&lt;em&gt;Enumerate paragraphs with (§N) where N ∈ 0, 1, 2, 3, ...&lt;/em&gt;&lt;/p&gt;
+	&lt;p id=&quot;output&quot;&gt;&lt;/p&gt;
+	&lt;script&gt;
+		function printSubstring() {
+			const end = document.getElementById(&quot;end&quot;).value;
+			let output = &quot;&quot;;
+			for (let i = 1; i &lt;= end; i++) {
+				output += `(§${i})&lt;br&gt;`;
+			}
+			document.getElementById(&quot;output&quot;).innerHTML = output;
+		}
+	&lt;/script&gt;
+	&lt;script src=&quot;https://gist.github.com/ischmidls/7735d0129d13fbc8854a8477b0bf033e.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fpages%2Fnumberparagraphs%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=number%20paragraphs&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>tab away</title>
+		<link href="https://ischmidls.github.io/posts/pages/tabaway/"/>
+		<updated>2022-06-06T00:00:00Z</updated>
+		<id>https://ischmidls.github.io/posts/pages/tabaway/</id>
+		<content type="html">
+		  &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Remove Tabs&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;label for=&quot;input-text&quot;&gt;Enter text:&lt;/label&gt;
+  &lt;textarea id=&quot;input-text&quot; rows=&quot;4&quot; cols=&quot;50&quot;&gt;&lt;/textarea&gt;&lt;br /&gt;&lt;br /&gt;
+  &lt;button onclick=&quot;removeTabs()&quot;&gt;Remove Tabs&lt;/button&gt;
+  &lt;h2&gt;Result:&lt;/h2&gt;
+  &lt;div id=&quot;output&quot;&gt;&lt;/div&gt;
+
+  &lt;script&gt;
+    function removeTabs() {
+      const input = document.getElementById(&quot;input-text&quot;).value;
+      const output = input.replace(/&#92;t/g, &quot;&quot;);
+      const formattedOutput = output.replace(/&#92;n/g, &quot;&lt;br&gt;&quot;);
+      document.getElementById(&quot;output&quot;).innerHTML = formattedOutput;
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fpages%2Ftabaway%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=tab%20away&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
 		<title>math education taxonomy</title>
 		<link href="https://ischmidls.github.io/posts/pages/mathtax/"/>
 		<updated>2022-07-01T00:00:00Z</updated>
@@ -802,44 +928,6 @@
 	</entry>
 	
 	<entry>
-		<title>count lines</title>
-		<link href="https://ischmidls.github.io/posts/pages/countlines/"/>
-		<updated>2023-01-01T00:00:00Z</updated>
-		<id>https://ischmidls.github.io/posts/pages/countlines/</id>
-		<content type="html">
-		  &lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-	&lt;title&gt;Print Substring&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-	&lt;label for=&quot;end&quot;&gt;Enter an integer (N):&lt;/label&gt;
-	&lt;input type=&quot;number&quot; id=&quot;end&quot; /&gt;
-	&lt;button onclick=&quot;printSubstring()&quot;&gt;Print Substring&lt;/button&gt;
-    &lt;p&gt;&lt;em&gt;Enumerate paragraphs with (§N) where N ∈ 0, 1, 2, 3, ...&lt;/em&gt;&lt;/p&gt;
-	&lt;p id=&quot;output&quot;&gt;&lt;/p&gt;
-	&lt;script&gt;
-		function printSubstring() {
-			const end = document.getElementById(&quot;end&quot;).value;
-			let output = &quot;&quot;;
-			for (let i = 1; i &lt;= end; i++) {
-				output += `(§${i})&lt;br&gt;`;
-			}
-			document.getElementById(&quot;output&quot;).innerHTML = output;
-		}
-	&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
-			
-				
-				
-				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fpages%2Fcountlines%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=count%20lines&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
-			
-		</content>
-	</entry>
-	
-	<entry>
 		<title>count split</title>
 		<link href="https://ischmidls.github.io/posts/pages/countsplit/"/>
 		<updated>2023-01-01T00:00:00Z</updated>
@@ -859,33 +947,33 @@
     &lt;input type=&quot;text&quot; id=&quot;startString&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
     &lt;label for=&quot;endString&quot;&gt;End string:&lt;/label&gt;
     &lt;input type=&quot;text&quot; id=&quot;endString&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
-    &lt;button onclick=&quot;splitString()&quot;&gt;Split string&lt;/button&gt;&lt;br /&gt;&lt;br /&gt;
+    &lt;button onclick=&quot;countSplit()&quot;&gt;Split string&lt;/button&gt;&lt;br /&gt;&lt;br /&gt;
     &lt;label for=&quot;output&quot;&gt;Output:&lt;/label&gt;
     &lt;textarea id=&quot;output&quot; rows=&quot;10&quot; cols=&quot;50&quot;&gt;&lt;/textarea&gt;
     
     &lt;script&gt;
-      function splitString() {
+      function countSplit() {
         try {
-          var input = document.getElementById(&quot;inputString&quot;).value;
-          var max = parseInt(document.getElementById(&quot;maxChar&quot;).value);
-          var startString = document.getElementById(&quot;startString&quot;).value;
-          var endString = document.getElementById(&quot;endString&quot;).value;
-          var substrings = [];
+          let input = document.getElementById(&quot;inputString&quot;).value;
+          let max = parseInt(document.getElementById(&quot;maxChar&quot;).value);
+          let startString = document.getElementById(&quot;startString&quot;).value;
+          let endString = document.getElementById(&quot;endString&quot;).value;
+          let substrings = [];
     
-          var i = 0;
+          let i = 0;
           while (i &lt; input.length) {
-            var end = i + max;
+            let end = i + max;
             if (end &gt;= input.length) {
               end = input.length;
             } else {
-              var lastPunctuation = input.lastIndexOf(&#39;.&#39;, end);
+              let lastPunctuation = input.lastIndexOf(&#39;.&#39;, end);
               if (lastPunctuation !== -1) {
                 end = lastPunctuation + 1; // Include the punctuation itself in the substring
               }
               // You can add more punctuation characters to consider here (e.g., !, ?)
             }
     
-            var substring = input.substring(i, end);
+            let substring = input.substring(i, end);
             substrings.push(startString + substring + endString);
             i = end;
           }
@@ -898,7 +986,7 @@
       }
     &lt;/script&gt;
     
-    
+    &lt;script src=&quot;https://gist.github.com/ischmidls/b283bb94b5bf99879418ccc8494818d4.js&quot;&gt;&lt;/script&gt;
 
   &lt;/body&gt;
 &lt;/html&gt;
@@ -979,92 +1067,6 @@
 				
 				
 				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fpages%2Ffirst%20sentence%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=first%20sentence&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
-			
-		</content>
-	</entry>
-	
-	<entry>
-		<title>mix list</title>
-		<link href="https://ischmidls.github.io/posts/pages/mix/"/>
-		<updated>2023-01-01T00:00:00Z</updated>
-		<id>https://ischmidls.github.io/posts/pages/mix/</id>
-		<content type="html">
-		  &lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Randomly Mix Elements&lt;/title&gt;
-  &lt;script&gt;
-    function mixElements() {
-      var inputString = document.getElementById(&quot;inputString&quot;).value;
-      
-      // Split the input string into an array
-      var elementsArray = inputString.split(&quot;,&quot;);
-      
-      // Randomly shuffle the elements array
-      for (var i = elementsArray.length - 1; i &gt; 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = elementsArray[i];
-        elementsArray[i] = elementsArray[j];
-        elementsArray[j] = temp;
-      }
-      
-      // Join the elements array into a mixed-up string
-      var mixedString = elementsArray.join(&quot;,&quot;);
-      
-      // Display the mixed-up string
-      document.getElementById(&quot;result&quot;).innerHTML = mixedString;
-    }
-  &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;label for=&quot;inputString&quot;&gt;Enter a comma-delimited string:&lt;/label&gt;
-  &lt;input type=&quot;text&quot; id=&quot;inputString&quot; /&gt;
-  &lt;button onclick=&quot;mixElements()&quot;&gt;Mix Elements&lt;/button&gt;
-  &lt;p id=&quot;result&quot;&gt;&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
-			
-				
-				
-				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fpages%2Fmix%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=mix%20list&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
-			
-		</content>
-	</entry>
-	
-	<entry>
-		<title>tab away</title>
-		<link href="https://ischmidls.github.io/posts/pages/tabaway/"/>
-		<updated>2023-01-01T00:00:00Z</updated>
-		<id>https://ischmidls.github.io/posts/pages/tabaway/</id>
-		<content type="html">
-		  &lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Remove Tabs&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;label for=&quot;input-text&quot;&gt;Enter text:&lt;/label&gt;
-  &lt;textarea id=&quot;input-text&quot; rows=&quot;4&quot; cols=&quot;50&quot;&gt;&lt;/textarea&gt;&lt;br /&gt;&lt;br /&gt;
-  &lt;button onclick=&quot;removeTabs()&quot;&gt;Remove Tabs&lt;/button&gt;
-  &lt;h2&gt;Result:&lt;/h2&gt;
-  &lt;div id=&quot;output&quot;&gt;&lt;/div&gt;
-
-  &lt;script&gt;
-    function removeTabs() {
-      const input = document.getElementById(&quot;input-text&quot;).value;
-      const output = input.replace(/&#92;t/g, &quot;&quot;);
-      const formattedOutput = output.replace(/&#92;n/g, &quot;&lt;br&gt;&quot;);
-      document.getElementById(&quot;output&quot;).innerHTML = formattedOutput;
-    }
-  &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
-			
-				
-				
-				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fpages%2Ftabaway%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=tab%20away&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -1186,35 +1188,35 @@
 	</entry>
 	
 	<entry>
-		<title>occurance count</title>
-		<link href="https://ischmidls.github.io/posts/pages/occurcount/"/>
+		<title>word plot</title>
+		<link href="https://ischmidls.github.io/posts/pages/plotwords/"/>
 		<updated>2023-02-01T00:00:00Z</updated>
-		<id>https://ischmidls.github.io/posts/pages/occurcount/</id>
+		<id>https://ischmidls.github.io/posts/pages/plotwords/</id>
 		<content type="html">
 		  &lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;
   &lt;head&gt;
     &lt;meta charset=&quot;utf-8&quot; /&gt;
     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css&quot; integrity=&quot;sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l&quot; crossorigin=&quot;anonymous&quot; /&gt;
+    &lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css&quot; integrity=&quot;sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l&quot; crossorigin=&quot;anonymous&quot;&gt; --&gt;
     &lt;!--&lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;--&gt;
     
-        &lt;title&gt;Word Count&lt;/title&gt;
+        &lt;title&gt;Word Plot&lt;/title&gt;
     &lt;script src=&quot;https://cdn.plot.ly/plotly-2.20.0.min.js&quot;&gt;&lt;/script&gt;
     &lt;script&gt;
       function countWords() {
         // Get the input string
-        var inputString = document.getElementById(&quot;inputString&quot;).value.toLowerCase();
+        let inputString = document.getElementById(&quot;inputString&quot;).value.toLowerCase();
         // Split the input string into an array of words
-        var wordsArray = inputString.match(/[a-zA-Z0-9]+/g);
+        let wordsArray = inputString.match(/[a-zA-Z0-9]+/g);
         // Create an empty object to hold the word counts
-        var wordCounts = {};
+        let wordCounts = {};
         // Loop through the words and count their occurrences
         if (wordsArray === null) {
           alert(&quot;Silly, you didn&#39;t put any words in!&quot;)
           throw new Error(&quot;user gave no words&quot;)
         }
-        for (var i = 0; i &lt; wordsArray.length; i++) {
+        for (let i = 0; i &lt; wordsArray.length; i++) {
           if (wordCounts[wordsArray[i]]) {
             wordCounts[wordsArray[i]]++;
           } else {
@@ -1222,8 +1224,8 @@
           }
         }
         // Convert the word counts object into an array of pairs
-        var pairsArray = [];
-        for (var word in wordCounts) {
+        let pairsArray = [];
+        for (let word in wordCounts) {
           pairsArray.push([word, wordCounts[word]]);
         }
         // Return the array of pairs
@@ -1233,18 +1235,18 @@
       function displayWordCounts() {
         // Call the countWords function and get the array of pairs
         try {
-          var pairsArray = countWords();
+          let pairsArray = countWords();
         }
         catch(err) { console.log(err.message)}
         // Get the output element
-        var outputElement = document.getElementById(&quot;output&quot;);
+        let outputElement = document.getElementById(&quot;output&quot;);
         // Clear the output element
         outputElement.innerHTML = &quot;&lt;h2&gt;Counts&lt;/h2&gt;&quot;;
         // Loop through the pairs array and add each pair to the output element
-        for (var i = 0; i &lt; pairsArray.length; i++) {
-          var pair = pairsArray[i];
-          var word = pair[0];
-          var count = pair[1];
+        for (let i = 0; i &lt; pairsArray.length; i++) {
+          let pair = pairsArray[i];
+          let word = pair[0];
+          let count = pair[1];
           outputElement.innerHTML += word + &quot;: &quot; + count + &quot; &lt;br&gt; &quot;;
         }
         displayPlotlyPairs(pairsArray);
@@ -1252,16 +1254,16 @@
 
       function displayPlotlyPairs(pairsArray) {
         // Extract the words and counts from the pairs array
-        var words = pairsArray.map(pair =&gt; pair[0]);
-        var counts = pairsArray.map(pair =&gt; pair[1]);
+        let words = pairsArray.map(pair =&gt; pair[0]);
+        let counts = pairsArray.map(pair =&gt; pair[1]);
         // Create the trace for the bar chart
-        var trace = {
+        let trace = {
           x: words,
           y: counts,
           type: &quot;bar&quot;
         };
         // Create the layout for the chart
-        var layout = {
+        let layout = {
           title: &quot;Word Frequencies&quot;,
           xaxis: {
             title: &quot;Words&quot;,
@@ -1274,7 +1276,7 @@
           height: 1500,
         };
         // Create the data array
-        var data = [trace];
+        let data = [trace];
         // Display the chart using Plotly.newPlot
         Plotly.newPlot(&quot;chartDiv&quot;, data, layout);
       }
@@ -1310,15 +1312,16 @@
     &lt;script src=&quot;https://code.jquery.com/jquery-3.4.1.min.js&quot;&gt;&lt;/script&gt;
     &lt;script src=&quot;https://code.jquery.com/ui/1.12.1/jquery-ui.js&quot;&gt;&lt;/script&gt;
     &lt;script src=&quot;https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js&quot; integrity=&quot;sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js&quot; integrity=&quot;sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+    &lt;!-- &lt;script src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js&quot; integrity=&quot;sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt; --&gt;
     &lt;!--&lt;script src=&quot;js/main.js&quot;&gt;&lt;/script&gt;--&gt;
   &lt;/body&gt;
+  &lt;script src=&quot;https://gist.github.com/ischmidls/3ac3d11a3577e610092404d7efa46380.js&quot;&gt;&lt;/script&gt;
 &lt;/html&gt;
 
 			
 				
 				
-				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fpages%2Foccurcount%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=occurance%20count&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fpages%2Fplotwords%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=word%20plot&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -5274,7 +5277,7 @@ animate();
       &lt;/tbody&gt;
     &lt;/table&gt;
   &lt;/div&gt;
-
+  &lt;script src=&quot;https://gist.github.com/ischmidls/042a1cbea905063c36e900a417fefa8b.js&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 
@@ -10667,6 +10670,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
       document.getElementById(&#39;outputText&#39;).value = finalText;
     }
   &lt;/script&gt;
+  &lt;script src=&quot;https://gist.github.com/ischmidls/fb830fa41501392214c9e502e71a8e46.js&quot;&gt;&lt;/script&gt;
 
 &lt;/body&gt;
 &lt;/html&gt;
@@ -10710,14 +10714,14 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
     &lt;script&gt;
         function removeExpressions() {
             // Get the input text
-            var inputText = document.getElementById(&quot;inputText&quot;).value;
+            let inputText = document.getElementById(&quot;inputText&quot;).value;
             
             // Define the regular expression to match the expression between a period and a comma without spaces
-            var regex1 = /(&#92;. )(?![^,]*&#92;s)[^.,]*, /g;
-            var regex2 = /&#92;n(?![^,]*&#92;s)[^.,]*, /g;
+            let regex1 = /(&#92;. )(?![^,]*&#92;s)[^.,]*, /g;
+            let regex2 = /&#92;n(?![^,]*&#92;s)[^.,]*, /g;
             
             // Replace all instances of the second expression with a newline character
-            var editedText = inputText.replace(regex2, &quot;&#92;n&quot;);
+            let editedText = inputText.replace(regex2, &quot;&#92;n&quot;);
 
             // Remove all instances of the first expression
             editedText = editedText.replace(regex1, &quot;. &quot;);
@@ -10731,6 +10735,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
             document.getElementById(&quot;outputText&quot;).value = editedText;
         }
     &lt;/script&gt;
+    &lt;script src=&quot;https://gist.github.com/ischmidls/33ecbc1b03f52ad13295bb0cf9abfcab.js&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 
@@ -10939,6 +10944,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
     &lt;button onclick=&quot;calculateAndDisplaySequence()&quot;&gt;Calculate Inverse Sequence&lt;/button&gt;&lt;br /&gt;&lt;br /&gt;
 
     &lt;div id=&quot;output&quot;&gt;&lt;/div&gt;
+    &lt;script src=&quot;https://gist.github.com/ischmidls/73b99e6f1f1f273e72442c1efc36efbd.js&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 
@@ -11102,6 +11108,7 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
     &lt;button onclick=&quot;findDivisorsAndPrimes()&quot;&gt;Find&lt;/button&gt;
     &lt;p id=&quot;divisors&quot;&gt;&lt;/p&gt;
     &lt;p id=&quot;primes&quot;&gt;&lt;/p&gt;
+    &lt;script src=&quot;https://gist.github.com/ischmidls/0c3e254f052768d0df8d49e283478a56.js&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 
