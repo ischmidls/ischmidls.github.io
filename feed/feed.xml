@@ -10724,6 +10724,200 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 	</entry>
 	
 	<entry>
+		<title>getting through caclulus</title>
+		<link href="https://ischmidls.github.io/posts/calculustrap/"/>
+		<updated>2023-07-30T00:00:00Z</updated>
+		<id>https://ischmidls.github.io/posts/calculustrap/</id>
+		<content type="html">
+		  &lt;p&gt;The previews that got me through lower division calculus and led me
+    to algebraic topology then algebraic geometry.&lt;/p&gt;
+    &lt;ul&gt;
+    &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.ms.uky.edu/~droyster/courses/spring98/math2242/classnotes6.pdf&quot;&gt;“Fundamental
+    Theorems of Vector Calculus”, David Royster, 1996&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;Intuitive without lacking rigor: &lt;a href=&quot;https://www.grc.nasa.gov/WWW/k-12/Numbers/Math/documents/Tensors_TM2002211716.pdf&quot;&gt;&lt;strong&gt;“Intro
+    to Tensors for Students of Physics and Engineering”&lt;/strong&gt;, NASA,
+    Joseph Kolecki, 2002&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://math.uchicago.edu/~may/REU2012/REUPapers/Presman.pdf&quot;&gt;&lt;strong&gt;“Stoke’s
+    Theorem on Manifolds”&lt;/strong&gt;, Rick Presman, 2012&lt;/a&gt;&lt;/p&gt;
+    &lt;ul&gt;
+    &lt;li&gt;Oliver Knill &lt;a href=&quot;https://people.math.harvard.edu/~knill/teaching/summer2020/handouts/lecture25.pdf&quot;&gt;Calculus
+    in four dimensions&lt;/a&gt;.&lt;/li&gt;
+    &lt;/ul&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;One of my favorite &lt;a href=&quot;https://www.math.purdue.edu/~arapura/preprints/diffforms.pdf&quot;&gt;Introduction
+    to differential forms&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;An ok &lt;a href=&quot;https://github.com/danielvoconnor/calc_on_manifolds_intuition/blob/main/CalcOnManifolds_Intuition_Tufte.pdf&quot;&gt;Calculus
+    on Manifolds Intuition&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;Brief but nice &lt;a href=&quot;https://bpb-us-w2.wpmucdn.com/sites.wustl.edu/dist/3/2139/files/2019/09/vectorspacesmvcalc.pdf&quot;&gt;Intro
+    Vectors, Multivariable, Topology&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://web.iitd.ac.in/~pmvs/courses/mcl702/notation.pdf&quot;&gt;A Primer
+    on Index Notation John Crimaldi&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://web.ma.utexas.edu/users/sl55444/Archive/SVD.pdf&quot;&gt;Notes:
+    Spectral theorems, SVD, and Quadratic forms&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://web.williams.edu/Mathematics/lg5/Rota.pdf&quot;&gt;Ten
+    Lessons I Wish I Had Learned Before I Started Teaching, Differential
+    Equations, Gian-Carlo Rota&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2 id=&quot;poincare-conjecture&quot;&gt;Poincare Conjecture&lt;/h2&gt;
+    &lt;h3 id=&quot;thurston&quot;&gt;Thurston&lt;/h3&gt;
+    &lt;ul&gt;
+    &lt;li&gt;Thurston, William (1982). &lt;a href=&quot;http://dx.doi.org/10.1090/S0273-0979-1982-15003-0&quot;&gt;“Three
+    dimensional manifolds, Kleinian groups and hyperbolic geometry”&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Hamilton, Richard (1982). &lt;a href=&quot;https://projecteuclid.org/journals/journal-of-differential-geometry/volume-17/issue-2/Three-manifolds-with-positive-Ricci-curvature/10.4310/jdg/1214436922.full&quot;&gt;Three-manifolds
+    with positive Ricci curvature. J. Differential Geometry 17 , no. 2,
+    255–306.&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Hamilton, Richard (1986). &lt;a href=&quot;https://projecteuclid.org/journals/journal-of-differential-geometry/volume-24/issue-2/Four-manifolds-with-positive-curvature-operator/10.4310/jdg/1214440433.full&quot;&gt;Four-manifolds
+    with positive curvature operator. J. Differential Geom. 24 , no. 2,
+    153–179.&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Hamilton, Richard (1986). &lt;a href=&quot;https://math.stackexchange.com/a/1069947/1098426&quot;&gt;The Ricci flow
+    on surfaces. Mathematics and general relativity, 237–262, Contemp.
+    Math., 71, Amer. Math. Soc., Providence, RI, 1988.&lt;/a&gt; ### Perelman&lt;/li&gt;
+    &lt;li&gt;Perelman, Grisha (2002). &lt;a href=&quot;https://arxiv.org/abs/math/0211159&quot;&gt;“The entropy formula for the
+    Ricci flow and its geometric applications”&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Perelman, Grisha (2003). &lt;a href=&quot;https://arxiv.org/abs/math/0303109&quot;&gt;“Ricci flow with surgery on
+    three-manifolds”&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Perelman, Grisha (2003). &lt;a href=&quot;https://arxiv.org/abs/math/0307245&quot;&gt;“Finite extinction time for
+    the solutions to the Ricci flow on certain three-manifolds”&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fcalculustrap%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=getting%20through%20caclulus&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>from logic to geometry</title>
+		<link href="https://ischmidls.github.io/posts/abstracttrap/"/>
+		<updated>2023-08-30T00:00:00Z</updated>
+		<id>https://ischmidls.github.io/posts/abstracttrap/</id>
+		<content type="html">
+		  &lt;p&gt;How logic converted me to geometry.&lt;/p&gt;
+&lt;h2 id=&quot;constructive-logic&quot;&gt;Constructive Logic&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1903.04625.pdf&quot;&gt;&lt;strong&gt;Finite
+semantics for fragments of intuitionistic logic&lt;/strong&gt;, Felipe S.
+Albarelli and Rodolfo C. Ertola-Biraben&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.researchgate.net/publication/243704264_Intuitionistic_Logic_Model_Theory_and_Forcing&quot;&gt;&lt;strong&gt;Intuitionistic
+Logic Model Theory and Forcing&lt;/strong&gt;, Melvin Fitting, 1969&lt;/a&gt; . . .
+Again, emphasis on Frege’s project rather than topological approach to
+forcing&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://publish.uwo.ca/~jbell/catlogprime.pdf&quot;&gt;John
+Bell, &lt;strong&gt;The development of categorical logic&lt;/strong&gt;&lt;/a&gt; a
+historical look into categorical logic&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://pointlesstopology.com/the-point-of-pointless-topology.pdf&quot;&gt;&lt;strong&gt;THE
+POINT OF POINTLESS TOPOLOGY&lt;/strong&gt;, PETER JOHNSTONE, 1983&lt;/a&gt; using
+locales (duals of &lt;em&gt;frames&lt;/em&gt; — complete distributive lattices) to
+generalize topology to topos and thus to constructive math . . . not
+just topology for logicians&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.cs.bham.ac.uk/~sjv/tvcl.pdf&quot;&gt;&lt;strong&gt;Topology via
+Constructive Logic&lt;/strong&gt;, Steven Vickers, 1996&lt;/a&gt; . . . observe
+continuity through merely using reason as in programming
+computers&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;topos-and-homotopy&quot;&gt;Topos and Homotopy&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://ahilado.wordpress.com/2017/04/25/grothendiecks-relative-point-of-view/&quot;&gt;Grothendieck’s
+Relative Point of View (Base Schemes), Hilado&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://hott.github.io/book/hott-online-1404-g79e6d60.pdf&quot;&gt;HoTT:
+Homotopy Type Theory&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://math.jhu.edu/~eriehl/context.pdf&quot;&gt;&lt;strong&gt;CATEGORY THEORY
+IN CONTEXT&lt;/strong&gt;, Emily Riehl, 2016&lt;/a&gt; made available by Riehl&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;advanced but comprehensive pure category theory&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/math/9802029&quot;&gt;&lt;strong&gt;Categorification&lt;/strong&gt;,
+John Baez, 1998&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;-&lt;a href=&quot;https://arxiv.org/abs/2303.02603&quot;&gt;&lt;strong&gt;Homotopy
+Cardinality via Extrapolation of Morava-Euler Characteristics&lt;/strong&gt;,
+[Lior
+Yanovski](https://arxiv.org/search/math?searchtype=author&amp;amp;query=Yanovski%2C+L)&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://publish.uwo.ca/~jbell/topnotes.pdf&quot;&gt;&lt;strong&gt;NOTES ON
+TOPOSES AND LOCAL SET THEORIES&lt;/strong&gt;, JOHN L. BELL, 1992: Revised
+2020&lt;/a&gt; made available by Bell. Approach Topos through logic rather
+than categories or topology&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/1305.3835&quot;&gt;&lt;strong&gt;“Sets in
+homotopy type theory”&lt;/strong&gt;, Egbert Rijke &amp;amp; Bas Spitters&lt;/a&gt;
+marries topos with homotopy types.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.cambridge.org/cr/files/1813/6680/4928/SIMMONS-CATS-BIGSOL.pdf&quot;&gt;&lt;strong&gt;An
+Introduction to Category Theory: The Solutions&lt;/strong&gt;, Harold Simmons,
+18 September 2011&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.3blue1brown.com/content/blog/exact-sequence-picturebook/PuzzlingThroughExactSequences.pdf&quot;&gt;&lt;strong&gt;Puzzling
+Through Exact Sequence&lt;/strong&gt;&lt;/a&gt;, Ravi Vakil, 2021&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/2212.11082&quot;&gt;Intro Homotopy
+Types&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://arxiv.org/abs/2305.08768&quot;&gt;Intro String
+Diagrams&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.cse.chalmers.se/~peterd/papers/DependentTypesAtWork.pdf&quot;&gt;Dependent
+Types at Work&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://scholar.harvard.edu/files/rastern/files/algtoppreview.pdf&quot;&gt;Algebraic
+Topology Prieview, Harvard Prof. Rastern&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://math.ucr.edu/home/baez/topos.html&quot;&gt;Intro Topos,
+Baez&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;grothendieck-and-lawvere&quot;&gt;Grothendieck and Lawvere&lt;/h2&gt;
+&lt;p&gt;Who else if not Yoneda and Kan?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.ams.org/notices/200808/tx080800930p.pdf&quot;&gt;Who
+Is Alexander Grothendieck?&lt;/a&gt;, Winfried Scharlau&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://mathoverflow.net/questions/48622/has-the-mathematical-content-of-grothendiecks-r%c3%a9coltes-et-semailles-been-used&quot;&gt;Has
+the mathematical content of Grothendieck’s “Récoltes et Semailles” been
+used?&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.jmilne.org/math/xnotes/MOT.pdf&quot;&gt;Motives —
+Grothendieck’s Dream, Milne&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/Mathbiographies/mclarty1.pdf&quot;&gt;The
+Rising Sea: Grothendieck on simplicity and generality I,
+McLarty&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://maa.org/sites/default/files/pdf/upload_library/22/Ford/Dieudonne.pdf&quot;&gt;The
+Historical Developmentof Algebraic Geometry, J. Dieudonne&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.mat.uc.pt/~picado/lawvere/interview.pdf&quot;&gt;F.
+W. Lawvere, Interview&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://web.archive.org/web/20230311022049/https://www.acsu.buffalo.edu/~wlawvere/subject.html&quot;&gt;F.
+W. Lawvere, Subject Classification of Articles&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/mattearnshaw/lawvere&quot;&gt;F. W. Lawvere,
+Collected works&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;algebraic-geometry&quot;&gt;Algebraic Geometry&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://sections.maa.org/florida/proceedings/2001/fitchett.pdf&quot;&gt;Bezout’s
+Theorem: A taste of algebraic geometry, Fitchett&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://math.stackexchange.com/a/285355/1098426&quot;&gt;Self-study from
+“elementary algebra” to “algebraic geometry”, a historical
+route&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://math.stackexchange.com/a/257528/1098426&quot;&gt;Why
+study algebraic geometry? Theorems, conjectures, resources&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://math.stackexchange.com/a/22583/1098426&quot;&gt;Self-study from
+“differential” geometry &amp;amp; topology to algebraic
+geometry&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://mathoverflow.net/a/57019/502781&quot;&gt;“Best”
+textbook(s) for algebraic geometry&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://math.stackexchange.com/a/46523/1098426&quot;&gt;Intro
+texts on manifolds&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://math.stackexchange.com/a/46923/1098426&quot;&gt;Texts
+for calculus on manifolds (before topology of manifolds)&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.maths.ed.ac.uk/~v1ranick/papers/eisenbudharris.pdf&quot;&gt;The
+Geometry of Schemes, Eisenbud &amp;amp; Harris&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;the-undergraduate-essentials&quot;&gt;The Undergraduate Essentials&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://math.berkeley.edu/~apaulin/AbstractAlgebra.pdf&quot;&gt;&lt;strong&gt;Intro
+Algebra Notes&lt;/strong&gt;&lt;/a&gt;, Prof. Paulin, UC Berkeley&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.math.ucdavis.edu/~hunter/intro_analysis_pdf/intro_analysis.pdf&quot;&gt;&lt;strong&gt;Intro
+Real Analysis Notes&lt;/strong&gt;&lt;/a&gt;, Prof. Hunter, UC Davis&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.uio.no/studier/emner/matnat/math/MAT4500/h18/dokumenter/topology.pdf&quot;&gt;&lt;strong&gt;Intro
+Topology Notes&lt;/strong&gt;&lt;/a&gt;, Prof. Rognes, following Munkres&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fabstracttrap%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=from%20logic%20to%20geometry&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
 		<title>down with determinants</title>
 		<link href="https://ischmidls.github.io/posts/determinants/"/>
 		<updated>2023-10-13T00:00:00Z</updated>
@@ -12124,7 +12318,7 @@ input.addEventListener(&quot;keydown&quot;, (event) =&gt; {
 &lt;head&gt;&lt;/head&gt;
 &lt;body&gt;
   &lt;form onsubmit=&quot;return false;&quot;&gt;
-    &lt;label for=&quot;matrix&quot;&gt;Enter matrix:&lt;/label&gt;
+    &lt;label for=&quot;matrix&quot;&gt;Enter matrix of any dimension to multiply with its transpose:&lt;/label&gt;
     &lt;input type=&quot;text&quot; name=&quot;matrix&quot; id=&quot;matrix&quot; placeholder=&quot;[[1,2],[3,4]]&quot; /&gt;
     &lt;button type=&quot;button&quot; onclick=&quot;processMatrix()&quot;&gt;Submit&lt;/button&gt;
   &lt;/form&gt;
