@@ -130,7 +130,7 @@ http://scripts.sil.org/OFL
 SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
 -----------------------------------------------------------
 
-PREAMBLE
+
 The goals of the Open Font License (OFL) are to stimulate worldwide
 development of collaborative font projects, to support the font creation
 efforts of academic and linguistic communities, and to provide a free and
@@ -184,7 +184,7 @@ binary files as long as those fields can be easily viewed by the user.
 3) No Modified Version of the Font Software may use the Reserved Font
 Name(s) unless explicit written permission is granted by the corresponding
 Copyright Holder. This restriction only applies to the primary font name as
-presented to the users.
+shown to the users.
 
 4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
 Software shall not be used to promote, endorse or advertise any
@@ -204,7 +204,7 @@ not met.
 
 DISCLAIMER
 THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+SHOWN OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
 MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
 OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
 COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
@@ -294,7 +294,7 @@ furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, SHOWN OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
@@ -341,7 +341,6 @@ b,
 strong {
   font-weight: 700;
 }
-code,
 kbd,
 samp {
   font-family: monospace, monospace;
@@ -485,14 +484,12 @@ h6 {
 body,
 ol,
 p,
-/* pre, */
 ul {
   font-size: 1em;
   line-height: 1.5;
 }
 ol,
 p,
-/* /* pre, */ */
 ul {
   margin-bottom: 1.5em;
 }
@@ -527,14 +524,12 @@ h6 {
 body,
 ol,
 p,
-/* pre, */
 ul {
   font-size: 1rem;
   line-height: 1.6;
 }
 ol,
 p,
-/* pre, */
 ul {
   margin-bottom: 1.36rem;
 }
@@ -575,14 +570,12 @@ ul {
   body,
   ol,
   p,
-  /* pre, */
   ul {
     font-size: 1.1rem;
     line-height: 1.6;
   }
   ol,
   p,
-  /* pre, */
   ul {
     margin-bottom: 1.496rem;
   }
@@ -624,14 +617,12 @@ ul {
   body,
   ol,
   p,
-  /* pre, */
   ul {
     font-size: 1.2rem;
     line-height: 1.6;
   }
   ol,
   p,
-  /* pre, */
   ul {
     margin-bottom: 1.632rem;
   }
@@ -653,23 +644,14 @@ thead th {
 table {
   display: table;
 }
-code,
-/* pre, */
 table {
   overflow-x: auto;
 }
 pre {
   font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
 }
-/* pre:has(code:not([class])) {
-  background: #2d2d2d;
-} */
-/* pre code:not([class]) {
-  color: #ccc;
-  padding: 0;
-  overflow-x: scroll;
-} */
-/* code, */
+
+
 kbd {
   border-radius: 0.3em;
   color: #e2777a;
@@ -677,7 +659,7 @@ kbd {
   font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
   font-size: 90%;
 }
-/* code, */
+
 kbd {
   background: #2d2d2d;
 }
@@ -1041,42 +1023,7 @@ figure {
 figure img {
   display: block;
 }
-/* code[class*="language-"], */
-/* pre[class*="language-"] {
-  color: #ccc;
-  background: none;
-  font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  word-wrap: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-} */
-/* code[class*="language-"] {
-  padding: 0;
-} */
-/* pre[class*="language-"] {
-  padding: 1em;
-  margin: 0.5em 0;
-  overflow: auto;
-} */
-/* :not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background: #2d2d2d;
-}
-:not(pre) > code[class*="language-"] {
-  padding: 0.1em;
-  border-radius: 0.3em;
-  white-space: normal;
-} */
+
 .token.block-comment,
 .token.cdata,
 .token.comment,
