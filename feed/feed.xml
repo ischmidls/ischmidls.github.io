@@ -10961,6 +10961,87 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 	</entry>
 	
 	<entry>
+		<title>riemann sphere&#39;s field of fractions</title>
+		<link href="https://ischmidls.github.io/posts/spherefractions/"/>
+		<updated>2024-04-30T00:00:00Z</updated>
+		<id>https://ischmidls.github.io/posts/spherefractions/</id>
+		<content type="html">
+		  &lt;head&gt;
+    &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+    MathJax.Hub.Config({
+      jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
+      extensions: [&quot;tex2jax.js&quot;],
+      &quot;HTML-CSS&quot;: { preferredFont: &quot;TeX&quot;, availableFonts: [&quot;STIX&quot;,&quot;TeX&quot;] },
+      tex2jax: { inlineMath: [ [&quot;$&quot;, &quot;$&quot;], [&quot;&#92;&#92;(&quot;,&quot;&#92;&#92;)&quot;] ], displayMath: [ [&quot;$$&quot;,&quot;$$&quot;], [&quot;&#92;&#92;[&quot;, &quot;&#92;&#92;]&quot;] ], processEscapes: true, ignoreClass: &quot;tex2jax_ignore|dno&quot; },
+      TeX: { noUndefined: { attributes: { mathcolor: &quot;red&quot;, mathbackground: &quot;#FFEEEE&quot;, mathsize: &quot;90%&quot; } } },
+      messageStyle: &quot;none&quot;
+    });
+    &lt;/script&gt;    
+    &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+    &lt;body&gt;
+  &lt;p&gt;
+To prove that the global meromorphic functions on the Riemann sphere $&#92;mathbb{P}^1$ (the field of fractions for this variety) are the rational functions, we see:
+
+
+
+
+The Riemann sphere $&#92;mathbb{P}^1$ is the complex projective line, which can be thought of as the complex plane $&#92;mathbb{C}$ compactified by adding a point at infinity, denoted $&#92;infty$. It is covered by two coordinate charts:
+$U_0 = &#92;mathbb{P}^1 &#92;setminus &#92;{&#92;infty&#92;}$, with coordinate $z$ (the affine coordinate on $&#92;mathbb{C}$),
+$U_1 = &#92;mathbb{P}^1 &#92;setminus &#92;{0&#92;}$, with coordinate $w = &#92;frac{1}{z}$ (the coordinate near $&#92;infty$).
+
+A global meromorphic function on $&#92;mathbb{P}^1$ is a function that is holomorphic except for isolated poles on $&#92;mathbb{P}^1$.
+
+
+
+
+A rational function is a ratio of two polynomials:
+$
+f(z) = &#92;frac{P(z)}{Q(z)},
+$
+where $P(z)$ and $Q(z)$ are polynomials in $z$. Such a function is meromorphic on $&#92;mathbb{C}$ because it is holomorphic except at the zeros of $Q(z)$, where it has poles. To check its behavior at $&#92;infty$, we use the coordinate $w = &#92;frac{1}{z}$:
+$
+f(z) = &#92;frac{P(z)}{Q(z)} = &#92;frac{P(1/w)}{Q(1/w)}.
+$
+This expression is meromorphic at $w = 0$ (i.e., $z = &#92;infty$) because $P(1/w)$ and $Q(1/w)$ are polynomials in $1/w$. Thus, rational functions are global meromorphic functions on $&#92;mathbb{P}^1$.
+
+
+
+
+Now, let $f$ be a global meromorphic function on $&#92;mathbb{P}^1$. We show that $f$ must be a rational function.
+
+On $U_0 = &#92;mathbb{C}$, $f$ is meromorphic, so it can be written as:
+  $
+  f(z) = &#92;frac{P(z)}{Q(z)},
+  $
+  where $P(z)$ and $Q(z)$ are polynomials, and $Q(z) &#92;neq 0$ except at the poles of $f$.
+
+Near $&#92;infty$ (i.e., in $U_1$), $f$ must also be meromorphic. Using the coordinate $w = &#92;frac{1}{z}$, we write:
+  $
+  f(z) = f&#92;left(&#92;frac{1}{w}&#92;right) = &#92;frac{P(1/w)}{Q(1/w)}.
+  $
+  For this to be meromorphic at $w = 0$, the degrees of $P(z)$ and $Q(z)$ must satisfy $&#92;deg(P) &#92;leq &#92;deg(Q)$. Otherwise, $f(z)$ would have an essential singularity at $&#92;infty$, which is not allowed for a meromorphic function.
+
+Thus, $f(z)$ is a ratio of polynomials with $&#92;deg(P) &#92;leq &#92;deg(Q)$, meaning $f(z)$ is a rational function.
+
+
+
+
+Every global meromorphic function on $&#92;mathbb{P}^1$ is a rational function, and every rational function is a global meromorphic function on $&#92;mathbb{P}^1$. Therefore, the global meromorphic functions on $&#92;mathbb{P}^1$ are exactly the rational functions.
+
+
+So, the global meromorphic functions on $ &#92;mathbb{P}^1 $ are exactly the rational functions.
+&lt;/p&gt;
+&lt;/body&gt;
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fspherefractions%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=riemann%20sphere&#39;s%20field%20of%20fractions&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
 		<title>modular multiplicative inverse</title>
 		<link href="https://ischmidls.github.io/posts/modular-multiplicative-inverse/"/>
 		<updated>2024-05-09T00:00:00Z</updated>
@@ -10972,9 +11053,40 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
     &lt;meta charset=&quot;UTF-8&quot; /&gt;
     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
     &lt;title&gt;Multiplicative Inverse Sequence&lt;/title&gt;
+    &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+        MathJax.Hub.Config({
+          jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
+          extensions: [&quot;tex2jax.js&quot;],
+          &quot;HTML-CSS&quot;: { preferredFont: &quot;TeX&quot;, availableFonts: [&quot;STIX&quot;,&quot;TeX&quot;] },
+          tex2jax: { inlineMath: [ [&quot;$&quot;, &quot;$&quot;], [&quot;&#92;&#92;(&quot;,&quot;&#92;&#92;)&quot;] ], displayMath: [ [&quot;$$&quot;,&quot;$$&quot;], [&quot;&#92;&#92;[&quot;, &quot;&#92;&#92;]&quot;] ], processEscapes: true, ignoreClass: &quot;tex2jax_ignore|dno&quot; },
+          TeX: { noUndefined: { attributes: { mathcolor: &quot;red&quot;, mathbackground: &quot;#FFEEEE&quot;, mathsize: &quot;90%&quot; } } },
+          messageStyle: &quot;none&quot;
+        });
+        &lt;/script&gt;    
+        &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js&quot;&gt;&lt;/script&gt;
+    
 &lt;/head&gt;
 &lt;body&gt;
     &lt;h1&gt;Multiplicative Inverse Sequence&lt;/h1&gt;
+    &lt;p&gt;
+       
+       The modular multiplicative inverse of an integer $a $ modulo $m $ is an integer $y $ such that:
+       $
+       a &#92;cdot y &#92;equiv 1 &#92;pmod{m}
+       $
+       This inverse exists if and only if $a $ and $m $ are coprime (i.e., their greatest common divisor, or GCD, is 1).
+       
+For example:
+       If $x = 2 $ and $m = 7 $, the sequence might look like:
+         $
+         [4, 2, 1, 4, 2, 1, &#92;dots]
+         $
+         This is because:
+         $ 2^1 &#92;equiv 2 &#92;pmod{7} $, and the inverse of 2 modulo 7 is 4.
+         $ 2^2 &#92;equiv 4 &#92;pmod{7} $, and the inverse of 4 modulo 7 is 2.
+         $ 2^3 &#92;equiv 1 &#92;pmod{7} $, and the inverse of 1 modulo 7 is 1.
+         The sequence repeats after this point.
+       &lt;/p&gt;
 
     &lt;script&gt;
         function modInverse(a, m) {
