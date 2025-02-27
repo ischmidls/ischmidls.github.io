@@ -1,0 +1,895 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>note: probability &amp; types</title>
+		<meta name="description" content="notes on intro probabiity with types">
+		<link rel="alternate" href="/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="izak">
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Garamond, serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/eleventy-base-blog/" class="home-link">izak</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/eleventy-base-blog/">home</a></li>
+					<li class="nav-item"><a href="/eleventy-base-blog/blog/">archive</a></li>
+					<li class="nav-item"><a href="/eleventy-base-blog/about/">about</a></li>
+					<li class="nav-item"><a href="/eleventy-base-blog/feed/feed.xml">feed</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<heading-anchors>
+				
+<h1 id="note-probability-and-types">note: probability &amp; types</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2023-07-02">02 July 2023</time></li>
+	<li><a href="/eleventy-base-blog/tags/math/" class="post-tag">math</a>, </li>
+	<li><a href="/eleventy-base-blog/tags/note/" class="post-tag">note</a></li>
+</ul>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+    tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+    TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
+    messageStyle: "none"
+  });
+  </script>    
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+
+<h2 id="table-of-contents">table of contents
+  <a href="#top"><em></em></a></h2>
+  <ol>
+  <li><a href="#event-spaces">event spaces</a></li>
+  <li><a href="#outer-measure">outer measure</a></li>
+  <li><a href="#measurable-spaces">measurable spaces</a></li>
+  <li><a href="#defining-a-measure">defining a measure</a></li>
+  <li><a href="#measure-transformations">measure transformations</a></li>
+  <li><a href="#probability-theory">probability theory</a>
+  <ul>
+  <li><a href="#independence">independence</a></li>
+  </ul></li>
+  </ol>
+  <hr>
+  <h2 id="intro">intro
+  <a href="#top"><em></em></a></h2>
+  <p>What follows — as with many of my posts — is my explanation of work from someone who is more erudite than me.</p>
+  <p>This time it is "Formalizing the Beginnings of Bayesian Probability Theory in the Lean Theorem Prover" a Master's thesis from the lovely <em>Rishikesh Vaishnav</em>. You might find it <a href="https://escholarship.org/uc/item/8hb1w6js">here</a>, ceteris paribus.</p>
+  <p>I skipped his intro on types — the foundation of Lean's formal proofs, so read that if you like. As you may know, I enjoy <a href="https://www.cse.chalmers.se/~peterd/papers/DependentTypesAtWork.pdf">Dependent Types at Work</a> by Ana Bove and Peter Dybjer (but this uses a different language — Agda). That being said, I will also disclude all of <em>Vaishnav's</em> code. So, this will read more like <a href="https://hott.github.io/book/hott-online-1404-g79e6d60.pdf">HoTT</a> in the line of Marin-Lof's or Hofmann's or Voevodsky's or Awodey's publications.</p>
+  <p><em>Vaishnav's</em> organization follows:</p>
+  <ul>
+  <li>Measure-Theoretic Foundations</li>
+  <li>The Event Space</li>
+  <li>The Outer Measure
+  <ul>
+  <li>Outer Measure Transformations</li>
+  </ul></li>
+  <li>Measurable Spaces
+  <ul>
+  <li>Transforming Measurable Spaces</li>
+  <li>A Galois Connection</li>
+  <li>The Trimmed Outer Measure</li>
+  <li>Measurable Spaces on Pi Types</li>
+  </ul></li>
+  <li>Defining a Measure</li>
+  <li>Measure Transformations
+  <ul>
+  <li>From a Partial Function</li>
+  <li>The Carathéodory Criterion</li>
+  <li>Lifting an Outer Measure Transformation</li>
+  <li>Restricting a Measure</li>
+  <li>Mapping a Measure</li>
+  </ul></li>
+  <li>Probability Theory
+  <ul>
+  <li>Independence</li>
+  <li>Conditional Probability</li>
+  <li>Random Variables</li>
+  </ul></li>
+  </ul>
+  <p>Now, <em>Vaishnav's</em> details mostly fall under "Probability Theory". He also numbered everything, but that's a bit much for me (I use my own numbering here). Right now, I am taking a probability class, not a measure theory class, so I should probably focus on the "Probability Theory" section myself.</p>
+  <p>The list above is somewhat decieving, as Vasishnav included sub-sub-headings for the "Probability" section splitting "Independence" and "Conditional" into subsections for definitions and properties. But more importantly, "Random Variables" includes:</p>
+  <ul>
+  <li>Random Variables
+  <ul>
+  <li>The Joint Distribution</li>
+  <li>Restricting a Pi</li>
+  <li>The Marginal Distribution</li>
+  <li>Marginalization</li>
+  <li>Independence on Random Variables</li>
+  <li>Conditional Independence on Random Variables</li>
+  </ul></li>
+  </ul>
+  <p>That brings me to the fact of the matter. I took an "Engineering Stats" class and forgot everything. I still do not know what any of this means:</p>
+  <blockquote>
+  <p>Random variable: A variable that takes on different values based on the outcome of a random event. \(X\)</p>
+  <p>Distribution: The function that describes the probabilities of different outcomes or values of a random variable. \(P(X = x)\)</p>
+  <p>Mean: The average value of a set of numbers or a random variable. \(\mu\)</p>
+  <p>Variance: A measure of the spread or dispersion of a set of numbers or a random variable. \(\sigma^2\)</p>
+  <p>Standard deviation: The square root of the variance, providing a measure of the average distance between each data point and the mean. \(\sigma\)</p>
+  <p>Normal distribution: A symmetric probability distribution that is commonly used to model real-world phenomena. \(N(\mu, \sigma^2)\)</p>
+  <p>Hypothesis testing: A statistical method to make inferences or conclusions about a population based on sample data.</p>
+  <p>Confidence interval: A range of values that is likely to contain the true value of a population parameter with a certain level of confidence. \([a, b]\)</p>
+  </blockquote>
+  <p>(quoting nobody, I just prefer the <code>blockquote</code> markup to using the <code>pl-5</code> bootstrap; you can add that to the izak lore if you want)</p>
+  <h2 id="event-spaces">event spaces
+  <a href="#top"><em></em></a></h2>
+  <p>Let a type \( \alpha \) be the "fundamental event space", where each trial yields a value. To assign a <em>measure</em> to sets in \( \alpha \), representing probabilities: use a random variable, denoted \( X: \alpha \rightarrow \beta \), a transformation on the event space.</p>
+  <p>With a measure function on \( \alpha \), we can define a measure function on \( \beta \) corresponding to \( X \). For any set \( s \) in \( \beta \), the measure of \( s \) is the measure of the preimage of \( s \) under \( X \) (denoted as \( X^{-1}(s) \)). This relationship between \(\alpha\) and \(\beta\) comes to fruition during the "Mapping/Co-Mapping Measurable Spaces" part of <em>Vaishnav's</em> "Outer Measure" section.</p>
+  <p>Restrictions on a measure function \(m\) come from the " <strong>outer measure</strong>", which states that, for a function \(m : \text{set } \alpha \rightarrow \mathbb{R}^+_\infty\) to be an <strong>outer measure</strong> \((\) <span class="text-secondary">where \(\mathbb{R}^+_\infty\) represents the non-negative real numbers including infinity</span>\()\), we have the empty set property \((1)\), monotonicity property \((2)\), and countable union property \((3)\):</p>
+  <div style="overflow: auto;">
+  \[ \begin{align*} m(\emptyset) &amp;= 0, \quad &amp; (1) \\ \forall A, B : \text{set } \alpha, A \subseteq B &amp; \Rightarrow m(A) \leq m(B), \quad &amp; (2) \\ \forall f : \mathbb{N} \rightarrow \text{set } \alpha, m\left(\bigcup_{i=0}^\infty f(i)\right) &amp; \leq \sum_{i=0}^\infty m(f(i)), \quad &amp; (3) \end{align*} \]
+  </div>
+  <p>The empty set property \((1)\) ensures that the empty set has zero mass. The monotonicity property \((2)\) guarantees that a set has at least as much mass as any of its subsets. The countable union property \((3)\) limits the mass of a set to the maximum mass present in any covering set of subsets.</p>
+  <p>These propertis of <strong>outer measure</strong> allow us to talk about measure using <em>inequalities</em>.</p>
+  <p>See <em>Vaishnav's</em> paper for info on "why countable".</p>
+  <h2 id="outer-measure">outer measure
+  <a href="#top"><em></em></a></h2>
+  <p><em>Vaishnav</em> defines:</p>
+  <div style="overflow: auto;">
+  \[ \text{fromfunc}(m_0(s)) = \inf_{ f : \mathbb{N} \rightarrow \text{set }\alpha} \left\{s \subseteq \bigcup_{i=0}^{\infty} f(i) \Rightarrow \sum_{i=0}^{\infty} m_0(f(i)) \right\} \]
+  </div>
+  <p>Satisfying: \(∀ s : set \ α, m(s) ≤ m_0(s).\)</p>
+  <p>In the type theory style that verges on pseudocode, we have \(\text{fromfunc}(m_0(s))\) — which <em>Vaishnav</em> denotes \(\text{fromfunc}(m_0)(s)\).</p>
+  <p>The condition \(s \subseteq \bigcup_{i=0}^{\infty} f(i)\) ensures that the sets \(f(i)\) cover the set \(s\). If this condition is not satisfied for some \(f\), the value is effectively considered \(\infty\).</p>
+  <p>The function \(\text{fromfunc}(m_0)\) is then defined as a valid outer measure, which satisfies the condition \(m(s) \leq m_0(s)\) for all sets \(s\). It is also proven that \(\text{fromfunc}(m_0)\) is the unique maximum outer measure that satisfies this condition. No other outer measure can exceed it on any set.</p>
+  <p><em>Vaishnav</em> also formalizes this for a more general case of partial functions where \(m_0 : S → \mathbb{R}^{+\infty}\) such that:</p>
+  <div style="overflow: auto;">
+  \[ \text{extend} (m_0) (s) = \begin{cases} m_0 (s) \quad s \in S \\ \infty \quad s \notin S \end{cases} \]
+  </div>
+  <p>Now is the moment you've been waiting for since <a href="." data-event-spaces="">event spaces</a>.</p>
+  <p>Given a function \(f: \alpha \to \beta\) and an outer measure \(m_0\) on \(\alpha\), we define \(\text{map}_f(m_0)\) as:</p>
+  <div style="overflow: auto;">
+  \[ \text{map}_f(m_0)(s) = m_0(f^{-1}(s)) \]
+  </div>
+  <p>Similarly, for an outer measure \(m_1\) on \(\beta\), we define \(\text{comap}_f(m_1)\) as:</p>
+  <div style="overflow: auto;">
+  \[ \text{comap}_f(m_1)(s) = m_1(f(s)) \]
+  </div>
+  <p>Both \(\text{map}_f(m_0)\) and \(\text{comap}_f(m_1)\) are outer measures.</p>
+  <p>Given an outer measure \(m_0\) on \(\alpha\), we can restrict it to a set \(t\) by defining:</p>
+  <div style="overflow: auto;">
+  \[ \text{restrict}_t(m_0)(s) = m_0(s \cap t) \]
+  </div>
+  <p>This measures the intersection of \(s\) with \(t\). The function \(\text{restrict}_t(m_0)\) is proven to be an outer measure. In Lean, we can use the coercion function \(c_t: t \to \alpha\) to avoid the explicit proof. We can express it as:</p>
+  <div style="overflow: auto;">
+  \[ \text{restrict}_t(m_0) = \text{map}_{c_t}(\text{comap}_{c_t}(m_0)) \]
+  </div>
+  <p>Alternatively, for any \(s\), it can be simplified to:</p>
+  <div style="overflow: auto;">
+  \[ \text{restrict}_t(m_0)(s) = m_0(c_t(c_t^{-1}(s))) \]
+  </div>
+  <p>where \(c_t(c_t^{-1}(s))\) represents the intersection \(s \cap t\). Since \(\text{map}(\cdot)\) and \(\text{comap}(\cdot)\) preserve outer measures, we can conclude that \(\text{restrict}_t(m_0)(s)\) is an outer measure.</p>
+  <p>Now, that was a very close paraphase of <em>Vaishnav's</em> text.</p>
+  <p>Alternatively, the beloved Wikipedia says:</p>
+  <div class="card">
+  <div class="card-body">
+  <p>Given a set \(X\), let \(2^X\) denote the collection of all subsets of \(X\), including the empty set \(\emptyset\).</p>
+  <p>An outer measure on \(X\) is a set function \(\mu: 2^X \to [0, \infty]\) such that:</p>
+  <ol>
+  <li>Null empty set: \(\mu(\emptyset) = 0\)</li>
+  <li>Countably subadditive: For arbitrary subsets \(A, B_1, B_2, \ldots\) of \(X\), if \(A \subseteq \bigcup_{j=1}^\infty B_j\), then \(\mu(A) \leq \sum_{j=1}^\infty \mu(B_j)\).</li>
+  </ol>
+  </div>
+  </div>
+  <p><br>
+  </p>
+  <h2 id="measurable-spaces">measurable spaces
+  <a href="#top"><em></em></a></h2>
+  <p>Outer measures provide information about inequalities in measure functions. We are also interested in equalities between measures of sets in the event space. For disjoint sets \(A\) and \(B\) in \(\alpha\), we want to express the equality \(m(A \cup B) = m(A) + m(B)\). In the general case where \(A\) and \(B\) are not necessarily disjoint, we seek the equality \(m(A \cup B) = m(A \setminus B) + m(A \cap B) + m(B \setminus A)\).</p>
+  <p>To control equality restrictions on measures, we introduce measurable spaces (\(σ\)-algebras). A measurable space \(M: \text{set}(\text{set} \ \alpha)\) includes "measurable sets" and satisfies:</p>
+  <ul>
+  <li>Empty set measurability: \(\emptyset \in M\)</li>
+  <li>Complement closure: For any set \(s\) in \(\alpha\), if \(s \in M\), then its complement \(s^c \in M\)</li>
+  <li>Countable union closure: For any sequence \(f: \mathbb{N} \to \text{set} \ \alpha\), if \(f(i) \in M\) for all \(i\) in \(\mathbb{N}\), then \(\bigcup\limits_{i=0}^\infty f(i) \in M\)</li>
+  </ul>
+  <p>From these properties, we can derive other intuitive closures, including those of countable intersection:</p>
+  <div style="overflow: auto;">
+  \[ \forall f : \mathbb{N} \to \text{set} \ \alpha, \forall i : \mathbb{N}, f(i) \in M \Rightarrow \bigcap_{i=0}^\infty f(i) \in M, \]
+  </div>
+  <p>and difference:</p>
+  <div style="overflow: auto;">
+  \[ \forall a,b : \text{set} \ \alpha, \ a \in M \Rightarrow b \in M \Rightarrow a \setminus b \in M. \]
+  </div>
+  <p>Now, how does <em>Vaishnav</em> define measure transformations?</p>
+  <p>Given \(S : \text{set}(\text{set} \ \alpha)\), the measurable space "closure" of \(S\) is the smallest measurable space that includes every set in \(S\). The generated measurable space can be visualized as the "mosaic" of set intersections and differences formed by \(S\) and the universal set ("univ") in our event space. The set of measurable sets consists of all possible countable unions of the "tiles" in this mosaic.</p>
+  <p>Now, let \(C : \text{set} \ \alpha \rightarrow \text{Prop}\) be a predicate. To show that \(C\) holds for all sets in \(\text{generate}(S)\), we can prove that it holds for \(S\) itself \((1)\), the empty set \((2)\), under complement \((3)\), and under countable union \((4)\).</p>
+  <p>\((1) \quad \forall s \in S\), \(C(s) \quad (1) \)</p>
+  <p>\((2) \quad C(\emptyset) \quad (2) \)</p>
+  <p>\((3) \quad \forall s \in \text{generate}(S)\), \(C(s) \Rightarrow C(s^c)\)</p>
+  <p>\((4) \quad \forall f : \mathbb{N} \to \text{set} \ \alpha, \quad \left(\forall i : \mathbb{N}, \ f(i) \in \text{generate}(S) \land C(f(i)\right) \Rightarrow C(\bigcup_{i=0}^{\infty} f(i))\)</p>
+  <p>The <a href="https://encyclopediaofmath.org/wiki/Measurable_space">Encyclopedia of Mathematics</a> describes this more mathematically as:</p>
+  <div class="card">
+  <div class="card-body">
+  <p>Let \((X,A)\) and \((Y,B)\) be measurable spaces.</p>
+  <p>A map \(f:X\rightarrow Y\) is called measurable if \(f^{-1}(B)\in A\) for every \(B\in B\).</p>
+  <p>These two measurable spaces are called isomorphic if there exists a bijection \(f:X\rightarrow Y\) such that \(f\) and \(f^{-1}\) are measurable (such \(f\) is called an isomorphism).</p>
+  <p>Let \(X\) be a set, \((Y,B)\) a measurable space, and \((f_i)_{i\in I}\) a family of maps \(f_i:X\rightarrow Y\). The \(\sigma\)-algebra generated by these maps is defined as the smallest \(\sigma\)-algebra \(A\) on \(X\) such that all \(f_i\) are measurable from \((X,A)\) to \((Y,B)\). More generally, one may take measurable spaces \((Y_i,B_i)\) and maps \(f_i:X\rightarrow Y_i\). On the other hand, if \(Y\) is \(\mathbb{R}\) (or \(\mathbb{C}\), \(\mathbb{R}^n\), etc.) then \(B\) is by default the Borel \(\sigma\)-algebra.</p>
+  </div>
+  </div>
+  <p><br>
+  </p>
+  <p>But, even this description has a very topological tone. Note: a Borel set is simply formed by open sets "through the operations of countable union, countable intersection, and relative complement" ( <a href="https://en.wikipedia.org/wiki/Borel_sets">Wikipedia: Borel sets</a>) — this also follows transfinite induction, etc, but that's outside our scope.</p>
+  <p>This props us up for a more intuitive (while less rigorous) picture:</p>
+  <blockquote>
+  <p><strong>Definition 4</strong></p>
+  <p>Let \(F\) be a collection of subsets of \(\Omega\) such that:</p>
+  <ol>
+  <li>Closed under complements: If \(A \in F\), then \(A^C \in F\).</li>
+  <li>Closed under countable unions: If \(A_1, A_2, \ldots\) are all in \(F\), then \(\bigcup_{i=1}^\infty A_i \in F\).</li>
+  </ol>
+  <p>We call \(F\) a \(\sigma\)-algebra, and the elements of \(F\) measurable sets.</p>
+  <p>( <a href="https://www.markhuberdatascience.org/probability-textbook">Huber, Probability: Lectures and Labs</a>)</p>
+  </blockquote>
+  <p>No mention of topology's maps, Borel, &amp; generating or type theory's ... predicates ... (I guess the type theory is not too bad yet).</p>
+  <p>That being said, Huber does clarify:</p>
+  <blockquote>
+  Whenever Ω is a finite set, F will be the set of all subsets of Ω. When Ω = R, F is typically taken to be the Borel sets. In this first course in probability we will not define the Borel sets precisely, except to note that any interval (open or closed, finite or infinite) is a member of the Borel sets.
+  </blockquote>
+  <p><em>Vaishnav</em> also looks at "Combining Measurable Spaces":</p>
+  <blockquote>
+  <p>Given a set \(S\) of measurable spaces, we can now define their "combination" into the smallest measurable space that contains both of them (i.e. their supremum) as</p>
+  <div style="overflow: auto;">
+  \[ \text{sup}(S) = \text{generate}\left(\bigcup_{s \in S} s\right), \]
+  </div>
+  <p>the measurable space generation on the union (set supremum) of all of their sets of measurable sets.</p>
+  </blockquote>
+  <p>Again, <em>Vaishnav</em> considers "Mapping/Co-Mapping Measurable Spaces":</p>
+  <blockquote>
+  <p>As for <strong>outer measures</strong>, a map/comap on \((M, \alpha)\) with respect to \(s\) is defined given a second type \(\beta\), a function \(f : \alpha \to \beta\), and a measurable space \((M, \alpha)\) on \(\alpha\). The map is the set of all sets \(\beta\) such that their preimage is a measurable set:</p>
+  <div style="overflow: auto;">
+  \[ \text{map}_f((M, \alpha)) = \{ b : \text{set} \ \beta \mid f^{-1}(b) \in (M, \alpha) \} \]
+  </div>
+  <p>Given a measurable space \((M, \beta)\) on \(\beta\), we define our comap to be the set of all sets \(\alpha\) such that they are the preimage of some measurable set:</p>
+  <div style="overflow: auto;">
+  \[ \text{comap}_f((M, \beta)) = \{ a : \text{set} \ \alpha \mid \exists b : \text{set} \ \beta, f^{-1}(b) = a \} \]
+  </div>
+  <p>(you can also think of this as simply taking the preimages of every set in \((M, \beta)\)).</p>
+  </blockquote>
+  <p>From here, the lovely <em>Vaishnav</em> mentions:</p>
+  <p>In mathematical notation, the definition can be written as follows:</p>
+  <p>A Galois connection is a pair of functions \(l: \alpha \to \beta\) and \(u: \beta \to \alpha\) between preordered sets \(\alpha\) and \(\beta\) that satisfy the following property:</p>
+  <div style="overflow: auto;">
+  \[ \forall a \in \alpha, b \in \beta, \quad l(a) \leq b \iff a \leq u(b) \]
+  </div>
+  <p>Here, \(\leq\) represents the order relation in the respective preordered sets \(\alpha\) and \(\beta\). The functions \(l\) and \(u\) establish a connection between the orders in \(\alpha\) and \(\beta\) such that if \(l(a)\) is less than or equal to \(b\), then \(a\) is less than or equal to \(u(b)\), and vice versa.</p>
+  <p><em>Vaishnav</em> explains the effect of this, but gives the lemmas in Lean, so here is the property of the lemmas NOT in Lean!</p>
+  <p>In mathematical notation, an essential property of a Galois connection is that an upper/lower adjoint of a Galois connection uniquely determines the other:</p>
+  <div style="overflow: auto;">
+  \[ \begin{align*} F(a) &amp; \text{ is the least element } \tilde{b} \text{ with } a \leq G(\tilde{b}), \\ G(b) &amp; \text{ is the largest element } \tilde{a} \text{ with } F(\tilde{a}) \leq b. \end{align*} \]
+  </div>
+  <p><a href="https://en.wikipedia.org/wiki/Galois_connection">Source</a></p>
+  <p>But, as <em>Vaishnav</em> explains:</p>
+  <blockquote>
+  <p>In our case, we can show that, for any \(f: \alpha \to \beta\), there is a Galois Connection between \(\text{comap}_f(\cdot)\) and \(\text{map}_f(\cdot)\) (where the \(\leq\) relation on measurable spaces is the subset relation). To see this, consider an arbitrary measurable space \(M_\beta\) on \(\beta\) and \(M_\alpha\) on \(\alpha\). Here, \(\text{comap}_f(M_\beta) \subseteq M_\alpha\) means that every set in \(M_\beta\) has a preimage in \(M_\alpha\), which is exactly the same statement as \(M_\beta \subseteq \text{map}_f(M_\alpha)\).</p>
+  <p>The Galois Connection gives us the fact that, for any list of measurable spaces \(M_{\beta_i}\) on \(\beta\) indexed by \(i\) in \(\iota\), we have that the \(\text{comap}_f\) of the indexed supremum of \(M_{\beta_i}\) is the indexed supremum of the \(\text{comap}_f\) of each measurable space (regardless of whether the index type is countable):</p>
+  <div style="overflow: auto;">
+  \[ \text{comap}_f \left( \sup_{i \in \iota} M_{\beta_i} \right) = \sup_{i \in \iota} \left( \text{comap}_f (M_{\beta_i}) \right) \]
+  </div>
+  </blockquote>
+  <p><em>Vaishnav</em> has even more to say about <strong>trimmed outer measure</strong>:</p>
+  <blockquote>
+  <p>Suppose we have a measurable space \( M \) on \( \alpha \) and a partial set function \( m_0 \) defined on \( M \), satisfying the three properties of an <strong>outer measure</strong> restricted to sets from \( M \). We can define the outer measure <em>induce</em>\( (m_0) \) as <em>fromfunc</em>( <em>extend</em>\( (m_0) \)). Interestingly, with this function, we have the property:</p>
+  <div style="overflow: auto;">
+  \[ \forall s \in \text{set } \alpha, \text{induce}(m_0)(s) = \inf_{t \in \text{set} \alpha} s \subseteq t \land t \in M \Rightarrow m_0(t) \]
+  </div>
+  <p>In other words, the measurable sets retain their values from the partial function due to the monotonicity property, and each non-measurable set is assigned the infimum of the values of all its measurable supersets.</p>
+  <p>\([...]\)</p>
+  <p>As a matter of fact, there exists a measurable superset that exactly matches this infimum:</p>
+  <div style="overflow: auto;">
+  \[ \forall s \in \text{set } \alpha, \exists t \in \text{set } \alpha, s \subseteq t \land t \in \mathcal{M} \land \text{induce}(m_0)(s) = m_0(t) \]
+  </div>
+  <p>The proof of this relies on constructing a list \(f: \mathbb{N} \to \text{set } \alpha\) of measurable sets that "narrows down" to \(\text{induce}(m_0)(s)\) in the sense that:</p>
+  <div style="overflow: auto;">
+  \[ \forall i \in \mathbb{N}, m_0(f(i)) &lt; \text{induce}(m_0)(s) + i - 1 \]
+  </div>
+  <p>Now, given an arbitrary outer measure \(m\) and a measurable set \(M\), we can check whether \(m\) was constructed as above using the notion of a "trimmed" outer measure. Let \(\text{sub}_M(m)\) be \(m\) restricted to the domain \(M\). Defining:</p>
+  <div style="overflow: auto;">
+  \[ \text{trim}_M(m) = \text{induce}(\text{sub}_M(m)) \]
+  </div>
+  <p>We can now check whether \(\text{trim}_M(m) = m\), i.e., whether \(\text{trim}_M\) assigns the same values to non-measurable sets as \(m\) originally had.</p>
+  </blockquote>
+  <p>Finally, <em>Vaishnav</em> touches on Pi-types, which are a unique perspective on measure theory coming from type theory.</p>
+  <p>Here is a definition I like of Pi-types:</p>
+  <div class="card">
+  <div class="card-body">
+  <p>Given a dependent type \(x : C \vdash D(x)\), the Pi-type \(\Pi x : C. D(x)\) can be thought of as the set of all functions \(f\) from \(C\) to \(\prod_{x : C} D(x)\) such that \(f(x) \in D(x)\) for all \(x \in C\). These functions are called dependent maps from \(C\) to \(D\). In set theory, we interpret simple types \(C\) as sets \(C\) and terms \(x : C\) as elements \(x \in C\). Dependent types \(D\) over \(C\) are interpreted as families \(D = (D(x))_{x \in C}\) of sets \(D(x)\).</p>
+  <p><a href="https://arxiv.org/pdf/1905.00993.pdf">Source</a></p>
+  </div>
+  </div>
+  <p><br>
+  </p>
+  <p>Suppose we have an index of types \(\beta : \iota \rightarrow \text{Type}\) and a mapping \(M\) that assigns a measurable space to each type. We want to define a measurable space on the function space \(\prod_{i:\iota} \beta(i)\) that corresponds to \(M\).</p>
+  <p>To accomplish this, we define a "function evaluation" function \(eval(i)\) that extracts the value at a specific index. Given a function \(f : \prod_{i:\iota} \beta(i)\), \(eval(i)(f)\) gives us the value of \(f\) at index \(i\).</p>
+  <p>Next, we consider the preimage of a set \(s\) in type \(\beta(i)\) under the function \(eval(i)\). This preimage consists of all functions whose value at index \(i\) lies in the set \(s\).</p>
+  <p>By applying the comap operation to \(eval(i)\) with respect to \(M(i)\), we obtain the measurable sets in \(\beta(i)\) that correspond to these preimages. We repeat this process for all indices \(i\) and combine the resulting measurable spaces using the supremum operation. This gives us the definition of the "pi measurable space":</p>
+  <div style="overflow: auto;">
+  \[\Pi \text{-measurable-space}(M) = \sup_{i:\iota} \left( \text{comap}_{\text{eval}(i)}(M(i)) \right)\]
+  </div>
+  <p>This is not too important to measure-theoretic probability theory?</p>
+  <h2 id="defining-a-measure">defining a measure
+  <a href="#top"><em></em></a></h2>
+  <blockquote>
+  <p>We now have all the definitions we need to define an outer measure that corresponds to the concept of probability, allowing us to derive useful equalities based on a measurable space. For any \( f : \mathbb{N} \to \text{set } \alpha \), let \( PD(f) \) indicate that \( f \) is pairwise disjoint, meaning the sets that \( f \) maps to with any distinct pair of indices are disjoint. Given a measurable space \( M \), we define a "measure" on \( M \) as an outer measure \( m \) that additionally satisfies the properties of <strong>disjoint measurable set countable union</strong> and trim invariance:</p>
+  <div style="overflow: auto;">
+  \[ \forall f : \mathbb{N} \to \text{set } \alpha, (\forall i : \mathbb{N}, f(i) \in M) \land (PD(f)) \Rightarrow \]
+  </div>
+  <div style="overflow: auto;">
+  \[\quad m\left(\bigcup_{i=0}^\infty f(i)\right) = \sum_{i=0}^{\infty} m(f(i)), \]
+  </div>
+  <div style="overflow: auto;">
+  \[ \text{trim}_M(m) = m\]
+  </div>
+  <p>The disjoint measurable set countable union property ensures that this measure corresponds to the notion of probability, as we know it, where the measure of the union of any list of disjoint measurable sets can be expressed as the sum of their individual measures.</p>
+  </blockquote>
+  <p>As <em>Vaishnav</em> explains, the final criterion for an outer measure to correspond to a notion of probability is that it assigns a measure of 1 to the entire event space. A measure on the event space \(\alpha\) satisfying \(\mu(\text{univ} : \text{set } \alpha) = 1\) is referred to as a "probability measure". In general, probability measures are a type of "finite measure" that satisfies \(\mu(\text{univ}) &lt; \infty\).</p>
+  <h2 id="measure-transformations">measure transformations
+  <a href="#top"><em></em></a></h2>
+  <p>Measures themselves are a type of outer measure that satisfies additional criteria. To achieve this, we "lift" outer measure transformations to the context of measures.</p>
+  <p>Two specific transformations we focus on are \(restrict(·)\) and \(map(·)\), as defined earlier. However, directly applying these transformations to a measure may not always result in an outer measure that satisfies the criteria to be considered a measure. To address this, we need additional transformations that preserve the behavior of the original transformation on measurable sets and ensure that the resulting outer measure remains a measure.</p>
+  <p>This, again, comes down to varifying properties of <strong>outer measure</strong> and properties of <strong>transformations on measurable spaces</strong> already stated.</p>
+  <p>Recall, for <strong>outer measure</strong>, we have the empty set property \((1)\), monotonicity property \((2)\), and countable union property \((3)\):</p>
+  <div style="overflow: auto;">
+  \[ \begin{align*} m(\emptyset) &amp;= 0, \quad &amp; (1) \\ \forall A, B : \text{set } \alpha, A \subseteq B &amp; \Rightarrow m(A) \leq m(B), \quad &amp; (2) \\ \forall f : \mathbb{N} \rightarrow \text{set } \alpha, m\left(\bigcup_{i=0}^\infty f(i)\right) &amp; \leq \sum_{i=0}^\infty m(f(i)), \quad &amp; (3) \end{align*} \]
+  </div>
+  <p>Recall, for <strong>transforming measurable spaces</strong> let \(C : \text{set} \ \alpha \rightarrow \text{Prop}\) be a predicate. To show that \(C\) holds for all sets in \(\text{generate}(S)\), we can prove that it holds for \(S\) itself \((1)\), the empty set \((2)\), under complement \((3)\), and under countable union \((4)\).</p>
+  <p>\[(1) \quad \forall s \in S, \ C(s) \quad (1) \]</p>
+  <p>\[(2) \quad C(\emptyset) \quad (2) \]</p>
+  <p>\[(3) \quad \forall s \in \text{generate}(S), \ C(s) \Rightarrow C(s^c)\]</p>
+  <p>\[ (4) \quad \forall f : \mathbb{N} \to \text{set} \ \alpha, \quad ( \forall i : \mathbb{N}, \ f(i) \in \text{generate}(S) \land C(f(i) ) \Rightarrow C(\bigcup_{i=0}^{\infty} f(i)) \]</p>
+  <p>But, most importantly, we must have <strong>disjoint measurable set countable union</strong>:</p>
+  <div style="overflow: auto;">
+  \[ \forall f : \mathbb{N} \to \text{set } \alpha, (\forall i : \mathbb{N}, f(i) \in M) \land (PD(f)) \Rightarrow \]
+  </div>
+  <div style="overflow: auto;">
+  \[\quad m\left(\bigcup_{i=0}^\infty f(i)\right) = \sum_{i=0}^{\infty} m(f(i)), \]
+  </div>
+  <p>And, the <strong>Caratheodory Criterion</strong> is sufficient for to prove <strong>disjoint measurable set countable union</strong>.</p>
+  <blockquote>
+  Given a set function \(f : \text{set} \alpha \rightarrow \mathbb{R}^+\cup\{\infty\}\) and a set \(s\), \(s\) is referred to as "Carathéodory" (written as \(\text{cara } f(s)\)) if \(\forall t : \text{set} \alpha, f(t) = f(t \cap s) + f(t \setminus s)\), which means that the measure of any set \(t\) can be decomposed into the measure of its intersection with \(s\) and the measure of its difference with \(s\). Now, consider an outer measure \(m\) and measurable space \(M\). It can be shown that the set of all Carathéodory sets forms a measurable space.
+  </blockquote>
+  <p>At this point, relies on higher levels of type-theoretic abstractions. The more elementary treatments thus far have been alright, with support from topology every now and then. Still, for those interested in a higher level type-theoretic persepctive, check out <em>Vaishnav's</em> subsections on "Lifting an Outer Measure Transformation", or "Restricting a Measure", or "Mapping a Measure". These topics can also be treated with topology outside the scope of these notes.</p>
+  <h2 id="probability-theory">probability theory
+  <a href="#top"><em></em></a></h2>
+  <h3 id="independence">independence</h3>
+  <p>Given a measure \(\mu\) on \(\alpha\) and two events \(a\) and \(b\) from our event space, we define independence by requiring that the measure of their intersection is the product of their measures:</p>
+  <div style="overflow: auto;">
+  \[ \mu(a \cap b) = \mu(a) \mu(b) \]
+  </div>
+  <p>However, we can extend this notion of independence to sets of events. We define independence between sets of events \(A\) and \(B\) under \(\mu\) as follows:</p>
+  <p>\(A\) and \(B\) are independent under \(\mu\) if for any pair of events \(a \in A\) and \(b \in B\), the measure of their intersection is the product of their measures:</p>
+  <div style="overflow: auto;">
+  \[ \text{indep_sets}_\mu(A, B) \Leftrightarrow \forall a \in A, b \in B, \mu(a \cap b) = \mu(a) \mu(b) \]
+  </div>
+  <p>This basically says that: two measurable spaces are independent with respect to their measures if their sets-of-events (which are, again, sets of sets) are independent with respect to the measures. This does not need math markup, sorry <em>Vaishnav</em>.</p>
+  <p>Given two sets \(a,b : \text{set } \alpha\), we define independence between them under \(\mu\) as:</p>
+  <div style="overflow: auto;">
+  \[ \text{indep_set}_\mu(a,b) \Leftrightarrow \text{indep}_\mu(\text{generate}(\{a\}), \text{generate}(\{b\})), \]
+  </div>
+  <p>which is the independence of their generated measurable spaces. Note that for any set \(s : \text{set } \alpha\), \(\text{generate}(\{s\}) = \{0,\emptyset,s,s^c,\alpha\}\) exactly. It may be immediately obvious that this definition is equivalent to \(\mu(a \cap b) = \mu(a) \mu(b)\), but we will soon show that this fact arises from a more general result regarding independence on the measurable spaces generated by a pair of independent "\(π\)-systems".</p>
+  <p>Now, that was <em>Vaishnav's</em> idea of definitions, so here are the <em>Vaishnav's</em> idea of properties.</p>
+  <blockquote>
+  <p>A "Dynkin system," also known as a "\(λ\)-system," is a generalization of measurable spaces that enables an induction principles. We define a Dynkin system as a set of sets \(M : \text{set } (\text{set } \alpha)\) with the properties of \(1\) empty set measurability, \(2\) complement closure, and \(3\) <em>disjoint</em> countable union closure:</p>
+  <ul>
+  <li>\(\emptyset \in M \quad (1) \)</li>
+  <li>\(\forall s : \text{set } \alpha, s \in M \Rightarrow s^c \in M \quad (2) \)</li>
+  <li>\(\forall f : \mathbb{N} \rightarrow \text{set } \alpha, \forall i : \mathbb{N}, f(i) \in M \land \text{PD}(f) \Rightarrow \bigcup_{i=0}^{\infty} f(i) \in M \quad (3) \)</li>
+  </ul>
+  <p>The disjointedness condition in \(1\) is the only difference from the definition of measurable spaces (see (2.7)).</p>
+  <p>Given any \(S : \text{set } (\text{set } \alpha)\), we can consider its Dynkin system "closure," which is the smallest Dynkin system including every set in \(S\). We define this closure similarly to how we did for measurable spaces with \(\text{generate}(S)\), modifying the last construction rule to union only over disjoint sets. We denote this generator as \(\text{generate}_D(S)\).</p>
+  <p>Now, suppose we have some predicate \(C : \text{set } \alpha \rightarrow \text{Prop}\). If we want to show that \(C\) holds for all sets in \(\text{generate}_D(S)\), we have to prove that \(1\) it holds for \(S\) itself, \(2\) for the empty set, \(3\) under complement, and \(4\) under <em>disjoint</em> countable union:</p>
+  <ul>
+  <li>\(\forall s \in S, C(s)\quad (1) \)</li>
+  <li>\(C(\emptyset) \quad (2) \)</li>
+  <li>\(\forall s \in \text{generate}_D(S), C(s) \Rightarrow C(s^c) \quad (3) \)</li>
+  <li>\(\forall f : \mathbb{N} \rightarrow \text{set } \alpha, \left( \forall i : \mathbb{N}, f(i) \in \text{generate}_D(S) \land C(f(i)) \right) \land \text{PD}(f) \Rightarrow C \left( \bigcup_{i=0}^{\infty} f(i) \right) \quad (4) \)</li>
+  </ul>
+  </blockquote>
+  <p>As <em>Vaishnav</em> explains that Dynkin systems have an important property: closure under intersection implies measurability. The proof relies on the ability to derive difference closure from intersection closure, enabling the decomposition of sets into a disjoint list with the same union. Additionally, the set \(\{t \mid t \cap s \in D\}\), where \(D\) is a Dynkin system and \(s \in D\), is also a Dynkin system.</p>
+  <p>To determine the applicability of the extra disjointedness condition, we introduce \(\pi\)-systems. These systems establish the equivalence between generated measurable spaces and generated Dynkin systems, allowing us to leverage \(\pi\)-system properties in specific situations.</p>
+  <p><em>Vaishnav</em> then describes Dykin's <strong>\(\pi\)-\(\lambda\) theorem</strong>.</p>
+  <blockquote>
+  <p>We define the "\(π\)-system" criterion for a set \(S : \text{set } (\text{set } \alpha)\) as:</p>
+  <div style="overflow: auto;">
+  \[PI(S) \Leftrightarrow \forall s, t \in S, s \cap t \neq \emptyset \Rightarrow s \cap t \in S,\]
+  </div>
+  <p>which simply requires that \(S\) is closed under non-empty intersection. The inclusion of the non-empty requirement allows for greater generality, although it is not necessary for our results. It is immediately evident that singleton sets satisfy the \(π\)-system criterion:</p>
+  <div style="overflow: auto;">
+  \[\forall s : \text{set } \alpha, PI(\{s\})\]
+  </div>
+  <p>Remarkably, if \(PI(S)\), then the generated Dynkin system, \(\text{generate}_D(S)\), is closed under intersection, making it a measurable space. Furthermore, we have \(\text{generate}_D(S) = \text{generate}(S)\), indicating that the generated measurable space and Dynkin systems are identical. This result is known as Dynkin's \(π\)-\(λ\) theorem.</p>
+  <p>We now have the criterion needed for a new induction principle on generated measurable spaces: If they are generated by a \(π\)-system, we can replace "countable union for generating measuable spaces" (recall:)</p>
+  <div style="overflow: auto;">
+  \[\forall f : \mathbb{N} \rightarrow \text{set } \alpha, \left( \forall i : \mathbb{N}, f(i) \in \text{generate}_D(S) \land C(f(i)) \right) \land \text{PD}(f) \Rightarrow C \left( \bigcup_{i=0}^{\infty} f(i) \right)\]
+  </div>
+  <p>with "countable union for generating \(π\)-systems":</p>
+  <div style="overflow: auto;">
+  \[(\forall i : \mathbb{N}, \ f(i) \in generate(S) \land C(f(i))) \land PD(f) \Rightarrow C\left(\bigcup_{i=0}^\infty f(i)\right),\]
+  </div>
+  <p>where the new hypothesis, \(PD(f)\), assists in the proof.</p>
+  <p>Now, <em>Vaishnav</em> offer's an axiomatic defintiion of independence:</p>
+  <p>With the help of "countable union for generating \(π\)-systems" we can prove that,</p>
+  <div style="overflow: auto;">
+  \[ \forall S, T: \operatorname{set}(\operatorname{set} \alpha), \operatorname{PI}(S) \wedge \operatorname{PI}(T) \Longrightarrow{\operatorname{indep} \_\operatorname{set}_\mu}_\mu(S, T) \Longleftrightarrow \operatorname{indep}_\mu(\operatorname{generate}(S), \operatorname{generate}(T)) \]
+  </div>
+  <p>in English, the independence of \(\pi\)-systems implies the independence of the measurable spaces they generate. We can now simplify our criterion for independence of sets: from ("the independence of \(\pi\)-systems implies the independence of the measurable spaces they generate"), and the fact that singletons are \(\pi\)-systems, we have</p>
+  <div style="overflow: auto;">
+  \[\forall s, t : \text{set } \alpha, \text{indep_set}_\mu (s, t) \Leftrightarrow \text{indep_sets}_\mu (\{s\}, \{t\}) \Leftrightarrow \mu(s \cap t) = \mu(s) \mu(t)\]
+  </div>
+  <p>So, we now have license to use the "bundled" \(\operatorname{indep}_{-} \operatorname{set}_\mu(s, t)\) in place of our classical definition of independence (again, the equivalence can easily be seen by cases, but it's good to know the general result).</p>
+  </blockquote>
+  <h2 id="the-end-up">The End up
+  <a href="#top"><em></em></a></h2>
+  <p>At this point, I do not find the remaining formalities conducive to my personal study of probabiity theory, although they might interest me more if I was more familiar with Lean.</p>
+  <p>I have continued more relevant discussion of <em>measure theory</em> in the context of <em>intro to probability</em> at my recent post <a href="empty/posts/notes%20-%20cont.%20measure%20&amp;%20intro%20prob/set">notes - cont. measure &amp; intro prob</a>.</p>
+  <p>Check out the rest of <em>Vaishnav's</em> paper for (again, you might find it <a href="https://escholarship.org/uc/item/8hb1w6js">here</a>, ceteris paribus):</p>
+  <ul>
+  <li>conditional probability</li>
+  <li>random variables
+  <ul>
+  <li>the joint distribution</li>
+  <li>restricting a pi</li>
+  <li>the marginal distribution</li>
+  <li>marginalization</li>
+  <li>independence on random variables</li>
+  <li>conditional independence on random variables</li>
+  </ul></li>
+  </ul>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/eleventy-base-blog/blog/rank/">note: matrix rank</a></li><li class="links-nextprev-next">Next →<br><a href="/eleventy-base-blog/blog/abstractguides/">abstract algebra guides</a></li>
+</ul>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
+		</footer>
+
+		<!-- This page `/blog/intro prob/` was built on 2025-02-27T22:48:54.125Z -->
+		<script type="module" src="/eleventy-base-blog/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

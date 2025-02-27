@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>note: measure &amp; intro prob</title>
+		<meta name="description" content="notes - cont. measure &amp; intro prob">
+		<link rel="alternate" href="/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="izak">
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Garamond, serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/eleventy-base-blog/" class="home-link">izak</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/eleventy-base-blog/">home</a></li>
+					<li class="nav-item"><a href="/eleventy-base-blog/blog/">archive</a></li>
+					<li class="nav-item"><a href="/eleventy-base-blog/about/">about</a></li>
+					<li class="nav-item"><a href="/eleventy-base-blog/feed/feed.xml">feed</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<heading-anchors>
+				
+<h1 id="note-measure-and-intro-prob">note: measure &amp; intro prob</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2023-07-11">11 July 2023</time></li>
+	<li><a href="/eleventy-base-blog/tags/math/" class="post-tag">math</a>, </li>
+	<li><a href="/eleventy-base-blog/tags/note/" class="post-tag">note</a></li>
+</ul>
+
+
+<style>
+  a {
+      font-weight: bold;
+  }
+</style>
+<h2 id="table-of-contents">table of contents <a href="#top"><i class="bi bi-arrow-up"></i></a></h2>
+<ol>
+  <li><a href="#intro">intro</a></li>
+  <li><a href="#measure-for-probability">measure for probability</a></li>
+  <li><a href="#measure-and-norm">measure and norm</a></li>
+  <li><a href="#dipping-into-functional-analysis">dipping into functional analysis</a></li>
+  <!-- <li><a href="#"></a></li> -->
+</ol>
+<h2 id="intro">intro <a href="#top"><i class="bi bi-arrow-up"></i></a></h2>
+<p>This post can be seen as a continuation of my recent post <a href="\posts\intro prob\">notes - probability & type</a> which was long but ended somewhat prematurely because I felt the type-theoretic aspect was a distraction even if it motivated my initial look at <em>measure theory</em> in the context of <em>intro to probability</em>.</p>
+<p>This is not grift, as it is merely convenient for my personal site to be hypertextual: the previous end of my connection between "measure" and "probability" is like the end of <a href="/eleventy-base-blog/posts/ode/#5.5">my connection between <em>differential equations</em> and <em>norms</em></a> (all thanks to the notorious 2011 Qiaochu Yuan, now better known as the ex-mathematician "QC").</p>
+
+<h2 id="measure-for-probability">measure for probability</h2>
+<p>Now, what eaxactly did QC say?</p>
+
+<blockquote>
+  
+  <p>
+    You should be comfortable with real analysis on the level of Rudin's <em>Principles of Mathematical Analysis</em>. Don't skimp on this; it's as much a maturity prerequisite as a prerequisite for actual concepts and techniques.
+  It might also help to study a little point-set topology, just so you're used to the idea of considering a collection of subsets of a set satisfying certain axioms (QC, 2011).
+  </p>
+  <blockquote>
+    I think chapters 1-7 of Rudin's Principles of Mathematical Analysis furnish sufficient preparation for measure theory. However, the notions of "pointwise convergence" and "uniform convergence" in chapter 7 of this publication are essential prerequisites that are often neglected by students intending to study measure theory (Amitesh Datta, 2011).
+  </blockquote>
+
+</blockquote>
+<p></p>
+<p>Source: <a href="https://math.stackexchange.com/a/65155/1098426">Pre-requisites to study measure theory?</a></p>
+<p>Now, since analysis is one of the most rigorous subjects in math, and Rudin is one of the most rigorous treatments of analysis, I felt out of my depth.</p>
+<p>Then, while reading about the <em>norm</em> for the differential equations post, I stumbled upon a nicer thread.</p>
+<blockquote>
+  <p>The standard answer is that measure theory is a more natural framework to work in. After all, in probability theory you are concerned with assigning probabilities to events (sets)... so you are dealing with functions whose inputs are sets and whose outputs are real numbers. This leads to sigma-algebras and measure theory if you want to do rigorous analysis.</p>
+
+<p>But for the more practically-minded, here are two examples where I find measure theory to be more natural than elementary probability theory:</p>
+
+<ol>
+  <li>
+    <p>Suppose \(X \sim \text{Uniform}(0,1)\) and \(Y = \cos(X)\). What does the joint density of \((X,Y)\) look like? What is the probability that \((X,Y)\) lies in some set \(A\)? This *can* be handled with delta functions but personally I find measure theory to be more natural.</p>
+  </li>
+  <li>
+    <p>Suppose you want to talk about choosing a random continuous <em>function</em> (element of \(C(0,1)\) say). To define how you make this random choice, you would like to give a p.d.f., but what would that look like? (The technical issue here is that this space of continuous functions is infinite-dimensional and so Lebesgue measure cannot be defined). This problem is very natural in the field of Stochastic Processes including Financial Mathematics -- a stock price can be thought of as a random function. Under the measure theory framework, you talk in terms of probability measures instead of p.d.f.'s, and so infinite dimensions do not pose an obstacle.</p>
+  </li>
+</ol>
+<p>(Chris Evans, 2013)</p>
+</blockquote>
+<p>Source: <a href="https://math.stackexchange.com/a/394973/1098426">why measure theory for probability?</a></p>
+<p>There are two other helpful explanations from this post. The most informative excerpt from the first of these basically says that the motivation behind learning measure theory in probability and statistics is to provide a way to measure the probability of infinite sets of events. This is important when dealing with continuous random variables and determining the probability that a variable takes on a specific value or falls within a certain range. Measure theory allows for the definition of expectations and probability density functions (pdfs) for continuous random variables. It provides a framework for assigning probabilities to sets of events where individual events have zero probability.
+
+
+</p><blockquote>
+  <p>This motivation about pathological sets makes sense if you are coming from an analysis background, because so much effort is put into defining number systems, and functions on those number systems. So the Cantor set is an important set within the context of Analysis. However, I have never seen anyone try to assign probability to the Cantor set in any practical application. I am not saying that someone has not already done this, it is more likely that this problem was solved long ago--though I have not checked.</p>
+
+<p>I think the more sensible motivation for why to learn measure theory as a probabilist or statistician has to do with finding a way to measure the probability of infinite sets of events. In probability and statistics we need a way to identify the probability that a continuous random variable takes a value less than or equal to a specific value, for example the probability density function</p>
+<p>
+\[
+pdf(X) := \Pr(X \leq x_0)
+\]
+</p>
+<p>where \(x_0\) is some particular value within the support of \(X\). For example, say we want \(pdf(X) = \Pr(X \leq 0.5)\). Given that \(X\) is continuous, the set of all possible values of \(X\)--also known as the support of \(X\)--is the set \(\{x : x \in [0,1], x \in \mathbb{R} \}\). The set of all possible values in the event of interest: namely \(X \leq 0.5\) is the set \(\{x : x \in [0,0.5], x \in \mathbb{R}\}\).</p>
+
+<p>Both the support of \(X\) and the event of interest are infinite sets. Intuitively, the size or cardinality of the support should be larger than the cardinality of the event of interest--though lacking a theory of measure we have no way to make that notion precise. But think if you were to try and figure out the frequency or probability of this event. You would have to divide \(\infty \div \infty\).</p>
+
+<p>So measure gives us a way to assign probability to sets of event where each individual event has zero probability. Another way of saying this is that measure theory gives us a way to define the expectations and pdfs for continuous random variables.</p>
+<p>(Krishnab, 2018)</p>
+</blockquote>
+
+<p>While that answer covered a lot of territory, a coarser sweep helps nail down that measure theory provides a unified mathematical framework for handling both discrete and continuous events in probability theory. While discrete events can be described using probability mass functions, continuous events require probability density functions. Measure theory allows for a consistent treatment of these concepts and eliminates the need to distinguish between different types of events. It provides a deeper understanding of probability theory and extends to more general objects in stochastic theory.</p>
+<blockquote>
+  <p>Simple answer: Tossing a coin.</p>
+
+<p>Longer answer: You know that you treat discrete events like the above with probability mass functions or similar, but continuous things with probability density functions. Imagine you had \(X\) which is randomly uniform on \([0,1]\) half the time and \(5\) the rest of the time. Perfectly reasonable thing, could easily come up. Doesn't fit into either framework.</p>
+
+<p>Measure theory provides a consistent language and mathematical framework unifying these ideas, and indeed much more general objects in stochastic theory. It removes any necessity to distinguish between fundamentally similar objects and crystallizes the relevant points out, allowing much deeper understanding of the theory.</p>
+<p>(Carl "not all wrong" Turner)</p>
+</blockquote>
+
+<h2 id="measure-and-norm">measure and norm</h2>
+
+<p>Recall from <a href="/eleventy-base-blog/posts/ode/#5.5">my connection between <em>differential equations</em> and <em>norms</em></a>: </p>
+
+<div class="card"><div class="card-body">
+  <p>To begin, <a href="https://math.stackexchange.com/q/16963/1098426">a well-phrased question</a> from Math Stack Exchange:</p>
+  <p>So if \(X\) is a vector space, and you define a norm, \(x \mapsto \| x \|\), on it, then the bounded subset, \(V = \{ x \in X: \|x\| &lt; \infty \}\), is automatically a subspace.</p>
+  <p>This follows from the definition of a norm, so for all \(x,y \in V\), \(c \in \mathbb{C}\), \(\|x + c y\| \le \|x\| + \|cy\| = \|x\|+ |c| \|y\| &lt; \infty\), so \(x+cy \in V\).</p>
+  <p>Is this the reasoning behind the definition of a norm?</p>
+  <p>Now, the top answer to this MSE question is from QC in 2011. While I love the guy, it is basically links to some funcitonal analysis resources. So, no.</p>
+  <p>There is a better answer from <a href="https://math.stackexchange.com/a/1380960/1098426">another MSE question</a>:</p>
+  <p>Norms are inspired from the Euclidean distance function and refer to a generalized class of metrics \(d\) which for a normed linear space \(V\), satisfy the properties:</p>
+<p style="overflow: auto;">
+  </p><ul style="overflow: auto;">
+      <li>\(d(a,b) = d(a-b,0) = d(0,b-a) \quad \forall \, a,b \in V\)</li>
+      <li>\(d(\lambda u,0) = |\lambda| d(u,0) \quad \forall \, u \in V\)</li>
+      <li>\(d(a,b) \le d(a,c)+d(c,b)\)</li>
+      <li>\(d(a,b) \ge 0 \quad \) with equality \( \Leftrightarrow a=b.\)</li>
+    </ul>
+    
+<p></p>
+</div></div><br>
+
+<p>Again, as I've said from that post and this post: <em>function analysis</em> offers the best persepctive for appreciating <em>norms</em>.</p>
+<p>However, <a href="https://www.math.ucdavis.edu/~hunter/intro_analysis_pdf/intro_analysis.pdf">my favorite notes on real analysis</a> from lovely <em>Prof. J. K. Hunter</em>, make uses of norms but concerning measures states: </p>
+<blockquote>
+  The Lebesgue integral allows for the integration of unbounded or highly discontinuous functions that may not have Riemann integrals. It offers improved mathematical properties compared to the Riemann integral. The definition of the Lebesgue integral involves measure theory, which is beyond the scope of this discussion. However, it is worth noting that the Riemann integral is sufficient for many purposes. Even if the Lebesgue integral is needed, it is advisable to first understand the Riemann integral.
+</blockquote>
+<p>The question remains: what is the difference between measure and norm, or at least, why might they be related?</p>
+<p>For this first one, the basic idea is this. Norm and measure are mathematical concepts used in different contexts. A norm is primarily used in vector spaces and assigns non-negative numbers to vectors, while a measure is commonly used in sets and assigns non-negative numbers to subsets. Norms operate on individual elements, while measures consider subsets. The Euclidean norm, based on the square root of the sum of squared entries, is a basic example. Measures determine lengths, areas, or volumes and extend to unions and intersections of sets. Norms are denoted as \(\|\cdot\|\), and measures are denoted as \(\mu\). The axioms of a measure allow for non-empty sets to have non-zero measures, unlike norms where non-zero vectors always have non-zero norms. Pseudo-norms may assign zero to non-zero vectors but are not typically classified as norms.</p>
+<blockquote>
+  <p><em>Norm</em> is mainly used in the context of vector spaces, i.e., a set equipped with a structure that enables us to sum up elements of the set and multiply them with scalars (e.g., real numbers).</p>
+<p><em>Measure</em> is mostly used in the context of sets which are not required to have any additional structure. Yet, to define the notion of measure, we need to require certain rules (about the open subsets of the given set and their unions and intersections) to hold.</p>
+<p>Basic example of a norm would be the Euclidean norm (square all the entries of a given vector, sum them up and take the square root - classic). Basic example of a measure would be the length of an interval, area of a two-dimensional region, or a volume of some higher-dimensional object. But the objects we want to <em>measure</em> are not just these elementary shapes, but also their unions and intersections (so things may get quite complicated as far as the general element to be measured is concerned - unlike with the case of vector spaces where the element may be uniquely represented with a sequence of numbers (components of the vector)).</p>
+<p>Let our set be denoted by \(S\). Both the norm and the measure are certain functions on a set under consideration. A bit more precisely, norm (denoted \(\|\cdot\|\)) takes only one argument from \(S\) and spits out a non-negative number, i.e., it is a mapping \(\|\cdot\| \colon S \rightarrow \mathbb{R}\) satisfying certain rules such as the norm of a zero vector to be zero. On the other hand, a measure takes a <em>subset</em> of \(S\) and spits out a non-negative number. So \(\mu \colon \Omega(S) \rightarrow \mathbb{R}\) is a function considered on a certain set \(\Omega(S)\) consisting of subsets of \(S\), and we require some axioms about \(\Omega(S)\) to hold (so actually some structure is hidden somewhere else anyway, yet different structure than the vector spaces have) in order for the measure to be definable nicely. Moreover, other axioms must be satisfied by \(\mu\) to be a function called measure (e.g., that the empty set has zero measure).</p>
+<p>Note: The axioms of a <em>measure</em> do not require non-empty sets to be of zero measure - unlike the case of a <em>norm</em> where a non-zero vector always has a non-zero norm... well, actually we can consider a type of norm which assigns zero to a non-zero vector, but those are usually called pseudo-norms.</p>
+<p>(Radek Suchánek, 2017)</p>
+</blockquote>
+<p>Source: <a href="https://math.stackexchange.com/q/1483770/1098426">Difference between a measure and a norm in a euclidean space</a></p>
+<p>Next, from the same source, is a more definition focused explanation. A norm is a function that assigns a non-negative number to a vector and behaves like a length function. It satisfies properties such as non-negativity, the triangle inequality, and homogeneity. The Euclidean norm in \(\mathbb{R}^2\) is given as an example. On the other hand, a measure is a function that assigns non-negative numbers to sets. It satisfies properties such as non-negativity, assigning measure zero to the empty set, and countable additivity for disjoint sets. The Lebesgue Measure is mentioned as an example. The interpretation of objects in terms of norms and measures is discussed. The norm of a line depends on how it is viewed, with the length interpretation being relevant when considering the line as a vector. However, when considering the line as a subset of \(\mathbb{R}^2\), the measure of the line (area) is typically zero. 
+</p>
+<blockquote>
+  <p>I think that if we see the <em>definitions</em> of norm and measure, we can make the situation clearer.</p>
+<p>A <em>norm</em> is usually defined in a vector space and is a function that takes a vector and outputs a non-negative number. It is also required to have certain properties that make it behave <em>like a length function</em>. These axioms are:</p>
+<ul>
+<li>\(||x|| &gt; 0\) if \(x \ne 0\) and \(\|x\| = 0\) if \(x = 0\) (as elements of the vector space you have)</li>
+<li>\(\|x + y\| \le \|x\| + \|y\|\) for all vectors (this is the analogue of the triangle inequality)</li>
+<li>\(\|αx\| = |α|\cdot\|x\|\) for all vectors \(x\) and scalars \(α\)</li>
+</ul>
+<p>The most usual example is the Euclidean norm in \(\mathbb{R}^2\) which, given a vector \(u=(x,y)\), gives \(\|u\| = \sqrt{x^2 + y^2}\).</p>
+<p>Now, a <em>measure</em> is a function that takes <strong>sets</strong> (which, in a familiar setting like \(\mathbb{R}^2\), can be thought of as shapes) and outputs non-negative numbers. The corresponding axioms are:</p>
+<ul>
+<li>\(μ(A) \ge 0\) for all sets \(A\)</li>
+<li>The empty set has measure zero</li>
+<li>If we have a family of disjoint sets \(A_i\), then \(μ\left(\bigcup_{i}^{\infty} A_i\right) = \sum_{i}^{\infty} μ(A_i)\)</li>
+</ul>
+<p>The most usual measure is the Lebesgue Measure, which, in <em>good sets</em>, coincides with our sense of length in \(\mathbb{R}^1\), area in \(\mathbb{R}^2\), and volume in \(\mathbb{R}^3\).</p>
+<p>Now, for your question: The answer depends on how you view your objects. If you want to see the line as a vector (with, say, the start to the origin), then the <em>norm</em> would be the length of the line.</p>
+<p>Now it gets trickier because the standard measure in \(\mathbb{R}^2\) is area, so it is expected (and that's what happens) for every line, segment, or infinite to have measure (area) 0. But if you identify the line with \(\mathbb{R}^1\), then you would have as measure what we usually understand as length.</p>
+<p>To make this clear, let's say you have the line going from \((0,0)\) to \((1,1)\). This can be represented as:</p>
+<ul style="overflow: auto;">
+<li>the vector: \(u=(1,1)\)</li>
+<li>the subset of \(\mathbb{R}^2\): \(L = \{ p = (x,y) \ | \ x,y \in \mathbb{R}^2  \ \land \ (x,y) = (x,x) \ \land \ 0 \le x \le 1 \}\)</li>
+</ul>
+<p>Then the norm \(\|u\| = \sqrt{2}\), and by identifying \(L\) with the set \(L' = [0,\sqrt{2}]\), you have \(\lambda^1(L') = \sqrt{2}\) with \(\lambda'\) being the measure of \(\mathbb{R}^1\). (Note that as we said above, the Lebesgue measure of \(\mathbb{R}^2\) would give the area of the line, so \(\lambda^2(L) = 0\)).</p>
+</blockquote>
+
+
+<h2 id="dipping-into-functional-analysis">dipping into functional analysis</h2>
+<p>To broach this topic, I begin with another thread. This response considers a measure space \((S, \Sigma, \mu)\) and a normed vector space \(\mathcal{L}^2(\mu)\)  , which consists of functions with finite square integrals (<span class="text-info">Another way to define the integrability of a function is by considering the square of the function instead of its absolute value. In this case, for the square of the function to be Lebesgue integrable, both the integrals of the positive and negative parts of the real component, as well as those of the imaginary component, must be finite.</span>). For a measurable function \(f\) belonging to \(\mathcal{L}^2(\mu)\), the norm is defined as the square root of the integral of \(f^2\) with respect to \(\mu\), resembling the concept of "length" similar to the Euclidean norm in \(\mathbb{R}^n\). Moving on to a probability space \((\Omega, \mathcal{F}, P)\) and the normed vector space \(\mathcal{L}^2(P)\), the norm of a random variable \(X\) is defined as the square root of the expectation of \(X^2\). However, this is not the "length" of \(X\) unless the expected value of \(X\) is zero. In practice, the standard deviation is often considered as the "length" of \(X\) by subtracting the expected value \(\mu\) from \(X\). This brings up questions about why the subtraction of \(\mu\) is necessary to interpret it as the "length" and how to understand \(X - \mu\) when thinking of \(\mathcal{L}^2(P)\) as a vector space over \(\mathbb{R}\). Additionally, there is an update discussing the desire to apply Euclidean geometry intuition to visualize the correlation coefficient \(\rho\) as the cosine of the angle between random variables \(X\) and \(Y\), and the challenges in doing so due to differences in norms and inner products between vector spaces and \(\mathcal{L}^2(P)\).</p>
+<p>The question posed from <a href="https://math.stackexchange.com/q/1885407/1098426">"Lengths" of Random Variables in Infinite Dimensional Spaces</a> is as follows:</p>
+<blockquote>
+  <p>Consider a measure space \((S, \Sigma, \mu)\) and the normed vector space \(\mathcal{L}^2(\mu)\). Then for any measurable function \(f: S \to \mathbb{R}\) with \(f \in \mathcal{L}^2(\mu)\), the norm is defined as</p>
+  <p>
+    \[
+    ||f||_{\mathcal{L}^2(\mu)} := \left(\int_S f^2(x) \, \mu(dx)\right)^{1/2},
+    \]
+  </p>
+  <p>and, as I understand it, this is exactly analogous to the "length" of \(f\), just as the Euclidean norm is the "length" of a vector in \(\mathbb{R}^n\).</p>
+  <p>Now consider a probability space \((\Omega, \mathcal{F}, P)\) and the normed vector space \(\mathcal{L}^2(P)\). Let \(X: \Omega \to \mathbb{R}\) be a random variable. Then for any such \(X \in \mathcal{L}^2(P)\), we define the norm of \(X\)</p>
+  <p>
+    \[
+    ||X||_{\mathcal{L}^2(P)} := \left( \int_{\Omega} X^2(\omega) \, P(d\omega)\right)^{1/2} = \left(E\left(X^2\right)\right)^{1/2},
+    \]
+  </p>
+  <p>but this is *not* the "length" of \(X\) unless \(E(X) = 0\). Instead, we usually think of the standard deviation as the length of \(X\) by subtracting \(\mu := E(X)\) from \(X\) first:</p>
+  <p>
+    \[
+    std(X) := \left(E\left(\left(X - \mu\right)^2\right)\right)^{1/2}.
+    \]
+  </p>
+  <p>This brings up two questions:</p>
+  <ol>
+    <li>Why must we subtract \(\mu\) to interpret this as the "length"?</li>
+    <li>I'm thinking of \(\mathcal{L}^2(P)\) as a vector space over \(\mathbb{R}\). Since \(\mu \in \mathbb{R}\), what does \(X - \mu\) mean? In Euclidean space, it doesn't make sense to write \(\vec{x} - c\) for \(\vec{x} \in \mathbb{R}^n\) and \(c \in \mathbb{R}\).</li>
+  </ol>
+  <p><strong>Update</strong> I want to be able to apply the intuition of Euclidean geometry to visualize things like the correlation coefficient \(\rho\) as the cosine of the angle between two random variables \(X\) and \(Y\), as explained <a href="https://math.stackexchange.com/questions/48168/is-there-intuition-behind-the-pearson-correlation-coefficient">here</a>. In \(\mathbb{R}^n\), the cosine of the angle between two vectors \(\vec{x}\) and \(\vec{y}\) is related to their inner product and lengths by</p>
+  <p>
+    \[
+    \cos \theta = \frac{\langle\vec{x}, \vec{y}\rangle}{||\vec{x}||\cdot||\vec{y}||}.
+    \]
+  </p>
+  <p>If \(||X||_{\mathcal{L}^2(P)}\) were indeed the "length" of \(X\), then I feel like I should just be able to change the norms and inner products, but I can't because</p>
+  <p style="overflow-x: auto;">
+    \[\cos \theta =
+\frac{\left&lt;X,Y\right&gt;_{\mathcal{L}^2(P)}}{||X||_{\mathcal{L}^2(P)}\cdot||Y||_{\mathcal{L}^2(P)}}
+\neq \frac{\left&lt;X - \mu_X, Y -
+\mu_Y\right&gt;_{\mathcal{L}^2(P)}}{||X -
+\mu_X||_{\mathcal{L}^2(P)}\cdot||Y - \mu_Y||_{\mathcal{L}^2(P)}} =
+\frac{Cov(X,Y)}{std(X)\cdot std(Y)} = \rho\]
+  </p>
+</blockquote>
+
+<p>Now, consider the first, rather dismissive, answer. The basic idea is that the interpretation of norms in function spaces as lengths can be misleading and hinder understanding. Instead, it is more accurate to consider norms as offering a vague notion of size rather than geometric intuition. In vector spaces, norms are typically measured against the zero vector to maintain translation invariance. The choice of reference function in norm calculations can capture the distance between functions. For instance, in \(L^{2}(\mathbb{R})\), norms can be taken with respect to different functions to measure their separation. The standard deviation example is specific to how it is defined as a result of linear functionals acting on the normed space. It is important to note that this is unrelated to the principles of vector spaces. Visualizing infinite-dimensional Hilbert spaces presents challenges due to our limited ability to visualize beyond three dimensions.</p>
+
+<blockquote>
+  <p>Length is not really the best way to think about norms in function spaces. It is much better to think of the norm as offering a vague notion of size. Thinking of the norm in function spaces as length just connotes too much geometric intuition where there is none. I think you are falling into a common trap when starting out in functional analysis, which is to try to interpret everything geometrically. I’ll just say that this is a very problematic way to approach the subject and will cause you more headaches than it will insight.</p>
+<p>The reason that the norm is always taken against the zero vector by default is because in vector spaces, the length of vectors is translation invariant. For example, in \(L^{2}(\mathbb{R})\), we take the norm against the zero function by default
+\[\lvert\lvert f \rvert\rvert_{L^{2}}=\lvert\lvert f-0\rvert\rvert=\left(\int_{E \subseteq \mathbb{R}} \lvert f-0 \rvert^{2}\,  d\mu \right)^{1/2}\]
+but we could just as easily pick another function, say \(g \in L^{2}(\mathbb{R})\) and write
+\[\lvert\lvert f-g \rvert\rvert_{L^{2}}=\left(\int_{E \subseteq \mathbb{R}} \lvert f -g \rvert^{2}\,  d\mu \right)^{1/2}\]
+which tells us how far apart these functions are in some sense (and there are many senses which do not coincide with your geometric intuition). Your standard deviation example just follows from the fact that you have a linear functional \(\mathbb{E}[\cdot]:L^{2}(\Omega,\mathcal{F},\mathbb{P}) \to \mathbb{R}\) composed with another linear functional \(\sigma[\cdot]:L^{2}(\Omega,\mathcal{F},\mathbb{P}) \to \mathbb{R}\) given by
+\[\sigma[X]=(\mathbb{E}[(X-\mathbb{E}[X])^{2}])^{1/2}\]
+and this has nothing to do with how vector spaces work, it is just because of how \(\sigma[X]\) is defined. It is the "distance" (or how much "size" is between them) from the constant function whose value is given by the functional \(\mathbb{E}[X]\).</p>
+<p>As for your second question, like I said before, our brains are limited to visualizing in 3 dimensions. Trying to "visualize" in an infinite dimensional Hilbert space simply isn’t going to work.</p>
+</blockquote>
+<p>Lastly, in this explanation discusses different vector spaces and their associated norms. Examples of vector spaces include \(\mathcal{R}^n\), the n-dimensional space of real numbers, and \(L^2(\mu)\). Norms are defined as non-negative real-valued functions that satisfy specific properties. For instance, in \(L^2(\mu)\), the norm is defined as \(\|f\|_2 = \left(\int f^2 d\mu\right)^{1/2}\), while in Euclidean space, the norm of a vector \(x\) is given by \(\|x\| = \left(\sum_{i=1}^{n}x_i^2\right)^{1/2}\), representing the familiar Euclidean distance. Normed spaces also have an induced metric, which serves as a measure of distance between elements. The variance of a random variable \(X\) is related to the norm through \(Var(X) = \|\mathbb{X} - \mu\|_2^2\), where \(\mu\) is the expectation of \(X\). The standard deviation corresponds to the actual norm, while the covariance between two random variables \(X\) and \(Y\) is defined as their inner product. Notably, the \(L_2(P)\) norm can be derived as a special case of the inner product when applied to \(X = Y\) and \(E(X) = 0\), but in general, norms in \(L_2(P)\) spaces cannot be obtained from an inner product.</p>
+<blockquote>
+  <p>Let \(V\) be a vector space. Examples of \(V\) are, \(V=\mathcal{R}^n\), the n-dimensional space of reals or \(V=L^2(\mu)=\{f:\int f^2 d\mu&lt;\infty\}\).</p>
+<p>A norm \(\vert\vert\cdot\vert\vert\) is non negative real-valued function on \(V\) which satisfies the three well known properties.</p>
+<p>For \(f\in L^2(\mu)\), a norm is \(\vert\vert f\vert\vert_2=(\int f^2 d\mu)^{1/2}\).</p>
+<p>In a Euclidean space, for \(x=(x_1,\ldots,x_n) \in \mathcal{R}^n\) a norm is defined as \(\vert\vert x\vert\vert=(\sum^{n}_{i=1}x_i^2)^{1/2}\)</p>
+<p>In a normed space there is an induced metric(a "distance" between its elements) defined by: \(\vert\vert v-w\vert\vert,\;v,w\in V\).</p>
+<p>For \(f,g\in L^2(\mu)\), \(\vert\vert f-g\vert\vert_2=(\int (f-g)^2 d\mu)^{1/2}\)
+and for \(x,y\in \mathcal{R}^n\) the induced metric is \(\vert\vert x-y\vert\vert=(\sum^{n}_{i=1}(x_i-y_i)^2)^{1/2}\) which is the well known Euclidean distance between two vectors.</p>
+<p>So, the length of a vector is actually the Euclidean norm on \(\mathcal{R}^n\).</p>
+<p>The variance is a special case. \(X\in \mathcal{R}\) is random variable ie a measurable function \(\mu\in \mathcal{R}\) is a constant, the expectation of \(X\), and \(P\) is a probability measure on \(X\) then \[Var(X)=\vert\vert X-\mu\vert\vert_2^2=\int(X-\mu)^2dP=E(X-\mu)^2\]</p>
+<p>The standard deviation is the actual norm.</p>
+<p>The covariance between two random variables \(X,Y\) is the inner product \(&lt;X-E(X),Y-E(Y)&gt;\;=\int (X-E(X))(Y-E(Y))dP\).</p>
+<p>Notice that this inner product can produce the \(L_2(P)\) norm as special case for \(X=Y,\;E(X)=0\).
+\[&lt;X,X&gt;\;=\int X^2 dP=\vert\vert X\vert\vert_2^2\]
+This is the known formula \(Cov(X,X)=Var(X)\).</p>
+<p>In general norms in \(L_2(P)\) spaces cannot be produced from an inner product.</p>
+</blockquote>
+
+<p>With all that in mind, even this brief dip into functional analysis to clarify norms and measures is not very helpful to someone who is for the first time learning differential equations or probability thoery.</p>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/eleventy-base-blog/blog/langlands &amp; pendulum/">langlands &amp; pendulum</a></li><li class="links-nextprev-next">Next →<br><a href="/eleventy-base-blog/blog/1st order integrating factors/">note: integrating factors</a></li>
+</ul>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
+		</footer>
+
+		<!-- This page `/blog/notes - cont. measure &amp; intro prob/` was built on 2025-02-27T22:48:54.125Z -->
+		<script type="module" src="/eleventy-base-blog/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
