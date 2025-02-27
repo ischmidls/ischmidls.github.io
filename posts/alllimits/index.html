@@ -1,32 +1,555 @@
-<!doctype html><html domain=https://ischmidls.github.io ga-id=G-CY1SRH6BVP lang=en><script src="https://www.googletagmanager.com/gtag/js?id=G-CY1SRH6BVP" async></script><script>window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>complete categories</title>
+		<meta name="description" content="monadic forgetful functor, and reflective subfunctor">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="izak">
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
 
-  gtag('config', 'G-CY1SRH6BVP');</script><meta charset=utf-8><meta content="width=device-width,initial-scale=1" name=viewport><link href="/img/favicon/favicon.ico?hash=4bb2edba09" rel=icon type=image/png><meta content=#f9c412 name=theme-color><meta content="max-snippet:-1, max-image-preview: large, max-video-preview: -1" name=robots><title>all limits</title><meta content="all limits" property=og:title><meta content="monadic forgetful functor, and reflective subfunctor" name=description><meta content="monadic forgetful functor, and reflective subfunctor" property=og:description><meta content=summary_large_image name=twitter:card><meta content=@N/A name=twitter:site><meta content=@N/A name=twitter:creator><link href=https://ischmidls.github.io/posts/alllimits/ rel=canonical><meta content=no-referrer-when-downgrade name=referrer><link href=/feed/feed.xml rel=alternate type=application/atom+xml title=izak><link href=/ rel=preconnect crossorigin><link href=/fonts/Inter-3.19.var.woff2 rel=preload crossorigin as=font type=font/woff2><script src="/js/min.js?hash=8db32dcb3a" async data-cwv-src="/js/web-vitals.js?hash=a2ed2205a4" defer></script><script csp-hash>if (/Mac OS X/.test(navigator.userAgent))document.documentElement.classList.add('apple')</script><link href=https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css rel=stylesheet crossorigin=anonymous integrity=sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l><link href=https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css rel=stylesheet><script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js async id=MathJax-script type=text/javascript></script><style>:root{--primary:#4f7ca8;--primary-dark:#2e424f;--background:#f5f4f3;--color:#05120E;--main-width:calc(100vw - 3em)}main img{content-visibility:auto}article *{scroll-margin-top:50px}header nav{position:fixed;padding:.375em 1.5em;background:rgba(255,255,255,.9);font-weight:200;text-align:right}@media (min-width:37.5em){:root{--main-width:calc(37.5em - 3em)}}dialog,share-widget{position:fixed;opacity:.9}share-widget{right:20px;bottom:20px}share-widget div{width:30px;height:30px;background-image:url(/img/share.svg);background-repeat:no-repeat;background-position:center}.apple share-widget div{background-image:url(/img/share-apple.svg)}body,share-widget button{margin:0}share-widget button:active{transform:scale(1.2)}dialog{background-color:#8dff80;z-index:1000}#nav{z-index:2;position:relative}#reading-progress,header nav{z-index:1;width:100vw;left:0;top:0}#reading-progress{background-color:var(--primary);position:absolute;bottom:0;transform:translate(-100vw,0);will-change:transform;pointer-events:none}html{font-family:'Georgia',serif;font-size:1.3em;line-height:1.15;-webkit-text-size-adjust:100%}h1{font-size:1.5em;line-height:1.25;margin:.67em 0 .5em;font-family:var(--font-family)}hr{box-sizing:content-box;height:0;overflow:visible;border-bottom:1px solid #eee}a{background-color:transparent;color:#f9c412;text-decoration:none;color:var(--primary)}small{font-size:80%;color:#ccc}img{border-style:none}button,input{font-family:inherit;font-size:100%;line-height:1.15;overflow:visible}button{text-transform:none}input{margin:0}[type=button],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}body,p{font-size:1em}p{margin-bottom:1.5em;margin-bottom:1.36rem}body,p{font-size:1rem;line-height:1.6}@media (min-width:600px){body,p{font-size:1.1rem;line-height:1.6}p{margin-bottom:1.496rem}}@media (min-width:1200px){body,p{font-size:1.2rem;line-height:1.6}p{margin-bottom:1.632rem}}a:hover{text-decoration:underline}@media (max-width:767px){x:-moz-any-link{display:table-cell}}button,input{border-radius:.3em;max-width:100%}button{background:#f2f2f2;color:#191919;cursor:pointer;display:inline-block;padding:.75em 1.5em;text-align:center;margin:0 .75em 1.5em 0}input{padding:.75em;margin-bottom:1.5em;display:inline}button:hover{background:#d9d9d9;color:#000}button:not([disabled]){background:#f9c412;color:#181818;background:var(--primary)}button:not([disabled]):hover{background:#ba9005;color:#000;background:var(--primary-dark)}input[type=text],input[type=url]{border:1px solid #595959;padding:.75em}*{border:0;box-sizing:border-box}header,img,video{margin:0 auto;max-width:100%}img,video{height:auto}body,header nav a{font-family:var(--font-family);color:var(--color)}body{background:var(--background)}header{padding:4.5em 1.5em 3em;width:37.5em;text-align:center;display:flex;align-items:center;flex-direction:column}header p{margin-top:0}header nav h1{float:left;font-size:inherit;line-height:inherit;margin:0;text-align:left}header nav a{font-weight:700;text-decoration:none;margin-left:1.5em}header nav a:first-of-type{margin-left:auto}header nav a:last-of-type{margin-right:1.5em}main{max-width:70rem;margin:0 auto;border-top:.5px solid #ccc}footer{background:var(--background);color:var(--color);padding:3em;text-align:center}footer>*{margin:1.5em}footer nav a img{vertical-align:middle}footer nav,footer p{font-size:90%}article{max-width:100%;padding:1.5em;width:37.5em;margin:0 auto}::-webkit-scrollbar-thumb:hover{background:var(--primary)}</style><header><nav><div id=nav><h1><a href=/ title=home>izak</a></h1><a href=/about/ >about</a></div><div id=reading-progress aria-hidden=true></div></nav><h1>all limits</h1><aside>7 min read.</aside><dialog id=message></dialog></header><main><div id=bsr-wrapper class=container style=min-height:100vh;><article><script type=text/x-mathjax-config>MathJax.Hub.Config({
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Garamond, serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">izak</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">Home</a></li>
+					<li class="nav-item"><a href="/blog/">Archive</a></li>
+					<li class="nav-item"><a href="/about/">About</a></li>
+					<li class="nav-item"><a href="/feed/feed.xml">Feed</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<heading-anchors>
+				
+<h1 id="complete-categories">complete categories</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2025-02-26">26 February 2025</time></li>
+	<li><a href="/tags/math/" class="post-tag">math</a>, </li>
+	<li><a href="/tags/long/" class="post-tag">long</a></li>
+</ul>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
       jax: ["input/TeX", "output/HTML-CSS"],
       extensions: ["tex2jax.js"],
       "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
       tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
       TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
       messageStyle: "none"
-    });</script><script src=https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js type=text/javascript></script><p>To prove that the forgetful functor \( U: \text{Vect}_k \to \text{Set} \) is monadic, we need to show that it satisfies the conditions of monadicity, as given by Beck's Monadicity Theorem. The forgetful functor \( U \) maps a vector space over a field \( k \) to its underlying set and maps linear transformations to their underlying functions.<p>The forgetful functor \( U: \text{Vect}_k \to \text{Set} \) has a left adjoint \( F: \text{Set} \to \text{Vect}_k \), which is the free vector space functor. For a set \( X \), \( F(X) \) is the vector space whose basis is \( X \). The adjunction is given by the natural isomorphism: \[ \text{Hom}_{\text{Vect}_k}(F(X), V) \simeq \text{Hom}_{\text{Set}}(X, U(V)), \] where \( V \) is a vector space and \( X \) is a set. This shows that \( U \) is a right adjoint.<p>The adjunction \( F \dashv U \) induces a monad \( T = UF \) on \( \text{Set} \). First, for a set \( X \), \( T(X) = U(F(X)) \) is the underlying set of the free vector space generated by \( X \). This is the set of formal linear combinations of elements of \( X \) with coefficients in \( k \). Second, the unit \( \eta_X: X \to T(X) \) maps an element \( x \in X \) to the corresponding basis vector in \( F(X) \). Third, the multiplication \( \mu_X: T(T(X)) \to T(X) \) is the linear map that "flattens" formal linear combinations of formal linear combinations into formal linear combinations.<p>Beck's Monadicity Theorem states that a functor \( U \) is monadic if: \((1.)\) \( U \) has a left adjoint, \((2.)\) \( U \) reflects isomorphisms, and \((3.)\) \( U \) preserves and reflects coequalizers of \( U \)-split pairs.<p>This third condition might be least familiar. Wikipedia's descriptions for this are not as subpar as they often are. First, (\( U \)-split pairs are those parallel pairs of morphisms in $\text{Vect}_k$, which $U$ sends to pairs having a split coequalizer in $\text{Set} $). Second, in the category of sets, the coequalizer of two functions \( f, g: X \to Y \) is the quotient of \( Y \) by the smallest equivalence relation \( \sim \) satisfying \( f(x) \sim g(x) \) for every \( x \in X \). For example, if \( R \) is an equivalence relation on a set \( Y \), and \( r_1, r_2: R \to Y \) are the natural projections (where \( R \subseteq Y \times Y \)), then the coequalizer of \( r_1 \) and \( r_2 \) is the quotient set \( Y / R \).<p>Before looking at \( U \)-split pair in \( \text{Vect}_k \), let's verify the first two conditions.<p>For $(1)$, we already showed \( U \) has a left adjoint.<p>For $(2)$, a linear transformation \( f: V \to W \) is an isomorphism in \( \text{Vect}_k \) if and only if it is bijective. Since \( U \) maps \( f \) to its underlying function, \( U(f) \) is an isomorphism in \( \text{Set} \) (i.e., a bijection) if and only if \( f \) is an isomorphism in \( \text{Vect}_k \). Thus, \( U \) reflects isomorphisms.<p>For $(3)$, a \( U \)-split pair in \( \text{Vect}_k \) consists of linear maps \( f, g: V \to W \) such that there exist set-theoretic maps \( h: U(W) \to U(V) \) and \( k: U(W) \to U(W) \) making \( U(f), U(g) \) a split pair in \( \text{Set} \). The coequalizer of \( f, g \) in \( \text{Vect}_k \) is the quotient space \( W / \text{Im}(f - g) \), and \( U \) maps this to the set-theoretic coequalizer of \( U(f), U(g) \) in \( \text{Set} \). Since \( U \) is a right adjoint, it preserves coequalizers of \( U \)-split pairs. Moreover, because \( U \) reflects isomorphisms and the splitting conditions ensure that the coequalizer in \( \text{Set} \) lifts uniquely to \( \text{Vect}_k \), \( U \) also reflects coequalizers of \( U \)-split pairs. Thus, \( U \) preserves and reflects such coequalizers.</p><iframe class=quiver-embed height=304 src="https://q.uiver.app/#q=WzAsNCxbMCwwLCJWIl0sWzEsMCwiVyJdLFsyLDAsIlcgLyBcXHRleHR7SW19KGYgLSBnKSJdLFsyLDEsIloiXSxbMCwxLCJmIiwwLHsib2Zmc2V0IjotMX1dLFsxLDIsIlxccGkiXSxbMSwzLCJcXHBpJyIsMl0sWzIsMywiXFxleGlzdHMgISBcXCwgaCIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFswLDEsImciLDIseyJvZmZzZXQiOjF9XV0=&embed" style="border-radius: 8px; border: none;" width=553></iframe><p>In particular, in \(\text{Vect}_k\), let \(V\) and \(W\) be vector spaces, and let \(f, g: V \to W\) be linear maps. The coequalizer of \(f\) and \(g\) is the quotient space \(W / \text{Im}(f - g)\), equipped with the canonical projection map \(\pi: W \to W / \text{Im}(f - g)\). For any vector space \(Z\) and linear map \(\pi': W \to Z\) satisfying \(\pi' \circ f = \pi' \circ g\), there exists a unique linear map \(h: W / \text{Im}(f - g) \to Z\) induced by the universal property of the coequalizer, such that \(\pi' = h \circ \pi\). This universal property characterizes the coequalizer in \(\text{Vect}_k\).<p>As the forgetful functor \( U: \text{Vect}_k \to \text{Set} \) satisfies all the conditions of Beck's Monadicity Theorem, it is monadic. This particularly means that \( \text{Vect}_k \) is equivalent to the category of algebras over the monad \( T = UF \) on \( \text{Set} \).<hr><p>Now, the nice thing is that $\text{Set}$ has all limits by design. Since the canoncial forgetful functor from $\text{Vect}_k$ is monadic, we see $\text{Vect}_k$ also has all limits. It remains to show that the category of chain complexes $ \text{CH}(k) $ has all limits. We can do this analogously to how we showed $\text{Vect}_k$ has all limits given $\text{Set}$ has all limits.<p>To prove that the category of chain complexes $ \text{CH}(k) $ is a reflective subcategory of a category of functors into $ \text{Vect}_k $, we need to show that the inclusion functor $ i: \text{CH}(k) \to \text{Fun}(\mathcal{C}, \text{Vect}_k) $ has a left adjoint. This left adjoint is called the reflector, and it provides a way to "reflect" objects from the larger category (functors into $ \text{Vect}_k $) back into the subcategory $ \text{CH}(k) $.<p>Let $ \text{Vect}_k $ be the category of vector spaces over a field $ k $.<p>Let $ \text{CH}(k) $ be the category of chain complexes of $ k $-vector spaces. Objects are sequences of vector spaces $ (C_n)_{n \in \mathbb{Z}} $ with differentials $ d_n: C_n \to C_{n-1} $ such that $ d_{n-1} \circ d_n = 0 $, and morphisms are chain maps.<p>Let $ \mathcal{C} $ be a small category, and let $ \text{Fun}(\mathcal{C}, \text{Vect}_k) $ be the category of functors from $ \mathcal{C} $ to $ \text{Vect}_k $. Objects are functors $ F: \mathcal{C} \to \text{Vect}_k $, and morphisms are natural transformations.<p>Consider the category $ \mathcal{C} = \mathbb{Z} $, where $ \mathbb{Z} $ is viewed as a poset category (with objects integers and a unique morphism $ n \to m $ iff $ n \geq m $).<p>A functor $ F: \mathbb{Z} \to \text{Vect}_k $ assigns a vector space $ F(n) $ to each integer $ n $ and a linear map $ F(n \to m): F(n) \to F(m) $ for each $ n \geq m $.<p>A chain complex $ (C_n, d_n) $ can be viewed as a functor $ F: \mathbb{Z} \to \text{Vect}_k $, where $ F(n) = C_n $ and $ F(n \to n-1) = d_n $, with the condition $ d_{n-1} \circ d_n = 0 $.<p>Thus, $ \text{CH}(k) $ is a subcategory of $ \text{Fun}(\mathbb{Z}, \text{Vect}_k) $.<p>To show that $ \text{CH}(k) $ is a reflective subcategory, we need to construct a left adjoint $ L: \text{Fun}(\mathbb{Z}, \text{Vect}_k) \to \text{CH}(k) $ to the inclusion functor $ i: \text{CH}(k) \to \text{Fun}(\mathbb{Z}, \text{Vect}_k) $.<p>For a functor $ F \in \text{Fun}(\mathbb{Z}, \text{Vect}_k) $, define $ L(F) $ as the chain complex obtained by "forcing" the condition $ d_{n-1} \circ d_n = 0 $.<p>To construct the chain complex $ L(F) $ from a functor $ F: \mathbb{Z} \to \text{Vect}_k $, we start by defining $ L(F)_n = F(n) $ and the differential $ d_n = F(n \to n-1) $. However, this does not automatically satisfy the chain complex condition $ d_{n-1} \circ d_n = 0 $. To enforce this condition, we modify $ L(F)_n $ by taking the quotient of $ F(n) $ by the image of $ d_{n+1}: F(n+1) \to F(n) $, particularly submodule generated by this image. This quotient ensures that the composition $ d_{n-1} \circ d_n $ becomes zero, as the image of $ d_{n+1} $ is factored out. The resulting object $ L(F) $ is now a chain complex, as the differentials satisfy the required condition $ d_{n-1} \circ d_n = 0 $. This process of quotienting effectively "reflects" the functor $ F $ into the subcategory of chain complexes.<p>The reflector $ L $ is left adjoint to the inclusion functor $ i $. We see there is a natural isomorphism:<p>$$\text{Hom}_{\text{CH}(k)}(L(F), C) \simeq \text{Hom}_{\text{Fun}(\mathbb{Z}, \text{Vect}_k)}(F, i(C))$$<p>for all $ F \in \text{Fun}(\mathbb{Z}, \text{Vect}_k) $ and $ C \in \text{CH}(k) $.<p>This adjunction arises because $ L(F) $ is the "best approximation" of $ F $ as a chain complex, and morphisms from $ L(F) $ to $ C $ correspond naturally to morphisms from $ F $ to $ i(C) $.<p>Since the inclusion functor $ i: \text{CH}(k) \to \text{Fun}(\mathbb{Z}, \text{Vect}_k) $ has a left adjoint $ L $, the category $ \text{CH}(k) $ is a reflective subcategory of $ \text{Fun}(\mathbb{Z}, \text{Vect}_k) $.<hr>These notes were inspired by a remark in <a href="https://youtu.be/5uI0uJpsEhI?si=f8G1Y0ylOOewxhhG">this</a> video.<share-widget><button aria-label=Share href=https://ischmidls.github.io/posts/alllimits/ on-click=share><div></div></button></share-widget><script type=application/ld+json>{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "all limits",
-  "image": [],
-  "author": "izak", 
-  "genre": "blog", 
-  "publisher": {
-    "@type": "Organization",
-    "name": "izak",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "/img/favicon/favicon-192x192.png?hash=617a4f0fa2"
-    }
-  },
-  "url": "https://ischmidls.github.io/posts/alllimits/",
-  "mainEntityOfPage": "https://ischmidls.github.io/posts/alllimits/",
-  "datePublished": "2025-02-26",
-  "dateModified": "Invalid DateTime",
-  "description": "MathJax.Hub.Config({ jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;], extensions: [&quot;tex2jax.js&quot;], &quot;HTML-CSS&quot;: { preferredFont: &quot;TeX&quot;, availableFonts:..."
-}</script></article></div></main><footer><p><a href=/ title="izak home" style="float: left;">izak home </a><a href=https://github.com/ischmidls title=github style="float: right;" target=_blank>github</a><p></footer>
+    });
+    </script>    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+
+<p>To prove that the forgetful functor \( U: \text{Vect}_k \to \text{Set} \) is monadic, we need to show that it satisfies the conditions of monadicity, as given by Beck's Monadicity Theorem. The forgetful functor \( U \) maps a vector space over a field \( k \) to its underlying set and maps linear transformations to their underlying functions. 
+</p>
+<p> 
+The forgetful functor \( U: \text{Vect}_k \to \text{Set} \) has a left adjoint \( F: \text{Set} \to \text{Vect}_k \), which is the free vector space functor. For a set \( X \), \( F(X) \) is the vector space whose basis is \( X \). The adjunction is given by the natural isomorphism:
+\[
+\text{Hom}_{\text{Vect}_k}(F(X), V) \simeq \text{Hom}_{\text{Set}}(X, U(V)),
+\]
+where \( V \) is a vector space and \( X \) is a set. This shows that \( U \) is a right adjoint.
+</p>
+
+
+<p> The adjunction \( F \dashv U \) induces a monad \( T = UF \) on \( \text{Set} \).
+First, for a set \( X \), \( T(X) = U(F(X)) \) is the underlying set of the free vector space generated by \( X \). This is the set of formal linear combinations of elements of \( X \) with coefficients in \( k \).
+Second, the unit \( \eta_X: X \to T(X) \) maps an element \( x \in X \) to the corresponding basis vector in \( F(X) \).
+Third, the multiplication \( \mu_X: T(T(X)) \to T(X) \) is the linear map that "flattens" formal linear combinations of formal linear combinations into formal linear combinations.
+</p>
+
+
+<p> 
+Beck's Monadicity Theorem states that a functor \( U \) is monadic if:
+\((1.)\) \( U \) has a left adjoint, 
+\((2.)\) \( U \) reflects isomorphisms, and 
+\((3.)\) \( U \) preserves and reflects coequalizers of \( U \)-split pairs.
+</p>
+<p> 
+This third condition might be least familiar. Wikipedia's descriptions for this are not as subpar as they often are. First, (\( U \)-split pairs are those parallel pairs of morphisms in $\text{Vect}_k$, which $U$ sends to pairs having a split coequalizer in $\text{Set} $). Second, in the category of sets, the coequalizer of two functions \( f, g: X \to Y \) is the quotient of \( Y \) by the smallest equivalence relation \( \sim \) satisfying \( f(x) \sim g(x) \) for every \( x \in X \). For example, if \( R \) is an equivalence relation on a set \( Y \), and \( r_1, r_2: R \to Y \) are the natural projections (where \( R \subseteq Y \times Y \)), then the coequalizer of \( r_1 \) and \( r_2 \) is the quotient set \( Y / R \). 
+</p>
+<p> 
+Before looking at \( U \)-split pair in \( \text{Vect}_k \), let's verify the first two conditions.
+</p>
+<p> 
+For $(1)$, we already showed \( U \) has a left adjoint.
+</p>
+<p> 
+For $(2)$, a linear transformation \( f: V \to W \) is an isomorphism in \( \text{Vect}_k \) if and only if it is bijective. Since \( U \) maps \( f \) to its underlying function, \( U(f) \) is an isomorphism in \( \text{Set} \) (i.e., a bijection) if and only if \( f \) is an isomorphism in \( \text{Vect}_k \). Thus, \( U \) reflects isomorphisms.
+</p>
+<p> 
+For $(3)$, a \( U \)-split pair in \( \text{Vect}_k \) consists of linear maps \( f, g: V \to W \) such that there exist set-theoretic maps \( h: U(W) \to U(V) \) and \( k: U(W) \to U(W) \) making \( U(f), U(g) \) a split pair in \( \text{Set} \). The coequalizer of \( f, g \) in \( \text{Vect}_k \) is the quotient space \( W / \text{Im}(f - g) \), and \( U \) maps this to the set-theoretic coequalizer of \( U(f), U(g) \) in \( \text{Set} \). Since \( U \) is a right adjoint, it preserves coequalizers of \( U \)-split pairs. Moreover, because \( U \) reflects isomorphisms and the splitting conditions ensure that the coequalizer in \( \text{Set} \) lifts uniquely to \( \text{Vect}_k \), \( U \) also reflects coequalizers of \( U \)-split pairs. Thus, \( U \) preserves and reflects such coequalizers.
+</p>
+
+<!-- https://q.uiver.app/#q=WzAsNCxbMCwwLCJWIl0sWzEsMCwiVyJdLFsyLDAsIlcgLyBcXHRleHR7SW19KGYgLSBnKSJdLFsyLDEsIloiXSxbMCwxLCJmIiwwLHsib2Zmc2V0IjotMX1dLFsxLDIsIlxccGkiXSxbMSwzLCJcXHBpJyIsMl0sWzIsMywiXFxleGlzdHMgISBcXCwgaCIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFswLDEsImciLDIseyJvZmZzZXQiOjF9XV0= -->
+<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMCwwLCJWIl0sWzEsMCwiVyJdLFsyLDAsIlcgLyBcXHRleHR7SW19KGYgLSBnKSJdLFsyLDEsIloiXSxbMCwxLCJmIiwwLHsib2Zmc2V0IjotMX1dLFsxLDIsIlxccGkiXSxbMSwzLCJcXHBpJyIsMl0sWzIsMywiXFxleGlzdHMgISBcXCwgaCIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFswLDEsImciLDIseyJvZmZzZXQiOjF9XV0=&embed" width="553" height="304" style="border-radius: 8px; border: none;"></iframe>
+<p> 
+In particular, in \(\text{Vect}_k\), let \(V\) and \(W\) be vector spaces, and let \(f, g: V \to W\) be linear maps. The coequalizer of \(f\) and \(g\) is the quotient space \(W / \text{Im}(f - g)\), equipped with the canonical projection map \(\pi: W \to W / \text{Im}(f - g)\). For any vector space \(Z\) and linear map \(\pi': W \to Z\) satisfying \(\pi' \circ f = \pi' \circ g\), there exists a unique linear map \(h: W / \text{Im}(f - g) \to Z\) induced by the universal property of the coequalizer, such that \(\pi' = h \circ \pi\). This universal property characterizes the coequalizer in \(\text{Vect}_k\). 
+</p>
+<p> 
+As the forgetful functor \( U: \text{Vect}_k \to \text{Set} \) satisfies all the conditions of Beck's Monadicity Theorem, it is monadic. This particularly means that \( \text{Vect}_k \) is equivalent to the category of algebras over the monad \( T = UF \) on \( \text{Set} \).
+</p>
+<hr>
+<p>Now, the nice thing is that $\text{Set}$ has all limits by design. Since the canoncial forgetful functor from $\text{Vect}_k$ is monadic, we see $\text{Vect}_k$ also has all limits.
+
+  It remains to show that the category of chain complexes $ \text{CH}(k) $ has all limits. We can do this analogously to how we showed $\text{Vect}_k$ has all limits given $\text{Set}$ has all limits.
+  
+  </p>
+  
+  <p>To prove that the category of chain complexes $ \text{CH}(k) $ is a reflective subcategory of a category of functors into $ \text{Vect}_k $, we need to show that the inclusion functor $ i: \text{CH}(k) \to \text{Fun}(\mathcal{C}, \text{Vect}_k) $ has a left adjoint. This left adjoint is called the reflector, and it provides a way to "reflect" objects from the larger category (functors into $ \text{Vect}_k $) back into the subcategory $ \text{CH}(k) $.</p><p>  Let $ \text{Vect}_k $ be the category of vector spaces over a field $ k $.</p><p>  Let $ \text{CH}(k) $ be the category of chain complexes of $ k $-vector spaces. Objects are sequences of vector spaces $ (C_n)_{n \in \mathbb{Z}} $ with differentials $ d_n: C_n \to C_{n-1} $ such that $ d_{n-1} \circ d_n = 0 $, and morphisms are chain maps.</p><p>  Let $ \mathcal{C} $ be a small category, and let $ \text{Fun}(\mathcal{C}, \text{Vect}_k) $ be the category of functors from $ \mathcal{C} $ to $ \text{Vect}_k $. Objects are functors $ F: \mathcal{C} \to \text{Vect}_k $, and morphisms are natural transformations.</p><p>  Consider the category $ \mathcal{C} = \mathbb{Z} $, where $ \mathbb{Z} $ is viewed as a poset category (with objects integers and a unique morphism $ n \to m $ iff $ n \geq m $).</p><p>  A functor $ F: \mathbb{Z} \to \text{Vect}_k $ assigns a vector space $ F(n) $ to each integer $ n $ and a linear map $ F(n \to m): F(n) \to F(m) $ for each $ n \geq m $.</p><p>  A chain complex $ (C_n, d_n) $ can be viewed as a functor $ F: \mathbb{Z} \to \text{Vect}_k $, where $ F(n) = C_n $ and $ F(n \to n-1) = d_n $, with the condition $ d_{n-1} \circ d_n = 0 $.</p><p>   Thus, $ \text{CH}(k) $ is a subcategory of $ \text{Fun}(\mathbb{Z}, \text{Vect}_k) $.</p><p>  To show that $ \text{CH}(k) $ is a reflective subcategory, we need to construct a left adjoint $ L: \text{Fun}(\mathbb{Z}, \text{Vect}_k) \to \text{CH}(k) $ to the inclusion functor $ i: \text{CH}(k) \to \text{Fun}(\mathbb{Z}, \text{Vect}_k) $.</p><p>  For a functor $ F \in \text{Fun}(\mathbb{Z}, \text{Vect}_k) $, define $ L(F) $ as the chain complex obtained by "forcing" the condition $ d_{n-1} \circ d_n = 0 $.</p><p>To construct the chain complex $ L(F) $ from a functor $ F: \mathbb{Z} \to \text{Vect}_k $, we start by defining $ L(F)_n = F(n) $ and the differential $ d_n = F(n \to n-1) $. However, this does not automatically satisfy the chain complex condition $ d_{n-1} \circ d_n = 0 $. To enforce this condition, we modify $ L(F)_n $ by taking the quotient of $ F(n) $ by the image of $ d_{n+1}: F(n+1) \to F(n) $, particularly submodule generated by this image. This quotient ensures that the composition $ d_{n-1} \circ d_n $ becomes zero, as the image of $ d_{n+1} $ is factored out. The resulting object $ L(F) $ is now a chain complex, as the differentials satisfy the required condition $ d_{n-1} \circ d_n = 0 $. This process of quotienting effectively "reflects" the functor $ F $ into the subcategory of chain complexes.</p><p>  The reflector $ L $ is left adjoint to the inclusion functor $ i $. We see there is a natural isomorphism:</p><p>     $$\text{Hom}_{\text{CH}(k)}(L(F), C) \simeq \text{Hom}_{\text{Fun}(\mathbb{Z}, \text{Vect}_k)}(F, i(C))$$</p><p>     for all $ F \in \text{Fun}(\mathbb{Z}, \text{Vect}_k) $ and $ C \in \text{CH}(k) $.</p><p>  This adjunction arises because $ L(F) $ is the "best approximation" of $ F $ as a chain complex, and morphisms from $ L(F) $ to $ C $ correspond naturally to morphisms from $ F $ to $ i(C) $.</p><p>  Since the inclusion functor $ i: \text{CH}(k) \to \text{Fun}(\mathbb{Z}, \text{Vect}_k) $ has a left adjoint $ L $, the category $ \text{CH}(k) $ is a reflective subcategory of $ \text{Fun}(\mathbb{Z}, \text{Vect}_k) $.</p>
+  <p>A category where all limits exist is called a "complete category".</p>
+  <hr>
+
+  These notes were inspired by a remark in <a href="https://youtu.be/5uI0uJpsEhI?si=f8G1Y0ylOOewxhhG">this</a> video.
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
+		</footer>
+
+		<!-- This page `/posts/alllimits/` was built on 2025-02-27T17:35:18.813Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

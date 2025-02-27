@@ -1,8 +1,477 @@
-<!DOCTYPE html><html domain=https://ischmidls.github.io ga-id=G-CY1SRH6BVP lang=en><script async src="https://www.googletagmanager.com/gtag/js?id=G-CY1SRH6BVP"></script><script>window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>abstract algebra diagrams</title>
+		<meta name="description" content="abstract algebra print outs">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="izak">
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
 
-  gtag('config', 'G-CY1SRH6BVP');</script><meta charset=utf-8><meta content="width=device-width,initial-scale=1" name=viewport><link href="/img/favicon/favicon.ico?hash=4bb2edba09" rel=icon type=image/png><meta content=#f9c412 name=theme-color><meta content="max-snippet:-1, max-image-preview: large, max-video-preview: -1" name=robots><title>abstract algebra diagrams</title><meta content="abstract algebra diagrams" property=og:title><meta content="abstract algebra print outs" name=description><meta content="abstract algebra print outs" property=og:description><meta content=summary_large_image name=twitter:card><meta content=@N/A name=twitter:site><meta content=@N/A name=twitter:creator><link href=https://ischmidls.github.io/posts/abstractguides/ rel=canonical><meta content=no-referrer-when-downgrade name=referrer><link href=/feed/feed.xml rel=alternate type=application/atom+xml title=izak><link href=/ rel=preconnect crossorigin=""><link href=/fonts/Inter-3.19.var.woff2 rel=preload crossorigin="" as=font type=font/woff2><script async src="/js/min.js?hash=8db32dcb3a" data-cwv-src="/js/web-vitals.js?hash=a2ed2205a4" defer></script><script csp-hash="">if (/Mac OS X/.test(navigator.userAgent))document.documentElement.classList.add('apple')</script><link href=https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css rel=stylesheet crossorigin=anonymous integrity=sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l><link href=https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css rel=stylesheet><script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js id=MathJax-script type=text/javascript></script><style>:root{--primary:#4f7ca8;--primary-dark:#2e424f;--background:#f5f4f3;--color:#05120E;--main-width:calc(100vw - 3em)}main img{content-visibility:auto}article *{scroll-margin-top:50px}header nav{z-index:1;position:fixed;top:0;left:0;width:100vw;padding:.375em 1.5em;background:rgba(255,255,255,.9);font-weight:200;text-align:right}@media (min-width:37.5em){:root{--main-width:calc(37.5em - 3em)}}dialog,share-widget{position:fixed;opacity:.9}share-widget{right:20px;bottom:20px}share-widget div{width:30px;height:30px;background-image:url(/img/share.svg);background-repeat:no-repeat;background-position:center}.apple share-widget div{background-image:url(/img/share-apple.svg)}body,share-widget button{margin:0}share-widget button:active{transform:scale(1.2)}dialog{background-color:#8dff80;z-index:1000}#nav,sub{position:relative}#nav{z-index:2}#reading-progress{z-index:1;background-color:var(--primary);width:100vw;position:absolute;left:0;top:0;bottom:0;transform:translate(-100vw,0);will-change:transform;pointer-events:none}html{font-family:'Georgia',serif;font-size:1.3em;line-height:1.15;-webkit-text-size-adjust:100%}h1{font-size:1.5em;line-height:1.25;margin:.67em 0 .5em}button,hr{overflow:visible}hr{box-sizing:content-box;height:0;border-bottom:1px solid #eee}a{background-color:transparent;color:#f9c412;text-decoration:none;color:var(--primary)}b{font-weight:700}sub{font-size:75%;line-height:0;vertical-align:baseline;bottom:-.25em}img{border-style:none;max-width:100%;height:auto;margin:0 auto}button{font-family:inherit;font-size:100%;line-height:1.15;text-transform:none}[type=button],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}h2{font-size:1.25em;line-height:1.2;margin-bottom:.6em}h3{font-size:1.2em;line-height:1.125;margin-bottom:.75em}body,p{font-size:1em}p{margin-bottom:1.5em;margin-bottom:1.36rem}body,p{font-size:1rem;line-height:1.6}@media (min-width:600px){body,p{font-size:1.1rem;line-height:1.6}p{margin-bottom:1.496rem}}@media (min-width:1200px){body,p{font-size:1.2rem;line-height:1.6}p{margin-bottom:1.632rem}}h1,h2,h3{font-family:var(--font-family)}a:hover{text-decoration:underline}@media (max-width:767px){x:-moz-any-link{display:table-cell}}button{border-radius:.3em;max-width:100%;background:#f2f2f2;color:#191919;cursor:pointer;display:inline-block;padding:.75em 1.5em;text-align:center;margin:0 .75em 1.5em 0}button:hover{background:#d9d9d9;color:#000}button:not([disabled]){background:#f9c412;color:#181818;background:var(--primary)}button:not([disabled]):hover{background:#ba9005;color:#000;background:var(--primary-dark)}*{border:0;box-sizing:border-box}body,header nav a{font-family:var(--font-family);color:var(--color)}body{background:var(--background)}header{padding:4.5em 1.5em 3em;width:37.5em;margin:0 auto;text-align:center;max-width:100%;display:flex;align-items:center;flex-direction:column}header p{margin-top:0}header nav h1{float:left;font-size:inherit;line-height:inherit;margin:0;text-align:left}header nav a{font-weight:700;text-decoration:none;margin-left:1.5em}header nav a:first-of-type{margin-left:auto}header nav a:last-of-type{margin-right:1.5em}main{max-width:70rem;margin:0 auto;border-top:.5px solid #ccc}footer{background:var(--background);color:var(--color);padding:3em;text-align:center}footer>*{margin:1.5em}footer nav a img{vertical-align:middle}footer nav,footer p{font-size:90%}article{max-width:100%;padding:1.5em;width:37.5em;margin:0 auto}::-webkit-scrollbar-thumb:hover{background:var(--primary)}</style><header><nav><div id=nav><h1><a href=/ title=home>izak</a></h1><a href=/about/ >about</a></div><div id=reading-progress aria-hidden=true></div></nav><h1>abstract algebra diagrams</h1><aside>3 min read.</aside><dialog id=message></dialog></header><main><div class=container id=bsr-wrapper style=min-height:100vh;><article><style>#myImg {
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Garamond, serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">izak</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">Home</a></li>
+					<li class="nav-item"><a href="/blog/">Archive</a></li>
+					<li class="nav-item"><a href="/about/">About</a></li>
+					<li class="nav-item"><a href="/feed/feed.xml">Feed</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<heading-anchors>
+				
+<h1 id="abstract-algebra-diagrams">abstract algebra diagrams</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2023-07-03">03 July 2023</time></li>
+	<li><a href="/tags/math/" class="post-tag">math</a>, </li>
+	<li><a href="/tags/long/" class="post-tag">long</a></li>
+</ul>
+
+<head>
+    <style>
+        #myImg {
             border-radius: 5px;
             cursor: pointer;
             transition: 0.3s;
@@ -98,7 +567,228 @@
             .modal-content {
                 width: 100%;
             }
-        }</style><div class=container id=bsr-wrapper><p>In July of 2022, I gathered all of these abstract algebra print outs that I found online.<p>Coming back in July of 2023 with more knowledge of web development & bored with these prinouts, I embeded a bunch of images from the <a href=https://en.wikipedia.org/wiki/Space_(mathematics)>Wikipedia: Space (mathematics)</a> page.<p>I also generalized the "zoom" feature from <b><a href=https://codeconvey.com/html-image-zoom-on-click/ >this</a></b> guide to work for <code>img</code> tags of a given <code>class</code> rather than a single <code>img</code> of given <code>id</code>. Oh, yes the zoom background is white too to see the black diagrams. That's all. It's mostly for the math. That means you can click all the images to zoom. Yes...."Enjoy!"<hr><h2>theory printout pictures</h2><div class=card><div class=card-body><h3>group theory</h3><img class=zoom alt=printout src=/img/theory/group.png> <a href=//imgur.com/a/cja61w3>source</a></div></div><br><div class=card><div class=card-body><h3>ring and field theory</h3><img class=zoom alt=printout src=/img/theory/rf1.png> <img class=zoom alt=printout src=/img/theory/rf2.png> <a href=//imgur.com/a/atu8zd9>source</a></div></div><br><div class=card><div class=card-body><h3>complex analysis</h3><img class=zoom alt=printout src=/img/theory/ca1.png> <img class=zoom alt=printout src=/img/theory/ca2.png> <img class=zoom alt=printout src=/img/theory/ca3.png> <img class=zoom alt=printout src=/img/theory/ca4.png> <a href=//imgur.com/a/igjsbfj>source</a></div></div><br><div class=card><div class=card-body><h3>galois theory</h3><img class=zoom alt=printout src=/img/theory/galois1.png> <img class=zoom alt=printout src=/img/theory/galois2.png> <img class=zoom alt=printout src=/img/theory/galois3.png> <a href=//imgur.com/a/ha96a7r>source</a></div></div><br><hr><h1>bonus:</h1><h2>wikipedia spaces diagram</h2><div class=card><div class=card-body><p><a href=https://commons.wikimedia.org/wiki/File:Mathematical_Spaces.svg title="Qef, Public domain, via Wikimedia Commons"><img class=zoom alt="Mathematical Spaces" src=https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Mathematical_Spaces.svg/256px-Mathematical_Spaces.svg.png width=256></a></div></div><br><div class=card><div class=card-body><p><b>linear & topology</b> <img class=zoom alt="Mathematical implication diagram-alt-large-print.svg" src=https://upload.wikimedia.org/wikipedia/commons/d/dc/Mathematical_implication_diagram-alt-large-print.svg width=1015 height=495></div></div><br><p><sub><a href=http://creativecommons.org/publicdomain/zero/1.0/deed.en title="Creative Commons Zero, Public Domain Dedication">CC0</a> </sub><sub><a href="https://commons.wikimedia.org/w/index.php?curid=69882066">Link</a></sub><div class=card><div class=card-body><p><b>affine & projective</b> <img class=zoom alt="Spaces linear etc.svg" src=https://upload.wikimedia.org/wikipedia/commons/4/4c/Spaces_linear_etc.svg width=535 height=194></div></div><br><p><sub><a href=https://creativecommons.org/licenses/by-sa/4.0 title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a> </sub><sub><a href="https://commons.wikimedia.org/w/index.php?curid=68601315">Link</a></sub><div class=card><div class=card-body><p><b>metric</b> <img class=zoom alt="Spaces affine etc.svg" src=https://upload.wikimedia.org/wikipedia/commons/9/98/Spaces_affine_etc.svg width=295 height=126></div></div><br><p><sub><a href=https://creativecommons.org/licenses/by-sa/4.0 title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a> </sub><sub><a href="https://commons.wikimedia.org/w/index.php?curid=68598716">Link</a></sub><div class=card><div class=card-body><p><b>banach & hilbert</b> <img class=zoom alt="Spaces metric etc.svg" src=https://upload.wikimedia.org/wikipedia/commons/7/7d/Spaces_metric_etc.svg width=543 height=142></div></div><br><p><sub><a href=https://creativecommons.org/licenses/by-sa/4.0 title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a> </sub><sub><a href="https://commons.wikimedia.org/w/index.php?curid=68598009">Link</a></sub><div class=card><div class=card-body><p><b>riemann</b> <img class=zoom alt="Spaces smooth etc.svg" src=https://upload.wikimedia.org/wikipedia/commons/c/c4/Spaces_smooth_etc.svg width=386 height=182></div></div><br><p><sub><a href=https://creativecommons.org/licenses/by-sa/4.0 title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a> </sub><sub><a href="https://commons.wikimedia.org/w/index.php?curid=68604725">Link</a></sub><div class=card><div class=card-body><p><b>measures</b> <img class=zoom alt="Spaces measurable etc.svg" src=https://upload.wikimedia.org/wikipedia/commons/5/52/Spaces_measurable_etc.svg width=463 height=132></div></div><br><p><sub><a href=https://creativecommons.org/licenses/by-sa/4.0 title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a> </sub><sub><a href="https://commons.wikimedia.org/w/index.php?curid=68606618">Link</a></sub><div class=card><div class=card-body><p><b>schemes</b> <img class=zoom alt="Spaces schemes etc.svg" src=https://upload.wikimedia.org/wikipedia/commons/4/41/Spaces_schemes_etc.svg width=555 height=163></div></div><br><p><sub><a href=https://creativecommons.org/licenses/by-sa/4.0 title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a> </sub><sub><a href="https://commons.wikimedia.org/w/index.php?curid=68652354">Link</a></sub><div class=card><div class=card-body><p><b>topoi</b> <img class=zoom alt="Spaces topoi etc.svg" src=https://upload.wikimedia.org/wikipedia/commons/0/01/Spaces_topoi_etc.svg width=580 height=101></div></div><br><p><sub><a href=https://creativecommons.org/licenses/by-sa/4.0 title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a> </sub><sub><a href="https://commons.wikimedia.org/w/index.php?curid=68637039">Link</a></sub></div><div class=modal id=myModal><img class=zoom id=img01></div><script>// THIS CODE WAS MODIFIED FROM:
+        }
+    </style>
+</head>
+<div class="container" id="bsr-wrapper">
+    <p>In July of 2022, I gathered all of these abstract algebra print outs that I found online.</p>
+    <p>Coming back in July of 2023 with more knowledge of web development & bored with these prinouts, I embeded a bunch of images from the <a href="https://en.wikipedia.org/wiki/Space_(mathematics)">Wikipedia: Space (mathematics)</a> page.</p>
+    <p>I also generalized the "zoom" feature from <b><a href="https://codeconvey.com/html-image-zoom-on-click/">this</a></b> guide to work for <code>img</code> tags of a given <code>class</code> rather than a single <code>img</code> of given <code>id</code>. Oh, yes the zoom background is white too to see the black diagrams. That's all. It's mostly for the math. That means you can click all the images to zoom. Yes...."Enjoy!"</p>
+    <hr>
+    <h2 id="theory-printout-pictures">theory printout pictures</h2>
+    <div class="card">
+      <div class="card-body">
+        <h3 id="group-theory">group theory</h3>
+        <img class="zoom" src="content\img\theory\group.png" alt="printout">
+        <a href="//imgur.com/a/cja61w3">source</a>
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-body">
+        <h3 id="ring-and-field-theory">ring and field theory</h3>
+        <img class="zoom" src="content\img\theory\rf1.png" alt="printout">
+        <img class="zoom" src="content\img\theory\rf2.png" alt="printout">
+        <a href="//imgur.com/a/atu8zd9">source</a>
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-body">
+        <h3 id="complex-analysis">complex analysis</h3>
+        <img class="zoom" src="content\img\theory\ca1.png" alt="printout">
+        <img class="zoom" src="content\img\theory\ca2.png" alt="printout">
+        <img class="zoom" src="content\img\theory\ca3.png" alt="printout">
+        <img class="zoom" src="content\img\theory\ca4.png" alt="printout">
+        <a href="//imgur.com/a/igjsbfj">source</a>
+      </div>
+    </div>
+    <br>
+    <div class="card">
+      <div class="card-body">
+        <h3 id="galois-theory">galois theory</h3>
+        <img class="zoom" src="content\img\theory\galois1.png" alt="printout">
+        <img class="zoom" src="content\img\theory\galois2.png" alt="printout">
+        <img class="zoom" src="content\img\theory\galois3.png" alt="printout">
+        <a href="//imgur.com/a/ha96a7r">source</a>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <h1 id="bonus">bonus:</h1>
+    <h2 id="wikipedia-spaces-diagram">wikipedia spaces diagram</h2>
+    <div class="card">
+      <div class="card-body">
+      <p>
+        <a title="Qef, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Mathematical_Spaces.svg">
+          <picture><source type="image/avif" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fe%2Fed%2FMathematical_Spaces.svg%2F256px-Mathematical_Spaces.svg.png&width=256&format=avif&via=transform 256w"><source type="image/webp" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fe%2Fed%2FMathematical_Spaces.svg%2F256px-Mathematical_Spaces.svg.png&width=256&format=webp&via=transform 256w"><img loading="lazy" decoding="async" class="zoom" width="256" alt="Mathematical Spaces" src="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fe%2Fed%2FMathematical_Spaces.svg%2F256px-Mathematical_Spaces.svg.png&width=256&format=png&via=transform" height="256"></picture>
+        </a>
+      </p>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <b>linear & topology</b>
+        
+          <picture><source type="image/avif" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fd%2Fdc%2FMathematical_implication_diagram-alt-large-print.svg&width=1015&format=avif&via=transform 1015w"><source type="image/webp" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fd%2Fdc%2FMathematical_implication_diagram-alt-large-print.svg&width=1015&format=webp&via=transform 1015w"><img loading="lazy" decoding="async" class="zoom" src="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fd%2Fdc%2FMathematical_implication_diagram-alt-large-print.svg&width=1083&format=svg&via=transform" alt="Mathematical implication diagram-alt-large-print.svg" height="528" width="1083"></picture>
+
+      </p>
+    </div>
+  </div>
+  <br>
+  <p>
+    <sub>
+      <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" title="Creative Commons Zero, Public Domain Dedication">CC0</a>
+    </sub>
+    <sub>
+      <a href="https://commons.wikimedia.org/w/index.php?curid=69882066">Link</a>
+    </sub>
+  </p>
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <b>affine & projective</b>
+        
+          <picture><source type="image/avif" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F4%2F4c%2FSpaces_linear_etc.svg&width=535&format=avif&via=transform 535w"><source type="image/webp" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F4%2F4c%2FSpaces_linear_etc.svg&width=535&format=webp&via=transform 535w"><img loading="lazy" decoding="async" class="zoom" src="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F4%2F4c%2FSpaces_linear_etc.svg&width=570&format=svg&via=transform" alt="Spaces linear etc.svg" height="207" width="570"></picture>
+        
+      </p>
+    </div>
+  </div>
+  <br>
+  <p>
+    <sub>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>
+    </sub>
+    <sub>
+      <a href="https://commons.wikimedia.org/w/index.php?curid=68601315">Link</a>
+    </sub>
+  </p>
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <b>metric</b>
+        
+          <picture><source type="image/avif" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F98%2FSpaces_affine_etc.svg&width=295&format=avif&via=transform 295w"><source type="image/webp" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F98%2FSpaces_affine_etc.svg&width=295&format=webp&via=transform 295w"><img loading="lazy" decoding="async" class="zoom" src="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F98%2FSpaces_affine_etc.svg&width=314&format=svg&via=transform" alt="Spaces affine etc.svg" height="134" width="314"></picture>
+
+      </p>
+    </div>
+  </div>
+  <br>
+  <p>
+    <sub>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>
+    </sub>
+    <sub>
+      <a href="https://commons.wikimedia.org/w/index.php?curid=68598716">Link</a>
+    </sub>
+  </p>
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <b>banach & hilbert</b>
+        
+          <picture><source type="image/avif" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F7%2F7d%2FSpaces_metric_etc.svg&width=543&format=avif&via=transform 543w"><source type="image/webp" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F7%2F7d%2FSpaces_metric_etc.svg&width=543&format=webp&via=transform 543w"><img loading="lazy" decoding="async" class="zoom" src="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F7%2F7d%2FSpaces_metric_etc.svg&width=580&format=svg&via=transform" alt="Spaces metric etc.svg" height="151" width="580"></picture>
+
+      </p>
+    </div>
+  </div>
+  <br>
+  <p>
+    <sub>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>
+    </sub>
+    <sub>
+      <a href="https://commons.wikimedia.org/w/index.php?curid=68598009">Link</a>
+    </sub>
+  </p>
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <b>riemann</b>
+        
+          <picture><source type="image/avif" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fc4%2FSpaces_smooth_etc.svg&width=386&format=avif&via=transform 386w"><source type="image/webp" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fc4%2FSpaces_smooth_etc.svg&width=386&format=webp&via=transform 386w"><img loading="lazy" decoding="async" class="zoom" src="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fc4%2FSpaces_smooth_etc.svg&width=412&format=svg&via=transform" alt="Spaces smooth etc.svg" height="194" width="412"></picture>
+      </p>
+    </div>
+  </div>
+  <br>
+  <p>
+    <sub>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>
+    </sub>
+    <sub>
+      <a href="https://commons.wikimedia.org/w/index.php?curid=68604725">Link</a>
+    </sub>
+  </p>
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <b>measures</b>
+        
+          <picture><source type="image/avif" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F5%2F52%2FSpaces_measurable_etc.svg&width=463&format=avif&via=transform 463w"><source type="image/webp" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F5%2F52%2FSpaces_measurable_etc.svg&width=463&format=webp&via=transform 463w"><img loading="lazy" decoding="async" class="zoom" src="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F5%2F52%2FSpaces_measurable_etc.svg&width=493&format=svg&via=transform" alt="Spaces measurable etc.svg" height="141" width="493"></picture>
+
+      </p>
+    </div>
+  </div>
+  <br>
+  <p>
+    <sub>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>
+    </sub>
+    <sub>
+      <a href="https://commons.wikimedia.org/w/index.php?curid=68606618">Link</a>
+    </sub>
+  </p>
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <b>schemes</b>
+        
+          <picture><source type="image/avif" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F4%2F41%2FSpaces_schemes_etc.svg&width=555&format=avif&via=transform 555w"><source type="image/webp" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F4%2F41%2FSpaces_schemes_etc.svg&width=555&format=webp&via=transform 555w"><img loading="lazy" decoding="async" class="zoom" src="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F4%2F41%2FSpaces_schemes_etc.svg&width=592&format=svg&via=transform" alt="Spaces schemes etc.svg" height="174" width="592"></picture>
+
+      </p>
+    </div>
+  </div>
+  <br>
+  <p>
+    <sub>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>
+    </sub>
+    <sub>
+      <a href="https://commons.wikimedia.org/w/index.php?curid=68652354">Link</a>
+    </sub>
+  </p>
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <b>topoi</b>
+        
+          <picture><source type="image/avif" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F0%2F01%2FSpaces_topoi_etc.svg&width=580&format=avif&via=transform 580w"><source type="image/webp" srcset="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F0%2F01%2FSpaces_topoi_etc.svg&width=580&format=webp&via=transform 580w"><img loading="lazy" decoding="async" class="zoom" src="/.11ty/image/?src=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F0%2F01%2FSpaces_topoi_etc.svg&width=618&format=svg&via=transform" alt="Spaces topoi etc.svg" height="107" width="618"></picture>
+
+      </p>
+    </div>
+  </div>
+  <br>
+  <p>
+    <sub>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>
+    </sub>
+    <sub>
+      <a href="https://commons.wikimedia.org/w/index.php?curid=68637039">Link</a>
+    </sub>
+  </p>
+  </div>
+  <!--CONTAINER BSR WRAPPER-->
+  <!-- The Modal -->
+<div id="myModal" class="modal">
+    <img class="zoom" id="img01">
+  </div>
+  
+  
+       
+  <script>
+  // THIS CODE WAS MODIFIED FROM:
   // https://codeconvey.com/html-image-zoom-on-click/
   // INSTEAD OF ZOOMING ON AN img OF THE GIVE id ATTRIBUTE, THIS PROGRAM
   // ZOOMS ON THE GIVEN class ATTRIBUTE. ALLOWS USE FOR MULTIPLE img TAGS.
@@ -129,4 +819,20 @@
       modal.style.display = "none";
       img01.className = "modal-content";
     }, 400);
-  };</script><share-widget><button aria-label=Share href=https://ischmidls.github.io/posts/abstractguides/ on-click=share><div></div></button></share-widget><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","headline":"abstract algebra diagrams","image":["https://ischmidls.github.io/img/theory/group.png","https://ischmidls.github.io/img/theory/rf1.png","https://ischmidls.github.io/img/theory/rf2.png","https://ischmidls.github.io/img/theory/ca1.png","https://ischmidls.github.io/img/theory/ca2.png","https://ischmidls.github.io/img/theory/ca3.png","https://ischmidls.github.io/img/theory/ca4.png","https://ischmidls.github.io/img/theory/galois1.png","https://ischmidls.github.io/img/theory/galois2.png","https://ischmidls.github.io/img/theory/galois3.png","https://ischmidls.github.iohttps://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Mathematical_Spaces.svg/256px-Mathematical_Spaces.svg.png","https://ischmidls.github.iohttps://upload.wikimedia.org/wikipedia/commons/d/dc/Mathematical_implication_diagram-alt-large-print.svg","https://ischmidls.github.iohttps://upload.wikimedia.org/wikipedia/commons/4/4c/Spaces_linear_etc.svg","https://ischmidls.github.iohttps://upload.wikimedia.org/wikipedia/commons/9/98/Spaces_affine_etc.svg","https://ischmidls.github.iohttps://upload.wikimedia.org/wikipedia/commons/7/7d/Spaces_metric_etc.svg","https://ischmidls.github.iohttps://upload.wikimedia.org/wikipedia/commons/c/c4/Spaces_smooth_etc.svg","https://ischmidls.github.iohttps://upload.wikimedia.org/wikipedia/commons/5/52/Spaces_measurable_etc.svg","https://ischmidls.github.iohttps://upload.wikimedia.org/wikipedia/commons/4/41/Spaces_schemes_etc.svg","https://ischmidls.github.iohttps://upload.wikimedia.org/wikipedia/commons/0/01/Spaces_topoi_etc.svg","https://ischmidls.github.io"],"author":"izak","genre":"blog","publisher":{"@type":"Organization","name":"izak","logo":{"@type":"ImageObject","url":"/img/favicon/favicon-192x192.png?hash=617a4f0fa2"}},"url":"https://ischmidls.github.io/posts/abstractguides/","mainEntityOfPage":"https://ischmidls.github.io/posts/abstractguides/","datePublished":"2023-07-03","dateModified":"Invalid DateTime","description":"#myImg { border-radius: 5px; cursor: pointer; transition: 0.3s; display: block; margin-left: auto; margin-right: auto } #myImg:hover..."}</script></article></div></main><footer><p><a href=/ title="izak home" style="float: left;">izak home </a><a href=https://github.com/ischmidls title=github style="float: right;" target=_blank>github</a><p></footer>
+  };
+    
+      
+  </script>
+  
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
+		</footer>
+
+		<!-- This page `/posts/abstractguides/` was built on 2025-02-27T17:35:18.814Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

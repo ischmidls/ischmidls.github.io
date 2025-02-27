@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>note: from logic to geometry</title>
+		<meta name="description" content="from logic to geometry">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="izak">
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Garamond, serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">izak</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">Home</a></li>
+					<li class="nav-item"><a href="/blog/">Archive</a></li>
+					<li class="nav-item"><a href="/about/">About</a></li>
+					<li class="nav-item"><a href="/feed/feed.xml">Feed</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<heading-anchors>
+				
+<h1 id="note-from-logic-to-geometry">note: from logic to geometry</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2023-08-30">30 August 2023</time></li>
+	<li><a href="/tags/math/" class="post-tag">math</a>, </li>
+	<li><a href="/tags/note/" class="post-tag">note</a></li>
+</ul>
+
+<p>How logic converted me to geometry.</p>
+<h2 id="constructive-logic">Constructive Logic</h2>
+<ul>
+<li><p><a href="https://arxiv.org/pdf/1903.04625.pdf"><strong>Finite
+semantics for fragments of intuitionistic logic</strong>, Felipe S.
+Albarelli and Rodolfo C. Ertola-Biraben</a></p></li>
+<li><p><a href="https://www.researchgate.net/publication/243704264_Intuitionistic_Logic_Model_Theory_and_Forcing"><strong>Intuitionistic
+Logic Model Theory and Forcing</strong>, Melvin Fitting, 1969</a> . . .
+Again, emphasis on Frege’s project rather than topological approach to
+forcing</p></li>
+<li><p><a href="https://publish.uwo.ca/~jbell/catlogprime.pdf">John
+Bell, <strong>The development of categorical logic</strong></a> a
+historical look into categorical logic</p></li>
+<li><p><a href="http://pointlesstopology.com/the-point-of-pointless-topology.pdf"><strong>THE
+POINT OF POINTLESS TOPOLOGY</strong>, PETER JOHNSTONE, 1983</a> using
+locales (duals of <em>frames</em> — complete distributive lattices) to
+generalize topology to topos and thus to constructive math . . . not
+just topology for logicians</p></li>
+<li><p><a href="https://www.cs.bham.ac.uk/~sjv/tvcl.pdf"><strong>Topology via
+Constructive Logic</strong>, Steven Vickers, 1996</a> . . . observe
+continuity through merely using reason as in programming
+computers</p></li>
+</ul>
+<h2 id="topos-and-homotopy">Topos and Homotopy</h2>
+<ul>
+<li><p><a href="https://ahilado.wordpress.com/2017/04/25/grothendiecks-relative-point-of-view/">Grothendieck’s
+Relative Point of View (Base Schemes), Hilado</a></p></li>
+<li><p><a href="https://hott.github.io/book/hott-online-1404-g79e6d60.pdf">HoTT:
+Homotopy Type Theory</a></p></li>
+<li><p><a href="https://math.jhu.edu/~eriehl/context.pdf"><strong>CATEGORY THEORY
+IN CONTEXT</strong>, Emily Riehl, 2016</a> made available by Riehl</p>
+<ul>
+<li>advanced but comprehensive pure category theory</li>
+</ul></li>
+<li><p><a href="https://arxiv.org/abs/math/9802029"><strong>Categorification</strong>,
+John Baez, 1998</a></p></li>
+</ul>
+<p>-<a href="https://arxiv.org/abs/2303.02603"><strong>Homotopy
+Cardinality via Extrapolation of Morava-Euler Characteristics</strong>,
+[Lior
+Yanovski](https://arxiv.org/search/math?searchtype=author&amp;query=Yanovski%2C+L)</a></p>
+<ul>
+<li><p><a href="https://publish.uwo.ca/~jbell/topnotes.pdf"><strong>NOTES ON
+TOPOSES AND LOCAL SET THEORIES</strong>, JOHN L. BELL, 1992: Revised
+2020</a> made available by Bell. Approach Topos through logic rather
+than categories or topology</p></li>
+<li><p><a href="https://arxiv.org/abs/1305.3835"><strong>“Sets in
+homotopy type theory”</strong>, Egbert Rijke &amp; Bas Spitters</a>
+marries topos with homotopy types.</p></li>
+<li><p><a href="https://www.cambridge.org/cr/files/1813/6680/4928/SIMMONS-CATS-BIGSOL.pdf"><strong>An
+Introduction to Category Theory: The Solutions</strong>, Harold Simmons,
+18 September 2011</a></p></li>
+<li><p><a href="https://www.3blue1brown.com/content/blog/exact-sequence-picturebook/PuzzlingThroughExactSequences.pdf"><strong>Puzzling
+Through Exact Sequence</strong></a>, Ravi Vakil, 2021</p></li>
+<li><p><a href="https://arxiv.org/abs/2212.11082">Intro Homotopy
+Types</a></p></li>
+<li><p><a href="https://arxiv.org/abs/2305.08768">Intro String
+Diagrams</a></p></li>
+<li><p><a href="https://www.cse.chalmers.se/~peterd/papers/DependentTypesAtWork.pdf">Dependent
+Types at Work</a></p></li>
+<li><p><a href="https://scholar.harvard.edu/files/rastern/files/algtoppreview.pdf">Algebraic
+Topology Prieview, Harvard Prof. Rastern</a></p></li>
+<li><p><a href="https://math.ucr.edu/home/baez/topos.html">Intro Topos,
+Baez</a></p></li>
+</ul>
+<h2 id="grothendieck-and-lawvere">Grothendieck and Lawvere</h2>
+<p>Who else if not Yoneda and Kan?</p>
+<ul>
+<li><p><a href="https://www.ams.org/notices/200808/tx080800930p.pdf">Who
+Is Alexander Grothendieck?</a>, Winfried Scharlau</p></li>
+<li><p><a href="https://mathoverflow.net/questions/48622/has-the-mathematical-content-of-grothendiecks-r%c3%a9coltes-et-semailles-been-used">Has
+the mathematical content of Grothendieck’s “Récoltes et Semailles” been
+used?</a></p></li>
+<li><p><a href="https://www.jmilne.org/math/xnotes/MOT.pdf">Motives —
+Grothendieck’s Dream, Milne</a></p></li>
+<li><p><a href="https://webusers.imj-prg.fr/~leila.schneps/grothendieckcircle/Mathbiographies/mclarty1.pdf">The
+Rising Sea: Grothendieck on simplicity and generality I,
+McLarty</a></p></li>
+<li><p><a href="https://maa.org/sites/default/files/pdf/upload_library/22/Ford/Dieudonne.pdf">The
+Historical Developmentof Algebraic Geometry, J. Dieudonne</a></p></li>
+<li><p><a href="http://www.mat.uc.pt/~picado/lawvere/interview.pdf">F.
+W. Lawvere, Interview</a></p></li>
+<li><p><a href="https://web.archive.org/web/20230311022049/https://www.acsu.buffalo.edu/~wlawvere/subject.html">F.
+W. Lawvere, Subject Classification of Articles</a></p></li>
+<li><p><a href="https://github.com/mattearnshaw/lawvere">F. W. Lawvere,
+Collected works</a></p></li>
+</ul>
+<h2 id="algebraic-geometry">Algebraic Geometry</h2>
+<ul>
+<li><p><a href="http://sections.maa.org/florida/proceedings/2001/fitchett.pdf">Bezout’s
+Theorem: A taste of algebraic geometry, Fitchett</a></p></li>
+<li><p><a href="https://math.stackexchange.com/a/285355/1098426">Self-study from
+“elementary algebra” to “algebraic geometry”, a historical
+route</a></p></li>
+<li><p><a href="https://math.stackexchange.com/a/257528/1098426">Why
+study algebraic geometry? Theorems, conjectures, resources</a></p></li>
+<li><p><a href="https://math.stackexchange.com/a/22583/1098426">Self-study from
+“differential” geometry &amp; topology to algebraic
+geometry</a></p></li>
+<li><p><a href="https://mathoverflow.net/a/57019/502781">“Best”
+textbook(s) for algebraic geometry</a></p></li>
+<li><p><a href="https://math.stackexchange.com/a/46523/1098426">Intro
+texts on manifolds</a></p></li>
+<li><p><a href="https://math.stackexchange.com/a/46923/1098426">Texts
+for calculus on manifolds (before topology of manifolds)</a></p></li>
+<li><p><a href="https://www.maths.ed.ac.uk/~v1ranick/papers/eisenbudharris.pdf">The
+Geometry of Schemes, Eisenbud &amp; Harris</a></p></li>
+</ul>
+<h2 id="the-undergraduate-essentials">The Undergraduate Essentials</h2>
+<ul>
+<li><p><a href="https://math.berkeley.edu/~apaulin/AbstractAlgebra.pdf"><strong>Intro
+Algebra Notes</strong></a>, Prof. Paulin, UC Berkeley</p></li>
+<li><p><a href="https://www.math.ucdavis.edu/~hunter/intro_analysis_pdf/intro_analysis.pdf"><strong>Intro
+Real Analysis Notes</strong></a>, Prof. Hunter, UC Davis</p></li>
+<li><p><a href="https://www.uio.no/studier/emner/matnat/math/MAT4500/h18/dokumenter/topology.pdf"><strong>Intro
+Topology Notes</strong></a>, Prof. Rognes, following Munkres</p></li>
+</ul>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/calculustrap/">note: getting through caclulus</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/thread cleaner/">widget: thread cleaner</a></li>
+</ul>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
+		</footer>
+
+		<!-- This page `/blog/abstracttrap/` was built on 2025-02-27T20:40:11.330Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

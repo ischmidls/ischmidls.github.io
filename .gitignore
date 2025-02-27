@@ -1,8 +1,0 @@
-_eleventy/
-_eleventy/node_modules/
-.DS_Store
-_eleventy/js/min.js
-_eleventy/js/min.js.map
-.vscode/
-.netlify/
-export
