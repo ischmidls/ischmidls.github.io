@@ -12438,10 +12438,10 @@ input.addEventListener(&quot;keydown&quot;, (event) =&gt; {
     &lt;/script&gt;    
     &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;To prove that the forgetful functor &#92;( U: &#92;text{Vect}_k &#92;to &#92;text{Set} &#92;) is monadic, we need to show that it satisfies the conditions of **monadicity**, as given by Beck&#39;s Monadicity Theorem. The forgetful functor &#92;( U &#92;) maps a vector space over a field &#92;( k &#92;) to its underlying set and maps linear transformations to their underlying functions. 
+&lt;p&gt;To prove that the forgetful functor &#92;( U: &#92;text{Vect}_k &#92;to &#92;text{Set} &#92;) is monadic, we need to show that it satisfies the conditions of monadicity, as given by Beck&#39;s Monadicity Theorem. The forgetful functor &#92;( U &#92;) maps a vector space over a field &#92;( k &#92;) to its underlying set and maps linear transformations to their underlying functions. 
 &lt;/p&gt;
 &lt;p&gt; 
-The forgetful functor &#92;( U: &#92;text{Vect}_k &#92;to &#92;text{Set} &#92;) has a left adjoint &#92;( F: &#92;text{Set} &#92;to &#92;text{Vect}_k &#92;), which is the **free vector space functor**. For a set &#92;( X &#92;), &#92;( F(X) &#92;) is the vector space whose basis is &#92;( X &#92;). The adjunction is given by the natural isomorphism:
+The forgetful functor &#92;( U: &#92;text{Vect}_k &#92;to &#92;text{Set} &#92;) has a left adjoint &#92;( F: &#92;text{Set} &#92;to &#92;text{Vect}_k &#92;), which is the free vector space functor. For a set &#92;( X &#92;), &#92;( F(X) &#92;) is the vector space whose basis is &#92;( X &#92;). The adjunction is given by the natural isomorphism:
 &#92;[
 &#92;text{Hom}_{&#92;text{Vect}_k}(F(X), V) &#92;simeq &#92;text{Hom}_{&#92;text{Set}}(X, U(V)),
 &#92;]
@@ -12458,9 +12458,9 @@ Third, the multiplication &#92;( &#92;mu_X: T(T(X)) &#92;to T(X) &#92;) is the l
 
 &lt;p&gt; 
 Beck&#39;s Monadicity Theorem states that a functor &#92;( U &#92;) is monadic if:
-1. &#92;( U &#92;) has a left adjoint.
-2. &#92;( U &#92;) reflects isomorphisms.
-3. &#92;( U &#92;) preserves and reflects coequalizers of &#92;( U &#92;)-split pairs.
+&#92;((1.)&#92;) &#92;( U &#92;) has a left adjoint, 
+&#92;((2.)&#92;) &#92;( U &#92;) reflects isomorphisms, and 
+&#92;((3.)&#92;) &#92;( U &#92;) preserves and reflects coequalizers of &#92;( U &#92;)-split pairs.
 &lt;/p&gt;
 &lt;p&gt; 
 This third condition might be least familiar. Wikipedia&#39;s descriptions for this are not as subpar as they often are. First, (&#92;( U &#92;)-split pairs are those parallel pairs of morphisms in $&#92;text{Vect}_k$, which $U$ sends to pairs having a split coequalizer in $&#92;text{Set} $). Second, in the category of sets, the coequalizer of two functions &#92;( f, g: X &#92;to Y &#92;) is the quotient of &#92;( Y &#92;) by the smallest equivalence relation &#92;( &#92;sim &#92;) satisfying &#92;( f(x) &#92;sim g(x) &#92;) for every &#92;( x &#92;in X &#92;). For example, if &#92;( R &#92;) is an equivalence relation on a set &#92;( Y &#92;), and &#92;( r_1, r_2: R &#92;to Y &#92;) are the natural projections (where &#92;( R &#92;subseteq Y &#92;times Y &#92;)), then the coequalizer of &#92;( r_1 &#92;) and &#92;( r_2 &#92;) is the quotient set &#92;( Y / R &#92;). 
