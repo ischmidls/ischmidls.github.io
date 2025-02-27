@@ -1,8 +1,0 @@
-{
-    "title": "widget: count split",
-    "description": "split entered text to max count",
-    "date": "2023-01-01",
-    "tags": ["javascript","widget"],
-    "layout": "layouts/post.njk"
-  }
-  

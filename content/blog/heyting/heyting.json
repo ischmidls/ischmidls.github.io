@@ -1,8 +1,0 @@
-{
-    "title": "heyting",
-    "description": "post on heyting algebras",
-    "date": "2023-05-01",
-    "tags": ["math","long"],
-    "layout": "layouts/post.njk"
-  }
-  

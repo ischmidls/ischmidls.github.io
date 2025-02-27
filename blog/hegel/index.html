@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>philosophy word counts</title>
+		<meta name="description" content="python generated javascript charts of philosophy word counts">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="izak">
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Garamond, serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">izak</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">home</a></li>
+					<li class="nav-item"><a href="/blog/">archive</a></li>
+					<li class="nav-item"><a href="/about/">about</a></li>
+					<li class="nav-item"><a href="/feed/feed.xml">feed</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<heading-anchors>
+				
+<h1 id="philosophy-word-counts">philosophy word counts</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2023-01-02">02 January 2023</time></li>
+	<li><a href="/tags/javascript/" class="post-tag">javascript</a>, </li>
+	<li><a href="/tags/python/" class="post-tag">python</a>, </li>
+	<li><a href="/tags/long/" class="post-tag">long</a></li>
+</ul>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Top 20 Word Occurance in...</title>
+
+  </head>
+  <body>
+
+
+<div style="background-color: lightcyan;">
+<b>Note from the Author<b>
+
+<p>These web pages are generated using the *index.py* file.</p>
+
+<p>The link to the Python code in the repository is <a href="https://github.com/ischmidls/ischmidls.github.io/tree/main/pages/hegel/index.py">Here</a></p>
+
+<p>The data source <a href="https://www.kaggle.com/datasets/kouroshalizadeh/history-of-philosophy">Here</a></p>
+
+<p>This started as a project to find the mode of the words in Hegel's Phenomenology of Spirit.</p>
+
+<p>I realized I could generalize it to the whole dataset. It got out of hand, but I retamed it.</p>
+<p>My Python CsvFigs class uses this flow: </p>
+
+
+<p>CSV --> Pandas DataFrame --> Plotly GraphObject --> text file </p>
+
+<p>For the DataFrame, I use the collections module from the Python standard library to quickly get the counts for each word from the list of sentence strings. </p>
+<p>Then, the imported NLTK module determines whether one of the top 20 occuring words is a noun or a verb to color the bar red in Plotly. </p>
+
+
+
+</b></b></div>
+
+<h1 id="top-20-word-occurance-in">Top 20 Word Occurance in...</h1>
+<hr>
+<ul>
+<li><a href="../../../source/hegel/KeynesTop 20 Word Occurance in Keynes's A General Theory Of Employment, Interest, And Money.html" title="Keynes Top 20 Word Occurance in Keynes's A General Theory Of Employment, Interest, And Money">Keynes's Top 20 Word Occurance in Keynes's A General Theory Of Employment, Interest, And Money</a></li>
+<li><a href="../../../source/hegel/FoucaultTop 20 Word Occurance in Foucault's The Birth Of The Clinic.html" title="Foucault Top 20 Word Occurance in Foucault's The Birth Of The Clinic">Foucault's Top 20 Word Occurance in Foucault's The Birth Of The Clinic</a></li>
+<li><a href="../../../source/hegel/WittgensteinTop 20 Word Occurance in Wittgenstein's On Certainty.html" title="Wittgenstein Top 20 Word Occurance in Wittgenstein's On Certainty">Wittgenstein's Top 20 Word Occurance in Wittgenstein's On Certainty</a></li>
+<li><a href="../../../source/hegel/DescartesTop 20 Word Occurance in Descartes's Meditations On First Philosophy.html" title="Descartes Top 20 Word Occurance in Descartes's Meditations On First Philosophy">Descartes's Top 20 Word Occurance in Descartes's Meditations On First Philosophy</a></li>
+<li><a href="../../../source/hegel/LockeTop 20 Word Occurance in Locke's Essay Concerning Human Understanding.html" title="Locke Top 20 Word Occurance in Locke's Essay Concerning Human Understanding">Locke's Top 20 Word Occurance in Locke's Essay Concerning Human Understanding</a></li>
+<li><a href="../../../source/hegel/WittgensteinTop 20 Word Occurance in Wittgenstein's Philosophical Investigations.html" title="Wittgenstein Top 20 Word Occurance in Wittgenstein's Philosophical Investigations">Wittgenstein's Top 20 Word Occurance in Wittgenstein's Philosophical Investigations</a></li>
+<li><a href="../../../source/hegel/RicardoTop 20 Word Occurance in Ricardo's On The Principles Of Political Economy And Taxation.html" title="Ricardo Top 20 Word Occurance in Ricardo's On The Principles Of Political Economy And Taxation">Ricardo's Top 20 Word Occurance in Ricardo's On The Principles Of Political Economy And Taxation</a></li>
+<li><a href="../../../source/hegel/BeauvoirTop 20 Word Occurance in Beauvoir's The Second Sex.html" title="Beauvoir Top 20 Word Occurance in Beauvoir's The Second Sex">Beauvoir's Top 20 Word Occurance in Beauvoir's The Second Sex</a></li>
+<li><a href="../../../source/hegel/DavisTop 20 Word Occurance in Davis's Women, Race, And Class.html" title="Davis Top 20 Word Occurance in Davis's Women, Race, And Class">Davis's Top 20 Word Occurance in Davis's Women, Race, And Class</a></li>
+<li><a href="../../../source/hegel/PlatoTop 20 Word Occurance in Plato's Plato - Complete Works.html" title="Plato Top 20 Word Occurance in Plato's Plato - Complete Works">Plato's Top 20 Word Occurance in Plato's Plato - Complete Works</a></li>
+<li><a href="../../../source/hegel/NietzscheTop 20 Word Occurance in Nietzsche's Ecce Homo.html" title="Nietzsche Top 20 Word Occurance in Nietzsche's Ecce Homo">Nietzsche's Top 20 Word Occurance in Nietzsche's Ecce Homo</a></li>
+<li><a href="../../../source/hegel/Merleau-PontyTop 20 Word Occurance in Merleau-Ponty's The Phenomenology Of Perception.html" title="Merleau-Ponty Top 20 Word Occurance in Merleau-Ponty's The Phenomenology Of Perception">Merleau-Ponty's Top 20 Word Occurance in Merleau-Ponty's The Phenomenology Of Perception</a></li>
+<li><a href="../../../source/hegel/HusserlTop 20 Word Occurance in Husserl's The Idea Of Phenomenology.html" title="Husserl Top 20 Word Occurance in Husserl's The Idea Of Phenomenology">Husserl's Top 20 Word Occurance in Husserl's The Idea Of Phenomenology</a></li>
+<li><a href="../../../source/hegel/HeideggerTop 20 Word Occurance in Heidegger's Off The Beaten Track.html" title="Heidegger Top 20 Word Occurance in Heidegger's Off The Beaten Track">Heidegger's Top 20 Word Occurance in Heidegger's Off The Beaten Track</a></li>
+<li><a href="../../../source/hegel/RussellTop 20 Word Occurance in Russell's The Analysis Of Mind.html" title="Russell Top 20 Word Occurance in Russell's The Analysis Of Mind">Russell's Top 20 Word Occurance in Russell's The Analysis Of Mind</a></li>
+<li><a href="../../../source/hegel/FoucaultTop 20 Word Occurance in Foucault's The Order Of Things.html" title="Foucault Top 20 Word Occurance in Foucault's The Order Of Things">Foucault's Top 20 Word Occurance in Foucault's The Order Of Things</a></li>
+<li><a href="../../../source/hegel/MarxTop 20 Word Occurance in Marx's Capital.html" title="Marx Top 20 Word Occurance in Marx's Capital">Marx's Top 20 Word Occurance in Marx's Capital</a></li>
+<li><a href="../../../source/hegel/NietzscheTop 20 Word Occurance in Nietzsche's Twilight Of The Idols.html" title="Nietzsche Top 20 Word Occurance in Nietzsche's Twilight Of The Idols">Nietzsche's Top 20 Word Occurance in Nietzsche's Twilight Of The Idols</a></li>
+<li><a href="../../../source/hegel/DeleuzeTop 20 Word Occurance in Deleuze's Anti-Oedipus.html" title="Deleuze Top 20 Word Occurance in Deleuze's Anti-Oedipus">Deleuze's Top 20 Word Occurance in Deleuze's Anti-Oedipus</a></li>
+<li><a href="../../../source/hegel/LewisTop 20 Word Occurance in Lewis's Lewis - Papers.html" title="Lewis Top 20 Word Occurance in Lewis's Lewis - Papers">Lewis's Top 20 Word Occurance in Lewis's Lewis - Papers</a></li>
+<li><a href="../../../source/hegel/MalebrancheTop 20 Word Occurance in Malebranche's The Search After Truth.html" title="Malebranche Top 20 Word Occurance in Malebranche's The Search After Truth">Malebranche's Top 20 Word Occurance in Malebranche's The Search After Truth</a></li>
+<li><a href="../../../source/hegel/KripkeTop 20 Word Occurance in Kripke's Naming And Necessity.html" title="Kripke Top 20 Word Occurance in Kripke's Naming And Necessity">Kripke's Top 20 Word Occurance in Kripke's Naming And Necessity</a></li>
+<li><a href="../../../source/hegel/QuineTop 20 Word Occurance in Quine's Quintessence.html" title="Quine Top 20 Word Occurance in Quine's Quintessence">Quine's Top 20 Word Occurance in Quine's Quintessence</a></li>
+<li><a href="../../../source/hegel/KantTop 20 Word Occurance in Kant's Critique Of Practical Reason.html" title="Kant Top 20 Word Occurance in Kant's Critique Of Practical Reason">Kant's Top 20 Word Occurance in Kant's Critique Of Practical Reason</a></li>
+<li><a href="../../../source/hegel/EpictetusTop 20 Word Occurance in Epictetus's Enchiridion.html" title="Epictetus Top 20 Word Occurance in Epictetus's Enchiridion">Epictetus's Top 20 Word Occurance in Epictetus's Enchiridion</a></li>
+<li><a href="../../../source/hegel/WollstonecraftTop 20 Word Occurance in Wollstonecraft's Vindication Of The Rights Of Woman.html" title="Wollstonecraft Top 20 Word Occurance in Wollstonecraft's Vindication Of The Rights Of Woman">Wollstonecraft's Top 20 Word Occurance in Wollstonecraft's Vindication Of The Rights Of Woman</a></li>
+<li><a href="../../../source/hegel/HegelTop 20 Word Occurance in Hegel's Science Of Logic.html" title="Hegel Top 20 Word Occurance in Hegel's Science Of Logic">Hegel's Top 20 Word Occurance in Hegel's Science Of Logic</a></li>
+<li><a href="../../../source/hegel/HusserlTop 20 Word Occurance in Husserl's The Crisis Of The European Sciences And Phenomenology.html" title="Husserl Top 20 Word Occurance in Husserl's The Crisis Of The European Sciences And Phenomenology">Husserl's Top 20 Word Occurance in Husserl's The Crisis Of The European Sciences And Phenomenology</a></li>
+<li><a href="../../../source/hegel/NietzscheTop 20 Word Occurance in Nietzsche's The Antichrist.html" title="Nietzsche Top 20 Word Occurance in Nietzsche's The Antichrist">Nietzsche's Top 20 Word Occurance in Nietzsche's The Antichrist</a></li>
+<li><a href="../../../source/hegel/BerkeleyTop 20 Word Occurance in Berkeley's Three Dialogues.html" title="Berkeley Top 20 Word Occurance in Berkeley's Three Dialogues">Berkeley's Top 20 Word Occurance in Berkeley's Three Dialogues</a></li>
+<li><a href="../../../source/hegel/SpinozaTop 20 Word Occurance in Spinoza's Ethics.html" title="Spinoza Top 20 Word Occurance in Spinoza's Ethics">Spinoza's Top 20 Word Occurance in Spinoza's Ethics</a></li>
+<li><a href="../../../source/hegel/MooreTop 20 Word Occurance in Moore's Philosophical Studies.html" title="Moore Top 20 Word Occurance in Moore's Philosophical Studies">Moore's Top 20 Word Occurance in Moore's Philosophical Studies</a></li>
+<li><a href="../../../source/hegel/DerridaTop 20 Word Occurance in Derrida's Writing And Difference.html" title="Derrida Top 20 Word Occurance in Derrida's Writing And Difference">Derrida's Top 20 Word Occurance in Derrida's Writing And Difference</a></li>
+<li><a href="../../../source/hegel/SpinozaTop 20 Word Occurance in Spinoza's On The Improvement Of Understanding.html" title="Spinoza Top 20 Word Occurance in Spinoza's On The Improvement Of Understanding">Spinoza's Top 20 Word Occurance in Spinoza's On The Improvement Of Understanding</a></li>
+<li><a href="../../../source/hegel/KantTop 20 Word Occurance in Kant's Critique Of Judgement.html" title="Kant Top 20 Word Occurance in Kant's Critique Of Judgement">Kant's Top 20 Word Occurance in Kant's Critique Of Judgement</a></li>
+<li><a href="../../../source/hegel/KantTop 20 Word Occurance in Kant's Critique Of Pure Reason.html" title="Kant Top 20 Word Occurance in Kant's Critique Of Pure Reason">Kant's Top 20 Word Occurance in Kant's Critique Of Pure Reason</a></li>
+<li><a href="../../../source/hegel/KripkeTop 20 Word Occurance in Kripke's Philosophical Troubles.html" title="Kripke Top 20 Word Occurance in Kripke's Philosophical Troubles">Kripke's Top 20 Word Occurance in Kripke's Philosophical Troubles</a></li>
+<li><a href="../../../source/hegel/LockeTop 20 Word Occurance in Locke's Second Treatise On Government.html" title="Locke Top 20 Word Occurance in Locke's Second Treatise On Government">Locke's Top 20 Word Occurance in Locke's Second Treatise On Government</a></li>
+<li><a href="../../../source/hegel/LeninTop 20 Word Occurance in Lenin's Essential Works Of Lenin.html" title="Lenin Top 20 Word Occurance in Lenin's Essential Works Of Lenin">Lenin's Top 20 Word Occurance in Lenin's Essential Works Of Lenin</a></li>
+<li><a href="../../../source/hegel/HeideggerTop 20 Word Occurance in Heidegger's Being And Time.html" title="Heidegger Top 20 Word Occurance in Heidegger's Being And Time">Heidegger's Top 20 Word Occurance in Heidegger's Being And Time</a></li>
+<li><a href="../../../source/hegel/HumeTop 20 Word Occurance in Hume's A Treatise Of Human Nature.html" title="Hume Top 20 Word Occurance in Hume's A Treatise Of Human Nature">Hume's Top 20 Word Occurance in Hume's A Treatise Of Human Nature</a></li>
+<li><a href="../../../source/hegel/WittgensteinTop 20 Word Occurance in Wittgenstein's Tractatus Logico-Philosophicus.html" title="Wittgenstein Top 20 Word Occurance in Wittgenstein's Tractatus Logico-Philosophicus">Wittgenstein's Top 20 Word Occurance in Wittgenstein's Tractatus Logico-Philosophicus</a></li>
+<li><a href="../../../source/hegel/HegelTop 20 Word Occurance in Hegel's Elements Of The Philosophy Of Right.html" title="Hegel Top 20 Word Occurance in Hegel's Elements Of The Philosophy Of Right">Hegel's Top 20 Word Occurance in Hegel's Elements Of The Philosophy Of Right</a></li>
+<li><a href="../../../source/hegel/Marcus AureliusTop 20 Word Occurance in Marcus Aurelius's Meditations.html" title="Marcus Aurelius Top 20 Word Occurance in Marcus Aurelius's Meditations">Marcus Aurelius's Top 20 Word Occurance in Marcus Aurelius's Meditations</a></li>
+<li><a href="../../../source/hegel/NietzscheTop 20 Word Occurance in Nietzsche's Thus Spake Zarathustra.html" title="Nietzsche Top 20 Word Occurance in Nietzsche's Thus Spake Zarathustra">Nietzsche's Top 20 Word Occurance in Nietzsche's Thus Spake Zarathustra</a></li>
+<li><a href="../../../source/hegel/PopperTop 20 Word Occurance in Popper's The Logic Of Scientific Discovery.html" title="Popper Top 20 Word Occurance in Popper's The Logic Of Scientific Discovery">Popper's Top 20 Word Occurance in Popper's The Logic Of Scientific Discovery</a></li>
+<li><a href="../../../source/hegel/MarxTop 20 Word Occurance in Marx's The Communist Manifesto.html" title="Marx Top 20 Word Occurance in Marx's The Communist Manifesto">Marx's Top 20 Word Occurance in Marx's The Communist Manifesto</a></li>
+<li><a href="../../../source/hegel/AristotleTop 20 Word Occurance in Aristotle's Aristotle - Complete Works.html" title="Aristotle Top 20 Word Occurance in Aristotle's Aristotle - Complete Works">Aristotle's Top 20 Word Occurance in Aristotle's Aristotle - Complete Works</a></li>
+<li><a href="../../../source/hegel/SmithTop 20 Word Occurance in Smith's The Wealth Of Nations.html" title="Smith Top 20 Word Occurance in Smith's The Wealth Of Nations">Smith's Top 20 Word Occurance in Smith's The Wealth Of Nations</a></li>
+<li><a href="../../../source/hegel/LeibnizTop 20 Word Occurance in Leibniz's Theodicy.html" title="Leibniz Top 20 Word Occurance in Leibniz's Theodicy">Leibniz's Top 20 Word Occurance in Leibniz's Theodicy</a></li>
+<li><a href="../../../source/hegel/DescartesTop 20 Word Occurance in Descartes's Discourse On Method.html" title="Descartes Top 20 Word Occurance in Descartes's Discourse On Method">Descartes's Top 20 Word Occurance in Descartes's Discourse On Method</a></li>
+<li><a href="../../../source/hegel/FichteTop 20 Word Occurance in Fichte's The System Of Ethics.html" title="Fichte Top 20 Word Occurance in Fichte's The System Of Ethics">Fichte's Top 20 Word Occurance in Fichte's The System Of Ethics</a></li>
+<li><a href="../../../source/hegel/DeleuzeTop 20 Word Occurance in Deleuze's Difference And Repetition.html" title="Deleuze Top 20 Word Occurance in Deleuze's Difference And Repetition">Deleuze's Top 20 Word Occurance in Deleuze's Difference And Repetition</a></li>
+<li><a href="../../../source/hegel/NietzscheTop 20 Word Occurance in Nietzsche's Beyond Good And Evil.html" title="Nietzsche Top 20 Word Occurance in Nietzsche's Beyond Good And Evil">Nietzsche's Top 20 Word Occurance in Nietzsche's Beyond Good And Evil</a></li>
+<li><a href="../../../source/hegel/HumeTop 20 Word Occurance in Hume's Dialogues Concerning Natural Religion.html" title="Hume Top 20 Word Occurance in Hume's Dialogues Concerning Natural Religion">Hume's Top 20 Word Occurance in Hume's Dialogues Concerning Natural Religion</a></li>
+<li><a href="../../../source/hegel/HegelTop 20 Word Occurance in Hegel's The Phenomenology Of Spirit.html" title="Hegel Top 20 Word Occurance in Hegel's The Phenomenology Of Spirit">Hegel's Top 20 Word Occurance in Hegel's The Phenomenology Of Spirit</a></li>
+<li><a href="../../../source/hegel/FoucaultTop 20 Word Occurance in Foucault's History Of Madness.html" title="Foucault Top 20 Word Occurance in Foucault's History Of Madness">Foucault's Top 20 Word Occurance in Foucault's History Of Madness</a></li>
+<li><a href="../../../source/hegel/BerkeleyTop 20 Word Occurance in Berkeley's A Treatise Concerning The Principles Of Human Knowledge.html" title="Berkeley Top 20 Word Occurance in Berkeley's A Treatise Concerning The Principles Of Human Knowledge">Berkeley's Top 20 Word Occurance in Berkeley's A Treatise Concerning The Principles Of Human Knowledge</a></li>
+<li><a href="../../../source/hegel/RussellTop 20 Word Occurance in Russell's The Problems Of Philosophy.html" title="Russell Top 20 Word Occurance in Russell's The Problems Of Philosophy">Russell's Top 20 Word Occurance in Russell's The Problems Of Philosophy</a></li>
+</ul>
+</body>
+</html>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/first sentence/">widget: first sentence</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/plotwords/">widget: word plot</a></li>
+</ul>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
+		</footer>
+
+		<!-- This page `/blog/hegel/` was built on 2025-02-27T23:50:48.756Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>

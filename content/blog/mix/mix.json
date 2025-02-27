@@ -1,8 +1,0 @@
-{
-    "title": "widget: mix list",
-    "description": "input list, output mixed order",
-    "date": "2022-06-06",
-    "tags": ["javascript","widget"],
-    "layout": "layouts/post.njk"
-  }
-  

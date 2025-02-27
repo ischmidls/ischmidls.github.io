@@ -1,0 +1,1035 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>textcraft</title>
+		<meta name="description" content="minecraft text adventure in javascript">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="izak">
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Garamond, serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">izak</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">home</a></li>
+					<li class="nav-item"><a href="/blog/">archive</a></li>
+					<li class="nav-item"><a href="/about/">about</a></li>
+					<li class="nav-item"><a href="/feed/feed.xml">feed</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<heading-anchors>
+				
+<h1 id="textcraft">textcraft</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2025-01-22">22 January 2025</time></li>
+	<li><a href="/tags/javascript/" class="post-tag">javascript</a>, </li>
+	<li><a href="/tags/long/" class="post-tag">long</a></li>
+</ul>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Text Adventure</title>
+    <style>
+        body {
+            font-family: monospace;
+            background-color: white;
+            color: black;
+            margin: 0;
+            padding: 20px;
+        }
+        #output {
+            white-space: pre-line;
+            margin-bottom: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        #input {
+            width: 100%;
+            padding: 10px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div id="output">Welcome to text-based Minecraft! Type a command (or help) to begin...</div>
+    <input id="input" type="text" placeholder="Enter your command here..." autofocus="">
+    
+     <script>
+const output = document.getElementById("output");
+const input = document.getElementById("input");
+
+const biomes = ['Forest Biome', 'Grasslands Biome', 'Desert Biome']; // Sample biomes
+let inventory = [];
+// add coordinates
+let coordinates = [0,64,0];
+const blocks = ['Dirt', 'Cobblestone', 'Coal', 'Diamond'];
+const ores = ['Iron Ore', 'Gold Ore'];
+const ingots = ['Iron Ingot', 'Gold Ingot'];
+const monsters = ['Zombie', 'Creeper', 'Enderman', 'Skeleton', 'Spider', 'Drowned', 'Stray'];
+const caves = ['Dripstone Cavern', 'Lush Cave', 'Ravine', 'Cave', 'Abandoned Mineshaft', 'Dungeon'];
+let gameState = "idle"; // Track the current state of the game
+let currentBiome = ""; // Store the biome during exploration
+let experience = 0;
+let monster_health = 20;
+let player_attack_damage = 1;
+let player_health = 20;
+let monster_attack_damage = 5;
+let void_fall = false;
+let slain_by_monster = false;
+let mining_strength = 0
+const items = {
+    "Wooden Sword": {
+        recipe: new Array(2).fill("Plank").concat(new Array(1).fill("Stick")),
+        damage: 1,
+        miningStrength: 0,
+    },
+    "Wooden Pickaxe": {
+        recipe: new Array(3).fill("Plank").concat(new Array(2).fill("Stick")),
+        damage: 1,
+        miningStrength: 1,
+    },
+    "Cobblestone Sword": {
+        recipe: new Array(2).fill("Cobblestone").concat(new Array(1).fill("Stick")),
+        damage: 2,
+        miningStrength: 0,
+    },
+    "Cobblestone Pickaxe": {
+        recipe: new Array(3).fill("Cobblestone").concat(new Array(2).fill("Stick")),
+        damage: 2,
+        miningStrength: 2,
+    },
+    "Iron Sword": {
+        recipe: new Array(2).fill("Iron").concat(new Array(1).fill("Stick")),
+        damage: 3,
+        miningStrength: 0,
+    },
+    "Iron Pickaxe": {
+        recipe: new Array(3).fill("Iron").concat(new Array(2).fill("Stick")),
+        damage: 3,
+        miningStrength: 3,
+    },
+    "Gold Sword": {
+        recipe: new Array(2).fill("Gold").concat(new Array(1).fill("Stick")),
+        damage: 3,
+        miningStrength: 0,
+    },
+    "Gold Pickaxe": {
+        recipe: new Array(3).fill("Gold").concat(new Array(2).fill("Stick")),
+        damage: 3,
+        miningStrength: 3,
+    },
+    "Diamond Sword": {
+        recipe: new Array(2).fill("Diamond").concat(new Array(1).fill("Stick")),
+        damage: 3,
+        miningStrength: 0,
+    },
+    "Diamond Pickaxe": {
+        recipe: new Array(3).fill("Diamond").concat(new Array(2).fill("Stick")),
+        damage: 4,
+        miningStrength: 4,
+    },
+};
+
+
+const toTitleCase = (str) => {
+    return str.replace(
+        /\w\S*/g,
+        text => text.charAt(0).toUpperCase() + text.substring(1).toLowerCase()
+    );
+}
+
+const appendOutput = (text) => {
+    output.textContent += `\n${text}`;
+    output.scrollTop = output.scrollHeight; // Scroll to bottom
+};
+
+const startEquip = () => {
+    gameState = "equip"
+    appendOutput("What would you like to equip? (or exit)")
+}
+
+const handleEquip = (command) => {
+    const item = items[toTitleCase(command)];
+
+    if (item) {
+        // Update global variables based on the item's properties
+        player_attack_damage = item.damage;
+        mining_strength = item.miningStrength;
+        appendOutput(
+            `Equipped ${command}. Attack damage is now ${player_attack_damage}, and mining strength is ${mining_strength}.`
+        );
+    } else if (command.toLowerCase() === "exit") {
+        gameState = "idle"
+        appendOutput("Exiting equip")
+    } else {
+        appendOutput(`Item "${command}" not found.`);
+    }
+            "That's not an item?"
+    }
+
+
+const startExplore = () => {
+    currentBiome = biomes[Math.floor(Math.random() * biomes.length)];
+    gameState = "explore"; // Transition to the explore state
+    coordinates[0] += Math.floor(Math.random() * 64)
+    coordinates[1] += Math.floor(Math.random() * 64)
+    appendOutput(`You are now exploring the ${currentBiome}. What resource would you like to collect?`);
+    appendOutput("You can collect seeds or wood from compatible biomes.");
+    appendOutput("Type 'exit' to leave or 'explore' to keep exploring'.");
+};
+
+const handleExplore = (command) => {
+    switch (command.toLowerCase()) {
+        case "wood":
+            if (currentBiome === "Forest Biome") {
+                appendOutput("You collected three wood and two sticks!");
+                inventory.push("Wood", "Wood", "Wood", "Stick", "Stick");
+            } else {
+                appendOutput("You cannot collect wood here.");
+            }
+            break;
+        case "seeds":
+            if (currentBiome === "Grasslands Biome") {
+                appendOutput("You collected five seeds!");
+                inventory.push("seed", "seed", "seed", "seed", "seed");
+            } else {
+                appendOutput("You cannot collect seeds here.");
+            }
+            break;
+        case "exit":
+            appendOutput("Exiting exploration...");
+            gameState = "idle"; // Return to the idle state
+            break;
+        case "explore":
+            appendOutput("You continue to explore...")
+            startExplore()
+            break;
+        default:
+            appendOutput("Invalid resource. Please specify 'wood' or 'seeds', or type 'exit' to leave.");
+    }
+};
+
+const startMine = () => {
+    currentCave = caves[Math.floor(Math.random() * caves.length)];
+    gameState = "mine"; // Transition to the explore state
+    appendOutput(`You are now exploring the ${currentCave}. What resource would you like to collect?`);
+    appendOutput("Type 'cobblestone' or 'dirt' to collect. Type 'exit' to leave or 'mine' to continue.");
+    appendOutput("Greater treasures appear at lower depths.")
+};
+
+// function mine() {
+//     const move = Math.floor(Math.random() * 5) + 1
+//     if (coordinates[2] <= -50 && move === 1 && mining_strength >= 3) {
+//         appendOutput("You mined a Diamond");
+//         inventory.push("Diamond");
+//     } else if (coordinates[2] <= -50 && move === 1) {
+//         appendOutput("You found a Diamond but need at least an Iron Pickaxe");
+//     } else if (coordinates[2] <= -30 && [2,3].includes(move) && mining_strength >= 3) {
+//         appendOutput("You mined three Gold Ore");
+//         inventory.concat(new Array(3).fill("Gold Ore"));
+//     } else if (coordinates[2] <= -30 && [2,3].includes(move)) {
+//         appendOutput("You found Gold but need at least an Iron Pickaxe");
+//     } else if (coordinates[2] <= -20 && [2,3,4].includes(move) && mining_strength >= 2) {
+//         appendOutput("You mined three Iron Ore");
+//         inventory.concat(new Array(3).fill("Iron Ore"));
+//     } else if (coordinates[2] <= -20 && [2,3,4].includes(move)) {
+//         appendOutput("You found Iron but need at least a Cobblestone Pickaxe");
+//     } else if (coordinates[2] <= -10 && [2,3,4,5].includes(move) && mining_strength >= 1) {
+//         appendOutput("You mined three Coal")
+//         inventory.concat(new Array(3).fill("Coal"))
+//     }  else if (coordinates[2] <= -20 && [2,3,4].includes(move)) {
+//         appendOutput("You found Coal but need at least a Wooden Pickaxe");
+//     }
+// }
+
+function mine() {
+    const miningRules = [
+        {
+            depth: -50,
+            moves: [1],
+            requiredStrength: 3,
+            reward: { item: "Diamond", amount: 1 },
+            failureMessage: "You found a Diamond but need at least an Iron Pickaxe",
+        },
+        {
+            depth: -30,
+            moves: [2, 3],
+            requiredStrength: 3,
+            reward: { item: "Gold Ore", amount: 3 },
+            failureMessage: "You found Gold but need at least an Iron Pickaxe",
+        },
+        {
+            depth: -20,
+            moves: [2, 3, 4],
+            requiredStrength: 2,
+            reward: { item: "Iron Ore", amount: 3 },
+            failureMessage: "You found Iron but need at least a Cobblestone Pickaxe",
+        },
+        {
+            depth: -10,
+            moves: [2, 3, 4, 5],
+            requiredStrength: 1,
+            reward: { item: "Coal", amount: 3 },
+            failureMessage: "You found Coal but need at least a Wooden Pickaxe",
+        },
+    ];
+
+    const move = Math.floor(Math.random() * 5) + 1;
+
+    for (const rule of miningRules) {
+        if (coordinates[2] <= rule.depth && rule.moves.includes(move)) {
+            if (mining_strength >= rule.requiredStrength) {
+                appendOutput(`You mined ${rule.reward.amount} ${rule.reward.item}(s)`);
+                inventory.push(...new Array(rule.reward.amount).fill(rule.reward.item));
+            } else {
+                appendOutput(rule.failureMessage);
+            }
+            return; // Exit after the first match
+        }
+    }
+}
+
+
+const handleCoordinates = () => {
+    if (coordinates[2] <= -64) {
+        appendOutput("You hit bedrock!")
+    } else if (mining_strength < 1 && coordinates[2] <= -10) { 
+        appendOutput("You need a pickaxe to go deeper.")
+    } else {
+        coordinates[2] -= Math.floor(Math.random() * 16)
+    }
+}
+
+const handleMine = (command) => {
+    handleCoordinates()
+    mine()
+    switch (command.toLowerCase()) {
+        case "cobblestone":
+            if (mining_strength === 0) {
+                appendOutput("You need at least a wooden pickaxe for cobblestone.")
+                break;
+            }
+            appendOutput("You collected three Cobblestone!");
+            inventory.concat(new Array(3).fill("Cobblestone"));
+            break;
+        case "dirt":
+            appendOutput("You collected three Dirt!");
+            inventory.concat(new Array(3).fill("Dirt"));
+            break;
+        case "mine":
+            appendOutput("You delve deeper")
+            startMine()
+            break;
+        case "exit":
+            appendOutput("Leaving mine...");
+            gameState = "idle"; // Return to the idle state
+            coordinates[2] = 0
+            break;
+        default:
+            appendOutput("Please specify Dirt or Cobblestone, or type 'exit' to leave.");
+    };
+};
+
+const startAttack = () => {
+    currentMonster = monsters[Math.floor(Math.random() * monsters.length)];
+    gameState = "attack"; // Transition to the explore state
+    appendOutput(`You are now attacking the ${monster}. What do you do?`);
+    appendOutput("You can attack, dodge, or flee.");
+    appendOutput(`It has ${monster_health} HP.`);
+};
+
+const handleAttack = (command) => {
+    const move = Math.floor(Math.random() * 3) + 1;
+    switch (command.toLowerCase()) {
+        case "attack":
+            switch (move){
+                case 1:
+                    appendOutput(`You attack, but the ${monster} dodges`);
+                    appendOutput('and attacks first!');
+                    player_health -= monster_attack_damage;
+                    appendOutput(`You now have ${player_health} HP.`);
+                    break;
+                case 2:
+                    appendOutput(`You attack the ${monster}, and your aim is true!`);
+                    monster_health -= player_attack_damage;
+                    appendOutput(`The ${monster} now has ${monster_health} HP.`);
+                    break;
+                case 3:
+                    appendOutput(`You attack, but the ${monster} dodges!`);
+                    break;
+                default:
+                    appendOutput("Something went wrong")
+                };
+
+    case "dodge":
+        switch (move){
+            case 1:
+                appendOutput(`You try dodging the ${monster}'s attack,`);
+                appendOutput('but it catches you anyway!');
+                player_health -= monster_attack_damage;
+                appendOutput(`You now have ${player_health} HP.`);
+                break;
+            case 2:
+                appendOutput(`You dodge the ${monster}'s attack!`);
+                break;
+            case 3:
+                appendOutput(`You dodge the ${monster}'s attack!`);
+                break;
+            default:
+                appendOutput("Something went wrong")
+            };
+    case "flee":  
+        appendOutput(`You run away from the ${monster},`);
+        gamestate="idle"
+        break;
+    default:
+        if (monster_health <= 0) {
+            console.clear();
+            appendOutput(`You have defeated the ${monster}!`);
+            appendOutput('You have earned 5 XP.');
+            experience += 5;
+            gamestate="idle"
+        };
+        if (player_health <= 0) {
+            slain_by_monster = true;
+            gameOver();
+        };
+    };
+};
+
+function gameOver() {
+    appendOutput('Game over.')
+    if (slain_by_monster) {
+        appendOutput(`player_01 was slain by a ${monster}.`);
+    };
+    if (void_fall) {
+        appendOutput('player_01 fell in the Void');
+    };
+    // Helper function to simulate sleep
+    while (new Date().getTime() < new Date().getTime() + 15000);
+    location.reload();
+};
+
+function drop(array, stringToRemove) {
+    const index = array.indexOf(stringToRemove);
+    if (index !== -1) {
+        array.splice(index, 1); // Remove the first occurrence of the string
+    }
+    return array;
+    }
+
+const startSmelt = () => {
+    if (!inventory.includes('Planks') && !inventory.includes('Coal')) {
+        appendOutput('You need Planks or Coal.');
+        return;
+    };
+    gameState = "smelt"; // Transition to the explore state
+    appendOutput(`Would you like to smelt Iron Ore or Gold Ore? (or exit)`);
+};
+
+const handleSmelt = (command) => {
+    switch (command.toLowerCase()) {
+        case "gold":
+        case "gold ore":
+            inventory  = drop(inventory, 'Gold Ore');
+            if (inventory.includes('Planks')) {
+                inventory  = drop(inventory, 'Planks');
+            } else if (inventory.includes('Coal')) {
+                inventory  = drop(inventory, 'Coal');
+            } else {
+                appendOutput('You cannot smelt that.');
+                return;
+            }
+            inventory.push('Gold Ingot');
+            appendOutput('You smelted Gold!');
+            break;
+        case "iron":
+        case "iron ore":
+            inventory  = drop(inventory, 'Iron Ore');
+            if (inventory.includes('Planks')) {
+                inventory  = drop(inventory, 'Planks');
+            } else if (inventory.includes('Coal')) {
+                inventory  = drop(inventory, 'Coal');
+            } else {
+                appendOutput('You cannot smelt that.');
+                return;
+            }
+            inventory.push('Iron Ingot');
+            appendOutput('You smelted Iron!');
+            break;
+        case "exit":
+            gameState = "idle"
+            appendOutput("You exited smelting")
+            break;
+        defualt:
+            appendOutput("Something went wrong")
+            gameState = "idle"
+        };
+    };
+
+const startCraft  = () => {
+    appendOutput("Would you like to craft a(n) wooden/cobblestone/iron/gold pickaxe/sword? (or exit)")
+    gameState = "craft"
+}
+
+function craft(recipe) {
+    if (!recipe.every(item => inventory.includes(item))) {
+        appendOutput("You need materials.")
+        return;
+    } else {
+        for (let item of recipe) {
+            inventory = drop(inventory, item)
+        }
+    }
+}
+
+
+const handleCraft = (command) => {
+    item = toTitleCase(command)
+    if (item === "Exit") {
+        appendOutput("You left the crafting.")
+        gameState = "idle"
+        return;
+    } else if (!Object.keys(items).includes(item)) {
+        appendOutput("That's not an item")
+        return;
+    } else {
+        recipe = items[item]["recipe"]
+        craft(recipe)
+        inventory.push(item)
+        appendOutput(`You crafted ${item}`)
+        return;
+    }
+}
+
+const handleCommand = (command) => {
+    appendOutput(`\n\n\nCoordinates: ${coordinates}`)
+    appendOutput(`HP: ${player_health}`)
+    switch (gameState) {
+        case "explore":
+            handleExplore(command); // Handle commands specific to the explore state
+            return;
+        case "mine":
+            handleMine(command);
+            return;
+        case "attack":
+            handleAttack(command);
+            return;
+        case "smelt":
+            handleSmelt(command);
+            return;
+        case "craft":
+            handleCraft(command);
+            return;
+        case "equip":
+            handleEquip(command)
+            return;
+        default:
+            break;
+            // appendOutput("Would you like to explore, mine, or attack?");
+    }
+
+    switch (command.toLowerCase()) {
+        case "explore":
+            startExplore();
+            break;
+        case "mine":
+            startMine();
+            break;
+        case "attack":
+            startAttack();
+            break;
+        case "inventory":
+            appendOutput(inventory.toString());
+            break;
+        case "smelt":
+            startSmelt();
+            break;
+        case "craft":
+            startCraft();
+            break;
+        case "equip":
+            startEquip();
+            break;
+        case "help":
+            appendOutput("Commands: explore, mine, attack, smelt, inventory, craft, equip, & help.");
+            break;
+        default:
+            appendOutput("I don't understand that command.");
+    }
+};
+
+input.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        const command = input.value.trim();
+        if (command) {
+            appendOutput(`> ${command}`);
+            handleCommand(command);
+            input.value = ""; // Clear the input field
+        }
+    }
+});
+     </script>
+</body>
+</html>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/khovanov/">khovanov homology talk</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/matrixprod/">widget: matrix product</a></li>
+</ul>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
+		</footer>
+
+		<!-- This page `/blog/textcraft/` was built on 2025-02-27T23:50:48.759Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
