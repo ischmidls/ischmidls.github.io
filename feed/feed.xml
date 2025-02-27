@@ -5,7 +5,7 @@
 	
 	<link href="https://ischmidls.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://ischmidls.github.io"/>
-	<updated>2025-02-08T00:00:00Z</updated>
+	<updated>2025-02-26T00:00:00Z</updated>
 	<id>https://update-me.com</id>
 	<author>
 		<name>izak</name>
@@ -2407,14 +2407,14 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;http
           
           &lt;h2 id=&quot;heyting-algebra&quot;&gt;Heyting Algebra &lt;a href=&quot;https://ischmidls.github.io/posts/pages/heyting/#top&quot;&gt;&lt;i class=&quot;bi bi-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
           
-          
+           
 &lt;p&gt;Now, Heyting algebras often take the unhelpful label—for those who are not yet students of topology—that: &quot;Every topology provides a complete Heyting algebra in the form of its open set lattice.&quot;&lt;/p&gt;
 &lt;p&gt;NOTE: An &quot;open&quot; set is defined as a set where each point is surrounded by other members of the set. To provide a precise definition, one begins with a &quot;basic open set&quot; and forms other open sets from it. In the presence of a metric, basic open sets can be represented by &#92;(ϵ&#92;)-neighborhoods (points are less than &#92;(ϵ&#92;) away from some point for &#92;(ϵ &amp;gt; 0&#92;)). &#92;(A&#92;) set &#92;(S&#92;) is considered open if, for every point &#92;(P ∈ S&#92;), there exists a basic open set &#92;(U&#92;) containing &#92;(P&#92;) such that &#92;(U ⊆ S&#92;). &#92;(A&#92;) set is classified as closed if it either has no complement or if its complement is open.&lt;/p&gt;
 &lt;p&gt;A subset lattice (also called powerset lattice) is prototypical. Where join is disjunction, union, and inclusion, and meet is conjunction, intersection, and (something like) includes. In the case of Heyting algebras, these might also be maximum and minimum respectively.&lt;/p&gt;
-&lt;img alt=&quot;&quot; src=&quot;https://ischmidls.github.io/posts/pages/heyting/images/image2.png&quot; style=&quot;width: 100%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);&quot; title=&quot;&quot; /&gt;
+&lt;img alt=&quot;&quot; src=&quot;https://ischmidls.github.io/img/heyting/image2.png&quot; style=&quot;width: 100%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);&quot; title=&quot;&quot; /&gt;
 &lt;p&gt;Source: &lt;a href=&quot;https://en.wikipedia.org/wiki/Power_set&quot;&gt;Wikipedia Power set&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;For a more concrete example of a Heyting algebra, let us look at the next Figure where is is clear conjunction &#92;(A &#92;land B&#92;) is &#92;(min(A, B)&#92;) and the disjunction &#92;(A &#92;lor B&#92;) is &#92;(max(A, B)&#92;) but less clear is what Wikipedia kindly spells out: &quot;Every totally ordered set that has a least element &#92;(0&#92;)and a greatest element &#92;(1&#92;) is a Heyting algebra (if viewed as a lattice). In this case &#92;(A &#92;rightarrow B&#92;) equals to &#92;(1&#92;)(or &#92;(T&#92;) for those generalized fans out there) when &#92;(A &#92;leq B&#92;), and &#92;(B&#92;) otherwise.&quot;&lt;/p&gt;
-&lt;img alt=&quot;&quot; src=&quot;https://ischmidls.github.io/posts/pages/heyting/images/image6.png&quot; style=&quot;width: 100%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);&quot; title=&quot;&quot; /&gt;
+&lt;img alt=&quot;&quot; src=&quot;https://ischmidls.github.io/img/heyting/image6.png&quot; style=&quot;width: 100%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);&quot; title=&quot;&quot; /&gt;
 &lt;p&gt;Fig: Source: &lt;a href=&quot;https://en.wikipedia.org/wiki/Heyting_algebra&quot;&gt;Wikipedia Heyting algebra&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;With all that aside, it becomes somewhat clearer how anybody would evaluate truth via a Heyting algebra. But what of intuitionistic logic? Well, Wikipedia touches on that too!&lt;/p&gt;
 &lt;p&gt;Picture this: We&#39;ve got this formula &#92;((P &#92;lor Q) &#92;rightarrow P&#92;), and by the definition of the pseudo-complement (fancy term alert!), it&#39;s all about finding the largest element &#92;(x&#92;) such that &#92;(P &#92;land Q &#92;land x &#92;leq P&#92;). And guess what? We hit the jackpot! We find an &#92;(x&#92;) that satisfies the equation, and you know what that means? It&#39;s &#92;(1&#92;),baby! That&#39;s the biggest &#92;(x&#92;) we can get.&lt;/p&gt;
@@ -2431,17 +2431,17 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;http
 &lt;p&gt;The question now: how do elementary topoi relate to Heyting algebras? Here is my transposition of knowledge dependencies—mostly from Wikipedia.
     The following sparse, definitional style is one of many manners for illustrating how these concepts hang together.
     As a preliminary, some chapter zero jargon, (monics are injective homomorphisms—injective meaning all inputs used &#92;( &#92;forall x &#92;exists f(x) &#92;)—homomorphisms satisfying &#92;( f(ab) = f(a)f(b) &#92;)) and isomorphisms. That being said, there are several layers of definitions to peel away, at least to recall: global element, and subobject classifier, and elementary topos. With that out of the way: recall, the global element of an object &#92;(A&#92;) from a category is a morphism &#92;(h:1 &#92;rightarrow A&#92;), where &#92;(1&#92;) is a terminal object of the category. (recall: a terminal object is the object of the category that is the target of morphisms from all objects in the category) Also recall, the subobject classifier relies on two other definitions, at least: subobject &amp; pullback. &#92;(A&#92;) subobject is analogous to a subset, but formally: Some object &#92;(A&#92;) in some category has two monics denoted &#92;(u:S &#92;rightarrow A&#92;) and &#92;(v:T &#92;rightarrow A&#92;) (satisfying an equivalence relation &#92;(uRv&#92;) with isomorphism &#92;(f:S &#92;rightarrow T&#92;) where &#92;(u = v &#92;circ f&#92;)), and the subobjects of &#92;(A&#92;) are the equivalence classes of those monics that can be expressed as the equalizer of two morphisms. An equalizer is analogous to the set-theoretic notion: let &#92;(X&#92;) and &#92;(Y&#92;) be sets. Let &#92;(f&#92;) and &#92;(g&#92;) be functions, both from &#92;(X&#92;) to &#92;(Y&#92;). Then the equalizer of &#92;(f&#92;) and &#92;(g&#92;) is the set of elements &#92;(x&#92;) of &#92;(X&#92;) such that &#92;(f(x)&#92;) equals &#92;(g(x)&#92;) in &#92;(Y&#92;). This is also denoted &#92;(Eq(f,g) := &#92;{x &#92;in X &#92;mid f(x) = g(x)&#92;}&#92;). This generalizes to any set of functions &#92;(f,g &#92;in F&#92;), but is degenerate (e.g., singletons and empties). Categorically, the equalizer is the limit of the diagram (note: a diagram is analogous to an indexed family of sets, except morphisms are indexed too, i.e., a diagram with shape &#92;(J&#92;) in category &#92;(C&#92;) is a functor &#92;(F:J &#92;rightarrow C&#92;) for morphisms &#92;(f,g:X &#92;rightarrow Y&#92;)). The limit is a cone (note: a cone to &#92;(F&#92;) is an object &#92;(N&#92;) of &#92;(C&#92;) together with a family &#92;(p(X):N &#92;rightarrow F(X)&#92;) of morphisms indexed by objects &#92;(X&#92;) of &#92;(J&#92;) such that every morphism &#92;(f:X &#92;rightarrow Y&#92;) in &#92;(J&#92;) requires &#92;(F(f) &#92;circ p(X) = p(Y)&#92;)) where this specific cone is denoted &#92;((L,t)&#92;) to &#92;(F:J &#92;rightarrow C&#92;) such that for every other cone denoted &#92;((N,p)&#92;) to &#92;(F:J &#92;rightarrow C&#92;) there exists a unique morphism &#92;(u:N &#92;rightarrow L&#92;) such that &#92;(t(X) &#92;circ u = p(X)&#92;) for all &#92;(X&#92;) in &#92;(J&#92;).&lt;/p&gt;
-    &lt;img alt=&quot;&quot; src=&quot;https://ischmidls.github.io/posts/pages/heyting/images/image1.png&quot; style=&quot;width: 40%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);&quot; title=&quot;&quot; /&gt;
+    &lt;img alt=&quot;&quot; src=&quot;https://ischmidls.github.io/img/heyting/image1.png&quot; style=&quot;width: 40%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);&quot; title=&quot;&quot; /&gt;
     &lt;p&gt;Source: &lt;a href=&quot;https://en.wikipedia.org/wiki/Limit_(category_theory)&quot;&gt;Wikipedia Limit (category theory)&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Now, just as &quot;the equalizer is the limit of the diagram,&quot; and every &quot;subobjects of some object are the equivalence classes of those monics that can be expressed as the equalizer of two morphisms&quot;: for each monic &#92;(j:U &#92;rightarrow
 
  X&#92;) there is a unique morphism &#92;(h(j):X &#92;rightarrow &#92;Omega&#92;) where &#92;(&#92;Omega&#92;) is the subobject classifier for some category &#92;(C&#92;) with a terminal object satisfying &#92;(1 &#92;rightarrow &#92;Omega&#92;) in the commutative diagram of a pullback such that U is the limit.&lt;/p&gt;
- &lt;img alt=&quot;&quot; src=&quot;https://ischmidls.github.io/posts/pages/heyting/images/image3.png&quot; style=&quot;width: 15%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);&quot; title=&quot;&quot; /&gt;
+ &lt;img alt=&quot;&quot; src=&quot;https://ischmidls.github.io/img/heyting/image3.png&quot; style=&quot;width: 15%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);&quot; title=&quot;&quot; /&gt;
 &lt;p&gt;Source: &lt;a href=&quot;https://en.wikipedia.org/wiki/Subobject_classifier&quot;&gt;Wikipedia Subobject classifier&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;At risk of redundancy, a pullback is the limit of a diagram with two morphisms &#92;(f:X &#92;rightarrow Z&#92;) and &#92;(g:Y &#92;rightarrow Z&#92;) where an object P and two morphisms &#92;(p_1:P &#92;rightarrow X&#92;) and &#92;(p_2:P &#92;rightarrow Y&#92;) where &#92;(fp_1 = gp_2&#92;), all denoted &#92;((P, p_1, p_2)&#92;), which is a universal property, meaning for any other triple denoted &#92;((Q, q_1, q_2)&#92;) where &#92;(q_1:Q &#92;rightarrow X&#92;) and &#92;(q_2:Q &#92;rightarrow Y&#92;) and &#92;(fq_1 = gq_2&#92;) there exists a unique &#92;(u:Q &#92;rightarrow P&#92;) such that &#92;(p_1 &#92;circ u = q_1&#92;) and &#92;(p_2 &#92;circ u = q_2&#92;). This is unique up to isomorphism.&lt;/p&gt;
-&lt;img alt=&quot;&quot; src=&quot;https://ischmidls.github.io/posts/pages/heyting/images/image4.png&quot; style=&quot;width: 40%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);&quot; title=&quot;&quot; /&gt;
+&lt;img alt=&quot;&quot; src=&quot;https://ischmidls.github.io/img/heyting/image4.png&quot; style=&quot;width: 40%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);&quot; title=&quot;&quot; /&gt;
 &lt;p&gt;Source: &lt;a href=&quot;https://en.wikipedia.org/wiki/Pullback_(category_theory)&quot;&gt;Wikipedia Pullback (category theory)&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Finally, elementary topoi have many definitions. (To avoid beginning the question, this definition allows one to derive the existence of the subobject classifier rather than positing the subobject classifier to derive other properties.) &#92;(A&#92;) topos is a category with two properties: (1) every limit over a finite index category exists, (2) every object has a power object. &#92;(A&#92;) power object of an object &#92;(X&#92;) is a pair &#92;((P_X, &#92;ni_x)&#92;) with &#92;(&#92;ni_x &#92;subseteq P_X &#92;times X&#92;). Now, for every object I, a morphism &#92;(r:I &#92;rightarrow P_X&#92;) induces a subobject &#92;(&#92;{(i, x) &#92;mid x &#92;in r(i)&#92;} &#92;subseteq I &#92;times X&#92;). &#92;(A&#92;) pullback denoted &#92;(&#92;ni_x&#92;) defines this along &#92;(r &#92;times X : I &#92;times X &#92;rightarrow P_X &#92;times X&#92;).&lt;/p&gt;
@@ -2459,7 +2459,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;http
 &lt;li&gt;Any two objects &#92;(Z&#92;) and &#92;(Y&#92;) in &#92;(C&#92;) have an exponential denoted &#92;(Z(Y)&#92;) in &#92;(C&#92;).&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Recall: an exponential is an object &#92;(Z(Y)&#92;) with a morphism &#92;((Z(Y) &#92;times Y) &#92;rightarrow Z&#92;) if for any object &#92;(X&#92;) and morphism &#92;(g: X &#92;times Y &#92;rightarrow Z&#92;) there is a unique morphism &#92;(&#92;lambda g: X &#92;rightarrow Z(Y)&#92;), and thus an isomorphism &#92;(g &#92;cong &#92;lambda g&#92;) often denoted &#92;(&#92;text{Hom}(X &#92;times Y, Z) &#92;cong &#92;text{Hom}(X, Z(Y))&#92;).&lt;/p&gt;
-&lt;img alt=&quot;&quot; src=&quot;https://ischmidls.github.io/posts/pages/heyting/images/image5.png&quot; style=&quot;width: 40%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);&quot; title=&quot;&quot; /&gt;
+&lt;img alt=&quot;&quot; src=&quot;https://ischmidls.github.io/img/heyting/image5.png&quot; style=&quot;width: 40%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);&quot; title=&quot;&quot; /&gt;
 &lt;p&gt;Source: &lt;a href=&quot;https://en.wikipedia.org/wiki/Exponential_object&quot;&gt;Wikipedia Exponential object&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;With all of this, we can see that the global elements of the subobject classifier denoted &#92;(&#92;Omega&#92;) of an elementary topos form a Heyting algebra (of truth values of the intuitionistic higher-order logic induced by the topos). More generally, the set of subobjects of any object &#92;(X&#92;) in a topos forms a Heyting algebra.&lt;/p&gt;
 &lt;p&gt;The question: how to relate &quot;(1) every limit over a finite index category exists, (2) every object has a power object&quot; of my definition for elementary topos with the lattices and logical connectives described for Heyting algebras. Well, it is just a list of verifiable algebraic properties according to my GPT query for Lean code, for explications of tactics, and for a natural language explanation. Here&#39;s a list:&lt;/p&gt;
@@ -4205,9 +4205,9 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;http
 	
 	<entry>
 		<title>abstract algebra diagrams</title>
-		<link href="https://ischmidls.github.io/posts/abstract/"/>
+		<link href="https://ischmidls.github.io/posts/abstractguides/"/>
 		<updated>2023-07-03T00:00:00Z</updated>
-		<id>https://ischmidls.github.io/posts/abstract/</id>
+		<id>https://ischmidls.github.io/posts/abstractguides/</id>
 		<content type="html">
 		  &lt;head&gt;
     &lt;style&gt;
@@ -4567,7 +4567,7 @@ Karigala, and Samuel) in “Further Reading” (Appendix C)&lt;a href=&quot;http
 			
 				
 				
-				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fabstract%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=abstract%20algebra%20diagrams&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fabstractguides%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=abstract%20algebra%20diagrams&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -10729,57 +10729,87 @@ This is the known formula &#92;(Cov(X,X)=Var(X)&#92;).&lt;/p&gt;
 		<updated>2023-07-30T00:00:00Z</updated>
 		<id>https://ischmidls.github.io/posts/calculustrap/</id>
 		<content type="html">
-		  &lt;p&gt;The previews that got me through lower division calculus and led me
-    to algebraic topology then algebraic geometry.&lt;/p&gt;
+		  &lt;p&gt;The previews that got me through lower division calculus and led me to algebraic topology then algebraic geometry.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;
+      &lt;a href=&quot;https://www.ms.uky.edu/~droyster/courses/spring98/math2242/classnotes6.pdf&quot;&gt;“Fundamental Theorems of Vector Calculus”, David Royster, 1996&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Intuitive without lacking rigor: &lt;a href=&quot;https://www.grc.nasa.gov/WWW/k-12/Numbers/Math/documents/Tensors_TM2002211716.pdf&quot;&gt;
+        &lt;strong&gt;“Intro to Tensors for Students of Physics and Engineering”&lt;/strong&gt;, NASA, Joseph Kolecki, 2002 &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;
+      &lt;a href=&quot;https://math.uchicago.edu/~may/REU2012/REUPapers/Presman.pdf&quot;&gt;
+        &lt;strong&gt;“Stoke’s Theorem on Manifolds”&lt;/strong&gt;, Rick Presman, 2012 &lt;/a&gt;
+    &lt;/p&gt;
     &lt;ul&gt;
-    &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.ms.uky.edu/~droyster/courses/spring98/math2242/classnotes6.pdf&quot;&gt;“Fundamental
-    Theorems of Vector Calculus”, David Royster, 1996&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;p&gt;Intuitive without lacking rigor: &lt;a href=&quot;https://www.grc.nasa.gov/WWW/k-12/Numbers/Math/documents/Tensors_TM2002211716.pdf&quot;&gt;&lt;strong&gt;“Intro
-    to Tensors for Students of Physics and Engineering”&lt;/strong&gt;, NASA,
-    Joseph Kolecki, 2002&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://math.uchicago.edu/~may/REU2012/REUPapers/Presman.pdf&quot;&gt;&lt;strong&gt;“Stoke’s
-    Theorem on Manifolds”&lt;/strong&gt;, Rick Presman, 2012&lt;/a&gt;&lt;/p&gt;
-    &lt;ul&gt;
-    &lt;li&gt;Oliver Knill &lt;a href=&quot;https://people.math.harvard.edu/~knill/teaching/summer2020/handouts/lecture25.pdf&quot;&gt;Calculus
-    in four dimensions&lt;/a&gt;.&lt;/li&gt;
-    &lt;/ul&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;p&gt;One of my favorite &lt;a href=&quot;https://www.math.purdue.edu/~arapura/preprints/diffforms.pdf&quot;&gt;Introduction
-    to differential forms&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;p&gt;An ok &lt;a href=&quot;https://github.com/danielvoconnor/calc_on_manifolds_intuition/blob/main/CalcOnManifolds_Intuition_Tufte.pdf&quot;&gt;Calculus
-    on Manifolds Intuition&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;p&gt;Brief but nice &lt;a href=&quot;https://bpb-us-w2.wpmucdn.com/sites.wustl.edu/dist/3/2139/files/2019/09/vectorspacesmvcalc.pdf&quot;&gt;Intro
-    Vectors, Multivariable, Topology&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-    &lt;li&gt;
-        &lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://math.stackexchange.com/a/830016/1098426&quot;&gt;Why do differential forms have a much richer structure than vector fields?&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-        &lt;p&gt;&lt;a href=&quot;https://web.iitd.ac.in/~pmvs/courses/mcl702/notation.pdf&quot;&gt;A Primer
-    on Index Notation John Crimaldi&lt;/a&gt;&lt;/p&gt;
-    &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://web.ma.utexas.edu/users/sl55444/Archive/SVD.pdf&quot;&gt;Notes:
-    Spectral theorems, SVD, and Quadratic forms&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://web.williams.edu/Mathematics/lg5/Rota.pdf&quot;&gt;Ten
-    Lessons I Wish I Had Learned Before I Started Teaching, Differential
-    Equations, Gian-Carlo Rota&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+      &lt;li&gt;Oliver Knill &lt;a href=&quot;https://people.math.harvard.edu/~knill/teaching/summer2020/handouts/lecture25.pdf&quot;&gt;Calculus in four dimensions&lt;/a&gt;. &lt;/li&gt;
     &lt;/ul&gt;
-    &lt;h2 id=&quot;poincare-conjecture&quot;&gt;Poincare Conjecture&lt;/h2&gt;
-    &lt;h3 id=&quot;thurston&quot;&gt;Thurston&lt;/h3&gt;
-    &lt;ul&gt;
-    &lt;li&gt;Thurston, William (1982). &lt;a href=&quot;http://dx.doi.org/10.1090/S0273-0979-1982-15003-0&quot;&gt;“Three
-    dimensional manifolds, Kleinian groups and hyperbolic geometry”&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;Hamilton, Richard (1982). &lt;a href=&quot;https://projecteuclid.org/journals/journal-of-differential-geometry/volume-17/issue-2/Three-manifolds-with-positive-Ricci-curvature/10.4310/jdg/1214436922.full&quot;&gt;Three-manifolds
-    with positive Ricci curvature. J. Differential Geometry 17 , no. 2,
-    255–306.&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;Hamilton, Richard (1986). &lt;a href=&quot;https://projecteuclid.org/journals/journal-of-differential-geometry/volume-24/issue-2/Four-manifolds-with-positive-curvature-operator/10.4310/jdg/1214440433.full&quot;&gt;Four-manifolds
-    with positive curvature operator. J. Differential Geom. 24 , no. 2,
-    153–179.&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;Hamilton, Richard (1986). &lt;a href=&quot;https://math.stackexchange.com/a/1069947/1098426&quot;&gt;The Ricci flow
-    on surfaces. Mathematics and general relativity, 237–262, Contemp.
-    Math., 71, Amer. Math. Soc., Providence, RI, 1988.&lt;/a&gt; ### Perelman&lt;/li&gt;
-    &lt;li&gt;Perelman, Grisha (2002). &lt;a href=&quot;https://arxiv.org/abs/math/0211159&quot;&gt;“The entropy formula for the
-    Ricci flow and its geometric applications”&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;Perelman, Grisha (2003). &lt;a href=&quot;https://arxiv.org/abs/math/0303109&quot;&gt;“Ricci flow with surgery on
-    three-manifolds”&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;Perelman, Grisha (2003). &lt;a href=&quot;https://arxiv.org/abs/math/0307245&quot;&gt;“Finite extinction time for
-    the solutions to the Ricci flow on certain three-manifolds”&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;One of my favorite &lt;a href=&quot;https://www.math.purdue.edu/~arapura/preprints/diffforms.pdf&quot;&gt;Introduction to differential forms&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;An ok &lt;a href=&quot;https://github.com/danielvoconnor/calc_on_manifolds_intuition/blob/main/CalcOnManifolds_Intuition_Tufte.pdf&quot;&gt;Calculus on Manifolds Intuition&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Brief but nice &lt;a href=&quot;https://bpb-us-w2.wpmucdn.com/sites.wustl.edu/dist/3/2139/files/2019/09/vectorspacesmvcalc.pdf&quot;&gt;Intro Vectors, Multivariable, Topology&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;
+      &lt;a href=&quot;https://math.stackexchange.com/a/830016/1098426&quot;&gt; Why do differential forms have a much richer structure than vector fields?&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href=&quot;https://math.stackexchange.com/a/1267344/1098426&quot;&gt;Coordinate-free derivatives need a reason for use&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;
+      &lt;a href=&quot;https://web.iitd.ac.in/~pmvs/courses/mcl702/notation.pdf&quot;&gt;A Primer on Index Notation John Crimaldi&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+  &lt;/li&gt;&lt;li&gt;
+    &lt;a href=&quot;https://math.stackexchange.com/a/412454/1098426&quot;&gt;What are the Differences Between a Matrix and a Tensor?&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;p&gt;
+    &lt;a href=&quot;https://web.ma.utexas.edu/users/sl55444/Archive/SVD.pdf&quot;&gt;Notes: Spectral theorems, SVD, and Quadratic forms&lt;/a&gt;
+  &lt;/p&gt;
+  
+  &lt;li&gt;
+    &lt;p&gt;
+      &lt;a href=&quot;https://web.williams.edu/Mathematics/lg5/Rota.pdf&quot;&gt;Ten Lessons I Wish I Had Learned Before I Started Teaching, Differential Equations, Gian-Carlo Rota&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;poincare-conjecture&quot;&gt;Poincare Conjecture&lt;/h2&gt;
+&lt;h3 id=&quot;thurston&quot;&gt;Thurston&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Thurston, William (1982). &lt;a href=&quot;http://dx.doi.org/10.1090/S0273-0979-1982-15003-0&quot;&gt;“Three dimensional manifolds, Kleinian groups and hyperbolic geometry”&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Hamilton, Richard (1982). &lt;a href=&quot;https://projecteuclid.org/journals/journal-of-differential-geometry/volume-17/issue-2/Three-manifolds-with-positive-Ricci-curvature/10.4310/jdg/1214436922.full&quot;&gt;Three-manifolds with positive Ricci curvature. J. Differential Geometry 17 , no. 2, 255–306.&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Hamilton, Richard (1986). &lt;a href=&quot;https://projecteuclid.org/journals/journal-of-differential-geometry/volume-24/issue-2/Four-manifolds-with-positive-curvature-operator/10.4310/jdg/1214440433.full&quot;&gt;Four-manifolds with positive curvature operator. J. Differential Geom. 24 , no. 2, 153–179.&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Hamilton, Richard (1986). &lt;a href=&quot;https://math.stackexchange.com/a/1069947/1098426&quot;&gt;The Ricci flow on surfaces. Mathematics and general relativity, 237–262, Contemp. Math., 71, Amer. Math. Soc., Providence, RI, 1988.&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;perelman&quot;&gt;Perelman&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Perelman, Grisha (2002). &lt;a href=&quot;https://arxiv.org/abs/math/0211159&quot;&gt;“The entropy formula for the Ricci flow and its geometric applications”&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Perelman, Grisha (2003). &lt;a href=&quot;https://arxiv.org/abs/math/0303109&quot;&gt;“Ricci flow with surgery on three-manifolds”&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Perelman, Grisha (2003). &lt;a href=&quot;https://arxiv.org/abs/math/0307245&quot;&gt;“Finite extinction time for the solutions to the Ricci flow on certain three-manifolds”&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 			
 				
 				
@@ -12386,6 +12416,80 @@ input.addEventListener(&quot;keydown&quot;, (event) =&gt; {
 				
 				
 				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fmatrixprod%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=widget%3A%20matrix%20product&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>monadic forgetful functor</title>
+		<link href="https://ischmidls.github.io/posts/monadicforgetfulfunctor/"/>
+		<updated>2025-02-26T00:00:00Z</updated>
+		<id>https://ischmidls.github.io/posts/monadicforgetfulfunctor/</id>
+		<content type="html">
+		  &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+    MathJax.Hub.Config({
+      jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
+      extensions: [&quot;tex2jax.js&quot;],
+      &quot;HTML-CSS&quot;: { preferredFont: &quot;TeX&quot;, availableFonts: [&quot;STIX&quot;,&quot;TeX&quot;] },
+      tex2jax: { inlineMath: [ [&quot;$&quot;, &quot;$&quot;], [&quot;&#92;&#92;(&quot;,&quot;&#92;&#92;)&quot;] ], displayMath: [ [&quot;$$&quot;,&quot;$$&quot;], [&quot;&#92;&#92;[&quot;, &quot;&#92;&#92;]&quot;] ], processEscapes: true, ignoreClass: &quot;tex2jax_ignore|dno&quot; },
+      TeX: { noUndefined: { attributes: { mathcolor: &quot;red&quot;, mathbackground: &quot;#FFEEEE&quot;, mathsize: &quot;90%&quot; } } },
+      messageStyle: &quot;none&quot;
+    });
+    &lt;/script&gt;    
+    &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;To prove that the forgetful functor &#92;( U: &#92;text{Vect}_k &#92;to &#92;text{Set} &#92;) is monadic, we need to show that it satisfies the conditions of **monadicity**, as given by Beck&#39;s Monadicity Theorem. The forgetful functor &#92;( U &#92;) maps a vector space over a field &#92;( k &#92;) to its underlying set and maps linear transformations to their underlying functions. 
+&lt;/p&gt;
+&lt;p&gt; 
+The forgetful functor &#92;( U: &#92;text{Vect}_k &#92;to &#92;text{Set} &#92;) has a left adjoint &#92;( F: &#92;text{Set} &#92;to &#92;text{Vect}_k &#92;), which is the **free vector space functor**. For a set &#92;( X &#92;), &#92;( F(X) &#92;) is the vector space whose basis is &#92;( X &#92;). The adjunction is given by the natural isomorphism:
+&#92;[
+&#92;text{Hom}_{&#92;text{Vect}_k}(F(X), V) &#92;simeq &#92;text{Hom}_{&#92;text{Set}}(X, U(V)),
+&#92;]
+where &#92;( V &#92;) is a vector space and &#92;( X &#92;) is a set. This shows that &#92;( U &#92;) is a right adjoint.
+&lt;/p&gt;
+
+
+&lt;p&gt; The adjunction &#92;( F &#92;dashv U &#92;) induces a monad &#92;( T = UF &#92;) on &#92;( &#92;text{Set} &#92;).
+First, for a set &#92;( X &#92;), &#92;( T(X) = U(F(X)) &#92;) is the underlying set of the free vector space generated by &#92;( X &#92;). This is the set of formal linear combinations of elements of &#92;( X &#92;) with coefficients in &#92;( k &#92;).
+Second, the unit &#92;( &#92;eta_X: X &#92;to T(X) &#92;) maps an element &#92;( x &#92;in X &#92;) to the corresponding basis vector in &#92;( F(X) &#92;).
+Third, the multiplication &#92;( &#92;mu_X: T(T(X)) &#92;to T(X) &#92;) is the linear map that &quot;flattens&quot; formal linear combinations of formal linear combinations into formal linear combinations.
+&lt;/p&gt;
+
+
+&lt;p&gt; 
+Beck&#39;s Monadicity Theorem states that a functor &#92;( U &#92;) is monadic if:
+1. &#92;( U &#92;) has a left adjoint.
+2. &#92;( U &#92;) reflects isomorphisms.
+3. &#92;( U &#92;) preserves and reflects coequalizers of &#92;( U &#92;)-split pairs.
+&lt;/p&gt;
+&lt;p&gt; 
+This third condition might be least familiar. Wikipedia&#39;s descriptions for this are not as subpar as they often are. First, (&#92;( U &#92;)-split pairs are those parallel pairs of morphisms in $&#92;text{Vect}_k$, which $U$ sends to pairs having a split coequalizer in $&#92;text{Set} $). Second, in the category of sets, the coequalizer of two functions &#92;( f, g: X &#92;to Y &#92;) is the quotient of &#92;( Y &#92;) by the smallest equivalence relation &#92;( &#92;sim &#92;) satisfying &#92;( f(x) &#92;sim g(x) &#92;) for every &#92;( x &#92;in X &#92;). For example, if &#92;( R &#92;) is an equivalence relation on a set &#92;( Y &#92;), and &#92;( r_1, r_2: R &#92;to Y &#92;) are the natural projections (where &#92;( R &#92;subseteq Y &#92;times Y &#92;)), then the coequalizer of &#92;( r_1 &#92;) and &#92;( r_2 &#92;) is the quotient set &#92;( Y / R &#92;). 
+&lt;/p&gt;
+&lt;p&gt; 
+Before looking at &#92;( U &#92;)-split pair in &#92;( &#92;text{Vect}_k &#92;), let&#39;s verify the first two conditions.
+&lt;/p&gt;
+&lt;p&gt; 
+For $(1)$, we already showed &#92;( U &#92;) has a left adjoint.
+&lt;/p&gt;
+&lt;p&gt; 
+For $(2)$, a linear transformation &#92;( f: V &#92;to W &#92;) is an isomorphism in &#92;( &#92;text{Vect}_k &#92;) if and only if it is bijective. Since &#92;( U &#92;) maps &#92;( f &#92;) to its underlying function, &#92;( U(f) &#92;) is an isomorphism in &#92;( &#92;text{Set} &#92;) (i.e., a bijection) if and only if &#92;( f &#92;) is an isomorphism in &#92;( &#92;text{Vect}_k &#92;). Thus, &#92;( U &#92;) reflects isomorphisms.
+&lt;/p&gt;
+&lt;p&gt; 
+For $(3)$, a &#92;( U &#92;)-split pair in &#92;( &#92;text{Vect}_k &#92;) consists of linear maps &#92;( f, g: V &#92;to W &#92;) such that there exist set-theoretic maps &#92;( h: U(W) &#92;to U(V) &#92;) and &#92;( k: U(W) &#92;to U(W) &#92;) making &#92;( U(f), U(g) &#92;) a split pair in &#92;( &#92;text{Set} &#92;). The coequalizer of &#92;( f, g &#92;) in &#92;( &#92;text{Vect}_k &#92;) is the quotient space &#92;( W / &#92;text{Im}(f - g) &#92;), and &#92;( U &#92;) maps this to the set-theoretic coequalizer of &#92;( U(f), U(g) &#92;) in &#92;( &#92;text{Set} &#92;). Since &#92;( U &#92;) is a right adjoint, it preserves coequalizers of &#92;( U &#92;)-split pairs. Moreover, because &#92;( U &#92;) reflects isomorphisms and the splitting conditions ensure that the coequalizer in &#92;( &#92;text{Set} &#92;) lifts uniquely to &#92;( &#92;text{Vect}_k &#92;), &#92;( U &#92;) also reflects coequalizers of &#92;( U &#92;)-split pairs. Thus, &#92;( U &#92;) preserves and reflects such coequalizers.
+&lt;/p&gt;
+
+&lt;!-- https://q.uiver.app/#q=WzAsNCxbMCwwLCJWIl0sWzEsMCwiVyJdLFsyLDAsIlcgLyBcXHRleHR7SW19KGYgLSBnKSJdLFsyLDEsIloiXSxbMCwxLCJmIiwwLHsib2Zmc2V0IjotMX1dLFsxLDIsIlxccGkiXSxbMSwzLCJcXHBpJyIsMl0sWzIsMywiXFxleGlzdHMgISBcXCwgaCIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFswLDEsImciLDIseyJvZmZzZXQiOjF9XV0= --&gt;
+&lt;iframe class=&quot;quiver-embed&quot; src=&quot;https://q.uiver.app/#q=WzAsNCxbMCwwLCJWIl0sWzEsMCwiVyJdLFsyLDAsIlcgLyBcXHRleHR7SW19KGYgLSBnKSJdLFsyLDEsIloiXSxbMCwxLCJmIiwwLHsib2Zmc2V0IjotMX1dLFsxLDIsIlxccGkiXSxbMSwzLCJcXHBpJyIsMl0sWzIsMywiXFxleGlzdHMgISBcXCwgaCIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFswLDEsImciLDIseyJvZmZzZXQiOjF9XV0=&amp;embed&quot; width=&quot;553&quot; height=&quot;304&quot; style=&quot;border-radius: 8px; border: none;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt; 
+In particular, in &#92;(&#92;text{Vect}_k&#92;), let &#92;(V&#92;) and &#92;(W&#92;) be vector spaces, and let &#92;(f, g: V &#92;to W&#92;) be linear maps. The coequalizer of &#92;(f&#92;) and &#92;(g&#92;) is the quotient space &#92;(W / &#92;text{Im}(f - g)&#92;), equipped with the canonical projection map &#92;(&#92;pi: W &#92;to W / &#92;text{Im}(f - g)&#92;). For any vector space &#92;(Z&#92;) and linear map &#92;(&#92;pi&#39;: W &#92;to Z&#92;) satisfying &#92;(&#92;pi&#39; &#92;circ f = &#92;pi&#39; &#92;circ g&#92;), there exists a unique linear map &#92;(h: W / &#92;text{Im}(f - g) &#92;to Z&#92;) induced by the universal property of the coequalizer, such that &#92;(&#92;pi&#39; = h &#92;circ &#92;pi&#92;). This universal property characterizes the coequalizer in &#92;(&#92;text{Vect}_k&#92;). 
+&lt;/p&gt;
+&lt;p&gt; 
+As the forgetful functor &#92;( U: &#92;text{Vect}_k &#92;to &#92;text{Set} &#92;) satisfies all the conditions of Beck&#39;s Monadicity Theorem, it is monadic. This particularly means that &#92;( &#92;text{Vect}_k &#92;) is equivalent to the category of algebras over the monad &#92;( T = UF &#92;) on &#92;( &#92;text{Set} &#92;).
+&lt;/p&gt;
+			
+				
+				
+				&lt;img src=&quot;https://ischmidls.github.io/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=https://ischmidls.github.io&amp;dp=%2Fposts%2Fmonadicforgetfulfunctor%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=monadic%20forgetful%20functor&amp;tid=G-CY1SRH6BVP&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>

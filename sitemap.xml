@@ -243,11 +243,9 @@
     
   
   
-    
-  
   <url>
-    <loc>https://ischmidls.github.io/posts/abstract/</loc>
-    <lastmod>2024-02-25T16:08:03.000Z</lastmod>
+    <loc>https://ischmidls.github.io/posts/abstractguides/</loc>
+    <lastmod>2023-07-03T00:00:00.000Z</lastmod>
   </url>
   
   
@@ -724,5 +722,18 @@
   <url>
     <loc>https://ischmidls.github.io/posts/matrixprod/</loc>
     <lastmod>2025-02-08T00:00:00.000Z</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <url>
+    <loc>https://ischmidls.github.io/posts/monadicforgetfulfunctor/</loc>
+    <lastmod>2025-02-26T00:00:00.000Z</lastmod>
   </url>
 </urlset>
