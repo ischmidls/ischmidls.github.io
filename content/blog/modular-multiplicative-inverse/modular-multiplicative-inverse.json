@@ -1,0 +1,10 @@
+{
+    "title": "widget: modular inverses",
+    "description": "modular multiplicative inverse",
+    "date": "2024-05-09",
+    "tags": [
+      "math", "javascript","widget"
+    ],
+    "layout": "layouts/post.njk"
+  }
+  

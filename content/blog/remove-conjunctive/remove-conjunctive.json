@@ -1,0 +1,8 @@
+{
+    "title": "widget: remove conjunctive phrases",
+    "description": "remove conjunctive phrases",
+    "date": "2024-03-29",
+    "tags": ["javascript", "widget"],
+    "layout": "layouts/post.njk"
+  }
+  

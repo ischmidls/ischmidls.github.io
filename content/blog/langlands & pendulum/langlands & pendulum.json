@@ -1,0 +1,8 @@
+{
+    "title": "langlands & pendulum",
+    "description": "langlands & pendulum",
+    "date": "2023-07-11",
+    "tags": ["math","long","javascript"],
+    "layout": "layouts/post.njk"
+  }
+  

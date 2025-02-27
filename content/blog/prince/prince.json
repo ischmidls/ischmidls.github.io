@@ -1,0 +1,10 @@
+{
+    "title": "le petit prince & el principito",
+    "description": "the little prince",
+    "date": "2024-04-29",
+    "tags": [
+      "language", "javascript"
+    ],
+    "layout": "layouts/post.njk"
+  }
+  

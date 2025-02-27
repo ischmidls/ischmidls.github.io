@@ -1,0 +1,10 @@
+{
+    "title": "widget: matrix product",
+    "description": "matrix product",
+    "date": "2025-02-08",
+    "tags": [
+      "math", "javascript","widget"
+    ],
+    "layout": "layouts/post.njk"
+  }
+  

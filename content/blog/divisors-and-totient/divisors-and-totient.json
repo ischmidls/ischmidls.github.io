@@ -1,0 +1,10 @@
+{
+    "title": "widget: divisors and totient",
+    "description": "divisors and totient",
+    "date": "2024-05-15",
+    "tags": [
+      "math", "javascript"
+    ],
+    "layout": "layouts/post.njk"
+  }
+  

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+  <form onsubmit="return false;">
+    <label for="matrix">Enter matrix of any dimension to multiply with its transpose:</label>
+    <input 
+      type="text" 
+      name="matrix" 
+      id="matrix"
+      placeholder="[[1,2],[3,4]]">
+    <button type="button" onclick="processMatrix()">Submit</button>
+  </form>
+  
+  <div id="out"></div>
+  
+  <script>
+    async function processMatrix() {
+        try {
+            let mat = JSON.parse(document.getElementById("matrix").value);
+
+            let trans = mat[0].map((_, colIndex) =>
+                mat.map(row => row[colIndex])
+            );
+
+            let prod = await multiplyMatrices(mat, trans);
+
+            let div = document.getElementById("out");
+            div.innerHTML = JSON.stringify(prod);
+        } catch (error) {
+            console.error("Error processing the matrix:", error);
+            document.getElementById("out").innerHTML = "Error: " + error.message;
+        }
+    }
+
+    async function multiplyMatrices(A, B) {
+      return new Promise((resolve, reject) => {
+          setTimeout(() => {
+              try {
+                  const rowsA = A.length;
+                  const colsA = A[0].length;
+                  const rowsB = B.length;
+                  const colsB = B[0].length;
+
+                  if (colsA !== rowsB) {
+                      throw new Error("Matrices cannot be multiplied: Incompatible dimensions.");
+                  }
+
+                  const resultMatrix = Array(rowsA).fill(null).map(() => Array(colsB).fill(0));
+
+                  for (let i = 0; i < rowsA; i++) {
+                      for (let j = 0; j < colsB; j++) {
+                          for (let k = 0; k < colsA; k++) {
+                              resultMatrix[i][j] += A[i][k] * B[k][j];
+                          }
+                      }
+                  }
+
+                  resolve(resultMatrix);
+              } catch (err) {
+                  reject(err);
+              }
+          }, 0);
+      });
+    }
+  </script>
+  <hr>
+  <script src="https://gist.github.com/ischmidls/f2897600ee3cb7ad4650eb9442f5bac6.js"></script>
+</body>
+</html>

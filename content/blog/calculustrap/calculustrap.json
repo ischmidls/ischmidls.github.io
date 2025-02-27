@@ -1,0 +1,10 @@
+{
+    "title": "note: getting through caclulus",
+    "description": "calculus trap",
+    "date": "2023-07-30",
+    "tags": [
+      "math", "note"
+    ],
+    "layout": "layouts/post.njk"
+  }
+  

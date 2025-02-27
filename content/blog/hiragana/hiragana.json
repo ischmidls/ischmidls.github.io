@@ -1,0 +1,10 @@
+{
+    "title": "hiragana",
+    "description": "hiragana",
+    "date": "2023-07-18",
+    "tags": [
+      "language"
+    ],
+    "layout": "layouts/post.njk"
+  }
+  

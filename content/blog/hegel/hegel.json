@@ -1,0 +1,7 @@
+{
+"title": "philosophy word counts",
+"description": "python generated javascript charts of philosophy word counts",
+"date": "2023-01-02",
+"tags": ["javascript","python","long"],
+"layout": "layouts/post.njk"
+}

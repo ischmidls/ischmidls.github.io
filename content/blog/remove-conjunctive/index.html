@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Replace conjunctives</title>
+<style>
+    textarea {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+    <h1>Replace conjunctives</h1>
+    <p>Conjunctive phrases join two independent clauses. They're like typical conjunctions (and, or, but, yet, ...). An example is "The dog sat. And, she ran." Here, "And" functions as a conjunctive phrase. They are form of transition words. This program replaces an expression falling between a newline and a comma without any extra spaces. So, this program replaces conjunctive phrases and syntactic analogues. Jouis!</p>
+    <textarea id="inputText" placeholder="Enter text here..."></textarea>
+    <button onclick="removeExpressions()">Remove Expressions</button>
+    <br>
+    <textarea id="outputText" placeholder="Edited text will appear here..." readonly></textarea>
+
+    <script>
+        function removeExpressions() {
+            // Get the input text
+            let inputText = document.getElementById("inputText").value;
+            
+            // Define the regular expression to match the expression between a period and a comma without spaces
+            let regex1 = /(\. )(?![^,]*\s)[^.,]*, /g;
+            let regex2 = /\n(?![^,]*\s)[^.,]*, /g;
+            
+            // Replace all instances of the second expression with a newline character
+            let editedText = inputText.replace(regex2, "\n");
+
+            // Remove all instances of the first expression
+            editedText = editedText.replace(regex1, ". ");
+
+            // Capitalize the next word after each period
+            editedText = editedText.replace(/\.\s+(\w)/g, function(match, p1) {
+                return ". " + p1.toUpperCase();
+            });
+            
+            // Set the edited text as the output
+            document.getElementById("outputText").value = editedText;
+        }
+    </script>
+    <script src="https://gist.github.com/ischmidls/33ecbc1b03f52ad13295bb0cf9abfcab.js"></script>
+</body>
+</html>

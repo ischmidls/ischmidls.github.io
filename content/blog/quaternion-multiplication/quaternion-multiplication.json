@@ -1,0 +1,10 @@
+{
+    "title": "widget: quaternion template",
+    "description": "quaternion multiplication  template",
+    "date": "2024-05-10",
+    "tags": [
+      "math", "javascript", "widget"
+    ],
+    "layout": "layouts/post.njk"
+  }
+  

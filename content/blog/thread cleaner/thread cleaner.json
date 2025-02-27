@@ -1,0 +1,8 @@
+{
+    "title": "widget: thread cleaner",
+    "description": "thread cleaner",
+    "date": "2024-01-16",
+    "tags": ["javascript", "widget"],
+    "layout": "layouts/post.njk"
+  }
+  

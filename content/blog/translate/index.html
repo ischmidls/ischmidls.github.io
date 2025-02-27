@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Language Translation</title>
+</head>
+<body>
+  <label for="input-text">Enter text to translate:</label>
+  <textarea id="input-text" rows="4" cols="50"></textarea><br><br>
+  <button onclick="strTranslate()">Translate</button>
+  <h2>Translations:</h2>
+<table>
+    <tr>
+      <th><span>German:</span></th>
+      <th><span>French:</span></th>
+      <th><span>Japanese:</span></th>
+      <th><span>Russian:</span></th>
+      <th><span>Arabic:</span></th>
+      <th><span>Mandarin:</span></th>
+      <th><span>Spanish:</span></th>
+      <th><span>Italian:</span></th>
+    </tr>
+    <tr>
+      <td><span id="output-de"></span></td>
+      <td><span id="output-fr"></span></td>
+      <td><span id="output-ja"></span></td>
+      <td><span id="output-ru"></span></td>
+      <td><span id="output-ar"></span></td>
+      <td><span id="output-zh"></span></td>
+      <td><span id="output-es"></span></td>
+      <td><span id="output-it"></span></td>
+    </tr>
+  </table>
+
+  <script>
+    function strTranslate() {
+      const input = document.getElementById("input-text").value;
+
+      // German
+      fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=de&dt=t&q=${encodeURIComponent(input)}`)
+        .then(response => response.json())
+        .then(data => document.getElementById("output-de").innerHTML = data[0][0][0]);
+
+      // French
+      fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=fr&dt=t&q=${encodeURIComponent(input)}`)
+        .then(response => response.json())
+        .then(data => document.getElementById("output-fr").innerHTML = data[0][0][0]);
+
+      // Japanese
+      fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ja&dt=t&q=${encodeURIComponent(input)}`)
+        .then(response => response.json())
+        .then(data => document.getElementById("output-ja").innerHTML = data[0][0][0]);
+
+      // Russian
+      fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ru&dt=t&q=${encodeURIComponent(input)}`)
+        .then(response => response.json())
+        .then(data => document.getElementById("output-ru").innerHTML = data[0][0][0]);
+      // Arabic
+      fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ar&dt=t&q=${encodeURIComponent(input)}`)
+        .then(response => response.json())
+        .then(data => document.getElementById("output-ar").innerHTML = data[0][0][0]);
+
+      // Mandarin
+      fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=zh&dt=t&q=${encodeURIComponent(input)}`)
+        .then(response => response.json())
+        .then(data => document.getElementById("output-zh").innerHTML = data[0][0][0]);
+
+      // Spanish
+      fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=es&dt=t&q=${encodeURIComponent(input)}`)
+        .then(response => response.json())
+        .then(data => document.getElementById("output-es").innerHTML = data[0][0][0]);
+      
+      // Italian
+      fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=it&dt=t&q=${encodeURIComponent(input)}`)
+        .then(response => response.json())
+        .then(data => document.getElementById("output-it").innerHTML = data[0][0][0]);
+    }
+  </script>
+</body>
+</html>

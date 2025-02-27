@@ -1,0 +1,10 @@
+{
+    "title": "abstract algebra guides",
+    "description": "abstract algebra print outs",
+    "date": "2023-07-03",
+    "tags": [
+      "math", "long"
+    ],
+    "layout": "layouts/post.njk"
+  }
+  

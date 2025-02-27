@@ -1,0 +1,9 @@
+{
+    "title": "note: from logic to geometry",
+    "description": "from logic to geometry",
+    "date": "2023-08-30",
+    "tags": [
+      "math", "note"
+    ],
+    "layout": "layouts/post.njk"
+  }
