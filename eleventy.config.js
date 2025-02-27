@@ -22,6 +22,15 @@ export default async function(eleventyConfig) {
 			"./public/": "/"
 		})
 		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
+	
+		// Copy all image files within blog/**/ directories
+		eleventyConfig.addPassthroughCopy({
+			"blog/**/*.png": "blog",
+			"blog/**/*.jpg": "blog",
+			"blog/**/*.jpeg": "blog",
+			"blog/**/*.gif": "blog",
+			"blog/**/*.webp": "blog"
+		  });
 
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
@@ -139,6 +148,10 @@ export const config = {
 		data: "../_data",          // default: "_data" (`input` relative)
 		output: "_site"
 	},
+
+
+
+	  
 
 	// -----------------------------------------------------------------
 	// Optional items:
