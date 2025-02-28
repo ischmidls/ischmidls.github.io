@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>widget: thread cleaner</title>
-		<meta name="description" content="thread cleaner">
+		<title>philosophy word counts</title>
+		<meta name="description" content="python generated javascript charts of philosophy word counts">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="izak">
 		
 		<style>/**
@@ -461,93 +461,53 @@ header {
 		<main id="skip">
 			<heading-anchors>
 				
-<h1 id="widget-thread-cleaner">widget: thread cleaner</h1>
+<h1 id="philosophy-word-counts">philosophy word counts</h1>
 
 <ul class="post-metadata">
-	<li><time datetime="2024-01-16">16 January 2024</time></li>
+	<li><time datetime="2023-01-02">02 January 2023</time></li>
 	<li><a href="/tags/javascript/" class="post-tag">javascript</a>, </li>
-	<li><a href="/tags/widget/" class="post-tag">widget</a></li>
+	<li><a href="/tags/python/" class="post-tag">python</a>, </li>
+	<li><a href="/tags/long/" class="post-tag">long</a></li>
 </ul>
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Substring Removal</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Top 20 Word Occurance in...</title>
 
-  <label for="inputText">Input Text:</label>
-  <textarea id="inputText" rows="4" cols="50"></textarea>
+  </head>
+  <body>
 
-  <br>
+<p>These web pages are generated using Python.</p>
+<p>You can view the python code at <a href="#py">the bottom of this page ↓</a></p>
 
-  <label for="screenName">Screen Names to Remove (delimited by \):</label>
-  <input type="text" id="screenName">
 
-  <br>
+<p>The data source <a href="https://www.kaggle.com/datasets/kouroshalizadeh/history-of-philosophy">Here</a></p>
 
-  <button onclick="removeAndDisplay()">Remove Substrings</button>
+<p>This started as a project to find the mode of the words in Hegel's Phenomenology of Spirit.</p>
 
-  <br>
+<p>I realized I could generalize it to the whole dataset. It got out of hand, but I retamed it.</p>
+<p>My Python CsvFigs class uses this flow: </p>
 
-  <label for="outputText">Output Text:</label>
-  <textarea id="outputText" rows="4" cols="50" readonly=""></textarea>
 
-  <script>
-    function removeSubstrings(inputText, regexList) {
-      // Apply each regex in the list
-      regexList.forEach(regex => {
-        inputText = inputText.replace(regex, '');
-      });
+<p>CSV --> Pandas DataFrame --> Plotly GraphObject --> text file </p>
 
-      return inputText;
-    }
+<p>For the DataFrame, I use the collections module from the Python standard library to quickly get the counts for each word from the list of sentence strings. </p>
+<p>Then, the imported NLTK module determines whether one of the top 20 occuring words is a noun or a verb to color the bar red in Plotly. </p>
 
-    function replaceAtNewlines(inputText) {
-      // Lookbehind for lines starting with @ and replace \n with ": "
-      const regex = /(?<=@.*$)\n/gm;
-      return inputText.replace(regex, ': ');
-    }
 
-    function removeAndDisplay() {
-      const inputText = document.getElementById('inputText').value;
-      const screenNamesToRemove = document.getElementById('screenName').value.split('\\');
+Visit the collection at <a href="https://philosophyplot.github.io&quot;&quot;">philosophyplot.github.io</a>, or preview below.
+<iframe src="https://philosophyplot.github.io"></iframe>
 
-      // Create regex for each screen name
-      const regexList = screenNamesToRemove.map(name => new RegExp(`^${name}$`, 'gm'));
-
-      // Add other regex expressions as needed
-      regexList.push(
-        /^\d+h$/gm,
-        /\n{2,}/g,
-        "See new posts\n",
-        "\nConversation\n",
-        /\d{1,2}:\d{2} (AM|PM) · [a-zA-Z]{3} \d{1,2}, \d{4}/gm,
-        /[a-zA-Z]{3} \d{1,2}, \d{4}/gm,
-        /[a-zA-Z]{3} \d{1,2}/gm,
-        /^ Views/gm,
-        /^\d.*[KMB]$/gm,
-        /\b\d{1,3}\n/g,
-        /·/g
-        // Add more regex expressions as needed
-      );
-
-      const modifiedText = removeSubstrings(inputText, regexList);
-
-      // Replace newline characters for lines starting with @ with ": "
-      const finalText = replaceAtNewlines(modifiedText);
-
-      document.getElementById('outputText').value = finalText;
-    }
-  </script>
-  <script src="https://gist.github.com/ischmidls/fb830fa41501392214c9e502e71a8e46.js"></script>
+  <h1 id="py">Python code</h1>
+  <script src="https://gist.github.com/ischmidls/978eabb3f3ae20b8665dff1719123a04.js"></script>
 
 </body>
 </html>
-
-<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/abstracttrap/">note: from logic to geometry</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/remove-conjunctive/">widget: remove conjunctive phrases</a></li>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/first sentence/">widget: first sentence</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/plotwords/">widget: word plot</a></li>
 </ul>
 
 			</heading-anchors>
@@ -557,7 +517,7 @@ header {
 			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
 		</footer>
 
-		<!-- This page `/blog/thread cleaner/` was built on 2025-02-28T15:23:31.758Z -->
+		<!-- This page `/blog/philosophyplot/` was built on 2025-02-28T15:23:31.756Z -->
 		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
 	</body>
 </html>
