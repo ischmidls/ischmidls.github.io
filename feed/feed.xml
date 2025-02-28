@@ -5,11 +5,82 @@
   <subtitle>sharing in learning</subtitle>
   <link href="https://ischmidls.github.io/feed/feed.xml" rel="self" />
   <link href="https://ischmidls.github.io/" />
-  <updated>2025-02-08T00:00:00Z</updated>
+  <updated>2025-02-14T00:00:00Z</updated>
   <id>https://ischmidls.github.io/</id>
   <author>
     <name>Izak Schmidlkofer</name>
   </author>
+  <entry>
+    <title>unknown variance of concave distribution</title>
+    <link href="https://ischmidls.github.io/blog/unknownvariance/" />
+    <updated>2025-02-14T00:00:00Z</updated>
+    <id>https://ischmidls.github.io/blog/unknownvariance/</id>
+    <content type="html">&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+    MathJax.Hub.Config({
+      jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
+      extensions: [&quot;tex2jax.js&quot;],
+      &quot;HTML-CSS&quot;: { preferredFont: &quot;TeX&quot;, availableFonts: [&quot;STIX&quot;,&quot;TeX&quot;] },
+      tex2jax: { inlineMath: [ [&quot;$&quot;, &quot;$&quot;], [&quot;&#92;&#92;(&quot;,&quot;&#92;&#92;)&quot;] ], displayMath: [ [&quot;$$&quot;,&quot;$$&quot;], [&quot;&#92;&#92;[&quot;, &quot;&#92;&#92;]&quot;] ], processEscapes: true, ignoreClass: &quot;tex2jax_ignore|dno&quot; },
+      TeX: { noUndefined: { attributes: { mathcolor: &quot;red&quot;, mathbackground: &quot;#FFEEEE&quot;, mathsize: &quot;90%&quot; } } },
+      messageStyle: &quot;none&quot;
+    });
+    &lt;/script&gt;    
+    &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;A strange fact that was not immediately obvious to me is that
+    variance of a uniform distribution on &lt;span class=&quot;math inline&quot;&gt;&#92;([a,b]&#92;)&lt;/span&gt; can act as a conservative estimate
+    for unknown variance &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;sigma^2&#92;)&lt;/span&gt; of
+    many other distributions, namely convex distributions on &lt;span class=&quot;math inline&quot;&gt;&#92;([a,b]&#92;)&lt;/span&gt;.&lt;/p&gt;
+    &lt;p&gt;The uniform distribution on &lt;span class=&quot;math inline&quot;&gt;&#92;([a,b]&#92;)&lt;/span&gt; has variance &lt;span class=&quot;math inline&quot;&gt;&#92;((b-a)^2/12&#92;)&lt;/span&gt;. For any concave distribution
+    on &lt;span class=&quot;math inline&quot;&gt;&#92;([a,b]&#92;)&lt;/span&gt; (where the PDF lies above
+    any line segment joining two points on its graph), the variance &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;sigma^2&#92;)&lt;/span&gt; satisfies &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;sigma^2 &#92;le (b-a)^2/12&#92;)&lt;/span&gt;. This holds
+    because any concave PDF is unimodal, and on &lt;span class=&quot;math inline&quot;&gt;&#92;([0,1]&#92;)&lt;/span&gt;, the variance of a distribution
+    with mean &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu&#92;)&lt;/span&gt; cannot exceed &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu(2-3&#92;mu)/3&#92;)&lt;/span&gt; for &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu &#92;le 1/2&#92;)&lt;/span&gt; or &lt;span class=&quot;math inline&quot;&gt;&#92;((1-&#92;mu)(3&#92;mu-1)/3&#92;)&lt;/span&gt; for &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu &#92;ge 1/2&#92;)&lt;/span&gt;, neither of which exceeds
+    &lt;span class=&quot;math inline&quot;&gt;&#92;(1/12&#92;)&lt;/span&gt;. It takes some work to show
+    this, which we’ll expand on shortly. But, rescaling to &lt;span class=&quot;math inline&quot;&gt;&#92;([a,b]&#92;)&lt;/span&gt; gives the general result. A tighter
+    bound exists when the mean &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu&#92;)&lt;/span&gt; is
+    known: for &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu &#92;le (a+b)/2&#92;)&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;sigma^2 &#92;le (&#92;mu-a)(2b+a-3&#92;mu)/3&#92;)&lt;/span&gt;, with a
+    symmetric expression for &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu &amp;gt;
+    (a+b)/2&#92;)&lt;/span&gt;.&lt;/p&gt;
+    &lt;p&gt;The supremum of the variance of unimodal distributions on &lt;span class=&quot;math inline&quot;&gt;&#92;([0,1]&#92;)&lt;/span&gt; with mean &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu&#92;)&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu(2
+    - 3&#92;mu)/3&#92;)&lt;/span&gt; for &lt;span class=&quot;math inline&quot;&gt;&#92;(0 &#92;le &#92;mu &#92;le
+    1/2&#92;)&lt;/span&gt; or &lt;span class=&quot;math inline&quot;&gt;&#92;((1-&#92;mu)(3&#92;mu-1)/3&#92;)&lt;/span&gt;
+    for &lt;span class=&quot;math inline&quot;&gt;&#92;(1/2 &#92;le &#92;mu &#92;le 1&#92;)&lt;/span&gt;. This
+    supremum is achieved by a distribution that, while lacking a density
+    function, can be considered “unimodal” in a generalized sense.
+    Specifically, it has a point mass at &lt;span class=&quot;math inline&quot;&gt;&#92;(0&#92;)&lt;/span&gt; (when &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu
+    &amp;lt; 1/2&#92;)&lt;/span&gt;) or at &lt;span class=&quot;math inline&quot;&gt;&#92;(1&#92;)&lt;/span&gt; (when
+    &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu &amp;gt; 1/2&#92;)&lt;/span&gt;), with the rest of the
+    distribution being uniform.&lt;/p&gt;
+    &lt;p&gt;To derive this, we optimize the second moment &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{E}[x^2]&#92;)&lt;/span&gt; of a unimodal
+    distribution on &lt;span class=&quot;math inline&quot;&gt;&#92;([0,1]&#92;)&lt;/span&gt; under the
+    constraints of normalization (&lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;int_0^1 f(x)
+    &#92;, dx = 1&#92;)&lt;/span&gt;), mean &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{E}&#92;)&lt;/span&gt; &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;int_0^1 x f(x) &#92;, dx = &#92;mu&#92;)&lt;/span&gt;, and
+    unimodality (non-increasing density on either side of a mode &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;lambda&#92;)&lt;/span&gt;). The optimal distribution is
+    piecewise constant, with density &lt;span class=&quot;math inline&quot;&gt;&#92;(a = (1 +
+    &#92;lambda - 2&#92;mu)/&#92;lambda&#92;)&lt;/span&gt; on &lt;span class=&quot;math inline&quot;&gt;&#92;([0,&#92;lambda)&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(b = (2&#92;mu - &#92;lambda)/(1 - &#92;lambda)&#92;)&lt;/span&gt; on
+    &lt;span class=&quot;math inline&quot;&gt;&#92;((&#92;lambda,1]&#92;)&lt;/span&gt;. The second moment
+    &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{E}[x^2] = &#92;frac{1}{3}(2&#92;mu + (2&#92;mu -
+    1)&#92;lambda)&#92;)&lt;/span&gt; is linear in &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;lambda&#92;)&lt;/span&gt;, so it is maximized at &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;lambda = 0&#92;)&lt;/span&gt; (for &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu &amp;lt; 1/2&#92;)&lt;/span&gt;) or &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;lambda = 1&#92;)&lt;/span&gt; (for &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu &amp;gt; 1/2&#92;)&lt;/span&gt;). When &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu = 1/2&#92;)&lt;/span&gt;, the second moment is constant
+    for all &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;lambda&#92;)&lt;/span&gt;.&lt;/p&gt;
+    &lt;p&gt;In the limits, the optimal distribution approaches a uniform
+    distribution with a point mass at &lt;span class=&quot;math inline&quot;&gt;&#92;(0&#92;)&lt;/span&gt;
+    (for &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu &amp;lt; 1/2&#92;)&lt;/span&gt;) or at &lt;span class=&quot;math inline&quot;&gt;&#92;(1&#92;)&lt;/span&gt; (for &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu
+    &amp;gt; 1/2&#92;)&lt;/span&gt;). These distributions, though not continuous, satisfy
+    the unimodality condition and achieve the supremum of the variance &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;sigma^2_&#92;mu&#92;)&lt;/span&gt;.&lt;/p&gt;
+    &lt;hr&gt;
+    &lt;p&gt;Note: Recall how to find the variance of a uniform distribution X on &lt;span class=&quot;math inline&quot;&gt;&#92;([a,b]&#92;)&lt;/span&gt;.&lt;/p&gt;
+    &lt;p&gt;We know variance is the difference of moments &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{V}[X] = &#92;mathbb{E}[X^2] - (&#92;mathbb{E}
+        [X])^2&#92;)&lt;/span&gt;.&lt;/p&gt;
+        &lt;p&gt;As we see &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{E} [X] =
+        &#92;frac{1}{b-a}&#92;int_{[a,b]}x dx = &#92;frac{a+b}{2}&#92;)&lt;/span&gt;, and &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{E} [X^2] = &#92;frac{1}{b-a}&#92;int_{[a,b]}x^2 dx
+        = &#92;frac{b^3-a^3}{3(b-a)}=&#92;frac{a^2+ab+b^2}{3}&#92;)&lt;/span&gt;, we then see
+        &lt;span class=&quot;math display&quot;&gt;&#92;[
+        &#92;mathbb{V} [X] = &#92;frac{a^2+ab+b^2}{3} - &#92;frac{a^2+2ab+b^2}{4} =
+        &#92;frac{a^2-2ab+b^2}{12} =&#92;frac{(b-a)^2}{12}
+        &#92;]&lt;/span&gt;&lt;/p&gt;
+    &lt;p&gt;Inspired by &lt;a href=&quot;https://stats.stackexchange.com/a/143981/422593&quot;&gt;this discussion&lt;/a&gt; and also &lt;a href=&quot;https://stats.stackexchange.com/a/143984/422593&quot;&gt;this discussion&lt;/a&gt;, with help from &lt;a href=&quot;https://math.stackexchange.com/a/728072/1098426&quot;&gt;this calculation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>widget: matrix product</title>
     <link href="https://ischmidls.github.io/blog/matrixprod/" />
@@ -1312,78 +1383,5 @@ For example:
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
-  </entry>
-  <entry>
-    <title>riemann sphere&#39;s field of fractions</title>
-    <link href="https://ischmidls.github.io/blog/spherefractions/" />
-    <updated>2024-04-30T00:00:00Z</updated>
-    <id>https://ischmidls.github.io/blog/spherefractions/</id>
-    <content type="html">&lt;head&gt;
-    &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
-    MathJax.Hub.Config({
-      jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
-      extensions: [&quot;tex2jax.js&quot;],
-      &quot;HTML-CSS&quot;: { preferredFont: &quot;TeX&quot;, availableFonts: [&quot;STIX&quot;,&quot;TeX&quot;] },
-      tex2jax: { inlineMath: [ [&quot;$&quot;, &quot;$&quot;], [&quot;&#92;&#92;(&quot;,&quot;&#92;&#92;)&quot;] ], displayMath: [ [&quot;$$&quot;,&quot;$$&quot;], [&quot;&#92;&#92;[&quot;, &quot;&#92;&#92;]&quot;] ], processEscapes: true, ignoreClass: &quot;tex2jax_ignore|dno&quot; },
-      TeX: { noUndefined: { attributes: { mathcolor: &quot;red&quot;, mathbackground: &quot;#FFEEEE&quot;, mathsize: &quot;90%&quot; } } },
-      messageStyle: &quot;none&quot;
-    });
-    &lt;/script&gt;    
-    &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-    &lt;body&gt;
-  &lt;p&gt;
-To prove that the global meromorphic functions on the Riemann sphere $&#92;mathbb{P}^1$ (the field of fractions for this variety) are the rational functions, we see:
-
-
-
-
-The Riemann sphere $&#92;mathbb{P}^1$ is the complex projective line, which can be thought of as the complex plane $&#92;mathbb{C}$ compactified by adding a point at infinity, denoted $&#92;infty$. It is covered by two coordinate charts:
-$U_0 = &#92;mathbb{P}^1 &#92;setminus &#92;{&#92;infty&#92;}$, with coordinate $z$ (the affine coordinate on $&#92;mathbb{C}$),
-$U_1 = &#92;mathbb{P}^1 &#92;setminus &#92;{0&#92;}$, with coordinate $w = &#92;frac{1}{z}$ (the coordinate near $&#92;infty$).
-
-A global meromorphic function on $&#92;mathbb{P}^1$ is a function that is holomorphic except for isolated poles on $&#92;mathbb{P}^1$.
-
-
-
-
-A rational function is a ratio of two polynomials:
-$
-f(z) = &#92;frac{P(z)}{Q(z)},
-$
-where $P(z)$ and $Q(z)$ are polynomials in $z$. Such a function is meromorphic on $&#92;mathbb{C}$ because it is holomorphic except at the zeros of $Q(z)$, where it has poles. To check its behavior at $&#92;infty$, we use the coordinate $w = &#92;frac{1}{z}$:
-$
-f(z) = &#92;frac{P(z)}{Q(z)} = &#92;frac{P(1/w)}{Q(1/w)}.
-$
-This expression is meromorphic at $w = 0$ (i.e., $z = &#92;infty$) because $P(1/w)$ and $Q(1/w)$ are polynomials in $1/w$. Thus, rational functions are global meromorphic functions on $&#92;mathbb{P}^1$.
-
-
-
-
-Now, let $f$ be a global meromorphic function on $&#92;mathbb{P}^1$. We show that $f$ must be a rational function.
-
-On $U_0 = &#92;mathbb{C}$, $f$ is meromorphic, so it can be written as:
-  $
-  f(z) = &#92;frac{P(z)}{Q(z)},
-  $
-  where $P(z)$ and $Q(z)$ are polynomials, and $Q(z) &#92;neq 0$ except at the poles of $f$.
-
-Near $&#92;infty$ (i.e., in $U_1$), $f$ must also be meromorphic. Using the coordinate $w = &#92;frac{1}{z}$, we write:
-  $
-  f(z) = f&#92;left(&#92;frac{1}{w}&#92;right) = &#92;frac{P(1/w)}{Q(1/w)}.
-  $
-  For this to be meromorphic at $w = 0$, the degrees of $P(z)$ and $Q(z)$ must satisfy $&#92;deg(P) &#92;leq &#92;deg(Q)$. Otherwise, $f(z)$ would have an essential singularity at $&#92;infty$, which is not allowed for a meromorphic function.
-
-Thus, $f(z)$ is a ratio of polynomials with $&#92;deg(P) &#92;leq &#92;deg(Q)$, meaning $f(z)$ is a rational function.
-
-
-
-
-Every global meromorphic function on $&#92;mathbb{P}^1$ is a rational function, and every rational function is a global meromorphic function on $&#92;mathbb{P}^1$. Therefore, the global meromorphic functions on $&#92;mathbb{P}^1$ are exactly the rational functions.
-
-
-So, the global meromorphic functions on $ &#92;mathbb{P}^1 $ are exactly the rational functions.
-&lt;/p&gt;
-&lt;/body&gt;</content>
   </entry>
 </feed>
