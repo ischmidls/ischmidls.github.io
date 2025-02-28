@@ -1,3 +1,14 @@
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      extensions: ["tex2jax.js"],
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+      tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+      TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
+      messageStyle: "none"
+    });
+    </script>    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
 <p>This is an 8-minute presentation I gave. It was my final project for an undergraduate "writing intensive" course on knot theory.
 </p>
 
@@ -119,31 +130,34 @@
     <p>Khovanov homology also gives combinatorial methods for more abstract
     homologies in other fields like Floer homologies (3-manifold, Heegaard,
     Lagrangian).</p>
+    <p>And we will have to end there. Any questions?</p>
+
+    <hr />
     <p>Further Information for potential questions or extra time:</p>
-    <p>Ribbon Concordance between two knots has no local minima. Concordance
-    for two submanifolds M’, M’’ contained in N is a cobordism between them
-    in N × [0, 1], so a manifold with boundary W contained in N × [0, 1]
-    whose boundary is M’ × {0} and M’’ × {1}. This is a relative form of
-    cobordism since it all happens in N. I = [0, 1]. It is a 1-dimensional
-    cobordism between the 0-dimensional manifolds {0}, {1}. Generally, for
-    any closed manifold M, (M × I; M × {0} , M × {1} ) is a cobordism from M
-    × {0} to M × {1}. a homotopy between two continuous functions f and g
-    from a topological space X to a topological space Y is defined to be a
-    continuous function 𝐻 : 𝑋 × [ 0 , 1 ] → 𝑌 (so from the product of the
-    space with the unit interval) X × [0, 1] to Y) such that 𝐻 ( 𝑥 , 0 ) = 𝑓
-    ( 𝑥 ) and 𝐻 ( 𝑥 , 1 ) = 𝑔 ( 𝑥 ) for all 𝑥 ∈ 𝑋 See then two links,
-    denoted as l’ within m-sphere and l’’ within n-sphere, are considered
-    concordant if there exists an embedding function f from l’ × [0,1] to
-    n-sphere × [0,1]. this function has two conditions: first, the image f (
-    l’ × [0] ) = l’ × {0}; second, the image f( l’ × {1} = l’’ × {1}. this
-    forms an equivalence relation. it is a weaker condition than isotopy and
-    a stronger condition than homotopy, meaning that isotopy implies
-    concordance/cobordism, (and concordance implies cobordism), and
-    concordance/cobordism implies homotopy.<br />
-    Slice Knot concorant with unknot (3d knot bounds disc in 4d) Kh(L)
-    “Poincaire Polynomial” formal power series in one indeterminate, say t
-    where the coefficient of t^n gives the dimension (or rank) of the
-    sub-structure of elements homogeneous of degree n</p>
+    <ul>
+        <li>Ribbon concordance between two knots has no local minima.</li>
+        <li>Concordance for two submanifolds \( M' \), \( M'' \) contained in \( N \) is a cobordism between them in \( N \times [0, 1] \), so a manifold with boundary \( W \) contained in \( N \times [0, 1] \) whose boundary is \( M' \times \{0\} \) and \( M'' \times \{1\} \).</li>
+        <li>This is a relative form of cobordism since it all happens in \( N \).</li>
+        <li>\( I = [0, 1] \). It is a 1-dimensional cobordism between the 0-dimensional manifolds \( \{0\} \), \( \{1\} \).</li>
+        <li>Generally, for any closed manifold \( M \), \( (M \times I; M \times \{0\}, M \times \{1\}) \) is a cobordism from \( M \times \{0\} \) to \( M \times \{1\} \).</li>
+        <li>A homotopy between two continuous functions \( f \) and \( g \) from a topological space \( X \) to a topological space \( Y \) is defined to be a continuous function \( H: X \times [0, 1] \to Y \) (so from the product of the space with the unit interval \( X \times [0, 1] \) to \( Y \)) such that \( H(x, 0) = f(x) \) and \( H(x, 1) = g(x) \) for all \( x \in X \).</li>
+        <li>Two links, denoted as \( l' \) within \( m \)-sphere and \( l'' \) within \( n \)-sphere, are considered concordant if there exists an embedding function \( f \) from \( l' \times [0, 1] \) to \( n \)-sphere \( \times [0, 1] \).</li>
+        <li>This function has two conditions:
+            <ul>
+                <li>The image \( f(l' \times \{0\}) = l' \times \{0\} \).</li>
+                <li>The image \( f(l' \times \{1\}) = l'' \times \{1\} \).</li>
+            </ul>
+        </li>
+        <li>This forms an equivalence relation.</li>
+        <li>It is a weaker condition than isotopy and a stronger condition than homotopy, meaning that:
+            <ul>
+                <li>Isotopy implies concordance/cobordism (and concordance implies cobordism).</li>
+                <li>Concordance/cobordism implies homotopy.</li>
+            </ul>
+        </li>
+        <li>Slice knot concordant with unknot (3D knot bounds disc in 4D).</li>
+        <li>\( Kh(L) \): “Poincaré Polynomial” formal power series in one indeterminate, say \( t \), where the coefficient of \( t^n \) gives the dimension (or rank) of the substructure of elements homogeneous of degree \( n \).</li>
+    </ul>
     <img src="./image2.png" alt="guide"></img>
     <p>My professor said this guide was too complicated to put on my poster.</p>
     <p>Further reference:</p>
