@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Wikipedia Page First Sentence</title>
+  </head>
+  <body>
+    <form id="myForm">
+      <label for="url">Enter Wikipedia page URL:</label>
+      <input type="text" id="url" name="url">
+      <input type="submit" value="Get First Sentence">
+    </form>
+    <br>
+    <p>BONUS: If you know the page title, the program works with that too.</p>
+    <p>(e.g.) "Gilles Deleuze" instead of "https://en.wikipedia.org/wiki/Gilles_Deleuze"</p>
+    <br>
+    <div id="result"></div>
+
+    <script>
+      const form = document.getElementById('myForm');
+      const resultDiv = document.getElementById('result');
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const urlInput = document.getElementById('url');
+        const url = urlInput.value;
+        const queryArray = url.split('/')
+
+        const proxy = new Proxy(queryArray, {
+            get(target, prop) {
+                if (!isNaN(prop)) {
+                    prop = parseInt(prop, 10);
+                    if (prop < 0) {
+                        prop += target.length;
+                    }
+                }
+                return target[prop];
+            }
+        });
+
+        const query = proxy[-1]
+        
+        const apiEndpoint = `https://en.wikipedia.org/api/rest_v1/page/summary/${query}`;
+        try {
+          const response = await fetch(apiEndpoint);
+          const data = await response.json();
+          // resultDiv.innerText = 'result'+ data.stringify
+          const firstSentence = data.extract.split('.')[0] + '.';
+          resultDiv.innerText = firstSentence;
+        } catch (error) {
+          console.error(error);
+          resultDiv.innerText = 'Error retrieving first sentence';
+        }
+      });
+    </script>
+  </body>
+</html>

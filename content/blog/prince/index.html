@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>le petit prince & el principito</title>
+  <style> 
+  iframe {height:50vh; width:100%;}
+  /*#iframeContainer {height:50vh; width:90vw;}*/
+  </style>
+</head>
+
+<body>
+  <p>I just made this to view the <a href="https://microtop.ca/lepetitprince/">Microtop</a> (Spanish education program
+    for French speakers) French and Spanish versions of The Little Prince. I wanted both at the same time.</p>
+  <p> This page uses JS to dynamically load iframes (and incidentally also dynamically load the selection menu for the 27
+    chapters of the book).</p><!-- Select dropdown for chapter selection -->
+  <select id="chapterSelect">
+    <!-- JavaScript will populate options dynamically -->
+  </select>
+
+  <!-- Button to trigger loading of selected chapter(s) -->
+  <button id="loadChapterButton">Load Chapter</button>
+
+  <!-- Container for iframes -->
+  <div id="iframeContainer"></div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Select the button, select dropdown, and iframe container
+      const loadButton = document.getElementById('loadChapterButton');
+      const chapterSelect = document.getElementById('chapterSelect');
+      const iframeContainer = document.getElementById('iframeContainer');
+
+      // Function to populate chapter options with leading zeros
+      function populateChapterOptions() {
+        const totalChapters = 27; // Total number of chapters
+        const chapterOptions = chapterSelect;
+
+        // Loop to generate options for chapters 01 to 27
+        for (let i = 1; i <= totalChapters; i++) {
+          const chapterNumber = i.toString().padStart(2, '0'); // Format with leading zero
+          const option = document.createElement('option');
+          option.value = chapterNumber;
+          option.textContent = `Chapter ${chapterNumber}`;
+          chapterOptions.appendChild(option);
+        }
+      }
+
+      // Function to load the selected chapter into an iframe
+      function loadChapter() {
+        // Get the selected chapter number from the dropdown
+        const selectedChapter = chapterSelect.value;
+
+        // Create a new iframe element
+        const spanishIframe = document.createElement('iframe');
+        const frenchIframe = document.createElement('iframe');
+
+        // Set the src attributes of the iframes (URLs for Spanish and French chapters)
+        const spanishChapterUrl = `https://microtop.ca/lepetitprince/capitulo${selectedChapter}.html`;
+        const frenchChapterUrl = `https://microtop.ca/lepetitprince/chapitre${selectedChapter}.html`;
+
+        spanishIframe.src = spanishChapterUrl;
+        frenchIframe.src = frenchChapterUrl;
+
+        // Clear previous iframes from the container
+        iframeContainer.innerHTML = '';
+
+        // Append the iframes to the container
+        iframeContainer.appendChild(spanishIframe);
+        iframeContainer.appendChild(frenchIframe);
+      }
+
+      // Populate chapter options when the DOM content is fully loaded
+      populateChapterOptions();
+
+      // Event listener for the button click
+      loadButton.addEventListener('click', loadChapter);
+    });
+
+  </script>
+</body>
+
+</html>

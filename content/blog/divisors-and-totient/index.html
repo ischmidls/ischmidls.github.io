@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisors and Primes Finder</title>
+    <script>
+        function findDivisorsAndPrimes() {
+            // Get the user input value
+            let inputValue = document.getElementById("numberInput").value;
+            let number = parseInt(inputValue);
+
+            // Validate if the input is a positive integer
+            if (isNaN(number) || number <= 0) {
+                alert("Please enter a positive integer.");
+                return;
+            }
+
+            // Function to find all divisors of a number
+            function findDivisors(n) {
+                let divisors = [];
+                for (let i = 1; i <= n; i++) {
+                    if (n % i === 0) {
+                        divisors.push(i);
+                    }
+                }
+                return divisors;
+            }
+
+            // Function to check if a number is prime
+            function isPrime(n) {
+                if (n <= 1) {
+                    return false;
+                }
+                for (let i = 2; i <= Math.sqrt(n); i++) {
+                    if (n % i === 0) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+            // Find divisors and primes less than the input number
+            let divisors = findDivisors(number);
+            let primes = [];
+            for (let i = 2; i < number; i++) {
+                if (isPrime(i)) {
+                    primes.push(i);
+                }
+            }
+
+            // Display the results including length of lists
+            let divisorsLength = divisors.length;
+            let primesLength = primes.length;
+
+            document.getElementById("divisors").textContent = `Divisors (${divisorsLength}): ` + divisors.join(", ");
+            document.getElementById("primes").textContent = `Primes less than ${number} (${primesLength}): ` + primes.join(", ");
+        }
+    </script>
+</head>
+<body>
+    <p>Find Divisors and Primes</p>
+    <label for="numberInput">Enter a positive integer:</label>
+    <input type="text" id="numberInput">
+    <button onclick="findDivisorsAndPrimes()">Find</button>
+    <p id="divisors"></p>
+    <p id="primes"></p>
+    <script src="https://gist.github.com/ischmidls/0c3e254f052768d0df8d49e283478a56.js"></script>
+</body>
+</html>

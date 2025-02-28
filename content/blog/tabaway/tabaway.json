@@ -1,0 +1,8 @@
+{
+    "title": "widget: tab away",
+    "description": "input tabbed, output un-tabbed!",
+    "date": "2022-06-06",
+    "tags": ["javascript", "widget"],
+    "layout": "layouts/post.njk"
+  }
+  

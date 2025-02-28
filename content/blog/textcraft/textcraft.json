@@ -1,0 +1,8 @@
+{
+    "title": "textcraft",
+    "description": "minecraft text adventure in javascript",
+    "date": "2025-01-22",
+    "tags": ["javascript","long"],
+    "layout": "layouts/post.njk"
+  }
+  
