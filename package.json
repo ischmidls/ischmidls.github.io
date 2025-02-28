@@ -15,12 +15,12 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/11ty/eleventy-base-blog.git"
+		"url": "git://github.com/11ty/ischmidls.github.io.git"
 	},
 	"author": {
-		"name": "Zach Leatherman",
-		"email": "zachleatherman@gmail.com",
-		"url": "https://zachleat.com/"
+		"name": "Izak Schmidlkofer",
+		"email": "",
+		"url": ""
 	},
 	"license": "MIT",
 	"engines": {

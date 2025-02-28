@@ -1,0 +1,393 @@
+<p>Pre-script</p>
+<p>A friend asked me to explain an old essay of mine, and I realized I
+couldn’t. So, here’s my attempt. I’ll try to minimize rambling and
+pedantics, respecting your time and focus as a reader.</p>
+<p>Note: analytic and synthetic have different meanings in metaphysics,
+math, and philosophy of math. Within these disciplines, major figures
+(Aristotle, Euclid, Proclus, Kant, Carnap, Frege, etc) defined the terms
+in different ways. These differences are perhaps uninteresting to
+well-practiced philosophy students. It is the common deflation of
+philosophy as mere arguments on “semantics” rather than “matters of
+consequence”.</p>
+<h1 id="conversation-kant-aristotle-toward-topoi">Conversation: Kant
+&amp; Aristotle Toward Topoi</h1>
+<p>MAR 30, 2024 (JUN 22, 2023)</p>
+<p>The aim of this conversation is to relate Kant and Aristotle’s
+ethics. That aim failed. The main focus was logical formalization
+through so-called homotopy type theory (HoTT) with categorical
+semantics. I end up talking very little about either Kant or Aristotle
+and only glaze HoTT and category theory.</p>
+<h2 id="history">History</h2>
+<p>Of course, if you’re familiar, skip this.</p>
+<p>I recommend Leon Horsten’s overview of philosophy of mathematics from
+Stanford Encyclopedia of Philosophy.</p>
+<p>First, see some preliminary definitions. Kant, Aristotle,
+metaphysics, and ethics can hold their popular understandings. But,
+philosophy of math is more niche.</p>
+<p>The distinct schools of philosophy of math were largely identified
+and labeled at the turn of the twentieth century.</p>
+<p>Logicism and formalism are two schools. Logicism holds that mat
+reduces to logic. Formalism holds that math is the manipulation of
+(written) symbols (like numbers, letters, and other characters on a
+piece of paper).</p>
+<p>Frege pioneered work at the beginning of this distinction but is more
+logicist, disagreeing with much of Hilbert’s project, which is more
+formalist.</p>
+<p>Another school is intuitionism, which holds that math is cognitive or
+psychological. It largely traces back to Brouwer alongside his
+instructor and formalized, Heyting. The famous Husserl, and his students
+Heiddegger and Carnap all opposed psychologism.</p>
+<p>The most popular school among working mathematicians is realism or
+platonism, which holds that math “exists” in some way, often independent
+of material existence. While Godel’s work is somewhat in the line of
+Frege, Russell, who are mostly logicist, Godel had his own unique take
+on mathematical realism.</p>
+<p>The most popular defenses of realism today argue math is real as far
+as it is indispensable to natural science, like physics or
+chemistry.</p>
+<p>In practice, people pick and choose from these schools or rarely
+adhere to only one.</p>
+<p>Constructive mathematics is a practice in math that uses direct proof
+or “construction”. Intuitionism in some sense gave birth to this
+practice, though arguably even Euclid and Archimedes who far predate
+Brouwer used constructive arguments.</p>
+<p>I argue these schools are vaguely helpful in introducing the history
+of the philosophy of math. But, they break down outside the period from
+roughly the mid 1800s to mid 1900s.</p>
+<h2 id="syntax-semantics">Syntax &amp; Semantics</h2>
+<p>A nice explanation of this is in the paper “Categorical Semantics for
+Type Theories” by Jason Z.S. Hu at McGill University. The following is
+largely based on sections 1 and 3 of this paper. Section 2 is on
+principles of category theory.</p>
+<p>There are also notions in section 3 I do not touch on such as
+computation as monads and logic as adjoint functors. An informal
+explanation of the latter (beyond me) would benefit any discussion of
+topoi. Sections 4 and 5 cover lambda calculus and categorical semantics
+for dependent types respectively. This latter section is especially
+relevant but outside my scope or understanding.</p>
+<p>Category semantics involves methods that define the meanings of types
+and programs within category theory. Despite its relatively short
+history compared to other mathematical theories, category theory has
+been actively developed since its inception. Category theory serves as a
+comprehensive "library" of mathematics, with each category acting as a
+general "module" characterizing various mathematical properties.</p>
+<p>In categorical semantics, we apply a type system to a specific
+category, allowing many properties of the type system to correspond
+directly to those of the category. Additionally, connections to other
+type systems arise from observing the structures of the categories in
+which they reside. Category theory provides a unified platform for
+studying type theory, making categorical semantics a more systematic and
+modular approach compared to individually examining each feature in an
+ad hoc manner.</p>
+<p>One pivotal principle in type theory is the Propositions as Types or
+Curry-Howard Isomorphism. This principle links two previously distinct
+fields: logic and types. In logic, people focus on reasoning and
+conclusions, while types emerge in computer science, carrying the
+concept of computation. Remarkably, both areas are closely intertwined:
+a program can represent a logical argument, and logical operations have
+meaningful counterparts in program execution.</p>
+<p>The origins of this principle can be traced back to the 1930s. Curry
+developed combinatory logic, a logical system that eliminates the need
+for quantifying variables and serves as a model of computation. However,
+the idea of using terms to represent logical proofs was independently
+discovered by intuitionists Brouwer, Heyting, and Kolmogorov,
+collectively known as the BHK interpretation.</p>
+<p>Gentzen introduced natural deduction, which describes how logical
+connectives are constructed and used. This framework has become a
+standard formulation in programming language research.</p>
+<p>Later, Lambek extended the principle with category theory, showing a
+correspondence between simply typed λ-calculus and cartesian closed
+categories. This revelation, combined with the connection to logic,
+forms the Curry-Howard-Lambek Isomorphism, highlighting the intriguing
+interconnection among three seemingly disparate fields.</p>
+<p>Understanding or designing a type system typically involves two
+approaches: the syntactic point of view and the semantic point of
+view.</p>
+<p>Syntactic approaches, rooted in logic and proof theory, focus on the
+syntactic structures of a type system. They study properties like
+subject reduction and cut elimination by directly examining the syntax.
+While syntactic approaches are more straightforward and lend themselves
+to algorithmic implementation, they lack utilization of the type
+system's meanings, making certain properties like normalization
+challenging to address.</p>
+<p>Semantic approaches, on the other hand, rely on mathematical models
+to discuss type systems, providing a broader range of structures beyond
+syntax. For example, Giarrusso et al. developed a complex dependent type
+system with subtyping using step-indexed logical relations, a semantic
+method. However, semantic approaches require a deeper understanding of
+concepts and establishing relationships between syntax and semantic
+models.</p>
+<p>One classical semantic approach is algebraic logic, where logical
+systems are modeled by algebraic theories like Boolean algebra and
+Heyting algebra. Unlike algebraic logic, category theory offers more
+generality, allowing for reasoning about morphisms between objects and
+switching structures using functors. This flexibility allows modeling
+various concepts in computer science.</p>
+<h2 id="hott-formalization-of-kant">HoTT Formalization of Kant</h2>
+<p>Homotopy type theory (HoTT) uses type syntax and category semantics
+to translate between logical systems (HoTT 11). By embracing
+set-theoretic, propositional, and topological paradigms, HoTT offers a
+constructive approach to logic (HoTT 9). This allows systematic
+comparison of theories based on their unique relations to a shared core,
+avoiding reduction to a common representation (HoTT 12, Caramello). HoTT
+bridges diverse metaphysical logics via topoi for pluralities of logical
+semantics and types for syntactic formalization. Martin-Lof's a
+dependent type theory adjacent to HoTT, is influenced by Kant's ideas,
+and incorporates categorical semantics (Achourioti and van Lambalgen 16,
+31).</p>
+<p>Dependent type theory distinguishes between analytic judgments,
+interpreting general judgments, and synthetic judgments, interpreting
+existential judgments (Martin-Lof, 94). For example, the statement "a:A"
+signifies an analytic judgment asserting that the object "a" belongs to
+type "A," thus implying the existence of type "A" (Martin-Lof, 91). This
+notion aligns with Kantian synthetic judgment, where the existence, and
+consequently, the traditional formulation of mathematical logic, is
+grounded on an analytic type judgment (Martin-Lof, 94). Note that the
+Kantian synthetic here is equivalent to the type-theoretic analytic.
+Martin-Lof summarizes this relationship by stating that looking at
+mathematical theorems necessitates constructing proofs.</p>
+<h2 id="formal-kant-to-ethics">Formal Kant to Ethics</h2>
+<p>Shabel argues that Kant's depiction of symbolic construction goes
+beyond mere symbolization, suggesting it involves intuitive
+representation. Further, Shabel claims that the final step of symbolic
+construction requires intuitive representation. And, algebraists
+demonstrate intuitive procedures involving the manipulation of
+magnitudes, reflecting both inner sense and conceptual relations. In
+contrast, Kant proposes that manipulating algebraic formulas directly
+reveals how algebraic concepts apply to our inner sense, leading to
+synthetic a priori knowledge of magnitude relations based on given
+magnitudes. Kant compares symbolic construction to ostensive
+construction, emphasizing their achievements in division (Smith).
+Shabel's distinguishes Euclid and Kant but ignores the possibility of
+synthetic a priori knowledge through symbolic construction within
+dependent type theory. Thus, Shabel misses insights into intuitive
+procedures and understanding geometric and algebraic concepts.</p>
+<p>Similarly, Hanna argues that Kant's propositional logic includes
+non-uniform existential commitments, primitive modalities, and intricate
+conceptual structures, closely resembling intensional logic (Hanna, §3).
+However, Hanna also overlooks parallels with dependent type theory,
+which is another intentional logic.</p>
+<h2 id="cantor-zfc">Cantor &amp; ZFC</h2>
+<p>In favor of separating “mathematized philosophy”, that is philosophy
+using mathematical formalisms and logic, from “philosophy of
+mathematics”, which is philosophy asking questions of mathematics, I
+want to lay out some notes on how mathematical Platonism differs from
+what little there is for Plato’s philosophy of math. But, this requires
+some history.</p>
+<p>Cantor's introduction of set theory led to the rise of modern
+mathematical Platonism, despite initial resistance. However, unchecked
+Platonism led to paradoxes like Russell's paradox. To address this
+Zermelo-Fraenkel set theory with the axiom of choice (ZFC) resolves many
+paradoxes. ZFC defines sets within a cumulative hierarchy and allows for
+multiple models, including the Continuum Hypothesis. This enables
+mathematicians to work with different ZFC models without major
+consequences for their research. Cantor's pioneering sets, prompting a
+period of mathematical platonism, was later supported by Gödel's work in
+set theory, viewing paradoxes as tests for logic and knowledge rather
+than direct challenges to mathematics.</p>
+<p>Cantor's introduction of set theory spurred modern mathematical
+Platonism, initially met with resistance but gaining popularity by the
+early 1890s (Gurevich 2). However, unchecked set-theoretic Platonism led
+to paradoxes like Russell's paradox (Gurevich 3). Recognizing the
+necessity for a clearer grasp of sets while retaining faith in the
+theories, Cantor and others pioneered Zermelo-Fraenkel set theory with
+the axiom of choice ("ZFC"). ZFC resolved numerous paradoxes, defining
+sets within a cumulative hierarchy and allowing for multiple models,
+including the Continuum Hypothesis, which addresses cardinalities of
+sets. This permits mathematicians to engage with different ZFC models
+without significant ramifications for their research (Gurevich 5).</p>
+<p>Cantor's conviction in sets' independent existence endures, backed by
+Gödel's defense of Cantor's set theory, which sees paradoxes as tests
+for logic and knowledge rather than mathematics directly (Gurevich 5).
+Consequently, the philosophical and mathematical applications of
+Platonism diverge, despite frequent allusions to Plato and Aristotle in
+discussions linking mathematics and philosophy. Do similar issues arise
+in using Kantian ideas in topos theory?</p>
+<h2 id="badiou-topoi">Badiou &amp; Topoi</h2>
+<p>This is where a more informal explanation of “logic as adjoint
+functors” would come in handy.</p>
+<p>Alain Badiou engages with Grothendieck's work on topoi but stops
+short of fully developing it. He views topoi as a descriptive
+alternative to the axiomatic nature of sets, which delineate an infinite
+universe of multiples. Sets facilitate discourse about the universe of
+thought by establishing conditions through a general concept of
+relation, allowing for the localization of a situation of Being. Rather
+than a mathematics of Being, topoi look at potential universes and their
+rules, reminiscent of Leibniz's idea of universes in God's
+Understanding. They elucidate the plurality of possible logics,
+showcasing the variability of appearances while upholding the necessary
+univocity of Being-multiple. This includes classical topoi that uphold
+principles like the excluded middle, as well as non-classical logics
+that do not adhere to these principles. Badiou's analysis focuses
+specifically on the logical interpretation of topoi, which differs from
+Grothendieck's ontological perspective.</p>
+<p>Badiou uses topoi in logic to bridge the gap between mathematics and
+logic (Plotnitsky 358, Badiou Being 119). He contrasts two perspectives:
+a Platonist one, aligning mathematics with the ontology of the
+multiple-without-One, where mathematics is seen as a foundational
+ontology of thought based on axioms; and an Aristotelian perspective,
+which views mathematics more linguistically, reducing it to a grammar or
+logic of possibilities, as seen in Russell and Frege (Plotnitsky 359,
+Badiou Being 102). While many modern approaches to mathematical logic
+lean towards this mathematically Aristotelian view, Badiou acknowledges
+exceptions such as Gödel, who take a Platonist stance (Plotnitsky 359,
+Badiou Being 92). Badiou argues that this Aristotelian perspective fails
+to treat mathematics as thought, instead treating it as a formal game
+governed by predefined rules. Mathematics transforms into an aesthetic
+pursuit, detached from understanding real existence, but crafting a
+coherent fiction guided by its own clear-cut rules (Plotnitsky 359,
+Badiou Being 48).</p>
+<p>Badiou's stance distinguishes between mathematical and philosophical
+Platonism: he's philosophically Platonist but mathematically
+Aristotelian. Conversely, a Kantian approach aligns more with
+mathematical Aristotelianism, suggesting that topoi should serve as
+ontology instead of merely logic, as proposed by Badiou. In turn,
+Homotopy Type Theory (HoTT) further suggests that mathematical objects
+can be seen as types, and proofs as paths between these types, rather
+than isolated abstract entities.</p>
+<h2 id="mathematizing-aristotle">Mathematizing Aristotle</h2>
+<p>Similar to Kant's blending of metaphysics and transcendental logic,
+the Aristotelian perspective, whether mathematical or philosophical,
+must consider both ethics and metaphysics. Aristotle's argument in
+Nicomachean Ethics (Bk 10. Ch 6-8) shows the unrivaled nature of genuine
+eudaimonia, rooted in a common foundation of practical and theoretical
+wisdom within eudaimonia itself (Cohen and Reed §14).</p>
+<p>Anagnostopoulos suggests that Aristotle both acknowledges and rejects
+the idea of ethics being precise. At the same time, scholars like
+Broadie, Annas, and Hutchinson look into Aristotle's views on friendship
+and justice, but they may overlook the precise relationship between
+these virtues (Herbenick).</p>
+<p>Aristotle categorizes methods as either exact or inexact depending on
+the subject matter. He then introduces two models for decision-making:
+one for achieving a happy life with institutional justice and another
+for achieving it without. These models incorporate both rational
+calculation and mathematical tools to address errors and mistakes,
+particularly in relation to achieving a happy and just life. While
+Aristotle shows the importance of friendship and justice, mathematics
+becomes useful when immoderate friendship leads to injustice. This
+suggests that in normative ethics, inexactness (such as the concept of
+friendship) is generally accepted, while exactness (referring to the
+mathematics of moderation) is the exception. Consequently, the
+mathematization of ethics needs to be at least partially integrated into
+metaethics (Herbenick).</p>
+<p>Now, Aristotle’s virtue can be likened to a feedback loop. This means
+that practicing virtuous actions influences future virtuous behavior
+(Herbenick). Eudaimonia acts as the guiding principle in this ongoing
+cycle of virtue. Concepts like recursive types and fixed points in type
+theory are relevant to understanding virtue and eudaimonia, enabling
+self-reference and setting typing rules (Stump 1-2). Looking at
+conaturals, which include transfinite numbers, provides a deeper insight
+into the feedback loop of virtue, connecting with Aristotle's
+metaphysical concepts of being, non-being, and infinity. Aristotle's
+philosophy shows the importance of actuality over potentiality,
+highlighting the superiority of what is actual (Cohen and Reed §12).</p>
+<p>By using a set-theoretic recursive method, we represent incremental
+elements akin to peeling an onion in reverse. Through decategorification
+and counting with natural numbers, as suggested by Baez, abstractly
+obtaining herd sizes without arranging them in line becomes feasible.
+using natural numbers aids in abstracting Aristotelian virtue feedback
+loops, especially within the context of topos theory's
+category-theoretic and recursive framework. This characterization sets
+the stage for a type-theoretic interpretation of Aristotle's ethics. By
+initiating with the empty category instead of the empty set, we offer an
+ontological interpretation, where the empty category arises from
+functorality. Additionally, the rules for constructing types of natural
+numbers explicitly express this without depending on category-theoretic
+semantics, as discussed by Gangle (98) and in HoTT (432).</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>While Aristotle's and Kant's metaphysics and ethics can be
+mathematically formalized, even within HoTT where theories exist as
+subspaces in a continuous and composable space, the objective extends
+beyond mere formal presentation or justification. Badiou's Logics of
+Worlds lacks an explanation for establishing Badiou’s intensities
+independently of subject-dependent appearances, as noted by Livingston.
+The theory of transcendentals, linked to Heyting algebras and specific
+logics, overlooks the assumption that transcendentals are linguistic or
+conventional. Going beyond Badiou’s philosophical "mathemes,"
+formalizing the logicism of Kant and Aristotle in HoTT would benefit
+from enhanced precision and accuracy, aligning with broader HoTT
+research objectives.</p>
+<p>Kant and Aristotle's metaphysics and ethics may translate into
+Homotopy Type Theory (HoTT), where their logical frameworks can interact
+across topoi. Kant's transcendental logic finds interpretation through
+Martin-Lof's type-theoretic approach to analytic and synthetic
+judgments. The philosophical intersections between dependent type theory
+and Kant's transcendental logic merit further investigation,
+particularly concerning synthetic a priori knowledge. While
+mathematicizing Aristotle's Nicomachean Ethics faces issues in the
+feasibility and relevance of applying mathematics to ethical frameworks.
+The development of set theory, notably ZFC, addressed paradoxes but
+raised questions about mathematical Platonism. Badiou's utilization of
+topoi as a logical framework aims to unify logic and mathematics,
+highlighting the diversity of possible logics and the singularity of
+Being-multiple. However, Badiou's reliance on set theory to establish
+topoi may be unnecessary.</p>
+<p>In HoTT, mathematics is grounded differently, avoiding detached
+abstractions. Badiou's Platonism and Aristotelianism find resonance with
+a Kantian interpretation that integrates ethics and metaphysics through
+type theory and category theory. Applying type theory and topos theory
+can enhance the formalism of Aristotle's ethics, using natural numbers
+and recursive contexts. Mathematizing Aristotle and Kant in HoTT reveals
+unobvious connections, but challenges persist. We need further research
+in navigating subjective appearances, questioning transcendental
+assumptions, and evaluating support for political doctrines and radical
+change.</p>
+<h2 id="post-script">Post-script</h2>
+<p>I no longer support this formalization, but I probably would if I had
+not put in this work. I’ve removed information on Bentham, Mill, Rusell,
+etc.</p>
+<p>Arkady Plotnitsky and Simon Duffy gave me hope.</p>
+<p>________________</p>
+<h2 id="works-cited">Works Cited</h2>
+<p>Achourioti, Theodora and Michiel van Lambalgen. “A Formalization of
+Kant’s Transcendental Logic.” Review of Symbolic Logic, Vol 4, No 2. pp
+254-289. https://doi.org/10.1017/S1755020310000341</p>
+<p>Aristotle. Nichomeachean Ethics. Trans, D. P. Chase. Project
+Gutenberg. 10 July 2003.</p>
+<p>Badiou, Alain. Being and Event. Trans. Feltman. Continuum, New York,
+2007.</p>
+<p>———. Logics of Worlds: The Sequel to Being and Event. Trans. Toscano.
+Continuum, New York, 2009.</p>
+<p>Baez, John and James Dolan. “Categorification.” Arxiv: Math. Feb
+1998. https://arxiv.org/abs/math/9802029</p>
+<p>Caramello, Olivia. “The Theory of Topos-Theoretic ‘Bridges’—A
+Conceptual Introduction.” Glass Bead. 2016.
+https://www.glass-bead.org/article/the-theory-of-topos-theoretic-bridges-a-conceptual-introduction/</p>
+<p>Carey, Rosalind. “Bertrand Russell: Metaphysics.” Internet
+Encyclopedia of Philosophy. https://iep.utm.edu/russ-met/</p>
+<p>Cohen, S. Marc and C. D. C. Reeve. “Aristotle’s Metaphysics.” The
+Stanford Encyclopedia of Philosophy. Ed. Edward N. Zalta. 2021.
+https://plato.stanford.edu/archives/win2021/entries/aristotle-metaphysics/</p>
+<p>Hanna, Robert. “Kant’s Theory of Judgment.” The Stanford Encyclopedia
+of Philosophy. Ed. Edward Zalta.
+https://plato.stanford.edu/archives/spr2022/entries/kant-judgment/</p>
+<p>Herbenick, Raymond. “Aristotle and Mathematical Ethics for
+Happiness?” Twentieth World Congress of Philosophy, Boston,
+Massachusetts, Aug 1998,
+https://www.bu.edu/wcp/Papers/TEth/TEthHerb.htm</p>
+<p>Nath, Ramendra. “Russell, Bertrand: Ethics.” Internet Encyclopedia of
+Philosophy. https://iep.utm.edu/russ-eth/</p>
+<p>Plotnitsky, Arkady, “Experimenting with ontologies: sets, spaces, and
+topoi with Badiou and Grothendieck.” Environment and Planning D: Society
+and Space. Vol 30. 2012.
+https://web.ics.purdue.edu/~plotnits/PDFs/ap%20exp%20with%20ontologies.pdf</p>
+<p>Livingston, Paul. “Review: Alain Badiou, Logics of Worlds.” Notre
+Dame Philosophical Review. Oct 2009.
+https://ndpr.nd.edu/reviews/logics-of-worlds-being-and-event-ii/</p>
+<p>Smith, Houston. “Shabel, Lisa. Mathematics in Kant’s Critical
+Philosophy. Routledge, 2003.” Notre Dame Philosophical Reviews. 2003.
+https://ndpr.nd.edu/reviews/mathematics-in-kant-s-critical-philosophy/</p>
+<p>Stump, Aaron. “A Note on Recursive Types and Fixed Points.”
+University of Iowa. Apr 2017.
+https://homepage.divms.uiowa.edu/~astump/notes/recursive-types-and-fixed-points.pdf</p>
+<p>Univalent Foundations Program. “Homotopy Type Theory: Univalent
+Foundations of Mathematics [HoTT].” Institute for Advanced Study, 2013.
+Https://homotopytypetheory.org/book</p>
+<p>Isaac. “Precedence of Higher Pleasures.” Week 4(Ethics) Spring 2023,
+Apr 2023.</p>
+<p>———. “Suffering’s Limit in Singer’s Affluence.” Week 6 (Ethics)
+Spring 2023, May 2023.</p>
+<p>———. “Kant’s Autonomy and Morality: Synthetic or Analytic,
+Transcendental or Pure.” Week 8 (Ethics) Spring 2023, May 2023.</p>
+<p>———. “Incrementally Learned Virtue.” Week 10 (Ethics) Spring 2023,
+June 2023.</p>
