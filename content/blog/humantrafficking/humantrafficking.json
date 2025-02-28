@@ -1,0 +1,9 @@
+{
+    "title": "human trafficking data analysis",
+    "description": "human trafficking data analysis",
+    "date": "2022-06-10",
+    "tags": [
+      "python", "javascript", "long"
+    ],
+    "layout": "layouts/post.njk"
+  }

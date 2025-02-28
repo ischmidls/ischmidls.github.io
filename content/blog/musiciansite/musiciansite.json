@@ -1,0 +1,9 @@
+{
+    "title": "musician website",
+    "description": "musician website",
+    "date": "2022-12-12",
+    "tags": [
+      "javascript", "long"
+    ],
+    "layout": "layouts/post.njk"
+  }
