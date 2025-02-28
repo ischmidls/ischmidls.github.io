@@ -3,11 +3,178 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>tagged &#39;widget&#39;</title>
-		<meta name="description" content="Learning through working">
+		<title>human trafficking data analysis</title>
+		<meta name="description" content="human trafficking data analysis">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="izak">
 		
-		<style>.postlist { counter-reset: start-from 13 }
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
 /* This is an arbitrary CSS string added to the bundle */
 /* Defaults */
 :root {
@@ -294,64 +461,23 @@ header {
 		<main id="skip">
 			<heading-anchors>
 				
-<h1 id="tagged-widget">Tagged “widget”</h1>
+<h1 id="human-trafficking-data-analysis">human trafficking data analysis</h1>
 
+<ul class="post-metadata">
+	<li><time datetime="2022-06-10">10 June 2022</time></li>
+	<li><a href="/tags/python/" class="post-tag">python</a>, </li>
+	<li><a href="/tags/javascript/" class="post-tag">javascript</a>, </li>
+	<li><a href="/tags/long/" class="post-tag">long</a></li>
+</ul>
 
-
-<ol reversed="" class="postlist">
-	<li class="postlist-item">
-		<a href="/blog/matrixprod/" class="postlist-link">widget: matrix product</a>
-		<time class="postlist-date" datetime="2025-02-08">February 2025</time>
-	</li>
-	<li class="postlist-item">
-		<a href="/blog/quaternion-multiplication/" class="postlist-link">widget: quaternion template</a>
-		<time class="postlist-date" datetime="2024-05-10">May 2024</time>
-	</li>
-	<li class="postlist-item">
-		<a href="/blog/modular-multiplicative-inverse/" class="postlist-link">widget: modular inverses</a>
-		<time class="postlist-date" datetime="2024-05-09">May 2024</time>
-	</li>
-	<li class="postlist-item">
-		<a href="/blog/remove-conjunctive/" class="postlist-link">widget: remove conjunctive phrases</a>
-		<time class="postlist-date" datetime="2024-03-29">March 2024</time>
-	</li>
-	<li class="postlist-item">
-		<a href="/blog/thread cleaner/" class="postlist-link">widget: thread cleaner</a>
-		<time class="postlist-date" datetime="2024-01-16">January 2024</time>
-	</li>
-	<li class="postlist-item">
-		<a href="/blog/translate/" class="postlist-link">widget: translate</a>
-		<time class="postlist-date" datetime="2023-02-01">February 2023</time>
-	</li>
-	<li class="postlist-item">
-		<a href="/blog/plotwords/" class="postlist-link">widget: word plot</a>
-		<time class="postlist-date" datetime="2023-02-01">February 2023</time>
-	</li>
-	<li class="postlist-item">
-		<a href="/blog/first sentence/" class="postlist-link">widget: first sentence</a>
-		<time class="postlist-date" datetime="2023-01-01">January 2023</time>
-	</li>
-	<li class="postlist-item">
-		<a href="/blog/countsplit/" class="postlist-link">widget: count split</a>
-		<time class="postlist-date" datetime="2023-01-01">January 2023</time>
-	</li>
-	<li class="postlist-item">
-		<a href="/blog/tabaway/" class="postlist-link">widget: tab away</a>
-		<time class="postlist-date" datetime="2022-06-06">June 2022</time>
-	</li>
-	<li class="postlist-item">
-		<a href="/blog/numberparagraphs/" class="postlist-link">widget: number paragraphs</a>
-		<time class="postlist-date" datetime="2022-06-06">June 2022</time>
-	</li>
-	<li class="postlist-item">
-		<a href="/blog/mix/" class="postlist-link">widget: mix list</a>
-		<time class="postlist-date" datetime="2022-06-06">June 2022</time>
-	</li>
-</ol>
-
-
-<p>See <a href="/tags/">all tags</a>.</p>
-
+<p>What is this? Jan 2022 — May 2022 In this semester-long project, my
+    teammate Brisny and I researched and visualized data about human
+    trafficking in the US.</p>
+    <p>Visit the data visualization site at <a href="https://izak-brisny.github.io">izak-brisny.github.io</a> or see
+    the previews below.</p>
+    <iframe src="https://izak-brisny.github.io"></iframe>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/tabaway/">widget: tab away</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/mathtax/">math education taxonomy</a></li>
+</ul>
 
 			</heading-anchors>
 		</main>
@@ -360,7 +486,7 @@ header {
 			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
 		</footer>
 
-		<!-- This page `/tags/widget/` was built on 2025-02-28T02:56:46.825Z -->
+		<!-- This page `/blog/humantrafficking/` was built on 2025-02-28T02:56:46.518Z -->
 		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
 	</body>
 </html>
