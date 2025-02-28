@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>heyting</title>
 		<meta name="description" content="post on heyting algebras">
-		<link rel="alternate" href="/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="izak">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="izak">
 		
 		<style>/**
  * okaidia theme for JavaScript, CSS and HTML
@@ -446,14 +446,14 @@ header {
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
 		<header>
-			<a href="/eleventy-base-blog/" class="home-link">izak</a>
+			<a href="/" class="home-link">izak</a>
 			<nav>
 				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
 				<ul class="nav">
-					<li class="nav-item"><a href="/eleventy-base-blog/">home</a></li>
-					<li class="nav-item"><a href="/eleventy-base-blog/blog/">archive</a></li>
-					<li class="nav-item"><a href="/eleventy-base-blog/about/">about</a></li>
-					<li class="nav-item"><a href="/eleventy-base-blog/feed/feed.xml">feed</a></li>
+					<li class="nav-item"><a href="/">home</a></li>
+					<li class="nav-item"><a href="/blog/">archive</a></li>
+					<li class="nav-item"><a href="/about/">about</a></li>
+					<li class="nav-item"><a href="/feed/feed.xml">feed</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -465,8 +465,8 @@ header {
 
 <ul class="post-metadata">
 	<li><time datetime="2023-05-01">01 May 2023</time></li>
-	<li><a href="/eleventy-base-blog/tags/math/" class="post-tag">math</a>, </li>
-	<li><a href="/eleventy-base-blog/tags/long/" class="post-tag">long</a></li>
+	<li><a href="/tags/math/" class="post-tag">math</a>, </li>
+	<li><a href="/tags/long/" class="post-tag">long</a></li>
 </ul>
 
 <!DOCTYPE html>
@@ -505,10 +505,10 @@ header {
 <p>Now, Heyting algebras often take the unhelpful label—for those who are not yet students of topology—that: "Every topology provides a complete Heyting algebra in the form of its open set lattice."</p>
 <p>NOTE: An "open" set is defined as a set where each point is surrounded by other members of the set. To provide a precise definition, one begins with a "basic open set" and forms other open sets from it. In the presence of a metric, basic open sets can be represented by \(ϵ\)-neighborhoods (points are less than \(ϵ\) away from some point for \(ϵ &gt; 0\)). \(A\) set \(S\) is considered open if, for every point \(P ∈ S\), there exists a basic open set \(U\) containing \(P\) such that \(U ⊆ S\). \(A\) set is classified as closed if it either has no complement or if its complement is open.</p>
 <p>A subset lattice (also called powerset lattice) is prototypical. Where join is disjunction, union, and inclusion, and meet is conjunction, intersection, and (something like) includes. In the case of Heyting algebras, these might also be maximum and minimum respectively.</p>
-<picture><source type="image/avif" srcset="/eleventy-base-blog/blog/heyting/ox2kUz5GDw-1200.avif 1200w"><source type="image/webp" srcset="/eleventy-base-blog/blog/heyting/ox2kUz5GDw-1200.webp 1200w"><img loading="lazy" decoding="async" src="/eleventy-base-blog/blog/heyting/ox2kUz5GDw-1200.png" alt="" style="width: 100%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" width="1200" height="909"></picture>
+<picture><source type="image/avif" srcset="/blog/heyting/ox2kUz5GDw-1200.avif 1200w"><source type="image/webp" srcset="/blog/heyting/ox2kUz5GDw-1200.webp 1200w"><img loading="lazy" decoding="async" src="/blog/heyting/ox2kUz5GDw-1200.png" alt="" style="width: 100%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" width="1200" height="909"></picture>
 <p>Source: <a href="https://en.wikipedia.org/wiki/Power_set">Wikipedia Power set</a></p>
 <p>For a more concrete example of a Heyting algebra, let us look at the next Figure where is is clear conjunction \(A \land B\) is \(min(A, B)\) and the disjunction \(A \lor B\) is \(max(A, B)\) but less clear is what Wikipedia kindly spells out: "Every totally ordered set that has a least element \(0\)and a greatest element \(1\) is a Heyting algebra (if viewed as a lattice). In this case \(A \rightarrow B\) equals to \(1\)(or \(T\) for those generalized fans out there) when \(A \leq B\), and \(B\) otherwise."</p>
-<picture><source type="image/avif" srcset="/eleventy-base-blog/blog/heyting/UYKnKVjSMg-1341.avif 1341w"><source type="image/webp" srcset="/eleventy-base-blog/blog/heyting/UYKnKVjSMg-1341.webp 1341w"><img loading="lazy" decoding="async" src="/eleventy-base-blog/blog/heyting/UYKnKVjSMg-1341.png" alt="" style="width: 100%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" width="1341" height="551"></picture>
+<picture><source type="image/avif" srcset="/blog/heyting/UYKnKVjSMg-1341.avif 1341w"><source type="image/webp" srcset="/blog/heyting/UYKnKVjSMg-1341.webp 1341w"><img loading="lazy" decoding="async" src="/blog/heyting/UYKnKVjSMg-1341.png" alt="" style="width: 100%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" width="1341" height="551"></picture>
 <p>Fig: Source: <a href="https://en.wikipedia.org/wiki/Heyting_algebra">Wikipedia Heyting algebra</a></p>
 <p>With all that aside, it becomes somewhat clearer how anybody would evaluate truth via a Heyting algebra. But what of intuitionistic logic? Well, Wikipedia touches on that too!</p>
 <p>Picture this: We've got this formula \((P \lor Q) \rightarrow P\), and by the definition of the pseudo-complement (fancy term alert!), it's all about finding the largest element \(x\) such that \(P \land Q \land x \leq P\). And guess what? We hit the jackpot! We find an \(x\) that satisfies the equation, and you know what that means? It's \(1\),baby! That's the biggest \(x\) we can get.</p>
@@ -525,17 +525,17 @@ header {
 <p>The question now: how do elementary topoi relate to Heyting algebras? Here is my transposition of knowledge dependencies—mostly from Wikipedia.
     The following sparse, definitional style is one of many manners for illustrating how these concepts hang together.
     As a preliminary, some chapter zero jargon, (monics are injective homomorphisms—injective meaning all inputs used \( \forall x \exists f(x) \)—homomorphisms satisfying \( f(ab) = f(a)f(b) \)) and isomorphisms. That being said, there are several layers of definitions to peel away, at least to recall: global element, and subobject classifier, and elementary topos. With that out of the way: recall, the global element of an object \(A\) from a category is a morphism \(h:1 \rightarrow A\), where \(1\) is a terminal object of the category. (recall: a terminal object is the object of the category that is the target of morphisms from all objects in the category) Also recall, the subobject classifier relies on two other definitions, at least: subobject & pullback. \(A\) subobject is analogous to a subset, but formally: Some object \(A\) in some category has two monics denoted \(u:S \rightarrow A\) and \(v:T \rightarrow A\) (satisfying an equivalence relation \(uRv\) with isomorphism \(f:S \rightarrow T\) where \(u = v \circ f\)), and the subobjects of \(A\) are the equivalence classes of those monics that can be expressed as the equalizer of two morphisms. An equalizer is analogous to the set-theoretic notion: let \(X\) and \(Y\) be sets. Let \(f\) and \(g\) be functions, both from \(X\) to \(Y\). Then the equalizer of \(f\) and \(g\) is the set of elements \(x\) of \(X\) such that \(f(x)\) equals \(g(x)\) in \(Y\). This is also denoted \(Eq(f,g) := \{x \in X \mid f(x) = g(x)\}\). This generalizes to any set of functions \(f,g \in F\), but is degenerate (e.g., singletons and empties). Categorically, the equalizer is the limit of the diagram (note: a diagram is analogous to an indexed family of sets, except morphisms are indexed too, i.e., a diagram with shape \(J\) in category \(C\) is a functor \(F:J \rightarrow C\) for morphisms \(f,g:X \rightarrow Y\)). The limit is a cone (note: a cone to \(F\) is an object \(N\) of \(C\) together with a family \(p(X):N \rightarrow F(X)\) of morphisms indexed by objects \(X\) of \(J\) such that every morphism \(f:X \rightarrow Y\) in \(J\) requires \(F(f) \circ p(X) = p(Y)\)) where this specific cone is denoted \((L,t)\) to \(F:J \rightarrow C\) such that for every other cone denoted \((N,p)\) to \(F:J \rightarrow C\) there exists a unique morphism \(u:N \rightarrow L\) such that \(t(X) \circ u = p(X)\) for all \(X\) in \(J\).</p>
-    <picture><source type="image/avif" srcset="/eleventy-base-blog/blog/heyting/uUDKDnkk6e-294.avif 294w"><source type="image/webp" srcset="/eleventy-base-blog/blog/heyting/uUDKDnkk6e-294.webp 294w"><img loading="lazy" decoding="async" src="/eleventy-base-blog/blog/heyting/uUDKDnkk6e-294.png" alt="" style="width: 40%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" width="294" height="248"></picture>
+    <picture><source type="image/avif" srcset="/blog/heyting/uUDKDnkk6e-294.avif 294w"><source type="image/webp" srcset="/blog/heyting/uUDKDnkk6e-294.webp 294w"><img loading="lazy" decoding="async" src="/blog/heyting/uUDKDnkk6e-294.png" alt="" style="width: 40%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" width="294" height="248"></picture>
     <p>Source: <a href="https://en.wikipedia.org/wiki/Limit_(category_theory)">Wikipedia Limit (category theory)</a></p>
 
 <p>Now, just as "the equalizer is the limit of the diagram," and every "subobjects of some object are the equivalence classes of those monics that can be expressed as the equalizer of two morphisms": for each monic \(j:U \rightarrow
 
  X\) there is a unique morphism \(h(j):X \rightarrow \Omega\) where \(\Omega\) is the subobject classifier for some category \(C\) with a terminal object satisfying \(1 \rightarrow \Omega\) in the commutative diagram of a pullback such that U is the limit.</p>
- <picture><source type="image/avif" srcset="/eleventy-base-blog/blog/heyting/Qklf0TZEXp-115.avif 115w"><source type="image/webp" srcset="/eleventy-base-blog/blog/heyting/Qklf0TZEXp-115.webp 115w"><img loading="lazy" decoding="async" src="/eleventy-base-blog/blog/heyting/Qklf0TZEXp-115.png" alt="" style="width: 15%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" width="115" height="126"></picture>
+ <picture><source type="image/avif" srcset="/blog/heyting/Qklf0TZEXp-115.avif 115w"><source type="image/webp" srcset="/blog/heyting/Qklf0TZEXp-115.webp 115w"><img loading="lazy" decoding="async" src="/blog/heyting/Qklf0TZEXp-115.png" alt="" style="width: 15%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" width="115" height="126"></picture>
 <p>Source: <a href="https://en.wikipedia.org/wiki/Subobject_classifier">Wikipedia Subobject classifier</a></p>
 
 <p>At risk of redundancy, a pullback is the limit of a diagram with two morphisms \(f:X \rightarrow Z\) and \(g:Y \rightarrow Z\) where an object P and two morphisms \(p_1:P \rightarrow X\) and \(p_2:P \rightarrow Y\) where \(fp_1 = gp_2\), all denoted \((P, p_1, p_2)\), which is a universal property, meaning for any other triple denoted \((Q, q_1, q_2)\) where \(q_1:Q \rightarrow X\) and \(q_2:Q \rightarrow Y\) and \(fq_1 = gq_2\) there exists a unique \(u:Q \rightarrow P\) such that \(p_1 \circ u = q_1\) and \(p_2 \circ u = q_2\). This is unique up to isomorphism.</p>
-<picture><source type="image/avif" srcset="/eleventy-base-blog/blog/heyting/C-gsVBK3K0-338.avif 338w"><source type="image/webp" srcset="/eleventy-base-blog/blog/heyting/C-gsVBK3K0-338.webp 338w"><img loading="lazy" decoding="async" src="/eleventy-base-blog/blog/heyting/C-gsVBK3K0-338.png" alt="" style="width: 40%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" width="338" height="340"></picture>
+<picture><source type="image/avif" srcset="/blog/heyting/C-gsVBK3K0-338.avif 338w"><source type="image/webp" srcset="/blog/heyting/C-gsVBK3K0-338.webp 338w"><img loading="lazy" decoding="async" src="/blog/heyting/C-gsVBK3K0-338.png" alt="" style="width: 40%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" width="338" height="340"></picture>
 <p>Source: <a href="https://en.wikipedia.org/wiki/Pullback_(category_theory)">Wikipedia Pullback (category theory)</a></p>
 
 <p>Finally, elementary topoi have many definitions. (To avoid beginning the question, this definition allows one to derive the existence of the subobject classifier rather than positing the subobject classifier to derive other properties.) \(A\) topos is a category with two properties: (1) every limit over a finite index category exists, (2) every object has a power object. \(A\) power object of an object \(X\) is a pair \((P_X, \ni_x)\) with \(\ni_x \subseteq P_X \times X\). Now, for every object I, a morphism \(r:I \rightarrow P_X\) induces a subobject \(\{(i, x) \mid x \in r(i)\} \subseteq I \times X\). \(A\) pullback denoted \(\ni_x\) defines this along \(r \times X : I \times X \rightarrow P_X \times X\).</p>
@@ -553,7 +553,7 @@ header {
 <li>Any two objects \(Z\) and \(Y\) in \(C\) have an exponential denoted \(Z(Y)\) in \(C\).</li>
 </ol>
 <p>Recall: an exponential is an object \(Z(Y)\) with a morphism \((Z(Y) \times Y) \rightarrow Z\) if for any object \(X\) and morphism \(g: X \times Y \rightarrow Z\) there is a unique morphism \(\lambda g: X \rightarrow Z(Y)\), and thus an isomorphism \(g \cong \lambda g\) often denoted \(\text{Hom}(X \times Y, Z) \cong \text{Hom}(X, Z(Y))\).</p>
-<picture><source type="image/avif" srcset="/eleventy-base-blog/blog/heyting/8bmuBUGI8h-291.avif 291w"><source type="image/webp" srcset="/eleventy-base-blog/blog/heyting/8bmuBUGI8h-291.webp 291w"><img loading="lazy" decoding="async" src="/eleventy-base-blog/blog/heyting/8bmuBUGI8h-291.png" alt="" style="width: 40%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" width="291" height="155"></picture>
+<picture><source type="image/avif" srcset="/blog/heyting/8bmuBUGI8h-291.avif 291w"><source type="image/webp" srcset="/blog/heyting/8bmuBUGI8h-291.webp 291w"><img loading="lazy" decoding="async" src="/blog/heyting/8bmuBUGI8h-291.png" alt="" style="width: 40%; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="" width="291" height="155"></picture>
 <p>Source: <a href="https://en.wikipedia.org/wiki/Exponential_object">Wikipedia Exponential object</a></p>
 <p>With all of this, we can see that the global elements of the subobject classifier denoted \(\Omega\) of an elementary topos form a Heyting algebra (of truth values of the intuitionistic higher-order logic induced by the topos). More generally, the set of subobjects of any object \(X\) in a topos forms a Heyting algebra.</p>
 <p>The question: how to relate "(1) every limit over a finite index category exists, (2) every object has a power object" of my definition for elementary topos with the lattices and logical connectives described for Heyting algebras. Well, it is just a list of verifiable algebraic properties according to my GPT query for Lean code, for explications of tactics, and for a natural language explanation. Here's a list:</p>
@@ -709,7 +709,7 @@ header {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
-<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/eleventy-base-blog/blog/ct/">category theory for undergraduates</a></li><li class="links-nextprev-next">Next →<br><a href="/eleventy-base-blog/blog/linearsix/">note: six linear algebra theorems</a></li>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/ct/">category theory for undergraduates</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/linearsix/">note: six linear algebra theorems</a></li>
 </ul>
 
 			</heading-anchors>
@@ -719,7 +719,7 @@ header {
 			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
 		</footer>
 
-		<!-- This page `/blog/heyting/` was built on 2025-02-27T23:37:48.380Z -->
-		<script type="module" src="/eleventy-base-blog/dist/xbxy_EL6cU.js"></script>
+		<!-- This page `/blog/heyting/` was built on 2025-02-28T01:17:20.858Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
 	</body>
 </html>
