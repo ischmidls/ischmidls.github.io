@@ -5,15 +5,88 @@
   <subtitle>sharing in learning</subtitle>
   <link href="https://ischmidls.github.io/feed/feed.xml" rel="self" />
   <link href="https://ischmidls.github.io/" />
-  <updated>2025-02-26T00:00:00Z</updated>
+  <updated>2025-02-08T00:00:00Z</updated>
   <id>https://ischmidls.github.io/</id>
   <author>
     <name>Izak Schmidlkofer</name>
   </author>
   <entry>
+    <title>widget: matrix product</title>
+    <link href="https://ischmidls.github.io/blog/matrixprod/" />
+    <updated>2025-02-08T00:00:00Z</updated>
+    <id>https://ischmidls.github.io/blog/matrixprod/</id>
+    <content type="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;form onsubmit=&quot;return false;&quot;&gt;
+    &lt;label for=&quot;matrix&quot;&gt;Enter matrix of any dimension to multiply with its transpose:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;matrix&quot; id=&quot;matrix&quot; placeholder=&quot;[[1,2],[3,4]]&quot;&gt;
+    &lt;button type=&quot;button&quot; onclick=&quot;processMatrix()&quot;&gt;Submit&lt;/button&gt;
+  &lt;/form&gt;
+  
+  &lt;div id=&quot;out&quot;&gt;&lt;/div&gt;
+  
+  &lt;script&gt;
+    async function processMatrix() {
+        try {
+            let mat = JSON.parse(document.getElementById(&quot;matrix&quot;).value);
+
+            let trans = mat[0].map((_, colIndex) =&gt;
+                mat.map(row =&gt; row[colIndex])
+            );
+
+            let prod = await multiplyMatrices(mat, trans);
+
+            let div = document.getElementById(&quot;out&quot;);
+            div.innerHTML = JSON.stringify(prod);
+        } catch (error) {
+            console.error(&quot;Error processing the matrix:&quot;, error);
+            document.getElementById(&quot;out&quot;).innerHTML = &quot;Error: &quot; + error.message;
+        }
+    }
+
+    async function multiplyMatrices(A, B) {
+      return new Promise((resolve, reject) =&gt; {
+          setTimeout(() =&gt; {
+              try {
+                  const rowsA = A.length;
+                  const colsA = A[0].length;
+                  const rowsB = B.length;
+                  const colsB = B[0].length;
+
+                  if (colsA !== rowsB) {
+                      throw new Error(&quot;Matrices cannot be multiplied: Incompatible dimensions.&quot;);
+                  }
+
+                  const resultMatrix = Array(rowsA).fill(null).map(() =&gt; Array(colsB).fill(0));
+
+                  for (let i = 0; i &lt; rowsA; i++) {
+                      for (let j = 0; j &lt; colsB; j++) {
+                          for (let k = 0; k &lt; colsA; k++) {
+                              resultMatrix[i][j] += A[i][k] * B[k][j];
+                          }
+                      }
+                  }
+
+                  resolve(resultMatrix);
+              } catch (err) {
+                  reject(err);
+              }
+          }, 0);
+      });
+    }
+  &lt;/script&gt;
+  &lt;hr&gt;
+  &lt;script src=&quot;https://gist.github.com/ischmidls/f2897600ee3cb7ad4650eb9442f5bac6.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</content>
+  </entry>
+  <entry>
     <title>complete categories</title>
     <link href="https://ischmidls.github.io/blog/alllimits/" />
-    <updated>2025-02-26T00:00:00Z</updated>
+    <updated>2025-02-08T00:00:00Z</updated>
     <id>https://ischmidls.github.io/blog/alllimits/</id>
     <content type="html">&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
     MathJax.Hub.Config({
@@ -87,79 +160,6 @@ As the forgetful functor &#92;( U: &#92;text{Vect}_k &#92;to &#92;text{Set} &#92
   &lt;hr&gt;
 
   These notes were inspired by a remark in &lt;a href=&quot;https://youtu.be/5uI0uJpsEhI?si=f8G1Y0ylOOewxhhG&quot;&gt;this&lt;/a&gt; video.</content>
-  </entry>
-  <entry>
-    <title>widget: matrix product</title>
-    <link href="https://ischmidls.github.io/blog/matrixprod/" />
-    <updated>2025-02-08T00:00:00Z</updated>
-    <id>https://ischmidls.github.io/blog/matrixprod/</id>
-    <content type="html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;&lt;/head&gt;
-&lt;body&gt;
-  &lt;form onsubmit=&quot;return false;&quot;&gt;
-    &lt;label for=&quot;matrix&quot;&gt;Enter matrix of any dimension to multiply with its transpose:&lt;/label&gt;
-    &lt;input type=&quot;text&quot; name=&quot;matrix&quot; id=&quot;matrix&quot; placeholder=&quot;[[1,2],[3,4]]&quot;&gt;
-    &lt;button type=&quot;button&quot; onclick=&quot;processMatrix()&quot;&gt;Submit&lt;/button&gt;
-  &lt;/form&gt;
-  
-  &lt;div id=&quot;out&quot;&gt;&lt;/div&gt;
-  
-  &lt;script&gt;
-    async function processMatrix() {
-        try {
-            let mat = JSON.parse(document.getElementById(&quot;matrix&quot;).value);
-
-            let trans = mat[0].map((_, colIndex) =&gt;
-                mat.map(row =&gt; row[colIndex])
-            );
-
-            let prod = await multiplyMatrices(mat, trans);
-
-            let div = document.getElementById(&quot;out&quot;);
-            div.innerHTML = JSON.stringify(prod);
-        } catch (error) {
-            console.error(&quot;Error processing the matrix:&quot;, error);
-            document.getElementById(&quot;out&quot;).innerHTML = &quot;Error: &quot; + error.message;
-        }
-    }
-
-    async function multiplyMatrices(A, B) {
-      return new Promise((resolve, reject) =&gt; {
-          setTimeout(() =&gt; {
-              try {
-                  const rowsA = A.length;
-                  const colsA = A[0].length;
-                  const rowsB = B.length;
-                  const colsB = B[0].length;
-
-                  if (colsA !== rowsB) {
-                      throw new Error(&quot;Matrices cannot be multiplied: Incompatible dimensions.&quot;);
-                  }
-
-                  const resultMatrix = Array(rowsA).fill(null).map(() =&gt; Array(colsB).fill(0));
-
-                  for (let i = 0; i &lt; rowsA; i++) {
-                      for (let j = 0; j &lt; colsB; j++) {
-                          for (let k = 0; k &lt; colsA; k++) {
-                              resultMatrix[i][j] += A[i][k] * B[k][j];
-                          }
-                      }
-                  }
-
-                  resolve(resultMatrix);
-              } catch (err) {
-                  reject(err);
-              }
-          }, 0);
-      });
-    }
-  &lt;/script&gt;
-  &lt;hr&gt;
-  &lt;script src=&quot;https://gist.github.com/ischmidls/f2897600ee3cb7ad4650eb9442f5bac6.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</content>
   </entry>
   <entry>
     <title>textcraft</title>
