@@ -1,0 +1,98 @@
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      extensions: ["tex2jax.js"],
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+      tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+      TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
+      messageStyle: "none"
+    });
+    </script>    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+
+<p>A strange fact that was not immediately obvious to me is that
+    variance of a uniform distribution on <span
+    class="math inline">\([a,b]\)</span> can act as a conservative estimate
+    for unknown variance <span class="math inline">\(\sigma^2\)</span> of
+    many other distributions, namely convex distributions on <span
+    class="math inline">\([a,b]\)</span>.</p>
+    <p>The uniform distribution on <span
+    class="math inline">\([a,b]\)</span> has variance <span
+    class="math inline">\((b-a)^2/12\)</span>. For any concave distribution
+    on <span class="math inline">\([a,b]\)</span> (where the PDF lies above
+    any line segment joining two points on its graph), the variance <span
+    class="math inline">\(\sigma^2\)</span> satisfies <span
+    class="math inline">\(\sigma^2 \le (b-a)^2/12\)</span>. This holds
+    because any concave PDF is unimodal, and on <span
+    class="math inline">\([0,1]\)</span>, the variance of a distribution
+    with mean <span class="math inline">\(\mu\)</span> cannot exceed <span
+    class="math inline">\(\mu(2-3\mu)/3\)</span> for <span
+    class="math inline">\(\mu \le 1/2\)</span> or <span
+    class="math inline">\((1-\mu)(3\mu-1)/3\)</span> for <span
+    class="math inline">\(\mu \ge 1/2\)</span>, neither of which exceeds
+    <span class="math inline">\(1/12\)</span>. It takes some work to show
+    this, which we’ll expand on shortly. But, rescaling to <span
+    class="math inline">\([a,b]\)</span> gives the general result. A tighter
+    bound exists when the mean <span class="math inline">\(\mu\)</span> is
+    known: for <span class="math inline">\(\mu \le (a+b)/2\)</span>, <span
+    class="math inline">\(\sigma^2 \le (\mu-a)(2b+a-3\mu)/3\)</span>, with a
+    symmetric expression for <span class="math inline">\(\mu &gt;
+    (a+b)/2\)</span>.</p>
+    <p>The supremum of the variance of unimodal distributions on <span
+    class="math inline">\([0,1]\)</span> with mean <span
+    class="math inline">\(\mu\)</span> is <span class="math inline">\(\mu(2
+    - 3\mu)/3\)</span> for <span class="math inline">\(0 \le \mu \le
+    1/2\)</span> or <span class="math inline">\((1-\mu)(3\mu-1)/3\)</span>
+    for <span class="math inline">\(1/2 \le \mu \le 1\)</span>. This
+    supremum is achieved by a distribution that, while lacking a density
+    function, can be considered “unimodal” in a generalized sense.
+    Specifically, it has a point mass at <span
+    class="math inline">\(0\)</span> (when <span class="math inline">\(\mu
+    &lt; 1/2\)</span>) or at <span class="math inline">\(1\)</span> (when
+    <span class="math inline">\(\mu &gt; 1/2\)</span>), with the rest of the
+    distribution being uniform.</p>
+    <p>To derive this, we optimize the second moment <span
+    class="math inline">\(\mathbb{E}[x^2]\)</span> of a unimodal
+    distribution on <span class="math inline">\([0,1]\)</span> under the
+    constraints of normalization (<span class="math inline">\(\int_0^1 f(x)
+    \, dx = 1\)</span>), mean <span
+    class="math inline">\(\mathbb{E}\)</span> <span
+    class="math inline">\(\int_0^1 x f(x) \, dx = \mu\)</span>, and
+    unimodality (non-increasing density on either side of a mode <span
+    class="math inline">\(\lambda\)</span>). The optimal distribution is
+    piecewise constant, with density <span class="math inline">\(a = (1 +
+    \lambda - 2\mu)/\lambda\)</span> on <span
+    class="math inline">\([0,\lambda)\)</span> and <span
+    class="math inline">\(b = (2\mu - \lambda)/(1 - \lambda)\)</span> on
+    <span class="math inline">\((\lambda,1]\)</span>. The second moment
+    <span class="math inline">\(\mathbb{E}[x^2] = \frac{1}{3}(2\mu + (2\mu -
+    1)\lambda)\)</span> is linear in <span
+    class="math inline">\(\lambda\)</span>, so it is maximized at <span
+    class="math inline">\(\lambda = 0\)</span> (for <span
+    class="math inline">\(\mu &lt; 1/2\)</span>) or <span
+    class="math inline">\(\lambda = 1\)</span> (for <span
+    class="math inline">\(\mu &gt; 1/2\)</span>). When <span
+    class="math inline">\(\mu = 1/2\)</span>, the second moment is constant
+    for all <span class="math inline">\(\lambda\)</span>.</p>
+    <p>In the limits, the optimal distribution approaches a uniform
+    distribution with a point mass at <span class="math inline">\(0\)</span>
+    (for <span class="math inline">\(\mu &lt; 1/2\)</span>) or at <span
+    class="math inline">\(1\)</span> (for <span class="math inline">\(\mu
+    &gt; 1/2\)</span>). These distributions, though not continuous, satisfy
+    the unimodality condition and achieve the supremum of the variance <span
+    class="math inline">\(\sigma^2_\mu\)</span>.</p>
+    <hr />
+    <p>Note: Recall how to find the variance of a uniform distribution X on <span
+        class="math inline">\([a,b]\)</span>.</p>
+    <p>We know variance is the difference of moments <span
+        class="math inline">\(\mathbb{V}[X] = \mathbb{E}[X^2] - (\mathbb{E}
+        [X])^2\)</span>.</p>
+        <p>As we see <span class="math inline">\(\mathbb{E} [X] =
+        \frac{1}{b-a}\int_{[a,b]}x dx = \frac{a+b}{2}\)</span>, and <span
+        class="math inline">\(\mathbb{E} [X^2] = \frac{1}{b-a}\int_{[a,b]}x^2 dx
+        = \frac{b^3-a^3}{3(b-a)}=\frac{a^2+ab+b^2}{3}\)</span>, we then see
+        <span class="math display">\[
+        \mathbb{V} [X] = \frac{a^2+ab+b^2}{3} - \frac{a^2+2ab+b^2}{4} =
+        \frac{a^2-2ab+b^2}{12} =\frac{(b-a)^2}{12}
+        \]</span></p>
+    <p>Inspired by <a href="https://stats.stackexchange.com/a/143981/422593">this discussion</a> and also <a href="https://stats.stackexchange.com/a/143984/422593">this discussion</a>, with help from <a href="https://math.stackexchange.com/a/728072/1098426">this calculation</a></p>
