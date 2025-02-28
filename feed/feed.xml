@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="pretty-atom-feed.xsl" type="text/xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-  <title>Blog Title</title>
-  <subtitle>This is a longer description about your blog.</subtitle>
-  <link href="https://example.com/feed/feed.xml" rel="self" />
-  <link href="https://example.com/" />
+  <title>izak</title>
+  <subtitle>sharing in learning</subtitle>
+  <link href="https://ischmidls.github.io/feed/feed.xml" rel="self" />
+  <link href="https://ischmidls.github.io/" />
   <updated>2025-02-26T00:00:00Z</updated>
-  <id>https://example.com/</id>
+  <id>https://ischmidls.github.io/</id>
   <author>
-    <name>Your Name</name>
+    <name>Izak Schmidlkofer</name>
   </author>
   <entry>
     <title>complete categories</title>
-    <link href="https://example.com/blog/alllimits/" />
+    <link href="https://ischmidls.github.io/blog/alllimits/" />
     <updated>2025-02-26T00:00:00Z</updated>
-    <id>https://example.com/blog/alllimits/</id>
+    <id>https://ischmidls.github.io/blog/alllimits/</id>
     <content type="html">&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
     MathJax.Hub.Config({
       jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
@@ -90,9 +90,9 @@ As the forgetful functor &#92;( U: &#92;text{Vect}_k &#92;to &#92;text{Set} &#92
   </entry>
   <entry>
     <title>widget: matrix product</title>
-    <link href="https://example.com/blog/matrixprod/" />
+    <link href="https://ischmidls.github.io/blog/matrixprod/" />
     <updated>2025-02-08T00:00:00Z</updated>
-    <id>https://example.com/blog/matrixprod/</id>
+    <id>https://ischmidls.github.io/blog/matrixprod/</id>
     <content type="html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;&lt;/head&gt;
@@ -163,9 +163,9 @@ As the forgetful functor &#92;( U: &#92;text{Vect}_k &#92;to &#92;text{Set} &#92
   </entry>
   <entry>
     <title>textcraft</title>
-    <link href="https://example.com/blog/textcraft/" />
+    <link href="https://ischmidls.github.io/blog/textcraft/" />
     <updated>2025-01-22T00:00:00Z</updated>
-    <id>https://example.com/blog/textcraft/</id>
+    <id>https://ischmidls.github.io/blog/textcraft/</id>
     <content type="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -719,9 +719,9 @@ input.addEventListener(&quot;keydown&quot;, (event) =&gt; {
   </entry>
   <entry>
     <title>khovanov homology talk</title>
-    <link href="https://example.com/blog/khovanov/" />
+    <link href="https://ischmidls.github.io/blog/khovanov/" />
     <updated>2024-06-14T00:00:00Z</updated>
-    <id>https://example.com/blog/khovanov/</id>
+    <id>https://ischmidls.github.io/blog/khovanov/</id>
     <content type="html">&lt;p&gt;This is an 8-minute presentation I gave. It was my final project for an undergraduate &quot;writing intensive&quot; course on knot theory.
 &lt;/p&gt;
 
@@ -729,9 +729,9 @@ input.addEventListener(&quot;keydown&quot;, (event) =&gt; {
   </entry>
   <entry>
     <title>cohomology ring of n-sphere</title>
-    <link href="https://example.com/blog/cohomologysphere/" />
+    <link href="https://ischmidls.github.io/blog/cohomologysphere/" />
     <updated>2024-05-30T00:00:00Z</updated>
-    <id>https://example.com/blog/cohomologysphere/</id>
+    <id>https://ischmidls.github.io/blog/cohomologysphere/</id>
     <content type="html">&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
     MathJax.Hub.Config({
       jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
@@ -781,9 +781,9 @@ And $&#92;frac DC &#92;eta$ is nowhere vanishing (thus an orientation). All othe
   </entry>
   <entry>
     <title>field extension practice</title>
-    <link href="https://example.com/blog/field-extension-practice/" />
+    <link href="https://ischmidls.github.io/blog/field-extension-practice/" />
     <updated>2024-05-24T00:00:00Z</updated>
-    <id>https://example.com/blog/field-extension-practice/</id>
+    <id>https://ischmidls.github.io/blog/field-extension-practice/</id>
     <content type="html">&lt;script src=&quot;https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6&quot;&gt;&lt;/script&gt;
   &lt;script src=&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
   &lt;h4 id=&quot;1-lecture-exercise-for-reader&quot;&gt;(1) Lecture Exercise for Reader&lt;/h4&gt;
@@ -867,9 +867,9 @@ And $&#92;frac DC &#92;eta$ is nowhere vanishing (thus an orientation). All othe
   </entry>
   <entry>
     <title>widget: divisors and totient</title>
-    <link href="https://example.com/blog/divisors-and-totient/" />
+    <link href="https://ischmidls.github.io/blog/divisors-and-totient/" />
     <updated>2024-05-15T00:00:00Z</updated>
-    <id>https://example.com/blog/divisors-and-totient/</id>
+    <id>https://ischmidls.github.io/blog/divisors-and-totient/</id>
     <content type="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -944,9 +944,9 @@ And $&#92;frac DC &#92;eta$ is nowhere vanishing (thus an orientation). All othe
   </entry>
   <entry>
     <title>widget: quaternion template</title>
-    <link href="https://example.com/blog/quaternion-multiplication/" />
+    <link href="https://ischmidls.github.io/blog/quaternion-multiplication/" />
     <updated>2024-05-10T00:00:00Z</updated>
-    <id>https://example.com/blog/quaternion-multiplication/</id>
+    <id>https://ischmidls.github.io/blog/quaternion-multiplication/</id>
     <content type="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -1015,9 +1015,9 @@ And $&#92;frac DC &#92;eta$ is nowhere vanishing (thus an orientation). All othe
   </entry>
   <entry>
     <title>widget: modular inverses</title>
-    <link href="https://example.com/blog/modular-multiplicative-inverse/" />
+    <link href="https://ischmidls.github.io/blog/modular-multiplicative-inverse/" />
     <updated>2024-05-09T00:00:00Z</updated>
-    <id>https://example.com/blog/modular-multiplicative-inverse/</id>
+    <id>https://ischmidls.github.io/blog/modular-multiplicative-inverse/</id>
     <content type="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -1148,9 +1148,9 @@ For example:
   </entry>
   <entry>
     <title>riemann sphere&#39;s field of fractions</title>
-    <link href="https://example.com/blog/spherefractions/" />
+    <link href="https://ischmidls.github.io/blog/spherefractions/" />
     <updated>2024-04-30T00:00:00Z</updated>
-    <id>https://example.com/blog/spherefractions/</id>
+    <id>https://ischmidls.github.io/blog/spherefractions/</id>
     <content type="html">&lt;head&gt;
     &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
     MathJax.Hub.Config({

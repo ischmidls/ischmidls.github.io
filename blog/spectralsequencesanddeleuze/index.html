@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>spectral sequences and deleuze</title>
+		<meta name="description" content="spectral sequences and deleuze">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="izak">
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Garamond, serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">izak</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">home</a></li>
+					<li class="nav-item"><a href="/blog/">archive</a></li>
+					<li class="nav-item"><a href="/about/">about</a></li>
+					<li class="nav-item"><a href="/feed/feed.xml">feed</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<heading-anchors>
+				
+<h1 id="spectral-sequences-and-deleuze">spectral sequences and deleuze</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2023-06-10">10 June 2023</time></li>
+	<li><a href="/tags/math/" class="post-tag">math</a>, </li>
+	<li><a href="/tags/philosophy/" class="post-tag">philosophy</a>, </li>
+	<li><a href="/tags/long/" class="post-tag">long</a></li>
+</ul>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      extensions: ["tex2jax.js"],
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+      tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+      TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
+      messageStyle: "none"
+    });
+    </script>    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+
+<p>June 10, 2023 (Ed. June 13, 2024)</p>
+<h1 id="hook-rosetta-stone">Hook: Rosetta Stone:</h1>
+<table>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr>
+<th>Deleuze’s Logic of Sense</th>
+<th>Simplicial Homology</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Structure and genesis of sense</td>
+<td>Construction of chain complexes</td>
+</tr>
+<tr>
+<td>Condition of truth lies in sense</td>
+<td>Existence of chains within the chain complex</td>
+</tr>
+<tr>
+<td>Paradoxes arising from the structure of sense</td>
+<td>Regress of indefinite proliferation and sterile reiteration in
+simplicial homology</td>
+</tr>
+<tr>
+<td>Multiple expressions of the same denotatum</td>
+<td>Multiple simplices representing the same homology class</td>
+</tr>
+<tr>
+<td>Circular nature of the theory of the proposition</td>
+<td>Relations between simplices conditioned by boundary maps</td>
+</tr>
+<tr>
+<td>Fourth dimension of propositions: expression or sense</td>
+<td>Additional dimension of chains within the chain complex</td>
+</tr>
+<tr>
+<td>Sense as distinct from propositions</td>
+<td>Chains having their own identity separate from simplices</td>
+</tr>
+<tr>
+<td>Fragility of sense leading to nonsense</td>
+<td>Nontrivial homology classes representing deeper relationships</td>
+</tr>
+<tr>
+<td>Surface nonsense exemplified by Lewis Carroll</td>
+<td>Boundary cycles and playful elements within the simplicial
+complex</td>
+</tr>
+<tr>
+<td>Profound nonsense seen in Antonin Artaud’s writings</td>
+<td>Nontrivial homology classes blurring boundaries between language and
+structure</td>
+</tr>
+<tr>
+<td>Dynamic genesis of language: primary order, secondary organization,
+tertiary arrangement</td>
+<td>Construction of simplicial complexes, chains, and fully-formed chain
+complexes</td>
+</tr>
+<tr>
+<td>Body-without-organs in collaboration with Guattari</td>
+<td>Broader applications of simplicial homology beyond individual
+spaces</td>
+</tr>
+<tr>
+<td>Materialist and naturalistic leanings</td>
+<td>Exploring connections between various domains in simplicial
+homology</td>
+</tr>
+</tbody>
+</table>
+<h1 id="preamble-gpts-failure">Preamble: GPT’s failure</h1>
+<p><picture><source type="image/avif" srcset="/blog/spectralsequencesanddeleuze/Ushns7ewl8-1600.avif 1600w"><source type="image/webp" srcset="/blog/spectralsequencesanddeleuze/Ushns7ewl8-1600.webp 1600w"><img loading="lazy" decoding="async" src="/blog/spectralsequencesanddeleuze/Ushns7ewl8-1600.png" alt="bad ai" width="1600" height="807"></picture><br>
+This started as a half-joke. But, GPT failed me yet again (what a
+surprise!).</p>
+<h1 id="stokes-theorem">Stokes’ Theorem</h1>
+<p>Let’s step back to a note I made on Stokes’ Theorem.</p>
+<p>While Grant Sanderson gives intuitive explanations of each of these
+theorems in his <a href="https://www.youtube.com/watch?v=TrcCbdWwCBc&amp;list=PLSQl0a2vh4HC5feHa6Rc5c0wbRTx56nF7&amp;pp=iAQB">Multivariable
+Calculus</a> series on YouTube, I thank Prof. Rick Presman for his
+exposition of the <a href="https://math.uchicago.edu/~may/REU2012/REUPapers/Presman.pdf">Generalized
+Stokes’ Theorem</a>, and also Prof. Oliver Knill for his exposition via
+<a href="https://people.math.harvard.edu/~knill/teaching/summer2020/handouts/lecture25.pdf">Calculus
+in four dimensions</a>.<br>
+And, Aleph Naught’s videos: <a href="https://www.youtube.com/watch?v=1lGM5DEdMaw">Stokes’ Theorem on
+Manifolds</a> and <a href="https://www.youtube.com/watch?v=2ptFnIj71SM">The derivative isn’t
+what you think it is</a> give intuition as to the Generalized Stokes’
+Theorem and perhaps differential geometry more broadly.<br>
+—</p>
+
+<p>Here is the gist of Prof. Knill’s exposition on generalized integration and, in turn, Stokes’ Theorem.<br> 
+    Note: Prof. Knill does not discuss chains, as this is made for students of multivariable calculus.<br> 
+    First, the ladder from 1-d to 4-d.<br> 
+    In two dimensions, we see: the line integral<br> 
+    \[
+    \int_a^b F(r(t)) r'(t) \, dt
+    \]
+    </p> 
+    
+    <p>and the double integral<br> 
+    \[
+    \iint_G f(u,v) \, du \, dv
+    \]
+    </p> 
+    
+    <p>In three dimensions, in addition to the line integral, we have the flux integral 
+    \[
+    \iint_G F(r(u,v)) (r_u \times r_v) \, du \, dv
+    \] 
+    and the triple integral 
+    \[
+    \iiint_G f(u,v,w) \, du \, dv \, dw.
+    \]
+    To express these integrals using differential forms, we can consider forms with one component for simplicity, but it is straightforward to extend to sums by linearity.<br> 
+    I cannot make Prof. Knill’s exposition and notation here more concise:</p> 
+    
+    <p>For a 1-form \( F = A \, dx \), we integrate 
+    \[
+    \int_a^b A(r(u)) x'(u) \, du.
+    \]
+    </p> 
+    
+    <p>For a 2-form \( F = A \, dx \wedge dy \), we integrate 
+    \[
+    \iint_G A(r(u,v)) \det \begin{bmatrix} r_{u1} & r_{v1} \\ r_{u2} & r_{v2} \end{bmatrix} \, du \, dv.
+    \]
+    </p> 
+    
+    <p>For a 3-form \( F = A \, dx \wedge dy \wedge dz \), we integrate 
+    \[
+    \iiint_G A(r(u,v,w)) \det \begin{bmatrix} r_{u1} & r_{v1} & r_{w1} \\ r_{u2} & r_{v2} & r_{w2} \\ r_{u3} & r_{v3} & r_{w3} \end{bmatrix} \, du \, dv \, dw.
+    \]
+    </p> 
+    
+    <p>This determinant is the triple scalar product of the three column vectors. So, we can still work in principle without having seen any linear algebra course.<br> 
+    For example, for \( F = B \, dy \), we would compute the line integral as 
+    \[
+    \int_a^b B(r(u)) y'(u) \, du.
+    \]
+    </p> 
+    
+    <p>And for \( F = A \, dx \wedge dz \wedge dt \), we would compute the hyper flux as 
+    \[
+    \iiint_G A(r(u,v,w)) \det \begin{bmatrix} r_{u1} & r_{v1} & r_{w1} \\ r_{u3} & r_{v3} & r_{w3} \\ r_{u4} & r_{v4} & r_{w4} \end{bmatrix} \, du \, dv \, dw.
+    \]
+    </p> 
+    
+    <p>A \( k \)-form \( F \) assigns, to each point \( x \), a \( k \)-linear anti-symmetric map. It can be represented as \( F_x(v_1, \dots, v_k) \), which yields a number. The maps \( v_j \mapsto F_x(v_1, \dots, v_k) \) are linear, and for any pair \( i, j \), we have 
+    \[
+    F_x(v_1, \dots, v_i, v_j, \dots, v_k) = -F_x(v_1, \dots, v_j, v_i, \dots, v_k).
+    \]
+    </p> 
+    
+    <p>Let \( r: G \to \mathbb{R}^4 \) be a parametrization, where \( G \) is a \( k \)-dimensional region mapped into \( \mathbb{R}^4 \). We can assign to each point \( x = r(u) \) the number \( F_x \, du = F_x(r_{u1}, \dots, r_{uk}) \). The flux of the \( k \)-form through the \( k \)-surface \( r(G) \) is then defined as 
+    \[
+    \int_G F r_u \, du.
+    \]
+    </p> 
+    
+    <p>A 1-form \( F = A \, dx \), gives a line integral 
+    \[
+    \int_a^b F(r(t)) r'(t) \, dt.
+    \]
+    </p> 
+    
+    <p>A 2-form \( F = A \, dx \wedge dy \), gives a flux integral 
+    \[
+    \iint_G F(r(u,v)) (r_u \times r_v) \, du \, dv.
+    \]
+    </p> 
+    
+    <p>A 3-form \( F = A \, dx \wedge dy \wedge dt \), gives a hyper flux integral 
+    \[
+    \iiint_G F(r(u,v,w)) (r_u \times r_v \times r_w) \, du \, dv \, dw.
+    \]
+    </p> 
+    
+    <p>A 4-form \( F = A \, dx \wedge dy \wedge dz \wedge dt \), gives a volume integral 
+    \[
+    \iint\iint_G F(x,y,z,t) \, dx \, dy \, dz \, dt.
+    \]
+    </p> 
+    
+    <p>Now, 4-d to k-d. In four dimensions, we have four integral theorems:</p> 
+    
+    <p>The fundamental theorem of line integrals:
+    \[
+    \int_a^b d f(r(t)) \cdot r'(t) \, dt = f(r(b)) - f(r(a)).
+    \]
+    </p> 
+    
+    <p>Stokes’ theorem for a region \( G \) with boundary \( C \):
+    \[
+    \iint_G dF(r(u,v)) (r_u \times r_v) \, du \, dv = \oint_C F(r(u)) \cdot r_u \, du.
+    \]
+    </p> 
+    
+    <p>The hyper Stokes’ theorem:
+    \[
+    \iiint_G dF(r(u,v,w)) (r_u \times r_v \times r_w) \, du \, dv \, dw = \iint_G F(r(u,v)) (r_u \times r_v) \, du \, dv.
+    \]
+    </p> 
+    
+    <p>The divergence theorem:
+    \[
+    \iint\iint_G dF(x,y,z,t) \, dx \, dy \, dz \, dt = \iiint_G F(r(u,v,w)) (r_u \times r_v \times r_w) \, du \, dv \, dw.
+    \]
+    </p> 
+    
+    <p>All these integral theorems fall under:
+    \[
+    \int_G dF = \int_{\partial G} F,
+    \]
+    where \( F \) is a \( k \)-form and \( G \) is a \( k-1 \)-dimensional surface.<br> 
+    The 4-dimensional framework extends to higher dimensions with more variables and larger determinant matrices. Confusion arises in 2 and 3 dimensions due to the identification of different spaces, attempting to fuse ideas that 4-d shows to be distinct.</p>
+
+    <hr>
+    <p>The overall exterior derivative is a matrix:</p>
+    <p><span class="math display">\[ d = k=0 df_k. \]</span></p>
+    <p>For example, the Dirac operator is:</p>
+    <p><span class="math display">\[ D = d + d^*, \]</span></p>
+    <p>and the Laplacian is:</p>
+    <p><span class="math display">\[ L = D^2 = d^* d + d d^*. \]</span></p>
+    <hr>
+    <p>That is a summary of the clearest exposition of the generalized
+    Stokes’ Theorem I have found. I recommend reading Prof. Knill’s article
+    linked above. He also briefly relates PDEs, which Prof. Steve Brunton
+    explains well in his <a href="https://www.youtube.com/watch?v=Jt5R-Tm8cV8&amp;list=PLMrJAkhIeNNQromC4WswpU1krLOq5Ro6S&amp;pp=iAQB">YouTube
+    Series</a>.</p>
+    <h1 id="spectral-sequences-then">Spectral Sequences (Then)</h1>
+    <p>I still do not understand spectral sequences (who would’ve thought
+    nLab and Wikipedia do not provide sufficient expositions or problem
+    sets?). Even after <a href="https://www.3blue1brown.com/content/blog/exact-sequence-picturebook/PuzzlingThroughExactSequences.pdf">Puzzling
+    Through Exact Sequences</a> by Ravi Vakil, I do not understand spectral
+    sequences. <a href="https://math.berkeley.edu/~hutching/teach/215b-2011/ss.pdf">Introduction
+    to Spectral Sequences</a> by Michael Hutchings did not quite get me
+    there either.</p>
+    <p>I understand that they explicate what derived categories implicate. I
+    also understand that a filtration (one topological generalization of a
+    limit from calculus) of chain complexes constructs a spectral sequence.
+    At this point, spectral sequences:</p>
+    <ul>
+    <li>“are usually constructed from filtrations of cochain complexes”</li>
+    <li>Stokes’ theorem generalizes to chain complexes.</li>
+    </ul>
+    <p>Now, I will defer to nLab’s <a href="https://ncatlab.org/nlab/show/simplicial+homology">Simplicial
+    Homology</a> for a connection between simplicial homology and chain
+    complexes, as the other expositions I found do not explicitly state
+    this:</p>
+    <p>For a simplicial set ( S ) and an abelian group ( A ), the simplicial
+    homology of ( S ) is the chain homology of the chain complex
+    corresponding, under the Dold-Kan correspondence, to the simplicial
+    abelian group of ( A )-chains on ( S ): formal linear combinations of
+    simplices in ( S ) with coefficients in ( A ).</p>
+    <p>Beyond these tenuous connections, as I learned from Stack Exchange’s
+    very own user316092:</p>
+    <p><em>“A Basic Course in Algebraic Topology”</em> by Massey contains an
+    excellent introduction/motivation to homology by relating it to
+    Stokes’/Green’s Theorem (Ch. VI, Section 3, pp. 149–156).</p>
+    <p>Now, user316092 is not wrong, but who would have thought that such an
+    exposition relies on a better understanding of Algebraic Topology than
+    is offered in Reuben Stern’s 14-page handout: <a href="https://scholar.harvard.edu/files/rastern/files/algtoppreview.pdf">An
+    Introduction to Algebraic Topology</a> for the Harvard Math 101
+    class?</p>
+    <picture><source type="image/avif" srcset="/blog/spectralsequencesanddeleuze/D76qZO6HYt-704.avif 704w"><source type="image/webp" srcset="/blog/spectralsequencesanddeleuze/D76qZO6HYt-704.webp 704w"><img loading="lazy" decoding="async" src="/blog/spectralsequencesanddeleuze/D76qZO6HYt-704.png" alt="text" width="704" height="1154"></picture>
+    <p>Now, all I have to do is name-drop the De Rham theorem, which relates
+    the cohomology of De Rham’s complex to the singular complex, as Massey
+    illustrates via Appendix A, proving injectivity via Stokes’ Theorem.</p>
+    <p><strong>(Note from Izak 1 year later)</strong><br>
+    I can now claim to understand simplicial homology and chain complexes a
+    little better after giving my talk on Khovanov homology for a knot
+    theory writing course.</p>
+    <p>With that brief look at <strong>complexes</strong> and
+    <strong>Stokes’ theorem</strong>, I have just enough leeway to relate
+    <strong>Deleuze</strong> and <strong>Simplicial Complexes</strong>,
+    despite my understanding of neither being deep enough.</p>
+    <h1 id="spectral-sequences-now">Spectral Sequences (Now)</h1>
+    <p>Speaking of Khovanov homology, the <strong>chain complex</strong> is
+    the sequence of (bigraded) vector spaces formed from the smoothings (one
+    basis element for each crossing), with differential maps between each
+    pair of vector spaces.</p>
+    <p>A <strong>vector space</strong> is just a place where scaling
+    (multiplying by a scalar) and sliding (adding vectors) is preserved.</p>
+    <p>A <strong>differential map</strong> simply takes a function and
+    outputs the ratio of that function’s output to its input—commonly called
+    the rate of change.</p>
+    <p>In this case, vector spaces are the <strong>chains</strong> in the
+    complex. It’s clearer with the example we’ll see later.</p>
+
+<p>Homology is (a group describing) how much of the remaining vector
+space looks like its kernel.</p>
+<p>For those familiar with linear algebra, the image of each
+differential is the kernel of the next, so we quotient the kernel by the
+image.</p>
+<p>Quotient here is just like typical division. For example, when we
+quotient sets of 12 items into sets of 4 items, we find three such
+4-item subsets. Now, we consider more than just size.</p>
+<p>Specifically, we quotient the elements of each ( n )-th vector
+space’s kernel by the image of the map into that vector space from the
+previous or ((n-1))-th vector space:</p>
+<p><span class="math display">\[ H_n = \frac{\ker d_n}{\text{im}
+d_{n-1}}. \]</span></p>
+<p>In fact, the equivalence classes (sets of similar-looking cycles)
+form a (free Abelian) group, where cycle addition gives class addition.
+This is the <strong>homology group</strong>.</p>
+<p>We call the elements in the kernel <strong>cycles</strong> and those
+in the image <strong>boundaries</strong>, where every boundary is the
+differential of some cycle from the preceding vector space.</p>
+<p>Simplicial (and even more so, singular) homology defines this via
+graphs made of triangles, pyramids (or simplices), and their
+higher-dimensional counterparts.</p>
+<p>Then, ( n )-simplices are cycles, and by sequentially removing
+((n-1))-simplices, we check which ( n )-simplices are boundaries (i.e.,
+which cycles annihilate with the next differential).</p>
+<p>So, asking <em>“how much of the vector space looks like its
+kernel?”</em> is equivalent to asking <em>“how many cycles look like
+boundaries?”</em></p>
+<p>If you recall <strong>Stokes’ Theorem</strong> from vector calculus,
+it also applies to chains. In other words, the duality between
+differentials and vectors indicates how we can interpret our vector
+spaces using this geometric language.</p>
+<p>For a smooth function on a manifold, integrating the ((n-1))-form
+over the boundary of the ( n )-form is exactly the same as integrating
+the differential of the ((n-1))-form over the ( n )-form:</p>
+<p><span class="math display">\[ \int_{\partial \Omega} \omega =
+\int_{\Omega} d\omega. \]</span></p>
+<p>Now, if you have two chain complexes, you can form (linear) maps from
+each vector space in one complex to each in the other.</p>
+<p>If there are two distinct mappings, this creates what’s called a
+<strong>homotopy</strong>. The maps can “continuously” deform into one
+another.</p>
+<p>This induces a homotopy map from an ( n )-chain in one complex to the
+((n-1))-chain in the other complex.</p>
+<p>It commutes with both the differential maps between the vector spaces
+and the homology maps.</p>
+<p>This “shift down” is simply seeing that:</p>
+<ul>
+<li>A homotopy between two lines (1-chains) is a square.</li>
+<li>A homotopy between two triangles (2-chains) is a triangular
+prism.</li>
+<li>A homotopy between two pyramids is made of 4-simplices, etc.</li>
+</ul>
+<p>Two chain-homotopic maps ( f ) and ( g ) act the same on the homology
+groups because:</p>
+<p><span class="math display">\[ (f - g) \text{ sends cycles to
+boundaries and boundaries to zero.} \]</span></p>
+<p>So, if there are distinct maps between chain complexes, then there
+are homotopy maps from each chain to the preceding chain in the other
+complex.</p>
+<p>In the case of <strong>Khovanov homology</strong>, we actually see
+<strong>higher-dimensional chain complexes</strong>, that is, complexes
+in the category of complexes, etc.</p>
+<p>The <strong>Khovanov chains</strong> sum together (via direct sum)
+those vector spaces with the same bases relative to the all-positive
+state.</p>
+<p>Then, the differential maps between chains are given by (total
+derivatives of) the differential maps between vector spaces.</p>
+<p>Now that I have gotten that out of the way, as this is recreational,
+I will get to Deleuze’s <em>Logic of Sense</em>.</p>
+
+<h1 id="deleuze-and-simplicial-homology">Deleuze and Simplicial
+Homology</h1>
+<p>In “Logic of Sense,” Deleuze focuses on the structure and genesis of
+sense, contrasting the insights of Frege and Russell with their
+limitations. He argues that while they recognized the condition of truth
+lies in sense, they failed to investigate its genesis. Deleuze addresses
+this problem by examining the paradoxes arising from the structure of
+sense and proposing a theory of its genesis, drawing from analytic
+philosophy, Stoicism, and Lewis Carroll’s works. He analyzes three types
+of relations within propositions: designation, manifestation, and
+signification. These relations can be taken as primary in different
+domains of speech, language, and logic. However, Deleuze highlights the
+circularity within the theory of the proposition, where each condition
+is conditioned by what it supposedly conditions. To overcome this, he
+introduces a fourth dimension of propositions, termed expression or
+sense. Sense represents what is expressed in a proposition, allowing for
+multiple expressions of the same denotatum. In simplicial homology, the
+structure and genesis of sense can be related to the construction of
+chains and cycles within a simplicial complex. The boundary maps encode
+the connections and relations between simplices, analogous to the
+relations between sense and propositions.</p>
+<p>Deleuze’s philosophy of sense looks at this fourth dimension and its
+relation to language. He attributes the Stoics with the discovery of
+sense as they distinguished it from corporeal mixtures and recognized
+its distinct reality. Sense exists within propositions, yet it is not
+identical to them; it subsists or insists as its own objectity. It is
+attributed to states of affairs but cannot be confused with them or
+their qualities. The structure of sense gives rise to paradoxes,
+including the regress of indefinite proliferation and the sterile
+reiteration or doubling. Extracted from propositions, sense becomes a
+pure ideational event, irreducible to the dimensions of propositions:
+states of affairs, mental activities, and universals. Deleuze’s logic of
+sense aims to reconcile the sterility of sense in relation to
+propositions with its generative power in relation to the dimensions of
+propositions. The second half of “Logic of Sense” considers the dynamic
+genesis of language, drawing from developmental psychology and
+psychoanalysis, highlighting the role of separating sounds from bodies
+and organizing them into propositions for expressive purposes. The
+existence of sense within propositions and its distinct reality can be
+compared to the existence of chains within the chain complex. Sense,
+like chains, has its own identity and properties that are separate from
+the individual simplices or states of affairs.</p>
+<p>Deleuze outlines the dynamic genesis of language, comprising three
+stages that correspond to three dimensions: (1) the primary order of
+pure noise in the newborn infant’s experience; (2) the secondary
+organization, where the surface dimension of sense emerges through the
+extraction and synthesis of differential elements; and (3) the tertiary
+arrangement found in fully-formed propositions with denotation,
+manifestation, and signification functions. The primary order,
+resembling a “weatherscape” of intensities, is the initial encounter
+with language and constitutes a type of nonsense. Through the secondary
+organization, the child extracts phonemes and constructs series in
+connective, conjunctive, and disjunctive syntheses. These constructions,
+though not yet fully formed units of language, go beyond bodily noises.
+Sense serves as the condition or ground of propositions, generating both
+their dimensions and their objective correlates. However, the domain of
+sense is inherently fragile and can slip into nonsense. Deleuze
+distinguishes two types of nonsense, emphasizing the determinate
+relation between sense and nonsense and their production from elements
+lacking inherent sense. The dynamic genesis of language in Deleuze’s
+work can be connected to the process of constructing chain complexes in
+simplicial homology. The primary order of pure noise can be seen as the
+initial simplices or simplicial complexes, the secondary organization
+corresponds to the construction of chains through boundary maps, and the
+tertiary arrangement relates to the fully-formed chain complexes with
+well-defined boundaries.</p>
+<p>Deleuze distinguishes between two types of nonsense: surface nonsense
+exemplified by Lewis Carroll’s wordplay and nonsensical phrases, and
+profound nonsense found in Antonin Artaud’s writings, where propositions
+collapse onto the body. Carroll’s nonsense operates at the surface of
+sense, utilizing non-signifying elements to construct linguistic
+playfulness. Deleuze identifies the conditions for sense production in
+Carroll’s work: extracting differential elements, organizing them in
+series, and the paradoxical element that connects the series. However,
+the primary order of profound nonsense, seen in Artaud’s schizophrenia,
+breaks down the distinction between sonorous language and the physical
+body. The distinction between surface nonsense and profound nonsense can
+be paralleled with the notion of simplicial homology classes. Surface
+nonsense, similar to boundary cycles, exhibits playful and
+non-signifying elements within the simplicial complex. Profound
+nonsense, like nontrivial homology classes, represents deeper and more
+complex relationships that blur the boundaries between language and the
+underlying structure.</p>
+<p>Deleuze’s collaboration with Guattari will further develop the
+concept of the body-without-organs, expanding into a naturalistic
+philosophy of “desiring-production” encompassing nature, history, and
+politics. While Logic of Sense engages with the linguistic turn in
+philosophy, Deleuze ultimately embraces his materialist and naturalistic
+inclinations. The collaboration between Deleuze and Guattari, expanding
+into a naturalistic philosophy of “desiring-production,” can be related
+to the broader applications of simplicial homology beyond individual
+spaces. Just as simplicial homology can be applied to study nature,
+history, and politics in a larger context, Deleuze and Guattari’s
+philosophy extends beyond language and discusses the connections between
+various fields of study.</p>
+<p>More info at (<a href="https://plato.stanford.edu/entries/deleuze/#LogiSens:~:text=of%20Sense.-,3.2%20Logic%20of%20Sense,-While%20Difference%20and">SEP
+Article</a>) and Jeremy Kun’s Blog (<a href="https://jeremykun.com/2013/04/03/homology-theory-a-primer/">Homology
+Theory — A Primer</a>)</p>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/linearsix/">note: six linear algebra theorems</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/kanttopoi/">kant and aristotle to topoi</a></li>
+</ul>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
+		</footer>
+
+		<!-- This page `/blog/spectralsequencesanddeleuze/` was built on 2025-02-28T02:16:44.729Z -->
+		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
