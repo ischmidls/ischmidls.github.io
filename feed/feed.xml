@@ -5,11 +5,18 @@
   <subtitle>sharing in learning</subtitle>
   <link href="https://ischmidls.github.io/feed/feed.xml" rel="self" />
   <link href="https://ischmidls.github.io/" />
-  <updated>2025-02-14T00:00:00Z</updated>
+  <updated>2025-03-01T15:32:23Z</updated>
   <id>https://ischmidls.github.io/</id>
   <author>
     <name>Izak Schmidlkofer</name>
   </author>
+  <entry>
+    <title></title>
+    <link href="https://ischmidls.github.io/blog/stokestheorem/" />
+    <updated>2025-03-01T15:32:23Z</updated>
+    <id>https://ischmidls.github.io/blog/stokestheorem/</id>
+    <content type="html"></content>
+  </entry>
   <entry>
     <title>unknown variance of concave distribution</title>
     <link href="https://ischmidls.github.io/blog/unknownvariance/" />
@@ -1018,7 +1025,7 @@ And $&#92;frac DC &#92;eta$ is nowhere vanishing (thus an orientation). All othe
 &lt;p&gt;The above note expands on &lt;a href=&quot;https://math.stackexchange.com/a/38618/1098426&quot;&gt;this&lt;/a&gt; MSE post.&lt;/p&gt;</content>
   </entry>
   <entry>
-    <title>field extension practice</title>
+    <title>note: field extension practice</title>
     <link href="https://ischmidls.github.io/blog/field-extension-practice/" />
     <updated>2024-05-24T00:00:00Z</updated>
     <id>https://ischmidls.github.io/blog/field-extension-practice/</id>
@@ -1247,139 +1254,6 @@ And $&#92;frac DC &#92;eta$ is nowhere vanishing (thus an orientation). All othe
     &lt;/form&gt;
     &lt;p&gt;Quaternion Multiplication Formula:&lt;/p&gt;
     &lt;div id=&quot;formula&quot;&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</content>
-  </entry>
-  <entry>
-    <title>widget: modular inverses</title>
-    <link href="https://ischmidls.github.io/blog/modular-multiplicative-inverse/" />
-    <updated>2024-05-09T00:00:00Z</updated>
-    <id>https://ischmidls.github.io/blog/modular-multiplicative-inverse/</id>
-    <content type="html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;Multiplicative Inverse Sequence&lt;/title&gt;
-    &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
-        MathJax.Hub.Config({
-          jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
-          extensions: [&quot;tex2jax.js&quot;],
-          &quot;HTML-CSS&quot;: { preferredFont: &quot;TeX&quot;, availableFonts: [&quot;STIX&quot;,&quot;TeX&quot;] },
-          tex2jax: { inlineMath: [ [&quot;$&quot;, &quot;$&quot;], [&quot;&#92;&#92;(&quot;,&quot;&#92;&#92;)&quot;] ], displayMath: [ [&quot;$$&quot;,&quot;$$&quot;], [&quot;&#92;&#92;[&quot;, &quot;&#92;&#92;]&quot;] ], processEscapes: true, ignoreClass: &quot;tex2jax_ignore|dno&quot; },
-          TeX: { noUndefined: { attributes: { mathcolor: &quot;red&quot;, mathbackground: &quot;#FFEEEE&quot;, mathsize: &quot;90%&quot; } } },
-          messageStyle: &quot;none&quot;
-        });
-        &lt;/script&gt;    
-        &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js&quot;&gt;&lt;/script&gt;
-    
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1 id=&quot;multiplicative-inverse-sequence&quot;&gt;Multiplicative Inverse Sequence&lt;/h1&gt;
-    &lt;p&gt;
-       
-       The modular multiplicative inverse of an integer $a $ modulo $m $ is an integer $y $ such that:
-       $
-       a &#92;cdot y &#92;equiv 1 &#92;pmod{m}
-       $
-       This inverse exists if and only if $a $ and $m $ are coprime (i.e., their greatest common divisor, or GCD, is 1).
-       
-For example:
-       If $x = 2 $ and $m = 7 $, the sequence might look like:
-         $
-         [4, 2, 1, 4, 2, 1, &#92;dots]
-         $
-         This is because:
-         $ 2^1 &#92;equiv 2 &#92;pmod{7} $, and the inverse of 2 modulo 7 is 4.
-         $ 2^2 &#92;equiv 4 &#92;pmod{7} $, and the inverse of 4 modulo 7 is 2.
-         $ 2^3 &#92;equiv 1 &#92;pmod{7} $, and the inverse of 1 modulo 7 is 1.
-         The sequence repeats after this point.
-       &lt;/p&gt;
-
-    &lt;script&gt;
-        function modInverse(a, m) {
-            // validate inputs
-            [a, m] = [Number(a), Number(m)]
-            if (Number.isNaN(a) || Number.isNaN(m)) {
-                return NaN; // invalid input
-            }
-            a = (a % m + m) % m;
-            if (!a || m &lt; 2) {
-                return NaN; // invalid input
-            }
-            // find the gcd
-            const s = [];
-            let b = m;
-            while (b) {
-                [a, b] = [b, a % b];
-                s.push({a, b});
-            }
-            if (a !== 1) {
-                return NaN; // inverse does not exist
-            }
-            // find the inverse
-            let x = 1;
-            let y = 0;
-            for (let i = s.length - 2; i &gt;= 0; --i) {
-                [x, y] = [y, x - y * Math.floor(s[i].a / s[i].b)];
-            }
-            return (y % m + m) % m;
-        }
-
-        // Function to calculate the sequence of multiplicative inverses
-        function calculateInverseSequence(x, m) {
-            const inverseSequence = [];
-            let currentPower = x % m;
-            let inverse = modInverse(currentPower, m);
-            inverseSequence.push(inverse);
-
-            const seen = new Set();
-            seen.add(inverse);
-
-            while (true) {
-                currentPower = (currentPower * x) % m;
-                inverse = modInverse(currentPower, m);
-
-                if (seen.has(inverse)) {
-                    break;
-                }
-
-                inverseSequence.push(inverse);
-                seen.add(inverse);
-            }
-
-            return inverseSequence;
-        }
-
-        // Function to handle form submission
-        function calculateAndDisplaySequence() {
-            const numX = document.getElementById(&#39;numberX&#39;).value;
-            const numM = document.getElementById(&#39;numberM&#39;).value;
-
-            const x = Number(numX);
-            const m = Number(numM);
-
-            if (Number.isNaN(x) || Number.isNaN(m)) {
-                alert(&#39;Please enter valid numbers for x and m.&#39;);
-                return;
-            }
-
-            const inverseSequence = calculateInverseSequence(x, m);
-
-            document.getElementById(&#39;output&#39;).innerText = `Inverse Sequence: ${inverseSequence.join(&#39;, &#39;)}`;
-        }
-    &lt;/script&gt;
-
-    &lt;label for=&quot;numberX&quot;&gt;Enter a number (x):&lt;/label&gt;
-    &lt;input type=&quot;number&quot; id=&quot;numberX&quot;&gt;&lt;br&gt;&lt;br&gt;
-    &lt;label for=&quot;numberM&quot;&gt;Enter a modulus (m):&lt;/label&gt;
-    &lt;input type=&quot;number&quot; id=&quot;numberM&quot;&gt;&lt;br&gt;&lt;br&gt;
-
-    &lt;button onclick=&quot;calculateAndDisplaySequence()&quot;&gt;Calculate Inverse Sequence&lt;/button&gt;&lt;br&gt;&lt;br&gt;
-
-    &lt;div id=&quot;output&quot;&gt;&lt;/div&gt;
-    &lt;script src=&quot;https://gist.github.com/ischmidls/73b99e6f1f1f273e72442c1efc36efbd.js&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
