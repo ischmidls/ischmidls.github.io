@@ -1,8 +1,8 @@
 
 {
-    "title": "functions intro",
+    "title": "note: functions intro",
     "description": "intro to functions for dad and bro",
     "date": "2022-07-03",
-    "tags": ["math","long"],
+    "tags": ["math","note"],
     "layout": "layouts/post.njk"
     }
