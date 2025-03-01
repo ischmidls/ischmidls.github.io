@@ -1,0 +1,9 @@
+{
+    "title": "beyond stokes theorem",
+    "description": "beyond stokes theorem",
+    "date": "2022-09-01",
+    "tags": [
+      "math", "long"
+    ],
+    "layout": "layouts/post.njk"
+  }
