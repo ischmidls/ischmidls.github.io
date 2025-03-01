@@ -1,0 +1,9 @@
+{
+    "title": "sql portfolio",
+    "description": "sql portfolio",
+    "date": "2022-11-01",
+    "tags": [
+      "sql", "long"
+    ],
+    "layout": "layouts/post.njk"
+  }
