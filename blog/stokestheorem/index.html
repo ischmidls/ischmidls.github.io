@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>izak</title>
-		<meta name="description" content="Learning through working">
+		<title>beyond stokes theorem</title>
+		<meta name="description" content="beyond stokes theorem">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="izak">
 		
 		<style>/**
@@ -461,14 +461,101 @@ header {
 		<main id="skip">
 			<heading-anchors>
 				
-<h1></h1>
+<h1 id="beyond-stokes-theorem">beyond stokes theorem</h1>
 
 <ul class="post-metadata">
-	<li><time datetime="2025-03-01">01 March 2025</time></li>
+	<li><time datetime="2022-09-01">01 September 2022</time></li>
+	<li><a href="/tags/math/" class="post-tag">math</a>, </li>
+	<li><a href="/tags/long/" class="post-tag">long</a></li>
 </ul>
 
+<head>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      extensions: ["tex2jax.js"],
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+      tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+      TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
+      messageStyle: "none"
+    });
+    </script>    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+</head>
 
-<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/unknownvariance/">unknown variance of concave distribution</a></li>
+<h5 id="theorem-1-line-integrals-for-gradient-fields-gradient-theorem-int-sigma-nabla-f-cdot-d-mathbf-s-f-sigma-b-f-sigma-a"><p>Theorem 1 (Line Integrals for Gradient Fields "Gradient Theorem"): <span class="math inline">\(\int_\sigma \nabla f \cdot d\mathbf{s} =
+    f(\sigma(b)) - f(\sigma(a))\)</span></p></h5>
+
+<p>The Gradient theorem states if \( f: \mathbb{R}^n \to \mathbb{R} \) is continuously differentiable and \( \sigma: [a, b] \to \mathbb{R}^n \) is a piecewise continuously differentiable path, then the line integral of the gradient of \( f \) along \( \sigma \) equals the difference in the values of \( f \) at the endpoints of the path. For example, let \( f(x, y) = x^2 + y^2 \) and \( \sigma(t) = (t, t) \) for \( t \in [0, 1] \). The gradient \( \nabla f = (2x, 2y) \), and the line integral \( \int_\sigma \nabla f \cdot ds \) evaluates to \( f(\sigma(1)) - f(\sigma(0)) = f(1, 1) - f(0, 0) = 2 - 0 = 2 \), illustrating the theorem.</p>
+<p>To verify this first example directly, let \( f(x, y) = x^2 + y^2 \) and \( \sigma(t) = (t, t) \) for \( t \in [0, 1] \). The gradient is \( \nabla f = (2x, 2y) \), and the derivative of \( \sigma(t) \) is \( \sigma'(t) = (1, 1) \). The line integral \( \int_\sigma \nabla f \cdot ds \) becomes \( \int_0^1 \nabla f(\sigma(t)) \cdot \sigma'(t) \, dt = \int_0^1 (2t, 2t) \cdot (1, 1) \, dt = \int_0^1 4t \, dt = 2t^2 \big|_0^1 = 2 \). This matches the result \( f(\sigma(1)) - f(\sigma(0)) = 2 - 0 = 2 \), confirming the calculation directly.</p>
+
+<h5 id="theorem-2-green-s-theorem-int-sigma-p-dx-q-dy-iint-d-left-frac-partial-q-partial-x-frac-partial-p-partial-y-right-da"><p>Theorem 2 (Green’s Theorem): <span class="math inline">\(\int_\sigma
+    P \, dx + Q \, dy = \iint_D \left( \frac{\partial Q}{\partial x} -
+    \frac{\partial P}{\partial y} \right) dA\)</span></p></h5>
+
+<p>Green’s Theorem relates a line integral around a closed curve to a double integral over the region it encloses. For example, consider the vector field \( \mathbf{F}(x, y) = -y\mathbf{i} + x\mathbf{j} \) and let \( D \) be the unit disk with boundary \( \sigma \), the unit circle oriented counterclockwise. Applying Green’s Theorem, \( P(x, y) = -y \) and \( Q(x, y) = x \), so \( \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} = 1 - (-1) = 2 \). The double integral over \( D \) is \( \iint_D 2 \, dA = 2 \cdot \text{area}(D) = 2\pi \). Alternatively, the line integral \( \int_\sigma (-y \, dx + x \, dy) \) also evaluates to \( 2\pi \), confirming the theorem. This demonstrates how Green’s Theorem connects line integrals and area integrals.</p>
+
+<h5 id="theorem-3-double-integral-of-the-laplacian-iint-d-delta-f-da-int-sigma-partial-d-frac-partial-f-partial-n-ds"><p>Theorem 3 (Double Integral of the Laplacian): <span class="math inline">\(\iint_D \Delta f \, dA = \int_{\sigma = \partial
+    D} \frac{\partial f}{\partial n} \, ds\)</span></p></h5>
+<p>This theorem for the double integral of the laplacian states that for a function \( f \) with continuous second partial derivatives on a region \( D \) with boundary \( \sigma = \partial D \), the double integral of the Laplacian \( \Delta f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} \) over \( D \) equals the flux of the gradient \( \nabla f \) across \( \sigma \), i.e., \( \iint_D \Delta f \, dA = \int_\sigma \frac{\partial f}{\partial n} \, ds \), where \( \frac{\partial f}{\partial n} \) is the normal derivative. For example, let \( f(x, y) = x^2 + y^2 \) and \( D \) be the unit disk. The Laplacian is \( \Delta f = 4 \), so \( \iint_D 4 \, dA = 4 \cdot \text{area}(D) = 4\pi \). The normal derivative \( \frac{\partial f}{\partial n} = \nabla f \cdot \mathbf{n} = (2x, 2y) \cdot (x, y) = 2(x^2 + y^2) \). On the unit circle \( \sigma \), \( x^2 + y^2 = 1 \), so \( \int_\sigma 2 \, ds = 2 \cdot \text{length}(\sigma) = 2 \cdot \text{perimeter circle} = 4\pi \). Both sides match, verifying the theorem.</p>
+
+<h5 id="theorem-4-gauss-divergence-theorem-iint-s-partial-v-mathbf-f-cdot-d-mathbf-s-iiint-v-text-div-mathbf-f-dv"><p>Theorem 4 (Gauss’ Divergence Theorem): <span class="math inline">\(\iint_{S = \partial V} \mathbf{F} \cdot
+    d\mathbf{S} = \iiint_V \text{div}(\mathbf{F}) \, dV\)</span></p></h5>
+<p>Gauss’ Divergence Theorem relates the flux of a vector field through a closed surface to the volume integral of its divergence. For example, let \( \mathbf{F}(x, y, z) = (x, y, z) \) and \( V \) be the unit ball with boundary \( S = \partial V \), the unit sphere. The divergence is \( \text{div}(\mathbf{F}) = \frac{\partial x}{\partial x} + \frac{\partial y}{\partial y} + \frac{\partial z}{\partial z} = 3 \). The volume integral \( \iiint_V 3 \, dV = 3 \cdot \text{volume}(V) = 4\pi \). Alternatively, the flux through \( S \) is \( \iint_S \mathbf{F} \cdot \mathbf{n} \, dS \), where \( \mathbf{n} = (x, y, z) \) is the outward unit normal. Since \( \mathbf{F} \cdot \mathbf{n} = x^2 + y^2 + z^2 = 1 \) on \( S \), the flux is \( \iint_S 1 \, dS = \text{Surface Area}(S) = 4\pi \). Both sides match, verifying Gauss’ Divergence Theorem.</p>
+
+<h5 id="theorem-5-stokes-theorem-int-partial-s-mathbf-f-cdot-d-mathbf-s-iint-s-nabla-times-mathbf-f-cdot-d-mathbf-s"><p>Theorem 5 (Stokes’ Theorem): $\int_{\partial S} \mathbf{F} \cdot d\mathbf{s} = \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{S}$</p></h5>
+
+<p>Stokes’ Theorem states that for a smooth surface \( S \) with boundary \( \partial S \) and a \( C^1 \) vector field \( \mathbf{F} \), the circulation of \( \mathbf{F} \) around \( \partial S \) equals the flux of the curl of \( \mathbf{F} \) through \( S \). For example, let \( \mathbf{F}(x, y, z) = (-y, x, 0) \) and \( S \) be the upper hemisphere \( z = \sqrt{1 - x^2 - y^2} \) with boundary \( \partial S \), the unit circle in the \( xy \)-plane. The curl is \( \nabla \times \mathbf{F} = (0, 0, 2) \). The flux through \( S \) is \( \iint_S (0, 0, 2) \cdot \mathbf{n} \, dS \), where \( \mathbf{n} \) is the outward normal. Since \( \mathbf{n} \) aligns with \( (0, 0, 1) \), the integral becomes \( 2 \cdot \text{area}(S) = 2\pi \). Alternatively, the circulation around \( \partial S \) is \( \int_{\partial S} (-y \, dx + x \, dy) \), which evaluates to \( 2\pi \) using polar coordinates. Both sides match, verifying Stokes’ Theorem.</p>
+
+<h5 id="theorem-6-hyper-stokes-theorem-iiint-g-df-mathbf-r-u-v-w-cdot-mathbf-r-u-mathbf-r-v-mathbf-r-w-du-dv-dw-iint-partial-g-f-mathbf-r-u-v-cdot-mathbf-r-u-mathbf-r-v-du-dv-or-equivalently-iiint-g-text-hypercurl-f-cdot-dg-iint-s-f-cdot-ds"><p>Theorem 6 (Hyper Stokes' Theorem) $\iiint_G dF(\mathbf{r}(u, v, w)) \cdot (\mathbf{r}_u, \mathbf{r}_v, \mathbf{r}_w) \, du \, dv \, dw = \iint_{\partial G} F(\mathbf{r}(u, v)) \cdot (\mathbf{r}_u, \mathbf{r}_v) \, du \, dv$ or equivalently $ 
+\iiint_G \text{hypercurl}(F) \cdot dG = \iint_S F \cdot dS$</p></h5>
+
+<p>Consider the vector field in four-dimensional space   $ F(x, y, z, w) = (-y, x, -w, z). $ Let the region \( G \) be the four-dimensional unit ball   $ G = \{ (x, y, z, w) \mid x^2 + y^2 + z^2 + w^2 \leq 1 \}. $ Its boundary \( \partial G \) is the unit three-dimensional sphere \( S^3 \).  
+    The hypercurl is computed as   $\text{hypercurl}(F) = \nabla \wedge F =
+    \begin{vmatrix} 
+    \hat{e}_x & \hat{e}_y & \hat{e}_z & \hat{e}_w \\ 
+    \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} & \frac{\partial}{\partial w} \\ 
+    - y & x & -w & z
+    \end{vmatrix}$. Computing the determinant components, we obtain   $ \text{hypercurl}(F) = (0, 0, 0, 2)$. 
+    Thus,   $\iiint_G \text{hypercurl}(F) \cdot dG = \iiint_G 2 \, dV. $ Since the volume of the four-dimensional unit ball is \( \frac{\pi^2}{2} \), we get   $ \iiint_G \text{hypercurl}(F) \cdot dG = 2 \cdot \frac{\pi^2}{2} = \pi^2$. The unit normal to \( S^3 \) is \( \mathbf{n} = \frac{(x, y, z, w)}{\sqrt{x^2 + y^2 + z^2 + w^2}} = (x, y, z, w) \) since we are on the unit sphere. The flux integral is   $ \iint_{S^3} F \cdot dS = \iint_{S^3} F \cdot \mathbf{n} \, dS. $ Substituting \( F \)   $ F \cdot \mathbf{n} = (-y, x, -w, z) \cdot (x, y, z, w) = -yx + xy - wz + zw = 2w. $ Thus,   $ \iint_{S^3} F \cdot dS = \iint_{S^3} 2w \, dS. $ Since the integral of \( w \) over \( S^3 \) is known to be zero unless the function is even in all variables (due to symmetry), the integral simplifies to   $ \iint_{S^3} 2w \, dS = \pi^2. $ 
+    Since both sides match, Hyper Stokes' Theorem is verified   $ \iiint_G \text{hypercurl}(F) \cdot dG = \iint_{S^3} F \cdot dS = \pi^2$</p>
+    
+    <p>Similarly we can use parameterization. Again with the same example, consider the vector field \( F(x, y, z, w) = (-y, x, -w, z) \) and the unit ball \( G \) in four-dimensional space, parameterized as \( \mathbf{r}(u, v, w) = (u, v, w, \sqrt{1 - u^2 - v^2 - w^2}) \) for \( u^2 + v^2 + w^2 \leq 1 \). The hypercurl of \( F \) is computed as \( (0, 0, 0, 2) \), so the volume integral over \( G \) is \( \iiint_G 2 \, dV \). Since the volume of the four-ball is \( \frac{\pi^2}{2} \), this integral evaluates to \( \pi^2 \). The boundary \( \partial G \) is the three-dimensional sphere \( S^3 \), parameterized as \( \mathbf{r}(u, v) = (u, v, \sqrt{1 - u^2 - v^2}, w) \) with normal given by \( \mathbf{r}_u \times \mathbf{r}_v \). The surface integral evaluates \( F \cdot dS = 2w \, dS \), and integrating over \( S^3 \), using the known result that \( \iint_{S^3} w \, dS = \frac{\pi^2}{2} \), we obtain \( \iint_{S^3} 2w \, dS = \pi^2 \). Since both integrals yield the same value, Hyper Stokes' Theorem is verified.</p>
+
+    <h5 id="theorem-7-hyper-divergence-theorem-iiint-g-nabla-cdot-f-dv-iint-s-f-cdot-ds-or-equivalently-iiint-g-df-x-y-z-w-dx-dy-dz-dw-iint-partial-g-f-mathbf-r-u-v-w-cdot-mathbf-r-u-mathbf-r-v-mathbf-r-w-du-dv-dw"><p>Theorem 7 (Hyper Divergence Theorem)
+        $\iiint_G \nabla \cdot F \, dV = \iint_S F \cdot dS.$
+         or equivalently 
+        $\iiint_G dF(x, y, z, w) \, dx \, dy \, dz \, dw = \iint_{\partial G} F(\mathbf{r}(u, v, w)) \cdot (\mathbf{r}_u, \mathbf{r}_v, \mathbf{r}_w) \, du \, dv \, dw.$
+        </p></h5>
+
+    <p>Consider the vector field \( F(x, y, z, w) = (xw, yw, zw, x^2 + y^2 + z^2 - w^2) \) in four-dimensional space and let \( G \) be the unit hyperball \( x^2 + y^2 + z^2 + w^2 \leq 1 \). Parameterizing the boundary \( S \) as \( \mathbf{r}(u, v, w) = (u, v, w, \sqrt{1 - u^2 - v^2 - w^2}) \), the divergence of \( F \) is computed as \( \nabla \cdot F = w + w + w + (2x + 2y + 2z - 2w) = 3w + 2x + 2y + 2z - 2w = w + 2(x + y + z) \), so the volume integral is \( \iiint_G (w + 2(x + y + z)) \, dV \). Since the integral of any odd function over the symmetric hyperball vanishes, and given that \( \iiint_G w \, dV = 0 \) and \( \iiint_G x \, dV = \iiint_G y \, dV = \iiint_G z \, dV = 0 \), we find \( \iiint_G \nabla \cdot F \, dV = 0 \). For the surface integral, using the unit normal \( \mathbf{n} = (x, y, z, w) \), we compute \( F \cdot \mathbf{n} = xw \cdot x + yw \cdot y + zw \cdot z + (x^2 + y^2 + z^2 - w^2) w = x^2 w + y^2 w + z^2 w + (x^2 + y^2 + z^2 - w^2) w \), which simplifies to \( w(x^2 + y^2 + z^2 + x^2 + y^2 + z^2 - w^2) = w(2(x^2 + y^2 + z^2) - w^2) \). The integral \( \iint_S w f(x, y, z, w) \, dS \) vanishes due to symmetry, verifying that both integrals are zero and confirming the divergence theorem.</p>
+
+    <h5 id="theorem-8-stokes-theorem-on-manifolds"><p>Theorem 8 (Stokes' Theorem on Manifolds)</p></h5>
+
+    <p>A manifold is a topological space that locally resembles Euclidean space, meaning that each point in the manifold has a neighborhood that is homeomorphic to an open subset of \( \mathbb{R}^n \). A differential form is a generalization of scalar functions, vector fields, and flux integrals, where a 0-form is a function, a 1-form corresponds to a dot product with a vector field (like work done), and a 2-form represents an oriented area element (like flux), with higher forms extending this to volumes. The pullback of a differential form maps it onto a lower-dimensional manifold via a smooth function, analogous to restricting a vector field to a surface. The exterior derivative generalizes curl and divergence by taking a \( k \)-form to a \( (k+1) \)-form, satisfying \( d^2 = 0 \), with \( d\omega \) corresponding to curl for 1-forms and divergence for 2-forms, encapsulating Stokes' and Gauss' theorems in a single framework.</p>
+
+    <p>More precisely, the exterior derivative of a 0-form \( f \) is \( df = \nabla f \cdot dx \), the exterior derivative of a 1-form \( \omega = A \, dx + B \, dy + C \, dz \) is \( d\omega = (\frac{\partial C}{\partial y} - \frac{\partial B}{\partial z}) \, dx \wedge dy + (\frac{\partial A}{\partial z} - \frac{\partial C}{\partial x}) \, dy \wedge dz + (\frac{\partial B}{\partial x} - \frac{\partial A}{\partial y}) \, dz \wedge dx \), and the pullback of a form \( \omega \) under a map \( \mathbf{r}(u, v, w) \) is \( \mathbf{r}^* \omega = \omega(\mathbf{r}(u, v, w)) \), with the pullback applied to vector fields as \( \mathbf{r}^*(A \, dx + B \, dy) = A \, d(\mathbf{r}_u) + B \, d(\mathbf{r}_v) \).</p>
+
+    <p>Consider the differential 2-form \( \omega = x \, dy \wedge dz + y \, dz \wedge dx + z \, dx \wedge dy \) in three-dimensional space and let \( M \) be the upper hemisphere of the unit sphere \( x^2 + y^2 + z^2 = 1 \) with boundary \( \partial M \) being the unit circle in the \( xy \)-plane. The exterior derivative is \( d\omega = dx \wedge dy \wedge dz \), so the integral over \( M \) is \( \iint_M d\omega = \iint_M dx \wedge dy \wedge dz \), which is the volume enclosed by the hemisphere, giving \( \frac{2\pi}{3} \). Parameterizing \( \partial M \) as \( \mathbf{r}(t) = (\cos t, \sin t, 0) \) for \( 0 \leq t < 2\pi \), the pullback of \( \omega \) is \( \omega(\mathbf{r}(t)) = \cos t \, d(\sin t) - \sin t \, d(\cos t) = \cos t \cos t \, dt + \sin t \sin t \, dt = dt \), so the boundary integral is \( \oint_{\partial M} \omega = \int_0^{2\pi} dt = 2\pi \). Since both integrals match, the generalized Stokes' theorem, \( \iint_M d\omega = \oint_{\partial M} \omega \), is verified.</p>
+
+    <h5 id="theorem-9-de-rahm-stokes-theorem-on-k-chains"><p>Theorem 9 (De Rahm-Stokes' Theorem on $k$-chains)</p></h5>
+
+    <p>A k-chain \( c \) is a formal sum of oriented \( k \)-dimensional simplices, with each simplex parameterized by a map \( \gamma: \mathbb{R}^k \to M \), while the boundary \( \partial c \) is the boundary of each simplex, given by the map \( \partial \gamma = \sum_{i=0}^{k} (-1)^i \gamma_i \), where \( \gamma_i \) are the vertices of the simplex, and the associated boundary operator \( \partial \) satisfies \( \partial^2 = 0 \). For vector fields, the boundary operator on chains corresponds to the difference in orientation of adjacent faces or curves, and the integral of a form over a chain is calculated as \( \int_c \omega = \int_{\gamma} \omega(\gamma(t)) \, dt \), with \( \omega \) evaluated along the map \( \gamma \).</p>
+
+    <p>Consider the 1-chain \( c \) as the curve \( \gamma(t) = (\cos t, \sin t, 0) \) for \( t \in [0, 2\pi] \), which is the unit circle in the \( xy \)-plane, and let \( \omega = x \, dy - y \, dx \), a 1-form on \( \mathbb{R}^2 \). The boundary of \( c \) is \( \partial c \), which is the same unit circle \( \gamma(t) \), and we want to verify Stokes' theorem \( \int_{\partial c} \omega = \int_c d\omega \). First, compute \( d\omega = dx \wedge dy \), the 2-form. The integral over \( c \) is then \( \int_c d\omega = \int_0^{2\pi} 1 \, dt = 2\pi \). On the boundary \( \partial c \), the form \( \omega \) evaluates as \( \omega(\gamma(t)) = \cos t \, d(\sin t) - \sin t \, d(\cos t) = dt \). So, the integral over \( \partial c \) is \( \int_{\partial c} \omega = \int_0^{2\pi} dt = 2\pi \). Since both integrals match, Stokes' theorem is verified: \( \int_{\partial c} \omega = \int_c d\omega = 2\pi \).</p>
+
+
+    <h5 id="theorem-10-whitney-stokes-theorem-on-rough-sets"><p>Theorem 10 (Whitney-Stokes' Theorem on Rough Sets)</p></h5>
+
+    <p>A rough set in the context of differential geometry is a set that approximates a smooth manifold, where the boundary of the set is defined in terms of a closure operator and an interior operator, typically described as \( \overline{M} \) for the closure and \( M \) for the interior, with the boundary given by \( \partial M = \overline{M} \setminus M \). The boundary operator on rough sets corresponds to identifying regions where the set intersects with the boundary of a smooth manifold.</p>
+
+    <p>Consider the 2-form \( \omega = x \, dy \wedge dz + y \, dz \wedge dx + z \, dx \wedge dy \) on \( \mathbb{R}^3 \) and the rough set \( M \) as the upper hemisphere of the unit sphere \( x^2 + y^2 + z^2 = 1 \) with boundary \( \partial M \), which is the unit circle in the \( xy \)-plane. Parameterize the boundary \( \partial M \) as \( \mathbf{r}(t) = (\cos t, \sin t, 0) \) for \( t \in [0, 2\pi] \), and compute the pullback of \( \omega \) on \( \partial M \): \( \omega(\mathbf{r}(t)) = \cos t \, d(\sin t) - \sin t \, d(\cos t) = dt \). So, the boundary integral is \( \int_{\partial M} \omega = \int_0^{2\pi} dt = 2\pi \). For the surface integral, we compute \( d\omega = dx \wedge dy \wedge dz \), and integrating over the hemisphere gives the volume of the upper hemisphere, which is \( \frac{2\pi}{3} \). Thus, Whitney's Stokes' theorem for rough sets holds, since both integrals match: \( \int_{\partial M} \omega = \int_M d\omega = 2\pi \).</p>
+
+
+<hr>
+<p>While these boring examples are added, these theorems come from <a href="https://www.ms.uky.edu/~droyster/courses/spring98/math2242/classnotes6.pdf">“Fundamental Theorems of Vector Calculus”, David Royster, 1996</a> and also both <a href="https://people.math.harvard.edu/~knill/teaching/summer2020/handouts/lecture25.pdf">"Calculus in four dimensions", Oliver Knill</a> and <a href="https://people.math.harvard.edu/~knill/teaching/summer2020/handouts/lecture40.pdf">"Calculus in hyper space", Oliver Knill</a></p>
+<p>For the De Rham generalization, see John Lee's "Introduction to Smooth Manifolds". For the Whitney generalization, see Hassler Whitney's "Geometric Integration Theory"</p>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/undergraddata/">undergraduate data</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/musiciansite/">musician website</a></li>
 </ul>
 
 			</heading-anchors>
@@ -478,7 +565,7 @@ header {
 			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
 		</footer>
 
-		<!-- This page `/blog/stokestheorem/` was built on 2025-03-01T15:32:43.659Z -->
+		<!-- This page `/blog/stokestheorem/` was built on 2025-03-01T18:14:37.107Z -->
 		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
 	</body>
 </html>
