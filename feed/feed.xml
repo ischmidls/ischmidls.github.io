@@ -82,9 +82,52 @@
     &lt;p&gt;Inspired by &lt;a href=&quot;https://stats.stackexchange.com/a/143981/422593&quot;&gt;this discussion&lt;/a&gt; and also &lt;a href=&quot;https://stats.stackexchange.com/a/143984/422593&quot;&gt;this discussion&lt;/a&gt;, with help from &lt;a href=&quot;https://math.stackexchange.com/a/728072/1098426&quot;&gt;this calculation&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
   <entry>
+    <title>note: complex derivatives and matrices</title>
+    <link href="https://ischmidls.github.io/blog/complexdiff/" />
+    <updated>2025-02-12T00:00:00Z</updated>
+    <id>https://ischmidls.github.io/blog/complexdiff/</id>
+    <content type="html">&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+    MathJax.Hub.Config({
+      jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
+      extensions: [&quot;tex2jax.js&quot;],
+      &quot;HTML-CSS&quot;: { preferredFont: &quot;TeX&quot;, availableFonts: [&quot;STIX&quot;,&quot;TeX&quot;] },
+      tex2jax: { inlineMath: [ [&quot;$&quot;, &quot;$&quot;], [&quot;&#92;&#92;(&quot;,&quot;&#92;&#92;)&quot;] ], displayMath: [ [&quot;$$&quot;,&quot;$$&quot;], [&quot;&#92;&#92;[&quot;, &quot;&#92;&#92;]&quot;] ], processEscapes: true, ignoreClass: &quot;tex2jax_ignore|dno&quot; },
+      TeX: { noUndefined: { attributes: { mathcolor: &quot;red&quot;, mathbackground: &quot;#FFEEEE&quot;, mathsize: &quot;90%&quot; } } },
+      messageStyle: &quot;none&quot;
+    });
+    &lt;/script&gt;    
+    &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;For a complex function $ f(x + iy) = u(x, y) + iv(x, y) $, the Jacobian matrix is $&#92;mathbf{J} = &#92;begin{pmatrix} &#92;frac{&#92;partial u}{&#92;partial x} &amp; &#92;frac{&#92;partial v}{&#92;partial x} &#92;&#92; &#92;frac{&#92;partial u}{&#92;partial y} &amp; &#92;frac{&#92;partial v}{&#92;partial y} &#92;end{pmatrix}$.
+&lt;/p&gt;
+
+&lt;p&gt;For $ f $ to be complex differentiable, $ &#92;mathbf{J} $ must satisfy the Cauchy-Riemann equations $&#92;frac{&#92;partial u}{&#92;partial x} = &#92;frac{&#92;partial v}{&#92;partial y} &#92;quad &#92;text{and} &#92;quad &#92;frac{&#92;partial u}{&#92;partial y} = -&#92;frac{&#92;partial v}{&#92;partial x}.$
+&lt;/p&gt;
+
+&lt;p&gt;When these hold, $ &#92;mathbf{J} $ takes the form $&#92;mathbf{J} = &#92;begin{pmatrix} a &amp; -b &#92;&#92; b &amp; a &#92;end{pmatrix}$, where $ a = &#92;frac{&#92;partial u}{&#92;partial x} = &#92;frac{&#92;partial v}{&#92;partial y} $ and $ b = &#92;frac{&#92;partial v}{&#92;partial x} = -&#92;frac{&#92;partial u}{&#92;partial y} $. This matrix corresponds to the complex number $ a + bi $, reflecting the fact that the derivative of a complex function is itself a complex number. For example, for $ f(z) = z^2 $, the Jacobian is $&#92;mathbf{J} = &#92;begin{pmatrix} 2x &amp; 2y &#92;&#92; -2y &amp; 2x &#92;end{pmatrix}$, which corresponds to $ 2x + 2iy $.
+&lt;/p&gt;
+
+&lt;p&gt;The matrix representation of complex numbers as $ &#92;begin{pmatrix} a &amp; -b &#92;&#92; b &amp; a &#92;end{pmatrix} $ naturally follows from the geometric interpretation of complex multiplication and De Moivre&#39;s Theorem. A complex number $ z = a + bi $ can be written in polar form as $ z = r (&#92;cos &#92;theta + i &#92;sin &#92;theta) $, where $ r = &#92;sqrt{a^2 + b^2} $ is the magnitude and $ &#92;theta $ is the argument. Multiplication by $ z $ corresponds to scaling by $ r $ and rotating by $ &#92;theta $.
+&lt;/p&gt;
+
+&lt;p&gt;The rotation matrix for an angle $ &#92;theta $ is $&#92;begin{pmatrix} &#92;cos &#92;theta &amp; -&#92;sin &#92;theta &#92;&#92; &#92;sin &#92;theta &amp; &#92;cos &#92;theta &#92;end{pmatrix}.$
+&lt;/p&gt;
+
+&lt;p&gt;Multiplying this by the scaling factor $ r $ gives $r &#92;begin{pmatrix} &#92;cos &#92;theta &amp; -&#92;sin &#92;theta &#92;&#92; &#92;sin &#92;theta &amp; &#92;cos &#92;theta &#92;end{pmatrix} = &#92;begin{pmatrix} a &amp; -b &#92;&#92; b &amp; a &#92;end{pmatrix}$, where $ a = r &#92;cos &#92;theta $ and $ b = r &#92;sin &#92;theta $. This matches the matrix representation of $ z = a + bi $. Thus, the matrix form $ &#92;begin{pmatrix} a &amp; -b &#92;&#92; b &amp; a &#92;end{pmatrix} $ naturally encodes both scaling and rotation, reflecting the geometric action of complex multiplication as described by De Moivre&#39;s Theorem.
+&lt;/p&gt;
+
+&lt;p&gt;For example, the function $f(z) = z$ has $u(x, y) = x$ and $v(x, y) = y$, yielding the Jacobian $&#92;mathbf{J} = &#92;begin{pmatrix} 1 &amp; 0 &#92;&#92; 0 &amp; 1 &#92;end{pmatrix}$, corresponding to $1 + 0i$. &lt;/p&gt;
+&lt;p&gt;For $f(z) = z^2$, we have $u(x, y) = x^2 - y^2$ and $v(x, y) = 2xy$, giving the Jacobian $&#92;mathbf{J} = &#92;begin{pmatrix} 2x &amp; 2y &#92;&#92; -2y &amp; 2x &#92;end{pmatrix}$, which corresponds to $2x + 2iy$. &lt;/p&gt;
+&lt;p&gt;And for $f(z) = e^z$, we get $u(x, y) = e^x &#92;cos y$ and $v(x, y) = e^x &#92;sin y$, resulting in the Jacobian $&#92;mathbf{J} = &#92;begin{pmatrix} e^x &#92;cos y &amp; -e^x &#92;sin y &#92;&#92; e^x &#92;sin y &amp; e^x &#92;cos y &#92;end{pmatrix}$, corresponding to $e^z$.&lt;/p&gt;
+
+
+
+&lt;p&gt;Inspired by &lt;a href=&quot;https://math.stackexchange.com/a/1448085/1098426&quot;&gt;this&lt;/a&gt; discussion.&lt;/p&gt;</content>
+  </entry>
+  <entry>
     <title>widget: matrix product</title>
     <link href="https://ischmidls.github.io/blog/matrixprod/" />
-    <updated>2025-02-08T00:00:00Z</updated>
+    <updated>2025-01-12T00:00:00Z</updated>
     <id>https://ischmidls.github.io/blog/matrixprod/</id>
     <content type="html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -157,7 +200,7 @@
   <entry>
     <title>complete categories</title>
     <link href="https://ischmidls.github.io/blog/alllimits/" />
-    <updated>2025-02-08T00:00:00Z</updated>
+    <updated>2025-01-08T00:00:00Z</updated>
     <id>https://ischmidls.github.io/blog/alllimits/</id>
     <content type="html">&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
     MathJax.Hub.Config({
@@ -235,7 +278,7 @@ As the forgetful functor &#92;( U: &#92;text{Vect}_k &#92;to &#92;text{Set} &#92
   <entry>
     <title>textcraft</title>
     <link href="https://ischmidls.github.io/blog/textcraft/" />
-    <updated>2025-01-22T00:00:00Z</updated>
+    <updated>2024-12-26T00:00:00Z</updated>
     <id>https://ischmidls.github.io/blog/textcraft/</id>
     <content type="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
@@ -1247,139 +1290,6 @@ And $&#92;frac DC &#92;eta$ is nowhere vanishing (thus an orientation). All othe
     &lt;/form&gt;
     &lt;p&gt;Quaternion Multiplication Formula:&lt;/p&gt;
     &lt;div id=&quot;formula&quot;&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</content>
-  </entry>
-  <entry>
-    <title>widget: modular inverses</title>
-    <link href="https://ischmidls.github.io/blog/modular-multiplicative-inverse/" />
-    <updated>2024-05-09T00:00:00Z</updated>
-    <id>https://ischmidls.github.io/blog/modular-multiplicative-inverse/</id>
-    <content type="html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;Multiplicative Inverse Sequence&lt;/title&gt;
-    &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
-        MathJax.Hub.Config({
-          jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
-          extensions: [&quot;tex2jax.js&quot;],
-          &quot;HTML-CSS&quot;: { preferredFont: &quot;TeX&quot;, availableFonts: [&quot;STIX&quot;,&quot;TeX&quot;] },
-          tex2jax: { inlineMath: [ [&quot;$&quot;, &quot;$&quot;], [&quot;&#92;&#92;(&quot;,&quot;&#92;&#92;)&quot;] ], displayMath: [ [&quot;$$&quot;,&quot;$$&quot;], [&quot;&#92;&#92;[&quot;, &quot;&#92;&#92;]&quot;] ], processEscapes: true, ignoreClass: &quot;tex2jax_ignore|dno&quot; },
-          TeX: { noUndefined: { attributes: { mathcolor: &quot;red&quot;, mathbackground: &quot;#FFEEEE&quot;, mathsize: &quot;90%&quot; } } },
-          messageStyle: &quot;none&quot;
-        });
-        &lt;/script&gt;    
-        &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js&quot;&gt;&lt;/script&gt;
-    
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1 id=&quot;multiplicative-inverse-sequence&quot;&gt;Multiplicative Inverse Sequence&lt;/h1&gt;
-    &lt;p&gt;
-       
-       The modular multiplicative inverse of an integer $a $ modulo $m $ is an integer $y $ such that:
-       $
-       a &#92;cdot y &#92;equiv 1 &#92;pmod{m}
-       $
-       This inverse exists if and only if $a $ and $m $ are coprime (i.e., their greatest common divisor, or GCD, is 1).
-       
-For example:
-       If $x = 2 $ and $m = 7 $, the sequence might look like:
-         $
-         [4, 2, 1, 4, 2, 1, &#92;dots]
-         $
-         This is because:
-         $ 2^1 &#92;equiv 2 &#92;pmod{7} $, and the inverse of 2 modulo 7 is 4.
-         $ 2^2 &#92;equiv 4 &#92;pmod{7} $, and the inverse of 4 modulo 7 is 2.
-         $ 2^3 &#92;equiv 1 &#92;pmod{7} $, and the inverse of 1 modulo 7 is 1.
-         The sequence repeats after this point.
-       &lt;/p&gt;
-
-    &lt;script&gt;
-        function modInverse(a, m) {
-            // validate inputs
-            [a, m] = [Number(a), Number(m)]
-            if (Number.isNaN(a) || Number.isNaN(m)) {
-                return NaN; // invalid input
-            }
-            a = (a % m + m) % m;
-            if (!a || m &lt; 2) {
-                return NaN; // invalid input
-            }
-            // find the gcd
-            const s = [];
-            let b = m;
-            while (b) {
-                [a, b] = [b, a % b];
-                s.push({a, b});
-            }
-            if (a !== 1) {
-                return NaN; // inverse does not exist
-            }
-            // find the inverse
-            let x = 1;
-            let y = 0;
-            for (let i = s.length - 2; i &gt;= 0; --i) {
-                [x, y] = [y, x - y * Math.floor(s[i].a / s[i].b)];
-            }
-            return (y % m + m) % m;
-        }
-
-        // Function to calculate the sequence of multiplicative inverses
-        function calculateInverseSequence(x, m) {
-            const inverseSequence = [];
-            let currentPower = x % m;
-            let inverse = modInverse(currentPower, m);
-            inverseSequence.push(inverse);
-
-            const seen = new Set();
-            seen.add(inverse);
-
-            while (true) {
-                currentPower = (currentPower * x) % m;
-                inverse = modInverse(currentPower, m);
-
-                if (seen.has(inverse)) {
-                    break;
-                }
-
-                inverseSequence.push(inverse);
-                seen.add(inverse);
-            }
-
-            return inverseSequence;
-        }
-
-        // Function to handle form submission
-        function calculateAndDisplaySequence() {
-            const numX = document.getElementById(&#39;numberX&#39;).value;
-            const numM = document.getElementById(&#39;numberM&#39;).value;
-
-            const x = Number(numX);
-            const m = Number(numM);
-
-            if (Number.isNaN(x) || Number.isNaN(m)) {
-                alert(&#39;Please enter valid numbers for x and m.&#39;);
-                return;
-            }
-
-            const inverseSequence = calculateInverseSequence(x, m);
-
-            document.getElementById(&#39;output&#39;).innerText = `Inverse Sequence: ${inverseSequence.join(&#39;, &#39;)}`;
-        }
-    &lt;/script&gt;
-
-    &lt;label for=&quot;numberX&quot;&gt;Enter a number (x):&lt;/label&gt;
-    &lt;input type=&quot;number&quot; id=&quot;numberX&quot;&gt;&lt;br&gt;&lt;br&gt;
-    &lt;label for=&quot;numberM&quot;&gt;Enter a modulus (m):&lt;/label&gt;
-    &lt;input type=&quot;number&quot; id=&quot;numberM&quot;&gt;&lt;br&gt;&lt;br&gt;
-
-    &lt;button onclick=&quot;calculateAndDisplaySequence()&quot;&gt;Calculate Inverse Sequence&lt;/button&gt;&lt;br&gt;&lt;br&gt;
-
-    &lt;div id=&quot;output&quot;&gt;&lt;/div&gt;
-    &lt;script src=&quot;https://gist.github.com/ischmidls/73b99e6f1f1f273e72442c1efc36efbd.js&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>

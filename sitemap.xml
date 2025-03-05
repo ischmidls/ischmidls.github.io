@@ -223,17 +223,22 @@
 	
 	<url>
 		<loc>https://ischmidls.github.io/blog/textcraft/</loc>
-		<lastmod>2025-01-22</lastmod>
+		<lastmod>2024-12-26</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ischmidls.github.io/blog/alllimits/</loc>
-		<lastmod>2025-02-08</lastmod>
+		<lastmod>2025-01-08</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ischmidls.github.io/blog/matrixprod/</loc>
-		<lastmod>2025-02-08</lastmod>
+		<lastmod>2025-01-12</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ischmidls.github.io/blog/complexdiff/</loc>
+		<lastmod>2025-02-12</lastmod>
 	</url>
 	
 	<url>
@@ -243,26 +248,26 @@
 	
 	<url>
 		<loc>https://ischmidls.github.io/about/</loc>
-		<lastmod>2025-03-01</lastmod>
+		<lastmod>2025-03-05</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ischmidls.github.io/blog/</loc>
-		<lastmod>2025-03-01</lastmod>
+		<lastmod>2025-03-05</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ischmidls.github.io/</loc>
-		<lastmod>2025-03-01</lastmod>
+		<lastmod>2025-03-05</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ischmidls.github.io/tags/</loc>
-		<lastmod>2025-03-01</lastmod>
+		<lastmod>2025-03-05</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ischmidls.github.io/feed/feed.xml</loc>
-		<lastmod>2025-03-01</lastmod>
+		<lastmod>2025-03-05</lastmod>
 	</url>
 </urlset>
