@@ -125,79 +125,6 @@
 &lt;p&gt;Inspired by &lt;a href=&quot;https://math.stackexchange.com/a/1448085/1098426&quot;&gt;this&lt;/a&gt; discussion.&lt;/p&gt;</content>
   </entry>
   <entry>
-    <title>widget: matrix product</title>
-    <link href="https://ischmidls.github.io/blog/matrixprod/" />
-    <updated>2025-01-12T00:00:00Z</updated>
-    <id>https://ischmidls.github.io/blog/matrixprod/</id>
-    <content type="html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;&lt;/head&gt;
-&lt;body&gt;
-  &lt;form onsubmit=&quot;return false;&quot;&gt;
-    &lt;label for=&quot;matrix&quot;&gt;Enter matrix of any dimension to multiply with its transpose:&lt;/label&gt;
-    &lt;input type=&quot;text&quot; name=&quot;matrix&quot; id=&quot;matrix&quot; placeholder=&quot;[[1,2],[3,4]]&quot;&gt;
-    &lt;button type=&quot;button&quot; onclick=&quot;processMatrix()&quot;&gt;Submit&lt;/button&gt;
-  &lt;/form&gt;
-  
-  &lt;div id=&quot;out&quot;&gt;&lt;/div&gt;
-  
-  &lt;script&gt;
-    async function processMatrix() {
-        try {
-            let mat = JSON.parse(document.getElementById(&quot;matrix&quot;).value);
-
-            let trans = mat[0].map((_, colIndex) =&gt;
-                mat.map(row =&gt; row[colIndex])
-            );
-
-            let prod = await multiplyMatrices(mat, trans);
-
-            let div = document.getElementById(&quot;out&quot;);
-            div.innerHTML = JSON.stringify(prod);
-        } catch (error) {
-            console.error(&quot;Error processing the matrix:&quot;, error);
-            document.getElementById(&quot;out&quot;).innerHTML = &quot;Error: &quot; + error.message;
-        }
-    }
-
-    async function multiplyMatrices(A, B) {
-      return new Promise((resolve, reject) =&gt; {
-          setTimeout(() =&gt; {
-              try {
-                  const rowsA = A.length;
-                  const colsA = A[0].length;
-                  const rowsB = B.length;
-                  const colsB = B[0].length;
-
-                  if (colsA !== rowsB) {
-                      throw new Error(&quot;Matrices cannot be multiplied: Incompatible dimensions.&quot;);
-                  }
-
-                  const resultMatrix = Array(rowsA).fill(null).map(() =&gt; Array(colsB).fill(0));
-
-                  for (let i = 0; i &lt; rowsA; i++) {
-                      for (let j = 0; j &lt; colsB; j++) {
-                          for (let k = 0; k &lt; colsA; k++) {
-                              resultMatrix[i][j] += A[i][k] * B[k][j];
-                          }
-                      }
-                  }
-
-                  resolve(resultMatrix);
-              } catch (err) {
-                  reject(err);
-              }
-          }, 0);
-      });
-    }
-  &lt;/script&gt;
-  &lt;hr&gt;
-  &lt;script src=&quot;https://gist.github.com/ischmidls/f2897600ee3cb7ad4650eb9442f5bac6.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</content>
-  </entry>
-  <entry>
     <title>complete categories</title>
     <link href="https://ischmidls.github.io/blog/alllimits/" />
     <updated>2025-01-08T00:00:00Z</updated>
@@ -278,7 +205,7 @@ As the forgetful functor &#92;( U: &#92;text{Vect}_k &#92;to &#92;text{Set} &#92
   <entry>
     <title>textcraft</title>
     <link href="https://ischmidls.github.io/blog/textcraft/" />
-    <updated>2024-12-26T00:00:00Z</updated>
+    <updated>2025-01-04T00:00:00Z</updated>
     <id>https://ischmidls.github.io/blog/textcraft/</id>
     <content type="html">&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
@@ -830,6 +757,103 @@ input.addEventListener(&quot;keydown&quot;, (event) =&gt; {
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
+  </entry>
+  <entry>
+    <title>applied differential equations review</title>
+    <link href="https://ischmidls.github.io/blog/diffeqreview/" />
+    <updated>2024-09-30T00:00:00Z</updated>
+    <id>https://ischmidls.github.io/blog/diffeqreview/</id>
+    <content type="html">&lt;script type=&quot;text/x-mathjax-config&quot;&gt; MathJax.Hub.Config({
+    jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
+    extensions: [&quot;tex2jax.js&quot;],
+    &quot;HTML-CSS&quot;: { preferredFont: &quot;TeX&quot;, availableFonts: [&quot;STIX&quot;,&quot;TeX&quot;] },
+    tex2jax: { inlineMath: [ [&quot;$&quot;, &quot;$&quot;], [&quot;&#92;&#92;(&quot;,&quot;&#92;&#92;)&quot;] ], displayMath: [ [&quot;$$&quot;,&quot;$$&quot;], [&quot;&#92;&#92;[&quot;, &quot;&#92;&#92;]&quot;] ], processEscapes: true, ignoreClass: &quot;tex2jax_ignore|dno&quot; },
+    TeX: { noUndefined: { attributes: { mathcolor: &quot;red&quot;, mathbackground: &quot;#FFEEEE&quot;, mathsize: &quot;90%&quot; } } },
+    messageStyle: &quot;none&quot;
+  });
+  &lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;Welcome to my review for the class that I always forget the most about while I am tutoring.&lt;/p&gt;
+&lt;h3 id=&quot;linear-first-order-equations&quot;&gt;2.1: Linear First Order Equations&lt;/h3&gt;
+&lt;p&gt;Solve &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39; + 2y = e^{-x}&#92;)&lt;/span&gt;. The integrating factor &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu(x) = e^{2x}&#92;)&lt;/span&gt; yields the solution &lt;span class=&quot;math inline&quot;&gt;&#92;(y(x) = &#92;frac{1}{3}e^{-x} + Ce^{-2x}&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;separable-equations&quot;&gt;2.2: Separable Equations&lt;/h3&gt;
+&lt;p&gt;Solve &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39; = xy^2&#92;)&lt;/span&gt;. Separating variables and integrating gives &lt;span class=&quot;math inline&quot;&gt;&#92;(y(x) = -&#92;frac{2}{x^2 + C}&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;existence-and-uniqueness-of-nonlinear-equations&quot;&gt;2.3: Existence and Uniqueness of Nonlinear Equations&lt;/h3&gt;
+&lt;p&gt;If a function &lt;span class=&quot;math inline&quot;&gt;&#92;(f(x, y)&#92;)&lt;/span&gt; is continuous within an open rectangle in the &lt;span class=&quot;math inline&quot;&gt;&#92;(xy&#92;)&lt;/span&gt;-plane containing a point &lt;span class=&quot;math inline&quot;&gt;&#92;((x_0, y_0)&#92;)&lt;/span&gt;, then the initial value problem &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39; = f(x, y)&#92;)&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;&#92;(y(x_0) = y_0&#92;)&lt;/span&gt; has at least one solution (existence). If the partial derivative &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;frac{&#92;partial f}{&#92;partial y}&#92;)&lt;/span&gt; is also continuous within that rectangle, then the solution is unique. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;transformation-into-separable-equations&quot;&gt;2.4: Transformation into Separable Equations&lt;/h3&gt;
+&lt;p&gt;To solve the differential equation &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39; = &#92;frac{x + y}{x - y}&#92;)&lt;/span&gt;, we use the substitution &lt;span class=&quot;math inline&quot;&gt;&#92;(v = &#92;frac{y}{x}&#92;)&lt;/span&gt;, which implies &lt;span class=&quot;math inline&quot;&gt;&#92;(y = vx&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39; = v + xv&amp;#39;&#92;)&lt;/span&gt;. Substituting into the equation gives &lt;span class=&quot;math inline&quot;&gt;&#92;(v + xv&amp;#39; = &#92;frac{x + vx}{x - vx} = &#92;frac{1 + v}{1 - v}.&#92;)&lt;/span&gt; Rearranging, we get &lt;span class=&quot;math inline&quot;&gt;&#92;(xv&amp;#39; = &#92;frac{1 + v}{1 - v} - v = &#92;frac{1 + v^2}{1 - v}.&#92;)&lt;/span&gt; This is now a separable equation in &lt;span class=&quot;math inline&quot;&gt;&#92;(v&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(x&#92;)&lt;/span&gt;. Separating variables and integrating yields &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;int &#92;frac{1 - v}{1 + v^2} &#92;, dv = &#92;int &#92;frac{1}{x} &#92;, dx.&#92;)&lt;/span&gt; Solving these integrals and substituting back &lt;span class=&quot;math inline&quot;&gt;&#92;(v = &#92;frac{y}{x}&#92;)&lt;/span&gt; gives the solution to the original equation. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;exact-equations&quot;&gt;2.5: Exact Equations&lt;/h3&gt;
+&lt;p&gt;Solve &lt;span class=&quot;math inline&quot;&gt;&#92;((2xy + y^2)dx + (x^2 + 2xy)dy = 0&#92;)&lt;/span&gt;. The potential function &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;Psi(x, y) = x^2y + xy^2&#92;)&lt;/span&gt; yields the solution &lt;span class=&quot;math inline&quot;&gt;&#92;(x^2y + xy^2 = C&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;integrating-factors&quot;&gt;2.6: Integrating Factors&lt;/h3&gt;
+&lt;p&gt;Solve &lt;span class=&quot;math inline&quot;&gt;&#92;(y dx - x dy = 0&#92;)&lt;/span&gt;. The integrating factor &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mu(x, y) = &#92;frac{1}{x^2}&#92;)&lt;/span&gt; makes it exact, yielding &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;frac{y}{x} = C&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;growth-and-decay&quot;&gt;4.1: Growth and Decay&lt;/h3&gt;
+&lt;p&gt;A population grows exponentially: &lt;span class=&quot;math inline&quot;&gt;&#92;(P(t) = P_0 e^{kt}&#92;)&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;&#92;(P_0&#92;)&lt;/span&gt; is the initial population and &lt;span class=&quot;math inline&quot;&gt;&#92;(k&#92;)&lt;/span&gt; is the growth rate. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;cooling-and-mixing&quot;&gt;4.2: Cooling and Mixing&lt;/h3&gt;
+&lt;p&gt;Newton’s Law of Cooling: &lt;span class=&quot;math inline&quot;&gt;&#92;(T(t) = T_a + (T_0 - T_a)e^{-kt}&#92;)&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;&#92;(T_a&#92;)&lt;/span&gt; is ambient temperature and &lt;span class=&quot;math inline&quot;&gt;&#92;(T_0&#92;)&lt;/span&gt; is initial temperature. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;elementary-mechanics&quot;&gt;4.3: Elementary Mechanics&lt;/h3&gt;
+&lt;p&gt;A falling object with air resistance: &lt;span class=&quot;math inline&quot;&gt;&#92;(m&#92;frac{dv}{dt} = mg - kv&#92;)&lt;/span&gt;. The solution is &lt;span class=&quot;math inline&quot;&gt;&#92;(v(t) = &#92;frac{mg}{k}(1 - e^{-kt/m})&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;autonomous-second-order-equations&quot;&gt;4.4: Autonomous Second Order Equations&lt;/h3&gt;
+&lt;p&gt;Solve &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + y = 0&#92;)&lt;/span&gt;. The general solution is &lt;span class=&quot;math inline&quot;&gt;&#92;(y(x) = C_1 &#92;cos x + C_2 &#92;sin x&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;constant-coefficient-homogeneous-equations&quot;&gt;5.2: Constant Coefficient Homogeneous Equations&lt;/h3&gt;
+&lt;p&gt;A constant coefficient homogeneous equation has the form &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + ay&amp;#39; + by = 0&#92;)&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;&#92;(a&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(b&#92;)&lt;/span&gt; are constants. The solution is found by solving the characteristic equation &lt;span class=&quot;math inline&quot;&gt;&#92;(r^2 + ar + b = 0&#92;)&lt;/span&gt;. For &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + 4y&amp;#39; + 4y = 0&#92;)&lt;/span&gt;, the characteristic equation &lt;span class=&quot;math inline&quot;&gt;&#92;(r^2 + 4r + 4 = 0&#92;)&lt;/span&gt; yields a repeated root &lt;span class=&quot;math inline&quot;&gt;&#92;(r = -2&#92;)&lt;/span&gt;. This results in the general solution &lt;span class=&quot;math inline&quot;&gt;&#92;(y(x) = (C_1 + C_2 x)e^{-2x}&#92;)&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;&#92;(C_1&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(C_2&#92;)&lt;/span&gt; are constants determined by initial conditions. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;nonhomogeneous-linear-equations&quot;&gt;5.3: Nonhomogeneous Linear Equations&lt;/h3&gt;
+&lt;p&gt;A nonhomogeneous linear equation has the form &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + ay&amp;#39; + by = g(x)&#92;)&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;&#92;(g(x)&#92;)&lt;/span&gt; is a nonzero function. The general solution is the sum of the complementary solution (solution to the homogeneous equation) and a particular solution to the nonhomogeneous equation. For &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + y = &#92;sin x&#92;)&lt;/span&gt;, the complementary solution is &lt;span class=&quot;math inline&quot;&gt;&#92;(y_c(x) = C_1 &#92;cos x + C_2 &#92;sin x&#92;)&lt;/span&gt;, and a particular solution is &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p(x) = -&#92;frac{1}{2}x &#92;cos x&#92;)&lt;/span&gt;. Thus, the general solution is &lt;span class=&quot;math inline&quot;&gt;&#92;(y(x) = C_1 &#92;cos x + C_2 &#92;sin x - &#92;frac{1}{2}x &#92;cos x&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;method-of-undetermined-coefficients&quot;&gt;5.4: Method of Undetermined Coefficients&lt;/h3&gt;
+&lt;p&gt;The method of undetermined coefficients is a technique for finding a particular solution &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p(x)&#92;)&lt;/span&gt; to nonhomogeneous linear differential equations of the form &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + ay&amp;#39; + by = g(x)&#92;)&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;&#92;(g(x)&#92;)&lt;/span&gt; is a polynomial, exponential, sine, cosine, or a combination of these. The idea is to guess a form for &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p(x)&#92;)&lt;/span&gt; based on &lt;span class=&quot;math inline&quot;&gt;&#92;(g(x)&#92;)&lt;/span&gt;, with undetermined coefficients, and then substitute it into the equation to solve for those coefficients. For &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + y = x^2&#92;)&lt;/span&gt;, since &lt;span class=&quot;math inline&quot;&gt;&#92;(g(x) = x^2&#92;)&lt;/span&gt; is a polynomial, we guess &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p(x) = Ax^2 + Bx + C&#92;)&lt;/span&gt;. Substituting &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p&#92;)&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p&amp;#39;&#92;)&lt;/span&gt;, and &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p&amp;#39;&amp;#39;&#92;)&lt;/span&gt; into the equation and equating coefficients, we find &lt;span class=&quot;math inline&quot;&gt;&#92;(A = 1&#92;)&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;&#92;(B = 0&#92;)&lt;/span&gt;, and &lt;span class=&quot;math inline&quot;&gt;&#92;(C = -2&#92;)&lt;/span&gt;, giving &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p(x) = x^2 - 2&#92;)&lt;/span&gt;. The general solution combines this particular solution with the complementary solution &lt;span class=&quot;math inline&quot;&gt;&#92;(y_c(x) = C_1 &#92;cos x + C_2 &#92;sin x&#92;)&lt;/span&gt;, resulting in &lt;span class=&quot;math inline&quot;&gt;&#92;(y(x) = C_1 &#92;cos x + C_2 &#92;sin x + x^2 - 2&#92;)&lt;/span&gt;. This method works efficiently for specific types of &lt;span class=&quot;math inline&quot;&gt;&#92;(g(x)&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;method-of-undetermined-coefficients-ii&quot;&gt;5.5: Method of Undetermined Coefficients II&lt;/h3&gt;
+&lt;p&gt;The method of undetermined coefficients extends to cases where &lt;span class=&quot;math inline&quot;&gt;&#92;(g(x)&#92;)&lt;/span&gt; involves products of exponentials, sines, and cosines. For &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + y = e^x &#92;cos x&#92;)&lt;/span&gt;, we guess a particular solution of the form &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p(x) = e^x (A &#92;cos x + B &#92;sin x)&#92;)&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;&#92;(A&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(B&#92;)&lt;/span&gt; are undetermined coefficients. Substituting &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p&#92;)&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p&amp;#39;&#92;)&lt;/span&gt;, and &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p&amp;#39;&amp;#39;&#92;)&lt;/span&gt; into the equation and equating coefficients of &lt;span class=&quot;math inline&quot;&gt;&#92;(e^x &#92;cos x&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(e^x &#92;sin x&#92;)&lt;/span&gt;, we solve for &lt;span class=&quot;math inline&quot;&gt;&#92;(A&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(B&#92;)&lt;/span&gt;. This yields &lt;span class=&quot;math inline&quot;&gt;&#92;(A = &#92;frac{1}{5}&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(B = &#92;frac{2}{5}&#92;)&lt;/span&gt;, giving the particular solution &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p(x) = &#92;frac{1}{5}e^x (&#92;cos x + 2 &#92;sin x)&#92;)&lt;/span&gt;. The general solution combines this with the complementary solution &lt;span class=&quot;math inline&quot;&gt;&#92;(y_c(x) = C_1 &#92;cos x + C_2 &#92;sin x&#92;)&lt;/span&gt;, resulting in &lt;span class=&quot;math inline&quot;&gt;&#92;(y(x) = C_1 &#92;cos x + C_2 &#92;sin x + &#92;frac{1}{5}e^x (&#92;cos x + 2 &#92;sin x)&#92;)&lt;/span&gt;. This method is effective for handling more complex forms of &lt;span class=&quot;math inline&quot;&gt;&#92;(g(x)&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;reduction-of-order&quot;&gt;5.6: Reduction of Order&lt;/h3&gt;
+&lt;p&gt;Reduction of order is a method used to find a second linearly independent solution &lt;span class=&quot;math inline&quot;&gt;&#92;(y_2(x)&#92;)&lt;/span&gt; to a second-order linear homogeneous differential equation when one solution &lt;span class=&quot;math inline&quot;&gt;&#92;(y_1(x)&#92;)&lt;/span&gt; is already known. For &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; - 2y&amp;#39; + y = 0&#92;)&lt;/span&gt;, given &lt;span class=&quot;math inline&quot;&gt;&#92;(y_1 = e^x&#92;)&lt;/span&gt;, we assume &lt;span class=&quot;math inline&quot;&gt;&#92;(y_2 = v(x)e^x&#92;)&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;&#92;(v(x)&#92;)&lt;/span&gt; is an unknown function. Substituting &lt;span class=&quot;math inline&quot;&gt;&#92;(y_2&#92;)&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;&#92;(y_2&amp;#39;&#92;)&lt;/span&gt;, and &lt;span class=&quot;math inline&quot;&gt;&#92;(y_2&amp;#39;&amp;#39;&#92;)&lt;/span&gt; into the equation and simplifying, we find &lt;span class=&quot;math inline&quot;&gt;&#92;(v&amp;#39;&amp;#39;(x) = 0&#92;)&lt;/span&gt;, which implies &lt;span class=&quot;math inline&quot;&gt;&#92;(v(x) = C_1 + C_2 x&#92;)&lt;/span&gt;. Choosing &lt;span class=&quot;math inline&quot;&gt;&#92;(C_1 = 0&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(C_2 = 1&#92;)&lt;/span&gt; gives the second solution &lt;span class=&quot;math inline&quot;&gt;&#92;(y_2(x) = xe^x&#92;)&lt;/span&gt;. We choose &lt;span class=&quot;math inline&quot;&gt;&#92;(C_1 = 0&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(C_2 = 1&#92;)&lt;/span&gt; to ensure &lt;span class=&quot;math inline&quot;&gt;&#92;(y_2(x) = v(x)e^x&#92;)&lt;/span&gt; is linearly independent from the known solution &lt;span class=&quot;math inline&quot;&gt;&#92;(y_1(x) = e^x&#92;)&lt;/span&gt;. Setting &lt;span class=&quot;math inline&quot;&gt;&#92;(C_1 = 0&#92;)&lt;/span&gt; avoids redundancy, as including it would introduce a term proportional to &lt;span class=&quot;math inline&quot;&gt;&#92;(y_1(x)&#92;)&lt;/span&gt;. Choosing &lt;span class=&quot;math inline&quot;&gt;&#92;(C_2 = 1&#92;)&lt;/span&gt; simplifies the solution, making &lt;span class=&quot;math inline&quot;&gt;&#92;(y_2(x) = xe^x&#92;)&lt;/span&gt; the simplest linearly independent solution. Together, &lt;span class=&quot;math inline&quot;&gt;&#92;(y_1(x) = e^x&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(y_2(x) = xe^x&#92;)&lt;/span&gt; form a basis for the general solution &lt;span class=&quot;math inline&quot;&gt;&#92;(y(x) = C_1 e^x + C_2 xe^x&#92;)&lt;/span&gt;. This method reduces the problem to solving a first-order equation for &lt;span class=&quot;math inline&quot;&gt;&#92;(v&amp;#39;(x)&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;variation-of-parameters&quot;&gt;5.7: Variation of Parameters&lt;/h3&gt;
+&lt;p&gt;Variation of parameters is a method for finding a particular solution to a nonhomogeneous linear differential equation &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + p(x)y&amp;#39; + q(x)y = g(x)&#92;)&lt;/span&gt;. For &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + y = &#92;tan x&#92;)&lt;/span&gt;, the complementary solution is &lt;span class=&quot;math inline&quot;&gt;&#92;(y_c(x) = C_1 &#92;cos x + C_2 &#92;sin x&#92;)&lt;/span&gt;. We seek a particular solution of the form &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p(x) = u_1(x) &#92;cos x + u_2(x) &#92;sin x&#92;)&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;&#92;(u_1(x)&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(u_2(x)&#92;)&lt;/span&gt; are functions to be determined. For the equation &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + y = &#92;tan x&#92;)&lt;/span&gt;, the complementary solution is &lt;span class=&quot;math inline&quot;&gt;&#92;(y_c(x) = C_1 &#92;cos x + C_2 &#92;sin x&#92;)&lt;/span&gt;. For first constraint, to simplify the problem, we impose the condition:$ u_1’(x) x + u_2’(x) x = 0.$ This ensures that the derivative of &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p(x)&#92;)&lt;/span&gt; does not include terms involving &lt;span class=&quot;math inline&quot;&gt;&#92;(u_1&amp;#39;(x)&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(u_2&amp;#39;(x)&#92;)&lt;/span&gt; beyond what is necessary. For second constraint, substitute &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p(x)&#92;)&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p&amp;#39;(x)&#92;)&lt;/span&gt;, and &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p&amp;#39;&amp;#39;(x)&#92;)&lt;/span&gt; into the original equation &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + y = &#92;tan x&#92;)&lt;/span&gt;. After simplification, this yields:$ -u_1’(x) x + u_2’(x) x = x.$ Solving the system &lt;span class=&quot;math inline&quot;&gt;&#92;(u_1&amp;#39;(x) &#92;cos x + u_2&amp;#39;(x) &#92;sin x = 0&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(-u_1&amp;#39;(x) &#92;sin x + u_2&amp;#39;(x) &#92;cos x = &#92;tan x&#92;)&lt;/span&gt;, we find &lt;span class=&quot;math inline&quot;&gt;&#92;(u_1&amp;#39;(x) = -&#92;sin x &#92;tan x&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(u_2&amp;#39;(x) = &#92;sin x&#92;)&lt;/span&gt;. Integrating these gives &lt;span class=&quot;math inline&quot;&gt;&#92;(u_1(x) = &#92;ln|&#92;sec x + &#92;tan x| - &#92;sin x&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(u_2(x) = -&#92;cos x&#92;)&lt;/span&gt;. Thus, the particular solution is &lt;span class=&quot;math inline&quot;&gt;&#92;(y_p(x) = -&#92;cos x &#92;ln|&#92;sec x + &#92;tan x|&#92;)&lt;/span&gt;, and the general solution is &lt;span class=&quot;math inline&quot;&gt;&#92;(y(x) = C_1 &#92;cos x + C_2 &#92;sin x - &#92;cos x &#92;ln|&#92;sec x + &#92;tan x|&#92;)&lt;/span&gt;. This method is more general than undetermined coefficients and works for any continuous &lt;span class=&quot;math inline&quot;&gt;&#92;(g(x)&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;series-solutions-near-an-ordinary-point-ii&quot;&gt;7.4: Series Solutions Near an Ordinary Point II&lt;/h3&gt;
+&lt;p&gt;Consider this example from William Trench “Elementary Differential Equations &amp;amp; Boundary Value Problems” section &lt;span class=&quot;math inline&quot;&gt;&#92;(7.4&#92;)&lt;/span&gt;. Find the coefficients &lt;span class=&quot;math inline&quot;&gt;&#92;(a_0, &#92;dots, a_7&#92;)&lt;/span&gt; in the series solution &lt;span class=&quot;math inline&quot;&gt;&#92;(y = &#92;sum_{n=0}^&#92;infty a_n x^n&#92;)&lt;/span&gt; of the initial value problem &lt;span class=&quot;math inline&quot;&gt;&#92;((1 + x + 2x^2)y&amp;#39;&amp;#39; + (1 + 7x)y&amp;#39; + 2y = 0, &#92;quad y(0) = -1, &#92;quad y&amp;#39;(0) = -2. &#92;quad (*)&#92;)&lt;/span&gt; Here, the differential operator is &lt;span class=&quot;math inline&quot;&gt;&#92;(Ly = (1 + x + 2x^2)y&amp;#39;&amp;#39; + (1 + 7x)y&amp;#39; + 2y&#92;)&lt;/span&gt;. The zeros of &lt;span class=&quot;math inline&quot;&gt;&#92;(P_0(x) = 1 + x + 2x^2&#92;)&lt;/span&gt;, given by &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;frac{-1 &#92;pm i&#92;sqrt{7}}{4}&#92;)&lt;/span&gt;, have absolute value &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;frac{1}{&#92;sqrt{2}}&#92;)&lt;/span&gt;. Now if &lt;span class=&quot;math inline&quot;&gt;&#92;(P_0(x)&#92;)&lt;/span&gt; has no zeros in the interval &lt;span class=&quot;math inline&quot;&gt;&#92;(|x| &amp;lt; R&#92;)&lt;/span&gt;, then the series solution converges on &lt;span class=&quot;math inline&quot;&gt;&#92;(|x| &amp;lt; R&#92;)&lt;/span&gt;. So the series solution converges on &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;left(-&#92;frac{1}{&#92;sqrt{2}}, &#92;frac{1}{&#92;sqrt{2}}&#92;right)&#92;)&lt;/span&gt;. Substituting &lt;span class=&quot;math inline&quot;&gt;&#92;(y = &#92;sum_{n=0}^&#92;infty a_n x^n&#92;)&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39; = &#92;sum_{n=1}^&#92;infty n a_n x^{n-1}&#92;)&lt;/span&gt;, and &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; = &#92;sum_{n=2}^&#92;infty n(n-1) a_n x^{n-2}&#92;)&lt;/span&gt; into &lt;span class=&quot;math inline&quot;&gt;&#92;(Ly&#92;)&lt;/span&gt;, we obtain &lt;span class=&quot;math inline&quot;&gt;&#92;(Ly = &#92;sum_{n=2}^&#92;infty n(n-1) a_n x^{n-2} + &#92;sum_{n=2}^&#92;infty n(n-1) a_n x^{n-1} + 2&#92;sum_{n=2}^&#92;infty n(n-1) a_n x^n + &#92;sum_{n=1}^&#92;infty n a_n x^{n-1} + 7&#92;sum_{n=1}^&#92;infty n a_n x^n + 2&#92;sum_{n=0}^&#92;infty a_n x^n.&#92;)&lt;/span&gt; 
+    Shifting indices so the general term in each series is a constant multiple of 
+    &lt;span class=&quot;math inline&quot;&gt;&#92;(x^n&#92;)&lt;/span&gt; yields 
+    &lt;span class=&quot;math inline&quot;&gt;&#92;(Ly = &#92;sum_{n=0}^&#92;infty (n+2)(n+1) a_{n+2} x^n + &#92;sum_{n=0}^&#92;infty (n+1)n a_{n+1} x^n + 2&#92;sum_{n=0}^&#92;infty n(n-1) a_n x^n + &#92;)&lt;/span&gt;
+    &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;sum_{n=0}^&#92;infty (n+1) a_{n+1} x^n + 7&#92;sum_{n=0}^&#92;infty n a_n x^n + 2&#92;sum_{n=0}^&#92;infty a_n x^n = &#92;sum_{n=0}^&#92;infty b_n x^n,&#92;)&lt;/span&gt; where &lt;span class=&quot;math inline&quot;&gt;&#92;(b_n = (n+2)(n+1) a_{n+2} + (n+1)^2 a_{n+1} + (n+2)(2n+1) a_n.&#92;)&lt;/span&gt; Thus, &lt;span class=&quot;math inline&quot;&gt;&#92;(y = &#92;sum_{n=0}^&#92;infty a_n x^n&#92;)&lt;/span&gt; is a solution of &lt;span class=&quot;math inline&quot;&gt;&#92;(Ly = 0&#92;)&lt;/span&gt; if and only if &lt;span class=&quot;math inline&quot;&gt;&#92;(a_{n+2} = -&#92;frac{n+1}{n+2} a_{n+1} - &#92;frac{2n+1}{n+1} a_n, &#92;quad n &#92;geq 0. &#92;quad (**)&#92;)&lt;/span&gt; From the initial conditions, &lt;span class=&quot;math inline&quot;&gt;&#92;(a_0 = y(0) = -1&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(a_1 = y&amp;#39;(0) = -2&#92;)&lt;/span&gt;. Setting &lt;span class=&quot;math inline&quot;&gt;&#92;(n = 0&#92;)&lt;/span&gt; in Equation &lt;span class=&quot;math inline&quot;&gt;&#92;((**)&#92;)&lt;/span&gt; yields &lt;span class=&quot;math inline&quot;&gt;&#92;(a_2 = -&#92;frac{1}{2} a_1 - a_0 = -&#92;frac{1}{2}(-2) - (-1) = 2.&#92;)&lt;/span&gt; Setting &lt;span class=&quot;math inline&quot;&gt;&#92;(n = 1&#92;)&lt;/span&gt; in Equation &lt;span class=&quot;math inline&quot;&gt;&#92;((**)&#92;)&lt;/span&gt; yields &lt;span class=&quot;math inline&quot;&gt;&#92;(a_3 = -&#92;frac{2}{3} a_2 - &#92;frac{3}{2} a_1 = -&#92;frac{2}{3}(2) - &#92;frac{3}{2}(-2) = &#92;frac{5}{3}.&#92;)&lt;/span&gt; The coefficients &lt;span class=&quot;math inline&quot;&gt;&#92;(a_4, a_5, a_6, a_7&#92;)&lt;/span&gt; can be computed similarly from Equation &lt;span class=&quot;math inline&quot;&gt;&#92;((**)&#92;)&lt;/span&gt;, yielding the series solution &lt;span class=&quot;math inline&quot;&gt;&#92;(y = -1 - 2x + 2x^2 + &#92;frac{5}{3}x^3 - &#92;frac{55}{12}x^4 + &#92;frac{3}{4}x^5 + &#92;frac{61}{8}x^6 - &#92;frac{443}{56}x^7 + &#92;cdots.&#92;)&lt;/span&gt; The Taylor polynomials &lt;span class=&quot;math inline&quot;&gt;&#92;(T_N(x) = &#92;sum_{n=0}^N a_n x^n&#92;)&lt;/span&gt; converge to the solution of Equation &lt;span class=&quot;math inline&quot;&gt;&#92;((*)&#92;)&lt;/span&gt; on &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;left(-&#92;frac{1}{&#92;sqrt{2}}, &#92;frac{1}{&#92;sqrt{2}}&#92;right)&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;introduction-to-the-laplace-transform&quot;&gt;8.1: Introduction to the Laplace Transform&lt;/h3&gt;
+&lt;p&gt;The Laplace transform of a function &lt;span class=&quot;math inline&quot;&gt;&#92;(f(t)&#92;)&lt;/span&gt;, defined for &lt;span class=&quot;math inline&quot;&gt;&#92;(t &#92;geq 0&#92;)&lt;/span&gt;, is given by &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathcal{L}&#92;{f(t)&#92;} = F(s) = &#92;int_0^&#92;infty e^{-st} f(t) &#92;, dt,&#92;)&lt;/span&gt; where &lt;span class=&quot;math inline&quot;&gt;&#92;(s&#92;)&lt;/span&gt; is a complex variable. It converts functions of time &lt;span class=&quot;math inline&quot;&gt;&#92;(t&#92;)&lt;/span&gt; into functions of the complex variable &lt;span class=&quot;math inline&quot;&gt;&#92;(s&#92;)&lt;/span&gt;. For example, the Laplace transform of &lt;span class=&quot;math inline&quot;&gt;&#92;(e^{at}&#92;)&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathcal{L}&#92;{e^{at}&#92;} = &#92;frac{1}{s - a}, &#92;quad &#92;text{for } s &amp;gt; a.&#92;)&lt;/span&gt; In practice, Laplace transforms of common functions are often identified using precalculated tables, which provide a quick reference for solving problems without repeatedly computing the integral. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;the-inverse-laplace-transform&quot;&gt;8.2: The Inverse Laplace Transform&lt;/h3&gt;
+&lt;p&gt;Find &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathcal{L}^{-1}&#92;left&#92;{&#92;frac{1}{s^2 + 4}&#92;right&#92;} = &#92;frac{1}{2} &#92;sin 2t&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;solution-of-initial-value-problems&quot;&gt;8.3: Solution of Initial Value Problems&lt;/h3&gt;
+&lt;p&gt;Solve &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + y = 0&#92;)&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;&#92;(y(0) = 1&#92;)&lt;/span&gt;, &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;(0) = 0&#92;)&lt;/span&gt;. The Laplace transform yields &lt;span class=&quot;math inline&quot;&gt;&#92;(y(t) = &#92;cos t&#92;)&lt;/span&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;the-unit-step-function&quot;&gt;8.4 The Unit Step Function&lt;/h3&gt;
+&lt;p&gt;The unit step function &lt;span class=&quot;math inline&quot;&gt;&#92;(u(t - a)&#92;)&lt;/span&gt; is defined as 0 for &lt;span class=&quot;math inline&quot;&gt;&#92;(t &amp;lt; a&#92;)&lt;/span&gt; and 1 for &lt;span class=&quot;math inline&quot;&gt;&#92;(t &#92;geq a&#92;)&lt;/span&gt;. For the equation &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + y = u(t - &#92;pi)&#92;)&lt;/span&gt; with &lt;span class=&quot;math inline&quot;&gt;&#92;(y(0) = 0&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;(0) = 0&#92;)&lt;/span&gt;, we apply the Laplace transform. The Laplace transform of &lt;span class=&quot;math inline&quot;&gt;&#92;(u(t - &#92;pi)&#92;)&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;frac{e^{-&#92;pi s}}{s}&#92;)&lt;/span&gt;. Taking the Laplace transform of the equation gives &lt;span class=&quot;math inline&quot;&gt;&#92;(s^2 Y(s) + Y(s) = &#92;frac{e^{-&#92;pi s}}{s}.&#92;)&lt;/span&gt; Solving for &lt;span class=&quot;math inline&quot;&gt;&#92;(Y(s)&#92;)&lt;/span&gt;, we get &lt;span class=&quot;math inline&quot;&gt;&#92;(Y(s) = &#92;frac{e^{-&#92;pi s}}{s(s^2 + 1)}.&#92;)&lt;/span&gt; Using partial fractions and the inverse Laplace transform, the solution is &lt;span class=&quot;math inline&quot;&gt;&#92;(y(t) = u(t - &#92;pi)(1 - &#92;cos(t - &#92;pi)).&#92;)&lt;/span&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;piecewise-continuous-forcing-functions&quot;&gt;8.5 Piecewise Continuous Forcing Functions&lt;/h3&gt;
+&lt;p&gt;For &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + y = f(t)&#92;)&lt;/span&gt;, where &lt;span class=&quot;math inline&quot;&gt;&#92;(f(t) = 1&#92;)&lt;/span&gt; for &lt;span class=&quot;math inline&quot;&gt;&#92;(0 &#92;leq t &amp;lt; &#92;pi&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(0&#92;)&lt;/span&gt; otherwise, we express &lt;span class=&quot;math inline&quot;&gt;&#92;(f(t)&#92;)&lt;/span&gt; using the unit step function as &lt;span class=&quot;math inline&quot;&gt;&#92;(f(t) = u(t) - u(t - &#92;pi)&#92;)&lt;/span&gt;. The Laplace transform of &lt;span class=&quot;math inline&quot;&gt;&#92;(f(t)&#92;)&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;&#92;(F(s) = &#92;frac{1}{s} - &#92;frac{e^{-&#92;pi s}}{s}.&#92;)&lt;/span&gt; Taking the Laplace transform of the equation &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + y = f(t)&#92;)&lt;/span&gt; gives &lt;span class=&quot;math inline&quot;&gt;&#92;(s^2 Y(s) + Y(s) = &#92;frac{1}{s} - &#92;frac{e^{-&#92;pi s}}{s}.&#92;)&lt;/span&gt; Solving for &lt;span class=&quot;math inline&quot;&gt;&#92;(Y(s)&#92;)&lt;/span&gt;, we obtain &lt;span class=&quot;math inline&quot;&gt;&#92;(Y(s) = &#92;frac{1}{s(s^2 + 1)} - &#92;frac{e^{-&#92;pi s}}{s(s^2 + 1)}.&#92;)&lt;/span&gt; Using partial fractions and the inverse Laplace transform, the solution is &lt;span class=&quot;math inline&quot;&gt;&#92;(y(t) = (1 - &#92;cos t) - u(t - &#92;pi)(1 - &#92;cos(t - &#92;pi)).&#92;)&lt;/span&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;convolution&quot;&gt;8.6 Convolution&lt;/h3&gt;
+&lt;p&gt;For &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + y = &#92;sin t&#92;)&lt;/span&gt; with &lt;span class=&quot;math inline&quot;&gt;&#92;(y(0) = 0&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;(0) = 0&#92;)&lt;/span&gt;, we use the convolution integral. The impulse response of the system is &lt;span class=&quot;math inline&quot;&gt;&#92;(h(t) = &#92;sin t&#92;)&lt;/span&gt;. The solution is given by the convolution of &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;sin t&#92;)&lt;/span&gt; with the input &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;sin t&#92;)&lt;/span&gt;
+&lt;span class=&quot;math inline&quot;&gt;&#92;(y(t) = &#92;int_0^t &#92;sin(t - &#92;tau) &#92;sin &#92;tau &#92;, d&#92;tau.&#92;)&lt;/span&gt; Using the trigonometric identity &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;sin A &#92;sin B = &#92;frac{1}{2}[&#92;cos(A - B) - &#92;cos(A + B)]&#92;)&lt;/span&gt;, the integral becomes &lt;span class=&quot;math inline&quot;&gt;&#92;(y(t) = &#92;frac{1}{2} &#92;int_0^t [&#92;cos(t - 2&#92;tau) - &#92;cos t] &#92;, d&#92;tau.&#92;)&lt;/span&gt; Evaluating the integral, we obtain &lt;span class=&quot;math inline&quot;&gt;&#92;(y(t) = &#92;frac{1}{2}(&#92;sin t - t &#92;cos t).&#92;)&lt;/span&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;impulse-functions&quot;&gt;8.7 Impulse Functions&lt;/h3&gt;
+&lt;p&gt;For &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;&amp;#39; + y = &#92;delta(t - &#92;pi)&#92;)&lt;/span&gt; with &lt;span class=&quot;math inline&quot;&gt;&#92;(y(0) = 0&#92;)&lt;/span&gt; and &lt;span class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;(0) = 0&#92;)&lt;/span&gt;, the Laplace transform of &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;delta(t - &#92;pi)&#92;)&lt;/span&gt; is &lt;span class=&quot;math inline&quot;&gt;&#92;(e^{-&#92;pi s}&#92;)&lt;/span&gt;. Taking the Laplace transform of the equation gives &lt;span class=&quot;math inline&quot;&gt;&#92;(s^2 Y(s) + Y(s) = e^{-&#92;pi s}.&#92;)&lt;/span&gt; Solving for &lt;span class=&quot;math inline&quot;&gt;&#92;(Y(s)&#92;)&lt;/span&gt;, we get &lt;span class=&quot;math inline&quot;&gt;&#92;(Y(s) = &#92;frac{e^{-&#92;pi s}}{s^2 + 1}.&#92;)&lt;/span&gt; The inverse Laplace transform yields &lt;span class=&quot;math inline&quot;&gt;&#92;(y(t) = u(t - &#92;pi) &#92;sin(t - &#92;pi).&#92;)&lt;/span&gt;
+&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>khovanov homology talk</title>
