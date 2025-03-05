@@ -1,0 +1,37 @@
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      extensions: ["tex2jax.js"],
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+      tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+      TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
+      messageStyle: "none"
+    });
+    </script>    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+
+<p>For a complex function $ f(x + iy) = u(x, y) + iv(x, y) $, the Jacobian matrix is $\mathbf{J} = \begin{pmatrix} \frac{\partial u}{\partial x} & \frac{\partial v}{\partial x} \\ \frac{\partial u}{\partial y} & \frac{\partial v}{\partial y} \end{pmatrix}$.
+</p>
+
+<p>For $ f $ to be complex differentiable, $ \mathbf{J} $ must satisfy the Cauchy-Riemann equations $\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y} \quad \text{and} \quad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}.$
+</p>
+
+<p>When these hold, $ \mathbf{J} $ takes the form $\mathbf{J} = \begin{pmatrix} a & -b \\ b & a \end{pmatrix}$, where $ a = \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y} $ and $ b = \frac{\partial v}{\partial x} = -\frac{\partial u}{\partial y} $. This matrix corresponds to the complex number $ a + bi $, reflecting the fact that the derivative of a complex function is itself a complex number. For example, for $ f(z) = z^2 $, the Jacobian is $\mathbf{J} = \begin{pmatrix} 2x & 2y \\ -2y & 2x \end{pmatrix}$, which corresponds to $ 2x + 2iy $.
+</p>
+
+<p>The matrix representation of complex numbers as $ \begin{pmatrix} a & -b \\ b & a \end{pmatrix} $ naturally follows from the geometric interpretation of complex multiplication and De Moivre's Theorem. A complex number $ z = a + bi $ can be written in polar form as $ z = r (\cos \theta + i \sin \theta) $, where $ r = \sqrt{a^2 + b^2} $ is the magnitude and $ \theta $ is the argument. Multiplication by $ z $ corresponds to scaling by $ r $ and rotating by $ \theta $.
+</p>
+
+<p>The rotation matrix for an angle $ \theta $ is $\begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix}.$
+</p>
+
+<p>Multiplying this by the scaling factor $ r $ gives $r \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix} = \begin{pmatrix} a & -b \\ b & a \end{pmatrix}$, where $ a = r \cos \theta $ and $ b = r \sin \theta $. This matches the matrix representation of $ z = a + bi $. Thus, the matrix form $ \begin{pmatrix} a & -b \\ b & a \end{pmatrix} $ naturally encodes both scaling and rotation, reflecting the geometric action of complex multiplication as described by De Moivre's Theorem.
+</p>
+
+<p>For example, the function $f(z) = z$ has $u(x, y) = x$ and $v(x, y) = y$, yielding the Jacobian $\mathbf{J} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$, corresponding to $1 + 0i$. </p>
+<p>For $f(z) = z^2$, we have $u(x, y) = x^2 - y^2$ and $v(x, y) = 2xy$, giving the Jacobian $\mathbf{J} = \begin{pmatrix} 2x & 2y \\ -2y & 2x \end{pmatrix}$, which corresponds to $2x + 2iy$. </p>
+<p>And for $f(z) = e^z$, we get $u(x, y) = e^x \cos y$ and $v(x, y) = e^x \sin y$, resulting in the Jacobian $\mathbf{J} = \begin{pmatrix} e^x \cos y & -e^x \sin y \\ e^x \sin y & e^x \cos y \end{pmatrix}$, corresponding to $e^z$.</p>
+
+
+
+<p>Inspired by <a href="https://math.stackexchange.com/a/1448085/1098426">this</a> discussion.</p>
