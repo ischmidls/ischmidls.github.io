@@ -11,7 +11,14 @@
     <name>Izak Schmidlkofer</name>
   </author>
   <entry>
-    <title>multiple linear regression simulation</title>
+    <title>note: multifactor anova simulation</title>
+    <link href="https://ischmidls.github.io/blog/multifactorsim/" />
+    <updated>2025-03-15T00:00:00Z</updated>
+    <id>https://ischmidls.github.io/blog/multifactorsim/</id>
+    <content type="html">&lt;iframe src=&quot;https://librarianizak.github.io/multifactor.html&quot;&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>note: multiple linear regression simulation</title>
     <link href="https://ischmidls.github.io/blog/mlrsim/" />
     <updated>2025-03-15T00:00:00Z</updated>
     <id>https://ischmidls.github.io/blog/mlrsim/</id>
@@ -1770,82 +1777,5 @@ And $&#92;frac DC &#92;eta$ is nowhere vanishing (thus an orientation). All othe
     spanning, any element in &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3[x] /
     (f)&#92;)&lt;/span&gt; can be expressed as a linear combination of &lt;span class=&quot;math inline&quot;&gt;&#92;(1, x, x^2&#92;)&lt;/span&gt; over &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;overline{&#92;mathbb{Z}}_3&#92;)&lt;/span&gt;. Thus, &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;mathbb{Z}_3[x] / (f)&#92;)&lt;/span&gt; is a 3-dimensional
     vector space over &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;overline{&#92;mathbb{Z}}_3&#92;)&lt;/span&gt; with basis &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;{1 + (f), x + (f), x^2 + (f)&#92;}&#92;)&lt;/span&gt;. &lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;square&#92;)&lt;/span&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>widget: divisors and totient</title>
-    <link href="https://ischmidls.github.io/blog/divisors-and-totient/" />
-    <updated>2024-05-15T00:00:00Z</updated>
-    <id>https://ischmidls.github.io/blog/divisors-and-totient/</id>
-    <content type="html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;Divisors and Primes Finder&lt;/title&gt;
-    &lt;script&gt;
-        function findDivisorsAndPrimes() {
-            // Get the user input value
-            let inputValue = document.getElementById(&quot;numberInput&quot;).value;
-            let number = parseInt(inputValue);
-
-            // Validate if the input is a positive integer
-            if (isNaN(number) || number &lt;= 0) {
-                alert(&quot;Please enter a positive integer.&quot;);
-                return;
-            }
-
-            // Function to find all divisors of a number
-            function findDivisors(n) {
-                let divisors = [];
-                for (let i = 1; i &lt;= n; i++) {
-                    if (n % i === 0) {
-                        divisors.push(i);
-                    }
-                }
-                return divisors;
-            }
-
-            // Function to check if a number is prime
-            function isPrime(n) {
-                if (n &lt;= 1) {
-                    return false;
-                }
-                for (let i = 2; i &lt;= Math.sqrt(n); i++) {
-                    if (n % i === 0) {
-                        return false;
-                    }
-                }
-                return true;
-            }
-
-            // Find divisors and primes less than the input number
-            let divisors = findDivisors(number);
-            let primes = [];
-            for (let i = 2; i &lt; number; i++) {
-                if (isPrime(i)) {
-                    primes.push(i);
-                }
-            }
-
-            // Display the results including length of lists
-            let divisorsLength = divisors.length;
-            let primesLength = primes.length;
-
-            document.getElementById(&quot;divisors&quot;).textContent = `Divisors (${divisorsLength}): ` + divisors.join(&quot;, &quot;);
-            document.getElementById(&quot;primes&quot;).textContent = `Primes less than ${number} (${primesLength}): ` + primes.join(&quot;, &quot;);
-        }
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;p&gt;Find Divisors and Primes&lt;/p&gt;
-    &lt;label for=&quot;numberInput&quot;&gt;Enter a positive integer:&lt;/label&gt;
-    &lt;input type=&quot;text&quot; id=&quot;numberInput&quot;&gt;
-    &lt;button onclick=&quot;findDivisorsAndPrimes()&quot;&gt;Find&lt;/button&gt;
-    &lt;p id=&quot;divisors&quot;&gt;&lt;/p&gt;
-    &lt;p id=&quot;primes&quot;&gt;&lt;/p&gt;
-    &lt;script src=&quot;https://gist.github.com/ischmidls/0c3e254f052768d0df8d49e283478a56.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</content>
   </entry>
 </feed>
