@@ -1,0 +1,9 @@
+{
+    "title": "multiple linear regression simulation",
+    "description": "multiple linear regression simulation",
+    "date": "2025-03-15",
+    "tags": [
+      "math", "r","note"
+    ],
+    "layout": "layouts/post.njk"
+  }
