@@ -1,0 +1,9 @@
+{
+    "title": "note: multifactor anova simulation",
+    "description": "multifactor anova simulation",
+    "date": "2025-03-15",
+    "tags": [
+      "math", "r","note"
+    ],
+    "layout": "layouts/post.njk"
+  }
