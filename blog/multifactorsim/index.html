@@ -470,7 +470,280 @@ header {
 	<li><a href="/tags/note/" class="post-tag">note</a></li>
 </ul>
 
-<iframe src="https://librarianizak.github.io/multifactor.html"></iframe>
+<!-- <iframe src="https://librarianizak.github.io/multifactor.html"></iframe> -->
+
+<h3 id="multifactor-study-n-1-replicates">Multifactor Study (<span class="math inline"><em>n</em> &gt; 1</span> replicates)</h3>
+    <pre><code>library(dplyr)</code></pre>
+    <p>This simulation demonstrates a multifactor ANOVA with treatments,
+    blocks, and replicates. We compare an <strong>additive model</strong>
+    (no interaction) and a <strong>saturated model</strong> (with
+    interaction) to analyze the effects of treatments and blocks on a
+    response variable.</p>
+    <hr>
+    <pre><code># Set seed for reproducibility
+    set.seed(123)
+    
+    # Define experimental design parameters
+    n_treatments &lt;- 3  # Number of treatments
+    n_blocks &lt;- 4       # Number of blocks
+    n_replicates &lt;- 2   # Number of replicates per treatment-block combination
+    
+    # Generate synthetic data
+    data &lt;- expand.grid(
+      Treatment = factor(paste0(&quot;T&quot;, 1:n_treatments)),
+      Block = factor(paste0(&quot;B&quot;, 1:n_blocks)),
+      Replicate = 1:n_replicates
+    ) %&gt;%
+      mutate(
+        Response = rnorm(n(), mean = as.numeric(Treatment) + as.numeric(Block), sd = 1)
+      )
+    
+    # Display the first few rows of the data
+    head(data)
+    ##   Treatment Block Replicate Response
+    ## 1        T1    B1         1 1.439524
+    ## 2        T2    B1         1 2.769823
+    ## 3        T3    B1         1 5.558708
+    ## 4        T1    B2         1 3.070508
+    ## 5        T2    B2         1 4.129288
+    ## 6        T3    B2         1 6.715065</code></pre>
+    <p>The synthetic dataset includes <code>Treatment</code>,
+    <code>Block</code>, and <code>Replicate</code> factors, with a
+    <code>Response</code> variable generated from a normal distribution. The
+    mean of the response depends on the treatment and block, with added
+    random noise.</p>
+    <hr>
+    <pre><code># Perform multifactor ANOVA: Additive model (no interaction)
+    additive_model &lt;- aov(Response ~ Treatment + Block, data = data)
+    additive_summary &lt;- summary(additive_model)
+    additive_summary
+    ##             Df Sum Sq Mean Sq F value  Pr(&gt;F)   
+    ## Treatment    2  9.832   4.916   4.852 0.02064 * 
+    ## Block        3 22.699   7.566   7.467 0.00189 **
+    ## Residuals   18 18.239   1.013                   
+    ## ---
+    ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+    # Perform multifactor ANOVA: Saturated Model (with interaction)
+    saturated_model &lt;- aov(Response ~ Treatment * Block, data = data)
+    saturated_summary &lt;- summary(saturated_model)
+    saturated_summary
+    ##                 Df Sum Sq Mean Sq F value  Pr(&gt;F)   
+    ## Treatment        2  9.832   4.916   4.030 0.04583 * 
+    ## Block            3 22.699   7.566   6.202 0.00867 **
+    ## Treatment:Block  6  3.600   0.600   0.492 0.80270   
+    ## Residuals       12 14.639   1.220                   
+    ## ---
+    ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+    <p>Two models are fitted: the <strong>additive model</strong> assumes no
+    interaction between treatments and blocks, while the <strong>saturated
+    model</strong> includes an interaction term between treatments and
+    blocks.</p>
+    <hr>
+    <pre><code># Extract D.f. for additive model
+    df_treatment_additive &lt;- additive_summary[[1]][&quot;Treatment&quot;, &quot;Df&quot;]
+    df_block_additive &lt;- additive_summary[[1]][&quot;Block&quot;, &quot;Df&quot;]
+    df_residual_additive &lt;- additive_summary[[1]][&quot;Residuals&quot;, &quot;Df&quot;]
+    
+    # Extract D.f. for Saturated Model
+    df_treatment_saturated &lt;- saturated_summary[[1]][trimws(rownames(saturated_summary[[1]])) == &quot;Treatment&quot;, &quot;Df&quot;]
+    df_block_saturated &lt;- saturated_summary[[1]][&quot;Block&quot;, &quot;Df&quot;]
+    df_saturated &lt;- saturated_summary[[1]][&quot;Treatment:Block&quot;, &quot;Df&quot;]
+    df_residual_saturated &lt;- saturated_summary[[1]][&quot;Residuals&quot;, &quot;Df&quot;]
+    
+    # Calculate total number of observations
+    n_obs &lt;- n_treatments * n_blocks * n_replicates
+    
+    # Manually calculate df_resid for additive model
+    df_resid_additive_manual &lt;- n_obs - (n_treatments + n_blocks - 1)
+    
+    # Manually calculate df_resid for saturated model
+    df_resid_saturated_manual &lt;- n_obs - (n_treatments * n_blocks)</code></pre>
+    <p>The total number of observations is calculated as <span class="math inline"><em>n</em> = #treatments × #blocks × #replicates</span>.
+    For the <strong>additive model</strong>, the residual degrees of freedom
+    are <span class="math inline">df<sub>residual</sub> = <em>n</em> − (#treatments + #blocks − 1)</span>.
+    For the <strong>saturated model</strong>, the residual degrees of
+    freedom are <span class="math inline">df<sub>residual</sub> = <em>n</em> − (#treatments × #blocks)</span>.</p>
+    <hr>
+    <h4 id="additive-model-no-interaction">Additive Model (No
+    Interaction)</h4>
+    <pre><code># Print results for additive model
+    cat(
+      &quot;Total number of observations (n) &quot;, n_obs, &quot;\n&quot;,
+      &quot;D.f. for Treatment &quot;, df_treatment_additive, &quot;\n&quot;,
+      &quot;D.f. for Block &quot;, df_block_additive, &quot;\n&quot;,
+      &quot;D.f. for Residuals (ANOVA table) &quot;, df_residual_additive, &quot;\n&quot;,
+      &quot;D.f. for Residuals  (manual) &quot;, df_resid_additive_manual, &quot;\n&quot;,
+      sep = &quot;&quot;
+    )
+    ## Total number of observations (n) 24
+    ## D.f. for Treatment 2
+    ## D.f. for Block 3
+    ## D.f. for Residuals (ANOVA table) 18
+    ## D.f. for Residuals  (manual) 18</code></pre>
+    <h4 id="saturated-model-with-interaction">Saturated Model (With
+    Interaction)</h4>
+    <pre><code># Print results for Saturated Model
+    cat(
+      &quot;Total number of observations (n) &quot;, n_obs, &quot;\n&quot;,
+      &quot;D.f. for Treatment &quot;, df_treatment_saturated, &quot;\n&quot;,
+      &quot;D.f. for Block &quot;, df_block_saturated, &quot;\n&quot;,
+      &quot;D.f. for Treatment:Block Interaction &quot;, df_saturated, &quot;\n&quot;,
+      &quot;D.f. for Residuals  (ANOVA table) &quot;, df_residual_saturated, &quot;\n&quot;,
+       &quot;D.f. for Residuals  (manual) &quot;, df_resid_saturated_manual, &quot;\n&quot;,
+      sep = &quot;&quot;
+    )
+    ## Total number of observations (n) 24
+    ## D.f. for Treatment 2
+    ## D.f. for Block 3
+    ## D.f. for Treatment:Block Interaction 6
+    ## D.f. for Residuals  (ANOVA table) 12
+    ## D.f. for Residuals  (manual) 12</code></pre>
+    <h4 id="results">Results:</h4>
+    <p>The <strong>additive model</strong> has larger residual degrees of
+    freedom because it does not account for interaction. The
+    <strong>saturated model</strong> includes interaction degrees of
+    freedom, reducing the residual degrees of freedom. The total number of
+    observations remains the same for both models.</p>
+    <hr>
+    <h3 id="multifactor-study-n-1-replicates-1">Multifactor Study (<span class="math inline"><em>n</em> = 1</span> replicates)</h3>
+    <p>This simulation demonstrates two scenarios for analyzing multifactor
+    experiments with no replicates: (1) assuming interaction terms are
+    insignificant and fitting an additive model, and (2) treating one factor
+    as numeric to reduce the number of parameters and estimate residual
+    variation.</p>
+    <hr>
+    <h4 id="interaction-terms-are-insignificant-no-replicates">1.
+    Interaction Terms Are Insignificant (No Replicates)</h4>
+    <p>In this scenario, we assume that the interaction between the two
+    factors (<code>Treatment</code> and <code>Block</code>) is
+    insignificant. This allows us to fit an additive model (no interaction)
+    even in the absence of replicates, leaving degrees of freedom for
+    estimating residual variation.</p>
+    <pre><code># Set seed for reproducibility
+    set.seed(123)
+    
+    # Define experimental design parameters
+    n_treatments &lt;- 3  # Number of treatments
+    n_blocks &lt;- 4       # Number of blocks
+    n_replicates &lt;- 1   # No replicates
+    
+    # Generate synthetic data (no interaction)
+    data_no_replicates &lt;- expand.grid(
+      Treatment = factor(paste0(&quot;T&quot;, 1:n_treatments)),
+      Block = factor(paste0(&quot;B&quot;, 1:n_blocks)),
+      Replicate = 1:n_replicates
+    ) %&gt;%
+      mutate(
+        Response = rnorm(n(), mean = as.numeric(Treatment) + as.numeric(Block), sd = 1)
+      )
+    
+    # Fit additive model (no interaction)
+    additive_model &lt;- aov(Response ~ Treatment + Block, data = data_no_replicates)
+    additive_summary &lt;- summary(additive_model)
+    
+    # Print ANOVA table
+    print(additive_summary)
+    ##             Df Sum Sq Mean Sq F value Pr(&gt;F)  
+    ## Treatment    2 16.623   8.311   9.068 0.0154 *
+    ## Block        3 14.844   4.948   5.398 0.0386 *
+    ## Residuals    6  5.499   0.917                 
+    ## ---
+    ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+    <hr>
+    <h4 id="one-factor-can-be-treated-as-numeric-no-replicates">2. One
+    Factor Can Be Treated as Numeric (No Replicates)</h4>
+    <p>In this scenario, one of the factors (e.g., <code>Treatment</code>)
+    has three or more numerical levels, and we can model its effect as a
+    linear function of the numerical variable. This reduces the number of
+    parameters, leaving degrees of freedom for estimating residual
+    variation.</p>
+    <pre><code># Set seed for reproducibility
+    set.seed(123)
+    
+    # Define experimental design parameters
+    n_treatments &lt;- 3  # Number of treatments (numeric levels)
+    n_blocks &lt;- 4       # Number of blocks
+    n_replicates &lt;- 1   # No replicates
+    
+    # Generate synthetic data (linear effect of Treatment)
+    data_numeric_treatment &lt;- expand.grid(
+      Treatment = 1:n_treatments,  # Numeric treatment levels
+      Block = factor(paste0(&quot;B&quot;, 1:n_blocks)),
+      Replicate = 1:n_replicates
+    ) %&gt;%
+      mutate(
+        Response = rnorm(n(), mean = 2 * Treatment + as.numeric(Block), sd = 1)
+      )
+    
+    # Fit model with Treatment as numeric
+    numeric_model &lt;- aov(Response ~ Treatment + Block, data = data_numeric_treatment)
+    numeric_summary &lt;- summary(numeric_model)
+    
+    # Print ANOVA table
+    print(numeric_summary)
+    ##             Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+    ## Treatment    1  47.15   47.15  56.749 0.000134 ***
+    ## Block        3  14.84    4.95   5.955 0.024341 *  
+    ## Residuals    7   5.82    0.83                     
+    ## ---
+    ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+    <hr>
+    <h4 id="differences-between-the-two-scenarios">Differences Between the
+    Two Scenarios</h4>
+    <p>The first scenario assumes no interaction between factors and fits an
+    additive model to estimate residual variation. The second scenario
+    treats one factor as a numeric variable (linear effect), reducing the
+    number of parameters and allowing estimation of residual variation.</p>
+    <pre><code>anova(additive_model)
+    ## Analysis of Variance Table
+    ## 
+    ## Response: Response
+    ##           Df  Sum Sq Mean Sq F value  Pr(&gt;F)  
+    ## Treatment  2 16.6226  8.3113  9.0679 0.01536 *
+    ## Block      3 14.8440  4.9480  5.3984 0.03857 *
+    ## Residuals  6  5.4994  0.9166                  
+    ## ---
+    ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+    anova(numeric_model)
+    ## Analysis of Variance Table
+    ## 
+    ## Response: Response
+    ##           Df Sum Sq Mean Sq F value    Pr(&gt;F)    
+    ## Treatment  1 47.149  47.149 56.7492 0.0001335 ***
+    ## Block      3 14.844   4.948  5.9555 0.0243415 *  
+    ## Residuals  7  5.816   0.831                      
+    ## ---
+    ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+    <p>The additive model treats <code>Treatment</code> as a categorical
+    variable with 2 degrees of freedom, yielding a sum of squares of 16.62,
+    a mean square of 8.31, an F-value of 9.07, and a p-value of 0.015. In
+    contrast, the numeric model treats <code>Treatment</code> as a numeric
+    variable with 1 degree of freedom, resulting in a larger sum of squares
+    (47.15), mean square (47.15), and F-value (56.75), with a highly
+    significant p-value (0.0001). Both models show significant effects for
+    <code>Block</code>, but the numeric model explains more variation in the
+    response variable through the linear effect of <code>Treatment</code>,
+    as evidenced by the higher F-value and lower p-value. This suggests that
+    modeling <code>Treatment</code> as a numeric variable provides a better
+    fit for the data in this case than eliminating interactions.</p>
+    <p>Modeling <code>Treatment</code> as a numeric variable will
+    <strong>not always provide a better fit</strong> for the data than
+    eliminating interactions. Whether this approach improves the fit depends
+    on the underlying relationship between the <code>Treatment</code>
+    variable and the response. If the true relationship between
+    <code>Treatment</code> and the response is <strong>linear</strong>, then
+    treating <code>Treatment</code> as numeric can provide a better fit by
+    reducing the number of parameters and capturing the trend more
+    efficiently. However, if the relationship is <strong>nonlinear</strong>
+    or if there are significant interactions between <code>Treatment</code>
+    and other factors (e.g., <code>Block</code>), then treating
+    <code>Treatment</code> as numeric may oversimplify the model and lead to
+    a poorer fit. In such cases, retaining <code>Treatment</code> as a
+    categorical variable and eliminating insignificant interactions (if
+    justified) might be more appropriate. The choice of model should be
+    guided by diagnostic checks, such as residual analysis, lack-of-fit
+    tests, and domain knowledge, to ensure the model accurately reflects the
+    data structure.</p>
 <ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/mlrsim/">note: multiple linear regression simulation</a></li>
 </ul>
 
@@ -481,7 +754,7 @@ header {
 			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
 		</footer>
 
-		<!-- This page `/blog/multifactorsim/` was built on 2025-03-15T20:49:58.015Z -->
+		<!-- This page `/blog/multifactorsim/` was built on 2025-03-15T23:55:14.789Z -->
 		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
 	</body>
 </html>
