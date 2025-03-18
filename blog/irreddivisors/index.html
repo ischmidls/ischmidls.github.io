@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>note: complex derivatives and matrices</title>
-		<meta name="description" content="note: copmlex derivatives and matrices">
+		<title>irreducible divisors</title>
+		<meta name="description" content="irreducible divisors">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="izak">
 		
 		<style>/**
@@ -461,52 +461,69 @@ header {
 		<main id="skip">
 			<heading-anchors>
 				
-<h1 id="note-complex-derivatives-and-matrices">note: complex derivatives and matrices</h1>
+<h1 id="irreducible-divisors">irreducible divisors</h1>
 
 <ul class="post-metadata">
-	<li><time datetime="2025-02-12">12 February 2025</time></li>
+	<li><time datetime="2025-01-14">14 January 2025</time></li>
 	<li><a href="/tags/math/" class="post-tag">math</a>, </li>
 	<li><a href="/tags/note/" class="post-tag">note</a></li>
 </ul>
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      jax: ["input/TeX", "output/HTML-CSS"],
-      extensions: ["tex2jax.js"],
-      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
-      tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
-      TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
-      messageStyle: "none"
-    });
-    </script>    
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
-
-<p>For a complex function $ f(x + iy) = u(x, y) + iv(x, y) $, the Jacobian matrix is $\mathbf{J} = \begin{pmatrix} \frac{\partial u}{\partial x} & \frac{\partial v}{\partial x} \\ \frac{\partial u}{\partial y} & \frac{\partial v}{\partial y} \end{pmatrix}$.
-</p>
-
-<p>For $ f $ to be complex differentiable, $ \mathbf{J} $ must satisfy the Cauchy-Riemann equations $\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y} \quad \text{and} \quad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}.$
-</p>
-
-<p>When these hold, $ \mathbf{J} $ takes the form $\mathbf{J} = \begin{pmatrix} a & -b \\ b & a \end{pmatrix}$, where $ a = \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y} $ and $ b = \frac{\partial v}{\partial x} = -\frac{\partial u}{\partial y} $. This matrix corresponds to the complex number $ a + bi $, reflecting the fact that the derivative of a complex function is itself a complex number. For example, for $ f(z) = z^2 $, the Jacobian is $\mathbf{J} = \begin{pmatrix} 2x & 2y \\ -2y & 2x \end{pmatrix}$, which corresponds to $ 2x + 2iy $.
-</p>
-
-<p>The matrix representation of complex numbers as $ \begin{pmatrix} a & -b \\ b & a \end{pmatrix} $ naturally follows from the geometric interpretation of complex multiplication and De Moivre's Theorem. A complex number $ z = a + bi $ can be written in polar form as $ z = r (\cos \theta + i \sin \theta) $, where $ r = \sqrt{a^2 + b^2} $ is the magnitude and $ \theta $ is the argument. Multiplication by $ z $ corresponds to scaling by $ r $ and rotating by $ \theta $.
-</p>
-
-<p>The rotation matrix for an angle $ \theta $ is $\begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix}.$
-</p>
-
-<p>Multiplying this by the scaling factor $ r $ gives $r \begin{pmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{pmatrix} = \begin{pmatrix} a & -b \\ b & a \end{pmatrix}$, where $ a = r \cos \theta $ and $ b = r \sin \theta $. This matches the matrix representation of $ z = a + bi $. Thus, the matrix form $ \begin{pmatrix} a & -b \\ b & a \end{pmatrix} $ naturally encodes both scaling and rotation, reflecting the geometric action of complex multiplication as described by De Moivre's Theorem.
-</p>
-
-<p>For example, the function $f(z) = z$ has $u(x, y) = x$ and $v(x, y) = y$, yielding the Jacobian $\mathbf{J} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$, corresponding to $1 + 0i$. </p>
-<p>For $f(z) = z^2$, we have $u(x, y) = x^2 - y^2$ and $v(x, y) = 2xy$, giving the Jacobian $\mathbf{J} = \begin{pmatrix} 2x & 2y \\ -2y & 2x \end{pmatrix}$, which corresponds to $2x + 2iy$. </p>
-<p>And for $f(z) = e^z$, we get $u(x, y) = e^x \cos y$ and $v(x, y) = e^x \sin y$, resulting in the Jacobian $\mathbf{J} = \begin{pmatrix} e^x \cos y & -e^x \sin y \\ e^x \sin y & e^x \cos y \end{pmatrix}$, corresponding to $e^z$.</p>
-
-
-
-<p>Inspired by <a href="https://math.stackexchange.com/a/1448085/1098426">this</a> discussion.</p>
-<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/irreddivisors/">irreducible divisors</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/unknownvariance/">unknown variance of concave distribution</a></li>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Untitled</title>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+</head>
+<body>
+<p>Here is a proof I struggled with in the spring of 2024 that I wanted
+to come back to. To start, this proof gives nice motivation for an
+abstract area of math called Galois theory which is most famous for
+showing that there’s no “quadratic formula” or closed expression for the
+roots of a polynomial of degrees greater than four. But another
+interesting motivation is in coding theory, where finite fields and
+their polynomials can construct error-correcting codes. For example,
+Reed-Solomon codes encode data as polynomials over a finite field <span class="math inline">\(\mathbb{F}_{2^m}\)</span>. The proof that
+irreducible polynomials divide <span class="math inline">\(x^{p^n} -
+x\)</span> ensures that the roots of these polynomials lie within <span class="math inline">\(\mathbb{F}_{2^m}\)</span>, making encoding and
+decoding efficient. This property allows Reed-Solomon codes to detect
+and correct errors in data transmission, such as in CDs or QR codes. By
+adding <span class="math inline">\(t = n - k\)</span> check symbols to
+the data, Reed-Solomon codes can detect any combination of up to <span class="math inline">\(t\)</span> erroneous symbols, or locate and
+correct up to <span class="math inline">\(\lfloor t/2 \rfloor\)</span>
+erroneous symbols at unknown locations.</p>
+<hr>
+<p>We want to show every irreducible polynomial <span class="math inline">\(p(x)\)</span> over a finite field of prime
+characteristic <span class="math inline">\(F_p\)</span> is a divisor of
+<span class="math inline">\(x^{p^n}-x\)</span> for some natural number
+<span class="math inline">\(n\)</span>.</p>
+<p>First, as a lemma, we’ll show every finite field <span class="math inline">\(F\)</span> is perfect, meaning every irreducible
+polynomial over <span class="math inline">\(F\)</span> has no multiple
+roots in any field extension over <span class="math inline">\(F\)</span>, or equivalently, every irreducible
+polynomial over <span class="math inline">\(F\)</span> is separable, or
+its roots are distinct in an algebraic closure of <span class="math inline">\(F\)</span>, so the number of distinct roots is
+equal to the degree of the polynomial.</p>
+<p>Say <span class="math inline">\(F\)</span> is a finite field of
+characteristic <span class="math inline">\(p\)</span>. Say <span class="math inline">\(f\)</span> maps <span class="math inline">\(F\)</span> to <span class="math inline">\(F\)</span> by <span class="math inline">\(f(x) =
+x^p\)</span> for any <span class="math inline">\(x \in F\)</span>. See
+<span class="math inline">\(f\)</span> is a field automorphism as <span class="math inline">\(f(ab) = (ab)^p = a^p b^p = f(a) f(b)\)</span> and
+<span class="math inline">\(f(a+b) = (a+b)^p = a^p + \binom{p}{1}
+a^{p-1} b + \binom{p}{2} a^{p-2}b^2 + \dots + \binom{p}{p-1}ab^{p-1} +
+b^p = a^p + b^p\)</span>as <span class="math inline">\(p\)</span>
+divides <span class="math inline">\(\binom{p}{i}\)</span>. And, <span class="math inline">\(x \neq 0\)</span> gives <span class="math inline">\(x^p \neq 0\)</span>, so <span class="math inline">\(\ker f = \{0\}\)</span>. Then <span class="math inline">\(f\)</span> is injective and as <span class="math inline">\(F\)</span> is finite, <span class="math inline">\(f\)</span> injective gives <span class="math inline">\(f\)</span> surjective. We see then <span class="math inline">\(F^p = F\)</span>.</p>
+<p>Now, to show any irreducible polynomial over <span class="math inline">\(F_p\)</span> divides <span class="math inline">\(x^{p^n}-x\)</span>, say <span class="math inline">\(p(x)\)</span> is an irreducible polynomial of
+degree <span class="math inline">\(m\)</span> in <span class="math inline">\(\mathbb{F}_p[x]\)</span>. Let <span class="math inline">\(K\)</span> be the finite extension of <span class="math inline">\(\mathbb{F}_p\)</span> obtained by adjoining all
+the zeros of <span class="math inline">\(p(x)\)</span> in <span class="math inline">\(\overline{\mathbb{F}_p}\)</span>, the algebraic
+closure of <span class="math inline">\(\mathbb{F}_p\)</span>. Then <span class="math inline">\(K\)</span> is a finite field of order <span class="math inline">\(p^n\)</span> for some positive integer <span class="math inline">\(n\)</span>, and consists precisely of all zeros of
+<span class="math inline">\(x^{p^n} - x\)</span> in <span class="math inline">\(\overline{\mathbb{F}_p}\)</span>. Now <span class="math inline">\(p(x)\)</span> factors into linear factors in <span class="math inline">\(K[x]\)</span>, as the linear factors of <span class="math inline">\(x^{p^n} - x\)</span> in <span class="math inline">\(K[x]\)</span> include these linear factors, and
+<span class="math inline">\(p(x)\)</span> has no repeated roots since we
+showed every finite field is perfect. Thus, <span class="math inline">\(p(x)\)</span> is a divisor of <span class="math inline">\(x^{p^n} - x\)</span>.</p>
+</body>
+</html>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/alllimits/">complete categories</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/complexdiff/">note: complex derivatives and matrices</a></li>
 </ul>
 
 			</heading-anchors>
@@ -516,7 +533,7 @@ header {
 			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
 		</footer>
 
-		<!-- This page `/blog/complexdiff/` was built on 2025-03-18T22:48:14.390Z -->
+		<!-- This page `/blog/irreddivisors/` was built on 2025-03-18T22:48:14.391Z -->
 		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
 	</body>
 </html>
