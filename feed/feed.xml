@@ -444,7 +444,7 @@ ggplot(data, aes(x = Fitted, y = y)) +
     &amp;quot;Reference Line (y = x)&amp;quot; = &amp;quot;red&amp;quot;,
     &amp;quot;Mean of Observed Values&amp;quot; = &amp;quot;purple&amp;quot;
   ))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&quot;https://ischmidls.github.io/blog/mlrsim/content/blog/mlrsim/rId23.png&quot; style=&quot;width:5.05263in;height:4.04211in&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://ischmidls.github.io/blog/mlrsim/IwOoJmLkyM-1155.png&quot;&gt;&lt;/p&gt;
 &lt;h3 id=&quot;checking-f-statistic-manually&quot;&gt;Checking F-statistic
 Manually&lt;/h3&gt;
 &lt;p&gt;Finally, we manually calculate the F-statistic and compare it with
