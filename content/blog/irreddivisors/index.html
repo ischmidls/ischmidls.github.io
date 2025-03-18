@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Untitled</title>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<p>Here is a proof I struggled with in the spring of 2024 that I wanted
+to come back to. To start, this proof gives nice motivation for an
+abstract area of math called Galois theory which is most famous for
+showing that there’s no “quadratic formula” or closed expression for the
+roots of a polynomial of degrees greater than four. But another
+interesting motivation is in coding theory, where finite fields and
+their polynomials can construct error-correcting codes. For example,
+Reed-Solomon codes encode data as polynomials over a finite field <span
+class="math inline">\(\mathbb{F}_{2^m}\)</span>. The proof that
+irreducible polynomials divide <span class="math inline">\(x^{p^n} -
+x\)</span> ensures that the roots of these polynomials lie within <span
+class="math inline">\(\mathbb{F}_{2^m}\)</span>, making encoding and
+decoding efficient. This property allows Reed-Solomon codes to detect
+and correct errors in data transmission, such as in CDs or QR codes. By
+adding <span class="math inline">\(t = n - k\)</span> check symbols to
+the data, Reed-Solomon codes can detect any combination of up to <span
+class="math inline">\(t\)</span> erroneous symbols, or locate and
+correct up to <span class="math inline">\(\lfloor t/2 \rfloor\)</span>
+erroneous symbols at unknown locations.</p>
+<hr />
+<p>We want to show every irreducible polynomial <span
+class="math inline">\(p(x)\)</span> over a finite field of prime
+characteristic <span class="math inline">\(F_p\)</span> is a divisor of
+<span class="math inline">\(x^{p^n}-x\)</span> for some natural number
+<span class="math inline">\(n\)</span>.</p>
+<p>First, as a lemma, we’ll show every finite field <span
+class="math inline">\(F\)</span> is perfect, meaning every irreducible
+polynomial over <span class="math inline">\(F\)</span> has no multiple
+roots in any field extension over <span
+class="math inline">\(F\)</span>, or equivalently, every irreducible
+polynomial over <span class="math inline">\(F\)</span> is separable, or
+its roots are distinct in an algebraic closure of <span
+class="math inline">\(F\)</span>, so the number of distinct roots is
+equal to the degree of the polynomial.</p>
+<p>Say <span class="math inline">\(F\)</span> is a finite field of
+characteristic <span class="math inline">\(p\)</span>. Say <span
+class="math inline">\(f\)</span> maps <span
+class="math inline">\(F\)</span> to <span
+class="math inline">\(F\)</span> by <span class="math inline">\(f(x) =
+x^p\)</span> for any <span class="math inline">\(x \in F\)</span>. See
+<span class="math inline">\(f\)</span> is a field automorphism as <span
+class="math inline">\(f(ab) = (ab)^p = a^p b^p = f(a) f(b)\)</span> and
+<span class="math inline">\(f(a+b) = (a+b)^p = a^p + \binom{p}{1}
+a^{p-1} b + \binom{p}{2} a^{p-2}b^2 + \dots + \binom{p}{p-1}ab^{p-1} +
+b^p = a^p + b^p\)</span>as <span class="math inline">\(p\)</span>
+divides <span class="math inline">\(\binom{p}{i}\)</span>. And, <span
+class="math inline">\(x \neq 0\)</span> gives <span
+class="math inline">\(x^p \neq 0\)</span>, so <span
+class="math inline">\(\ker f = \{0\}\)</span>. Then <span
+class="math inline">\(f\)</span> is injective and as <span
+class="math inline">\(F\)</span> is finite, <span
+class="math inline">\(f\)</span> injective gives <span
+class="math inline">\(f\)</span> surjective. We see then <span
+class="math inline">\(F^p = F\)</span>.</p>
+<p>Now, to show any irreducible polynomial over <span
+class="math inline">\(F_p\)</span> divides <span
+class="math inline">\(x^{p^n}-x\)</span>, say <span
+class="math inline">\(p(x)\)</span> is an irreducible polynomial of
+degree <span class="math inline">\(m\)</span> in <span
+class="math inline">\(\mathbb{F}_p[x]\)</span>. Let <span
+class="math inline">\(K\)</span> be the finite extension of <span
+class="math inline">\(\mathbb{F}_p\)</span> obtained by adjoining all
+the zeros of <span class="math inline">\(p(x)\)</span> in <span
+class="math inline">\(\overline{\mathbb{F}_p}\)</span>, the algebraic
+closure of <span class="math inline">\(\mathbb{F}_p\)</span>. Then <span
+class="math inline">\(K\)</span> is a finite field of order <span
+class="math inline">\(p^n\)</span> for some positive integer <span
+class="math inline">\(n\)</span>, and consists precisely of all zeros of
+<span class="math inline">\(x^{p^n} - x\)</span> in <span
+class="math inline">\(\overline{\mathbb{F}_p}\)</span>. Now <span
+class="math inline">\(p(x)\)</span> factors into linear factors in <span
+class="math inline">\(K[x]\)</span>, as the linear factors of <span
+class="math inline">\(x^{p^n} - x\)</span> in <span
+class="math inline">\(K[x]\)</span> include these linear factors, and
+<span class="math inline">\(p(x)\)</span> has no repeated roots since we
+showed every finite field is perfect. Thus, <span
+class="math inline">\(p(x)\)</span> is a divisor of <span
+class="math inline">\(x^{p^n} - x\)</span>.</p>
+</body>
+</html>
