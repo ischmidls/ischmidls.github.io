@@ -15,7 +15,18 @@
     <link href="https://ischmidls.github.io/blog/multifactorsim/" />
     <updated>2025-03-15T00:00:00Z</updated>
     <id>https://ischmidls.github.io/blog/multifactorsim/</id>
-    <content type="html">&lt;!-- &lt;iframe src=&quot;https://librarianizak.github.io/multifactor.html&quot;&gt;&lt;/iframe&gt; --&gt;
+    <content type="html">&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+  MathJax.Hub.Config({
+    jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
+    extensions: [&quot;tex2jax.js&quot;],
+    &quot;HTML-CSS&quot;: { preferredFont: &quot;TeX&quot;, availableFonts: [&quot;STIX&quot;,&quot;TeX&quot;] },
+    tex2jax: { inlineMath: [ [&quot;$&quot;, &quot;$&quot;], [&quot;&#92;&#92;(&quot;,&quot;&#92;&#92;)&quot;] ], displayMath: [ [&quot;$$&quot;,&quot;$$&quot;], [&quot;&#92;&#92;[&quot;, &quot;&#92;&#92;]&quot;] ], processEscapes: true, ignoreClass: &quot;tex2jax_ignore|dno&quot; },
+    TeX: { noUndefined: { attributes: { mathcolor: &quot;red&quot;, mathbackground: &quot;#FFEEEE&quot;, mathsize: &quot;90%&quot; } } },
+    messageStyle: &quot;none&quot;
+  });
+  &lt;/script&gt;    
+  &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js&quot;&gt;&lt;/script&gt;
+  
 
 &lt;h3 id=&quot;multifactor-study-n-1-replicates&quot;&gt;Multifactor Study (&lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;n&lt;/em&gt; &amp;gt; 1&lt;/span&gt; replicates)&lt;/h3&gt;
     &lt;pre&gt;&lt;code&gt;library(dplyr)&lt;/code&gt;&lt;/pre&gt;
@@ -103,11 +114,19 @@
     
     # Manually calculate df_resid for saturated model
     df_resid_saturated_manual &amp;lt;- n_obs - (n_treatments * n_blocks)&lt;/code&gt;&lt;/pre&gt;
-    &lt;p&gt;The total number of observations is calculated as &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;n&lt;/em&gt; = #treatments × #blocks × #replicates&lt;/span&gt;.
-    For the &lt;strong&gt;additive model&lt;/strong&gt;, the residual degrees of freedom
-    are &lt;span class=&quot;math inline&quot;&gt;df&lt;sub&gt;residual&lt;/sub&gt; = &lt;em&gt;n&lt;/em&gt; − (#treatments + #blocks − 1)&lt;/span&gt;.
-    For the &lt;strong&gt;saturated model&lt;/strong&gt;, the residual degrees of
-    freedom are &lt;span class=&quot;math inline&quot;&gt;df&lt;sub&gt;residual&lt;/sub&gt; = &lt;em&gt;n&lt;/em&gt; − (#treatments × #blocks)&lt;/span&gt;.&lt;/p&gt;
+  &lt;p&gt;
+  The total number of observations is calculated as 
+  &#92;[
+  n = &#92;text{treatments} &#92;times &#92;text{blocks} &#92;times &#92;text{replicates}.
+  &#92;]
+  For the **additive model**, the residual degrees of freedom are 
+  &#92;[
+  df_{&#92;text{residual}} = n - (&#92;text{treatments} + &#92;text{blocks} - 1).
+  &#92;]
+  For the **saturated model**, the residual degrees of freedom are 
+  &#92;[
+  df_{&#92;text{residual}} = n - (&#92;text{treatments} &#92;times &#92;text{blocks}).
+  &#92;]&lt;/p&gt;
     &lt;hr&gt;
     &lt;h4 id=&quot;additive-model-no-interaction&quot;&gt;Additive Model (No
     Interaction)&lt;/h4&gt;
@@ -295,14 +314,27 @@
     <link href="https://ischmidls.github.io/blog/mlrsim/" />
     <updated>2025-03-15T00:00:00Z</updated>
     <id>https://ischmidls.github.io/blog/mlrsim/</id>
-    <content type="html">&lt;h2 id=&quot;simulating-data-and-fitting-a-multiple-linear-regression-model&quot;&gt;Simulating
+    <content type="html">
+&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+  MathJax.Hub.Config({
+    jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;],
+    extensions: [&quot;tex2jax.js&quot;],
+    &quot;HTML-CSS&quot;: { preferredFont: &quot;TeX&quot;, availableFonts: [&quot;STIX&quot;,&quot;TeX&quot;] },
+    tex2jax: { inlineMath: [ [&quot;$&quot;, &quot;$&quot;], [&quot;&#92;&#92;(&quot;,&quot;&#92;&#92;)&quot;] ], displayMath: [ [&quot;$$&quot;,&quot;$$&quot;], [&quot;&#92;&#92;[&quot;, &quot;&#92;&#92;]&quot;] ], processEscapes: true, ignoreClass: &quot;tex2jax_ignore|dno&quot; },
+    TeX: { noUndefined: { attributes: { mathcolor: &quot;red&quot;, mathbackground: &quot;#FFEEEE&quot;, mathsize: &quot;90%&quot; } } },
+    messageStyle: &quot;none&quot;
+  });
+  &lt;/script&gt;    
+  &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js&quot;&gt;&lt;/script&gt;
+  
+  &lt;h2 id=&quot;simulating-data-and-fitting-a-multiple-linear-regression-model&quot;&gt;Simulating
 Data and Fitting a Multiple Linear Regression Model&lt;/h2&gt;
 &lt;p&gt;In this example, we simulate data and fit a multiple linear
 regression model to it. We then manually calculate the adjusted
 R-squared and F-statistic to compare with the values provided by the
 model summary.&lt;/p&gt;
 &lt;h3 id=&quot;simulating-data&quot;&gt;Simulating Data&lt;/h3&gt;
-&lt;p&gt;First, we set the seed for reproducibility and simulate the data:&lt;/p&gt;
+&lt;p&gt;First, we set the seed for reproducibility and simulate the data&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# Set seed for reproducibility
 set.seed(123)
 
@@ -331,7 +363,7 @@ head(data)
 &lt;h3 id=&quot;fitting-the-multiple-linear-regression-model&quot;&gt;Fitting the
 Multiple Linear Regression Model&lt;/h3&gt;
 &lt;p&gt;Next, we fit the multiple linear regression model and compare summary
-with anova output:&lt;/p&gt;
+with anova output&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# Fit the multiple linear regression model
 mlr_model &amp;lt;- lm(y ~ x1 + x2 + x3 + x4, data = data)
 
@@ -374,7 +406,7 @@ anova(mlr_model)
 &lt;h3 id=&quot;checking-adjusted-r-squared-manually&quot;&gt;Checking Adjusted
 R-squared Manually&lt;/h3&gt;
 &lt;p&gt;We can manually calculate the adjusted R-squared and compare it with
-the value from the model summary:&lt;/p&gt;
+the value from the model summary&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# Extract necessary values
 SSE &amp;lt;- sum(residuals(mlr_model)^2)  # Sum of squared errors
 SST &amp;lt;- sum((y - mean(y))^2)         # Total sum of squares
@@ -401,19 +433,28 @@ cat(&amp;quot;Adjusted R-squared (from model):&amp;quot;, summary(mlr_model)$adj
 ## Adjusted R-squared (from model): 0.964773&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&quot;observed-mean-observed-and-fitted-values-for-sum-of-squares&quot;&gt;Observed,
 Mean Observed, and Fitted Values for Sum of Squares&lt;/h3&gt;
-&lt;p&gt;In regression analysis, let &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;y&lt;/em&gt;&lt;sub&gt;&lt;em&gt;i&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt; (observed,
-blue) represent the actual data points, &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;ŷ&lt;/em&gt;&lt;sub&gt;&lt;em&gt;i&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt; (fitted,
-green) denote the predicted values from the model, and &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;ȳ&lt;/em&gt;&lt;/span&gt; (mean of observed values, purple)
-be the average of the observed data. The reference line &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;y&lt;/em&gt; = &lt;em&gt;x&lt;/em&gt;&lt;/span&gt; (red) serves as a 1:1
-comparison line. The total sum of squares (SST), &lt;span class=&quot;math inline&quot;&gt;$&#92;text{SST} = &#92;sum_{i = 1}^{n}&#92;left( y_{i} - &#92;bar{y}
-&#92;right)^{2}$&lt;/span&gt;, quantifies the total variation in &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;y&lt;/em&gt;&lt;sub&gt;&lt;em&gt;i&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt;. This can be
-decomposed into the sum of squared errors (SSE), &lt;span class=&quot;math inline&quot;&gt;$&#92;text{SSE} = &#92;sum_{i = 1}^{n}&#92;left( y_{i} -
-{&#92;widehat{y}}_{i} &#92;right)^{2}$&lt;/span&gt;, capturing the deviation of &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;y&lt;/em&gt;&lt;sub&gt;&lt;em&gt;i&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt; from &lt;span class=&quot;math inline&quot;&gt;&lt;em&gt;ŷ&lt;/em&gt;&lt;sub&gt;&lt;em&gt;i&lt;/em&gt;&lt;/sub&gt;&lt;/span&gt;, and the sum
-of squares due to regression (SSR), &lt;span class=&quot;math inline&quot;&gt;$&#92;text{SSR} = &#92;sum_{i = 1}^{n}&#92;left(
-{&#92;widehat{y}}_{i} - &#92;bar{y} &#92;right)^{2}$&lt;/span&gt;, representing the
-variation explained by the model, such that &lt;span class=&quot;math inline&quot;&gt;SST = SSE + SSR&lt;/span&gt; or equivalently, &lt;span class=&quot;math inline&quot;&gt;$&#92;sum_{i = 1}^{n}&#92;left( y_{i} - &#92;bar{y} &#92;right)^{2}
-= &#92;sum_{i = 1}^{n}&#92;left( y_{i} - {&#92;widehat{y}}_{i} &#92;right)^{2} + &#92;sum_{i
-= 1}^{n}&#92;left( {&#92;widehat{y}}_{i} - &#92;bar{y} &#92;right)^{2}$&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;
+In regression analysis, let &#92;( y_i &#92;) (observed, blue) represent the actual data points, &#92;( &#92;hat{y}_i &#92;) (fitted, green) denote the predicted values from the model, and &#92;( &#92;bar{y} &#92;) (mean of observed values, purple) be the average of the observed data. The reference line &#92;( y = x &#92;) (red) serves as a 1:1 comparison line. The total sum of squares (SST), 
+&#92;[
+&#92;text{SST} = &#92;sum_{i = 1}^{n} &#92;left( y_{i} - &#92;bar{y} &#92;right)^{2},
+&#92;]
+quantifies the total variation in &#92;( y_i &#92;). This can be decomposed into the sum of squared errors (SSE), 
+&#92;[
+&#92;text{SSE} = &#92;sum_{i = 1}^{n} &#92;left( y_{i} - &#92;hat{y}_{i} &#92;right)^{2},
+&#92;]
+capturing the deviation of &#92;( y_i &#92;) from &#92;( &#92;hat{y}_i &#92;), and the sum of squares due to regression (SSR), 
+&#92;[
+&#92;text{SSR} = &#92;sum_{i = 1}^{n} &#92;left( &#92;hat{y}_{i} - &#92;bar{y} &#92;right)^{2},
+&#92;]
+representing the variation explained by the model, such that 
+&#92;[
+&#92;text{SST} = &#92;text{SSE} + &#92;text{SSR},
+&#92;]
+or equivalently,
+&#92;[
+&#92;sum_{i = 1}^{n} &#92;left( y_{i} - &#92;bar{y} &#92;right)^{2} = &#92;sum_{i = 1}^{n} &#92;left( y_{i} - &#92;hat{y}_{i} &#92;right)^{2} + &#92;sum_{i = 1}^{n} &#92;left( &#92;hat{y}_{i} - &#92;bar{y} &#92;right)^{2}.
+&#92;]
+&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;library(ggplot2)
 # Add fitted values to the data frame
 data$Fitted &amp;lt;- fitted(mlr_model)

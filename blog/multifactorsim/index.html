@@ -470,7 +470,18 @@ header {
 	<li><a href="/tags/note/" class="post-tag">note</a></li>
 </ul>
 
-<!-- <iframe src="https://librarianizak.github.io/multifactor.html"></iframe> -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+    tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+    TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
+    messageStyle: "none"
+  });
+  </script>    
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+  
 
 <h3 id="multifactor-study-n-1-replicates">Multifactor Study (<span class="math inline"><em>n</em> &gt; 1</span> replicates)</h3>
     <pre><code>library(dplyr)</code></pre>
@@ -558,11 +569,19 @@ header {
     
     # Manually calculate df_resid for saturated model
     df_resid_saturated_manual &lt;- n_obs - (n_treatments * n_blocks)</code></pre>
-    <p>The total number of observations is calculated as <span class="math inline"><em>n</em> = #treatments × #blocks × #replicates</span>.
-    For the <strong>additive model</strong>, the residual degrees of freedom
-    are <span class="math inline">df<sub>residual</sub> = <em>n</em> − (#treatments + #blocks − 1)</span>.
-    For the <strong>saturated model</strong>, the residual degrees of
-    freedom are <span class="math inline">df<sub>residual</sub> = <em>n</em> − (#treatments × #blocks)</span>.</p>
+  <p>
+  The total number of observations is calculated as 
+  \[
+  n = \text{treatments} \times \text{blocks} \times \text{replicates}.
+  \]
+  For the **additive model**, the residual degrees of freedom are 
+  \[
+  df_{\text{residual}} = n - (\text{treatments} + \text{blocks} - 1).
+  \]
+  For the **saturated model**, the residual degrees of freedom are 
+  \[
+  df_{\text{residual}} = n - (\text{treatments} \times \text{blocks}).
+  \]</p>
     <hr>
     <h4 id="additive-model-no-interaction">Additive Model (No
     Interaction)</h4>
@@ -754,7 +773,7 @@ header {
 			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
 		</footer>
 
-		<!-- This page `/blog/multifactorsim/` was built on 2025-03-19T00:39:45.746Z -->
+		<!-- This page `/blog/multifactorsim/` was built on 2025-03-22T16:36:55.621Z -->
 		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
 	</body>
 </html>
