@@ -1,4 +1,17 @@
-<h2
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: ["tex2jax.js"],
+    "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+    tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+    TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
+    messageStyle: "none"
+  });
+  </script>    
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+  
+  <h2
 id="simulating-data-and-fitting-a-multiple-linear-regression-model">Simulating
 Data and Fitting a Multiple Linear Regression Model</h2>
 <p>In this example, we simulate data and fit a multiple linear
@@ -6,7 +19,7 @@ regression model to it. We then manually calculate the adjusted
 R-squared and F-statistic to compare with the values provided by the
 model summary.</p>
 <h3 id="simulating-data">Simulating Data</h3>
-<p>First, we set the seed for reproducibility and simulate the data:</p>
+<p>First, we set the seed for reproducibility and simulate the data</p>
 <pre><code># Set seed for reproducibility
 set.seed(123)
 
@@ -35,7 +48,7 @@ head(data)
 <h3 id="fitting-the-multiple-linear-regression-model">Fitting the
 Multiple Linear Regression Model</h3>
 <p>Next, we fit the multiple linear regression model and compare summary
-with anova output:</p>
+with anova output</p>
 <pre><code># Fit the multiple linear regression model
 mlr_model &lt;- lm(y ~ x1 + x2 + x3 + x4, data = data)
 
@@ -78,7 +91,7 @@ anova(mlr_model)
 <h3 id="checking-adjusted-r-squared-manually">Checking Adjusted
 R-squared Manually</h3>
 <p>We can manually calculate the adjusted R-squared and compare it with
-the value from the model summary:</p>
+the value from the model summary</p>
 <pre><code># Extract necessary values
 SSE &lt;- sum(residuals(mlr_model)^2)  # Sum of squared errors
 SST &lt;- sum((y - mean(y))^2)         # Total sum of squares
@@ -106,31 +119,28 @@ cat(&quot;Adjusted R-squared (from model):&quot;, summary(mlr_model)$adj.r.squar
 <h3
 id="observed-mean-observed-and-fitted-values-for-sum-of-squares">Observed,
 Mean Observed, and Fitted Values for Sum of Squares</h3>
-<p>In regression analysis, let <span
-class="math inline"><em>y</em><sub><em>i</em></sub></span> (observed,
-blue) represent the actual data points, <span
-class="math inline"><em>ŷ</em><sub><em>i</em></sub></span> (fitted,
-green) denote the predicted values from the model, and <span
-class="math inline"><em>ȳ</em></span> (mean of observed values, purple)
-be the average of the observed data. The reference line <span
-class="math inline"><em>y</em> = <em>x</em></span> (red) serves as a 1:1
-comparison line. The total sum of squares (SST), <span
-class="math inline">$\text{SST} = \sum_{i = 1}^{n}\left( y_{i} - \bar{y}
-\right)^{2}$</span>, quantifies the total variation in <span
-class="math inline"><em>y</em><sub><em>i</em></sub></span>. This can be
-decomposed into the sum of squared errors (SSE), <span
-class="math inline">$\text{SSE} = \sum_{i = 1}^{n}\left( y_{i} -
-{\widehat{y}}_{i} \right)^{2}$</span>, capturing the deviation of <span
-class="math inline"><em>y</em><sub><em>i</em></sub></span> from <span
-class="math inline"><em>ŷ</em><sub><em>i</em></sub></span>, and the sum
-of squares due to regression (SSR), <span
-class="math inline">$\text{SSR} = \sum_{i = 1}^{n}\left(
-{\widehat{y}}_{i} - \bar{y} \right)^{2}$</span>, representing the
-variation explained by the model, such that <span
-class="math inline">SST = SSE + SSR</span> or equivalently, <span
-class="math inline">$\sum_{i = 1}^{n}\left( y_{i} - \bar{y} \right)^{2}
-= \sum_{i = 1}^{n}\left( y_{i} - {\widehat{y}}_{i} \right)^{2} + \sum_{i
-= 1}^{n}\left( {\widehat{y}}_{i} - \bar{y} \right)^{2}$</span>.</p>
+<p>
+In regression analysis, let \( y_i \) (observed, blue) represent the actual data points, \( \hat{y}_i \) (fitted, green) denote the predicted values from the model, and \( \bar{y} \) (mean of observed values, purple) be the average of the observed data. The reference line \( y = x \) (red) serves as a 1:1 comparison line. The total sum of squares (SST), 
+\[
+\text{SST} = \sum_{i = 1}^{n} \left( y_{i} - \bar{y} \right)^{2},
+\]
+quantifies the total variation in \( y_i \). This can be decomposed into the sum of squared errors (SSE), 
+\[
+\text{SSE} = \sum_{i = 1}^{n} \left( y_{i} - \hat{y}_{i} \right)^{2},
+\]
+capturing the deviation of \( y_i \) from \( \hat{y}_i \), and the sum of squares due to regression (SSR), 
+\[
+\text{SSR} = \sum_{i = 1}^{n} \left( \hat{y}_{i} - \bar{y} \right)^{2},
+\]
+representing the variation explained by the model, such that 
+\[
+\text{SST} = \text{SSE} + \text{SSR},
+\]
+or equivalently,
+\[
+\sum_{i = 1}^{n} \left( y_{i} - \bar{y} \right)^{2} = \sum_{i = 1}^{n} \left( y_{i} - \hat{y}_{i} \right)^{2} + \sum_{i = 1}^{n} \left( \hat{y}_{i} - \bar{y} \right)^{2}.
+\]
+</p>
 <pre><code>library(ggplot2)
 # Add fitted values to the data frame
 data$Fitted &lt;- fitted(mlr_model)
