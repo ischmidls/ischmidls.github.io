@@ -402,19 +402,16 @@ or equivalently &lt;span class=&quot;math inline&quot;&gt;&#92;(X_{lj}=&#92;hat{
 &lt;hr&gt;
 &lt;p&gt;Within Sum of Squares Matrix &lt;span class=&quot;math inline&quot;&gt;&#92;(W&#92;)&lt;/span&gt;
 with the difference of observation &lt;span class=&quot;math inline&quot;&gt;&#92;(j&#92;)&lt;/span&gt; in sample &lt;span class=&quot;math inline&quot;&gt;&#92;(l&#92;)&lt;/span&gt; and the sample &lt;span class=&quot;math inline&quot;&gt;&#92;(l&#92;)&lt;/span&gt; mean is &lt;span class=&quot;math display&quot;&gt;&#92;[
-{W}=&#92;sum_{&#92;ell=1}^k &#92;sum_{i=1}^{n_{&#92;ell}}&#92;left({X}_{&#92;ell
-i}-&#92;overline_{&#92;ell}&#92;right)&#92;left({X}_{&#92;ell
-i}-&#92;overline_{&#92;ell}&#92;right)^T
+W=&#92;sum_{l=1}^k &#92;sum_{i=1}^{n_{l}}(X_{l i}-&#92;bar{X}_{l})(X_{l
+i}-&#92;bar{X}_{l})^T
 &#92;]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Between Sum of Squares Matrix &lt;span class=&quot;math inline&quot;&gt;&#92;({B}&#92;)&lt;/span&gt; with the difference of the sample
 &lt;span class=&quot;math inline&quot;&gt;&#92;(l&#92;)&lt;/span&gt; mean and the grand mean is &lt;span class=&quot;math display&quot;&gt;&#92;[
-{B}=&#92;sum_{&#92;ell=1}^k
-n_{&#92;ell}&#92;left(&#92;overline_{&#92;ell}-&#92;overline&#92;right)&#92;left(&#92;overline_{&#92;ell}-&#92;overline&#92;right)^T
+B=&#92;sum_{l=1}^k n_{l}(&#92;bar{X}_{l}-&#92;bar{X})(&#92;bar{X}_{l}-&#92;bar{X})^T
 &#92;]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Total Sum of Squares Matrix &lt;span class=&quot;math inline&quot;&gt;&#92;({T}&#92;)&lt;/span&gt;
 with the difference of observation &lt;span class=&quot;math inline&quot;&gt;&#92;(j&#92;)&lt;/span&gt; in sample &lt;span class=&quot;math inline&quot;&gt;&#92;(l&#92;)&lt;/span&gt; and the grand mean is &lt;span class=&quot;math display&quot;&gt;&#92;[
-{T}=&#92;sum_{&#92;ell=1}^k &#92;sum_{i=1}^{n_{&#92;ell}}&#92;left({X}_{&#92;ell
-i}-&#92;overline&#92;right)&#92;left({X}_{&#92;ell i}-&#92;overline&#92;right)^T
+T=&#92;sum_{l=1}^k &#92;sum_{i=1}^{n_{l}}(X_{l i}-&#92;bar{X})(X_{l i}-&#92;bar{X})^T
 &#92;]&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;These three sum of squares matrices, &lt;span class=&quot;math inline&quot;&gt;&#92;({W},
 {B}&#92;)&lt;/span&gt;, and &lt;span class=&quot;math inline&quot;&gt;&#92;({T}&#92;)&lt;/span&gt; satisfy:
@@ -447,32 +444,32 @@ normal distributions with equal covariance matrices):&lt;/p&gt;
 &lt;td&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(p=1&#92;)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(k &#92;geq 2&#92;)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;displaystyle
-&#92;left(&#92;frac{N-k}{k-1}&#92;right)&#92;left(&#92;frac{1-&#92;Lambda^*}{&#92;Lambda^*}&#92;right)
-&#92;sim F_{(k-1,&#92;, N-k)}&#92;)&lt;/span&gt;&lt;/td&gt;
+(&#92;frac{N-k}{k-1})(&#92;frac{1-&#92;Lambda^*}{&#92;Lambda^*}) &#92;sim F_{(k-1,&#92;,
+N-k)}&#92;)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;One-way ANOVA&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&quot;even&quot;&gt;
 &lt;td&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(p=2&#92;)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(k &#92;geq 2&#92;)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;displaystyle
-&#92;left(&#92;frac{N-k-1}{k-1}&#92;right)&#92;left(&#92;frac{1-&#92;sqrt{&#92;Lambda^*}}{&#92;sqrt{&#92;Lambda^*}}&#92;right)
-&#92;sim F_{(2(k-1),&#92;, 2(N-k-1))}&#92;)&lt;/span&gt;&lt;/td&gt;
+(&#92;frac{N-k-1}{k-1})(&#92;frac{1-&#92;sqrt{&#92;Lambda^*}}{&#92;sqrt{&#92;Lambda^*}}) &#92;sim
+F_{(2(k-1),&#92;, 2(N-k-1))}&#92;)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;MANOVA (2 variables)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&quot;odd&quot;&gt;
 &lt;td&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(p &#92;geq 1&#92;)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(k=2&#92;)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;displaystyle
-&#92;left(&#92;frac{N-p-1}{p}&#92;right)&#92;left(&#92;frac{1-&#92;Lambda^*}{&#92;Lambda^*}&#92;right)
-&#92;sim F_{(p,&#92;, N-p-1)}&#92;)&lt;/span&gt;&lt;/td&gt;
+(&#92;frac{N-p-1}{p})(&#92;frac{1-&#92;Lambda^*}{&#92;Lambda^*}) &#92;sim F_{(p,&#92;,
+N-p-1)}&#92;)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;Hotelling’s &lt;span class=&quot;math inline&quot;&gt;&#92;(T^2&#92;)&lt;/span&gt; test&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&quot;even&quot;&gt;
 &lt;td&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(p &#92;geq 1&#92;)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(k=3&#92;)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;&lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;displaystyle
-&#92;left(&#92;frac{N-p-2}{p}&#92;right)&#92;left(&#92;frac{1-&#92;sqrt{&#92;Lambda^*}}{&#92;sqrt{&#92;Lambda^*}}&#92;right)
-&#92;sim F_{(2p,&#92;, 2(N-p-2))}&#92;)&lt;/span&gt;&lt;/td&gt;
+(&#92;frac{N-p-2}{p})(&#92;frac{1-&#92;sqrt{&#92;Lambda^*}}{&#92;sqrt{&#92;Lambda^*}}) &#92;sim
+F_{(2p,&#92;, 2(N-p-2))}&#92;)&lt;/span&gt;&lt;/td&gt;
 &lt;td&gt;MANOVA (3 groups)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
