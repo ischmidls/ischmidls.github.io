@@ -385,19 +385,16 @@ or equivalently <span class="math inline">\(X_{lj}=\hat{\mu}+\hat{\tau}_l+\hat{\
 <hr />
 <p>Within Sum of Squares Matrix <span class="math inline">\(W\)</span>
 with the difference of observation <span class="math inline">\(j\)</span> in sample <span class="math inline">\(l\)</span> and the sample <span class="math inline">\(l\)</span> mean is <span class="math display">\[
-{W}=\sum_{\ell=1}^k \sum_{i=1}^{n_{\ell}}\left({X}_{\ell
-i}-\overline{{X}}_{\ell}\right)\left({X}_{\ell
-i}-\overline{{X}}_{\ell}\right)^T
+W=\sum_{l=1}^k \sum_{i=1}^{n_{l}}(X_{l i}-\bar{X}_{l})(X_{l
+i}-\bar{X}_{l})^T
 \]</span></p>
 <p>Between Sum of Squares Matrix <span class="math inline">\({B}\)</span> with the difference of the sample
 <span class="math inline">\(l\)</span> mean and the grand mean is <span class="math display">\[
-{B}=\sum_{\ell=1}^k
-n_{\ell}\left(\overline{{X}}_{\ell}-\overline{{X}}\right)\left(\overline{{X}}_{\ell}-\overline{{X}}\right)^T
+B=\sum_{l=1}^k n_{l}(\bar{X}_{l}-\bar{X})(\bar{X}_{l}-\bar{X})^T
 \]</span></p>
 <p>Total Sum of Squares Matrix <span class="math inline">\({T}\)</span>
 with the difference of observation <span class="math inline">\(j\)</span> in sample <span class="math inline">\(l\)</span> and the grand mean is <span class="math display">\[
-{T}=\sum_{\ell=1}^k \sum_{i=1}^{n_{\ell}}\left({X}_{\ell
-i}-\overline{{X}}\right)\left({X}_{\ell i}-\overline{{X}}\right)^T
+T=\sum_{l=1}^k \sum_{i=1}^{n_{l}}(X_{l i}-\bar{X})(X_{l i}-\bar{X})^T
 \]</span></p>
 <p>These three sum of squares matrices, <span class="math inline">\({W},
 {B}\)</span>, and <span class="math inline">\({T}\)</span> satisfy:
@@ -430,32 +427,32 @@ normal distributions with equal covariance matrices):</p>
 <td><span class="math inline">\(p=1\)</span></td>
 <td><span class="math inline">\(k \geq 2\)</span></td>
 <td><span class="math inline">\(\displaystyle
-\left(\frac{N-k}{k-1}\right)\left(\frac{1-\Lambda^*}{\Lambda^*}\right)
-\sim F_{(k-1,\, N-k)}\)</span></td>
+(\frac{N-k}{k-1})(\frac{1-\Lambda^*}{\Lambda^*}) \sim F_{(k-1,\,
+N-k)}\)</span></td>
 <td>One-way ANOVA</td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(p=2\)</span></td>
 <td><span class="math inline">\(k \geq 2\)</span></td>
 <td><span class="math inline">\(\displaystyle
-\left(\frac{N-k-1}{k-1}\right)\left(\frac{1-\sqrt{\Lambda^*}}{\sqrt{\Lambda^*}}\right)
-\sim F_{(2(k-1),\, 2(N-k-1))}\)</span></td>
+(\frac{N-k-1}{k-1})(\frac{1-\sqrt{\Lambda^*}}{\sqrt{\Lambda^*}}) \sim
+F_{(2(k-1),\, 2(N-k-1))}\)</span></td>
 <td>MANOVA (2 variables)</td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(p \geq 1\)</span></td>
 <td><span class="math inline">\(k=2\)</span></td>
 <td><span class="math inline">\(\displaystyle
-\left(\frac{N-p-1}{p}\right)\left(\frac{1-\Lambda^*}{\Lambda^*}\right)
-\sim F_{(p,\, N-p-1)}\)</span></td>
+(\frac{N-p-1}{p})(\frac{1-\Lambda^*}{\Lambda^*}) \sim F_{(p,\,
+N-p-1)}\)</span></td>
 <td>Hotelling’s <span class="math inline">\(T^2\)</span> test</td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(p \geq 1\)</span></td>
 <td><span class="math inline">\(k=3\)</span></td>
 <td><span class="math inline">\(\displaystyle
-\left(\frac{N-p-2}{p}\right)\left(\frac{1-\sqrt{\Lambda^*}}{\sqrt{\Lambda^*}}\right)
-\sim F_{(2p,\, 2(N-p-2))}\)</span></td>
+(\frac{N-p-2}{p})(\frac{1-\sqrt{\Lambda^*}}{\sqrt{\Lambda^*}}) \sim
+F_{(2p,\, 2(N-p-2))}\)</span></td>
 <td>MANOVA (3 groups)</td>
 </tr>
 </tbody>
