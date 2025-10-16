@@ -1,0 +1,16 @@
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      extensions: ["tex2jax.js"],
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+      tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+      TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
+      messageStyle: "none"
+    });
+    </script>    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+    
+<p>The measure $P_X$ induced by a random variable $X$ (its distribution) describes the probabilities of $X$ taking values in measurable sets but does not fully specify the underlying probability measure $P$ on $(\Omega, \mathcal{F}, P)$. This is because $P_X$ only captures the behavior of $X$ via $P_X(A) = P(X^{-1}(A))$, ignoring other aspects of $\Omega$ and $P$. Different probability spaces (say discrete $\Omega_1 = \{0,1\}$ vs. continuous $\Omega_2 = [0,1]$) can yield the same $P_X$ (say Bernoulli(p)). And, $P_X$ loses information about dependencies between multiple random variables (say $X$ and $Y$ may have the same marginals but different joint distributions) and events unrelated to $X$. So, $P_X$ is a "pushforward measure" summarizing $X$’s distribution but omitting details about $\Omega$, non-$X$ events, and relationships with other variables. Only when $X$ completely determines $\Omega$ (say $X$ is the identity on $\mathbb{R}$) does $P_X$ fully characterize $P$. 
+</p>
+<p>More specifically, events not expressible in terms of a random variable $X$ are those that cannot be written as $\{X \in A\}$ for any measurable set $A$. These include events depending on other random variables (say $\{Y > 0.5\}$ when $X$ and $Y$ are defined on $[0,1]^2$), events relying on $\Omega$'s structure (say $\{\omega \text{ is even}\}$ when $X$ groups even and odd outcomes together), or events in product spaces where $X$ depends on only one component (say $\{\omega_2 > 0.5\}$ when $X = \omega_1$). Path-dependent events (say "Brownian motion hits 1 before $t=1$") or "meta" events (say "an infinite binary sequence contains infinitely many 1s") also cannot be described by $X$ alone. Since $P_X$ only encodes probabilities of $\{X \in A\}$-type events, it cannot capture these broader aspects of $(\Omega, \mathcal{F}, P)$. So, $P_X$ alone is insufficient to reconstruct the full probability measure $P$.
+</p>
