@@ -33,7 +33,7 @@
             output = output.replace(/^#.*$/gm, '');
 
             // Remove dashes
-            output = output.replace(/-/g, '');
+            output = output.replace(/---/g, '');
 
             // Replace \\[ or \\] with $$
             output = output.replace(/\\\[\n|\n\\\]/g, '$$');
