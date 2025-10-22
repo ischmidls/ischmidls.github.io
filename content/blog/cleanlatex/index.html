@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div>
+        <label>Input Text:</label><br>
+        <textarea id="inputText" rows="10" cols="80" placeholder="Enter your text here..."></textarea>
+    </div>
+
+    <div>
+        <button onclick="transformText()">Transform Text</button>
+        <button onclick="clearAll()">Clear All</button>
+    </div>
+
+    <div>
+        <label>Transformed Text:</label>
+        <button onclick="copyOutput()">Copy Output</button>
+        <span id="copySuccess" style="color:green; display:none;">Copied!</span>
+        <br>
+        <textarea id="outputText" rows="10" cols="80" readonly></textarea>
+    </div>
+
+    <script>
+        function transformText() {
+            const inputText = document.getElementById('inputText').value;
+            let output = inputText;
+
+            // Remove asterisks
+            output = output.replace(/\*/g, '');
+
+            // Remove lines starting with #
+            output = output.replace(/^#.*$/gm, '');
+
+            // Remove dashes
+            output = output.replace(/-/g, '');
+
+            // Replace \\[ or \\] with $$
+            output = output.replace(/\\\[\n|\n\\\]/g, '$$');
+
+            // Replace \\( or \\) with $
+            output = output.replace(/\\\( | \\\)/g, '$');
+
+            // Clean up multiple empty lines
+            output = output.replace(/\n\s*\n/g, '\n');
+
+            // Remove leading/trailing whitespace
+            output = output.trim();
+
+            document.getElementById('outputText').value = output;
+        }
+
+        function clearAll() {
+            document.getElementById('inputText').value = '';
+            document.getElementById('outputText').value = '';
+            document.getElementById('copySuccess').style.display = 'none';
+        }
+
+        function copyOutput() {
+            const outputText = document.getElementById('outputText').value;
+            if (!outputText) return;
+
+            navigator.clipboard.writeText(outputText).then(() => {
+                const successElement = document.getElementById('copySuccess');
+                successElement.style.display = 'inline';
+                setTimeout(() => {
+                    successElement.style.display = 'none';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = outputText;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                const successElement = document.getElementById('copySuccess');
+                successElement.style.display = 'inline';
+                setTimeout(() => {
+                    successElement.style.display = 'none';
+                }, 2000);
+            });
+        }
+
+        // Allow pressing Enter to transform text
+        document.getElementById('inputText').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                transformText();
+            }
+        });
+    </script>
+</body>
+</html>
