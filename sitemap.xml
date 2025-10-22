@@ -62,6 +62,11 @@
 	</url>
 	
 	<url>
+		<loc>https://ischmidls.github.io/blog/cleanlatex/</loc>
+		<lastmod>2023-01-01</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://ischmidls.github.io/blog/countsplit/</loc>
 		<lastmod>2023-01-01</lastmod>
 	</url>
@@ -278,26 +283,26 @@
 	
 	<url>
 		<loc>https://ischmidls.github.io/about/</loc>
-		<lastmod>2025-10-16</lastmod>
+		<lastmod>2025-10-22</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ischmidls.github.io/blog/</loc>
-		<lastmod>2025-10-16</lastmod>
+		<lastmod>2025-10-22</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ischmidls.github.io/</loc>
-		<lastmod>2025-10-16</lastmod>
+		<lastmod>2025-10-22</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ischmidls.github.io/tags/</loc>
-		<lastmod>2025-10-16</lastmod>
+		<lastmod>2025-10-22</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ischmidls.github.io/feed/feed.xml</loc>
-		<lastmod>2025-10-16</lastmod>
+		<lastmod>2025-10-22</lastmod>
 	</url>
 </urlset>
