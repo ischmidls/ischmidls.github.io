@@ -1,7 +1,7 @@
 {
     "title": "widget: clean latex",
     "description": "clean latex",
-    "date": "2023-01-01",
+    "date": "2025-10-22",
     "tags": ["javascript","widget"],
     "layout": "layouts/post.njk"
   }
