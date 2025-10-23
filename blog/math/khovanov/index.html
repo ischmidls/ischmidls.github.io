@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>khovanov homology talk</title>
+		<meta name="description" content="khovanov homology talk">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="izak">
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Garamond, serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">izak</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">home</a></li>
+					<li class="nav-item"><a href="/blog/">archive</a></li>
+					<li class="nav-item"><a href="/about/">about</a></li>
+					<li class="nav-item"><a href="/feed/feed.xml">feed</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<heading-anchors>
+				
+<h1 id="khovanov-homology-talk">khovanov homology talk</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2024-06-14">14 June 2024</time></li>
+	<li><a href="/tags/math/" class="post-tag">math</a>, </li>
+	<li><a href="/tags/long/" class="post-tag">long</a></li>
+</ul>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      jax: ["input/TeX", "output/HTML-CSS"],
+      extensions: ["tex2jax.js"],
+      "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+      tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+      TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
+      messageStyle: "none"
+    });
+    </script>    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js"></script>
+<p>This is an 8-minute presentation I gave. It was my final project for an undergraduate "writing intensive" course on knot theory.
+</p>
+
+<picture><source type="image/avif" srcset="/blog/math/khovanov/5JuAy0gpIF-2500.avif 2500w"><source type="image/webp" srcset="/blog/math/khovanov/5JuAy0gpIF-2500.webp 2500w"><img loading="lazy" decoding="async" src="/blog/math/khovanov/5JuAy0gpIF-2500.png" alt="poster" width="2500" height="1406"></picture>
+
+<p>Hi, I’d like to tell you about Khovanov homology with minimal intense
+    algebra and end with an informal example of ribbon concordance. My
+    inspiration was a theorem: “ribbon concordance induces an injective map
+    on Khovanov homology,” based on the work of Levine and Zemke (2019).</p>
+    <p>Homology is about “cycles” or kernels (inputs that map to zero) of
+    the differential maps modulo those cycles that are “boundaries” or
+    images in sequences of vector spaces. This quotient forms the homology
+    as a group.</p>
+    <p>The smoothing states of a link diagram form a sequence of vector
+    spaces classes a chain complex (vector space = chain, sequence =
+    complex) that also have isomorphic homology. The order of the sequence
+    is given by differential maps or boundary maps between the vector
+    spaces.</p>
+    <p>The image of each map is the kernel of the next, until the sequence
+    reaches the trivial kernel, which is just zero.</p>
+    <p>The homology is the group formed by the quotient of the kernel by
+    image. If you don’t know about groups, just think about these for now as
+    some vector space without scaling. (If you’re unfamiliar with quotients,
+    this is just like quotients with numbers, but instead of saying there
+    are 4 things that look like 3 among 12 things, you separate them by
+    their vector space properties). You can think of this as saying how much
+    of the remaining space looks like the kernel.</p>
+    <p>This also has a geometric view. The kernels are cycles, or closed
+    loops, for some base point in the vector space. The image is the
+    boundaries in the space. We say boundary in the sense that you can
+    imagine the vector space basis as a graph, right, with basis vectors as
+    vertices?. A boundary is what remains when you remove part of the graph
+    that is one dimension less. For example, removing a line from a triangle
+    or a face from a pyramid/simplex.</p>
+    <p>When you take two chain complexes and can find two distinct maps
+    between the complexes that pair up their (homology groups) chains/vector
+    spaces the same way, this induces what are called homotopies between the
+    chains or vector spaces.</p>
+    <p>Recall the Jones and Kauffman polynomials came from defining rules
+    for link brackets.</p>
+    <p>In thia picture, let <span class="math inline">\(L\)</span> be the
+    link and <span class="math inline">\(V\)</span> be a vector space of
+    dimensions <span class="math inline">\((q + q^{-1})\)</span>. The map
+    <span class="math inline">\(F\)</span> takes a double complex to a
+    single complex by taking direct sums along the diagonals of the double
+    complex. The differential map <span class="math inline">\(d\)</span> is
+    not yet defined.</p>
+    <p>The bracket is given by a direct sum over the smoothings of <span class="math inline">\(L\)</span> of tensor powers of <span class="math inline">\(V\)</span>, where a factor of the powers of <span class="math inline">\(V\)</span> corresponds to a cycle in a smoothing.
+    That is, the space <span class="math inline">\(V(k)\)</span> on each
+    vertex <span class="math inline">\(k\)</span> has as many tensor factors
+    as there are cycles in the smoothing <span class="math inline">\(S(k)\)</span>. These powers behave like spaces of
+    linear combinations of marked smoothings of <span class="math inline">\(L\)</span>, so each cycle in a smoothing of <span class="math inline">\(L\)</span> corresponds to an element of <span class="math inline">\(V\)</span>.</p>
+    <p>Khovanov does this similarly, defining his own bracket, with states
+    sums and other definitions similar to Khovanov. For the bracket, he
+    exploits the fact the Euler characteristic of each chain or vector space
+    is the same as the Euler characteristic of the corresponding homology
+    group. Here I must make a slight point, Khovanov homology actually
+    describes a cohomology, where instead of boundary maps taking away
+    components, the maps between chains or vector spaces add components.
+    This Euler characteristic of the Khovanov homology also happens to be
+    the Jones polynomial we talked about.</p>
+    <p>He also uses that the boundary maps are given by the vector space
+    gradings, or the fact that we can add smoothing states together to form
+    smoothings with fewer components, or as we did with Kauffman, we can add
+    more smoothings to a state to achieve more components. The Khovanov
+    polynomial similarly uses the dimensions of each cohomology for the
+    chain complex of the link states for the corresponding term in the sum
+    defining the polynomial.</p>
+    <p>A Tensor product in this case is just a way to take any of the basis
+    vectors and put them into a list, where the list is a new basis vector
+    in the new space, and vice versa, taking lists and breaking them apart.
+    You can imagine as the kernel of the vector space shrinks, less of the
+    vector space looks like its kernel, and in a sense at the limit of these
+    boundary maps, we reach the stalk vector space growing out the kernels
+    of the chain complex of vector spaces.</p>
+    <p>Now stepping back from the chain complex, we can see it forms a cube.
+    And we know this is a chain complex precisely because this cube
+    commutes. That is, taking a boundary map in the first row, then mapping
+    to the second row should be the same as mapping to the second row then
+    taking a boundary map. This also shows that the definitions of the bases
+    or the order of smoothings will not change this chain complex for a
+    given knot.</p>
+    <p>To wrap up quickly, let’s look at some examples. We have this
+    illustration from (Bar-Natan, 2002) for the trefoil. You can see how
+    moving between the states forms different brackets from their sums, and
+    these brackets form a complex.</p>
+    <p>You can see boundary maps change the tensor power of the vector space
+    and the degree shift. The tensor power does not change the vector space
+    dimension, but the degree shift does. While these are integer vector
+    spaces, you can think of Euclidean space. If a matrix mapping a vector
+    space to another is rectangular, it deletes one of the basis elements,
+    and the situation is similar here.</p>
+    <p>Concordance or more broadly cobordism can be seen as a map between
+    Khovanov homologies and is clearly a homotopy between two links as the
+    manifold provides the path mapping. For example, rolling up a sheet of
+    paper into a cylinder and slipping a rubber band around each end
+    connects two unknotted rubber bands. In 4 dimensions, the cylinder might
+    smooth out, untying any knot.</p>
+    <p>A “path” is a continuous map from an interval to a space. A
+    “homotopy” of paths is a “family of maps” from an interval to a space
+    with the same endpoints where paths follow another path. Think of it as
+    a map from two intervals to the space. A “composition/product path” lets
+    you glue two paths together. As we discussed in class, a “loop” is a
+    path that ends and begins at the same point (i.e., the “basepoint”).</p>
+    <p>We look at cobordisms or concordance with “movie moves”, looking at
+    different 3-dimensional places in the four dimensional manifold where
+    there are singularities (max, min saddle).</p>
+    <p>And, we could go both directions, given a concordance between two
+    links, we can find their Khovanov homologies are the same, or given
+    Khovanov homologies between two links, we can find a cobordism between
+    the links.</p>
+    <p>Khovanov homology also gives combinatorial methods for more abstract
+    homologies in other fields like Floer homologies (3-manifold, Heegaard,
+    Lagrangian).</p>
+    <p>And we will have to end there. Any questions?</p>
+
+    <hr>
+    <p>Further Information for potential questions or extra time:</p>
+    <ul>
+        <li>Ribbon concordance between two knots has no local minima.</li>
+        <li>Concordance for two submanifolds \( M' \), \( M'' \) contained in \( N \) is a cobordism between them in \( N \times [0, 1] \), so a manifold with boundary \( W \) contained in \( N \times [0, 1] \) whose boundary is \( M' \times \{0\} \) and \( M'' \times \{1\} \).</li>
+        <li>This is a relative form of cobordism since it all happens in \( N \).</li>
+        <li>\( I = [0, 1] \). It is a 1-dimensional cobordism between the 0-dimensional manifolds \( \{0\} \), \( \{1\} \).</li>
+        <li>Generally, for any closed manifold \( M \), \( (M \times I; M \times \{0\}, M \times \{1\}) \) is a cobordism from \( M \times \{0\} \) to \( M \times \{1\} \).</li>
+        <li>A homotopy between two continuous functions \( f \) and \( g \) from a topological space \( X \) to a topological space \( Y \) is defined to be a continuous function \( H: X \times [0, 1] \to Y \) (so from the product of the space with the unit interval \( X \times [0, 1] \) to \( Y \)) such that \( H(x, 0) = f(x) \) and \( H(x, 1) = g(x) \) for all \( x \in X \).</li>
+        <li>Two links, denoted as \( l' \) within \( m \)-sphere and \( l'' \) within \( n \)-sphere, are considered concordant if there exists an embedding function \( f \) from \( l' \times [0, 1] \) to \( n \)-sphere \( \times [0, 1] \).</li>
+        <li>This function has two conditions:
+            <ul>
+                <li>The image \( f(l' \times \{0\}) = l' \times \{0\} \).</li>
+                <li>The image \( f(l' \times \{1\}) = l'' \times \{1\} \).</li>
+            </ul>
+        </li>
+        <li>This forms an equivalence relation.</li>
+        <li>It is a weaker condition than isotopy and a stronger condition than homotopy, meaning that:
+            <ul>
+                <li>Isotopy implies concordance/cobordism (and concordance implies cobordism).</li>
+                <li>Concordance/cobordism implies homotopy.</li>
+            </ul>
+        </li>
+        <li>Slice knot concordant with unknot (3D knot bounds disc in 4D).</li>
+        <li>\( Kh(L) \): “Poincaré Polynomial” formal power series in one indeterminate, say \( t \), where the coefficient of \( t^n \) gives the dimension (or rank) of the substructure of elements homogeneous of degree \( n \).</li>
+    </ul>
+    <picture><source type="image/avif" srcset="/blog/math/khovanov/Fn1C3iL7uA-663.avif 663w"><source type="image/webp" srcset="/blog/math/khovanov/Fn1C3iL7uA-663.webp 663w"><img loading="lazy" decoding="async" src="/blog/math/khovanov/Fn1C3iL7uA-663.png" alt="guide" width="663" height="1096"></picture>
+    <p>My professor said this guide was too complicated to put on my poster.</p>
+    <p>Further reference:</p>
+    <ul>
+    <li>Bar-Natan, D. (2002). On Khovanov’s categorification of the Jones
+    polynomial. Algebraic &amp; Geometric Topology, 2(1), 337–370.</li>
+    <li>Bar-Natan, D. (2005). Khovanov’s homology for tangles and
+    cobordisms. Geometry &amp; Topology, 9(3), 1443–1499.</li>
+    <li>Hatcher, A. (2002). Algebraic topology. Cambridge: Cambridge
+    University Press.</li>
+    <li>Kauffman, L. H. (2016). An Introduction to Khovanov Homology.
+    Contemporary Mathematics - American Mathematical Society, 105–139.</li>
+    <li>Levine, A. &amp; Zemke, I. (2019). Khovanov homology and ribbon
+    concordances. Bulletin of the London Mathematical Society, 51(6),
+    1099–1103.</li>
+    <li>Ray, A. (2023). Slice knots and knot concordance. Winterbraids XI in
+    Dijon. ArXiv.org.</li>
+    </ul>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/math/cohomologysphere/">cohomology ring of n-sphere</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/math/diffeqreview/">applied differential equations review</a></li>
+</ul>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
+		</footer>
+
+		<!-- This page `/blog/math/khovanov/` was built on 2025-10-23T14:25:20.054Z -->
+		<script type="module" src="/dist/cC8wS6ZjFU.js"></script>
+	</body>
+</html>

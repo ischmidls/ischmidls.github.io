@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>note: langlands &amp; pendulum</title>
+		<meta name="description" content="langlands &amp; pendulum">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="izak">
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Garamond, serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">izak</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">home</a></li>
+					<li class="nav-item"><a href="/blog/">archive</a></li>
+					<li class="nav-item"><a href="/about/">about</a></li>
+					<li class="nav-item"><a href="/feed/feed.xml">feed</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<heading-anchors>
+				
+<h1 id="note-langlands-and-pendulum">note: langlands &amp; pendulum</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2023-07-11">11 July 2023</time></li>
+	<li><a href="/tags/math/" class="post-tag">math</a>, </li>
+	<li><a href="/tags/note/" class="post-tag">note</a>, </li>
+	<li><a href="/tags/javascript/" class="post-tag">javascript</a></li>
+</ul>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>a {font-weight: bold;}</style>
+  <!-- <title>Pendulum Simulation</title> -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+  <script>
+    // Constants
+const canvasWidth = 600;
+const canvasHeight = 400;
+const pivotX = canvasWidth / 2;
+const pivotY = 50;
+const rodLength = 200;
+const gravity = 9.8;
+
+// Variables
+let angle = Math.PI / 4;
+let angularVelocity = 0;
+let angularAcceleration = 0;
+
+
+// UPDATE VARIABLES
+function updateVariables() {
+      const velocityInput = document.getElementById('velocityInput');
+      const accelerationInput = document.getElementById('accelerationInput');
+
+      angularVelocity = parseFloat(velocityInput.value);
+      angularAcceleration = parseFloat(accelerationInput.value);
+
+      console.log('Updated variables:');
+      console.log('Angular Velocity:', angularVelocity);
+      console.log('Angular Acceleration:', angularAcceleration);
+    }
+
+// UPDATE COLORS
+let bobColor = '#f00';
+    let rodColor = '#000';
+
+    function updateColors() {
+      const bobColorInput = document.getElementById('bobColorInput');
+      const rodColorInput = document.getElementById('rodColorInput');
+
+      bobColor = bobColorInput.value;
+      rodColor = rodColorInput.value;
+
+      console.log('Updated colors:');
+      console.log('Pendulum Bob Color:', bobColor);
+      console.log('Pendulum Rod Color:', rodColor);
+    }
+
+// Set up the canvas
+const canvas = document.createElement('canvas');
+canvas.width = canvasWidth;
+canvas.height = canvasHeight;
+document.body.appendChild(canvas);
+const ctx = canvas.getContext('2d');
+
+function updatePendulum() {
+  // Calculate the angular acceleration
+  angularAcceleration = -gravity / rodLength * Math.sin(angle);
+
+  // Update the angular velocity
+  angularVelocity += angularAcceleration;
+
+  // Limit the angular velocity to avoid excessive swing
+  angularVelocity *= 0.99;
+
+  // Update the angle
+  angle += angularVelocity;
+}
+
+function drawPendulum() {
+  // Clear the canvas
+  ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+
+  // Draw the pivot point
+  ctx.beginPath();
+  ctx.arc(pivotX, pivotY, 5, 0, 2 * Math.PI);
+  ctx.fillStyle = '#000';
+  ctx.fill();
+
+  // Calculate the position of the bob
+  const bobX = pivotX + rodLength * Math.sin(angle);
+  const bobY = pivotY + rodLength * Math.cos(angle);
+
+      // Draw the rod
+      ctx.beginPath();
+      ctx.moveTo(pivotX, pivotY);
+      ctx.lineTo(bobX, bobY);
+      ctx.strokeStyle = rodColor;
+      ctx.stroke();
+
+      // Draw the bob
+      ctx.beginPath();
+      ctx.arc(bobX, bobY, 20, 0, 2 * Math.PI);
+      ctx.fillStyle = bobColor;
+      ctx.fill();
+}
+
+function animate() {
+  updatePendulum();
+  drawPendulum();
+  requestAnimationFrame(animate);
+}
+
+animate();
+
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2 id="langlands-program">Langlands Program</h2>
+    <p>Ha! Who do you think I am? For my first explanation of why I do not understand Langlands, take <em>Prof. G. Harder</em> of Mathematisches Institut der Universitat Bonn's <a href="https://mathweb.ucsd.edu/~csorense/teaching/math299/Harder_ICTP.pdf">"The Langlands Program (An Overview)"</a> where the first section is titled "A Simple Example"</p>
+    <blockquote>
+      [...]
+      <p>The first object is a pair of integral, positive definite, quaternary quadratic forms:</p>
+
+      <p>
+        \( P(x, y, u, v) = x^2 + xy + 3y^2 + u^2 + uv + 3v^2 \)
+      </p>
+    
+      <p>
+        \( Q(x, y, u, v) = 2(x^2 + y^2 + u^2 + v^2) + 2xu + xv + yu - 2yv \)
+      </p>
+      <p>These forms have discriminant \(11^2\), and I mention that these two quadratic forms \(Q\) and \(P\) are the only integral, positive definite quaternary forms with discriminant \(11^2\). This may not be so easy to verify, but it is true. (Rainer Schulze-Pillot pointed out that this is actually not true; there is a third form \(S(x, y, u, v) = x^2 + 4(y^2 + u^2 + v^2) + xu + 4yu + 3yv + 7uv\), but the two forms above are sufficient for the following considerations.</p>
+
+      <p>This pair will give us automorphic forms; we come to this point later.</p>
+    
+      <p>The second object is an elliptic curve \(E\), for us, this is simply a polynomial:</p>
+    
+      <p>
+        \(G(x, y) = y^2 + y - x^3 + x^2 + 10x + 20\).
+      </p>
+    
+      <p>This object is a diophantine equation. For any commutative ring \(R\) with identity, we can consider the set of solutions:</p>
+    
+      <p>
+        \(\{(a, b) \in R^2 | G(a, b) = 0\}\)
+      </p>
+      [...]
+
+    </blockquote>
+
+    <p>Now, for an even more in-depth look at Langlands, I recommend <a href="https://math.berkeley.edu/~frenkel/houches.pdf">Lectures On The Langlands Program And Conformal Field Theory</a> by UC Berkely's <em>Prof. Edward Frenkel</em>.</p>
+    
+    <h2 id="pendulum-simulation">Pendulum Simulation</h2>
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>
+            <!--<canvas id="pendulumCanvas"></canvas>-->
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="velocityInput">Angular Velocity:</label>
+            <input type="number" id="velocityInput" value="0">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="accelerationInput">Angular Acceleration:</label>
+            <input type="number" id="accelerationInput" value="0">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button onclick="updateVariables()" class="btn btn-primary">Update Acceleration & Velocity</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="bobColorInput">Pendulum Bob Color:</label>
+            <input type="color" id="bobColorInput" value="#f00">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="rodColorInput">Pendulum Rod Color:</label>
+            <input type="color" id="rodColorInput" value="#000">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button onclick="updateColors()" class="btn btn-primary">Update Color</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="https://gist.github.com/ischmidls/042a1cbea905063c36e900a417fefa8b.js"></script>
+</body>
+</html>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/math/ode-coupled/">note: ode coupled</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/math/notes - cont. measure &amp; intro prob/">note: measure &amp; intro prob</a></li>
+</ul>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
+		</footer>
+
+		<!-- This page `/blog/math/langlands &amp; pendulum/` was built on 2025-10-23T14:25:20.054Z -->
+		<script type="module" src="/dist/cC8wS6ZjFU.js"></script>
+	</body>
+</html>

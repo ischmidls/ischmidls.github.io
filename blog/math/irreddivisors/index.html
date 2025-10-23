@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>irreducible divisors</title>
+		<meta name="description" content="irreducible divisors">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="izak">
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Garamond, serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">izak</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">home</a></li>
+					<li class="nav-item"><a href="/blog/">archive</a></li>
+					<li class="nav-item"><a href="/about/">about</a></li>
+					<li class="nav-item"><a href="/feed/feed.xml">feed</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<heading-anchors>
+				
+<h1 id="irreducible-divisors">irreducible divisors</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2025-01-14">14 January 2025</time></li>
+	<li><a href="/tags/math/" class="post-tag">math</a>, </li>
+	<li><a href="/tags/long/" class="post-tag">long</a></li>
+</ul>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+</head>
+<body>
+<p>Here is a proof I struggled with in the spring of 2024 that I wanted
+to come back to. To start, this proof gives nice motivation for an
+abstract area of math called Galois theory which is most famous for
+showing that there’s no “quadratic formula” or closed expression for the
+roots of a polynomial of degrees greater than four. But another
+interesting motivation is in coding theory, where finite fields and
+their polynomials can construct error-correcting codes. For example,
+Reed-Solomon codes encode data as polynomials over a finite field <span class="math inline">\(F_{2^m}\)</span>. The proof that irreducible
+polynomials divide <span class="math inline">\(x^{p^n} - x\)</span>
+ensures that the roots of these polynomials lie within <span class="math inline">\(F_{2^m}\)</span>, making encoding and decoding
+efficient. This property allows Reed-Solomon codes to detect and correct
+errors in data transmission, such as in CDs or QR codes. By adding <span class="math inline">\(t = n - k\)</span> check symbols to the data,
+Reed-Solomon codes can detect any combination of up to <span class="math inline">\(t\)</span> erroneous symbols, or locate and
+correct up to <span class="math inline">\(\lfloor t/2 \rfloor\)</span>
+erroneous symbols at unknown locations.</p>
+<hr>
+<p>We want to show every irreducible polynomial <span class="math inline">\(g(x)\)</span> over a finite field of prime
+characteristic <span class="math inline">\(F_p\)</span> is a divisor of
+<span class="math inline">\(x^{p^n}-x\)</span> for some natural number
+<span class="math inline">\(n\)</span>.</p>
+<p>First, as a lemma, we’ll show every finite field <span class="math inline">\(F\)</span> is perfect, meaning every irreducible
+polynomial over <span class="math inline">\(F\)</span> has no multiple
+roots in any field extension over <span class="math inline">\(F\)</span>, or equivalently, every irreducible
+polynomial over <span class="math inline">\(F\)</span> is separable, or
+its roots are distinct in an algebraic closure of <span class="math inline">\(F\)</span>, so the number of distinct roots is
+equal to the degree of the polynomial.</p>
+<p>Say <span class="math inline">\(F\)</span> is a finite field of
+characteristic <span class="math inline">\(p\)</span>. Say <span class="math inline">\(f\)</span> maps <span class="math inline">\(F\)</span> to <span class="math inline">\(F\)</span> by <span class="math inline">\(f(x) =
+x^p\)</span> for any <span class="math inline">\(x \in F\)</span>. See
+<span class="math inline">\(f\)</span> is a field automorphism as <span class="math inline">\(f(ab) = (ab)^p = a^p b^p = f(a) f(b)\)</span> and
+<span class="math inline">\(f(a+b) = (a+b)^p = a^p + \binom{p}{1}
+a^{p-1} b + \binom{p}{2} a^{p-2}b^2 + \dots + \binom{p}{p-1}ab^{p-1} +
+b^p = a^p + b^p\)</span>as <span class="math inline">\(p\)</span>
+divides <span class="math inline">\(\binom{p}{i}\)</span>. And, <span class="math inline">\(x \neq 0\)</span> gives <span class="math inline">\(x^p \neq 0\)</span>, so <span class="math inline">\(\ker f = \{0\}\)</span>. Then <span class="math inline">\(f\)</span> is injective and as <span class="math inline">\(F\)</span> is finite, <span class="math inline">\(f\)</span> injective gives <span class="math inline">\(f\)</span> surjective. We see then <span class="math inline">\(F^p = F\)</span>.</p>
+<p>Now, to show any irreducible polynomial over <span class="math inline">\(F_p\)</span> divides <span class="math inline">\(x^{p^n}-x\)</span>, say <span class="math inline">\(g(x)\)</span> is an irreducible polynomial of
+degree <span class="math inline">\(m\)</span> in <span class="math inline">\(F_p[x]\)</span>. Let <span class="math inline">\(K\)</span> be the finite extension of <span class="math inline">\(F_p\)</span> obtained by adjoining all the zeros
+of <span class="math inline">\(g(x)\)</span> in <span class="math inline">\(\overline{F_p}\)</span>, the algebraic closure of
+<span class="math inline">\(F_p\)</span>. Then <span class="math inline">\(K\)</span> is a finite field of order <span class="math inline">\(p^n\)</span> for some positive integer <span class="math inline">\(n\)</span>, and consists precisely of all zeros of
+<span class="math inline">\(x^{p^n} - x\)</span> in <span class="math inline">\(\overline{F_p}\)</span>. Now <span class="math inline">\(g(x)\)</span> factors into linear factors in <span class="math inline">\(K[x]\)</span>, as the linear factors of <span class="math inline">\(x^{p^n} - x\)</span> in <span class="math inline">\(K[x]\)</span> include these linear factors, and
+<span class="math inline">\(g(x)\)</span> has no repeated roots since we
+showed every finite field is perfect. Thus, <span class="math inline">\(g(x)\)</span> is a divisor of <span class="math inline">\(x^{p^n} - x\)</span>.</p>
+<hr>
+<p>For example, say <span class="math inline">\(p = 5\)</span>, and
+consider the finite field <span class="math inline">\(F_5\)</span>.
+Suppose <span class="math inline">\(g(x)\)</span> is an irreducible
+polynomial of degree <span class="math inline">\(m = 2\)</span> in <span class="math inline">\(F_5[x]\)</span>, such as <span class="math inline">\(g(x) = x^2 + x + 1\)</span>.</p>
+<p>As this is a small finite field, we can check the reducibility
+directly.</p>
+<p>A polynomial of degree 2 is reducible over <span class="math inline">\(F_5\)</span> if and only if it has at least one
+root in <span class="math inline">\(\{0,1,2,3,4\}\)</span>.</p>
+<p><span class="math inline">\(0^2 + 0 + 1 = 1 \neq 0
+\pmod{5}\)</span></p>
+<p><span class="math inline">\(1^2 + 1 + 1 = 1 + 1 + 1 = 3 \neq 0
+\pmod{5}\)</span></p>
+<p><span class="math inline">\(2^2 + 2 + 1 = 4 + 2 + 1 = 7 \equiv 2 \neq
+0 \pmod{5}\)</span></p>
+<p><span class="math inline">\(3^2 + 3 + 1 = 9 + 3 + 1 = 13 \equiv 3
+\neq 0 \pmod{5}\)</span></p>
+<p><span class="math inline">\(4^2 + 4 + 1 = 16 + 4 + 1 = 21 \equiv 1
+\neq 0 \pmod{5}\)</span></p>
+<p>As none of these values satisfy the equation <span class="math inline">\(x^2 + x + 1 \equiv 0 \pmod{5}\)</span>, the
+polynomial has no roots in <span class="math inline">\(F_5\)</span>.</p>
+<p>Instead, the zeros of <span class="math inline">\(g(x)\)</span> lie
+in an extension field <span class="math inline">\(K\)</span> of <span class="math inline">\(F_5\)</span>. Since <span class="math inline">\(g(x)\)</span> is irreducible of degree <span class="math inline">\(2\)</span>, <span class="math inline">\(K\)</span>
+is a finite field of order <span class="math inline">\(5^2 =
+25\)</span>. To see the roots of <span class="math inline">\(g(x) = x^2
++ x + 1\)</span> in <span class="math inline">\(F_{25}\)</span>, we
+first recognize that <span class="math inline">\(F_{25}\)</span> is a
+field of order <span class="math inline">\(5^2\)</span>, meaning its
+elements can be written in the form <span class="math inline">\(a +
+by\)</span> where <span class="math inline">\(a, b \in F_5\)</span> and
+<span class="math inline">\(y\)</span> is a root of an irreducible
+quadratic polynomial over <span class="math inline">\(F_5\)</span>.</p>
+<p>To see this, say <span class="math inline">\(x_0 = y\)</span> is a
+root of <span class="math inline">\(g(x)\)</span>, so <span class="math inline">\(x_0^2 + x_0 + 1 = 0\)</span>. The polynomial <span class="math inline">\(g(x) = x^2 + x + 1\)</span> is quadratic, so if
+<span class="math inline">\(x_0\)</span> is one root, the other root
+<span class="math inline">\(x_1\)</span> can be found using the
+relationship between the roots and coefficients. For a quadratic
+equation <span class="math inline">\(ax^2 + bx + c = 0\)</span>, the sum
+of the roots is <span class="math inline">\(x_0 + x_1 = -b/a\)</span>,
+and the product of the roots is <span class="math inline">\(x_0 x_1 =
+c/a\)</span>. Here, <span class="math inline">\(b = 1\)</span>, so <span class="math inline">\(x_0 + x_1 = -1\)</span> and <span class="math inline">\(c=1\)</span> so <span class="math inline">\(x_0
+x_1 = 1\)</span>. Solving for <span class="math inline">\(x_1\)</span>,
+we get <span class="math inline">\(x_1 = -x_0 - 1\)</span> or $x_1 =
+1/x_0 $. So, the other root is explicitly <span class="math inline">\(-x_0 - 1\)</span>. And, <span class="math inline">\(g(x)\)</span> factors as <span class="math inline">\(g(x) = (x - x_0)(x - (-x_0 - 1))\)</span> in <span class="math inline">\(F_{25}[x]\)</span>.</p>
+<p>We can check that their product equals the constant term of <span class="math inline">\(g(x)\)</span>, or <span class="math inline">\(c=1\)</span>. Multiplying the two roots, <span class="math inline">\(y(4y + 4) = 4y^2 + 4y\)</span>. Substituting <span class="math inline">\(y^2 = 4y + 4\)</span>, we get <span class="math inline">\(4(4y + 4) + 4y = 16y + 16 + 4y\)</span>, which
+simplifies to <span class="math inline">\(20y + 16 \equiv 0y + 1 \equiv
+1 \mod 5\)</span>. This confirms that <span class="math inline">\(x_0
+x_1 = 1\)</span>, as expected.</p>
+<p>As the roots <span class="math inline">\(x_0 = y\)</span> and <span class="math inline">\(x_1 = 4y + 4\)</span> satisfy <span class="math inline">\(g(x)\)</span>, we can factor the polynomial in
+<span class="math inline">\(F_{25}[x]\)</span> as <span class="math inline">\(g(x) = (x - y)(x - (4y + 4))\)</span>.</p>
+<p>Now, to see why every element in <span class="math inline">\(F_{25}\)</span> satisfies <span class="math inline">\(x^{25} - x = 0\)</span>, see the field <span class="math inline">\(F_{25}\)</span> has 25 elements as it is an
+extension of <span class="math inline">\(F_5\)</span> of degree 2,
+meaning <span class="math inline">\(|F_{25}| = 5^2 = 25\)</span>. In any
+finite field <span class="math inline">\(F_q\)</span>, every element
+satisfies the equation <span class="math inline">\(x^q = x\)</span></p>
+<p>which follows from the fact that the field is the splitting field of
+<span class="math inline">\(x^q - x\)</span> over its prime
+subfield.</p>
+<p>To prove this directly, consider the multiplicative group of nonzero
+elements in <span class="math inline">\(F_{25}\)</span>, which has order
+<span class="math inline">\(25 - 1 = 24\)</span>. This group is cyclic,
+meaning every nonzero element <span class="math inline">\(x\)</span>
+satisfies <span class="math inline">\(x^{24} = 1.\)</span></p>
+<p>Multiplying both sides by <span class="math inline">\(x\)</span>, we
+see <span class="math inline">\(x^{25} = x.\)</span></p>
+<p>For <span class="math inline">\(x = 0\)</span>, the equation <span class="math inline">\(0^{25} - 0 = 0\)</span> holds trivially. Hence,
+for <strong>every</strong> element <span class="math inline">\(x \in
+F_{25}\)</span>, we see that <span class="math inline">\(x^{25} - x =
+0.\)</span></p>
+<p>So, <span class="math inline">\(x^{25} - x\)</span> is an identity
+for all elements in <span class="math inline">\(F_{25}\)</span>, proving
+that it holds in the whole field.</p>
+<p>So, as every element in <span class="math inline">\(F_{25}\)</span>
+satisfies <span class="math inline">\(x^{25} - x = 0\)</span>, the roots
+of <span class="math inline">\(g(x)\)</span> must be among the solutions
+to this equation. This implies that the linear factors <span class="math inline">\((x - x_0)\)</span> and <span class="math inline">\((x - x_1)\)</span> divide <span class="math inline">\(x^{25} - x\)</span>, and so, <span class="math inline">\(g(x)\)</span> divides <span class="math inline">\(x^{25} - x\)</span>.</p>
+<p>Thus, <span class="math inline">\(g(x)\)</span> is a divisor of <span class="math inline">\(x^{25} - x\)</span>.</p>
+<p>This shows that <span class="math inline">\(g(x) = x^2 + x +
+1\)</span> divides <span class="math inline">\(x^{25} - x\)</span> in
+<span class="math inline">\(F_5[x]\)</span>.</p>
+</body>
+</html>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/math/alllimits/">complete categories</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/math/complexdiff/">note: complex derivatives and matrices</a></li>
+</ul>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
+		</footer>
+
+		<!-- This page `/blog/math/irreddivisors/` was built on 2025-10-23T14:25:20.054Z -->
+		<script type="module" src="/dist/cC8wS6ZjFU.js"></script>
+	</body>
+</html>

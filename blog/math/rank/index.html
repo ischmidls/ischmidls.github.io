@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>note: matrix rank</title>
+		<meta name="description" content="more notes on rank of linear systems">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="izak">
+		
+		<style>/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: Garamond, serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	flex-grow: 1;
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">izak</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">home</a></li>
+					<li class="nav-item"><a href="/blog/">archive</a></li>
+					<li class="nav-item"><a href="/about/">about</a></li>
+					<li class="nav-item"><a href="/feed/feed.xml">feed</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<heading-anchors>
+				
+<h1 id="note-matrix-rank">note: matrix rank</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2023-07-01">01 July 2023</time></li>
+	<li><a href="/tags/math/" class="post-tag">math</a>, </li>
+	<li><a href="/tags/note/" class="post-tag">note</a></li>
+</ul>
+
+<ul>
+    <li>
+      <a href="#consistency">consistency</a>
+    </li>
+    <li>
+      <a href="#splitting-lemma">splitting lemma</a>
+    </li>
+    <li>
+      <a href="#to-be-continued">to be continued</a>
+    </li>
+  </ul>
+  <h2 id="consistency">consistency <a href="#top"><i class="bi bi-arrow-up"></i></a></h2>
+  <p>Just to get it out of the way,  If \(\operatorname{rank}(A) &lt; \operatorname{rank}(A|B)\), then the system is inconsistent.</p>
+  <p>Let Let \(A\) denote a matrix and \(A | B \) denote its augmented matrix.</p>
+  <p>Consistent Systems:</p>
+  <ul>
+    <li>
+      <b>Def 1</b> Full Rank: Unique solution. \(\text{rank} (A) = \text{rank} (A|B) = \text{col} (A)\)
+    </li>
+    <li>
+      <b>Def 2</b> Underdetermined: Infinitely many solutions. \(\text{rank} (A) = \text{rank} (A|B) &lt; \text{col} (A) \) </li>
+  </ul>
+  <p>Inconsistent System:</p>
+  <ul>
+    <li>
+      <b>Def 3</b> Overdetermined: No solution. \(\text{rank} (A) &gt; \text{col} (A) \)
+    </li>
+  </ul>
+  <p>Proofs</p>
+  <div class="card">
+    <div class="card-body">
+      <p>To see this note that rank of the matrix is dimension of the span of columns of the matrix. Now if \(Ax=b\) has solution, then it means that some linear combination of columns of A gives us b, which implies that \(b\) lies in \(span(A)\) and so \(rank(A|b)=rank(A)\). You can argue similarly in the reverse direction.</p>
+      <p>
+        <a href="https://math.stackexchange.com/a/2090749/1098426">Source</a>
+      </p>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <div class="card-body">
+      <p>A matrix \(A\in\mathcal{M}_{nm}(\Bbb{R})\) \([\) <span class="text-secondary">of dimensions \(n \ \text{rows} \times m \ \text{columns} \ \) respectively</span>\(]\) is a representation of a linear transformation \(f\colon\Bbb{R}^m\rightarrow \Bbb{R}^n\), so the image of \(f\) is a subspace of \(\Bbb{R}^n\). Hence, \(\operatorname{rank}(f)=\dim(\operatorname{Im}(f))\leq n\), </p>
+      <p>But also, by the <b>Rank-Nullity Theorem \((*)\)</b>, we have \(\operatorname{rank}(f)\leq m\). Hence, we find the desired result \(\operatorname{rank}(f)\leq \min(m,n)\). </p>
+      <p>
+        <a href="https://math.stackexchange.com/a/759000/1098426">Source</a>
+      </p>
+      <div class="pl-5">
+        <p>Now, recall the <b>Rank-Nullity Theorem \((*)\)</b>
+        </p>
+        <p>
+          <b>Def 4a </b>
+          <em>Transforms</em>
+        </p>
+        <p>Let \(T: V \rightarrow W\) be a linear transformation between two vector spaces where \(T\)'s domain \(V\) is finite dimensional. Then</p>
+        <p>\(\operatorname{rank}(T) + \operatorname{nullity}(T) = \operatorname{dim}(V)\),</p>
+        <p>where \(\operatorname{rank}(T)\) is the rank of \(T\) (the dimension of its image) and \(\operatorname{nullity}(T)\) is the nullity of \(T\) (the dimension of its kernel). In other words,</p>
+        <p>\(\operatorname{dim}(\operatorname{Im}(T)) + \operatorname{dim}(\operatorname{Ker}(T)) = \operatorname{dim}(\operatorname{Domain}(T))\).</p>
+        <p>This theorem can be refined via the <b>Splitting Lemma \((**)\)</b> \([\) <span class="text-secondary">a category-theoretic generalization of this theorem from dimensions to spaces </span>\(]\) to be a statement about an isomorphism of spaces, not just dimensions. Explicitly, since \(T\) induces an isomorphism from \(V/\operatorname{Ker}(T)\) to \(\operatorname{Im}(T)\), the existence of a basis for \(V\) that extends any given basis of \(\operatorname{Ker}(T)\) implies, via the splitting lemma, that \(\operatorname{Im}(T) \oplus \operatorname{Ker}(T) \cong V\). Taking dimensions, the rank–nullity theorem follows. </p>
+        <p>
+          <b>Def 4b </b>
+          <em>Matrices</em>
+        </p>
+        <p>Linear maps can be represented with matrices. More precisely, an \(m \times n\) matrix \(M\) represents a linear map \(f: \mathbb{F}^n \rightarrow \mathbb{F}^m\), where \(\mathbb{F}\) is the underlying field. So, the dimension of the domain of \(f\) is \(n\), the number of columns of \(M\), and the rank–nullity theorem for an \(m \times n\) matrix \(M\) is</p>
+        <p>\(\operatorname{rank}(M) + \operatorname{nullity}(M) = n\).</p>
+        <p>
+          <a href="https://www.d.umn.edu/~jgreene/Math_5327_Linear/Transformations.pdf">Source</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <h2 id="splitting-lemma">splitting lemma <a href="#top"><i class="bi bi-arrow-up"></i></a></h2>
+  <div class="card">
+    <div class="card-body">
+      
+        <p>
+          <b>\((**)\) Splitting Lemma</b>
+        </p>
+        <p>Perhaps the treatments of the splitting lemma that are closest to linear algebra and matrices are those involving <em>groups</em> or <em>modules</em>
+        </p>
+        <p> Splitting Lemma for Groups: Let \( G \) be a group and \( H \) a subgroup of \( G \). If there exists a homomorphism \( \varphi : G \rightarrow H \) such that \( \varphi \) is the identity on \( H \), then \( G \) is the internal direct product of \( H \) and \( \ker(\varphi) \). This means that if there exists a homomorphism \( \varphi \) from a group \( G \) to a subgroup \( H \) such that \( \varphi \) is the identity on \( H \), then \( G \) can be expressed as the direct product of \( H \) and the kernel of \( \varphi \). This gives a decomposition of the group \( G \) into two subgroups. </p>
+        <p>More precisely from Prof. Conrad:</p>
+        <blockquote>
+          <p>A sequence of groups and group homomorphisms</p>
+          <p>\(H \xrightarrow{\alpha} G \xrightarrow{\beta} K\)</p>
+          <p>is called exact at \(G\) if \(\operatorname{im}(\alpha) = \operatorname{ker}(\beta)\). This means two things: the image of \(\alpha\) is killed by \(\beta\) (\(\beta(\alpha(h)) = 1\) for all \(h \in H\)), so \(\operatorname{im}(\alpha) \subseteq \operatorname{ker}(\beta)\), and also only the image of \(\alpha\) is killed by \(\beta\) (if \(\beta(g) = 1\) then \(g = \alpha(h)\) for some \(h\)), so \(\operatorname{ker}(\beta) \subseteq \operatorname{im}(\alpha)\). For example, to say \(1 \rightarrow G \xrightarrow{f} K\) is exact at \(G\) means \(f\) is injective, and to say \(H \xrightarrow{f} G \rightarrow 1\) is exact at \(G\) means \(f\) is surjective. There is no need to label the homomorphisms coming out of \(1\) or going to \(1\) since there is only one possible choice. If the group operations are written additively, we may use \(0\) in place of \(1\) for the trivial group.</p>
+          <p>A short exact sequence of groups is a sequence of groups and group homomorphisms</p>
+          <p>\(1 \rightarrow H \xrightarrow{\alpha} G \xrightarrow{\beta} K \rightarrow 1\)</p>
+          <p>which is exact at \(H\), \(G\), and \(K\). That means \(\alpha\) is injective, \(\beta\) is surjective, and \(\operatorname{im}(\alpha) = \operatorname{ker}(\beta)\).</p>
+          <p>A more general exact sequence can have lots of terms:</p>
+          <p>\(G_1 \xrightarrow{\alpha_1} G_2 \xrightarrow{\alpha_2} \ldots \xrightarrow{\alpha_{n-1}} G_n\),</p>
+          <p>and it must be exact at each \(G_i\) for \(1 &lt; i &lt; n\). Exact sequences can also be of infinite length in one or both directions. We will only deal with short exact sequences here. </p>
+              <p>Exact sequences first arose in algebraic topology, and the later development of homological algebra (the type of algebra underlying algebraic topology) spread exact sequences into the rest of mathematics.</p>
+              <p>Theorem 3.2. Let \(1 \rightarrow H \xrightarrow{\alpha} G \xrightarrow{\beta} K \rightarrow 1\) be a short exact sequence of groups. The following are equivalent:</p>
+              <p>(1) There is a homomorphism \(\alpha_0: G \rightarrow H\) such that \(\alpha_0(\alpha(h)) = h\) for all \(h \in H\).</p>
+              <p>(2) There is an isomorphism \(\theta: G \rightarrow H \times K\) such that the diagram</p>
+              <p>
+                <img src="content/blog/math/rank/commute-groups.png">
+              </p>
+              <p>commutes, where the bottom row is the short exact sequence for a direct product.</p>
+              <p>The commutative diagram in (2) says that \(\theta\) identifies \(\alpha\) with the embedding \(H \rightarrow H \times K\) and \(\beta\) with the projection \(H \times K \rightarrow K\). So the point of (2) is not simply that \(G\) is isomorphic to \(H \times K\), but it is in a way that turns \(\alpha\) and \(\beta\) into the standard maps from \(H\) to \(H \times K\) and from \(H \times K\) to \(K\).</p>
+              <p>The key point of (1) is that \(\alpha_0\) is a homomorphism. Merely from \(\alpha\) being injective, there is a function \(\alpha_0: G \rightarrow H\) such that \(\alpha_0(\alpha(h)) = h\) for all \(h\), for instance the function \(\alpha_0(g) = \{ \mathbf{1} \iff g \notin \alpha(H) \land h \iff g = \alpha(h) \} \). But this \(\alpha_0\) is almost surely not a homomorphism.</p>
+        </blockquote>
+        <p> Splitting Lemma for Modules: Let \( R \) be a ring and \( M \) a module over \( R \). If \( M \) is a direct sum of two submodules, say \( M = A \oplus B \), then any submodule \( N \) of \( M \) can be expressed as the direct sum of \( N \cap A \) and \( N \cap B \). This means that if a module \( M \) can be expressed as the direct sum of two submodules \( A \) and \( B \), then any submodule \( N \) of \( M \) can be decomposed as the direct sum of its intersections with \( A \) and \( B \). This provides a way to decompose submodules of a module that is a direct sum. </p>
+        <p>Again, more precisely from Prof. Conrad:</p>
+        <blockquote>
+          <p> Let \( R \) be a commutative ring. A sequence of \( R \)-modules and \( R \)-linear maps \( N \xrightarrow{f} M \xrightarrow{g} P \) is called exact at \( M \) if \( \text{im}(f) = \text{ker}(g) \). For example, to say \( 0 \xrightarrow{h} M \) is exact at \( M \) means \( h \) is injective, and to say \( N \xrightarrow{h} M \xrightarrow{0} \) is exact at \( M \) means \( h \) is surjective. The linear maps coming out of \( 0 \) or going to \( 0 \) are unique, so there is no need to label them. </p>
+          <p> A short exact sequence of \( R \)-modules is a sequence of \( R \)-modules and \( R \)-linear maps \[ 0 \xrightarrow{f} N \xrightarrow{g} M \xrightarrow{h} P \xrightarrow{} 0 \] which is exact at \( N \), \( M \), and \( P \). That means \( f \) is injective, \( g \) is surjective, and \( \text{im}(f) = \text{ker}(g) \). </p>
+          <p>[...]</p>
+          <p>
+            <strong>Theorem 2.1.</strong> Let \(0 \rightarrow N \xrightarrow{f} M \xrightarrow{g} P \rightarrow 0\) be a short exact sequence of \(R\)-modules.
+          </p>
+          <p>The following are equivalent:</p>
+          <ol>
+            <li>There is an \(R\)-linear map \(f_0: M \rightarrow N\) such that \(f_0(f(n)) = n\) for all \(n \in N\).</li>
+            <li>There is an \(R\)-linear map \(g_0: P \rightarrow M\) such that \(g(g_0(p)) = p\) for all \(p \in P\).</li>
+            <li>The short exact sequence splits: there is an isomorphism \(\theta: M \rightarrow N \oplus P\) such that the diagram below commutes.</li>
+          </ol>
+          <p>
+            <img src="content/blog/math/rank/commute-modules.png">
+          </p>
+          <p>If we replace \(R\)-modules with groups and \(R\)-linear maps with group homomorphisms, conditions (1) and (2) are not equivalent: for a short exact sequence \(1 \rightarrow H \xrightarrow{f} G \xrightarrow{g} K \rightarrow 1\), (1) corresponds to \(G\) being a direct product of \(H\) and \(K\) while (2) corresponds to \(G\) being a semidirect product of \(H\) and \(K\). The reason (1) and (2) are no longer equivalent for groups is related to noncommutativity. For an exact sequence of abelian groups, (1) and (2) are equivalent (this is the special case \(R = \mathbb{Z}\), since abelian groups are \(\mathbb{Z}\)-modules).</p>
+        </blockquote>
+        <p>More on the Splitting Lemma for . . . <a href="https://kconrad.math.uconn.edu/blurbs/linmultialg/splittingmodules.pdf">Modules</a> and <a href="https://kconrad.math.uconn.edu/blurbs/grouptheory/splittinggp.pdf">Groups</a> from the lovely <em>Prof. K. Conrad</em>
+        </p>
+      <p>Now, as for linear algebra, Wikipedia also uses the language of the <b>Splitting Lemma</b> for vector spaces:</p>
+      <blockquote>
+        <p>The theorem can also be phrased as saying that each short exact sequence of vector spaces splits. Explicitly, given that</p>
+
+        <p>
+        \[0 \rightarrow U \rightarrow V \overset{T}{\rightarrow} R \rightarrow 0\]
+        </p>
+
+        <p>is a short exact sequence of vector spaces, then</p>
+
+        <p>
+        \[U \oplus R \cong V\]
+        </p>
+
+        <p>hence</p>
+
+        <p>
+        \[\dim(U) + \dim(R) = \dim(V).\]
+        </p>
+
+        <p>Here \(R\) plays the role of \(\operatorname{Im} T\) and \(U\) is \(\operatorname{Ker} T\), i.e.</p>
+
+        <p>
+        \[0 \rightarrow \operatorname{ker} T \hookrightarrow V \overset{T}{\rightarrow} \operatorname{im} T \rightarrow 0\]
+        </p>
+
+        <p>In the finite-dimensional case, this formulation is susceptible to a generalization: if</p>
+
+        <p>
+        \[0 \rightarrow V_1 \rightarrow V_2 \rightarrow \cdots V_r \rightarrow 0\]
+        </p>
+
+        <p>is an exact sequence of finite-dimensional vector spaces, then</p>
+
+        <p>
+        \[\sum_{i=1}^{r} (-1)^{i} \dim(V_i) = 0.\]
+        </p>
+      </blockquote>
+      <p><a href="https://en.wikipedia.org/wiki/Rank%E2%80%93nullity_theorem#Reformulations_and_generalizations">Source</a></p>
+      <p>This follows the reasoning that</p>
+      <blockquote>
+        <p>Let \(f_0\) be the first map in the sequence, \(f_i\) be the map from \(V_i\) to \(V_{i+1}\), etc.</p>
+
+        <p>By the Rank Nullity theorem, we have \(\dim V_i = \dim\ker f_i + \dim \operatorname{im} f_i.\) Thus the left-hand side is</p>
+
+        <p>\[\sum_{i=1}^{r} (-1)^i \dim\ker f_i+\sum_{i=1}^{r} (-1)^i \dim\operatorname{im} f_i.\]</p>
+
+        <p>Now, by the defining property of an exact sequence, \(\operatorname{im} f_i = \ker f_{i+1}.\) Place that information into one of the sums, and the two sums then cancel out.</p>
+
+        <p>Note that in order for the series in question to converge, the sequence must be of the form in this answer, perhaps with extra \(0\)'s.</p>
+      </blockquote>
+      <p><a href="https://math.stackexchange.com/a/255387/1098426">Source</a></p>
+    </div>
+  </div>
+  <br>
+  <h2 id="to-be-continued">to be continued <a href="#top"><i class="bi bi-arrow-up"></i></a></h2>
+  <p>Now, we have a problem.</p>
+  <a title="ARAKI Satoru, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Rank-nullity.svg">
+    <picture><source type="image/avif" srcset="/blog/math/rank/HWerGOgtf7-256.avif 256w"><source type="image/webp" srcset="/blog/math/rank/HWerGOgtf7-256.webp 256w"><img loading="lazy" decoding="async" src="/blog/math/rank/HWerGOgtf7-256.png" style="width:50%;" alt="Rank-nullity" width="256" height="259"></picture>
+  </a>
+  <br>
+  <p>And, what in the world are these dotted lines? It appears to be addition for \(\operatorname{dim} V\) but then \(\operatorname{dim} \operatorname{ker} T\) and \(\operatorname{dim} \operatorname{im} T\) don't make sense?</p>
+  <p>Well, I admittedly asked twitter, where @linguanumerate and @xl772 clarified.
+    </p><blockquote>
+        <p>It's just a kind of intuitive picture. The vertical line on the left is a "picture" of \(V\), with its dimension represented by the height of the line. The arrows show \(V\) getting mapped into \(W\), with \(V/\operatorname{ker} T\) getting mapped to \(\operatorname{im} T\) and \(\operatorname{ker} T\) getting squashed to 0.</p>
+        <p>And I think the dotted lines are just to show which height corresponds to which quantity, I don’t think it’s adding.</p>
+    </blockquote>
+  <p></p>
+  <p>But, I think that is enough about rank for now.</p>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/math/kanttopoi/">kant and aristotle to topoi</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/math/intro prob/">note: probability &amp; types</a></li>
+</ul>
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
+		</footer>
+
+		<!-- This page `/blog/math/rank/` was built on 2025-10-23T14:25:20.056Z -->
+		<script type="module" src="/dist/cC8wS6ZjFU.js"></script>
+	</body>
+</html>

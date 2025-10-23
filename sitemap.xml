@@ -2,307 +2,312 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/longintegral/</loc>
+		<loc>https://ischmidls.github.io/blog/math/longintegral/</loc>
 		<lastmod>2022-04-10</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/mix/</loc>
+		<loc>https://ischmidls.github.io/blog/widget/mix/</loc>
 		<lastmod>2022-06-06</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/numberparagraphs/</loc>
+		<loc>https://ischmidls.github.io/blog/widget/numberparagraphs/</loc>
 		<lastmod>2022-06-06</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/tabaway/</loc>
+		<loc>https://ischmidls.github.io/blog/widget/tabaway/</loc>
 		<lastmod>2022-06-06</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/humantrafficking/</loc>
+		<loc>https://ischmidls.github.io/blog/stats/humantrafficking/</loc>
 		<lastmod>2022-06-10</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/mathtax/</loc>
+		<loc>https://ischmidls.github.io/blog/stats/mathtax/</loc>
 		<lastmod>2022-07-01</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/functions/</loc>
+		<loc>https://ischmidls.github.io/blog/math/functions/</loc>
 		<lastmod>2022-07-03</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/undergraddata/</loc>
+		<loc>https://ischmidls.github.io/blog/stats/undergraddata/</loc>
 		<lastmod>2022-08-04</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/stokestheorem/</loc>
+		<loc>https://ischmidls.github.io/blog/math/stokestheorem/</loc>
 		<lastmod>2022-09-01</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/sqlpractice/</loc>
+		<loc>https://ischmidls.github.io/blog/widget/sqlpractice/</loc>
 		<lastmod>2022-11-01</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/musiciansite/</loc>
+		<loc>https://ischmidls.github.io/blog/widget/musiciansite/</loc>
 		<lastmod>2022-12-12</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/reactcraft/</loc>
+		<loc>https://ischmidls.github.io/blog/widget/reactcraft/</loc>
 		<lastmod>2022-12-29</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/countsplit/</loc>
+		<loc>https://ischmidls.github.io/blog/widget/countsplit/</loc>
 		<lastmod>2023-01-01</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/first%20sentence/</loc>
+		<loc>https://ischmidls.github.io/blog/widget/first%20sentence/</loc>
 		<lastmod>2023-01-01</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/philosophyplot/</loc>
+		<loc>https://ischmidls.github.io/blog/stats/philosophyplot/</loc>
 		<lastmod>2023-01-02</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/plotwords/</loc>
+		<loc>https://ischmidls.github.io/blog/stats/plotwords/</loc>
 		<lastmod>2023-02-01</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/translate/</loc>
+		<loc>https://ischmidls.github.io/blog/widget/translate/</loc>
 		<lastmod>2023-02-01</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/beauty/</loc>
+		<loc>https://ischmidls.github.io/blog/math/beauty/</loc>
 		<lastmod>2023-02-02</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/ct/</loc>
+		<loc>https://ischmidls.github.io/blog/math/ct/</loc>
 		<lastmod>2023-03-24</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/heyting/</loc>
+		<loc>https://ischmidls.github.io/blog/math/heyting/</loc>
 		<lastmod>2023-05-01</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/linearsix/</loc>
+		<loc>https://ischmidls.github.io/blog/math/linearsix/</loc>
 		<lastmod>2023-06-01</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/spectralsequencesanddeleuze/</loc>
+		<loc>https://ischmidls.github.io/blog/math/spectralsequencesanddeleuze/</loc>
 		<lastmod>2023-06-10</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/kanttopoi/</loc>
+		<loc>https://ischmidls.github.io/blog/math/kanttopoi/</loc>
 		<lastmod>2023-06-22</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/rank/</loc>
+		<loc>https://ischmidls.github.io/blog/math/rank/</loc>
 		<lastmod>2023-07-01</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/intro%20prob/</loc>
+		<loc>https://ischmidls.github.io/blog/math/intro%20prob/</loc>
 		<lastmod>2023-07-02</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/abstractguides/</loc>
+		<loc>https://ischmidls.github.io/blog/math/abstractguides/</loc>
 		<lastmod>2023-07-03</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/ode/</loc>
+		<loc>https://ischmidls.github.io/blog/math/ode/</loc>
 		<lastmod>2023-07-04</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/ode-coupled/</loc>
+		<loc>https://ischmidls.github.io/blog/math/ode-coupled/</loc>
 		<lastmod>2023-07-10</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/langlands%20&amp;amp;%20pendulum/</loc>
+		<loc>https://ischmidls.github.io/blog/math/langlands%20&amp;amp;%20pendulum/</loc>
 		<lastmod>2023-07-11</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/notes%20-%20cont.%20measure%20&amp;amp;%20intro%20prob/</loc>
+		<loc>https://ischmidls.github.io/blog/math/notes%20-%20cont.%20measure%20&amp;amp;%20intro%20prob/</loc>
 		<lastmod>2023-07-11</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/1st%20order%20integrating%20factors/</loc>
+		<loc>https://ischmidls.github.io/blog/math/1st%20order%20integrating%20factors/</loc>
 		<lastmod>2023-07-13</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/steady%20descent%20into%20vector%20calculus/</loc>
+		<loc>https://ischmidls.github.io/blog/math/steady%20descent%20into%20vector%20calculus/</loc>
 		<lastmod>2023-07-16</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/calculustrap/</loc>
+		<loc>https://ischmidls.github.io/blog/math/calculustrap/</loc>
 		<lastmod>2023-07-30</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/abstracttrap/</loc>
+		<loc>https://ischmidls.github.io/blog/math/abstracttrap/</loc>
 		<lastmod>2023-08-30</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/thread%20cleaner/</loc>
+		<loc>https://ischmidls.github.io/blog/widget/thread%20cleaner/</loc>
 		<lastmod>2024-01-16</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/matrixprod/</loc>
+		<loc>https://ischmidls.github.io/blog/widget/matrixprod/</loc>
 		<lastmod>2024-02-12</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/remove-conjunctive/</loc>
+		<loc>https://ischmidls.github.io/blog/widget/remove-conjunctive/</loc>
 		<lastmod>2024-03-29</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/prince/</loc>
+		<loc>https://ischmidls.github.io/blog/widget/prince/</loc>
 		<lastmod>2024-04-29</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/spherefractions/</loc>
+		<loc>https://ischmidls.github.io/blog/math/spherefractions/</loc>
 		<lastmod>2024-04-30</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/modular-multiplicative-inverse/</loc>
+		<loc>https://ischmidls.github.io/blog/math/modular-multiplicative-inverse/</loc>
 		<lastmod>2024-05-09</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/quaternion-multiplication/</loc>
+		<loc>https://ischmidls.github.io/blog/math/quaternion-multiplication/</loc>
 		<lastmod>2024-05-10</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/divisors-and-totient/</loc>
+		<loc>https://ischmidls.github.io/blog/math/divisors-and-totient/</loc>
 		<lastmod>2024-05-15</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/field-extension-practice/</loc>
+		<loc>https://ischmidls.github.io/blog/math/field-extension-practice/</loc>
 		<lastmod>2024-05-24</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/cohomologysphere/</loc>
+		<loc>https://ischmidls.github.io/blog/math/cohomologysphere/</loc>
 		<lastmod>2024-05-30</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/khovanov/</loc>
+		<loc>https://ischmidls.github.io/blog/math/khovanov/</loc>
 		<lastmod>2024-06-14</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/diffeqreview/</loc>
+		<loc>https://ischmidls.github.io/blog/math/diffeqreview/</loc>
 		<lastmod>2024-09-30</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/textcraft/</loc>
+		<loc>https://ischmidls.github.io/blog/widget/textcraft/</loc>
 		<lastmod>2025-01-04</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/alllimits/</loc>
+		<loc>https://ischmidls.github.io/blog/math/alllimits/</loc>
 		<lastmod>2025-01-08</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/irreddivisors/</loc>
+		<loc>https://ischmidls.github.io/blog/math/irreddivisors/</loc>
 		<lastmod>2025-01-14</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/complexdiff/</loc>
+		<loc>https://ischmidls.github.io/blog/math/complexdiff/</loc>
 		<lastmod>2025-02-12</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/unknownvariance/</loc>
+		<loc>https://ischmidls.github.io/blog/stats/unknownvariance/</loc>
 		<lastmod>2025-02-14</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/mlrsim/</loc>
+		<loc>https://ischmidls.github.io/blog/stats/mlrsim/</loc>
 		<lastmod>2025-03-15</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/multifactorsim/</loc>
+		<loc>https://ischmidls.github.io/blog/stats/multifactorsim/</loc>
 		<lastmod>2025-03-15</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/probabilitymeasure/</loc>
+		<loc>https://ischmidls.github.io/blog/math/probabilitymeasure/</loc>
 		<lastmod>2025-04-03</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/manova/</loc>
+		<loc>https://ischmidls.github.io/blog/stats/manova/</loc>
 		<lastmod>2025-10-16</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://ischmidls.github.io/blog/cleanlatex/</loc>
+		<loc>https://ischmidls.github.io/blog/widget/cleanlatex/</loc>
 		<lastmod>2025-10-22</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://ischmidls.github.io/blog/stats/binompower/</loc>
+		<lastmod>2025-10-23</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ischmidls.github.io/about/</loc>
-		<lastmod>2025-10-22</lastmod>
+		<lastmod>2025-10-23</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ischmidls.github.io/blog/</loc>
-		<lastmod>2025-10-22</lastmod>
+		<lastmod>2025-10-23</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ischmidls.github.io/</loc>
-		<lastmod>2025-10-22</lastmod>
+		<lastmod>2025-10-23</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ischmidls.github.io/tags/</loc>
-		<lastmod>2025-10-22</lastmod>
+		<lastmod>2025-10-23</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://ischmidls.github.io/feed/feed.xml</loc>
-		<lastmod>2025-10-22</lastmod>
+		<lastmod>2025-10-23</lastmod>
 	</url>
 </urlset>
