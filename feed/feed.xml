@@ -554,109 +554,6 @@ $(document).ready(function () {
 </content>
   </entry>
   <entry>
-    <title>widget: clean latex</title>
-    <link href="https://ischmidls.github.io/blog/widget/cleanlatex/" />
-    <updated>2025-10-22T00:00:00Z</updated>
-    <id>https://ischmidls.github.io/blog/widget/cleanlatex/</id>
-    <content type="html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div&gt;
-        &lt;label&gt;Input Text:&lt;/label&gt;&lt;br&gt;
-        &lt;textarea id=&quot;inputText&quot; rows=&quot;10&quot; cols=&quot;80&quot; placeholder=&quot;Enter your text here...&quot;&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
-
-    &lt;div&gt;
-        &lt;button onclick=&quot;transformText()&quot;&gt;Transform Text&lt;/button&gt;
-        &lt;button onclick=&quot;clearAll()&quot;&gt;Clear All&lt;/button&gt;
-    &lt;/div&gt;
-
-    &lt;div&gt;
-        &lt;label&gt;Transformed Text:&lt;/label&gt;
-        &lt;button onclick=&quot;copyOutput()&quot;&gt;Copy Output&lt;/button&gt;
-        &lt;span id=&quot;copySuccess&quot; style=&quot;color:green; display:none;&quot;&gt;Copied!&lt;/span&gt;
-        &lt;br&gt;
-        &lt;textarea id=&quot;outputText&quot; rows=&quot;10&quot; cols=&quot;80&quot; readonly=&quot;&quot;&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
-
-    &lt;script&gt;
-        function transformText() {
-            const inputText = document.getElementById(&#39;inputText&#39;).value;
-            let output = inputText;
-
-            // Remove asterisks
-            output = output.replace(/&#92;*/g, &#39;&#39;);
-
-            // Remove lines starting with #
-            output = output.replace(/^#.*$/gm, &#39;&#39;);
-
-            // Remove dashes
-            output = output.replace(/---/g, &#39;&#39;);
-
-            // Replace &#92;&#92;[ or &#92;&#92;] with $$
-            output = output.replace(/&#92;&#92;&#92;[&#92;n|&#92;n&#92;&#92;&#92;]/g, &#39;$$&#39;);
-
-            // Replace &#92;&#92;( or &#92;&#92;) with $
-            // space
-            output = output.replace(/&#92;&#92;&#92;( | &#92;&#92;&#92;)/g, &#39;$&#39;);
-            // no space
-            output = output.replace(/&#92;&#92;&#92;(|&#92;&#92;&#92;)/g, &#39;$&#39;);
-
-            // Clean up multiple empty lines
-            output = output.replace(/&#92;n&#92;s*&#92;n/g, &#39;&#92;n&#92;n&#39;);
-
-            // Remove leading/trailing whitespace
-            output = output.trim();
-
-            document.getElementById(&#39;outputText&#39;).value = output;
-        }
-
-        function clearAll() {
-            document.getElementById(&#39;inputText&#39;).value = &#39;&#39;;
-            document.getElementById(&#39;outputText&#39;).value = &#39;&#39;;
-            document.getElementById(&#39;copySuccess&#39;).style.display = &#39;none&#39;;
-        }
-
-        function copyOutput() {
-            const outputText = document.getElementById(&#39;outputText&#39;).value;
-            if (!outputText) return;
-
-            navigator.clipboard.writeText(outputText).then(() =&gt; {
-                const successElement = document.getElementById(&#39;copySuccess&#39;);
-                successElement.style.display = &#39;inline&#39;;
-                setTimeout(() =&gt; {
-                    successElement.style.display = &#39;none&#39;;
-                }, 2000);
-            }).catch(err =&gt; {
-                console.error(&#39;Failed to copy text: &#39;, err);
-                // Fallback for older browsers
-                const textArea = document.createElement(&#39;textarea&#39;);
-                textArea.value = outputText;
-                document.body.appendChild(textArea);
-                textArea.select();
-                document.execCommand(&#39;copy&#39;);
-                document.body.removeChild(textArea);
-                const successElement = document.getElementById(&#39;copySuccess&#39;);
-                successElement.style.display = &#39;inline&#39;;
-                setTimeout(() =&gt; {
-                    successElement.style.display = &#39;none&#39;;
-                }, 2000);
-            });
-        }
-
-        // Allow pressing Enter to transform text
-        document.getElementById(&#39;inputText&#39;).addEventListener(&#39;keydown&#39;, function(event) {
-            if (event.key === &#39;Enter&#39;) {
-                transformText();
-            }
-        });
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</content>
-  </entry>
-  <entry>
     <title>note: manova</title>
     <link href="https://ischmidls.github.io/blog/stats/manova/" />
     <updated>2025-10-16T00:00:00Z</updated>
@@ -2030,5 +1927,561 @@ As the forgetful functor &#92;( U: &#92;text{Vect}_k &#92;to &#92;text{Set} &#92
   &lt;hr&gt;
 
   These notes were inspired by a remark in &lt;a href=&quot;https://youtu.be/5uI0uJpsEhI?si=f8G1Y0ylOOewxhhG&quot;&gt;this&lt;/a&gt; video.</content>
+  </entry>
+  <entry>
+    <title>textcraft</title>
+    <link href="https://ischmidls.github.io/blog/widget/textcraft/" />
+    <updated>2025-01-04T00:00:00Z</updated>
+    <id>https://ischmidls.github.io/blog/widget/textcraft/</id>
+    <content type="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Minecraft Text Adventure&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: monospace;
+            background-color: white;
+            color: black;
+            margin: 0;
+            padding: 20px;
+        }
+        #output {
+            white-space: pre-line;
+            margin-bottom: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        #input {
+            width: 100%;
+            padding: 10px;
+            font-family: monospace;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;output&quot;&gt;Welcome to text-based Minecraft! Type a command (or help) to begin...&lt;/div&gt;
+    &lt;input id=&quot;input&quot; type=&quot;text&quot; placeholder=&quot;Enter your command here...&quot; autofocus=&quot;&quot;&gt;
+    
+     &lt;script&gt;
+const output = document.getElementById(&quot;output&quot;);
+const input = document.getElementById(&quot;input&quot;);
+
+const biomes = [&#39;Forest Biome&#39;, &#39;Grasslands Biome&#39;, &#39;Desert Biome&#39;]; // Sample biomes
+let inventory = [];
+// add coordinates
+let coordinates = [0,64,0];
+const blocks = [&#39;Dirt&#39;, &#39;Cobblestone&#39;, &#39;Coal&#39;, &#39;Diamond&#39;];
+const ores = [&#39;Iron Ore&#39;, &#39;Gold Ore&#39;];
+const ingots = [&#39;Iron Ingot&#39;, &#39;Gold Ingot&#39;];
+const monsters = [&#39;Zombie&#39;, &#39;Creeper&#39;, &#39;Enderman&#39;, &#39;Skeleton&#39;, &#39;Spider&#39;, &#39;Drowned&#39;, &#39;Stray&#39;];
+const caves = [&#39;Dripstone Cavern&#39;, &#39;Lush Cave&#39;, &#39;Ravine&#39;, &#39;Cave&#39;, &#39;Abandoned Mineshaft&#39;, &#39;Dungeon&#39;];
+let gameState = &quot;idle&quot;; // Track the current state of the game
+let currentBiome = &quot;&quot;; // Store the biome during exploration
+let experience = 0;
+let monster_health = 20;
+let player_attack_damage = 1;
+let player_health = 20;
+let monster_attack_damage = 5;
+let void_fall = false;
+let slain_by_monster = false;
+let mining_strength = 0
+const items = {
+    &quot;Wooden Sword&quot;: {
+        recipe: new Array(2).fill(&quot;Plank&quot;).concat(new Array(1).fill(&quot;Stick&quot;)),
+        damage: 1,
+        miningStrength: 0,
+    },
+    &quot;Wooden Pickaxe&quot;: {
+        recipe: new Array(3).fill(&quot;Plank&quot;).concat(new Array(2).fill(&quot;Stick&quot;)),
+        damage: 1,
+        miningStrength: 1,
+    },
+    &quot;Cobblestone Sword&quot;: {
+        recipe: new Array(2).fill(&quot;Cobblestone&quot;).concat(new Array(1).fill(&quot;Stick&quot;)),
+        damage: 2,
+        miningStrength: 0,
+    },
+    &quot;Cobblestone Pickaxe&quot;: {
+        recipe: new Array(3).fill(&quot;Cobblestone&quot;).concat(new Array(2).fill(&quot;Stick&quot;)),
+        damage: 2,
+        miningStrength: 2,
+    },
+    &quot;Iron Sword&quot;: {
+        recipe: new Array(2).fill(&quot;Iron&quot;).concat(new Array(1).fill(&quot;Stick&quot;)),
+        damage: 3,
+        miningStrength: 0,
+    },
+    &quot;Iron Pickaxe&quot;: {
+        recipe: new Array(3).fill(&quot;Iron&quot;).concat(new Array(2).fill(&quot;Stick&quot;)),
+        damage: 3,
+        miningStrength: 3,
+    },
+    &quot;Gold Sword&quot;: {
+        recipe: new Array(2).fill(&quot;Gold&quot;).concat(new Array(1).fill(&quot;Stick&quot;)),
+        damage: 3,
+        miningStrength: 0,
+    },
+    &quot;Gold Pickaxe&quot;: {
+        recipe: new Array(3).fill(&quot;Gold&quot;).concat(new Array(2).fill(&quot;Stick&quot;)),
+        damage: 3,
+        miningStrength: 3,
+    },
+    &quot;Diamond Sword&quot;: {
+        recipe: new Array(2).fill(&quot;Diamond&quot;).concat(new Array(1).fill(&quot;Stick&quot;)),
+        damage: 3,
+        miningStrength: 0,
+    },
+    &quot;Diamond Pickaxe&quot;: {
+        recipe: new Array(3).fill(&quot;Diamond&quot;).concat(new Array(2).fill(&quot;Stick&quot;)),
+        damage: 4,
+        miningStrength: 4,
+    },
+};
+
+
+const toTitleCase = (str) =&gt; {
+    return str.replace(
+        /&#92;w&#92;S*/g,
+        text =&gt; text.charAt(0).toUpperCase() + text.substring(1).toLowerCase()
+    );
+}
+
+const appendOutput = (text) =&gt; {
+    output.textContent += `&#92;n${text}`;
+    output.scrollTop = output.scrollHeight; // Scroll to bottom
+};
+
+const startEquip = () =&gt; {
+    gameState = &quot;equip&quot;
+    appendOutput(&quot;What would you like to equip? (or exit)&quot;)
+}
+
+const handleEquip = (command) =&gt; {
+    const item = items[toTitleCase(command)];
+
+    if (item) {
+        // Update global variables based on the item&#39;s properties
+        player_attack_damage = item.damage;
+        mining_strength = item.miningStrength;
+        appendOutput(
+            `Equipped ${command}. Attack damage is now ${player_attack_damage}, and mining strength is ${mining_strength}.`
+        );
+    } else if (command.toLowerCase() === &quot;exit&quot;) {
+        gameState = &quot;idle&quot;
+        appendOutput(&quot;Exiting equip&quot;)
+    } else {
+        appendOutput(`Item &quot;${command}&quot; not found.`);
+    }
+            &quot;That&#39;s not an item?&quot;
+    }
+
+
+const startExplore = () =&gt; {
+    currentBiome = biomes[Math.floor(Math.random() * biomes.length)];
+    gameState = &quot;explore&quot;; // Transition to the explore state
+    coordinates[0] += Math.floor(Math.random() * 64)
+    coordinates[1] += Math.floor(Math.random() * 64)
+    appendOutput(`You are now exploring the ${currentBiome}. What resource would you like to collect?`);
+    appendOutput(&quot;You can collect seeds or wood from compatible biomes.&quot;);
+    appendOutput(&quot;Type &#39;exit&#39; to leave or &#39;explore&#39; to keep exploring&#39;.&quot;);
+};
+
+const handleExplore = (command) =&gt; {
+    switch (command.toLowerCase()) {
+        case &quot;wood&quot;:
+            if (currentBiome === &quot;Forest Biome&quot;) {
+                appendOutput(&quot;You collected three wood and two sticks!&quot;);
+                inventory.push(&quot;Wood&quot;, &quot;Wood&quot;, &quot;Wood&quot;, &quot;Stick&quot;, &quot;Stick&quot;);
+            } else {
+                appendOutput(&quot;You cannot collect wood here.&quot;);
+            }
+            break;
+        case &quot;seeds&quot;:
+            if (currentBiome === &quot;Grasslands Biome&quot;) {
+                appendOutput(&quot;You collected five seeds!&quot;);
+                inventory.push(&quot;seed&quot;, &quot;seed&quot;, &quot;seed&quot;, &quot;seed&quot;, &quot;seed&quot;);
+            } else {
+                appendOutput(&quot;You cannot collect seeds here.&quot;);
+            }
+            break;
+        case &quot;exit&quot;:
+            appendOutput(&quot;Exiting exploration...&quot;);
+            gameState = &quot;idle&quot;; // Return to the idle state
+            break;
+        case &quot;explore&quot;:
+            appendOutput(&quot;You continue to explore...&quot;)
+            startExplore()
+            break;
+        default:
+            appendOutput(&quot;Invalid resource. Please specify &#39;wood&#39; or &#39;seeds&#39;, or type &#39;exit&#39; to leave.&quot;);
+    }
+};
+
+const startMine = () =&gt; {
+    currentCave = caves[Math.floor(Math.random() * caves.length)];
+    gameState = &quot;mine&quot;; // Transition to the explore state
+    appendOutput(`You are now exploring the ${currentCave}. What resource would you like to collect?`);
+    appendOutput(&quot;Type &#39;cobblestone&#39; or &#39;dirt&#39; to collect. Type &#39;exit&#39; to leave or &#39;mine&#39; to continue.&quot;);
+    appendOutput(&quot;Greater treasures appear at lower depths.&quot;)
+};
+
+// function mine() {
+//     const move = Math.floor(Math.random() * 5) + 1
+//     if (coordinates[2] &lt;= -50 &amp;&amp; move === 1 &amp;&amp; mining_strength &gt;= 3) {
+//         appendOutput(&quot;You mined a Diamond&quot;);
+//         inventory.push(&quot;Diamond&quot;);
+//     } else if (coordinates[2] &lt;= -50 &amp;&amp; move === 1) {
+//         appendOutput(&quot;You found a Diamond but need at least an Iron Pickaxe&quot;);
+//     } else if (coordinates[2] &lt;= -30 &amp;&amp; [2,3].includes(move) &amp;&amp; mining_strength &gt;= 3) {
+//         appendOutput(&quot;You mined three Gold Ore&quot;);
+//         inventory.concat(new Array(3).fill(&quot;Gold Ore&quot;));
+//     } else if (coordinates[2] &lt;= -30 &amp;&amp; [2,3].includes(move)) {
+//         appendOutput(&quot;You found Gold but need at least an Iron Pickaxe&quot;);
+//     } else if (coordinates[2] &lt;= -20 &amp;&amp; [2,3,4].includes(move) &amp;&amp; mining_strength &gt;= 2) {
+//         appendOutput(&quot;You mined three Iron Ore&quot;);
+//         inventory.concat(new Array(3).fill(&quot;Iron Ore&quot;));
+//     } else if (coordinates[2] &lt;= -20 &amp;&amp; [2,3,4].includes(move)) {
+//         appendOutput(&quot;You found Iron but need at least a Cobblestone Pickaxe&quot;);
+//     } else if (coordinates[2] &lt;= -10 &amp;&amp; [2,3,4,5].includes(move) &amp;&amp; mining_strength &gt;= 1) {
+//         appendOutput(&quot;You mined three Coal&quot;)
+//         inventory.concat(new Array(3).fill(&quot;Coal&quot;))
+//     }  else if (coordinates[2] &lt;= -20 &amp;&amp; [2,3,4].includes(move)) {
+//         appendOutput(&quot;You found Coal but need at least a Wooden Pickaxe&quot;);
+//     }
+// }
+
+function mine() {
+    const miningRules = [
+        {
+            depth: -50,
+            moves: [1],
+            requiredStrength: 3,
+            reward: { item: &quot;Diamond&quot;, amount: 1 },
+            failureMessage: &quot;You found a Diamond but need at least an Iron Pickaxe&quot;,
+        },
+        {
+            depth: -30,
+            moves: [2, 3],
+            requiredStrength: 3,
+            reward: { item: &quot;Gold Ore&quot;, amount: 3 },
+            failureMessage: &quot;You found Gold but need at least an Iron Pickaxe&quot;,
+        },
+        {
+            depth: -20,
+            moves: [2, 3, 4],
+            requiredStrength: 2,
+            reward: { item: &quot;Iron Ore&quot;, amount: 3 },
+            failureMessage: &quot;You found Iron but need at least a Cobblestone Pickaxe&quot;,
+        },
+        {
+            depth: -10,
+            moves: [2, 3, 4, 5],
+            requiredStrength: 1,
+            reward: { item: &quot;Coal&quot;, amount: 3 },
+            failureMessage: &quot;You found Coal but need at least a Wooden Pickaxe&quot;,
+        },
+    ];
+
+    const move = Math.floor(Math.random() * 5) + 1;
+
+    for (const rule of miningRules) {
+        if (coordinates[2] &lt;= rule.depth &amp;&amp; rule.moves.includes(move)) {
+            if (mining_strength &gt;= rule.requiredStrength) {
+                appendOutput(`You mined ${rule.reward.amount} ${rule.reward.item}(s)`);
+                inventory.push(...new Array(rule.reward.amount).fill(rule.reward.item));
+            } else {
+                appendOutput(rule.failureMessage);
+            }
+            return; // Exit after the first match
+        }
+    }
+}
+
+
+const handleCoordinates = () =&gt; {
+    if (coordinates[2] &lt;= -64) {
+        appendOutput(&quot;You hit bedrock!&quot;)
+    } else if (mining_strength &lt; 1 &amp;&amp; coordinates[2] &lt;= -10) { 
+        appendOutput(&quot;You need a pickaxe to go deeper.&quot;)
+    } else {
+        coordinates[2] -= Math.floor(Math.random() * 16)
+    }
+}
+
+const handleMine = (command) =&gt; {
+    handleCoordinates()
+    mine()
+    switch (command.toLowerCase()) {
+        case &quot;cobblestone&quot;:
+            if (mining_strength === 0) {
+                appendOutput(&quot;You need at least a wooden pickaxe for cobblestone.&quot;)
+                break;
+            }
+            appendOutput(&quot;You collected three Cobblestone!&quot;);
+            inventory.concat(new Array(3).fill(&quot;Cobblestone&quot;));
+            break;
+        case &quot;dirt&quot;:
+            appendOutput(&quot;You collected three Dirt!&quot;);
+            inventory.concat(new Array(3).fill(&quot;Dirt&quot;));
+            break;
+        case &quot;mine&quot;:
+            appendOutput(&quot;You delve deeper&quot;)
+            startMine()
+            break;
+        case &quot;exit&quot;:
+            appendOutput(&quot;Leaving mine...&quot;);
+            gameState = &quot;idle&quot;; // Return to the idle state
+            coordinates[2] = 0
+            break;
+        default:
+            appendOutput(&quot;Please specify Dirt or Cobblestone, or type &#39;exit&#39; to leave.&quot;);
+    };
+};
+
+const startAttack = () =&gt; {
+    currentMonster = monsters[Math.floor(Math.random() * monsters.length)];
+    gameState = &quot;attack&quot;; // Transition to the explore state
+    appendOutput(`You are now attacking the ${monster}. What do you do?`);
+    appendOutput(&quot;You can attack, dodge, or flee.&quot;);
+    appendOutput(`It has ${monster_health} HP.`);
+};
+
+const handleAttack = (command) =&gt; {
+    const move = Math.floor(Math.random() * 3) + 1;
+    switch (command.toLowerCase()) {
+        case &quot;attack&quot;:
+            switch (move){
+                case 1:
+                    appendOutput(`You attack, but the ${monster} dodges`);
+                    appendOutput(&#39;and attacks first!&#39;);
+                    player_health -= monster_attack_damage;
+                    appendOutput(`You now have ${player_health} HP.`);
+                    break;
+                case 2:
+                    appendOutput(`You attack the ${monster}, and your aim is true!`);
+                    monster_health -= player_attack_damage;
+                    appendOutput(`The ${monster} now has ${monster_health} HP.`);
+                    break;
+                case 3:
+                    appendOutput(`You attack, but the ${monster} dodges!`);
+                    break;
+                default:
+                    appendOutput(&quot;Something went wrong&quot;)
+                };
+
+    case &quot;dodge&quot;:
+        switch (move){
+            case 1:
+                appendOutput(`You try dodging the ${monster}&#39;s attack,`);
+                appendOutput(&#39;but it catches you anyway!&#39;);
+                player_health -= monster_attack_damage;
+                appendOutput(`You now have ${player_health} HP.`);
+                break;
+            case 2:
+                appendOutput(`You dodge the ${monster}&#39;s attack!`);
+                break;
+            case 3:
+                appendOutput(`You dodge the ${monster}&#39;s attack!`);
+                break;
+            default:
+                appendOutput(&quot;Something went wrong&quot;)
+            };
+    case &quot;flee&quot;:  
+        appendOutput(`You run away from the ${monster},`);
+        gamestate=&quot;idle&quot;
+        break;
+    default:
+        if (monster_health &lt;= 0) {
+            console.clear();
+            appendOutput(`You have defeated the ${monster}!`);
+            appendOutput(&#39;You have earned 5 XP.&#39;);
+            experience += 5;
+            gamestate=&quot;idle&quot;
+        };
+        if (player_health &lt;= 0) {
+            slain_by_monster = true;
+            gameOver();
+        };
+    };
+};
+
+function gameOver() {
+    appendOutput(&#39;Game over.&#39;)
+    if (slain_by_monster) {
+        appendOutput(`player_01 was slain by a ${monster}.`);
+    };
+    if (void_fall) {
+        appendOutput(&#39;player_01 fell in the Void&#39;);
+    };
+    // Helper function to simulate sleep
+    while (new Date().getTime() &lt; new Date().getTime() + 15000);
+    location.reload();
+};
+
+function drop(array, stringToRemove) {
+    const index = array.indexOf(stringToRemove);
+    if (index !== -1) {
+        array.splice(index, 1); // Remove the first occurrence of the string
+    }
+    return array;
+    }
+
+const startSmelt = () =&gt; {
+    if (!inventory.includes(&#39;Planks&#39;) &amp;&amp; !inventory.includes(&#39;Coal&#39;)) {
+        appendOutput(&#39;You need Planks or Coal.&#39;);
+        return;
+    };
+    gameState = &quot;smelt&quot;; // Transition to the explore state
+    appendOutput(`Would you like to smelt Iron Ore or Gold Ore? (or exit)`);
+};
+
+const handleSmelt = (command) =&gt; {
+    switch (command.toLowerCase()) {
+        case &quot;gold&quot;:
+        case &quot;gold ore&quot;:
+            inventory  = drop(inventory, &#39;Gold Ore&#39;);
+            if (inventory.includes(&#39;Planks&#39;)) {
+                inventory  = drop(inventory, &#39;Planks&#39;);
+            } else if (inventory.includes(&#39;Coal&#39;)) {
+                inventory  = drop(inventory, &#39;Coal&#39;);
+            } else {
+                appendOutput(&#39;You cannot smelt that.&#39;);
+                return;
+            }
+            inventory.push(&#39;Gold Ingot&#39;);
+            appendOutput(&#39;You smelted Gold!&#39;);
+            break;
+        case &quot;iron&quot;:
+        case &quot;iron ore&quot;:
+            inventory  = drop(inventory, &#39;Iron Ore&#39;);
+            if (inventory.includes(&#39;Planks&#39;)) {
+                inventory  = drop(inventory, &#39;Planks&#39;);
+            } else if (inventory.includes(&#39;Coal&#39;)) {
+                inventory  = drop(inventory, &#39;Coal&#39;);
+            } else {
+                appendOutput(&#39;You cannot smelt that.&#39;);
+                return;
+            }
+            inventory.push(&#39;Iron Ingot&#39;);
+            appendOutput(&#39;You smelted Iron!&#39;);
+            break;
+        case &quot;exit&quot;:
+            gameState = &quot;idle&quot;
+            appendOutput(&quot;You exited smelting&quot;)
+            break;
+        defualt:
+            appendOutput(&quot;Something went wrong&quot;)
+            gameState = &quot;idle&quot;
+        };
+    };
+
+const startCraft  = () =&gt; {
+    appendOutput(&quot;Would you like to craft a(n) wooden/cobblestone/iron/gold pickaxe/sword? (or exit)&quot;)
+    gameState = &quot;craft&quot;
+}
+
+function craft(recipe) {
+    if (!recipe.every(item =&gt; inventory.includes(item))) {
+        appendOutput(&quot;You need materials.&quot;)
+        return;
+    } else {
+        for (let item of recipe) {
+            inventory = drop(inventory, item)
+        }
+    }
+}
+
+
+const handleCraft = (command) =&gt; {
+    item = toTitleCase(command)
+    if (item === &quot;Exit&quot;) {
+        appendOutput(&quot;You left the crafting.&quot;)
+        gameState = &quot;idle&quot;
+        return;
+    } else if (!Object.keys(items).includes(item)) {
+        appendOutput(&quot;That&#39;s not an item&quot;)
+        return;
+    } else {
+        recipe = items[item][&quot;recipe&quot;]
+        craft(recipe)
+        inventory.push(item)
+        appendOutput(`You crafted ${item}`)
+        return;
+    }
+}
+
+const handleCommand = (command) =&gt; {
+    appendOutput(`&#92;n&#92;n&#92;nCoordinates: ${coordinates}`)
+    appendOutput(`HP: ${player_health}`)
+    switch (gameState) {
+        case &quot;explore&quot;:
+            handleExplore(command); // Handle commands specific to the explore state
+            return;
+        case &quot;mine&quot;:
+            handleMine(command);
+            return;
+        case &quot;attack&quot;:
+            handleAttack(command);
+            return;
+        case &quot;smelt&quot;:
+            handleSmelt(command);
+            return;
+        case &quot;craft&quot;:
+            handleCraft(command);
+            return;
+        case &quot;equip&quot;:
+            handleEquip(command)
+            return;
+        default:
+            break;
+            // appendOutput(&quot;Would you like to explore, mine, or attack?&quot;);
+    }
+
+    switch (command.toLowerCase()) {
+        case &quot;explore&quot;:
+            startExplore();
+            break;
+        case &quot;mine&quot;:
+            startMine();
+            break;
+        case &quot;attack&quot;:
+            startAttack();
+            break;
+        case &quot;inventory&quot;:
+            appendOutput(inventory.toString());
+            break;
+        case &quot;smelt&quot;:
+            startSmelt();
+            break;
+        case &quot;craft&quot;:
+            startCraft();
+            break;
+        case &quot;equip&quot;:
+            startEquip();
+            break;
+        case &quot;help&quot;:
+            appendOutput(&quot;Commands: explore, mine, attack, smelt, inventory, craft, equip, &amp; help.&quot;);
+            break;
+        default:
+            appendOutput(&quot;I don&#39;t understand that command.&quot;);
+    }
+};
+
+input.addEventListener(&quot;keydown&quot;, (event) =&gt; {
+    if (event.key === &quot;Enter&quot;) {
+        const command = input.value.trim();
+        if (command) {
+            appendOutput(`&gt; ${command}`);
+            handleCommand(command);
+            input.value = &quot;&quot;; // Clear the input field
+        }
+    }
+});
+     &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</content>
   </entry>
 </feed>
