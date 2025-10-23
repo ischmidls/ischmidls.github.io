@@ -39,7 +39,10 @@
             output = output.replace(/\\\[\n|\n\\\]/g, '$$');
 
             // Replace \\( or \\) with $
+            // space
             output = output.replace(/\\\( | \\\)/g, '$');
+            // no space
+            output = output.replace(/\\\(|\\\)/g, '$');
 
             // Clean up multiple empty lines
             output = output.replace(/\n\s*\n/g, '\n\n');

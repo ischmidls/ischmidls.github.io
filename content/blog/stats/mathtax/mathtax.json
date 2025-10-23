@@ -2,7 +2,7 @@
     "title": "math education taxonomy",
     "description": "math education visual from python",
     "date": "2022-07-01",
-    "tags": ["math", "python", "long"],
+    "tags": ["math", "python", "long", "stats"],
     "layout": "layouts/post.njk"
   }
   

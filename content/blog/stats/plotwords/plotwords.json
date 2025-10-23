@@ -2,7 +2,7 @@
     "title": "widget: word plot",
     "description": "input text output chart of word counts",
     "date": "2023-02-01",
-    "tags": ["javascript","widget"],
+    "tags": ["javascript","widget", "stats"],
     "layout": "layouts/post.njk"
   }
   

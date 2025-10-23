@@ -3,7 +3,7 @@
     "description": "human trafficking data analysis",
     "date": "2022-06-10",
     "tags": [
-      "python", "javascript", "long"
+      "python", "javascript", "long", "stats"
     ],
     "layout": "layouts/post.njk"
   }

@@ -3,7 +3,7 @@
     "description": "multifactor anova simulation",
     "date": "2025-03-15",
     "tags": [
-      "math", "r","note"
+      "math", "r","note", "stats"
     ],
     "layout": "layouts/post.njk"
   }

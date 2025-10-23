@@ -1,0 +1,9 @@
+{
+    "title": "note: binomial power",
+    "description": "binomial power",
+    "date": "2025-10-23",
+    "tags": [
+      "stats", "r","note"
+    ],
+    "layout": "layouts/post.njk"
+  }
