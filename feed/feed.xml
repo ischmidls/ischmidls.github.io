@@ -494,7 +494,7 @@ print(paste(&amp;quot;t-test Power:&amp;quot;, round(power_t, 3)))&lt;/code&gt;&
 &lt;pre&gt;&lt;code&gt;## [1] &amp;quot;t-test Power: 0.684&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&quot;r&quot;&gt;&lt;code&gt;print(paste(&amp;quot;Sign Test Power:&amp;quot;, round(power_sign, 3)))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Sign Test Power: 0.67&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Interpretation: The t-test has higher power. It correctly identifies
+&lt;p&gt;The t-test has higher power. It correctly identifies
 the false null hypothesis 68.4% of the time, compared to just 67% for
 the sign test. The same sensitivity that caused false alarms now helps
 it detect the real effect.&lt;/p&gt;
