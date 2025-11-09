@@ -506,14 +506,12 @@ header {
             // Remove dashes
             output = output.replace(/---/g, '');
 
-            // Replace \\[ or \\] with $$
+            // Replace \[ or \] with $$
             output = output.replace(/\\\[\n|\n\\\]/g, '$$');
 
-            // Replace \\( or \\) with $
-            // space
-            output = output.replace(/\\\( | \\\)/g, '$');
-            // no space
-            output = output.replace(/\\\(|\\\)/g, '$');
+            // Replace \( or \) with $
+            output = output.replace(/\\\( | \\\)/g, '$'); // space
+            output = output.replace(/\\\(|\\\)/g, '$');   // no space
 
             // Clean up multiple empty lines
             output = output.replace(/\n\s*\n/g, '\n\n');
@@ -542,7 +540,6 @@ header {
                 }, 2000);
             }).catch(err => {
                 console.error('Failed to copy text: ', err);
-                // Fallback for older browsers
                 const textArea = document.createElement('textarea');
                 textArea.value = outputText;
                 document.body.appendChild(textArea);
@@ -563,9 +560,19 @@ header {
                 transformText();
             }
         });
+
+        // Automatically transform and copy when text is pasted
+        document.getElementById('inputText').addEventListener('paste', function(event) {
+            // Wait until pasted content appears
+            setTimeout(() => {
+                transformText();
+                copyOutput();
+            }, 50);
+        });
     </script>
 </body>
 </html>
+
 <ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/math/diffeqreview/">applied differential equations review</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/widget/textcraft/">textcraft</a></li>
 </ul>
 
@@ -576,7 +583,7 @@ header {
 			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
 		</footer>
 
-		<!-- This page `/blog/widget/cleanlatex/` was built on 2025-10-29T17:24:20.760Z -->
+		<!-- This page `/blog/widget/cleanlatex/` was built on 2025-11-09T14:34:06.458Z -->
 		<script type="module" src="/dist/cC8wS6ZjFU.js"></script>
 	</body>
 </html>
