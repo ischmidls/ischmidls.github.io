@@ -35,14 +35,12 @@
             // Remove dashes
             output = output.replace(/---/g, '');
 
-            // Replace \\[ or \\] with $$
+            // Replace \[ or \] with $$
             output = output.replace(/\\\[\n|\n\\\]/g, '$$');
 
-            // Replace \\( or \\) with $
-            // space
-            output = output.replace(/\\\( | \\\)/g, '$');
-            // no space
-            output = output.replace(/\\\(|\\\)/g, '$');
+            // Replace \( or \) with $
+            output = output.replace(/\\\( | \\\)/g, '$'); // space
+            output = output.replace(/\\\(|\\\)/g, '$');   // no space
 
             // Clean up multiple empty lines
             output = output.replace(/\n\s*\n/g, '\n\n');
@@ -71,7 +69,6 @@
                 }, 2000);
             }).catch(err => {
                 console.error('Failed to copy text: ', err);
-                // Fallback for older browsers
                 const textArea = document.createElement('textarea');
                 textArea.value = outputText;
                 document.body.appendChild(textArea);
@@ -91,6 +88,15 @@
             if (event.key === 'Enter') {
                 transformText();
             }
+        });
+
+        // Automatically transform and copy when text is pasted
+        document.getElementById('inputText').addEventListener('paste', function(event) {
+            // Wait until pasted content appears
+            setTimeout(() => {
+                transformText();
+                copyOutput();
+            }, 50);
         });
     </script>
 </body>
