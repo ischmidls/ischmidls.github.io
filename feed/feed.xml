@@ -8076,9 +8076,8 @@ WEAK EVIDENCE: DNM shutdowns have limited effect on Bitcoin volatility
 
 
 
-&lt;meta name=&quot;date&quot; content=&quot;2025-11-15&quot;&gt;
 
-&lt;title&gt;Poisson Limit Theorem&lt;/title&gt;
+&lt;title&gt;poissonLimit.knit&lt;/title&gt;
 
 &lt;script&gt;// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc &lt; 2.8).
@@ -8415,8 +8414,6 @@ display: none;
 
 
 
-&lt;h1 class=&quot;title toc-ignore&quot; id=&quot;poisson-limit-theorem&quot;&gt;Poisson Limit Theorem&lt;/h1&gt;
-&lt;h4 class=&quot;date&quot; id=&quot;2025-11-15&quot;&gt;2025-11-15&lt;/h4&gt;
 
 &lt;/div&gt;
 
