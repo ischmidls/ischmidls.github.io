@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>note: binomial power</title>
-		<meta name="description" content="binomial power">
+		<title>note: poisson limit</title>
+		<meta name="description" content="note: poisson limit">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="izak">
 		
 		<style>/**
@@ -461,12 +461,11 @@ header {
 		<main id="skip">
 			<heading-anchors>
 				
-<h1 id="note-binomial-power">note: binomial power</h1>
+<h1 id="note-poisson-limit">note: poisson limit</h1>
 
 <ul class="post-metadata">
-	<li><time datetime="2025-10-23">23 October 2025</time></li>
+	<li><time datetime="2025-11-07">07 November 2025</time></li>
 	<li><a href="/tags/stats/" class="post-tag">stats</a>, </li>
-	<li><a href="/tags/r/" class="post-tag">r</a>, </li>
 	<li><a href="/tags/note/" class="post-tag">note</a></li>
 </ul>
 
@@ -482,8 +481,9 @@ header {
 
 
 
+<meta name="date" content="2025-11-15">
 
-<title>Rejection Trade-off</title>
+<title>Poisson Limit Theorem</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -820,147 +820,85 @@ display: none;
 
 
 
-<h1 class="title toc-ignore" id="rejection-trade-off">Rejection Trade-off</h1>
+<h1 class="title toc-ignore" id="poisson-limit-theorem">Poisson Limit Theorem</h1>
+<h4 class="date" id="2025-11-15">2025-11-15</h4>
 
 </div>
 
 
-<p>When comparing statistical tests, we often face a trade-off. A test
-that’s better at detecting a false null hypothesis (high power) can
-sometimes be too strong, also rejecting a true null hypothesis more
-often (high Type I error). We see this classic trade-off by in the
-humble one-sample t-test versus the non-parametric sign test.</p>
-<p>We’ll use simulated data from a heavy-tailed distribution (a
-t-distribution with 3 degrees of freedom) to see how these tests
-perform.</p>
-<p>Both tests evaluate the same null hypothesis. The population median
-is zero. But they use different information. The sign test only counts
-how many data points are above and below zero. It’s simple and robust.
-The t-test uses the sample mean and standard deviation. It’s more
-powerful if its distributional assumptions are met, but can be misled by
-outliers or heavy tails.</p>
-<p>The t-test, with its larger tails in its sampling distribution, is
-more sensitive. This sensitivity has costs and benefits.</p>
-<div id="a-single-sample-example" class="section level4">
-<h4 id="a-single-sample-example-2">A Single Sample Example</h4>
-<p>First see the tests in action on a single sample. The true population
-mean/median is zero, so the null hypothesis is true.</p>
-<pre class="r"><code>set.seed(123)
-n &lt;- 15
-true_null_sample &lt;- rt(n, df = 3) # Sample from a t-distribution (mean=0)
-
-# The Sign Test
-count_below_zero &lt;- sum(true_null_sample &lt; 0)
-binom.test(count_below_zero, n, p = 0.5)</code></pre>
-<pre><code>## 
-##  Exact binomial test
-## 
-## data:  count_below_zero and n
-## number of successes = 8, number of trials = 15, p-value = 1
-## alternative hypothesis: true probability of success is not equal to 0.5
-## 95 percent confidence interval:
-##  0.2658613 0.7873333
-## sample estimates:
-## probability of success 
-##              0.5333333</code></pre>
-<pre class="r"><code># The t-test
-t.test(true_null_sample)</code></pre>
-<pre><code>## 
-##  One Sample t-test
-## 
-## data:  true_null_sample
-## t = -0.69198, df = 14, p-value = 0.5003
-## alternative hypothesis: true mean is not equal to 0
-## 95 percent confidence interval:
-##  -1.3668742  0.7000223
-## sample estimates:
-## mean of x 
-## -0.333426</code></pre>
-<p>Running this, you’ll likely see a non-significant p-value for both
-tests. But to better understand their behavior, we need to simulate this
-process thousands of times.</p>
-</div>
-<div id="when-the-null-hypothesis-is-true" class="section level4">
-<h4 id="when-the-null-hypothesis-is-true-2">When the Null Hypothesis is TRUE</h4>
-<p>We’ll repeatedly sample from a population where the null is true
-(median = 0) and check how often each test incorrectly rejects it (Type
-I error rate). We expect this to be near 5% for a well-calibrated
-test.</p>
-<pre class="r"><code>set.seed(123)
-N_sim &lt;- 10000
-n &lt;- 15
-
-pvals_t &lt;- numeric(N_sim)
-pvals_sign &lt;- numeric(N_sim)
-
-for (i in 1:N_sim) {
-  sample_data &lt;- rt(n, df = 3) # True mean/median is 0
-  
-  # Conduct t-test and store p-value
-  pvals_t[i] &lt;- t.test(sample_data)$p.value
-  
-  # Conduct sign test and store p-value
-  count_below_zero &lt;- sum(sample_data &lt; 0)
-  pvals_sign[i] &lt;- binom.test(count_below_zero, n, p = 0.5)$p.value
-}
-
-# Calculate Type I Error Rate (should be ~0.05)
-type1_error_t &lt;- mean(pvals_t &lt; 0.05)
-type1_error_sign &lt;- mean(pvals_sign &lt; 0.05)
-
-print(paste(&quot;t-test Type I Error:&quot;, round(type1_error_t, 3)))</code></pre>
-<pre><code>## [1] &quot;t-test Type I Error: 0.042&quot;</code></pre>
-<pre class="r"><code>print(paste(&quot;Sign Test Type I Error:&quot;, round(type1_error_sign, 3)))</code></pre>
-<pre><code>## [1] &quot;Sign Test Type I Error: 0.034&quot;</code></pre>
-<p>The t-test has an inflated Type I error rate. It incorrectly rejects
-the true null hypothesis about 4.2% of the time, much higher than the
-desired 5%. But the sign test is well-calibrated at 5%. The t-test’s
-sensitivity to the heavy tails of our distribution makes it
-overzealous.</p>
-</div>
-<div id="when-the-null-hypothesis-is-false" class="section level4">
-<h4 id="when-the-null-hypothesis-is-false-2">When the Null Hypothesis is FALSE</h4>
-<p>Now shift the population up by 1. The true median is now 1, so the
-null hypothesis (median = 0) is false. A good test should reject this
-frequently (high power).</p>
-<pre class="r"><code>set.seed(123)
-N_sim &lt;- 10000
-n &lt;- 15
-
-pvals_t &lt;- numeric(N_sim)
-pvals_sign &lt;- numeric(N_sim)
-
-for (i in 1:N_sim) {
-  sample_data &lt;- rt(n, df = 3) + 1 # True mean/median is 1 (H0 is false)
-  
-  # Conduct t-test and store p-value
-  pvals_t[i] &lt;- t.test(sample_data)$p.value
-  
-  # Conduct sign test and store p-value
-  count_below_zero &lt;- sum(sample_data &lt; 0)
-  pvals_sign[i] &lt;- binom.test(count_below_zero, n, p = 0.5)$p.value
-}
-
-# Calculate Power (1 - Type II Error)
-power_t &lt;- mean(pvals_t &lt; 0.05)
-power_sign &lt;- mean(pvals_sign &lt; 0.05)
-
-print(paste(&quot;t-test Power:&quot;, round(power_t, 3)))</code></pre>
-<pre><code>## [1] &quot;t-test Power: 0.684&quot;</code></pre>
-<pre class="r"><code>print(paste(&quot;Sign Test Power:&quot;, round(power_sign, 3)))</code></pre>
-<pre><code>## [1] &quot;Sign Test Power: 0.67&quot;</code></pre>
-<p>The t-test has higher power. It correctly identifies
-the false null hypothesis 68.4% of the time, compared to just 67% for
-the sign test. The same sensitivity that caused false alarms now helps
-it detect the real effect.</p>
-<p>The t-test is more powerful but can have an inflated Type I error
-rate when its assumptions are stretched (e.g., by heavy-tailed data).
-The sign test is less powerful but robust, protecting your Type I error
-rate at the cost of missing some real effects.</p>
-<p>The better test depends on your priorities. If controlling false
-positives matters, a robust test like the sign test is safer. If
-detecting a true effect is the goal and you can tolerate a slightly
-higher false positive rate, the t-test might be better.</p>
+<div id="the-poisson-process-from-discrete-to-continuous-time" class="section level3">
+<h3 id="the-poisson-process-from-discrete-to-continuous-time-2">The Poisson Process from Discrete to Continuous Time</h3>
+<p>In financial markets, we often model rare events, like large price
+moves or credit defaults, using continuous-time models. But these emerge
+from discrete processes when we take limits.</p>
+<p><strong>Problem Setup</strong><br>
+Consider a speculative asset where each trading minute has probability
+<span class="math inline">\(p = 0.1\)</span> of experiencing a
+mini-flash crash, like a sudden price drop of 0.5%. Events are
+independent across minutes, with negligible chance of two crashes in the
+same minute. Let <span class="math inline">\(N_t\)</span> be crash
+events by time <span class="math inline">\(t\)</span> minutes, <span class="math inline">\(X_i\)</span> be time between crashes, and <span class="math inline">\(T_n\)</span> be time of the <span class="math inline">\(n\)</span>-th crash.</p>
+<p><strong>Discrete-Time Model</strong><br>
+<span class="math inline">\(N_t\)</span> counts crashes in <span class="math inline">\(t\)</span> independent Bernoulli trials, so <span class="math inline">\(N_t \sim \text{Binomial}(t, 0.1)\)</span>. The
+interarrival time <span class="math inline">\(X_i\)</span> follows <span class="math inline">\(\text{Geometric}(0.1)\)</span>, representing
+minutes until next crash. The <span class="math inline">\(n\)</span>-th
+crash time <span class="math inline">\(T_n = X_1 + \cdots + X_n\)</span>
+gives <span class="math inline">\(T_n \sim \text{NegativeBinomial}(n,
+0.1)\)</span>. The fundamental relationship <span class="math inline">\(\{N_t \geq n\} \iff \{T_n \leq t\}\)</span>
+captures that having at least <span class="math inline">\(n\)</span>
+crashes by time <span class="math inline">\(t\)</span> means the <span class="math inline">\(n\)</span>-th crash occurs before <span class="math inline">\(t\)</span>.</p>
+<p><strong>Shrinking Time Intervals</strong><br>
+Now monitor price in tiny intervals of <span class="math inline">\(\tau\)</span> minutes. Crash probability per <span class="math inline">\(\tau\)</span>-interval is <span class="math inline">\(\tau p = 0.1\tau\)</span>. Number of intervals in
+<span class="math inline">\(t\)</span> minutes is <span class="math inline">\(t/\tau\)</span>, so <span class="math inline">\(N_t \sim \text{Binomial}(t/\tau,
+0.1\tau)\)</span>. Interarrival time in <span class="math inline">\(\tau\)</span>-units is <span class="math inline">\(\text{Geometric}(0.1\tau)\)</span>, and <span class="math inline">\(T_n\)</span> in <span class="math inline">\(\tau\)</span>-units is <span class="math inline">\(\text{NegativeBinomial}(n, 0.1\tau)\)</span>. The
+relationship <span class="math inline">\(\{N_t \geq n\} \iff \{T_n \leq
+t\}\)</span> persists.</p>
+<p><strong>Continuous-Time Limit</strong></p>
+<p>As <span class="math inline">\(\tau \to 0\)</span>, we observe three
+elegant transitions supported by concrete mathematical limits:</p>
+<p><em>Binomial <span class="math inline">\(\to\)</span>
+Poisson</em></p>
+<p>The binomial PMF <span class="math inline">\(\binom{m}{k}(\tau
+p)^k(1-\tau p)^{m-k}\)</span> with <span class="math inline">\(m =
+t/\tau\)</span> has mean <span class="math inline">\(m\tau p =
+tp\)</span> fixed. Taking <span class="math inline">\(\tau \to
+0\)</span>: <span class="math display">\[
+\binom{t/\tau}{k}(\tau p)^k(1-\tau p)^{t/\tau - k} \to
+\frac{(tp)^k}{k!}e^{-tp}
+\]</span> This is the Poisson PMF with rate <span class="math inline">\(\lambda t = 0.1t\)</span>.</p>
+<p><em>Geometric <span class="math inline">\(\to\)</span>
+Exponential</em></p>
+<p>The geometric survival function <span class="math inline">\(P(X &gt;
+t) = (1-\tau p)^{t/\tau}\)</span> for <span class="math inline">\(t\)</span> multiple of <span class="math inline">\(\tau\)</span> satisfies: <span class="math display">\[
+\lim_{\tau\to 0} (1-\tau p)^{t/\tau} = e^{-pt}
+\]</span> which is the survival function of <span class="math inline">\(\text{Exponential}(p)\)</span>. Alternatively, the
+geometric MGF <span class="math inline">\((pe^s)/(1-(1-p)e^s)\)</span>
+with <span class="math inline">\(p=\tau\lambda\)</span> converges to the
+exponential MGF <span class="math inline">\(\lambda/(\lambda-s)\)</span>
+as <span class="math inline">\(\tau\to 0\)</span>.</p>
+<p><em>Negative Binomial <span class="math inline">\(\to\)</span>
+Gamma</em></p>
+<p>Since <span class="math inline">\(T_n = \sum_{i=1}^n X_i\)</span>
+where <span class="math inline">\(X_i \sim \text{Geometric}(\tau
+p)\)</span>, and geometric <span class="math inline">\(\to\)</span>
+exponential, we have: <span class="math display">\[
+T_n \to \sum_{i=1}^n \text{Exponential}(p) \sim \text{Gamma}(n, p)
+\]</span> The negative binomial MGF <span class="math inline">\([pe^s/(1-(1-p)e^s)]^n\)</span> with <span class="math inline">\(p=\tau\lambda\)</span> converges to the gamma MGF
+<span class="math inline">\([\lambda/(\lambda-s)]^n\)</span>. This is
+the classic case of a sum of i.i.d. geometric variables converging to a
+sum of exponentials, yielding the gamma distribution.</p>
+<p>Each limit preserves the essential structure wih the Poisson limit
+theorem for rare events, the memoryless property from geometric to
+exponential, and the additive property from negative binomial to
+gamma.</p>
+<p><strong>Financial Interpretation</strong><br>
+High-frequency traders see this limit in practice. Monitoring prices
+continuously, crash arrivals follow <span class="math inline">\(\text{Poisson}(\lambda t)\)</span> with <span class="math inline">\(\lambda = 0.1\)</span> per minute. Time between
+crashes becomes <span class="math inline">\(\text{Exponential}(0.1)\)</span>, and time until
+the <span class="math inline">\(n\)</span>-th systemic shock follows
+<span class="math inline">\(\text{Gamma}(n, 0.1)\)</span>. This
+framework lies under many continuous-time finance models, from jump
+processes in option pricing to default timing in credit risk.</p>
 </div>
 
 
@@ -1011,7 +949,7 @@ $(document).ready(function () {
 </body>
 </html>
 
-<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/stats/manova/">note: manova</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/stats/poissonlim/">note: poisson limit</a></li>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/stats/binompower/">note: binomial power</a></li><li class="links-nextprev-next">Next →<br><a href="/blog/stats/btcivdnm/">note: betting against black markets</a></li>
 </ul>
 
 			</heading-anchors>
@@ -1021,7 +959,7 @@ $(document).ready(function () {
 			<p><em>built with <a href="https://www.11ty.dev/">eleventy</a></em></p>
 		</footer>
 
-		<!-- This page `/blog/stats/binompower/` was built on 2025-11-15T14:47:08.743Z -->
+		<!-- This page `/blog/stats/poissonlim/` was built on 2025-11-15T14:47:08.745Z -->
 		<script type="module" src="/dist/cC8wS6ZjFU.js"></script>
 	</body>
 </html>
