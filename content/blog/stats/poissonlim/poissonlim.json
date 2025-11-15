@@ -1,0 +1,9 @@
+{
+    "title": "note: poisson limit",
+    "description": "note: poisson limit",
+    "date": "2025-11-07",
+    "tags": [
+      "stats","note"
+    ],
+    "layout": "layouts/post.njk"
+  }
